@@ -34,6 +34,7 @@ header {
 /* Logo */
 .logo img {
     height: 50px;
+    margin-left: 30px;
 }
 
 /* Navigation */
@@ -44,16 +45,17 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 5px;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     color: rgba(60, 72, 88, 1);
     padding: 8px 12px;
     transition: 0.3s;
+    letter-spacing: 0.5px;
 }
 
 nav ul li a:hover {
@@ -130,7 +132,7 @@ nav ul li a:hover {
     display: flex;
     width: 100%;
     height: 100vh;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 /* Left Section */
@@ -146,7 +148,7 @@ nav ul li a:hover {
 
 /* Content */
 .content h2 {
-    font-size: 36px;
+    font-size: 39px;
     margin-bottom: 10px;
     font-weight: 600;
     color: rgba(60, 72, 88, 1);
@@ -170,14 +172,18 @@ nav ul li a:hover {
     padding: 14px 20px;
     font-size: 16px;
     font-weight: 500;
-    background-color: #007bff;
+    background-color: rgba(6, 102, 219, 1);
     color: white;
     border: none;
     border-radius: 26px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: box-shadow 0.3s ease;
     margin-left: 80px;
     margin-top: 20px;
+}
+
+.learn-more:hover {
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5); /* Apply shadow on hover */
 }
 
 
@@ -193,16 +199,19 @@ nav ul li a:hover {
 }
 
 .hover-btn {
-    width: 20px;
-    height: 5px;
-    background-color: gray;
-    border-radius: 20px;
+    width: 35px;
+    height: 8px;
+    background-color: rgba(249, 250, 252, 1);
+    border-radius: 30px;
     cursor: pointer;
     transition: 0.3s;
+    border: 1px solid rgba(227, 230, 234, 1);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25) inset; /* Inner shadow applied */
 }
 
+
 .hover-btn:hover {
-    background-color: black;
+    background-color: rgba(6, 102, 219, 1);
 }
 
 /* Right Section */
@@ -220,6 +229,7 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     z-index: -1;
+    margin-top: -200px;
 }
 
 /* Image Stack */
@@ -231,9 +241,10 @@ nav ul li a:hover {
 }
 
 .rect-image {
-    width: 90%;
+    width: 85%;
     height: auto;
-    margin-top: 90px;
+    margin-top: 0px;
+    margin-right: 100px;
 }
 
 
@@ -242,7 +253,7 @@ nav ul li a:hover {
     display: flex;
     width: 100%;
     padding: 50px 0;
-    margin-top: 200px;
+    margin-top: 100px;
     margin-left: 50px;
     
 }
@@ -401,7 +412,7 @@ span {
 .what-we-do-section {
     text-align: center;
     padding: 50px 0;
-    margin-left: 80px;
+    margin-left: 40px;
 }
 
 .what-we-do-title-container {
@@ -497,7 +508,7 @@ span {
 .our-team-section {
     text-align: center;
     padding: 50px 0;
-    margin: 0 80px; /* 80px left & right margin */
+    margin: 0 0px; /* 80px left & right margin */
     margin-bottom: 10px;
 }
 
@@ -535,15 +546,13 @@ span {
 /* Team Members */
 .our-team-members {
     display: flex;
-    justify-content: space-between;
-    gap: 0px;
     margin-bottom: 30px;
 }
 
 .our-team-members {
     display: flex;
-    justify-content: center;
-    gap: -50px; /* Reduced gap between images */
+    justify-content:space-evenly;
+
     margin-bottom: 30px;
 }
 
@@ -579,10 +588,10 @@ span {
 
 /* Team Description */
 .our-team-description {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.5;
     color: rgba(132, 146, 166, 1);
-    max-width: 700px;
+    width: 600px;
     margin: 0 auto 30px;
     margin-top: 80px;
 }
@@ -599,7 +608,11 @@ span {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: box-shadow 0.3s ease;
+}
+
+.join-us-button:hover {
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5);
 }
 
 
@@ -675,7 +688,7 @@ span {
     position: absolute;
     bottom: 0;
     width: 93%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.6); /* Slightly transparent background for the blur effect */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -683,7 +696,9 @@ span {
     margin-left: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
+    backdrop-filter: blur(10px); /* Apply the blur effect */
 }
+
 
 /* Description */
 .case-study-description {
@@ -696,7 +711,8 @@ span {
 
 /* Read More Button */
 .case-study-read-more {
-    width: 30%;
+    width: 135px;
+    height: 42px;
     font-size: 16px;
     color: white;
     background-color: rgba(6, 102, 219, 1);
@@ -1197,6 +1213,7 @@ span {
     margin-top: 14px;
     margin-right: 20px;
     margin-left: 14px;
+    margin-bottom: 30px;
     transition: opacity 0.3s;
 }
 
@@ -1288,7 +1305,7 @@ span {
 /* Description */
 .footer-description {
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 25px;
 }
 
 /* Footer Headings */

@@ -34,6 +34,7 @@ header {
 /* Logo */
 .logo img {
     height: 50px;
+    margin-left: 30px;
 }
 
 /* Navigation */
@@ -44,16 +45,17 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 5px;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     color: rgba(60, 72, 88, 1);
     padding: 8px 12px;
     transition: 0.3s;
+    letter-spacing: 0.5px;
 }
 
 nav ul li a:hover {
@@ -132,7 +134,7 @@ nav ul li a:hover {
     width: 100%;
     height: 425px; /* Adjust height as needed */
     overflow: hidden;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .banner img {
@@ -235,6 +237,7 @@ nav ul li a:hover {
     width: 1000px;
     margin: 0 auto;
     gap: 20px; /* Space between the boxes */
+    margin-top: 50px;
 }
 
 /* Box Style */
@@ -327,7 +330,6 @@ nav ul li a:hover {
     width: 100px;
     height: 40px;
     background-color: rgba(60, 72, 88, 1);
-    border-color: 2px solid rgba(60, 72, 88, 1);
     color: white;; /* Arrow color */
     font-size: 24px;
     border-radius: 5px;
@@ -336,11 +338,10 @@ nav ul li a:hover {
 
 .blue-box .button-container .right-arrow {
     background-color: rgba(60, 72, 88, 1);
-    border-color: 2px solid rgba(60, 72, 88, 1);
     color: white;; /* Arrow color */
 }
 
-.button-container .right-arrow:hover {
+.button-container:hover .right-arrow {
     background-color: rgba(6, 102, 219, 1);
     transition: 0.3s ease-in-out;
 }
@@ -373,6 +374,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     width: 1250px;
+    height: 460px;
     margin: 50px auto;
     gap: 40px; /* Space between left and right columns */
     margin-left: 180px;
@@ -385,6 +387,7 @@ nav ul li a:hover {
 
 /* FAQ Box (Question) */
 .faq-box {
+    position: relative;
     width: 540px;
     height: auto;
     background-color: rgba(249, 250, 252, 1);
@@ -411,6 +414,14 @@ nav ul li a:hover {
     color: rgba(6, 102, 219, 1);
 }
 
+
+.faq-question {
+    display: flex;
+    justify-content: flex-start; /* Align text to the left */
+    align-items: center; /* Vertically center text */
+}
+
+
 /* FAQ Answer Box */
 .faq-answer {
     width: 540px;
@@ -430,17 +441,21 @@ nav ul li a:hover {
     line-height: 24px;
 }
 
-/* FAQ Arrow */
+
 .faq-arrow {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 700;
     transition: transform 0.3s ease-in-out;
     margin-left: 5px;
+    position: absolute; /* Position it relative to the faq-box */
+    right: 20px; /* 10px from the right edge */
+    top: 50%; /* Vertically center the arrow */
+    transform: translateY(-50%); /* Adjust so it's perfectly centered vertically */
 }
 
 /* Rotate Arrow when Active */
 .faq-box.active .faq-arrow {
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
 }
 
 
@@ -505,7 +520,7 @@ nav ul li a:hover {
 
 /* Team Image */
 .team-image {
-    width: 40%;
+    width: 50%;
     height: auto;
 }
 
@@ -841,6 +856,7 @@ nav ul li a:hover {
     margin-top: 14px;
     margin-right: 20px;
     margin-left: 14px;
+    margin-bottom: 30px;
     transition: opacity 0.3s;
 }
 
@@ -931,7 +947,7 @@ nav ul li a:hover {
 /* Description */
 .footer-description {
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 25px;
 }
 
 /* Footer Headings */
