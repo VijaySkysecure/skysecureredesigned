@@ -1,0 +1,510 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(60, 72, 88, 1);
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgba(6, 102, 219, 1);
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style for the Community link */
+.community {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(60, 72, 88, 1);
+    padding: 10px 15px;
+}
+
+/* Arrow Icon */
+.fas.fa-chevron-down {
+    margin-left: 8px;
+    font-size: 12px;
+    margin-right: -15px;
+}
+
+/* Style for the items inside the dropdown */
+.dropdown-menu li {
+    padding: 8px 16px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: rgba(60, 72, 88, 1);
+    display: block;
+}
+
+
+/* India Dropdown */
+.india {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.flag {
+    width: 15px;
+    height: 10px;
+}
+
+
+.banner {
+    width: 100%;
+    height: 425px; /* Adjust height as needed */
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire section */
+}
+
+
+
+.testimonial-section {
+    text-align: center;
+    padding: 50px 0;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Small Title with Image */
+.testimonial-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial-small-icon {
+    width: 30px;
+    height: auto;
+}
+
+.testimonial-small-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(60, 72, 88, 1);
+}
+
+/* Large Centered Title */
+.testimonial-large-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+/* Center Image */
+.testimonial-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.testimonial-image {
+    width: 40%;
+    height: auto;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+
+
+/* Box Section */
+.boxes-section {
+    display: grid;
+    grid-template-columns: repeat(2, 530px); /* Two boxes per row */
+    grid-gap: 60px;
+    width: 1150px;
+    margin: 0 auto;
+}
+
+/* Box Style */
+.box {
+    background-color: rgba(249, 250, 252, 1);
+    width: 530px;
+    height: 270px;
+    padding: 30px;
+    border: 0.5px solid rgb(198, 202, 207);
+    border-radius: 7px;
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Shadow */
+.box:hover {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Style */
+.box-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgba(60, 72, 88, 1);
+}
+
+.main-title {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.sub-title {
+    font-size: 12px;
+    color: rgba(132, 146, 166, 1);
+    margin-top: 6px;
+}
+
+/* Description Style */
+.box-description {
+    font-size: 12px;
+    color: rgba(132, 146, 166, 1);
+    margin-bottom: 15px;
+    line-height: 25px;
+    text-align: left;
+}
+
+/* Read More Button */
+.read-more-btn {
+    font-family: 'Inter', sans-serif;
+    width: 130px;
+    height: 40px;
+    background-color: rgba(6, 102, 219, 1);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 350px;
+    margin-top: 20px;
+}
+
+
+
+.project-carousel-section {
+    text-align: center;
+    padding: 50px 0;
+    align-items: center;
+    margin-top: 80px;
+    width: 100vw;
+    margin-left: -170px;
+}
+
+/* Small Title with Image */
+.project-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.project-small-icon {
+    width: 30px;
+    height: auto;
+}
+
+.project-small-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(60, 72, 88, 1);
+}
+
+/* Large Centered Title */
+.project-large-title {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    width: 70vw;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+
+/* Carousel Wrapper */
+.scrolling-carousel-wrapper {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    margin-left: 170px;
+}
+
+/* Scrolling Carousel */
+.scrolling-carousel {
+    display: flex;
+    animation: scrolling-animation 7s linear infinite;
+}
+
+/* Images */
+.scrolling-carousel img {
+    width: 100%;
+    height: 250px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+/* Infinite Scrolling Animation */
+@keyframes scrolling-animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+
+.footer-section {
+    background-color: rgba(60, 72, 88, 1); /* Dark Grey Background */
+    text-align: center;
+    padding: 40px 0;
+    width: 100vw;
+    margin-left: -160px;
+    margin-top: 60px;
+    margin-bottom: -50px;
+}
+
+/* Follow Us Text */
+.footer-follow-text {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Social Media Icons */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-icon img {
+    width: 35px;
+    height: auto;
+    margin-top: 14px;
+    margin-right: 20px;
+    margin-left: 14px;
+    transition: opacity 0.3s;
+}
+
+.footer-icon img:hover {
+    opacity: 0.7;
+}
+
+/* Subscription Box */
+.footer-subscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 560px;
+    height: 60px;
+    border-radius: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Email Input */
+.footer-email-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: black;
+}
+
+/* Subscribe Button */
+.footer-subscribe-btn {
+    background-color: rgba(6, 102, 219, 1);
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-right: 5px;
+}
+
+.footer-subscribe-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Footer Content (4 Vertical Parts) */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 40px auto 0;
+    text-align: left;
+    margin-top: 80px;
+}
+
+/* Each Section */
+.footer-part {
+    width: 25%;
+    color: white;
+}
+
+.footer-part:nth-child(2) p {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.footer-part:nth-child(3) p {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* Footer Logo */
+.footer-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.footer-description {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Footer Headings */
+.footer-heading {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Footer Contact Items */
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact-item img {
+    width: 12px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.footer-part:nth-child(4) p {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+.footer-copyright {
+    text-align: center;
+    color: rgba(173, 181, 189, 1);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+
+
+

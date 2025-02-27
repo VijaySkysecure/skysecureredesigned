@@ -1,0 +1,975 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(60, 72, 88, 1);
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgba(6, 102, 219, 1);
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style for the Community link */
+.community {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(60, 72, 88, 1);
+    padding: 10px 15px;
+}
+
+/* Arrow Icon */
+.fas.fa-chevron-down {
+    margin-left: 8px;
+    font-size: 12px;
+    margin-right: -15px;
+}
+
+/* Style for the items inside the dropdown */
+.dropdown-menu li {
+    padding: 8px 16px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: rgba(60, 72, 88, 1);
+    display: block;
+}
+
+
+/* India Dropdown */
+.india {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.flag {
+    width: 15px;
+    height: 10px;
+}
+
+
+
+
+.banner {
+    width: 100%;
+    height: 425px; /* Adjust height as needed */
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire section */
+}
+
+
+
+.testimonial-section {
+    text-align: center;
+    padding: 50px 0;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Small Title with Image */
+.testimonial-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial-small-icon {
+    width: 30px;
+    height: auto;
+}
+
+.testimonial-small-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(60, 72, 88, 1);
+}
+
+/* Large Centered Title */
+.testimonial-large-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-left: 315px;
+    width: 38vw;
+}
+
+/* Center Image */
+.testimonial-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-image {
+    width: 70%;
+    height: auto;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+
+.testimonial-description {
+    color: grey;
+    font-size: 14px;
+    text-align: left; /* Centering the text */
+    width: 57vw; /* Adjust width as needed */
+    margin: 20px auto; /* Adds space and centers it */
+    line-height: 27px;
+    letter-spacing: 0.4px;
+    margin-left: 190px;
+}
+
+/* Join With Us Button */
+.join-us-button {
+    font-family: 'Inter', sans-serif;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background-color: rgba(6, 102, 219, 1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+
+
+/* Box Section */
+.box-section {
+    display: flex;
+    justify-content: space-between; /* Distribute boxes evenly */
+    width: 1000px;
+    margin: 0 auto;
+    gap: 20px; /* Space between the boxes */
+}
+
+/* Box Style */
+.box {
+    width: 300px;
+    height: 293px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+/* Grey Box Style */
+.grey-box {
+    background-color: rgba(60, 72, 88, 1); /* Light grey background */
+    color: white;
+}
+
+.grey-box:hover {
+    background-color: rgba(6, 102, 219, 1);
+    transition: 0.3s ease-in-out;
+}
+
+/* Blue Box Style (Middle Box) */
+.blue-box {
+    background-color: rgba(60, 72, 88, 1);
+    color: white;
+}
+
+.blue-box:hover {
+    background-color: rgba(6, 102, 219, 1);
+    transition: 0.3s ease-in-out;
+}
+
+/* Box Content (Icon, Title, Description) */
+.box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Box Icon */
+.box-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+/* Box Title */
+.box-title {
+    font-size: 19px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Box Description */
+.box-description {
+    font-size: 12.6px;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+
+}
+
+/* Button Container (For the Right Arrow) */
+.button-container {
+    width: 300px;
+    height: 90px;
+    margin-bottom: -105px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),  /* Shadow on the right */
+                -5px 5px 10px rgba(0, 0, 0, 0.1), /* Shadow on the left */
+                0px 5px 10px rgba(0, 0, 0, 0.1);  /* Shadow on the bottom */
+}
+
+/* Right Arrow Button */
+.right-arrow {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(60, 72, 88, 1);
+    border-color: 2px solid rgba(60, 72, 88, 1);
+    color: white;; /* Arrow color */
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blue-box .button-container .right-arrow {
+    background-color: rgba(60, 72, 88, 1);
+    border-color: 2px solid rgba(60, 72, 88, 1);
+    color: white;; /* Arrow color */
+}
+
+.button-container .right-arrow:hover {
+    background-color: rgba(6, 102, 219, 1);
+    transition: 0.3s ease-in-out;
+}
+
+
+
+.testimonial-section1 {
+    text-align: center;
+    padding: 50px 0;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 180px;
+}
+
+
+.testimonial-description1 {
+    color: grey;
+    font-size: 14px;
+    text-align: left; /* Centering the text */
+    width: 70vw; /* Adjust width as needed */
+    margin: 20px auto; /* Adds space and centers it */
+    line-height: 27px;
+    letter-spacing: 0.4px;
+    margin-left: 80px;
+}
+
+
+
+.faq-container {
+    display: flex;
+    justify-content: center;
+    width: 1250px;
+    margin: 50px auto;
+    gap: 40px; /* Space between left and right columns */
+    margin-left: 180px;
+}
+
+/* Left and Right FAQ Columns */
+.faq-column {
+    width: 50%; /* Each column takes half of the total width */
+}
+
+/* FAQ Box (Question) */
+.faq-box {
+    width: 540px;
+    height: auto;
+    background-color: rgba(249, 250, 252, 1);
+    color: rgba(60, 72, 88, 1);
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: left;
+    text-align: left;
+    justify-content: space-between;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(222, 226, 230, 1);
+    border-radius: 7px;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* Active FAQ Box (Turns Blue) */
+.faq-box.active {
+    color: rgba(6, 102, 219, 1);
+}
+
+/* FAQ Answer Box */
+.faq-answer {
+    width: 540px;
+    background: white;
+    color: grey;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 15px 15px;
+    border: 1px solid rgba(222, 226, 230, 1);
+    border-radius: 5px;
+    margin-top: -10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: none;
+    text-align: left;
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+
+/* FAQ Arrow */
+.faq-arrow {
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 5px;
+}
+
+/* Rotate Arrow when Active */
+.faq-box.active .faq-arrow {
+    transform: rotate(180deg);
+}
+
+
+
+.our-team-section {
+    text-align: center;
+    padding: 50px 0;
+    margin: 0 80px; /* 80px left & right margin */
+    margin-bottom: 10px;
+}
+
+/* Small Title with Image */
+.our-team-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.our-team-small-icon {
+    width: 30px;
+    height: auto;
+}
+
+.our-team-small-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(60, 72, 88, 1);
+}
+
+/* Large Centered Title */
+.our-team-large-title {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+/* Team Members */
+.our-team-members {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.our-team-members {
+    display: flex;
+    justify-content: center;
+    gap: -50px; /* Reduced gap between images */
+    margin-bottom: 30px;
+}
+
+/* Team Member */
+.team-member {
+    text-align: center;
+    width: 45%; /* Ensures both images take equal space */
+}
+
+/* Team Image */
+.team-image {
+    width: 40%;
+    height: auto;
+}
+
+
+/* Team Member Name */
+.team-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(6, 102, 219, 1);
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+/* Team Position */
+.team-position {
+    font-size: 16px;
+    color: rgba(132, 146, 166, 1);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Team Description */
+.our-team-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(132, 146, 166, 1);
+    max-width: 700px;
+    margin: 0 auto 30px;
+    margin-top: 80px;
+}
+
+/* Join With Us Button */
+.join-us-button {
+    font-family: 'Inter', sans-serif;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background-color: rgba(6, 102, 219, 1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    color: white;
+    z-index: 2;
+}
+
+
+.right-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    font-family: 'Inter', sans-serif;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(6, 102, 219, 1);
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-right: 350px;
+    box-shadow: 0px 3px 7px 0px rgba(255, 255, 255, 0.5);
+}
+
+
+
+.testimonial-section2 {
+    text-align: center;
+    padding: 50px 0;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial-image-container2 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+}
+
+/* Small Title with Image */
+.testimonial-title-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial-small-icon2 {
+    width: 30px;
+    height: auto;
+}
+
+.testimonial-small-title2 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(60, 72, 88, 1);
+}
+
+/* Large Centered Title */
+.testimonial-large-title2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-left: 315px;
+    width: 38vw;
+}
+
+/* Author Name */
+.testimonial-author-name2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #007bff; /* Blue color */
+    margin-top: 40px;
+    margin-bottom: 12px;
+    text-align: left;
+    margin-left: 200px;
+}
+
+/* Author Position */
+.testimonial-author-position2 {
+    font-size: 16px;
+    color: rgba(132, 146, 166, 1);
+    font-weight: 500;
+    text-align: left;
+    margin-left: 200px;
+}
+
+
+
+
+.top-left2 {
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.bottom-right2 {
+    bottom: 0;
+    right: 10%;
+}
+
+
+.testimonial-description2 {
+    color: grey;
+    font-size: 14px;
+    text-align: left; /* Centering the text */
+    width: 57vw; /* Adjust width as needed */
+    margin: 20px auto; /* Adds space and centers it */
+    line-height: 27px;
+    letter-spacing: 0.4px;
+    margin-left: 190px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+
+
+.scrolling-carousel-wrapper1 {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    margin-left: 140px;
+}
+
+/* Scrolling Carousel */
+.scrolling-carousel {
+    display: flex;
+    animation: scrolling-animation 7s linear infinite;
+}
+
+/* Images */
+.scrolling-carousel img {
+    width: 100%;
+    height: 250px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+/* Infinite Scrolling Animation */
+@keyframes scrolling-animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+
+
+.project-carousel-section {
+    text-align: center;
+    padding: 50px 0;
+    align-items: center;
+    margin-top: 80px;
+}
+
+/* Small Title with Image */
+.project-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.project-small-icon {
+    width: 30px;
+    height: auto;
+}
+
+.project-small-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(60, 72, 88, 1);
+}
+
+/* Large Centered Title */
+.project-large-title {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    width: 70vw;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+
+/* Carousel Wrapper */
+.scrolling-carousel-wrapper {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    margin-left: 170px;
+}
+
+/* Scrolling Carousel */
+.scrolling-carousel {
+    display: flex;
+    animation: scrolling-animation 7s linear infinite;
+}
+
+/* Images */
+.scrolling-carousel img {
+    width: 100%;
+    height: 250px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+/* Infinite Scrolling Animation */
+@keyframes scrolling-animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+.footer-section {
+    background-color: rgba(60, 72, 88, 1); /* Dark Grey Background */
+    text-align: center;
+    padding: 40px 0;
+    width: 100vw;
+    margin-left: 0px;
+    margin-top: 60px;
+}
+
+/* Follow Us Text */
+.footer-follow-text {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Social Media Icons */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-icon img {
+    width: 35px;
+    height: auto;
+    margin-top: 14px;
+    margin-right: 20px;
+    margin-left: 14px;
+    transition: opacity 0.3s;
+}
+
+.footer-icon img:hover {
+    opacity: 0.7;
+}
+
+/* Subscription Box */
+.footer-subscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 560px;
+    height: 60px;
+    border-radius: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Email Input */
+.footer-email-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: black;
+}
+
+/* Subscribe Button */
+.footer-subscribe-btn {
+    background-color: rgba(6, 102, 219, 1);
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-right: 5px;
+}
+
+.footer-subscribe-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Footer Content (4 Vertical Parts) */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 40px auto 0;
+    text-align: left;
+    margin-top: 80px;
+}
+
+/* Each Section */
+.footer-part {
+    width: 25%;
+    color: white;
+}
+
+.footer-part:nth-child(2) p {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.footer-part:nth-child(3) p {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* Footer Logo */
+.footer-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.footer-description {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Footer Headings */
+.footer-heading {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Footer Contact Items */
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact-item img {
+    width: 12px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.footer-part:nth-child(4) p {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+.footer-copyright {
+    text-align: center;
+    color: rgba(173, 181, 189, 1);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+
+
+
+

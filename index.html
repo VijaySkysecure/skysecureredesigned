@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skysecure</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="img/home/companylogo.png" alt="Company Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown">
+                <a href="#" class="community">
+                    Community <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a href="#" class="india">
+                    India <img src="img/home/indflag.png" alt="India Flag" class="flag">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Singapore</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="container">
+        <!-- Left Section -->
+        <div class="left">
+            <div class="buttons">
+                <div class="hover-btn" data-title="Bridging Technology And Tradition with Adaptive Automation" data-description="The essence of integrating cutting-edge Technology solutions with established business practices to drive efficiency, innovation, and growth. "></div>
+                <div class="hover-btn" data-title="Digital Personal data Protection (DPDP) ACT 2023" data-description="Managing Compliance & Regulatory Obligations"></div>
+            </div>
+            <div class="content">
+                <h2 id="title">Bridging Technology And Tradition with Adaptive Automation</h2>
+                <p id="description">The essence of integrating cutting-edge Technology solutions with established business practices to drive efficiency, innovation, and growth. </p>
+                <button class="learn-more">Learn More</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+    const hoverButtons = document.querySelectorAll(".hover-btn");
+    const title = document.getElementById("title");
+    const description = document.getElementById("description");
+
+    hoverButtons.forEach(button => {
+        button.addEventListener("mouseover", function() {
+            title.textContent = this.getAttribute("data-title");
+            description.textContent = this.getAttribute("data-description");
+        });
+    });
+    });
+
+        </script>
+
+        <!-- Right Section -->
+        <div class="right">
+            <img src="img/home/bluebg.png" alt="Blue Circle" class="bg-circle">
+            <div class="image-stack">
+                <img src="img/home/bluetop.png" alt="Rectangle 1" class="rect-image">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="text-container">
+        <!-- Left Section -->
+        <div class="left-text">
+            <div class="title-with-image">
+                <img src="img/home/wwa.png" alt="Small Icon" class="small-icon">
+                <h3 class="small-title">WHO WE ARE</h3>
+            </div>
+            <h1 class="large-title">5+ Years Committed To Enhancing The <span>Digital Security & Resilience</span> For Clients Worldwide</h1>
+            <p class="description">“Our expertise spans a broad spectrum of industries, providing specialized solutions that transcends beyond mere protection; it is about building a resilient digital ecosystem where businesses can thrive securely and sustainably.”</p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-text">
+            <p class="side-description">
+                In the heart of our business philosophy lies a timeless principle derived from the <span>Bhagavad Gita: the pursuit of excellence in service and an unwavering dedication to quality</span>. This ethos guides us to focus deeply on the work at hand, 
+                prioritizing integrity and commitment without being solely driven by the anticipation of rewards or outcomes. It’s a belief that by diligently performing our duties and by consistently delivering exceptional services, the fruits of our labor will naturally emerge. 
+                This approach not only fosters a culture of excellence and reliability within our team but also assures our clients that their trust is well-placed. By centering our actions around the value we provide, we create enduring relationships and build a foundation for mutual success. This philosophy is embedded in every project we undertake, ensuring that we deliver not just services, 
+                but solutions that stand the test of time, reflecting our dedication to excellence and the trust our clients place in us. <br><br>
+                <span>– Suresh & Nithin (founders)</span>
+            </p>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="project-carousel-section">
+        <!-- Small Title with Image -->
+        <div class="project-title-container">
+            <img src="img/home/wwa.png" alt="Small Icon" class="project-small-icon">
+            <h3 class="project-small-title">OUR PARTNERSHIPS & ALLIANCES</h3>
+        </div>
+
+        <!-- Large Centered Title -->
+        <h1 class="project-large-title">We've Had The Pleasure of Working With Industry - Defining Brands.</h1>
+
+        <!-- Carousel -->
+        <div class="scrolling-carousel-wrapper">
+            <div class="scrolling-carousel">
+                <img src="img/home/partnerlogos.png" alt="Scrolling Image">
+                <img src="img/home/partnerlogos.png" alt="Scrolling Image">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="what-we-do-section">
+        <!-- Small Title with Image -->
+        <div class="what-we-do-title-container">
+            <img src="img/home/wwa.png" alt="Small Icon" class="what-we-do-small-icon">
+            <h3 class="what-we-do-small-title">WHAT WE DO</h3>
+        </div>
+
+        <!-- Large Centered Title -->
+        <h1 class="what-we-do-large-title">We Provide Exclusive Services For Your Business</h1>
+
+        <!-- Services Grid -->
+        <div class="what-we-do-grid">
+            <div class="what-we-do-card">
+                <img src="img/home/whatwedo/icon1.png" alt="Service Icon 1" class="what-we-do-icon">
+                <h3 class="what-we-do-card-title">Commercial Marketplace</h3>
+                <p class="what-we-do-card-description">Discover a world of possibilities, where innovative solutions, diverse offerings, and exceptional services converge to empower businesses and drive growth....</p>
+                <a href="#" class="what-we-do-read-more">Read More ></a>
+            </div>
+            <div class="what-we-do-card">
+                <img src="img/home/whatwedo/icon2.png" alt="Service Icon 2" class="what-we-do-icon">
+                <h3 class="what-we-do-card-title">Solution Implementation</h3>
+                <p class="what-we-do-card-description">Experience a seamless transition, guided by our expert team, as we collaborate closely with you to deliver a customized solution that maximizes efficiency, drives tangible results,...</p>
+                <a href="#" class="what-we-do-read-more">Read More ></a>
+            </div>
+            <div class="what-we-do-card">
+                <img src="img/home/whatwedo/icon3.png" alt="Service Icon 3" class="what-we-do-icon">
+                <h3 class="what-we-do-card-title">Assessment</h3>
+                <p class="what-we-do-card-description">Our comprehensive assessment services provide a thorough analysis of your systems, processes, and performance, enabling data-driven insights and actionable recommendations to enhan...</p>
+                <a href="#" class="what-we-do-read-more">Read More ></a>
+            </div>
+            <div class="what-we-do-card">
+                <img src="img/home/whatwedo/icon4.png" alt="Service Icon 4" class="what-we-do-icon">
+                <h3 class="what-we-do-card-title">Operational Excellence</h3>
+                <p class="what-we-do-card-description">We are committed to ensuring operational excellence by helping you identifying gaps, deploying best practices & recommendation, optimizing processes, and fostering a culture of con...</p>
+                <a href="#" class="what-we-do-read-more">Read More ></a>
+            </div>
+            <div class="what-we-do-card">
+                <img src="img/home/whatwedo/icon5.png" alt="Service Icon 5" class="what-we-do-icon">
+                <h3 class="what-we-do-card-title">Simplified Management</h3>
+                <p class="what-we-do-card-description">Streamlined management approach simplifies complex tasks, providing you with a centralized dashboard, automated workflows, and real-time insights, e...</p>
+                <a href="#" class="what-we-do-read-more">Read More ></a>
+            </div>
+            <div class="what-we-do-card">
+                <img src="img/home/whatwedo/icon6.png" alt="Service Icon 6" class="what-we-do-icon">
+                <h3 class="what-we-do-card-title">Security & compliance metrics</h3>
+                <p class="what-we-do-card-description">Our solution platform offer a clear picture of your organization's security performance, enabling you to assess risk levels, identify areas for improvement, and measure the effecti...</p>
+                <a href="#" class="what-we-do-read-more">Read More ></a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="our-team-section">
+        <!-- Small Title with Image -->
+        <div class="our-team-title-container">
+            <img src="img/home/wwa.png" alt="Small Icon" class="our-team-small-icon">
+            <h3 class="our-team-small-title">OUR TEAM</h3>
+        </div>
+
+        <!-- Large Centered Title -->
+        <h1 class="our-team-large-title">Meet Our Leadership Team</h1>
+
+        <!-- Team Members -->
+        <div class="our-team-members">
+            <div class="team-member">
+                <img src="img/home/ourteam1.png" alt="Team Member 1" class="team-image">
+                <h3 class="team-name">Suresh Kumar</h3>
+                <p class="team-position">CO-FOUNDER & CHIEF EXECUTIVE OFFICER</p>
+            </div>
+            <div class="team-member">
+                <img src="img/home/ourteam2.png" alt="Team Member 2" class="team-image">
+                <h3 class="team-name">Nithin Ramegowda</h3>
+                <p class="team-position">CO-FOUNDER & CHIEF OF BUSINESS STRATEGY</p>
+            </div>
+        </div>
+
+        <!-- Team Description -->
+        <p class="our-team-description">
+            "Join our team of experts and embark on a mission to shape the future; where innovation meets resilience"
+        </p>
+
+        <!-- Join With Us Button -->
+        <button class="join-us-button">Join With Us</button>
+    </section>
+
+
+
+
+    <section class="case-study-container">
+        <div class="case-study-section">
+        <!-- Small Title with Image -->
+        <div class="case-study-title-container">
+            <img src="img/home/wwa.png" alt="Small Icon" class="case-study-small-icon">
+            <h3 class="case-study-small-title">OUR PROJECT</h3>
+        </div>
+
+        <!-- Large Centered Title -->
+        <h1 class="case-study-large-title">Our Latest Case Studies</h1>
+
+        <!-- Case Study Grid -->
+        <div class="case-study-grid">
+            <!-- Left Image -->
+            <div class="case-study-item">
+                <img src="img/home/case1.png" alt="Case Study Left" class="case-study-image">
+                <div class="case-study-overlay">
+                    <p class="case-study-description">Threat Protection with Microsoft Azure<br>Sentinel</p>
+                    <a href="#" class="case-study-read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="case-study-item">
+                <img src="img/home/case2.png" alt="Case Study Right" class="case-study-image">
+                <div class="case-study-overlay">
+                    <p class="case-study-description">A Guide to IT Security Transformation in Manufacturing</p>
+                    <a href="#" class="case-study-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="testimonial-section">
+        <!-- Small Title with Image -->
+        <div class="testimonial-title-container">
+            <img src="img/home/wwa.png" alt="Small Icon" class="testimonial-small-icon">
+            <h3 class="testimonial-small-title">TESTIMONIALS</h3>
+        </div>
+
+        <!-- Large Centered Title -->
+        <h1 class="testimonial-large-title">What Our Clients Say About Us</h1>
+
+        <!-- Center Image -->
+        <div class="testimonial-image-container">
+            <img src="img/home/testimonial1.png" alt="Client Image" class="testimonial-image">
+        </div>
+
+        <!-- Description and Author Details -->
+        <p class="testimonial-description">
+            One of the most remarkable aspects of our partnership with Skysecure has been their unwavering support. They provided comprehensive training to our staff, ensuring a smooth transition to the new systems. Their customer service is unparalleled; they were always available to answer our queries, address any issues promptly, and provide insightful advice to help us leverage technology to our advantage.
+        </p>
+        <h3 class="testimonial-author-name">- Saptesh Parish</h3>
+        <p class="testimonial-author-position">DIRECTOR - ENTERPRISE IT</p>
+    </section>
+
+
+    <section class="extra-image-section">
+        <img src="img/home/bluestats.png" alt="Extra Image" class="extra-image">
+    </section>
+
+
+
+    <section class="latest-video-section">
+        <!-- Small Title with Image -->
+        <div class="latest-video-title-container">
+            <img src="img/home/wwa.png" alt="Small Icon" class="latest-video-small-icon">
+            <h3 class="latest-video-small-title">LATEST VIDEO</h3>
+        </div>
+
+        <!-- Large Centered Title -->
+        <h1 class="latest-video-large-title">Watch Our Latest From Our Video Catalogue</h1>
+
+        <!-- Video Container -->
+        <div class="video-container">
+            <video controls class="latest-video">
+                <source src="latest-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Video Description -->
+        <p class="latest-video-description">
+            Includes a curated selection of clips ranging from insightful tutorials to compelling case studies and testimonials from satisfied clients.
+        </p>
+    </section>
+
+
+
+
+
+
+<section class="latest-video-section1">
+        <!-- Small Title with Image -->
+        <div class="latest-video-title-container1">
+            <img src="img/home/wwa.png" alt="Small Icon" class="latest-video-small-icon">
+            <h3 class="latest-video-small-title1">CONTACT US</h3>
+        </div>
+
+        <!-- Large Centered Title -->
+        <h1 class="latest-video-large-title1">Don&apos;t Hesitate To Contact Us</h1>
+</section>
+<section class="contact-section">
+    <!-- Left: Form -->
+    <div class="contact-form-container">
+        <form id="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" class="contact-input" required>
+                <label for="name">Name</label>
+                <span class="bottom-border"></span>
+                <span class="error-message">Please fill out this field</span>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" class="contact-input" required>
+                <label for="email">Email</label>
+                <span class="bottom-border"></span>
+                <span class="error-message">Please fill out this field</span>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="subject" class="contact-input" required>
+                <label for="subject">Subject</label>
+                <span class="bottom-border"></span>
+                <span class="error-message">Please fill out this field</span>
+            </div>
+
+            <div class="input-group">
+                <textarea id="message" class="contact-input message-box" required></textarea>
+                <label for="message">Message</label>
+                <span class="bottom-border"></span>
+                <span class="error-message">Please fill out this field</span>
+            </div>
+
+            <button type="submit" class="send-message-btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="contact-image-container">
+        <img src="img/home/contact1.png" alt="Contact Image" class="contact-image">
+    </div>
+</section>
+
+
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contact-form");
+    const inputs = document.querySelectorAll(".contact-input");
+    const errorMessages = document.querySelectorAll(".error-message");
+
+    form.addEventListener("submit", function(event) {
+        let isValid = true;
+
+        inputs.forEach((input, index) => {
+            if (!input.value.trim()) {
+                errorMessages[index].style.display = "block";
+                input.style.border = "2px solid red";
+                isValid = false;
+            } else {
+                errorMessages[index].style.display = "none";
+                input.style.border = "none";
+            }
+        });
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+
+    inputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+            if (input.value.trim()) {
+                errorMessages[index].style.display = "none";
+                input.style.border = "none";
+            }
+        });
+    });
+});
+
+    </script>
+
+
+
+<section class="blogcontainer">
+<section class="latest-video-section1">
+    <!-- Small Title with Image -->
+    <div class="latest-video-title-container1">
+        <img src="img/home/wwa.png" alt="Small Icon" class="latest-video-small-icon">
+        <h3 class="latest-video-small-title1">OUR BLOG</h3>
+    </div>
+
+    <!-- Large Centered Title -->
+    <h1 class="latest-video-large-title1">Read Our Latest News & Blog</h1>
+</section>
+
+  <section class="blog-section">
+    <!-- Blog Posts Grid -->
+    <div class="blog-grid">
+        <!-- Left Blog Post -->
+        <div class="blog-item">
+            <div class="blog-image-container">
+                <img src="img/home/blog1.png" alt="Blog Image 1" class="blog-image">
+            </div>
+            <h3 class="blog-post-title">A Guide to IT Security Transformation in Manufacturing</h3>
+            <p class="blog-post-description">The manufacturing industry in India has been experiencing significant growth and transformation in recent years. India has emerged as a global manufacturing hub, attracting both domestic and foreign investments. Several factors contribute to the growth of the manufacturing sector in India, including favorable government policies, advancements in technology, a skilledlabour force, and a large consumer...</p>
+            <a href="#" class="blog-read-more">Read More</a>
+        </div>
+
+        <!-- Right Blog Post -->
+        <div class="blog-item">
+            <div class="blog-image-container">
+                <img src="img/home/blog2.png" alt="Blog Image 2" class="blog-image">
+            </div>
+            <h3 class="blog-post-title">Threat Protection with Microsoft Azure Sentinel</h3>
+            <p class="blog-post-description">The manufacturing industry in India has been experiencing significant growth and transformation in recent years. India has emerged as a global manufacturing hub, attracting both domestic and foreign investments. Several factors contribute to the growth of the manufacturing sector in India, including favorable government policies, advancements in technology, a skilledlabour force, and a large consumer...</p>
+            <a href="#" class="blog-read-more">Read More</a>
+        </div>
+    </div>
+  </section>
+    </section>
+
+
+
+
+    <footer class="footer-section">
+        <!-- Follow Us Text -->
+        <h3 class="footer-follow-text">FOLLOW US ON</h3>
+
+        <!-- Social Media Icons -->
+        <div class="footer-icons">
+            <a href="#" class="footer-icon"><img src="img/linkedin.png" alt="Facebook"></a>
+            <a href="#" class="footer-icon"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="#" class="footer-icon"><img src="img/youtube.png" alt="Instagram"></a>
+        </div>
+
+        <!-- Email Subscription Box -->
+        <div class="footer-subscription">
+            <input type="email" placeholder="Enter Your Email..." class="footer-email-input" style="color: rgba(102, 102, 102, 1); font-weight: 500;">
+            <button class="footer-subscribe-btn">SUBSCRIBE</button>
+        </div>
+
+        <div class="footer-content">
+            <!-- Part 1: Logo & Description -->
+            <div class="footer-part">
+                <img src="img/footerlogo.png" alt="Company Logo" class="footer-logo">
+                <p class="footer-description">
+                    With a strong focus on innovation, expertise, and client-centric services, Skysecure stands at the forefront of digital innovation, offering bespoke solutions to businesses globally.
+                </p>
+            </div>
+
+            <!-- Part 2: Our Services -->
+            <div class="footer-part" style="margin-left: 120px;">
+                <h3 class="footer-heading" style= "margin-bottom: 15px;">Our Services</h3>
+                <p>Web Development</p>
+                <p>Mobile App Development</p>
+                <p>Cyber Security Solutions</p>
+                <p>Cloud Computing</p>
+                <p>Data Analytics</p>
+                <p>AI & Machine Learning</p>
+            </div>
+
+            <!-- Part 3: Other Information -->
+            <div class="footer-part">
+                <h3 class="footer-heading">Quick Links</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <h3 class="footer-heading" style= "margin-top: 30px;">Terms & Conditions</h3>
+                <p>Blog</p>
+                <p>Case Studies</p>
+            </div>
+
+            <!-- Part 4: Contact Us -->
+            <div class="footer-part">
+                <h3 class="footer-heading">Contact Us</h3>
+                <p>SKYSECURE TECHNOLOGIES PRIVATE LIMITED</p>
+
+                <div class="footer-contact-item">
+                    <img src="img/phone.png" alt="Phone Icon">
+                    <p>(+91) 73533 55526</p>
+                </div>
+
+                <div class="footer-contact-item">
+                    <img src="img/mail.png" alt="Email Icon">
+                    <p>sales@skysecuretech.com</p>
+                </div>
+
+                <div class="footer-contact-item">
+                    <img src="img/location.png" alt="Location Icon">
+                    <p>AGR Plaza, 6/1, Bellandur, Bengaluru,
+                        Karnataka-560103</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>© 2025 Skysecure. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+
+
+</body>
+</html>

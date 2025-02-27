@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contactstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="img/home/companylogo.png" alt="Company Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown">
+                <a href="#" class="community">
+                    Community <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a href="#" class="india">
+                    India <img src="img/home/indflag.png" alt="India Flag" class="flag">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Singapore</a></li>
+                    <li><a href="#">Dubai</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="banner">
+        <img src="img/contactus/contactbanner.png" alt="Banner Image">
+    </section>
+
+
+    <section class="icon-section">
+        <div class="icon-box">
+            <div class="icon"><img src="img/contactus/icon1.png" alt="Icon 1"></div>
+            <div class="text-content">
+                <h3>Phone</h3>
+                <p>+(91) 73533 55526</p>
+            </div>
+        </div>
+        <div class="icon-box">
+            <div class="icon"><img src="img/contactus/icon2.png" alt="Icon 2"></div>
+            <div class="text-content">
+                <h3>Email</h3>
+                <p>sales@skysecuretech.com</p>
+            </div>
+        </div>
+        <div class="icon-box">
+            <div class="icon"><img src="img/contactus/icon3.png" alt="Icon 3"></div>
+            <div class="text-content">
+                <h3>Map</h3>
+                <p>View on Google Map</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+<section class="contact-section">
+    <!-- Left Side Image -->
+    <div class="contact-image">
+        <img src="img/contactus/contact1.png" alt="Contact Image">
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="contact-form">
+        <form id="userForm">
+            <div class="name-email">
+                <div>
+                    <h3 class="field-title">Your Name <span class="required">*</span></h3>
+                    <input type="text" id="name" class="input-box short-box">
+                    <p class="error-message" id="nameError">Please enter your name.</p>
+                </div>
+                <div>
+                    <h3 class="field-title">Email <span class="required">*</span></h3>
+                    <input type="email" id="email" class="input-box short-box">
+                    <p class="error-message" id="emailError">Please enter a valid email.</p>
+                </div>
+            </div>
+
+            <h3 class="field-title">Subject</h3>
+            <input type="text" id="subject" class="input-box long-box">
+
+            <h3 class="field-title">Comments <span class="required">*</span></h3>
+            <textarea id="comments" class="input-box textarea-box"></textarea>
+            <p class="error-message" id="commentsError">Please enter your comments.</p>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById("userForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let isValid = true;
+    
+    // Get field values
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let comments = document.getElementById("comments").value.trim();
+    
+    // Validation for Name
+    if (name === "") {
+        document.getElementById("nameError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("nameError").style.display = "none";
+    }
+
+    // Validation for Email
+    if (email === "") {
+        document.getElementById("emailError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("emailError").style.display = "none";
+    }
+
+    // Validation for Comments
+    if (comments === "") {
+        document.getElementById("commentsError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("commentsError").style.display = "none";
+    }
+
+    // If all fields are valid, form can be submitted
+    if (isValid) {
+        alert("Form submitted successfully!");
+    }
+});
+
+</script>
+
+
+
+
+<!-- Full-Width Clickable Map Section -->
+<section class="map-section">
+    <a href="https://maps.app.goo.gl/Edmj6Zffo2BH9biC6" target="_blank">
+        <img src="img/contactus/map.png" alt="Google Map">
+    </a>
+</section>
+
+
+
+<section class="project-carousel-section">
+    <!-- Small Title with Image -->
+    <div class="project-title-container">
+        <img src="img/home/wwa.png" alt="Small Icon" class="project-small-icon">
+        <h3 class="project-small-title">OUR PARTNERSHIPS & ALLIANCES</h3>
+    </div>
+
+    <!-- Large Centered Title -->
+    <h1 class="project-large-title">We've Had The Pleasure of Working With Industry - Defining Brands.</h1>
+
+    <!-- Carousel -->
+    <div class="scrolling-carousel-wrapper">
+        <div class="scrolling-carousel">
+            <img src="img/service/paypalscroll.png" alt="Scrolling Image">
+            <img src="img/service/paypalscroll.png" alt="Scrolling Image">
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer class="footer-section">
+    <!-- Follow Us Text -->
+    <h3 class="footer-follow-text">FOLLOW US ON</h3>
+
+    <!-- Social Media Icons -->
+    <div class="footer-icons">
+        <a href="#" class="footer-icon"><img src="img/linkedin.png" alt="Facebook"></a>
+        <a href="#" class="footer-icon"><img src="img/twitter.png" alt="Twitter"></a>
+        <a href="#" class="footer-icon"><img src="img/youtube.png" alt="Instagram"></a>
+    </div>
+
+    <!-- Email Subscription Box -->
+    <div class="footer-subscription">
+        <input type="email" placeholder="Enter Your Email..." class="footer-email-input" style="color: rgba(102, 102, 102, 1); font-weight: 500;">
+        <button class="footer-subscribe-btn">SUBSCRIBE</button>
+    </div>
+
+    <div class="footer-content">
+        <!-- Part 1: Logo & Description -->
+        <div class="footer-part">
+            <img src="img/footerlogo.png" alt="Company Logo" class="footer-logo">
+            <p class="footer-description">
+                With a strong focus on innovation, expertise, and client-centric services, Skysecure stands at the forefront of digital innovation, offering bespoke solutions to businesses globally.
+            </p>
+        </div>
+
+        <!-- Part 2: Our Services -->
+        <div class="footer-part" style="margin-left: 120px;">
+            <h3 class="footer-heading" style= "margin-bottom: 15px;">Our Services</h3>
+            <p>Web Development</p>
+            <p>Mobile App Development</p>
+            <p>Cyber Security Solutions</p>
+            <p>Cloud Computing</p>
+            <p>Data Analytics</p>
+            <p>AI & Machine Learning</p>
+        </div>
+
+        <!-- Part 3: Other Information -->
+        <div class="footer-part">
+            <h3 class="footer-heading">Quick Links</h3>
+            <p>About Us</p>
+            <p>Careers</p>
+            <h3 class="footer-heading" style= "margin-top: 30px;">Terms & Conditions</h3>
+            <p>Blog</p>
+            <p>Case Studies</p>
+        </div>
+
+        <!-- Part 4: Contact Us -->
+        <div class="footer-part">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p>SKYSECURE TECHNOLOGIES PRIVATE LIMITED</p>
+
+            <div class="footer-contact-item">
+                <img src="img/phone.png" alt="Phone Icon">
+                <p>(+91) 73533 55526</p>
+            </div>
+
+            <div class="footer-contact-item">
+                <img src="img/mail.png" alt="Email Icon">
+                <p>sales@skysecuretech.com</p>
+            </div>
+
+            <div class="footer-contact-item">
+                <img src="img/location.png" alt="Location Icon">
+                <p>AGR Plaza, 6/1, Bellandur, Bengaluru,
+                    Karnataka-560103</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <p>© 2025 Skysecure. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
