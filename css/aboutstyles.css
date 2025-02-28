@@ -42,6 +42,7 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
+    margin-right: 40px;
 }
 
 nav ul li {
@@ -58,8 +59,9 @@ nav ul li a {
     letter-spacing: 0.5px;
 }
 
-nav ul li a:hover {
-    color: rgba(6, 102, 219, 1);
+nav ul li a:hover,
+nav ul li a.active { 
+    color: rgba(6, 102, 219, 1); /* Same color for hover and active state */
 }
 
 /* Dropdown Container */
@@ -80,7 +82,13 @@ nav ul li a:hover {
     padding: 0;
     margin: 0;
     border-radius: 10px;
+    margin-top: 10px;
 }
+
+header nav > ul > li:nth-child(4):hover > .dropdown-menu {
+    margin-top: 20px;
+}
+
 
 .dropdown-menu::after {
     content: '';
@@ -105,13 +113,19 @@ nav ul li a:hover {
     text-decoration: none;
     color: rgba(60, 72, 88, 1);
     padding: 10px 15px;
+    margin-top: 1px;
+    margin-left: -3px;
 }
 
 /* Arrow Icon */
 .fas.fa-chevron-down {
-    margin-left: 8px;
+    margin-left: 5px;
     font-size: 12px;
     margin-right: -15px;
+}
+
+header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
+    margin-left: -15px;
 }
 
 /* Style for the items inside the dropdown */
@@ -131,6 +145,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-top: 1px;
 }
 
 .flag {
@@ -139,13 +154,12 @@ nav ul li a:hover {
 }
 
 
-
-
 .banner {
     width: 100%;
     height: 425px; /* Adjust height as needed */
     overflow: hidden;
     margin-top: 40px;
+    margin-bottom: 70px;
 }
 
 .banner img {
@@ -159,7 +173,7 @@ nav ul li a:hover {
 .testimonial-section {
     text-align: center;
     padding: 50px 0;
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -207,7 +221,7 @@ nav ul li a:hover {
     width: 70%;
     height: auto;
     margin-bottom: 30px;
-    margin-left: 30px;
+    margin-left: 0px;
 }
 
 
@@ -219,7 +233,11 @@ nav ul li a:hover {
     margin: 20px auto; /* Adds space and centers it */
     line-height: 27px;
     letter-spacing: 0.4px;
-    margin-left: 190px;
+    margin-left: 180px;
+}
+
+.blue-text {
+    color: rgba(6, 102, 219, 1);
 }
 
 /* Join With Us Button */
@@ -236,10 +254,35 @@ nav ul li a:hover {
     cursor: pointer;
     transition: 0.3s;
     margin-top: 30px;
-    margin-left: 20px;
+    margin-left: 0px;
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5);
+}
+
+.join-us-button:hover {
+    background-color: rgb(11, 90, 187);
 }
 
 
+.join-us-button1 {
+    font-family: 'Inter', sans-serif;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background-color: rgba(6, 102, 219, 1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 30px;
+    margin-left: 0px;
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5);
+}
+
+.join-us-button1:hover {
+    background-color: rgb(11, 90, 187);
+}
 
 /* Box Section */
 .box-section {
@@ -248,7 +291,7 @@ nav ul li a:hover {
     width: 1000px;
     margin: 0 auto;
     gap: 20px; /* Space between the boxes */
-    margin-top: 50px;
+    margin-top: 90px;
 }
 
 /* Box Style */
@@ -357,6 +400,13 @@ nav ul li a:hover {
     transition: 0.3s ease-in-out;
 }
 
+.grey-box:hover .button-container .right-arrow,
+.blue-box:hover .button-container .right-arrow,
+.button-container:hover .right-arrow {
+    background-color: rgba(6, 102, 219, 1);
+    transition: 0.3s ease-in-out;
+}
+
 
 
 .testimonial-section1 {
@@ -372,10 +422,10 @@ nav ul li a:hover {
     color: grey;
     font-size: 14px;
     text-align: left; /* Centering the text */
-    width: 70vw; /* Adjust width as needed */
+    width: 68vw; /* Adjust width as needed */
     margin: 20px auto; /* Adds space and centers it */
     line-height: 27px;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.5px;
     margin-left: 80px;
 }
 
@@ -458,17 +508,22 @@ nav ul li a:hover {
     font-weight: 700;
     transition: transform 0.3s ease-in-out;
     margin-left: 5px;
-    position: absolute; /* Position it relative to the faq-box */
-    right: 20px; /* 10px from the right edge */
-    top: 50%; /* Vertically center the arrow */
-    transform: translateY(-50%); /* Adjust so it's perfectly centered vertically */
+    position: absolute; /* Position relative to the faq-box */
+    right: 20px; /* 20px from the right edge */
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%); /* Keep it centered */
+    transform-origin: center;
 }
 
-/* Rotate Arrow when Active */
+/* Rotate Arrow when Active (Without Shifting) */
 .faq-box.active .faq-arrow {
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg); /* Combine both transforms */
 }
 
+
+.faq-box.active .faq-arrow img {
+    filter: invert(23%) sepia(92%) saturate(1947%) hue-rotate(208deg) brightness(90%) contrast(95%);
+}
 
 
 .our-team-section {
@@ -505,7 +560,7 @@ nav ul li a:hover {
     font-size: 36px;
     line-height: 47px;
     letter-spacing: 1px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     margin-top: 20px;
 }
 
@@ -576,6 +631,7 @@ nav ul li a:hover {
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
+    margin-bottom: 100px;
 }
 
 
@@ -631,6 +687,9 @@ nav ul li a:hover {
     cursor: pointer;
     border-radius: 7px;
     margin-right: 350px;
+}
+
+.button:hover {
     box-shadow: 0px 3px 7px 0px rgba(255, 255, 255, 0.5);
 }
 
@@ -709,13 +768,13 @@ nav ul li a:hover {
 
 .top-left2 {
     top: 40%;
-    left: 10%;
+    left: 6%;
     transform: translateY(-50%);
 }
 
 .bottom-right2 {
     bottom: 0;
-    right: 10%;
+    right: 6%;
 }
 
 
@@ -841,7 +900,7 @@ nav ul li a:hover {
     padding: 40px 0;
     width: 100vw;
     margin-left: 0px;
-    margin-top: 60px;
+    margin-top: -90px;
 }
 
 /* Follow Us Text */
@@ -862,17 +921,18 @@ nav ul li a:hover {
 }
 
 .footer-icon img {
-    width: 35px;
+    width: 50px;
     height: auto;
     margin-top: 14px;
     margin-right: 20px;
     margin-left: 14px;
     margin-bottom: 30px;
-    transition: opacity 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 .footer-icon img:hover {
-    opacity: 0.7;
+    background-color: rgb(11, 90, 187);
+    border-radius: 7px;
 }
 
 /* Subscription Box */
@@ -900,6 +960,7 @@ nav ul li a:hover {
 
 /* Subscribe Button */
 .footer-subscribe-btn {
+    font-family: 'Inter', sans-serif;
     background-color: rgba(6, 102, 219, 1);
     color: white;
     border: none;
@@ -909,7 +970,7 @@ nav ul li a:hover {
     border-radius: 40px;
     cursor: pointer;
     transition: background 0.3s;
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 .footer-subscribe-btn:hover {
@@ -924,7 +985,7 @@ nav ul li a:hover {
     width: 1200px;
     margin: 40px auto 0;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 /* Each Section */
@@ -992,11 +1053,23 @@ nav ul li a:hover {
 .footer-copyright {
     text-align: center;
     color: rgba(173, 181, 189, 1);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    margin-top: 100px;
+    margin-top: 30px;
+    margin-bottom: -10px;
 }
 
 
+.solid-hr {
+    height: 1px; /* Thickness of the line */
+    border: none;
+    background-color: rgba(73, 80, 87, 1); /* Solid color (Change to any color) */
+    margin-top: 60px;
+}
 
-
+.solid-hr1 {
+    height: 1px; /* Thickness of the line */
+    border: none;
+    background-color: rgba(73, 80, 87, 1); /* Solid color (Change to any color) */
+    margin-top: 60px;
+}

@@ -20,7 +20,14 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="service.html">Service</a></li>
-            <li><a href="#">Product</a></li>
+            <li class="dropdown">
+                <a href="#" class="product">
+                    Product <i class="fas fa-chevron-down" style="margin-left: 1px; margin-right: -3px;"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://shop.skysecure.ai/">Marketplace</a></li> 
+                </ul>
+            </li>
             <li><a href="blog.html">Blog</a></li>
             <li class="dropdown">
                 <a href="#" class="community">
@@ -154,7 +161,7 @@
 
 
 
-        <section class="project-carousel-section">
+<section class="project-carousel-section">
             <!-- Small Title with Image -->
             <div class="project-title-container">
                 <img src="img/home/wwa.png" alt="Small Icon" class="project-small-icon">
@@ -171,91 +178,91 @@
                     <img src="img/home/partnerlogos.png" alt="Scrolling Image">
                 </div>
             </div>
-        </section>
+</section>
         
         
         
-        <footer class="footer-section">
-            <!-- Follow Us Text -->
-            <h3 class="footer-follow-text">FOLLOW US ON</h3>
-        
-            <!-- Social Media Icons -->
-            <div class="footer-icons">
-                <a href="#" class="footer-icon"><img src="img/linkedin.png" alt="Facebook"></a>
-                <a href="#" class="footer-icon"><img src="img/twitter.png" alt="Twitter"></a>
-                <a href="#" class="footer-icon"><img src="img/youtube.png" alt="Instagram"></a>
+<footer class="footer-section">
+    <!-- Follow Us Text -->
+    <h3 class="footer-follow-text">FOLLOW US ON</h3>
+
+    <!-- Social Media Icons -->
+    <div class="footer-icons">
+        <a href="#" class="footer-icon"><img src="img/linkedin.png" alt="Facebook"></a>
+        <a href="#" class="footer-icon"><img src="img/twitter.png" alt="Twitter"></a>
+        <a href="#" class="footer-icon"><img src="img/youtube.png" alt="Instagram"></a>
+    </div>
+
+    <!-- Email Subscription Box -->
+    <div class="footer-subscription">
+        <input type="email" placeholder="Enter Your Email..." class="footer-email-input" style="color: rgba(102, 102, 102, 1); font-weight: 400; font-size: 16px; margin-left: 10px; font-family: 'Inter', sans-serif;">
+        <button class="footer-subscribe-btn">SUBSCRIBE</button>
+    </div>
+
+    <hr class="solid-hr">
+
+    <div class="footer-content">
+        <!-- Part 1: Logo & Description -->
+        <div class="footer-part">
+            <img src="img/footerlogo.png" alt="Company Logo" class="footer-logo">
+            <p class="footer-description">
+                "With a strong focus on innovation, expertise, and client-centric services, Skysecure stands at the forefront of digital innovation, offering bespoke solutions to businesses globally."
+            </p>
+        </div>
+
+        <!-- Part 2: Our Services -->
+        <div class="footer-part" style="margin-left: 120px;">
+            <h3 class="footer-heading" style= "margin-bottom: 15px;">Our Services</h3>
+            <p>Commercial Marketplace</p>
+            <p>Solution Implementation</p>
+            <p>Assessment</p>
+            <p>Simplified Management</p>
+            <p>Security & Compliance Metrics</p>
+            <p>Operational Excellence</p>
+        </div>
+
+        <!-- Part 3: Other Information -->
+        <div class="footer-part">
+            <h3 class="footer-heading">Quick Links</h3>
+            <p>Need a Consultant?</p>
+            <p>Have any Questions?</p>
+            <h3 class="footer-heading" style= "margin-top: 30px;">Terms & Conditions</h3>
+            <p>Privacy</p>
+            <p>Terms of Use</p>
+        </div>
+
+        <!-- Part 4: Contact Us -->
+        <div class="footer-part">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p>SKYSECURE TECHNOLOGIES PRIVATE LIMITED</p>
+
+            <div class="footer-contact-item">
+                <img src="img/phone.png" alt="Phone Icon">
+                <p>(+91) 73533 55526</p>
             </div>
-        
-            <!-- Email Subscription Box -->
-            <div class="footer-subscription">
-                <input type="email" placeholder="Enter Your Email..." class="footer-email-input" style="color: rgba(102, 102, 102, 1); font-weight: 500;">
-                <button class="footer-subscribe-btn">SUBSCRIBE</button>
+
+            <div class="footer-contact-item">
+                <img src="img/mail.png" alt="Email Icon">
+                <p>sales@skysecuretech.com</p>
             </div>
-        
-            <div class="footer-content">
-                <!-- Part 1: Logo & Description -->
-                <div class="footer-part">
-                    <img src="img/footerlogo.png" alt="Company Logo" class="footer-logo">
-                    <p class="footer-description">
-                        With a strong focus on innovation, expertise, and client-centric services, Skysecure stands at the forefront of digital innovation, offering bespoke solutions to businesses globally.
-                    </p>
-                </div>
-        
-                <!-- Part 2: Our Services -->
-                <div class="footer-part" style="margin-left: 120px;">
-                    <h3 class="footer-heading" style= "margin-bottom: 15px;">Our Services</h3>
-                    <p>Web Development</p>
-                    <p>Mobile App Development</p>
-                    <p>Cyber Security Solutions</p>
-                    <p>Cloud Computing</p>
-                    <p>Data Analytics</p>
-                    <p>AI & Machine Learning</p>
-                </div>
-        
-                <!-- Part 3: Other Information -->
-                <div class="footer-part">
-                    <h3 class="footer-heading">Quick Links</h3>
-                    <p>About Us</p>
-                    <p>Careers</p>
-                    <h3 class="footer-heading" style= "margin-top: 30px;">Terms & Conditions</h3>
-                    <p>Blog</p>
-                    <p>Case Studies</p>
-                </div>
-        
-                <!-- Part 4: Contact Us -->
-                <div class="footer-part">
-                    <h3 class="footer-heading">Contact Us</h3>
-                    <p>SKYSECURE TECHNOLOGIES PRIVATE LIMITED</p>
-        
-                    <div class="footer-contact-item">
-                        <img src="img/phone.png" alt="Phone Icon">
-                        <p>(+91) 73533 55526</p>
-                    </div>
-        
-                    <div class="footer-contact-item">
-                        <img src="img/mail.png" alt="Email Icon">
-                        <p>sales@skysecuretech.com</p>
-                    </div>
-        
-                    <div class="footer-contact-item">
-                        <img src="img/location.png" alt="Location Icon">
-                        <p>AGR Plaza, 6/1, Bellandur, Bengaluru,
-                            Karnataka-560103</p>
-                    </div>
-                </div>
+
+            <div class="footer-contact-item">
+                <img src="img/location.png" alt="Location Icon">
+                <p>AGR Plaza, 6/1, Bellandur, Bengaluru,
+                    Karnataka-560103</p>
             </div>
-        
-            <div class="footer-copyright">
-                <p>© 2025 Skysecure. All Rights Reserved.</p>
-            </div>
-        
-        </footer>
-        
-        
-        
+        </div>
+    </div>
+
+    <hr class="solid-hr1">
+
+    <div class="footer-copyright">
+        <p>© 2025 Skysecure. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+
+
 </body>
 </html>
-        
-        
-        
-        

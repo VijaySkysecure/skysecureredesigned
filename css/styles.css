@@ -42,6 +42,7 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
+    margin-right: 40px;
 }
 
 nav ul li {
@@ -58,8 +59,9 @@ nav ul li a {
     letter-spacing: 0.5px;
 }
 
-nav ul li a:hover {
-    color: rgba(6, 102, 219, 1);
+nav ul li a:hover,
+nav ul li a.active { 
+    color: rgba(6, 102, 219, 1); /* Same color for hover and active state */
 }
 
 /* Dropdown Container */
@@ -80,7 +82,13 @@ nav ul li a:hover {
     padding: 0;
     margin: 0;
     border-radius: 10px;
+    margin-top: 10px;
 }
+
+header nav > ul > li:nth-child(4):hover > .dropdown-menu {
+    margin-top: 20px;
+}
+
 
 .dropdown-menu::after {
     content: '';
@@ -105,13 +113,19 @@ nav ul li a:hover {
     text-decoration: none;
     color: rgba(60, 72, 88, 1);
     padding: 10px 15px;
+    margin-top: 1px;
+    margin-left: -3px;
 }
 
 /* Arrow Icon */
 .fas.fa-chevron-down {
-    margin-left: 8px;
+    margin-left: 5px;
     font-size: 12px;
     margin-right: -15px;
+}
+
+header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
+    margin-left: -15px;
 }
 
 /* Style for the items inside the dropdown */
@@ -131,6 +145,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-top: 1px;
 }
 
 .flag {
@@ -163,19 +178,19 @@ nav ul li a:hover {
     margin-bottom: 10px;
     font-weight: 600;
     color: rgba(60, 72, 88, 1);
-    margin-left: 80px;
+    margin-left: 30px;
     width: 27vw;
-    line-height: 1.6;
+    line-height: 53px;
 }
 
 .content p {
     font-size: 18px;
     margin-bottom: 15px;
-    width: 40vw;
+    width: 36vw;
     line-height: 1.8;
     font-size: 16px;
     color: rgba(132, 146, 166, 1);
-    margin-left: 80px;
+    margin-left: 30px;
 }
 
 .learn-more {
@@ -188,13 +203,14 @@ nav ul li a:hover {
     border: none;
     border-radius: 26px;
     cursor: pointer;
-    transition: box-shadow 0.3s ease;
-    margin-left: 80px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-left: 30px;
     margin-top: 20px;
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5); /* Apply shadow on hover */
 }
 
 .learn-more:hover {
-    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5); /* Apply shadow on hover */
+    background-color: rgb(11, 90, 187);
 }
 
 
@@ -205,7 +221,7 @@ nav ul li a:hover {
     margin-left: 100px;
     gap: 10px;
     margin-top: -350px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     position: absolute;
 }
 
@@ -221,7 +237,8 @@ nav ul li a:hover {
 }
 
 
-.hover-btn:hover {
+.hover-btn:hover,
+.hover-btn.active {  /* Apply same styles for hover and active state */
     background-color: rgba(6, 102, 219, 1);
 }
 
@@ -438,6 +455,7 @@ span {
 .what-we-do-small-icon {
     width: 30px;
     height: auto;
+    margin-right: 0px;
 }
 
 .what-we-do-small-title {
@@ -445,6 +463,8 @@ span {
     font-weight: 700;
     letter-spacing: 1px;
     color: rgba(60, 72, 88, 1);
+    margin-right: 80px;
+
 }
 
 /* Large Centered Title */
@@ -453,7 +473,7 @@ span {
     font-size: 36px;
     line-height: 47px;
     letter-spacing: 1px;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
     width: 40vw;
     margin-left: 400px;
     margin-top: 25px;
@@ -551,7 +571,7 @@ span {
     font-size: 36px;
     line-height: 47px;
     letter-spacing: 1px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     margin-top: 20px;
 }
 
@@ -621,10 +641,11 @@ span {
     border-radius: 10px;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5);
 }
 
 .join-us-button:hover {
-    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5);
+    background-color: rgb(11, 90, 187);
 }
 
 
@@ -637,9 +658,10 @@ span {
 }
 
 .case-study-container {
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: rgba(249, 250, 252, 1); /* Light gray background */
     width: 100%;
     padding: 50px 0;
+    margin-top: 100px;
 }
 
 /* Small Title with Image */
@@ -669,7 +691,7 @@ span {
     font-size: 30px;
     line-height: 47px;
     letter-spacing: 1px;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     margin-top: 10px;
 }
 
@@ -700,7 +722,7 @@ span {
     position: absolute;
     bottom: 0;
     width: 93%;
-    background: rgba(255, 255, 255, 0.6); /* Slightly transparent background for the blur effect */
+    background: rgba(255, 255, 255, 0.5); /* Slightly transparent background for the blur effect */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -737,6 +759,12 @@ span {
     align-items: center;
     justify-content: center;
     transition: background 0.3s ease;
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5); /* Apply shadow on hover */
+}
+
+
+.case-study-read-more:hover {
+    background-color: rgb(11, 90, 187);
 }
 
 
@@ -747,6 +775,7 @@ span {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 100px;
 }
 
 /* Small Title with Image */
@@ -776,7 +805,7 @@ span {
     font-size: 30px;
     line-height: 47px;
     letter-spacing: 1px;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     margin-top: 10px;
 }
 
@@ -839,6 +868,7 @@ span {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 100px;
 }
 
 /* Small Title with Image */
@@ -868,7 +898,7 @@ span {
     font-size: 32px;
     line-height: 47px;
     letter-spacing: 1px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     margin-top: 20px;
     width: 40%;
     margin-left: 370px;
@@ -893,7 +923,7 @@ span {
     font-size: 16px;
     line-height: 25px;
     color: rgba(132, 146, 166, 1);
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     margin-top: 60px;
 }
@@ -940,7 +970,7 @@ span {
     font-size: 32px;
     line-height: 47px;
     letter-spacing: 1px;
-    margin-bottom: -100px;
+    margin-bottom: -60px;
     margin-top: 20px;
     width: 40%;
     margin-left: 370px;
@@ -1050,7 +1080,7 @@ span {
     left: 5px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 13px;
     color: darkgray;
     transition: all 0.3s ease;
 }
@@ -1089,11 +1119,49 @@ span {
     border-radius: 7px;
     cursor: pointer;
     transition: background 0.3s;
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5);
 }
 
+
 .send-message-btn:hover {
-    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5); /* Apply shadow on hover */
+    background-color: rgb(11, 90, 187);
 }
+
+/* Ensure the placeholder is visible */
+.contact-input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: rgba(132, 132, 132, 1);
+    font-size: 14px;
+    opacity: 1;
+}
+
+/* Hide label by default */
+.input-group label {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: darkgray;
+    transition: all 0.3s ease;
+    opacity: 0; /* Hide the label initially */
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Show label and hide placeholder when input is focused or has text */
+.contact-input:focus::placeholder {
+    opacity: 0; /* Hide placeholder when typing */
+}
+
+.contact-input:focus + label,
+.contact-input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 14px;
+    color: rgba(6, 102, 219, 1);
+    opacity: 1; /* Show label */
+}
+
 
 /* Right: Image */
 .contact-image-container {
@@ -1125,7 +1193,18 @@ span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 30px;
+}
+
+.latest-video-large-title2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    width: 40%;
+    margin-left: 370px;
 }
 
 /* Blog Grid */
@@ -1153,7 +1232,7 @@ span {
 /* Blog Image */
 .blog-image {
     width: 100%;
-    height: auto;
+    height: 370px;
     display: block;
     border-radius: 10px;
 }
@@ -1191,6 +1270,14 @@ span {
     text-decoration: none;
     font-weight: 500;
     margin-left: -450px;
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+
+
+.blog-read-more:hover {
+    background-color: rgb(11, 90, 187);
 }
 
 
@@ -1222,17 +1309,18 @@ span {
 }
 
 .footer-icon img {
-    width: 35px;
+    width: 50px;
     height: auto;
     margin-top: 14px;
     margin-right: 20px;
     margin-left: 14px;
     margin-bottom: 30px;
-    transition: opacity 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 .footer-icon img:hover {
-    opacity: 0.7;
+    background-color: rgb(11, 90, 187);
+    border-radius: 7px;
 }
 
 /* Subscription Box */
@@ -1285,7 +1373,7 @@ span {
     width: 1200px;
     margin: 40px auto 0;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 /* Each Section */
@@ -1353,8 +1441,26 @@ span {
 .footer-copyright {
     text-align: center;
     color: rgba(173, 181, 189, 1);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    margin-top: 100px;
+    margin-top: 30px;
+    margin-bottom: -10px;
 }
+
+
+.solid-hr {
+    height: 1px; /* Thickness of the line */
+    border: none;
+    background-color: rgba(73, 80, 87, 1); /* Solid color (Change to any color) */
+    margin-top: 60px;
+}
+
+.solid-hr1 {
+    height: 1px; /* Thickness of the line */
+    border: none;
+    background-color: rgba(73, 80, 87, 1); /* Solid color (Change to any color) */
+    margin-top: 60px;
+}
+
+
 

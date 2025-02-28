@@ -20,7 +20,14 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="service.html">Service</a></li>
-            <li><a href="#">Product</a></li>
+            <li class="dropdown">
+                <a href="#" class="product">
+                    Product <i class="fas fa-chevron-down" style="margin-left: 1px; margin-right: -3px;"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://shop.skysecure.ai/">Marketplace</a></li> 
+                </ul>
+            </li>
             <li><a href="blog.html">Blog</a></li>
             <li class="dropdown">
                 <a href="#" class="community">
@@ -61,19 +68,32 @@
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-    const hoverButtons = document.querySelectorAll(".hover-btn");
-    const title = document.getElementById("title");
-    const description = document.getElementById("description");
-
-    hoverButtons.forEach(button => {
-        button.addEventListener("mouseover", function() {
-            title.textContent = this.getAttribute("data-title");
-            description.textContent = this.getAttribute("data-description");
-        });
-    });
-    });
-
+                const hoverButtons = document.querySelectorAll(".hover-btn");
+                const title = document.getElementById("title");
+                const description = document.getElementById("description");
+        
+                // Set the first button as active by default
+                if (hoverButtons.length > 0) {
+                    hoverButtons[0].classList.add("active");
+                }
+        
+                hoverButtons.forEach(button => {
+                    button.addEventListener("mouseover", function() {
+                        // Update title and description
+                        title.textContent = this.getAttribute("data-title");
+                        description.textContent = this.getAttribute("data-description");
+        
+                        // Remove active class from all buttons
+                        hoverButtons.forEach(btn => btn.classList.remove("active"));
+        
+                        // Add active class to the hovered button
+                        this.classList.add("active");
+                    });
+                });
+            });
         </script>
+        
+            
 
         <!-- Right Section -->
         <div class="right">
@@ -83,6 +103,7 @@
             </div>
         </div>
     </section>
+
 
 
 
@@ -201,14 +222,14 @@
         <!-- Team Members -->
         <div class="our-team-members">
             <div class="team-member">
-                <img src="img/home/ourteam1.png" alt="Team Member 1" class="team-image" style="margin-left: 150px;">
-                <h3 class="team-name" style="margin-left: 150px;">Suresh Kumar</h3>
-                <p class="team-position" style="margin-left: 150px;">CO-FOUNDER & CHIEF EXECUTIVE OFFICER</p>
+                <img src="img/home/ourteam1.png" alt="Team Member 1" class="team-image" style="margin-left: 200px;">
+                <h3 class="team-name" style="margin-left: 200px;">Suresh Kumar</h3>
+                <p class="team-position" style="margin-left: 200px;">CO-FOUNDER & CHIEF EXECUTIVE OFFICER</p>
             </div>
             <div class="team-member">
-                <img src="img/home/ourteam2.png" alt="Team Member 2" class="team-image" style="margin-left: -150px;">
-                <h3 class="team-name" style="margin-left: -150px;">Nithin Ramegowda</h3>
-                <p class="team-position" style="margin-left: -150px;">CO-FOUNDER & CHIEF OF BUSINESS STRATEGY</p>
+                <img src="img/home/ourteam2.png" alt="Team Member 2" class="team-image" style="margin-left: -200px;">
+                <h3 class="team-name" style="margin-left: -200px;">Nithin Ramegowda</h3>
+                <p class="team-position" style="margin-left: -200px;">CO-FOUNDER & CHIEF OF BUSINESS STRATEGY</p>
             </div>
         </div>
 
@@ -335,32 +356,33 @@
     <div class="contact-form-container">
         <form id="contact-form">
             <div class="input-group">
-                <input type="text" id="name" class="contact-input" required>
+                <input type="text" id="name" class="contact-input" placeholder="Name" required>
                 <label for="name">Name</label>
                 <span class="bottom-border"></span>
                 <span class="error-message">Please fill out this field</span>
             </div>
-
+            
             <div class="input-group">
-                <input type="email" id="email" class="contact-input" required>
+                <input type="email" id="email" class="contact-input" placeholder="Email" required>
                 <label for="email">Email</label>
                 <span class="bottom-border"></span>
                 <span class="error-message">Please fill out this field</span>
             </div>
-
+            
             <div class="input-group">
-                <input type="text" id="subject" class="contact-input" required>
+                <input type="text" id="subject" class="contact-input" placeholder="Subject" required>
                 <label for="subject">Subject</label>
                 <span class="bottom-border"></span>
                 <span class="error-message">Please fill out this field</span>
             </div>
-
+            
             <div class="input-group">
-                <textarea id="message" class="contact-input message-box" required></textarea>
+                <textarea id="message" class="contact-input message-box" placeholder="Message" required></textarea>
                 <label for="message">Message</label>
                 <span class="bottom-border"></span>
                 <span class="error-message">Please fill out this field</span>
             </div>
+            
 
             <button type="submit" class="send-message-btn">Send</button>
         </form>
@@ -422,7 +444,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 
     <!-- Large Centered Title -->
-    <h1 class="latest-video-large-title1">Read Our Latest News & Blog</h1>
+    <h1 class="latest-video-large-title2">Read Our Latest News & Blog</h1>
 </section>
 
   <section class="blog-section">
@@ -467,38 +489,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
         <!-- Email Subscription Box -->
         <div class="footer-subscription">
-            <input type="email" placeholder="Enter Your Email..." class="footer-email-input" style="color: rgba(102, 102, 102, 1); font-weight: 400; font-size: 16px;">
+            <input type="email" placeholder="Enter Your Email..." class="footer-email-input" style="color: rgba(102, 102, 102, 1); font-weight: 400; font-size: 16px; margin-left: 10px; font-family: 'Inter', sans-serif;">
             <button class="footer-subscribe-btn">SUBSCRIBE</button>
         </div>
+
+        <hr class="solid-hr">
 
         <div class="footer-content">
             <!-- Part 1: Logo & Description -->
             <div class="footer-part">
                 <img src="img/footerlogo.png" alt="Company Logo" class="footer-logo">
                 <p class="footer-description">
-                    With a strong focus on innovation, expertise, and client-centric services, Skysecure stands at the forefront of digital innovation, offering bespoke solutions to businesses globally.
+                    "With a strong focus on innovation, expertise, and client-centric services, Skysecure stands at the forefront of digital innovation, offering bespoke solutions to businesses globally."
                 </p>
             </div>
 
             <!-- Part 2: Our Services -->
             <div class="footer-part" style="margin-left: 120px;">
                 <h3 class="footer-heading" style= "margin-bottom: 15px;">Our Services</h3>
-                <p>Web Development</p>
-                <p>Mobile App Development</p>
-                <p>Cyber Security Solutions</p>
-                <p>Cloud Computing</p>
-                <p>Data Analytics</p>
-                <p>AI & Machine Learning</p>
+                <p>Commercial Marketplace</p>
+                <p>Solution Implementation</p>
+                <p>Assessment</p>
+                <p>Simplified Management</p>
+                <p>Security & Compliance Metrics</p>
+                <p>Operational Excellence</p>
             </div>
 
             <!-- Part 3: Other Information -->
             <div class="footer-part">
                 <h3 class="footer-heading">Quick Links</h3>
-                <p>About Us</p>
-                <p>Careers</p>
+                <p>Need a Consultant?</p>
+                <p>Have any Questions?</p>
                 <h3 class="footer-heading" style= "margin-top: 30px;">Terms & Conditions</h3>
-                <p>Blog</p>
-                <p>Case Studies</p>
+                <p>Privacy</p>
+                <p>Terms of Use</p>
             </div>
 
             <!-- Part 4: Contact Us -->
@@ -523,6 +547,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
         </div>
+
+        <hr class="solid-hr1">
 
         <div class="footer-copyright">
             <p>© 2025 Skysecure. All Rights Reserved.</p>
