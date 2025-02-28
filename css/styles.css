@@ -27,7 +27,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 80px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 3px 0px rgba(22, 28, 45, 0.15);
     z-index: 1000;
 }
 
@@ -82,24 +82,13 @@ nav ul li a.active {
     padding: 0;
     margin: 0;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 header nav > ul > li:nth-child(4):hover > .dropdown-menu {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-
-.dropdown-menu::after {
-    content: '';
-    position: absolute;
-    top: -10px; /* Position the arrow above the menu */
-    left: 40%;
-    transform: translateX(-50%); /* Center the arrow horizontally */
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #f9f9f9; /* Color of the dropdown box */
-}
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-menu {
@@ -257,8 +246,8 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
     width: 100%;
     height: auto;
     z-index: -1;
-    margin-top: -230px;
-    margin-right: -80px;
+    margin-top: -150px;
+    margin-right: -100px;
 }
 
 /* Image Stack */
@@ -273,7 +262,7 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
     width: 90%;
     height: auto;
     margin-top: 0px;
-    margin-right: 0px;
+    margin-right: -50px;
 }
 
 
@@ -658,7 +647,7 @@ span {
 }
 
 .case-study-container {
-    background-color: rgba(249, 250, 252, 1); /* Light gray background */
+    background-color: rgba(249, 250, 252, 1);
     width: 100%;
     padding: 50px 0;
     margin-top: 100px;
@@ -826,7 +815,7 @@ span {
 .testimonial-description {
     font-size: 16px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 27px;
     color: rgba(132, 146, 166, 1);
     max-width: 550px;
     margin: 0 auto 15px;
@@ -851,7 +840,7 @@ span {
 
 .extra-image-section {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 80px;
     margin-left: 0px;
 }
 
@@ -868,7 +857,7 @@ span {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 /* Small Title with Image */
@@ -1182,9 +1171,10 @@ span {
 
 
 .blogcontainer {
+    background-color: rgba(249, 250, 252, 1);
     width: 100%;
     padding-top: -20px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 /* Blog Section */
@@ -1288,7 +1278,7 @@ span {
     padding: 40px 0;
     width: 100vw;
     margin-left: 0px;
-    margin-top: 60px;
+    margin-top: 0px;
 }
 
 /* Follow Us Text */
@@ -1304,23 +1294,45 @@ span {
 .footer-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 35px;
     margin-bottom: 20px;
 }
 
-.footer-icon img {
-    width: 50px;
+.footer-icon {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Ensuring the width remains constant */
     height: auto;
-    margin-top: 14px;
-    margin-right: 20px;
-    margin-left: 14px;
+    margin-top: 20px;
     margin-bottom: 30px;
-    transition: 0.3s ease-in-out;
 }
 
-.footer-icon img:hover {
-    background-color: rgb(11, 90, 187);
-    border-radius: 7px;
+/* Default Icon (Initially Visible) */
+.footer-icon .default-icon {
+    display: block;
+    width: 50px;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Icon (Initially Hidden) */
+.footer-icon .hover-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Replace Default Icon with Hover Icon on Hover */
+.footer-icon:hover .default-icon {
+    opacity: 0;
+}
+
+.footer-icon:hover .hover-icon {
+    opacity: 1;
 }
 
 /* Subscription Box */

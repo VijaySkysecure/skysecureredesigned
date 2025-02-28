@@ -27,7 +27,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 80px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 3px 0px rgba(22, 28, 45, 0.15);
     z-index: 1000;
 }
 
@@ -82,24 +82,14 @@ nav ul li a.active {
     padding: 0;
     margin: 0;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 header nav > ul > li:nth-child(4):hover > .dropdown-menu {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 
-.dropdown-menu::after {
-    content: '';
-    position: absolute;
-    top: -10px; /* Position the arrow above the menu */
-    left: 40%;
-    transform: translateX(-50%); /* Center the arrow horizontally */
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #f9f9f9; /* Color of the dropdown box */
-}
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-menu {
@@ -429,7 +419,7 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
     padding: 40px 0;
     width: 100vw;
     margin-left: 0px;
-    margin-top: 0px;
+    margin-top: -90px;
 }
 
 /* Follow Us Text */
@@ -445,23 +435,48 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
 .footer-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 35px;
     margin-bottom: 20px;
 }
 
-.footer-icon img {
-    width: 35px;
+.footer-icon {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Ensuring the width remains constant */
     height: auto;
-    margin-top: 14px;
-    margin-right: 20px;
-    margin-left: 14px;
+    margin-top: 20px;
     margin-bottom: 30px;
-    transition: opacity 0.3s;
 }
 
-.footer-icon img:hover {
-    opacity: 0.7;
+/* Default Icon (Initially Visible) */
+.footer-icon .default-icon {
+    display: block;
+    width: 50px;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
 }
+
+/* Hover Icon (Initially Hidden) */
+.footer-icon .hover-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Replace Default Icon with Hover Icon on Hover */
+.footer-icon:hover .default-icon {
+    opacity: 0;
+}
+
+.footer-icon:hover .hover-icon {
+    opacity: 1;
+}
+
+
 
 /* Subscription Box */
 .footer-subscription {
@@ -488,6 +503,7 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
 
 /* Subscribe Button */
 .footer-subscribe-btn {
+    font-family: 'Inter', sans-serif;
     background-color: rgba(6, 102, 219, 1);
     color: white;
     border: none;
@@ -497,7 +513,7 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
     border-radius: 40px;
     cursor: pointer;
     transition: background 0.3s;
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 .footer-subscribe-btn:hover {
@@ -512,7 +528,7 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
     width: 1200px;
     margin: 40px auto 0;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 /* Each Section */
@@ -580,10 +596,23 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
 .footer-copyright {
     text-align: center;
     color: rgba(173, 181, 189, 1);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    margin-top: 100px;
+    margin-top: 30px;
+    margin-bottom: -10px;
 }
 
 
+.solid-hr {
+    height: 1px; /* Thickness of the line */
+    border: none;
+    background-color: rgba(73, 80, 87, 1); /* Solid color (Change to any color) */
+    margin-top: 60px;
+}
 
+.solid-hr1 {
+    height: 1px; /* Thickness of the line */
+    border: none;
+    background-color: rgba(73, 80, 87, 1); /* Solid color (Change to any color) */
+    margin-top: 60px;
+}
