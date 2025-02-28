@@ -74,12 +74,23 @@ nav ul li a:hover {
     position: absolute;
     background-color: #f9f9f9;
     width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 1;
     list-style-type: none;
     padding: 0;
     margin: 0;
     border-radius: 10px;
+}
+
+.dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -10px; /* Position the arrow above the menu */
+    left: 40%;
+    transform: translateX(-50%); /* Center the arrow horizontally */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f9f9f9; /* Color of the dropdown box */
 }
 
 /* Show dropdown on hover */
@@ -229,7 +240,8 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     z-index: -1;
-    margin-top: -200px;
+    margin-top: -230px;
+    margin-right: -80px;
 }
 
 /* Image Stack */
@@ -241,10 +253,10 @@ nav ul li a:hover {
 }
 
 .rect-image {
-    width: 85%;
+    width: 90%;
     height: auto;
     margin-top: 0px;
-    margin-right: 100px;
+    margin-right: 0px;
 }
 
 
@@ -1065,20 +1077,22 @@ span {
 
 /* Send Message Button */
 .send-message-btn {
-    width: 200px;
+    font-family: 'Inter', sans-serif;
+    width: 135px;
+    height: 42px;
     padding: 12px;
     font-size: 16px;
     font-weight: 500;
     background-color: rgba(6, 102, 219, 1);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .send-message-btn:hover {
-    background-color: #0056b3;
+    box-shadow: 0px 3px 7px 0px rgba(6, 102, 219, 0.5); /* Apply shadow on hover */
 }
 
 /* Right: Image */
