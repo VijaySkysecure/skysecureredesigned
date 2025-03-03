@@ -39,19 +39,52 @@
                 </ul>
             </li>
             <li><a href="contact.html">Contact</a></li>
-            <li class="dropdown">
-                <a href="#" class="india">
-                    India <img src="img/home/indflag.png" alt="India Flag" class="flag">
+            <li class="dropdown country-dropdown">
+                <a href="#" class="selected-country">
+                    <span class="country-name">India</span>
+                    <img src="img/home/indflag.png" alt="India Flag" class="flag">
                     <i class="fas fa-chevron-down"></i>
                 </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Singapore</a></li>
-                    <li><a href="#">Dubai</a></li>
+                <ul class="dropdown-menu country-menu">
+                    <li><a href="#" data-country="Singapore" data-flag="img/home/singaporeflag.jpg">Singapore</a></li>
+                    <li><a href="#" data-country="Dubai" data-flag="img/home/dubaiflag.jpg">Dubai</a></li>
+                    <li><a href="#" data-country="India" data-flag="img/home/indflag.png">India</a></li>
                 </ul>
-            </li>
+            </li>            
         </ul>
     </nav>
 </header>
+
+<!-- JavaScript -->
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const countryDropdown = document.querySelector(".country-dropdown");
+    const selectedCountry = countryDropdown.querySelector(".selected-country");
+    const countryName = selectedCountry.querySelector(".country-name");
+    const countryFlag = selectedCountry.querySelector(".flag");
+    const countryMenuItems = countryDropdown.querySelectorAll(".country-menu a");
+
+    countryMenuItems.forEach(item => {
+        item.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Get new country name and flag from data attributes
+            const newCountry = this.getAttribute("data-country");
+            const newFlag = this.getAttribute("data-flag");
+
+            // Update the selected country text and flag
+            countryName.textContent = newCountry;
+            countryFlag.src = newFlag;
+            countryFlag.alt = `${newCountry} Flag`;
+        });
+    });
+});
+</script>
+
+
+
+
+
 
 
     <section class="banner">

@@ -42,7 +42,7 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 nav ul li {
@@ -142,7 +142,49 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
     height: 10px;
 }
 
+.selected-country {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 130px; /* Fixed width to prevent layout shifting */
+    justify-content: flex-start; /* Align content to the left */
+    padding: 5px 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
+.flag {
+    width: 20px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    display: none;
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
 
 
 .banner {

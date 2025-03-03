@@ -42,7 +42,7 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 nav ul li {
@@ -140,6 +140,52 @@ header nav > ul > li:nth-child(4):hover > .fas.fa-chevron-down {
 .flag {
     width: 15px;
     height: 10px;
+}
+
+
+.selected-country {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 130px; /* Fixed width to prevent layout shifting */
+    justify-content: flex-start; /* Align content to the left */
+    padding: 5px 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flag {
+    width: 20px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    display: none;
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 
@@ -895,17 +941,19 @@ span {
 
 /* Video Container */
 .video-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust based on your design */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+    margin: 0 auto; /* Center the video */
 }
 
-.latest-video {
+.video-container iframe {
     width: 100%;
-    max-width: 900px;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    border-radius: 10px; /* Optional: Adds rounded corners */
 }
+
 
 /* Description */
 .latest-video-description {
