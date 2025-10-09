@@ -13,8 +13,17 @@ import { Careers } from './sections/Careers';
 import { Partnerships } from './sections/Partnerships';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
+import Marketplace from './pages/Marketplace';
 
 export function App(): React.ReactElement {
+  // Check if we're on the marketplace route
+  const isMarketplace = window.location.pathname === '/marketplace';
+  
+  if (isMarketplace) {
+    return <Marketplace />;
+  }
+  
+  // Default homepage (original structure)
   return (
     <div className="main-page">
       <Header />

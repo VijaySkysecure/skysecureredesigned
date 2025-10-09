@@ -9,7 +9,7 @@ type NavLink = {
 };
 
 const NAV_ITEMS: NavLink[] = [
-  { label: 'Home', href: '#home' },
+  { label: 'Home', href: '/' },
   { label: 'About', href: '#about' },
   {
     label: 'Services',
@@ -27,7 +27,7 @@ const NAV_ITEMS: NavLink[] = [
       { label: 'Media Library', href: '#resource-media' },
     ],
   },
-  { label: 'Product', href: '#product' },
+  { label: 'Product', href: '/marketplace' },
   { label: 'Contact Us', href: '#contact' },
   {
     label: 'India',
@@ -49,6 +49,16 @@ export function Header(): React.ReactElement {
 
   const closeMenu = (): void => {
     setOpenMenu(null);
+  };
+
+  const handleNavigation = (href: string): void => {
+    if (href.startsWith('/')) {
+      // For page navigation, use window.location
+      window.location.href = href;
+    } else {
+      // For anchor links, use default behavior
+      return;
+    }
   };
 
   const handleBlur = (
@@ -123,7 +133,16 @@ export function Header(): React.ReactElement {
                       </div>
                     </>
                   ) : (
-                    <a className="header__link" href={item.href}>
+                    <a 
+                      className="header__link" 
+                      href={item.href}
+                      onClick={(e) => {
+                        if (item.href?.startsWith('/')) {
+                          e.preventDefault();
+                          handleNavigation(item.href);
+                        }
+                      }}
+                    >
                       {item.label}
                     </a>
                   )}

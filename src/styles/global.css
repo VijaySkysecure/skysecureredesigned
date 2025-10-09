@@ -199,7 +199,10 @@ section {
 
 .hero {
   padding: 120px 0 96px;
-  background: linear-gradient(180deg, rgba(0, 127, 255, 0.08) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(180deg, rgba(0, 127, 255, 0.08) 0%, rgba(255, 255, 255, 1) 100%), url('/assets/img/banner-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero__content {
@@ -358,6 +361,12 @@ section {
   gap: 20px;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
 }
 
 .card__icon {
@@ -433,6 +442,12 @@ section {
   flex-direction: column;
   gap: 16px;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.what-we-do-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
 }
 
 .what-we-do-card__header {
@@ -956,6 +971,12 @@ section {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
 }
 
 .resource-card__media {
@@ -1165,6 +1186,11 @@ section {
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
 }
 
 .value-card__title {
@@ -2871,6 +2897,396 @@ footer section .container {
   .office-icon {
     width: 12px !important;
     height: 12px !important;
+  }
+}
+
+/* ===== MARKETPLACE PAGE STYLES ===== */
+
+/* Marketplace Hero Section */
+.marketplace-hero {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 1) 100%), url('/assets/img/banner-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marketplace-hero__content {
+  max-width: 800px;
+}
+
+.marketplace-hero__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.marketplace-hero__title--black {
+  color: var(--color-black);
+}
+
+.marketplace-hero__title--blue {
+  color: var(--color-blue);
+}
+
+.marketplace-hero__description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-grey);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Marketplace Intro Section */
+.marketplace-intro {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.marketplace-intro__text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-grey);
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Marketplace Values Section */
+.marketplace-values {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.marketplace-values__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.marketplace-values__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.marketplace-values__subtitle {
+  font-size: 18px;
+  color: var(--color-grey);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.marketplace-values__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.marketplace-value-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marketplace-value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
+}
+
+.marketplace-value-card__icon {
+  margin-bottom: 20px;
+}
+
+.marketplace-value-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+.marketplace-value-card__description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-grey);
+}
+
+/* Marketplace Innovation Section */
+.marketplace-innovation {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.marketplace-innovation__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.marketplace-innovation__text {
+  text-align: left;
+}
+
+.marketplace-innovation__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.marketplace-innovation__description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-grey);
+}
+
+.marketplace-innovation__image {
+  text-align: center;
+}
+
+/* Marketplace Features Section */
+.marketplace-features {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.marketplace-features__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.marketplace-features__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.marketplace-features__subtitle {
+  font-size: 18px;
+  color: var(--color-grey);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.marketplace-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.marketplace-feature-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marketplace-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
+}
+
+.marketplace-feature-card__icon {
+  margin-bottom: 20px;
+}
+
+.marketplace-feature-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+.marketplace-feature-card__description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-grey);
+}
+
+/* Marketplace CTA Section */
+.marketplace-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 70.71%);
+  text-align: center;
+}
+
+.marketplace-cta__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.marketplace-cta__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+.marketplace-cta__description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-white);
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+.marketplace-cta__button {
+  background: var(--color-white);
+  color: var(--color-blue);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.marketplace-cta__button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Marketplace Mobile Responsive */
+@media (max-width: 1200px) {
+  .marketplace-values__grid,
+  .marketplace-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .marketplace-innovation__content {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .marketplace-hero {
+    padding: 80px 0 60px 0;
+  }
+  
+  .marketplace-hero__title {
+    font-size: 36px;
+  }
+  
+  .marketplace-hero__description {
+    font-size: 16px;
+  }
+  
+  .marketplace-values,
+  .marketplace-innovation,
+  .marketplace-features,
+  .marketplace-cta {
+    padding: 60px 0;
+  }
+  
+  .marketplace-values__title,
+  .marketplace-features__title,
+  .marketplace-innovation__title,
+  .marketplace-cta__title {
+    font-size: 28px;
+  }
+  
+  .marketplace-values__subtitle,
+  .marketplace-features__subtitle {
+    font-size: 16px;
+  }
+  
+  .marketplace-innovation__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  
+  .marketplace-innovation__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .marketplace-hero {
+    padding: 60px 0 40px 0;
+  }
+  
+  .marketplace-hero__title {
+    font-size: 28px;
+  }
+  
+  .marketplace-hero__description {
+    font-size: 14px;
+  }
+  
+  .marketplace-values,
+  .marketplace-innovation,
+  .marketplace-features,
+  .marketplace-cta {
+    padding: 40px 0;
+  }
+  
+  .marketplace-values__grid,
+  .marketplace-features__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .marketplace-value-card,
+  .marketplace-feature-card {
+    padding: 24px 20px;
+  }
+  
+  .marketplace-values__title,
+  .marketplace-features__title,
+  .marketplace-innovation__title,
+  .marketplace-cta__title {
+    font-size: 24px;
+  }
+  
+  .marketplace-values__subtitle,
+  .marketplace-features__subtitle {
+    font-size: 14px;
+  }
+  
+  .marketplace-cta__description {
+    font-size: 16px;
+  }
+  
+  .marketplace-cta__button {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+  
+  .marketplace-value-card__icon,
+  .marketplace-feature-card__icon {
+    margin-bottom: 16px;
+  }
+  
+  .marketplace-value-card__title,
+  .marketplace-feature-card__title {
+    font-size: 18px;
+  }
+  
+  .marketplace-value-card__description,
+  .marketplace-feature-card__description {
+    font-size: 13px;
   }
 }
 .who-we-are__content {
