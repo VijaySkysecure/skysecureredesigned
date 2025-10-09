@@ -1,62 +1,78 @@
 import React from 'react';
-import { SectionHeader } from '../components/SectionHeader';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
-const PARTNER_POINTS = [
-  'Unified partner ecosystem across cloud, automation, and intelligence platforms.',
-  'Co-innovation workshops to accelerate integrations and value delivery.',
-  'Joint go-to-market programs spanning regulated industries worldwide.',
+const MICROSOFT_INTEGRATIONS = [
+  'Azure Security Center Integration',
+  'Microsoft Sentinel SIEM/SOAR',
+  'Microsoft 365 Defender Suite',
+  'Azure AD Identity Protection'
 ];
 
-const ALLIANCE_BADGES = ['AWS', 'Microsoft', 'ServiceNow', 'CrowdStrike'];
-
-const CERTIFICATIONS = ['SOC 2 Type II', 'ISO 27001', 'FedRAMP Ready'];
 
 export function Partnerships(): React.ReactElement {
   return (
-    <section className="section--light" id="partners">
+    <section className="section--muted" id="partners">
       <div className="container">
-        <SectionHeader
-          title="Strategic Partnerships"
-          description="Aligned with industry-leading partners to deliver end-to-end security outcomes."
-        />
-        <div className="partnerships-grid">
-          <div className="partnership-card">
-            <h3 className="card__title">Our Alliance Network</h3>
-            <ul className="partnership-card__list">
-              {PARTNER_POINTS.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-            <div className="logos-grid">
-              {ALLIANCE_BADGES.map((badge) => (
-                <span key={badge} className="badge">
-                  {badge}
-                </span>
-              ))}
+        <div className="partnerships-header">
+          <h2 className="partnerships-title">Strategic Partnerships</h2>
+          <p className="partnerships-description">
+            Collaborating with industry leaders to deliver comprehensive cybersecurity solutions
+          </p>
+        </div>
+
+        <div className="partnerships-content">
+          <div className="microsoft-partner-section">
+            <div className="microsoft-partner-content">
+              <h3 className="microsoft-partner-title">Microsoft Security Partner</h3>
+              <p className="microsoft-partner-description">
+                As a Microsoft Gold Partner, we integrate seamlessly with Azure Security Center, Microsoft Sentinel, and Microsoft 365 Defender to provide unified security management across your entire digital estate.
+              </p>
+              <ul className="microsoft-integrations">
+                {MICROSOFT_INTEGRATIONS.map((integration, index) => (
+                  <li key={index} className="integration-item">
+                    <div className="integration-checkmark">✓</div>
+                    <span>{integration}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="microsoft-partner-card">
+              <ImagePlaceholder
+                label="Microsoft logo"
+                imageName="logo-microsoft.png"
+                width={80}
+                height={80}
+                borderRadius={0}
+              />
+              <div className="partner-badge-text">Gold Partner</div>
+              <div className="partner-specialization">Security Specialization</div>
             </div>
           </div>
-          <div className="partnership-card">
-            <h3 className="card__title">Verified Compliance</h3>
-            <div className="partnership-card__logos">
-              <ImagePlaceholder
-                label="Featured partner logo"
-                imageName="logo-partner-highlight.png"
-                width={180}
-                height={120}
-                borderRadius={16}
-              />
+
+          <div className="tech-ecosystem-card">
+            <h3 className="tech-ecosystem-title">Technology Ecosystem</h3>
+            <div className="tech-ecosystem-carousel">
+              <div className="carousel-track">
+                <div className="carousel-item">
+                  <ImagePlaceholder
+                    label="Technology ecosystem logos"
+                    imageName="tech-eco.png"
+                    width={800}
+                    height={120}
+                    borderRadius={0}
+                  />
+                </div>
+                <div className="carousel-item">
+                  <ImagePlaceholder
+                    label="Technology ecosystem logos"
+                    imageName="tech-eco.png"
+                    width={800}
+                    height={120}
+                    borderRadius={0}
+                  />
+                </div>
+              </div>
             </div>
-            <div className="partnership-card__certifications">
-              {CERTIFICATIONS.map((cert) => (
-                <span key={cert} className="badge">
-                  {cert}
-                </span>
-              ))}
-            </div>
-            <button type="button" className="button">
-              Become a Partner
-            </button>
           </div>
         </div>
       </div>

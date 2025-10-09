@@ -22,7 +22,8 @@ export function ImagePlaceholder({
   className = '',
 }: ImagePlaceholderProps): React.ReactElement {
   const radius = shape === 'circle' ? '999px' : borderRadius ?? '12px';
-  const combinedClass = `image-placeholder${imageName ? ' image-placeholder--loaded' : ''} ${className}`.trim();
+  const isIcon = imageName?.includes('icon-');
+  const combinedClass = `image-placeholder${imageName ? ' image-placeholder--loaded' : ''}${isIcon ? ' image-placeholder--icon' : ''} ${className}`.trim();
 
   return (
     <div

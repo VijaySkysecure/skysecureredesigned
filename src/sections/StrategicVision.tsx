@@ -50,9 +50,9 @@ export function StrategicVision(): React.ReactElement {
                 className="card__icon"
                 label={`${card.title} icon`}
                 imageName={card.imageName}
-                width={70}
-                height={70}
-                borderRadius={16}
+                width={49}
+                height={49}
+                borderRadius={0}
               />
               <h3 className="card__title">{card.title}</h3>
               <p className="card__description">{card.description}</p>

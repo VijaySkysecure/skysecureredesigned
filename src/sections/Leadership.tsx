@@ -6,18 +6,18 @@ const LEADERS = [
   {
     name: 'Suresh Kumar',
     role: (<>Co-Founder & Chief Executive Officer<br />EX-MICROSOFT</>),
-    imageName: 'headshot-alicia.png',
+    imageName: 'portrait1.png',
   },
   {
     name: 'Nithin Ramegowda',
     role: (<>Co-Founder & Chief Of Business Strategy<br />EX-MICROSOFT</>),
-    imageName: 'headshot-ravi.png',
+    imageName: 'portrait2.png',
   },
 ];
 
 export function Leadership(): React.ReactElement {
   return (
-    <section className="section--light" id="leadership">
+    <section className="section--muted" id="leadership">
       <div className="container">
         <SectionHeader
           title="Leadership Team"
@@ -30,9 +30,10 @@ export function Leadership(): React.ReactElement {
                 className="profile-card__avatar"
                 label={`${leader.name} headshot`}
                 imageName={leader.imageName}
-                width={160}
-                height={160}
-                shape="circle"
+                width={150}
+                height={150}
+                shape="rect"
+                borderRadius={0}
               />
               <div>
                 <p className="profile-card__name">{leader.name}</p>

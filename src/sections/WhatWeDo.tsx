@@ -93,28 +93,34 @@ export function WhatWeDo(): React.ReactElement {
         <div className="what-we-do-grid">
           {CAPABILITIES.map((item) => (
             <div key={item.title} className="what-we-do-card">
-              <ImagePlaceholder
-                className="what-we-do-card__icon"
-                label={`${item.title} icon`}
-                imageName={item.imageName}
-                width={70}
-                height={70}
-                borderRadius={16}
-              />
-              <h3 className="what-we-do-card__title">{item.title}</h3>
-              <p className="what-we-do-card__subtitle">{item.subtitle}</p>
-              <p className="what-we-do-card__description">{item.description}</p>
-              <ul className="what-we-do-card__bullet-points">
-                {item.bulletPoints.map((point, index) => (
-                  <li key={index} className="what-we-do-bullet-point">
-                    <span className="what-we-do-bullet-icon">✓</span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-              <a className="what-we-do-card__link" href="#contact">
-                Learn More →
-              </a>
+              <div className="what-we-do-card__header">
+                <ImagePlaceholder
+                  className="what-we-do-card__icon"
+                  label={`${item.title} icon`}
+                  imageName={item.imageName}
+                  width={49}
+                  height={49}
+                  borderRadius={0}
+                />
+                <div className="what-we-do-card__title-section">
+                  <h3 className="what-we-do-card__title">{item.title}</h3>
+                  <p className="what-we-do-card__subtitle">{item.subtitle}</p>
+                </div>
+              </div>
+              <div className="what-we-do-card__content">
+                <p className="what-we-do-card__description">{item.description}</p>
+                <ul className="what-we-do-card__bullet-points">
+                  {item.bulletPoints.map((point, index) => (
+                    <li key={index} className="what-we-do-bullet-point">
+                      <span className="what-we-do-bullet-icon">✓</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <a className="what-we-do-card__link" href="#contact">
+                  Learn More →
+                </a>
+              </div>
             </div>
           ))}
         </div>

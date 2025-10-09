@@ -2,75 +2,144 @@ import React from 'react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 const POSITIONS = [
-  { role: 'Senior Compliance Architect', location: 'Remote � North America' },
-  { role: 'Threat Intelligence Lead', location: 'London, UK' },
-  { role: 'Platform Automation Engineer', location: 'Singapore' },
+  {
+    title: 'Senior Security Engineer',
+    type: 'Remote • Full-time',
+    description: 'Lead the development of our next-generation security platform using cutting-edge AI and machine learning technologies.',
+    tags: ['Python', 'Machine Learning', 'Security']
+  },
+  {
+    title: 'SOC Analyst L2',
+    type: 'Hybrid • Full-time',
+    description: 'Monitor and analyze security events, investigate incidents, and coordinate response activities across global infrastructure.',
+    tags: ['SIEM', 'Incident Response', 'Threat Hunting']
+  },
+  {
+    title: 'AI Research Scientist',
+    type: 'Remote • Full-time',
+    description: 'Research and develop cutting-edge AI algorithms for autonomous threat detection and response systems.',
+    tags: ['Deep Learning', 'TensorFlow', 'Research']
+  }
 ];
 
 const BENEFITS = [
   {
-    copy: 'Hybrid-first culture with collaboration hubs across three continents.',
-    imageName: 'icon-benefit-hybrid.png',
+    title: 'Cutting-Edge Technology',
+    description: 'Work with the latest AI and machine learning technologies to solve complex cybersecurity challenges.',
+    imageName: 'icon-rocket.png'
   },
   {
-    copy: 'Dedicated research time to explore emerging security and compliance tech.',
-    imageName: 'icon-benefit-research.png',
+    title: 'Continuous Learning',
+    description: '$5,000 annual learning budget, conference attendance, and access to industry certifications.',
+    imageName: 'icon-graduation.png'
   },
   {
-    copy: 'Expanded professional development budgets and certification support.',
-    imageName: 'icon-benefit-learning.png',
+    title: 'Comprehensive Benefits',
+    description: 'Premium healthcare, unlimited PTO, equity participation, and flexible remote work options.',
+    imageName: 'icon-heart.png'
   },
   {
-    copy: 'Inclusive teams focused on mentorship, impact, and continuous learning.',
-    imageName: 'icon-benefit-inclusion.png',
-  },
+    title: 'Global Impact',
+    description: 'Protect organizations worldwide and contribute to making the internet a safer place for everyone.',
+    imageName: 'icon-globe.png'
+  }
 ];
 
 export function Careers(): React.ReactElement {
   return (
-    <section className="section--muted" id="careers">
+    <section className="section--light" id="careers">
       <div className="container">
-        <div className="section-header section-header--left">
-          <p className="section-header__eyebrow">Careers @ SkySecure</p>
-          <h2 className="section-header__title">Open Positions</h2>
-          <p className="section-header__description">
-            Be part of a mission-driven team advancing adaptive security and compliance worldwide.
+        <div className="join-mission-header">
+          <h2 className="join-mission-title">Join Our Mission</h2>
+          <p className="join-mission-description">
+            Build the future of cybersecurity with a team of world-class experts and cutting-edge technology
           </p>
         </div>
-        <div className="careers">
-          <div className="positions-list">
-            {POSITIONS.map((position) => (
-              <div key={position.role} className="positions-list__item">
-                <strong>{position.role}</strong>
-                <span>{position.location}</span>
-                <div className="hero__cta" style={{ marginTop: '24px' }}>
-                  <button type="button" className="button button--ghost">
-                    Apply Now
-                  </button>
-                </div>
-              </div>
-            ))}
+
+        <div className="mission-cta-panel">
+          <div className="mission-cta-content">
+            <h3 className="mission-cta-title">Ready to Make a Difference?</h3>
+            <p className="mission-cta-description">
+              Join a team that's protecting organizations worldwide and shaping the future of AI-driven cybersecurity.
+            </p>
+            <div className="mission-cta-buttons">
+              <button className="mission-button mission-button--primary">View Open Positions</button>
+              <button className="mission-button mission-button--secondary">Take Skill Challenge</button>
+            </div>
           </div>
-          <div className="careers__sidebar">
-            <h3 className="card__title">Why Join Skysecure.ai?</h3>
-            <div className="benefits-list">
-              {BENEFITS.map((benefit) => (
-                <div key={benefit.copy} className="benefits-list__item">
-                  <ImagePlaceholder
-                    label="Benefit icon"
-                    imageName={benefit.imageName}
-                    width={48}
-                    height={48}
-                    borderRadius={12}
-                  />
-                  <p>{benefit.copy}</p>
+          <div className="mission-metrics">
+            <div className="mission-metric">
+              <div className="mission-metric-value">50+</div>
+              <div className="mission-metric-label">Team Members</div>
+            </div>
+            <div className="mission-metric">
+              <div className="mission-metric-value">3</div>
+              <div className="mission-metric-label">Countries</div>
+            </div>
+            <div className="mission-metric">
+              <div className="mission-metric-value">5+</div>
+              <div className="mission-metric-label">Industry experience</div>
+            </div>
+            <div className="mission-metric">
+              <div className="mission-metric-value">99%</div>
+              <div className="mission-metric-label">Customer Satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="careers-content">
+          <div className="careers-left">
+            <h3 className="careers-section-title">Open Positions</h3>
+            <div className="positions-list">
+              {POSITIONS.map((position, index) => (
+                <div key={index} className="position-card">
+                  <h4 className="position-title">{position.title}</h4>
+                  <p className="position-type">{position.type}</p>
+                  <p className="position-description">{position.description}</p>
+                  <div className="position-tags">
+                    {position.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="position-tag">{tag}</span>
+                    ))}
+                  </div>
+                  <a href="#apply" className="position-apply">Apply Now →</a>
                 </div>
               ))}
             </div>
-            <div className="badge-row" style={{ marginTop: '32px' }}>
-              <span className="badge">Diversity First</span>
-              <span className="badge">Flexible Schedules</span>
-              <span className="badge">Global Teams</span>
+          </div>
+
+          <div className="careers-right">
+            <h3 className="careers-section-title">Why Join Skysecure.ai?</h3>
+            <div className="benefits-list">
+              {BENEFITS.map((benefit, index) => (
+                <div key={index} className="benefit-item">
+                  <ImagePlaceholder
+                    label={benefit.title}
+                    imageName={benefit.imageName}
+                    width={34}
+                    height={34}
+                    borderRadius={0}
+                    className="benefit-icon"
+                  />
+                  <div className="benefit-content">
+                    <h4 className="benefit-title">{benefit.title}</h4>
+                    <p className="benefit-description">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="skill-challenge-card">
+              <h4 className="challenge-title">Cyber Skill Challenge</h4>
+              <p className="challenge-description">
+                Test your cybersecurity knowledge with our interactive challenge. Top performers get fast-tracked interviews!
+              </p>
+              <div className="challenge-actions">
+                <button className="challenge-button">Start Challenge</button>
+                <div className="challenge-details">
+                  <span className="challenge-time">15 minutes</span>
+                  <span className="challenge-levels">3 difficulty levels</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

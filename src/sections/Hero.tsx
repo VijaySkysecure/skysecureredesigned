@@ -7,13 +7,12 @@ export function Hero(): React.ReactElement {
       <div className="container hero__content">
         <div>
           <h1>
-            Bridging Technology<br />
-            and Compliance<br />
-            with <span style={{ color: 'rgba(75, 85, 99, 1)' }}>Adaptive</span><br />
-            <span style={{ color: 'rgba(75, 85, 99, 1)' }}>Automation</span>
+            Comprehensive<br />
+            Managed Solutions for<br />
+            <span style={{ color: 'rgba(75, 85, 99, 1)' }}>Business Excellence</span><br />
           </h1>
           <p className="hero__description">
-            Seamlessly integrate modern tech solutions with traditional business practices while staying compliant with the DPDP Act 2023 driving efficiency, innovation, and trust.
+          Delivering end-to-end solutions to optimize business operations and empower organizations with strategic support for sustained growth and excellence.
           </p>
           <div className="hero__cta">
             <button 

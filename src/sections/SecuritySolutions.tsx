@@ -5,32 +5,68 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 const SOLUTIONS = [
   {
     title: '24/7 SOC Monitoring',
-    description: 'Implement least-privilege across hybrid ecosystems with adaptive policy enforcement.',
+    subtitle: 'MANAGED SERVICE',
+    description: 'Round-the-clock security operations center monitoring with AI-powered threat detection and immediate response capabilities.',
+    bulletPoints: [
+      'Real-time threat monitoring',
+      'Incident response automation',
+      'Compliance reporting'
+    ],
     imageName: 'icon-identity.png',
   },
   {
-    title: 'Data Protection & Privacy',
-    description: 'Encrypt sensitive assets, automate data discovery, and fulfill privacy obligations globally.',
+    title: 'Threat Hunting',
+    subtitle: 'AI-POWERED',
+    description: 'Proactive threat hunting using advanced AI algorithms to identify and neutralize sophisticated attacks before they impact your business.',
+    bulletPoints: [
+      'Advanced persistent threat detection',
+      'Behavioral analytics',
+      'Custom threat intelligence'
+    ],
     imageName: 'icon-data.png',
   },
   {
-    title: 'Application Security Fabric',
-    description: 'Integrate secure SDLC guardrails and runtime defenses for cloud-native workloads.',
+    title: 'Zero Trust Architecture',
+    subtitle: 'CONSULTING',
+    description: 'Implement comprehensive zero trust security frameworks that verify every user and device before granting access to your systems.',
+    bulletPoints: [
+      'Identity verification',
+      'Network segmentation',
+      'Policy enforcement'
+    ],
     imageName: 'icon-application.png',
   },
   {
-    title: 'Operational Technology Security',
-    description: 'Safeguard industrial assets with segmentation, monitoring, and incident response programs.',
+    title: 'Cloud Security',
+    subtitle: 'MANAGED SERVICE',
+    description: 'Secure your cloud infrastructure across AWS, Azure, and GCP with automated compliance monitoring and threat protection.',
+    bulletPoints: [
+      'Multi-cloud protection',
+      'Configuration management',
+      'Automated remediation'
+    ],
     imageName: 'icon-ot.png',
   },
   {
-    title: 'Managed Detection & Response',
-    description: 'Leverage 24/7 analyst coverage and AI to detect, triage, and eradicate threats.',
-    imageName: 'icon-mdr.png',
+    title: 'Security Training',
+    subtitle: 'EDUCATION',
+    description: 'Comprehensive cybersecurity awareness training programs designed to transform your employees into your first line of defense.',
+    bulletPoints: [
+      'Phishing simulation',
+      'Interactive modules',
+      'Progress tracking'
+    ],
+    imageName: 'icon-graduation.png',
   },
   {
-    title: 'Business Continuity Orchestration',
-    description: 'Coordinate resilience plans, tabletop exercises, and crisis communications end-to-end.',
+    title: 'Risk Assessment',
+    subtitle: 'CONSULTING',
+    description: 'Comprehensive security assessments to identify vulnerabilities, assess risk levels, and develop strategic mitigation plans.',
+    bulletPoints: [
+      'Vulnerability scanning',
+      'Penetration testing',
+      'Risk prioritization'
+    ],
     imageName: 'icon-continuity.png',
   },
 ];
@@ -43,22 +79,37 @@ export function SecuritySolutions(): React.ReactElement {
           title="Comprehensive Security Solutions"
           description="End-to-end cybersecurity services tailored for enterprise needs"
         />
-        <div className="card-grid">
+        <div className="what-we-do-grid">
           {SOLUTIONS.map((solution) => (
-            <div key={solution.title} className="card">
-              <ImagePlaceholder
-                className="card__icon"
-                label={`${solution.title} icon`}
-                imageName={solution.imageName}
-                width={64}
-                height={64}
-                borderRadius={16}
-              />
-              <h3 className="card__title">{solution.title}</h3>
-              <p className="card__description">{solution.description}</p>
-              <a className="card__link" href="#contact">
-                Request details
-              </a>
+            <div key={solution.title} className="what-we-do-card">
+              <div className="what-we-do-card__header">
+                <ImagePlaceholder
+                  className="what-we-do-card__icon"
+                  label={`${solution.title} icon`}
+                  imageName={solution.imageName}
+                  width={49}
+                  height={49}
+                  borderRadius={0}
+                />
+                <div className="what-we-do-card__title-section">
+                  <h3 className="what-we-do-card__title">{solution.title}</h3>
+                  <p className="what-we-do-card__subtitle">{solution.subtitle}</p>
+                </div>
+              </div>
+              <div className="what-we-do-card__content">
+                <p className="what-we-do-card__description">{solution.description}</p>
+                <ul className="what-we-do-card__bullet-points">
+                  {solution.bulletPoints.map((point, index) => (
+                    <li key={index} className="what-we-do-bullet-point">
+                      <span className="what-we-do-bullet-icon">✓</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <a className="what-we-do-card__link" href="#contact">
+                  Learn More →
+                </a>
+              </div>
             </div>
           ))}
         </div>

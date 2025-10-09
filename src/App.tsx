@@ -9,7 +9,6 @@ import { GlobalImpact } from './sections/GlobalImpact';
 import { Resources } from './sections/Resources';
 import { Leadership } from './sections/Leadership';
 import { CoreValues } from './sections/CoreValues';
-import { MissionCTA } from './sections/MissionCTA';
 import { Careers } from './sections/Careers';
 import { Partnerships } from './sections/Partnerships';
 import { Contact } from './sections/Contact';
@@ -29,7 +28,6 @@ export function App(): React.ReactElement {
         <Resources />
         <Leadership />
         <CoreValues />
-        <MissionCTA />
         <Careers />
         <Partnerships />
         <Contact />
