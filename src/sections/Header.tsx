@@ -27,7 +27,7 @@ const NAV_ITEMS: NavLink[] = [
       { label: 'Media Library', href: '#resource-media' },
     ],
   },
-  { label: 'Product', href: '/marketplace' },
+  { label: 'Product', href: '#product' },
   { label: 'Contact Us', href: '#contact' },
   {
     label: 'India',

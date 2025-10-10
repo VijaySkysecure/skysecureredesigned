@@ -14,13 +14,25 @@ import { Partnerships } from './sections/Partnerships';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
 import Marketplace from './pages/Marketplace';
+import SolutionImplementation from './pages/SolutionImplementation';
+import OperationalExcellence from './pages/OperationalExcellence';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
   const isMarketplace = window.location.pathname === '/marketplace';
+  const isSolutionImplementation = window.location.pathname === '/solution-implementation';
+  const isOperationalExcellence = window.location.pathname === '/operational-excellence';
   
   if (isMarketplace) {
     return <Marketplace />;
+  }
+  
+  if (isSolutionImplementation) {
+    return <SolutionImplementation />;
+  }
+  
+  if (isOperationalExcellence) {
+    return <OperationalExcellence />;
   }
   
   // Default homepage (original structure)

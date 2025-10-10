@@ -3152,7 +3152,7 @@ footer section .container {
   background: var(--color-white);
   color: var(--color-blue);
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: 8px;
   padding: 16px 32px;
   font-size: 16px;
   font-weight: 600;
@@ -3286,6 +3286,786 @@ footer section .container {
   
   .marketplace-value-card__description,
   .marketplace-feature-card__description {
+    font-size: 13px;
+  }
+}
+
+/* ===== SOLUTION IMPLEMENTATION PAGE STYLES ===== */
+
+/* Solution Implementation Hero Section */
+.solution-implementation-hero {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 1) 100%), url('/assets/img/banner-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solution-implementation-hero__content {
+  max-width: 800px;
+}
+
+.solution-implementation-hero__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.solution-implementation-hero__title--black {
+  color: var(--color-black);
+}
+
+.solution-implementation-hero__title--blue {
+  color: var(--color-blue);
+}
+
+.solution-implementation-hero__description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-grey);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Solution Implementation Intro Section */
+.solution-implementation-intro {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.solution-implementation-intro__text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-grey);
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Solution Implementation Values Section */
+.solution-implementation-values {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.solution-implementation-values__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.solution-implementation-values__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.solution-implementation-values__subtitle {
+  font-size: 18px;
+  color: var(--color-grey);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.solution-implementation-values__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-implementation-value-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-implementation-value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
+}
+
+.solution-implementation-value-card__icon {
+  margin-bottom: 20px;
+}
+
+.solution-implementation-value-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+.solution-implementation-value-card__description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-grey);
+}
+
+/* Solution Implementation Approach Section */
+.solution-implementation-approach {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.solution-implementation-approach__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-implementation-approach__text {
+  text-align: left;
+}
+
+.solution-implementation-approach__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.solution-implementation-approach__description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-grey);
+}
+
+.solution-implementation-approach__image {
+  text-align: center;
+}
+
+/* Solution Implementation Features Section */
+.solution-implementation-features {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.solution-implementation-features__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.solution-implementation-features__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.solution-implementation-features__subtitle {
+  font-size: 18px;
+  color: var(--color-grey);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.solution-implementation-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-implementation-feature-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-implementation-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
+}
+
+.solution-implementation-feature-card__icon {
+  margin-bottom: 20px;
+}
+
+.solution-implementation-feature-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+.solution-implementation-feature-card__description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-grey);
+}
+
+/* Solution Implementation CTA Section */
+.solution-implementation-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 70.71%);
+  text-align: center;
+}
+
+.solution-implementation-cta__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.solution-implementation-cta__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+.solution-implementation-cta__description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-white);
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+.solution-implementation-cta__button {
+  background: var(--color-white);
+  color: var(--color-blue);
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.solution-implementation-cta__button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Solution Implementation Mobile Responsive */
+@media (max-width: 1200px) {
+  .solution-implementation-values__grid,
+  .solution-implementation-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .solution-implementation-approach__content {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .solution-implementation-hero {
+    padding: 80px 0 60px 0;
+  }
+  
+  .solution-implementation-hero__title {
+    font-size: 36px;
+  }
+  
+  .solution-implementation-hero__description {
+    font-size: 16px;
+  }
+  
+  .solution-implementation-values,
+  .solution-implementation-approach,
+  .solution-implementation-features,
+  .solution-implementation-cta {
+    padding: 60px 0;
+  }
+  
+  .solution-implementation-values__title,
+  .solution-implementation-features__title,
+  .solution-implementation-approach__title,
+  .solution-implementation-cta__title {
+    font-size: 28px;
+  }
+  
+  .solution-implementation-values__subtitle,
+  .solution-implementation-features__subtitle {
+    font-size: 16px;
+  }
+  
+  .solution-implementation-approach__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  
+  .solution-implementation-approach__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .solution-implementation-hero {
+    padding: 60px 0 40px 0;
+  }
+  
+  .solution-implementation-hero__title {
+    font-size: 28px;
+  }
+  
+  .solution-implementation-hero__description {
+    font-size: 14px;
+  }
+  
+  .solution-implementation-values,
+  .solution-implementation-approach,
+  .solution-implementation-features,
+  .solution-implementation-cta {
+    padding: 40px 0;
+  }
+  
+  .solution-implementation-values__grid,
+  .solution-implementation-features__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .solution-implementation-value-card,
+  .solution-implementation-feature-card {
+    padding: 24px 20px;
+  }
+  
+  .solution-implementation-values__title,
+  .solution-implementation-features__title,
+  .solution-implementation-approach__title,
+  .solution-implementation-cta__title {
+    font-size: 24px;
+  }
+  
+  .solution-implementation-values__subtitle,
+  .solution-implementation-features__subtitle {
+    font-size: 14px;
+  }
+  
+  .solution-implementation-cta__description {
+    font-size: 16px;
+  }
+  
+  .solution-implementation-cta__button {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+  
+  .solution-implementation-value-card__icon,
+  .solution-implementation-feature-card__icon {
+    margin-bottom: 16px;
+  }
+  
+  .solution-implementation-value-card__title,
+  .solution-implementation-feature-card__title {
+    font-size: 18px;
+  }
+  
+  .solution-implementation-value-card__description,
+  .solution-implementation-feature-card__description {
+    font-size: 13px;
+  }
+}
+
+/* ===== OPERATIONAL EXCELLENCE PAGE STYLES ===== */
+
+/* Operational Excellence Hero Section */
+.operational-excellence-hero {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 1) 100%), url('/assets/img/banner-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.operational-excellence-hero__content {
+  max-width: 800px;
+}
+
+.operational-excellence-hero__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.operational-excellence-hero__title--black {
+  color: var(--color-black);
+}
+
+.operational-excellence-hero__title--blue {
+  color: var(--color-blue);
+}
+
+.operational-excellence-hero__description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-grey);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Operational Excellence Intro Section */
+.operational-excellence-intro {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.operational-excellence-intro__text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-grey);
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Operational Excellence Values Section */
+.operational-excellence-values {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.operational-excellence-values__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.operational-excellence-values__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.operational-excellence-values__subtitle {
+  font-size: 18px;
+  color: var(--color-grey);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.operational-excellence-values__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.operational-excellence-value-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.operational-excellence-value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
+}
+
+.operational-excellence-value-card__icon {
+  margin-bottom: 20px;
+}
+
+.operational-excellence-value-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+.operational-excellence-value-card__description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-grey);
+}
+
+/* Operational Excellence Approach Section */
+.operational-excellence-approach {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.operational-excellence-approach__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.operational-excellence-approach__text {
+  text-align: left;
+}
+
+.operational-excellence-approach__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.operational-excellence-approach__description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-grey);
+}
+
+.operational-excellence-approach__image {
+  text-align: center;
+}
+
+/* Operational Excellence Features Section */
+.operational-excellence-features {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.operational-excellence-features__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.operational-excellence-features__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.operational-excellence-features__subtitle {
+  font-size: 18px;
+  color: var(--color-grey);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.operational-excellence-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.operational-excellence-feature-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.operational-excellence-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
+}
+
+.operational-excellence-feature-card__icon {
+  margin-bottom: 20px;
+}
+
+.operational-excellence-feature-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+.operational-excellence-feature-card__description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-grey);
+}
+
+/* Operational Excellence CTA Section */
+.operational-excellence-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 70.71%);
+  text-align: center;
+}
+
+.operational-excellence-cta__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.operational-excellence-cta__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+.operational-excellence-cta__description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-white);
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+.operational-excellence-cta__button {
+  background: var(--color-white);
+  color: var(--color-blue);
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.operational-excellence-cta__button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Operational Excellence Mobile Responsive */
+@media (max-width: 1200px) {
+  .operational-excellence-values__grid,
+  .operational-excellence-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .operational-excellence-approach__content {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .operational-excellence-hero {
+    padding: 80px 0 60px 0;
+  }
+  
+  .operational-excellence-hero__title {
+    font-size: 36px;
+  }
+  
+  .operational-excellence-hero__description {
+    font-size: 16px;
+  }
+  
+  .operational-excellence-values,
+  .operational-excellence-approach,
+  .operational-excellence-features,
+  .operational-excellence-cta {
+    padding: 60px 0;
+  }
+  
+  .operational-excellence-values__title,
+  .operational-excellence-features__title,
+  .operational-excellence-approach__title,
+  .operational-excellence-cta__title {
+    font-size: 28px;
+  }
+  
+  .operational-excellence-values__subtitle,
+  .operational-excellence-features__subtitle {
+    font-size: 16px;
+  }
+  
+  .operational-excellence-approach__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  
+  .operational-excellence-approach__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .operational-excellence-hero {
+    padding: 60px 0 40px 0;
+  }
+  
+  .operational-excellence-hero__title {
+    font-size: 28px;
+  }
+  
+  .operational-excellence-hero__description {
+    font-size: 14px;
+  }
+  
+  .operational-excellence-values,
+  .operational-excellence-approach,
+  .operational-excellence-features,
+  .operational-excellence-cta {
+    padding: 40px 0;
+  }
+  
+  .operational-excellence-values__grid,
+  .operational-excellence-features__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .operational-excellence-value-card,
+  .operational-excellence-feature-card {
+    padding: 24px 20px;
+  }
+  
+  .operational-excellence-values__title,
+  .operational-excellence-features__title,
+  .operational-excellence-approach__title,
+  .operational-excellence-cta__title {
+    font-size: 24px;
+  }
+  
+  .operational-excellence-values__subtitle,
+  .operational-excellence-features__subtitle {
+    font-size: 14px;
+  }
+  
+  .operational-excellence-cta__description {
+    font-size: 16px;
+  }
+  
+  .operational-excellence-cta__button {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+  
+  .operational-excellence-value-card__icon,
+  .operational-excellence-feature-card__icon {
+    margin-bottom: 16px;
+  }
+  
+  .operational-excellence-value-card__title,
+  .operational-excellence-feature-card__title {
+    font-size: 18px;
+  }
+  
+  .operational-excellence-value-card__description,
+  .operational-excellence-feature-card__description {
     font-size: 13px;
   }
 }

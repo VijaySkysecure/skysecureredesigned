@@ -117,7 +117,24 @@ export function WhatWeDo(): React.ReactElement {
                     </li>
                   ))}
                 </ul>
-                <a className="what-we-do-card__link" href="#contact">
+                <a 
+                  className="what-we-do-card__link" 
+                  href={item.title === 'Commercial Marketplace' ? '/marketplace' : 
+                        item.title === 'Solution Implementation' ? '/solution-implementation' :
+                        item.title === 'Operational Excellence' ? '/operational-excellence' : '#contact'}
+                  onClick={(e) => {
+                    if (item.title === 'Commercial Marketplace') {
+                      e.preventDefault();
+                      window.location.href = '/marketplace';
+                    } else if (item.title === 'Solution Implementation') {
+                      e.preventDefault();
+                      window.location.href = '/solution-implementation';
+                    } else if (item.title === 'Operational Excellence') {
+                      e.preventDefault();
+                      window.location.href = '/operational-excellence';
+                    }
+                  }}
+                >
                   Learn More →
                 </a>
               </div>
