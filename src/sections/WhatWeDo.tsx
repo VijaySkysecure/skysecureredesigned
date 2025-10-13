@@ -59,17 +59,6 @@ const CAPABILITIES = [
     imageName: 'icon-operations.png',
   },
   {
-    title: 'Sentinel Solution',
-    subtitle: 'AI-DRIVEN THREAT DETECTION',
-    description: 'Sentinel is Microsoft\'s Cloud-Native SIEM and an Always-On SOC for the AI Era: elastic ingestion, AI analytics, built-in SOAR, and native connectors...',
-    bulletPoints: [
-      'Cloud-native SIEM',
-      'Automated threat response',
-      'Seamless platform integration'
-    ],
-    imageName: 'icon-reporting.png',
-  },
-  {
     title: 'Assessment',
     subtitle: 'COMPREHENSIVE EVALUATION SERVICES',
     description: 'Our comprehensive assessment services provide a thorough analysis of your systems, processes, and performance, enabling data-driven insights...',
@@ -121,7 +110,10 @@ export function WhatWeDo(): React.ReactElement {
                   className="what-we-do-card__link" 
                   href={item.title === 'Commercial Marketplace' ? '/marketplace' : 
                         item.title === 'Solution Implementation' ? '/solution-implementation' :
-                        item.title === 'Operational Excellence' ? '/operational-excellence' : '#contact'}
+                        item.title === 'Operational Excellence' ? '/operational-excellence' :
+                        item.title === 'Simplified Management' ? '/simplified-management' :
+                        item.title === 'Security & Compliance Metrics' ? '/security-compliance-metrics' :
+                        item.title === 'Assessment' ? '/assessment' : '#contact'}
                   onClick={(e) => {
                     if (item.title === 'Commercial Marketplace') {
                       e.preventDefault();
@@ -132,6 +124,15 @@ export function WhatWeDo(): React.ReactElement {
                     } else if (item.title === 'Operational Excellence') {
                       e.preventDefault();
                       window.location.href = '/operational-excellence';
+                    } else if (item.title === 'Simplified Management') {
+                      e.preventDefault();
+                      window.location.href = '/simplified-management';
+                    } else if (item.title === 'Security & Compliance Metrics') {
+                      e.preventDefault();
+                      window.location.href = '/security-compliance-metrics';
+                    } else if (item.title === 'Assessment') {
+                      e.preventDefault();
+                      window.location.href = '/assessment';
                     }
                   }}
                 >

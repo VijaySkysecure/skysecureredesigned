@@ -12,7 +12,7 @@ export function Hero(): React.ReactElement {
             <span style={{ color: 'rgba(75, 85, 99, 1)' }}>Business Excellence</span><br />
           </h1>
           <p className="hero__description">
-          Delivering end-to-end solutions to optimize business operations and empower organizations with strategic support for sustained growth and excellence.
+          Delivering end-to-end solutions that optimize business operations and drive sustained growth. Ensuring robust data governance and seamless compliance with India’s Digital Personal Data Protection (DPDP) Act, 2023.
           </p>
           <div className="hero__cta">
             <button 

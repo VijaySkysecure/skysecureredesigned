@@ -60,14 +60,14 @@ const SolutionImplementation: React.FC = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="solution-implementation-hero">
+      <section className="page-hero">
         <div className="container">
-          <div className="solution-implementation-hero__content">
-            <h1 className="solution-implementation-hero__title">
-              <span className="solution-implementation-hero__title--black">Solution</span>{' '}
-              <span className="solution-implementation-hero__title--blue">Implementation</span>
+          <div className="page-hero__content">
+            <h1 className="page-hero__title">
+              <span>Solution</span>{' '}
+              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Implementation</span>
             </h1>
-            <p className="solution-implementation-hero__description">
+            <p className="page-hero__description">
               Experience a seamless transition, guided by our expert team, as we collaborate closely with you to deliver a customized solution that maximizes efficiency, drives tangible results, and accelerates your path to success.
             </p>
           </div>
@@ -75,25 +75,25 @@ const SolutionImplementation: React.FC = () => {
       </section>
 
       {/* Introductory Text Section */}
-      <section className="solution-implementation-intro">
+      <section className="page-intro">
         <div className="container">
-          <p className="solution-implementation-intro__text">
+          <p className="page-intro__text">
             Navigating the complexities of implementing security solutions can be a daunting task for any organization. That's where our Solution Implementation service steps in, offering a seamless and guided transition towards a more secure operational framework. Our expert team works closely with you, ensuring that every aspect of the solution deployment is tailored to fit your specific needs and operational context. With a focus on minimizing disruption and maximizing effectiveness, we transform your security challenges into strengths, setting you on the path to success.
           </p>
         </div>
       </section>
 
       {/* Our Core Values Section */}
-      <section className="solution-implementation-values">
+      <section className="page-values">
         <div className="container">
-          <div className="solution-implementation-values__header">
-            <h2 className="solution-implementation-values__title">Our Core Values</h2>
-            <p className="solution-implementation-values__subtitle">Delivering excellence through proven methodologies</p>
+          <div className="page-values__header">
+            <h2 className="page-values__title">Our Core Values</h2>
+            <p className="page-values__subtitle">Delivering excellence through proven methodologies</p>
           </div>
-          <div className="solution-implementation-values__grid">
+          <div className="page-values__grid">
             {CORE_VALUES.map((value, index) => (
-              <div key={index} className="solution-implementation-value-card">
-                <div className="solution-implementation-value-card__icon">
+              <div key={index} className="page-value-card">
+                <div className="page-value-card__icon">
                   <ImagePlaceholder 
                     label={`${value.title} icon`}
                     imageName={`marketplace/${value.icon}.png`}
@@ -102,8 +102,8 @@ const SolutionImplementation: React.FC = () => {
                     borderRadius={0}
                   />
                 </div>
-                <h3 className="solution-implementation-value-card__title">{value.title}</h3>
-                <p className="solution-implementation-value-card__description">{value.description}</p>
+                <h3 className="page-value-card__title">{value.title}</h3>
+                <p className="page-value-card__description">{value.description}</p>
               </div>
             ))}
           </div>
@@ -111,16 +111,16 @@ const SolutionImplementation: React.FC = () => {
       </section>
 
       {/* Our Implementation Approach Section */}
-      <section className="solution-implementation-approach">
+      <section className="page-innovation">
         <div className="container">
-          <div className="solution-implementation-approach__content">
-            <div className="solution-implementation-approach__text">
-              <h2 className="solution-implementation-approach__title">Our Implementation Approach</h2>
-              <p className="solution-implementation-approach__description">
+          <div className="page-innovation__content">
+            <div className="page-innovation__text">
+              <h2 className="page-innovation__title">Our Implementation Approach</h2>
+              <p className="page-innovation__description">
                 At the core of our Solution Implementation service is our commitment to working hand-in-hand with your team. From understanding your unique challenges to designing a tailored strategy, we ensure that every phase of the deployment process is meticulously planned and executed. Our approach balances precision and flexibility, making sure that we're aligned with your security goals while enhancing operational efficiency.
               </p>
             </div>
-            <div className="solution-implementation-approach__image">
+            <div className="page-innovation__image">
               <ImagePlaceholder 
                 label="Team collaboration during implementation"
                 imageName="marketplace/implementation-team.png"
@@ -134,16 +134,16 @@ const SolutionImplementation: React.FC = () => {
       </section>
 
       {/* Implementation Features Section */}
-      <section className="solution-implementation-features">
+      <section className="page-features">
         <div className="container">
-          <div className="solution-implementation-features__header">
-            <h2 className="solution-implementation-features__title">Implementation Features</h2>
-            <p className="solution-implementation-features__subtitle">Comprehensive support throughout your journey</p>
+          <div className="page-features__header">
+            <h2 className="page-features__title">Implementation Features</h2>
+            <p className="page-features__subtitle">Comprehensive support throughout your journey</p>
           </div>
-          <div className="solution-implementation-features__grid">
+          <div className="page-features__grid">
             {IMPLEMENTATION_FEATURES.map((feature, index) => (
-              <div key={index} className="solution-implementation-feature-card">
-                <div className="solution-implementation-feature-card__icon">
+              <div key={index} className="page-feature-card">
+                <div className="page-feature-card__icon">
                   <ImagePlaceholder 
                     label={`${feature.title} icon`}
                     imageName={`marketplace/${feature.icon}.png`}
@@ -152,8 +152,8 @@ const SolutionImplementation: React.FC = () => {
                     borderRadius={0}
                   />
                 </div>
-                <h3 className="solution-implementation-feature-card__title">{feature.title}</h3>
-                <p className="solution-implementation-feature-card__description">{feature.description}</p>
+                <h3 className="page-feature-card__title">{feature.title}</h3>
+                <p className="page-feature-card__description">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -161,14 +161,14 @@ const SolutionImplementation: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="solution-implementation-cta">
+      <section className="page-cta">
         <div className="container">
-          <div className="solution-implementation-cta__content">
-            <h2 className="solution-implementation-cta__title">Transform Your Security with Confidence</h2>
-            <p className="solution-implementation-cta__description">
+          <div className="page-cta__content">
+            <h2 className="page-cta__title">Transform Your Security with Confidence</h2>
+            <p className="page-cta__description">
               From seamless integration to continuous support, let us guide your organization to a more secure future.
             </p>
-            <button className="solution-implementation-cta__button">Get Started</button>
+            <button className="page-cta__button">Get Started</button>
           </div>
         </div>
       </section>

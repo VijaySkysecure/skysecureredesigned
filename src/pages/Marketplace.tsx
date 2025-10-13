@@ -60,14 +60,14 @@ const Marketplace: React.FC = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="marketplace-hero">
+      <section className="page-hero">
         <div className="container">
-          <div className="marketplace-hero__content">
-            <h1 className="marketplace-hero__title">
-              <span className="marketplace-hero__title--black">Commercial</span>{' '}
-              <span className="marketplace-hero__title--blue">Marketplace</span>
+          <div className="page-hero__content">
+            <h1 className="page-hero__title">
+              <span>Commercial</span>{' '}
+              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Marketplace</span>
             </h1>
-            <p className="marketplace-hero__description">
+            <p className="page-hero__description">
               Discover a world of possibilities, where innovative solutions, diverse offerings, and exceptional services converge to empower businesses and drive growth.
             </p>
           </div>
@@ -75,25 +75,25 @@ const Marketplace: React.FC = () => {
       </section>
 
       {/* Introductory Text Section */}
-      <section className="marketplace-intro">
+      <section className="page-intro">
         <div className="container">
-          <p className="marketplace-intro__text">
+          <p className="page-intro__text">
             Step into our Commercial Marketplace and immerse yourself in a world brimming with endless possibilities. Designed with businesses in mind, our platform is a vibrant ecosystem where innovation meets necessity, offering a curated selection of cutting-edge solutions, diverse product offerings, and unparalleled services. This marketplace is your gateway to discovering tools and technologies that have the power to transform your operations, streamline your processes, and catapult your business into new realms of growth and efficiency.
           </p>
         </div>
       </section>
 
       {/* Our Core Values Section */}
-      <section className="marketplace-values">
+      <section className="page-values">
         <div className="container">
-          <div className="marketplace-values__header">
-            <h2 className="marketplace-values__title">Our Core Values</h2>
-            <p className="marketplace-values__subtitle">Empowering businesses through innovation and excellence</p>
+          <div className="page-values__header">
+            <h2 className="page-values__title">Our Core Values</h2>
+            <p className="page-values__subtitle">Empowering businesses through innovation and excellence</p>
           </div>
-          <div className="marketplace-values__grid">
+          <div className="page-values__grid">
             {CORE_VALUES.map((value, index) => (
-              <div key={index} className="marketplace-value-card">
-                <div className="marketplace-value-card__icon">
+              <div key={index} className="page-value-card">
+                <div className="page-value-card__icon">
                   <ImagePlaceholder 
                     label={`${value.title} icon`}
                     imageName={`marketplace/${value.icon}.png`}
@@ -102,8 +102,8 @@ const Marketplace: React.FC = () => {
                     borderRadius={0}
                   />
                 </div>
-                <h3 className="marketplace-value-card__title">{value.title}</h3>
-                <p className="marketplace-value-card__description">{value.description}</p>
+                <h3 className="page-value-card__title">{value.title}</h3>
+                <p className="page-value-card__description">{value.description}</p>
               </div>
             ))}
           </div>
@@ -111,16 +111,16 @@ const Marketplace: React.FC = () => {
       </section>
 
       {/* Innovation Meets Diversity Section */}
-      <section className="marketplace-innovation">
+      <section className="page-innovation">
         <div className="container">
-          <div className="marketplace-innovation__content">
-            <div className="marketplace-innovation__text">
-              <h2 className="marketplace-innovation__title">Innovation Meets Diversity</h2>
-              <p className="marketplace-innovation__description">
+          <div className="page-innovation__content">
+            <div className="page-innovation__text">
+              <h2 className="page-innovation__title">Innovation Meets Diversity</h2>
+              <p className="page-innovation__description">
                 At the heart of our marketplace lies a commitment to diversity and innovation. We understand that each business is unique, with its own set of challenges and opportunities. That's why we've painstakingly gathered an expansive array of offerings—from software solutions that optimize your workflows to hardware that enhances your operational capabilities—all designed to address the specific needs of businesses across various industries.
               </p>
             </div>
-            <div className="marketplace-innovation__image">
+            <div className="page-innovation__image">
               <ImagePlaceholder 
                 label="Innovation meets diversity illustration"
                 imageName="marketplace/innovation-diversity.png"
@@ -134,16 +134,16 @@ const Marketplace: React.FC = () => {
       </section>
 
       {/* Feature Highlights Section */}
-      <section className="marketplace-features">
+      <section className="page-features">
         <div className="container">
-          <div className="marketplace-features__header">
-            <h2 className="marketplace-features__title">Feature Highlights</h2>
-            <p className="marketplace-features__subtitle">Comprehensive solutions for modern businesses</p>
+          <div className="page-features__header">
+            <h2 className="page-features__title">Feature Highlights</h2>
+            <p className="page-features__subtitle">Comprehensive solutions for modern businesses</p>
           </div>
-          <div className="marketplace-features__grid">
+          <div className="page-features__grid">
             {FEATURE_HIGHLIGHTS.map((feature, index) => (
-              <div key={index} className="marketplace-feature-card">
-                <div className="marketplace-feature-card__icon">
+              <div key={index} className="page-feature-card">
+                <div className="page-feature-card__icon">
                   <ImagePlaceholder 
                     label={`${feature.title} icon`}
                     imageName={`marketplace/${feature.icon}.png`}
@@ -152,8 +152,8 @@ const Marketplace: React.FC = () => {
                     borderRadius={0}
                   />
                 </div>
-                <h3 className="marketplace-feature-card__title">{feature.title}</h3>
-                <p className="marketplace-feature-card__description">{feature.description}</p>
+                <h3 className="page-feature-card__title">{feature.title}</h3>
+                <p className="page-feature-card__description">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -161,14 +161,14 @@ const Marketplace: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="marketplace-cta">
+      <section className="page-cta">
         <div className="container">
-          <div className="marketplace-cta__content">
-            <h2 className="marketplace-cta__title">Explore. Compare. Transform.</h2>
-            <p className="marketplace-cta__description">
+          <div className="page-cta__content">
+            <h2 className="page-cta__title">Explore. Compare. Transform.</h2>
+            <p className="page-cta__description">
               Discover, grow, and lead with confidence the future of your business is just a few clicks away.
             </p>
-            <button className="marketplace-cta__button">Explore Marketplace</button>
+            <button className="page-cta__button">Explore Marketplace</button>
           </div>
         </div>
       </section>

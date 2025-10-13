@@ -209,17 +209,18 @@ section {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: 80px;
+  gap: 40px;
   margin-top: 0;
 }
 
 .hero__content > div:first-child {
   margin-top: 0;
+  margin-left: -10px;
 }
 
 .hero__content > div:last-child {
   margin-top: -60px;
-  margin-left: 50px;
+  margin-left: 70px;
 }
 
 .hero__eyebrow {
@@ -2900,10 +2901,10 @@ footer section .container {
   }
 }
 
-/* ===== MARKETPLACE PAGE STYLES ===== */
+/* ===== REUSABLE PAGE STYLES (for all 6 What We Do pages) ===== */
 
-/* Marketplace Hero Section */
-.marketplace-hero {
+/* Page Hero Section */
+.page-hero {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 1) 100%), url('/assets/img/banner-bg.png');
   background-size: cover;
   background-position: center;
@@ -2915,26 +2916,23 @@ footer section .container {
   justify-content: center;
 }
 
-.marketplace-hero__content {
+.page-hero__content {
   max-width: 800px;
 }
 
-.marketplace-hero__title {
+.page-hero__title {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 24px;
-}
-
-.marketplace-hero__title--black {
   color: var(--color-black);
 }
 
-.marketplace-hero__title--blue {
+.page-hero__title--blue {
   color: var(--color-blue);
 }
 
-.marketplace-hero__description {
+.page-hero__description {
   font-size: 18px;
   line-height: 1.6;
   color: var(--color-grey);
@@ -2942,13 +2940,13 @@ footer section .container {
   margin: 0 auto;
 }
 
-/* Marketplace Intro Section */
-.marketplace-intro {
+/* Page Intro Section */
+.page-intro {
   padding: 80px 0;
   background: var(--color-white);
 }
 
-.marketplace-intro__text {
+.page-intro__text {
   font-size: 16px;
   line-height: 1.7;
   color: var(--color-grey);
@@ -2957,32 +2955,32 @@ footer section .container {
   text-align: left;
 }
 
-/* Marketplace Values Section */
-.marketplace-values {
+/* Page Values Section */
+.page-values {
   padding: 80px 0;
   background: var(--color-white);
 }
 
-.marketplace-values__header {
+.page-values__header {
   text-align: center;
   margin-bottom: 64px;
 }
 
-.marketplace-values__title {
+.page-values__title {
   font-size: 36px;
   font-weight: 700;
   color: var(--color-black);
   margin-bottom: 16px;
 }
 
-.marketplace-values__subtitle {
+.page-values__subtitle {
   font-size: 18px;
   color: var(--color-grey);
   max-width: 600px;
   margin: 0 auto;
 }
 
-.marketplace-values__grid {
+.page-values__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
@@ -2990,7 +2988,7 @@ footer section .container {
   margin: 0 auto;
 }
 
-.marketplace-value-card {
+.page-value-card {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: 32px 24px;
@@ -2999,35 +2997,35 @@ footer section .container {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.marketplace-value-card:hover {
+.page-value-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
 }
 
-.marketplace-value-card__icon {
+.page-value-card__icon {
   margin-bottom: 20px;
 }
 
-.marketplace-value-card__title {
+.page-value-card__title {
   font-size: 20px;
   font-weight: 600;
   color: var(--color-black);
   margin-bottom: 12px;
 }
 
-.marketplace-value-card__description {
+.page-value-card__description {
   font-size: 14px;
   line-height: 1.6;
   color: var(--color-grey);
 }
 
-/* Marketplace Innovation Section */
-.marketplace-innovation {
+/* Page Innovation Section */
+.page-innovation {
   padding: 80px 0;
   background: var(--color-white);
 }
 
-.marketplace-innovation__content {
+.page-innovation__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -3036,343 +3034,69 @@ footer section .container {
   margin: 0 auto;
 }
 
-.marketplace-innovation__text {
+.page-innovation__text {
   text-align: left;
 }
 
-.marketplace-innovation__title {
+.page-innovation__title {
   font-size: 36px;
   font-weight: 700;
   color: var(--color-black);
   margin-bottom: 24px;
 }
 
-.marketplace-innovation__description {
+.page-innovation__description {
   font-size: 16px;
   line-height: 1.7;
   color: var(--color-grey);
 }
 
-.marketplace-innovation__image {
-  text-align: center;
+.page-innovation__bullet-points {
+  margin-top: 24px;
 }
 
-/* Marketplace Features Section */
-.marketplace-features {
-  padding: 80px 0;
-  background: var(--color-white);
-}
-
-.marketplace-features__header {
-  text-align: center;
-  margin-bottom: 64px;
-}
-
-.marketplace-features__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 16px;
-}
-
-.marketplace-features__subtitle {
-  font-size: 18px;
-  color: var(--color-grey);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.marketplace-features__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.marketplace-feature-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.marketplace-feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
-}
-
-.marketplace-feature-card__icon {
-  margin-bottom: 20px;
-}
-
-.marketplace-feature-card__title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--color-black);
-  margin-bottom: 12px;
-}
-
-.marketplace-feature-card__description {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--color-grey);
-}
-
-/* Marketplace CTA Section */
-.marketplace-cta {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 70.71%);
-  text-align: center;
-}
-
-.marketplace-cta__content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.marketplace-cta__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--color-white);
-  margin-bottom: 24px;
-}
-
-.marketplace-cta__description {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--color-white);
-  margin-bottom: 32px;
-  opacity: 0.9;
-}
-
-.marketplace-cta__button {
-  background: var(--color-white);
-  color: var(--color-blue);
-  border: none;
-  border-radius: 8px;
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.marketplace-cta__button:hover {
-  background: rgba(255, 255, 255, 0.9);
-  transform: translateY(-2px);
-}
-
-/* Marketplace Mobile Responsive */
-@media (max-width: 1200px) {
-  .marketplace-values__grid,
-  .marketplace-features__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-  
-  .marketplace-innovation__content {
-    gap: 48px;
-  }
-}
-
-@media (max-width: 900px) {
-  .marketplace-hero {
-    padding: 80px 0 60px 0;
-  }
-  
-  .marketplace-hero__title {
-    font-size: 36px;
-  }
-  
-  .marketplace-hero__description {
-    font-size: 16px;
-  }
-  
-  .marketplace-values,
-  .marketplace-innovation,
-  .marketplace-features,
-  .marketplace-cta {
-    padding: 60px 0;
-  }
-  
-  .marketplace-values__title,
-  .marketplace-features__title,
-  .marketplace-innovation__title,
-  .marketplace-cta__title {
-    font-size: 28px;
-  }
-  
-  .marketplace-values__subtitle,
-  .marketplace-features__subtitle {
-    font-size: 16px;
-  }
-  
-  .marketplace-innovation__content {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    text-align: center;
-  }
-  
-  .marketplace-innovation__text {
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .marketplace-hero {
-    padding: 60px 0 40px 0;
-  }
-  
-  .marketplace-hero__title {
-    font-size: 28px;
-  }
-  
-  .marketplace-hero__description {
-    font-size: 14px;
-  }
-  
-  .marketplace-values,
-  .marketplace-innovation,
-  .marketplace-features,
-  .marketplace-cta {
-    padding: 40px 0;
-  }
-  
-  .marketplace-values__grid,
-  .marketplace-features__grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .marketplace-value-card,
-  .marketplace-feature-card {
-    padding: 24px 20px;
-  }
-  
-  .marketplace-values__title,
-  .marketplace-features__title,
-  .marketplace-innovation__title,
-  .marketplace-cta__title {
-    font-size: 24px;
-  }
-  
-  .marketplace-values__subtitle,
-  .marketplace-features__subtitle {
-    font-size: 14px;
-  }
-  
-  .marketplace-cta__description {
-    font-size: 16px;
-  }
-  
-  .marketplace-cta__button {
-    padding: 14px 28px;
-    font-size: 14px;
-  }
-  
-  .marketplace-value-card__icon,
-  .marketplace-feature-card__icon {
-    margin-bottom: 16px;
-  }
-  
-  .marketplace-value-card__title,
-  .marketplace-feature-card__title {
-    font-size: 18px;
-  }
-  
-  .marketplace-value-card__description,
-  .marketplace-feature-card__description {
-    font-size: 13px;
-  }
-}
-
-/* ===== SOLUTION IMPLEMENTATION PAGE STYLES ===== */
-
-/* Solution Implementation Hero Section */
-.solution-implementation-hero {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 1) 100%), url('/assets/img/banner-bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-  height: 500px;
+.page-innovation__bullet-point {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
-.solution-implementation-hero__content {
-  max-width: 800px;
-}
-
-.solution-implementation-hero__title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 24px;
-}
-
-.solution-implementation-hero__title--black {
-  color: var(--color-black);
-}
-
-.solution-implementation-hero__title--blue {
+.page-innovation__bullet-icon {
   color: var(--color-blue);
+  font-weight: bold;
 }
 
-.solution-implementation-hero__description {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--color-grey);
-  max-width: 900px;
-  margin: 0 auto;
+.page-innovation__image {
+  text-align: center;
 }
 
-/* Solution Implementation Intro Section */
-.solution-implementation-intro {
+/* Page Features Section */
+.page-features {
   padding: 80px 0;
   background: var(--color-white);
 }
 
-.solution-implementation-intro__text {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--color-grey);
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-/* Solution Implementation Values Section */
-.solution-implementation-values {
-  padding: 80px 0;
-  background: var(--color-white);
-}
-
-.solution-implementation-values__header {
+.page-features__header {
   text-align: center;
   margin-bottom: 64px;
 }
 
-.solution-implementation-values__title {
+.page-features__title {
   font-size: 36px;
   font-weight: 700;
   color: var(--color-black);
   margin-bottom: 16px;
 }
 
-.solution-implementation-values__subtitle {
+.page-features__subtitle {
   font-size: 18px;
   color: var(--color-grey);
   max-width: 600px;
   margin: 0 auto;
 }
 
-.solution-implementation-values__grid {
+.page-features__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
@@ -3380,7 +3104,7 @@ footer section .container {
   margin: 0 auto;
 }
 
-.solution-implementation-value-card {
+.page-feature-card {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: 32px 24px;
@@ -3389,148 +3113,48 @@ footer section .container {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.solution-implementation-value-card:hover {
+.page-feature-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
 }
 
-.solution-implementation-value-card__icon {
+.page-feature-card__icon {
   margin-bottom: 20px;
 }
 
-.solution-implementation-value-card__title {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--color-black);
-  margin-bottom: 12px;
-}
-
-.solution-implementation-value-card__description {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--color-grey);
-}
-
-/* Solution Implementation Approach Section */
-.solution-implementation-approach {
-  padding: 80px 0;
-  background: var(--color-white);
-}
-
-.solution-implementation-approach__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.solution-implementation-approach__text {
-  text-align: left;
-}
-
-.solution-implementation-approach__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 24px;
-}
-
-.solution-implementation-approach__description {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--color-grey);
-}
-
-.solution-implementation-approach__image {
-  text-align: center;
-}
-
-/* Solution Implementation Features Section */
-.solution-implementation-features {
-  padding: 80px 0;
-  background: var(--color-white);
-}
-
-.solution-implementation-features__header {
-  text-align: center;
-  margin-bottom: 64px;
-}
-
-.solution-implementation-features__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 16px;
-}
-
-.solution-implementation-features__subtitle {
-  font-size: 18px;
-  color: var(--color-grey);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.solution-implementation-features__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.solution-implementation-feature-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.solution-implementation-feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
-}
-
-.solution-implementation-feature-card__icon {
-  margin-bottom: 20px;
-}
-
-.solution-implementation-feature-card__title {
+.page-feature-card__title {
   font-size: 18px;
   font-weight: 600;
   color: var(--color-black);
   margin-bottom: 12px;
 }
 
-.solution-implementation-feature-card__description {
+.page-feature-card__description {
   font-size: 14px;
   line-height: 1.6;
   color: var(--color-grey);
 }
 
-/* Solution Implementation CTA Section */
-.solution-implementation-cta {
+/* Page CTA Section */
+.page-cta {
   padding: 80px 0;
   background: linear-gradient(135deg, #2563EB 0%, #1E40AF 70.71%);
   text-align: center;
 }
 
-.solution-implementation-cta__content {
+.page-cta__content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.solution-implementation-cta__title {
-  font-size: 36px;
+.page-cta__title {
+  font-size: 42px;
   font-weight: 700;
   color: var(--color-white);
   margin-bottom: 24px;
 }
 
-.solution-implementation-cta__description {
+.page-cta__description {
   font-size: 18px;
   line-height: 1.6;
   color: var(--color-white);
@@ -3538,9 +3162,9 @@ footer section .container {
   opacity: 0.9;
 }
 
-.solution-implementation-cta__button {
+.page-cta__button {
   background: var(--color-white);
-  color: var(--color-blue);
+  color: rgba(37, 99, 235, 1);
   border: none;
   border-radius: 8px;
   padding: 16px 32px;
@@ -3551,524 +3175,139 @@ footer section .container {
   transition: all 0.3s ease;
 }
 
-.solution-implementation-cta__button:hover {
+.page-cta__button:hover {
   background: rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
 }
 
-/* Solution Implementation Mobile Responsive */
+/* Page Mobile Responsive */
 @media (max-width: 1200px) {
-  .solution-implementation-values__grid,
-  .solution-implementation-features__grid {
+  .page-values__grid,
+  .page-features__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
   
-  .solution-implementation-approach__content {
+  .page-innovation__content {
     gap: 48px;
   }
 }
 
 @media (max-width: 900px) {
-  .solution-implementation-hero {
+  .page-hero {
     padding: 80px 0 60px 0;
   }
   
-  .solution-implementation-hero__title {
+  .page-hero__title {
     font-size: 36px;
   }
   
-  .solution-implementation-hero__description {
+  .page-hero__description {
     font-size: 16px;
   }
   
-  .solution-implementation-values,
-  .solution-implementation-approach,
-  .solution-implementation-features,
-  .solution-implementation-cta {
+  .page-values,
+  .page-innovation,
+  .page-features,
+  .page-cta {
     padding: 60px 0;
   }
   
-  .solution-implementation-values__title,
-  .solution-implementation-features__title,
-  .solution-implementation-approach__title,
-  .solution-implementation-cta__title {
+  .page-values__title,
+  .page-features__title,
+  .page-innovation__title,
+  .page-cta__title {
     font-size: 28px;
   }
   
-  .solution-implementation-values__subtitle,
-  .solution-implementation-features__subtitle {
+  .page-values__subtitle,
+  .page-features__subtitle {
     font-size: 16px;
   }
   
-  .solution-implementation-approach__content {
+  .page-innovation__content {
     grid-template-columns: 1fr;
     gap: 32px;
     text-align: center;
   }
   
-  .solution-implementation-approach__text {
+  .page-innovation__text {
     text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-  .solution-implementation-hero {
+  .page-hero {
     padding: 60px 0 40px 0;
   }
   
-  .solution-implementation-hero__title {
+  .page-hero__title {
     font-size: 28px;
   }
   
-  .solution-implementation-hero__description {
+  .page-hero__description {
     font-size: 14px;
   }
   
-  .solution-implementation-values,
-  .solution-implementation-approach,
-  .solution-implementation-features,
-  .solution-implementation-cta {
+  .page-values,
+  .page-innovation,
+  .page-features,
+  .page-cta {
     padding: 40px 0;
   }
   
-  .solution-implementation-values__grid,
-  .solution-implementation-features__grid {
+  .page-values__grid,
+  .page-features__grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .solution-implementation-value-card,
-  .solution-implementation-feature-card {
+  .page-value-card,
+  .page-feature-card {
     padding: 24px 20px;
   }
   
-  .solution-implementation-values__title,
-  .solution-implementation-features__title,
-  .solution-implementation-approach__title,
-  .solution-implementation-cta__title {
+  .page-values__title,
+  .page-features__title,
+  .page-innovation__title,
+  .page-cta__title {
     font-size: 24px;
   }
   
-  .solution-implementation-values__subtitle,
-  .solution-implementation-features__subtitle {
+  .page-values__subtitle,
+  .page-features__subtitle {
     font-size: 14px;
   }
   
-  .solution-implementation-cta__description {
+  .page-cta__description {
     font-size: 16px;
   }
   
-  .solution-implementation-cta__button {
+  .page-cta__button {
     padding: 14px 28px;
     font-size: 14px;
   }
   
-  .solution-implementation-value-card__icon,
-  .solution-implementation-feature-card__icon {
+  .page-value-card__icon,
+  .page-feature-card__icon {
     margin-bottom: 16px;
   }
   
-  .solution-implementation-value-card__title,
-  .solution-implementation-feature-card__title {
+  .page-value-card__title,
+  .page-feature-card__title {
     font-size: 18px;
   }
   
-  .solution-implementation-value-card__description,
-  .solution-implementation-feature-card__description {
+  .page-value-card__description,
+  .page-feature-card__description {
     font-size: 13px;
   }
 }
 
-/* ===== OPERATIONAL EXCELLENCE PAGE STYLES ===== */
 
-/* Operational Excellence Hero Section */
-.operational-excellence-hero {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 1) 100%), url('/assets/img/banner-bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.operational-excellence-hero__content {
-  max-width: 800px;
-}
 
-.operational-excellence-hero__title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 24px;
-}
 
-.operational-excellence-hero__title--black {
-  color: var(--color-black);
-}
-
-.operational-excellence-hero__title--blue {
-  color: var(--color-blue);
-}
-
-.operational-excellence-hero__description {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--color-grey);
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Operational Excellence Intro Section */
-.operational-excellence-intro {
-  padding: 80px 0;
-  background: var(--color-white);
-}
-
-.operational-excellence-intro__text {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--color-grey);
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-/* Operational Excellence Values Section */
-.operational-excellence-values {
-  padding: 80px 0;
-  background: var(--color-white);
-}
-
-.operational-excellence-values__header {
-  text-align: center;
-  margin-bottom: 64px;
-}
-
-.operational-excellence-values__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 16px;
-}
-
-.operational-excellence-values__subtitle {
-  font-size: 18px;
-  color: var(--color-grey);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.operational-excellence-values__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.operational-excellence-value-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.operational-excellence-value-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
-}
-
-.operational-excellence-value-card__icon {
-  margin-bottom: 20px;
-}
-
-.operational-excellence-value-card__title {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--color-black);
-  margin-bottom: 12px;
-}
-
-.operational-excellence-value-card__description {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--color-grey);
-}
-
-/* Operational Excellence Approach Section */
-.operational-excellence-approach {
-  padding: 80px 0;
-  background: var(--color-white);
-}
-
-.operational-excellence-approach__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.operational-excellence-approach__text {
-  text-align: left;
-}
-
-.operational-excellence-approach__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 24px;
-}
-
-.operational-excellence-approach__description {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--color-grey);
-}
-
-.operational-excellence-approach__image {
-  text-align: center;
-}
-
-/* Operational Excellence Features Section */
-.operational-excellence-features {
-  padding: 80px 0;
-  background: var(--color-white);
-}
-
-.operational-excellence-features__header {
-  text-align: center;
-  margin-bottom: 64px;
-}
-
-.operational-excellence-features__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 16px;
-}
-
-.operational-excellence-features__subtitle {
-  font-size: 18px;
-  color: var(--color-grey);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.operational-excellence-features__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.operational-excellence-feature-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.12);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.operational-excellence-feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 48px rgba(17, 24, 39, 0.16);
-}
-
-.operational-excellence-feature-card__icon {
-  margin-bottom: 20px;
-}
-
-.operational-excellence-feature-card__title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--color-black);
-  margin-bottom: 12px;
-}
-
-.operational-excellence-feature-card__description {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--color-grey);
-}
-
-/* Operational Excellence CTA Section */
-.operational-excellence-cta {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 70.71%);
-  text-align: center;
-}
-
-.operational-excellence-cta__content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.operational-excellence-cta__title {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--color-white);
-  margin-bottom: 24px;
-}
-
-.operational-excellence-cta__description {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--color-white);
-  margin-bottom: 32px;
-  opacity: 0.9;
-}
-
-.operational-excellence-cta__button {
-  background: var(--color-white);
-  color: var(--color-blue);
-  border: none;
-  border-radius: 8px;
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.operational-excellence-cta__button:hover {
-  background: rgba(255, 255, 255, 0.9);
-  transform: translateY(-2px);
-}
-
-/* Operational Excellence Mobile Responsive */
-@media (max-width: 1200px) {
-  .operational-excellence-values__grid,
-  .operational-excellence-features__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-  
-  .operational-excellence-approach__content {
-    gap: 48px;
-  }
-}
-
-@media (max-width: 900px) {
-  .operational-excellence-hero {
-    padding: 80px 0 60px 0;
-  }
-  
-  .operational-excellence-hero__title {
-    font-size: 36px;
-  }
-  
-  .operational-excellence-hero__description {
-    font-size: 16px;
-  }
-  
-  .operational-excellence-values,
-  .operational-excellence-approach,
-  .operational-excellence-features,
-  .operational-excellence-cta {
-    padding: 60px 0;
-  }
-  
-  .operational-excellence-values__title,
-  .operational-excellence-features__title,
-  .operational-excellence-approach__title,
-  .operational-excellence-cta__title {
-    font-size: 28px;
-  }
-  
-  .operational-excellence-values__subtitle,
-  .operational-excellence-features__subtitle {
-    font-size: 16px;
-  }
-  
-  .operational-excellence-approach__content {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    text-align: center;
-  }
-  
-  .operational-excellence-approach__text {
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .operational-excellence-hero {
-    padding: 60px 0 40px 0;
-  }
-  
-  .operational-excellence-hero__title {
-    font-size: 28px;
-  }
-  
-  .operational-excellence-hero__description {
-    font-size: 14px;
-  }
-  
-  .operational-excellence-values,
-  .operational-excellence-approach,
-  .operational-excellence-features,
-  .operational-excellence-cta {
-    padding: 40px 0;
-  }
-  
-  .operational-excellence-values__grid,
-  .operational-excellence-features__grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .operational-excellence-value-card,
-  .operational-excellence-feature-card {
-    padding: 24px 20px;
-  }
-  
-  .operational-excellence-values__title,
-  .operational-excellence-features__title,
-  .operational-excellence-approach__title,
-  .operational-excellence-cta__title {
-    font-size: 24px;
-  }
-  
-  .operational-excellence-values__subtitle,
-  .operational-excellence-features__subtitle {
-    font-size: 14px;
-  }
-  
-  .operational-excellence-cta__description {
-    font-size: 16px;
-  }
-  
-  .operational-excellence-cta__button {
-    padding: 14px 28px;
-    font-size: 14px;
-  }
-  
-  .operational-excellence-value-card__icon,
-  .operational-excellence-feature-card__icon {
-    margin-bottom: 16px;
-  }
-  
-  .operational-excellence-value-card__title,
-  .operational-excellence-feature-card__title {
-    font-size: 18px;
-  }
-  
-  .operational-excellence-value-card__description,
-  .operational-excellence-feature-card__description {
-    font-size: 13px;
-  }
-}
 .who-we-are__content {
   max-width: 1000px;
   margin: 0 auto;

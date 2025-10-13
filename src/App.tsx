@@ -16,12 +16,18 @@ import { Footer } from './sections/Footer';
 import Marketplace from './pages/Marketplace';
 import SolutionImplementation from './pages/SolutionImplementation';
 import OperationalExcellence from './pages/OperationalExcellence';
+import SimplifiedManagement from './pages/SimplifiedManagement';
+import SecurityComplianceMetrics from './pages/SecurityComplianceMetrics';
+import Assessment from './pages/Assessment';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
   const isMarketplace = window.location.pathname === '/marketplace';
   const isSolutionImplementation = window.location.pathname === '/solution-implementation';
   const isOperationalExcellence = window.location.pathname === '/operational-excellence';
+  const isSimplifiedManagement = window.location.pathname === '/simplified-management';
+  const isSecurityComplianceMetrics = window.location.pathname === '/security-compliance-metrics';
+  const isAssessment = window.location.pathname === '/assessment';
   
   if (isMarketplace) {
     return <Marketplace />;
@@ -33,6 +39,18 @@ export function App(): React.ReactElement {
   
   if (isOperationalExcellence) {
     return <OperationalExcellence />;
+  }
+  
+  if (isSimplifiedManagement) {
+    return <SimplifiedManagement />;
+  }
+  
+  if (isSecurityComplianceMetrics) {
+    return <SecurityComplianceMetrics />;
+  }
+  
+  if (isAssessment) {
+    return <Assessment />;
   }
   
   // Default homepage (original structure)
