@@ -8,18 +8,18 @@ const RESOURCES = [
     category: 'SKYSECURE DECODE',
     title: 'Daily Threat Brief: Ransomware Evolution',
     description: 'Latest analysis on emerging ransomware tactics and defensive strategies for enterprise environments.',
-    imageName: 'cover-adaptive-compliance.png',
+    imageName: 'homepage/cover-adaptive-compliance.png',
     duration: '3:42',
     author: 'Security Team',
     date: 'Today',
-    authorImage: 'secteam.png',
+    authorImage: 'homepage/secteam.png',
   },
   {
     type: 'whitepaper',
     category: 'WHITEPAPER',
     title: 'AI-Driven Threat Detection: 2024 Report',
     description: 'Comprehensive analysis of machine learning applications in cybersecurity and their effectiveness against modern threats.',
-    imageName: 'cover-zero-trust.png',
+    imageName: 'homepage/cover-zero-trust.png',
     action: 'Download PDF',
     pages: '24 pages',
     isNew: true,
@@ -29,37 +29,37 @@ const RESOURCES = [
     category: 'CASE STUDY',
     title: 'Fortune 500 Zero Trust Implementation',
     description: 'How we helped a global corporation implement zero trust architecture across 50,000 endpoints in 90 days.',
-    imageName: 'cover-threat-hunting.png',
+    imageName: 'homepage/cover-threat-hunting.png',
     action: 'Read Case Study→',
     readTime: '8 min read',
   },
   {
     type: 'blog',
     category: 'BLOG POST',
-    title: 'The Future of Cloud Security',
-    description: 'Exploring emerging trends in cloud security architecture and the role of AI in protecting distributed workloads.',
-    imageName: 'cover-future-of-sec.png',
-    author: 'Sarah Chen',
+    title: 'A Guide to IT Security Transformation in Manufacturing',
+    description: 'Growth driven by Make in India initiative has accelerated the adoption of advanced technologies across manufacturing facilities.',
+    imageName: 'homepage/cover-future-of-sec.png',
+    author: 'Suresh Kumar',
     date: '2 days ago',
-    authorImage: 'sarahchen.png',
+    authorImage: 'homepage/portrait1.png',
   },
   {
     type: 'video',
     category: 'SKYSECURE DECODE',
     title: 'Weekly Cyber Intelligence Update',
     description: 'Comprehensive roundup of global cyber threats, vulnerabilities, and security recommendations.',
-    imageName: 'cover-adaptive-compliance.png',
+    imageName: 'homepage/cover-adaptive-compliance.png',
     duration: '2:15',
     author: 'Intel Team',
     date: '3 days ago',
-    authorImage: 'intelteam.png',
+    authorImage: 'homepage/intelteam.png',
   },
   {
     type: 'guide',
     category: 'GUIDE',
     title: 'SOC 2 Compliance Checklist',
     description: 'Step-by-step guide to achieving SOC 2 compliance with practical implementation strategies and timelines.',
-    imageName: 'cover-soc2.png',
+    imageName: 'homepage/cover-soc2.png',
     action: 'Download Guide',
     price: 'Free',
   },
@@ -106,7 +106,12 @@ export function Resources(): React.ReactElement {
         {/* Resource Grid */}
         <div className="resource-grid">
           {filteredResources.map((resource) => (
-            <article key={resource.title} className="resource-card">
+            <article 
+              key={resource.title} 
+              className="resource-card"
+              onClick={resource.type === 'blog' && resource.title === 'A Guide to IT Security Transformation in Manufacturing' ? () => { window.location.href = '/manufacturing-security-guide'; } : undefined}
+              style={{ cursor: resource.type === 'blog' && resource.title === 'A Guide to IT Security Transformation in Manufacturing' ? 'pointer' : 'default' }}
+            >
               <div className="resource-card__media">
                 <ImagePlaceholder
                   label={`${resource.title} cover`}

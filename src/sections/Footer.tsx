@@ -28,10 +28,10 @@ const FOOTER_LINKS = {
 };
 
 const CERTIFICATIONS = [
-  { name: 'SOC 2 Type II', imageName: 'cert-soc2.png' },
-  { name: 'ISO 27001', imageName: 'cert-iso27001.png' },
-  { name: 'GDPR Compliant', imageName: 'cert-gdpr.png' },
-  { name: 'Microsoft Partner', imageName: 'cert-microsoft.png' }
+  { name: 'SOC 2 Type II', imageName: 'footer/cert-soc2.png' },
+  { name: 'ISO 27001', imageName: 'footer/cert-iso27001.png' },
+  { name: 'GDPR Compliant', imageName: 'footer/cert-gdpr.png' },
+  { name: 'Microsoft Partner', imageName: 'footer/cert-microsoft.png' }
 ];
 
 export function Footer(): React.ReactElement {
@@ -40,15 +40,15 @@ export function Footer(): React.ReactElement {
       <div className="container">
         <div className="footer__top">
           <div className="footer__brand">
-            <ImagePlaceholder label="SkySecure logo" imageName="logo-footer.png" width={180} height={56} borderRadius={0} />
+            <ImagePlaceholder label="Skysecure logo" imageName="footer/logo-footer.png" width={180} height={56} borderRadius={0} />
             <p className="footer__description">
               Leading the future of cybersecurity through AI innovation and global MSSP services.
             </p>
             <div className="footer__social">
-              <ImagePlaceholder label="LinkedIn" imageName="icon-linkedin.png" width={28} height={28} borderRadius={0} />
-              <ImagePlaceholder label="Twitter" imageName="icon-twitter.png" width={28} height={28} borderRadius={0} />
-              <ImagePlaceholder label="YouTube" imageName="icon-youtube.png" width={28} height={28} borderRadius={0} />
-              <ImagePlaceholder label="GitHub" imageName="icon-github.png" width={28} height={28} borderRadius={0} />
+              <ImagePlaceholder label="LinkedIn" imageName="homepage/icon-linkedin.png" width={28} height={28} borderRadius={0} />
+              <ImagePlaceholder label="Twitter" imageName="homepage/icon-twitter.png" width={28} height={28} borderRadius={0} />
+              <ImagePlaceholder label="YouTube" imageName="homepage/icon-youtube.png" width={28} height={28} borderRadius={0} />
+              <ImagePlaceholder label="GitHub" imageName="homepage/icon-github.png" width={28} height={28} borderRadius={0} />
             </div>
           </div>
           
@@ -56,13 +56,36 @@ export function Footer(): React.ReactElement {
             <div key={title} className="footer__column">
               <h3 className="footer__column-title">{title}</h3>
               <ul className="footer__links">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} className="footer__link">
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {links.map((link, index) => {
+                  // Link the first 6 Solutions items to their respective pages
+                  const isSolutionLink = title === 'Solutions' && index < 6;
+                  const getSolutionHref = (linkName: string) => {
+                    switch (linkName) {
+                      case '24/7 SOC Monitoring': return '/soc-monitoring';
+                      case 'Threat Hunting': return '/threat-hunting';
+                      case 'Zero Trust Architecture': return '/zero-trust-architecture';
+                      case 'Cloud Security': return '/cloud-security';
+                      case 'Security Training': return '/security-training';
+                      case 'Risk Assessment': return '/risk-assessment';
+                      default: return `#${linkName.toLowerCase().replace(/\s+/g, '-')}`;
+                    }
+                  };
+                  
+                  return (
+                    <li key={link}>
+                      <a 
+                        href={isSolutionLink ? getSolutionHref(link) : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="footer__link"
+                        onClick={isSolutionLink ? (e) => {
+                          e.preventDefault();
+                          window.location.href = getSolutionHref(link);
+                        } : undefined}
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

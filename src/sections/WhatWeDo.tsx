@@ -12,7 +12,7 @@ const CAPABILITIES = [
       'Simplified purchasing process',
       'Tailored to organizational needs'
     ],
-    imageName: 'icon-risk.png',
+    imageName: 'homepage/icon-risk.png',
   },
   {
     title: 'Solution Implementation',
@@ -23,7 +23,7 @@ const CAPABILITIES = [
       'Expert guidance during implementation',
       'Maximized efficiency'
     ],
-    imageName: 'icon-compliance.png',
+    imageName: 'homepage/icon-compliance.png',
   },
   {
     title: 'Operational Excellence',
@@ -34,7 +34,7 @@ const CAPABILITIES = [
       'Best practices for improvement',
       'Adaptable strategies'
     ],
-    imageName: 'icon-cloud.png',
+    imageName: 'homepage/icon-cloud.png',
   },
   {
     title: 'Simplified Management',
@@ -45,7 +45,7 @@ const CAPABILITIES = [
       'Real-time alerts',
       'Efficient IT resource management'
     ],
-    imageName: 'icon-intelligence.png',
+    imageName: 'homepage/icon-intelligence.png',
   },
   {
     title: 'Security & Compliance Metrics',
@@ -56,7 +56,7 @@ const CAPABILITIES = [
       'Compliance with industry standards',
       'Continuous monitoring'
     ],
-    imageName: 'icon-operations.png',
+    imageName: 'homepage/icon-operations.png',
   },
   {
     title: 'Assessment',
@@ -67,7 +67,7 @@ const CAPABILITIES = [
       'Identification of areas for improvement',
       'Clear, actionable recommendations for optimization'
     ],
-    imageName: 'icon-assess.png',
+    imageName: 'homepage/icon-assess.png',
   },
 ];
 

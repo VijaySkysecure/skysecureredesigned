@@ -36,12 +36,15 @@ const NAV_ITEMS: NavLink[] = [
       { label: 'Switch to Global', href: '#region-global' },
       { label: 'Switch to APAC', href: '#region-apac' },
     ],
-    flagImageName: 'flag-india.png',
+    flagImageName: 'header/flag-india.png',
   },
 ];
 
 export function Header(): React.ReactElement {
   const [openMenu, setOpenMenu] = React.useState<string | null>(null);
+  
+  // Check if we're on the homepage
+  const isHomepage = window.location.pathname === '/' || window.location.pathname === '';
 
   const openMenuFor = (label: string): void => {
     setOpenMenu(label);
@@ -74,8 +77,8 @@ export function Header(): React.ReactElement {
     <header className="site-header">
       <div className="header__bar">
         <ImagePlaceholder
-          label="SkySecure logo"
-          imageName="logo-header.png"
+          label="Skysecure logo"
+          imageName="header/logo-header.png"
           width={146}
           height={43}
           borderRadius={0}
@@ -134,7 +137,7 @@ export function Header(): React.ReactElement {
                     </>
                   ) : (
                     <a 
-                      className="header__link" 
+                      className={`header__link${item.label === 'Home' && isHomepage ? ' header__link--active' : ''}`}
                       href={item.href}
                       onClick={(e) => {
                         if (item.href?.startsWith('/')) {

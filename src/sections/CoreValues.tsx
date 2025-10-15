@@ -6,17 +6,17 @@ const VALUES = [
   {
     title: 'Innovation First',
     text: 'We continuously push the boundaries of what\'s possible in cybersecurity through cutting-edge AI and machine learning technologies',
-    imageName: 'icon-client.png',
+    imageName: 'homepage/icon-client.png',
   },
   {
     title: 'Trust & Transparency',
     text: 'Building lasting partnerships through honest communication, reliable service delivery, and unwavering commitment to our clients\' success.',
-    imageName: 'icon-integrity.png',
+    imageName: 'homepage/icon-integrity.png',
   },
   {
     title: 'Global Impact',
     text: 'Dedicated to making the digital world safer for everyone through scalable security solutions and knowledge sharing.',
-    imageName: 'icon-innovation.png',
+    imageName: 'homepage/icon-innovation.png',
   },
 ];
 

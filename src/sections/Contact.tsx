@@ -43,7 +43,7 @@ export function Contact(): React.ReactElement {
                   <div className="contact-icon">
                     <ImagePlaceholder
                       label="Phone icon"
-                      imageName="icon-phone.png"
+                      imageName="homepage/icon-phone.png"
                       width={28}
                       height={28}
                       borderRadius={0}
@@ -58,7 +58,7 @@ export function Contact(): React.ReactElement {
                   <div className="contact-icon">
                     <ImagePlaceholder
                       label="Email icon"
-                      imageName="icon-email.png"
+                      imageName="homepage/icon-email.png"
                       width={28}
                       height={28}
                       borderRadius={0}
@@ -73,7 +73,7 @@ export function Contact(): React.ReactElement {
                   <div className="contact-icon">
                     <ImagePlaceholder
                       label="Clock icon"
-                      imageName="icon-clock.png"
+                      imageName="homepage/icon-clock.png"
                       width={28}
                       height={28}
                       borderRadius={0}
@@ -96,7 +96,7 @@ export function Contact(): React.ReactElement {
                       <div className="office-icon">
                         <ImagePlaceholder
                           label="Location icon"
-                          imageName="icon-location.png"
+                          imageName="homepage/icon-location.png"
                           width={10}
                           height={17}
                           borderRadius={0}
@@ -121,7 +121,7 @@ export function Contact(): React.ReactElement {
                     <input 
                       id="firstName" 
                       name="firstName" 
-                      placeholder="John"
+                      placeholder="Michael"
                       className="form-input"
                     />
                   </div>
@@ -130,7 +130,7 @@ export function Contact(): React.ReactElement {
                     <input 
                       id="lastName" 
                       name="lastName" 
-                      placeholder="Doe"
+                      placeholder="Scott"
                       className="form-input"
                     />
                   </div>
@@ -142,7 +142,7 @@ export function Contact(): React.ReactElement {
                     id="email" 
                     type="email" 
                     name="email" 
-                    placeholder="john@company.com"
+                    placeholder="scott@company.com"
                     className="form-input"
                   />
                 </div>

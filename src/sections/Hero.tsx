@@ -31,7 +31,7 @@ export function Hero(): React.ReactElement {
         <div>
           <ImagePlaceholder
             label="Hero illustration"
-            imageName="hero-visual.png"
+            imageName="homepage/hero-visual.png"
             width={450}
             height={450}
             shape="circle"

@@ -12,7 +12,7 @@ const SOLUTIONS = [
       'Incident response automation',
       'Compliance reporting'
     ],
-    imageName: 'icon-identity.png',
+    imageName: 'homepage/icon-identity.png',
   },
   {
     title: 'Threat Hunting',
@@ -23,7 +23,7 @@ const SOLUTIONS = [
       'Behavioral analytics',
       'Custom threat intelligence'
     ],
-    imageName: 'icon-data.png',
+    imageName: 'homepage/icon-data.png',
   },
   {
     title: 'Zero Trust Architecture',
@@ -34,7 +34,7 @@ const SOLUTIONS = [
       'Network segmentation',
       'Policy enforcement'
     ],
-    imageName: 'icon-application.png',
+    imageName: 'homepage/icon-application.png',
   },
   {
     title: 'Cloud Security',
@@ -45,7 +45,7 @@ const SOLUTIONS = [
       'Configuration management',
       'Automated remediation'
     ],
-    imageName: 'icon-ot.png',
+    imageName: 'homepage/icon-ot.png',
   },
   {
     title: 'Security Training',
@@ -56,7 +56,7 @@ const SOLUTIONS = [
       'Interactive modules',
       'Progress tracking'
     ],
-    imageName: 'icon-graduation.png',
+    imageName: 'homepage/icon-graduation.png',
   },
   {
     title: 'Risk Assessment',
@@ -67,7 +67,7 @@ const SOLUTIONS = [
       'Penetration testing',
       'Risk prioritization'
     ],
-    imageName: 'icon-continuity.png',
+    imageName: 'homepage/icon-continuity.png',
   },
 ];
 
@@ -106,7 +106,11 @@ export function SecuritySolutions(): React.ReactElement {
                     </li>
                   ))}
                 </ul>
-                <a className="what-we-do-card__link" href="#contact">
+                <a 
+                  className="what-we-do-card__link" 
+                  href={solution.title === '24/7 SOC Monitoring' ? '/soc-monitoring' : solution.title === 'Threat Hunting' ? '/threat-hunting' : solution.title === 'Zero Trust Architecture' ? '/zero-trust-architecture' : solution.title === 'Cloud Security' ? '/cloud-security' : solution.title === 'Security Training' ? '/security-training' : solution.title === 'Risk Assessment' ? '/risk-assessment' : '#contact'}
+                  onClick={solution.title === '24/7 SOC Monitoring' ? () => { window.location.href = '/soc-monitoring'; } : solution.title === 'Threat Hunting' ? () => { window.location.href = '/threat-hunting'; } : solution.title === 'Zero Trust Architecture' ? () => { window.location.href = '/zero-trust-architecture'; } : solution.title === 'Cloud Security' ? () => { window.location.href = '/cloud-security'; } : solution.title === 'Security Training' ? () => { window.location.href = '/security-training'; } : solution.title === 'Risk Assessment' ? () => { window.location.href = '/risk-assessment'; } : undefined}
+                >
                   Learn More →
                 </a>
               </div>

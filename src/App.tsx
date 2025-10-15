@@ -19,6 +19,13 @@ import OperationalExcellence from './pages/OperationalExcellence';
 import SimplifiedManagement from './pages/SimplifiedManagement';
 import SecurityComplianceMetrics from './pages/SecurityComplianceMetrics';
 import Assessment from './pages/Assessment';
+import { SOCMonitoring } from './pages/SOCMonitoring';
+import { ThreatHunting } from './pages/ThreatHunting';
+import { ZeroTrustArchitecture } from './pages/ZeroTrustArchitecture';
+import { CloudSecurity } from './pages/CloudSecurity';
+import { SecurityTraining } from './pages/SecurityTraining';
+import { RiskAssessment } from './pages/RiskAssessment';
+import { ManufacturingSecurityGuide } from './knowledge/ManufacturingSecurityGuide';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
@@ -28,6 +35,13 @@ export function App(): React.ReactElement {
   const isSimplifiedManagement = window.location.pathname === '/simplified-management';
   const isSecurityComplianceMetrics = window.location.pathname === '/security-compliance-metrics';
   const isAssessment = window.location.pathname === '/assessment';
+  const isSOCMonitoring = window.location.pathname === '/soc-monitoring';
+  const isThreatHunting = window.location.pathname === '/threat-hunting';
+  const isZeroTrustArchitecture = window.location.pathname === '/zero-trust-architecture';
+  const isCloudSecurity = window.location.pathname === '/cloud-security';
+  const isSecurityTraining = window.location.pathname === '/security-training';
+  const isRiskAssessment = window.location.pathname === '/risk-assessment';
+  const isManufacturingSecurityGuide = window.location.pathname === '/manufacturing-security-guide';
   
   if (isMarketplace) {
     return <Marketplace />;
@@ -51,6 +65,34 @@ export function App(): React.ReactElement {
   
   if (isAssessment) {
     return <Assessment />;
+  }
+  
+  if (isSOCMonitoring) {
+    return <SOCMonitoring />;
+  }
+  
+  if (isThreatHunting) {
+    return <ThreatHunting />;
+  }
+  
+  if (isZeroTrustArchitecture) {
+    return <ZeroTrustArchitecture />;
+  }
+  
+  if (isCloudSecurity) {
+    return <CloudSecurity />;
+  }
+  
+  if (isSecurityTraining) {
+    return <SecurityTraining />;
+  }
+  
+  if (isRiskAssessment) {
+    return <RiskAssessment />;
+  }
+  
+  if (isManufacturingSecurityGuide) {
+    return <ManufacturingSecurityGuide />;
   }
   
   // Default homepage (original structure)

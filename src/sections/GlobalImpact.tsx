@@ -8,21 +8,21 @@ const SUCCESS_STORIES = [
     description: 'Reduced security incidents by 94% and achieved SOC 2 compliance in 6 months for a Fortune 500 financial institution.',
     metric: '94%',
     metricLabel: 'Incident Reduction',
-    imageName: 'icon-client.png',
+    imageName: 'homepage/icon-response.png',
   },
   {
     title: 'Healthcare Network',
     description: 'Protected patient data across 15 hospitals while maintaining HIPAA compliance and zero downtime during implementation.',
     metric: '100%',
     metricLabel: 'Uptime Maintained',
-    imageName: 'icon-client.png',
+    imageName: 'homepage/icon-regulatory.png',
   },
   {
     title: 'E-commerce Platform',
     description: 'Prevented $2.4M in potential losses from cyber attacks during peak shopping season with real-time threat detection.',
     metric: '$2.4M',
     metricLabel: 'Losses Prevented',
-    imageName: 'icon-client.png',
+    imageName: 'homepage/icon-trust.png',
   },
 ];
 

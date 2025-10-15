@@ -6,12 +6,12 @@ const LEADERS = [
   {
     name: 'Suresh Kumar',
     role: (<>Co-Founder & Chief Executive Officer<br />EX-MICROSOFT</>),
-    imageName: 'portrait1.png',
+    imageName: 'homepage/portrait1.png',
   },
   {
     name: 'Nithin Ramegowda',
     role: (<>Co-Founder & Chief Of Business Strategy<br />EX-MICROSOFT</>),
-    imageName: 'portrait2.png',
+    imageName: 'homepage/portrait2.png',
   },
 ];
 

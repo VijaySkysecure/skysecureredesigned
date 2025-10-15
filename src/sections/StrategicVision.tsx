@@ -11,7 +11,7 @@ const VISION_CARDS = [
       'Predictive analytics',
       'Behavioral analysis'
     ],
-    imageName: 'icon-assess.png',
+    imageName: 'homepage/icon-assess.png',
   },
   {
     title: 'Advanced Cybersecurity',
@@ -21,7 +21,7 @@ const VISION_CARDS = [
       'Automated incident response',
       'Continuous monitoring'
     ],
-    imageName: 'icon-automate.png',
+    imageName: 'homepage/icon-automate.png',
   },
   {
     title: 'AI Innovation',
@@ -31,7 +31,7 @@ const VISION_CARDS = [
       'Natural language processing',
       'Autonomous threat hunting'
     ],
-    imageName: 'icon-assure.png',
+    imageName: 'homepage/icon-assure.png',
   },
 ];
 

@@ -39,12 +39,12 @@ export function Partnerships(): React.ReactElement {
             <div className="microsoft-partner-card">
               <ImagePlaceholder
                 label="Microsoft logo"
-                imageName="logo-microsoft.png"
-                width={80}
-                height={80}
+                imageName="homepage/logo-microsoft.png"
+                width={370}
+                height={90}
                 borderRadius={0}
               />
-              <div className="partner-badge-text">Gold Partner</div>
+              <div className="partner-badge-text">Solutions Partner</div>
               <div className="partner-specialization">Security Specialization</div>
             </div>
           </div>
@@ -56,7 +56,7 @@ export function Partnerships(): React.ReactElement {
                 <div className="carousel-item">
                   <ImagePlaceholder
                     label="Technology ecosystem logos"
-                    imageName="tech-eco.png"
+                    imageName="homepage/tech-eco.png"
                     width={800}
                     height={120}
                     borderRadius={0}
@@ -65,7 +65,16 @@ export function Partnerships(): React.ReactElement {
                 <div className="carousel-item">
                   <ImagePlaceholder
                     label="Technology ecosystem logos"
-                    imageName="tech-eco.png"
+                    imageName="homepage/tech-eco.png"
+                    width={800}
+                    height={120}
+                    borderRadius={0}
+                  />
+                </div>
+                <div className="carousel-item">
+                  <ImagePlaceholder
+                    label="Technology ecosystem logos"
+                    imageName="homepage/tech-eco.png"
                     width={800}
                     height={120}
                     borderRadius={0}

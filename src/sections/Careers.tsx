@@ -26,22 +26,22 @@ const BENEFITS = [
   {
     title: 'Cutting-Edge Technology',
     description: 'Work with the latest AI and machine learning technologies to solve complex cybersecurity challenges.',
-    imageName: 'icon-rocket.png'
+    imageName: 'homepage/icon-rocket.png'
   },
   {
     title: 'Continuous Learning',
     description: '$5,000 annual learning budget, conference attendance, and access to industry certifications.',
-    imageName: 'icon-graduation.png'
+    imageName: 'homepage/icon-graduation.png'
   },
   {
     title: 'Comprehensive Benefits',
     description: 'Premium healthcare, unlimited PTO, equity participation, and flexible remote work options.',
-    imageName: 'icon-heart.png'
+    imageName: 'homepage/icon-heart.png'
   },
   {
     title: 'Global Impact',
     description: 'Protect organizations worldwide and contribute to making the internet a safer place for everyone.',
-    imageName: 'icon-globe.png'
+    imageName: 'homepage/icon-globe.png'
   }
 ];
 
