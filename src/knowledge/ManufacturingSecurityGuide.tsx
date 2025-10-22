@@ -5,13 +5,23 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 const MANUFACTURING_RISE = [
   {
-    icon: 'icon-arrow-up',
+    icon: 'icon-factory',
     title: 'Make in India',
     description: ''
   },
   {
     icon: 'icon-gear',
     title: 'Automation',
+    description: ''
+  },
+  {
+    icon: 'icon-map-pin',
+    title: 'India Growth',
+    description: ''
+  },
+  {
+    icon: 'icon-line-graph',
+    title: 'Investment',
     description: ''
   }
 ];
@@ -148,13 +158,13 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
         <section className="blog-breadcrumbs">
           <div className="container">
               <nav className="breadcrumbs">
-                <a href="/" className="breadcrumb-link">Home</a>
-                <span className="breadcrumb-separator">&gt;</span>
-                <a href="#knowledge-resources" className="breadcrumb-link">Knowledge & Resources</a>
-                <span className="breadcrumb-separator">&gt;</span>
-                <a href="#blog" className="breadcrumb-link">Blog</a>
-                <span className="breadcrumb-separator">&gt;</span>
-                <span className="breadcrumb-current">A Guide to IT Security Transformation in Manufacturing</span>
+                <a href="/" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>Home</a>
+                <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
+                <a href="/#knowledge-resources" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; setTimeout(() => { const element = document.getElementById('knowledge-resources'); if (element) element.scrollIntoView({ behavior: 'smooth' }); }, 100); }}>Knowledge & Resources</a>
+                <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
+                <a href="/#knowledge-resources" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; setTimeout(() => { const element = document.getElementById('knowledge-resources'); if (element) { element.scrollIntoView({ behavior: 'smooth' }); setTimeout(() => { const blogTab = element.querySelector('[data-tab="blog"]') as HTMLElement; if (blogTab) blogTab.click(); }, 500); } }, 100); }}>Blog</a>
+                <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
+                <span className="breadcrumb-current" style={{ color: '#000000' }}>A Guide to IT Security Transformation in Manufacturing</span>
               </nav>
           </div>
         </section>
@@ -168,8 +178,8 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                 <ImagePlaceholder
                   label="Calendar"
                   imageName="knowledge/icon-calendar.png"
-                  width={16}
-                  height={16}
+                  width={14}
+                  height={24}
                   borderRadius={0}
                 />
                 <span>July 08, 2023</span>
@@ -178,8 +188,8 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                 <ImagePlaceholder
                   label="Author"
                   imageName="knowledge/icon-person.png"
-                  width={16}
-                  height={16}
+                  width={14}
+                  height={24}
                   borderRadius={0}
                 />
                 <span>Suresh Kumar</span>
@@ -190,12 +200,12 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
 
         {/* Hero Visual */}
         <section className="blog-hero">
-          <div className="container">
+          <div className="container" style={{ textAlign: 'center' }}>
             <ImagePlaceholder
               label="Manufacturing Security Hero Visual"
               imageName="knowledge/manufacturing-hero-visual.png"
-              width={1200}
-              height={400}
+              width={800}
+              height={330}
               borderRadius={0}
             />
           </div>
@@ -206,7 +216,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
           <div className="container">
             <div className="blog-intro">
               <p>
-                India's manufacturing industry is undergoing a significant transformation, driven by technology adoption, government initiatives like "Make in India," and increasing global investments. As the sector embraces digitalization and integrates advanced systems like Industrial Internet of Things (IIoT), artificial intelligence (AI), and automation, the risk of cyberattacks has escalated dramatically. This comprehensive guide explores IT security transformation strategies specifically tailored for manufacturing organizations, focusing on protecting critical operations, sensitive data, and innovative processes.
+              The manufacturing industry in India is undergoing a massive transformation fueled by technology, government initiatives, and global investments. However, as the sector digitizes and integrates advanced systems, the risks of cyberattacks grow significantly. This guide explores how IT security transformation is essential for protecting operations, data, and innovation in the manufacturing sector.
               </p>
             </div>
 
@@ -220,8 +230,8 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                       <ImagePlaceholder
                         label={item.title}
                         imageName={`knowledge/${item.icon}.png`}
-                        width={60}
-                        height={60}
+                        width={33}
+                        height={38}
                         borderRadius={0}
                       />
                     </div>
@@ -230,29 +240,35 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                 ))}
               </div>
               <p className="blog-section-text">
-                The "Make in India" initiative has positioned India as a global manufacturing hub, attracting significant foreign direct investment and fostering innovation. The adoption of advanced technologies such as robotics, artificial intelligence, and IoT has led to increased efficiency, job creation, and substantial investment in the sector.
+              Growth driven by 'Make in India' initiative has accelerated the adoption of advanced technologies across manufacturing facilities. The integration of automation, robotics, AI, and IoT systems has brought unprecedented benefits including increased efficiency, job creation, and significant investment inflow.
               </p>
             </section>
 
             {/* The Cybersecurity Challenge */}
             <section className="blog-section">
               <h2 className="blog-section-title">The Cybersecurity Challenge</h2>
-              <ul className="challenge-list">
-                {CYBERSECURITY_CHALLENGES.map((challenge, index) => (
-                  <li key={index} className="challenge-item">
-                    <div className="challenge-icon">
-                      <ImagePlaceholder
-                        label="Question"
-                        imageName="knowledge/icon-question-red.png"
-                        width={20}
-                        height={20}
-                        borderRadius={0}
-                      />
-                    </div>
-                    <span>{challenge}</span>
-                  </li>
-                ))}
-              </ul>
+              <div style={{ background: 'linear-gradient(90deg, #FEF2F2 0%, #FEFCE8 100%)', padding: '32px', borderRadius: '12px', width: '1000px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                  <div style={{ width: '30px', height: '30px', backgroundColor: '#FEF2F2', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '12px' }}>
+                    <ImagePlaceholder
+                      label="Question"
+                      imageName="knowledge/icon-question-mark.png"
+                      width={30}
+                      height={36}
+                      borderRadius={0}
+                    />
+                  </div>
+                  <h3 style={{ margin: 0, fontSize: '20px', fontWeight: 'bold', color: '#000000' }}>Rising Digital Risks</h3>
+                </div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  {CYBERSECURITY_CHALLENGES.slice(1).map((challenge, index) => (
+                    <li key={index} style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '8px' }}>
+                      <div style={{ width: '8px', height: '8px', backgroundColor: '#DC2626', borderRadius: '50%', marginTop: '6px', marginRight: '12px', flexShrink: 0 }}></div>
+                      <span style={{ color: 'rgba(55, 65, 81, 1)' }}>{challenge}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </section>
 
             {/* Essential Cybersecurity Measures */}
@@ -265,8 +281,8 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                       <ImagePlaceholder
                         label={measure.title}
                         imageName={`knowledge/${measure.icon}.png`}
-                        width={50}
-                        height={50}
+                        width={measure.icon === 'icon-database' ? 22 : index === 2 ? 20 : index === 3 ? 30 : 40}
+                        height={measure.icon === 'icon-database' ? 30 : index === 2 ? 20 : index === 3 ? 30 : 40}
                         borderRadius={0}
                       />
                     </div>
@@ -280,20 +296,46 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             {/* Key Considerations for Cybersecurity Investment */}
             <section className="blog-section">
               <h2 className="blog-section-title">Key Considerations for Cybersecurity Investment</h2>
-              <ul className="consideration-list">
+              <ul className="consideration-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 {INVESTMENT_CONSIDERATIONS.map((consideration, index) => (
-                  <li key={index} className="consideration-item">
-                    <div className="consideration-icon">
+                  <li key={index} className="consideration-item" style={{ 
+                    backgroundColor: '#F3F4F6', 
+                    padding: '20px', 
+                    borderRadius: '8px', 
+                    marginBottom: '24px',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '16px',
+                    width: '850px',
+                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'
+                  }}>
+                    <div className="consideration-icon" style={{ flexShrink: 0, marginTop: '2px' }}>
                       <ImagePlaceholder
                         label={consideration.title}
                         imageName={`knowledge/${consideration.icon}.png`}
-                        width={20}
-                        height={20}
+                        width={24}
+                        height={24}
                         borderRadius={0}
                       />
                     </div>
-                    <div className="consideration-content">
-                      <strong>{consideration.title}</strong> - {consideration.description}
+                    <div className="consideration-content" style={{ flex: 1 }}>
+                      <h3 style={{ 
+                        margin: '0 0 8px 0', 
+                        fontSize: '16px', 
+                        fontWeight: 'bold', 
+                        color: '#000000',
+                        lineHeight: '1.2'
+                      }}>
+                        {consideration.title}
+                      </h3>
+                      <p style={{ 
+                        margin: 0, 
+                        fontSize: '14px', 
+                        color: '#374151',
+                        lineHeight: '1.4'
+                      }}>
+                        {consideration.description}
+                      </p>
                     </div>
                   </li>
                 ))}
@@ -310,8 +352,8 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                       <ImagePlaceholder
                         label={outcome.title}
                         imageName={`knowledge/${outcome.icon}.png`}
-                        width={50}
-                        height={50}
+                        width={['icon-lightbulb', 'icon-speech-bubble', 'icon-shield-question'].includes(outcome.icon) ? 36 : 50}
+                        height={['icon-lightbulb', 'icon-speech-bubble', 'icon-shield-question'].includes(outcome.icon) ? 44 : 50}
                         borderRadius={0}
                       />
                     </div>
@@ -323,32 +365,37 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             </section>
 
             {/* A Trusted Partner for IT Security Transformation */}
-            <section className="blog-section">
-              <h2 className="blog-section-title">A Trusted Partner for IT Security Transformation</h2>
-              <div className="partner-content">
-                <p>
-                  Skysecure stands as a trusted partner in your IT security transformation journey. With our comprehensive cybersecurity frameworks, deep industry expertise, and proven track record in manufacturing environments, we help organizations build resilient security postures that support innovation and growth. Our holistic approach combines advanced technology solutions with strategic guidance, ensuring that your manufacturing operations remain secure, compliant, and future-ready.
+            <section className="blog-section" style={{ background: 'linear-gradient(90deg, #EFF6FF 0%, rgba(10, 78, 255, 0.05) 100%)', padding: '32px', borderRadius: '12px', textAlign: 'center' }}>
+              <h2 className="blog-section-title" style={{ textAlign: 'center', marginBottom: '24px' }}>A Trusted Partner for IT Security Transformation</h2>
+              <div className="partner-content" style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto' }}>
+                <p style={{ marginBottom: '16px', fontSize: '16px', lineHeight: '1.6', color: '#374151' }}>
+                  Skysecure has been at the forefront of cybersecurity innovation, helping manufacturing organizations strengthen their IT security frameworks. Our proven approach combines strategy, technology, and expertise to secure your digital assets and operations.
                 </p>
-                <button className="cta-button">Contact Skysecure Today</button>
+                <p style={{ marginBottom: '24px', fontSize: '16px', lineHeight: '1.6', color: '#374151' }}>
+                  Partner with us to accelerate your IT security transformation journey and achieve sustainable growth.
+                </p>
+                <div style={{ textAlign: 'center' }}>
+                  <button className="cta-button" style={{ backgroundColor: '#0066CC', color: 'white', padding: '12px 24px', borderRadius: '6px', border: 'none', fontSize: '16px', fontWeight: '500', fontFamily: 'Inter', cursor: 'pointer' }}>Contact Skysecure Today</button>
+                </div>
               </div>
             </section>
 
             {/* Author Bio */}
-            <section className="author-bio">
-              <div className="author-bio__image">
+            <section className="author-bio" style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginTop: '100px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '50px 50px' }}>
+              <div className="author-bio__image" style={{ flexShrink: 0 }}>
                 <ImagePlaceholder
                   label="Suresh Kumar"
-                  imageName="knowledge/suresh-kumar-profile.png"
+                  imageName="homepage/portrait1.png"
                   width={80}
                   height={80}
                   borderRadius={40}
                 />
               </div>
-              <div className="author-bio__content">
-                <h3 className="author-name">Suresh Kumar</h3>
-                <p className="author-title">Co-Founder & Chief Executive Officer, Skysecure</p>
-                <p className="author-description">
-                  Suresh Kumar is a seasoned cybersecurity expert with over 15 years of experience in industrial cybersecurity and risk management. He specializes in helping manufacturing organizations implement comprehensive security frameworks that protect critical infrastructure while enabling digital transformation.
+              <div className="author-bio__content" style={{ flex: 1 }}>
+                <h3 className="author-name" style={{ fontSize: '18px', fontWeight: 'bold', color: '#000000', margin: '0 0 4px 0' }}>Suresh Kumar</h3>
+                <p className="author-title" style={{ fontSize: '14px', color: '#0066CC', margin: '0 0 8px 0' }}>Co-Founder & Chief Executive Officer, Skysecure</p>
+                <p className="author-description" style={{ fontSize: '14px', color: '#374151', lineHeight: '1.5', margin: 0 }}>
+                Expert in industrial cybersecurity with over 10 years of experience helping manufacturing organizations secure their digital transformation initiatives.
                 </p>
               </div>
             </section>
@@ -363,7 +410,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                       <ImagePlaceholder
                         label={article.title}
                         imageName={`knowledge/${article.image}.png`}
-                        width={300}
+                        width={400}
                         height={200}
                         borderRadius={8}
                       />

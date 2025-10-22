@@ -27,8 +27,8 @@ const RESOURCES = [
   {
     type: 'case-study',
     category: 'CASE STUDY',
-    title: 'Fortune 500 Zero Trust Implementation',
-    description: 'How we helped a global corporation implement zero trust architecture across 50,000 endpoints in 90 days.',
+    title: 'Healthcare Cloud Security Overhaul',
+    description: 'Transforming healthcare data protection through comprehensive cloud security modernization and Zero Trust implementation.',
     imageName: 'homepage/cover-threat-hunting.png',
     action: 'Read Case Study→',
     readTime: '8 min read',
@@ -40,7 +40,27 @@ const RESOURCES = [
     description: 'Growth driven by Make in India initiative has accelerated the adoption of advanced technologies across manufacturing facilities.',
     imageName: 'homepage/cover-future-of-sec.png',
     author: 'Suresh Kumar',
-    date: '2 days ago',
+    date: '2 years ago',
+    authorImage: 'homepage/portrait1.png',
+  },
+  {
+    type: 'blog',
+    category: 'BLOG POST',
+    title: 'Threat Protection with Microsoft Azure Sentinel',
+    description: 'With the rise of cybersecurity threats, organizations need reliable and scalable solutions to detect and respond to attacks.',
+    imageName: 'homepage/cover-azure-sentinel.png',
+    author: 'Nithin Ramegowda',
+    date: 'July 08, 2023',
+    authorImage: 'homepage/nithin-ramegowda.png',
+  },
+  {
+    type: 'blog',
+    category: 'BLOG POST',
+    title: 'The Future of Cloud Security',
+    description: 'As organizations continue to migrate their operations to the cloud, the security landscape is evolving rapidly.',
+    imageName: 'homepage/cover-cloud-security.png',
+    author: 'Suresh Kumar',
+    date: 'July 26, 2024',
     authorImage: 'homepage/portrait1.png',
   },
   {
@@ -109,8 +129,18 @@ export function Resources(): React.ReactElement {
             <article 
               key={resource.title} 
               className="resource-card"
-              onClick={resource.type === 'blog' && resource.title === 'A Guide to IT Security Transformation in Manufacturing' ? () => { window.location.href = '/manufacturing-security-guide'; } : undefined}
-              style={{ cursor: resource.type === 'blog' && resource.title === 'A Guide to IT Security Transformation in Manufacturing' ? 'pointer' : 'default' }}
+              onClick={resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security') ? () => { 
+                if (resource.title === 'A Guide to IT Security Transformation in Manufacturing') {
+                  window.location.href = '/manufacturing-security-guide';
+                } else if (resource.title === 'Threat Protection with Microsoft Azure Sentinel') {
+                  window.location.href = '/azure-sentinel-guide';
+                } else if (resource.title === 'The Future of Cloud Security') {
+                  window.location.href = '/cloud-security-guide';
+                }
+              } : resource.type === 'case-study' && resource.title === 'Healthcare Cloud Security Overhaul' ? () => {
+                window.location.href = '/healthcare-cloud-security-overhaul';
+              } : undefined}
+              style={{ cursor: (resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security')) || (resource.type === 'case-study' && resource.title === 'Healthcare Cloud Security Overhaul') ? 'pointer' : 'default' }}
             >
               <div className="resource-card__media">
                 <ImagePlaceholder

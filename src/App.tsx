@@ -26,6 +26,9 @@ import { CloudSecurity } from './pages/CloudSecurity';
 import { SecurityTraining } from './pages/SecurityTraining';
 import { RiskAssessment } from './pages/RiskAssessment';
 import { ManufacturingSecurityGuide } from './knowledge/ManufacturingSecurityGuide';
+import { AzureSentinelGuide } from './knowledge/AzureSentinelGuide';
+import { CloudSecurityGuide } from './knowledge/CloudSecurityGuide';
+import { HealthcareCloudSecurityOverhaul } from './knowledge/HealthcareCloudSecurityOverhaul';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
@@ -42,6 +45,9 @@ export function App(): React.ReactElement {
   const isSecurityTraining = window.location.pathname === '/security-training';
   const isRiskAssessment = window.location.pathname === '/risk-assessment';
   const isManufacturingSecurityGuide = window.location.pathname === '/manufacturing-security-guide';
+  const isAzureSentinelGuide = window.location.pathname === '/azure-sentinel-guide';
+  const isCloudSecurityGuide = window.location.pathname === '/cloud-security-guide';
+  const isHealthcareCloudSecurityOverhaul = window.location.pathname === '/healthcare-cloud-security-overhaul';
   
   if (isMarketplace) {
     return <Marketplace />;
@@ -93,6 +99,18 @@ export function App(): React.ReactElement {
   
   if (isManufacturingSecurityGuide) {
     return <ManufacturingSecurityGuide />;
+  }
+  
+  if (isAzureSentinelGuide) {
+    return <AzureSentinelGuide />;
+  }
+  
+  if (isCloudSecurityGuide) {
+    return <CloudSecurityGuide />;
+  }
+  
+  if (isHealthcareCloudSecurityOverhaul) {
+    return <HealthcareCloudSecurityOverhaul />;
   }
   
   // Default homepage (original structure)
