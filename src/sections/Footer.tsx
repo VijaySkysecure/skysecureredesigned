@@ -102,7 +102,10 @@ export function Footer(): React.ReactElement {
               window.location.href = '/privacy-policy';
             }}>Privacy Policy</a>
             <a href="#terms-of-service" className="footer__legal-link">Terms of Service</a>
-            <a href="#cookie-policy" className="footer__legal-link">Cookie Policy</a>
+            <a href="/cookie-policy" className="footer__legal-link" onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/cookie-policy';
+            }}>Cookie Policy</a>
           </div>
         </div>
         
