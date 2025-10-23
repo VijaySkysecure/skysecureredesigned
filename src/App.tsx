@@ -30,6 +30,7 @@ import { AzureSentinelGuide } from './knowledge/AzureSentinelGuide';
 import { CloudSecurityGuide } from './knowledge/CloudSecurityGuide';
 import { HealthcareCloudSecurityOverhaul } from './knowledge/HealthcareCloudSecurityOverhaul';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { ContactPage } from './pages/ContactPage';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
@@ -50,6 +51,7 @@ export function App(): React.ReactElement {
   const isCloudSecurityGuide = window.location.pathname === '/cloud-security-guide';
   const isHealthcareCloudSecurityOverhaul = window.location.pathname === '/healthcare-cloud-security-overhaul';
   const isPrivacyPolicy = window.location.pathname === '/privacy-policy';
+  const isContactPage = window.location.pathname === '/contact';
   
   if (isMarketplace) {
     return <Marketplace />;
@@ -117,6 +119,10 @@ export function App(): React.ReactElement {
   
   if (isPrivacyPolicy) {
     return <PrivacyPolicy />;
+  }
+  
+  if (isContactPage) {
+    return <ContactPage />;
   }
   
   // Default homepage (original structure)

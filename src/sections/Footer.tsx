@@ -59,6 +59,7 @@ export function Footer(): React.ReactElement {
                 {links.map((link, index) => {
                   // Link the first 6 Solutions items to their respective pages
                   const isSolutionLink = title === 'Solutions' && index < 6;
+                  const isContactLink = title === 'Company' && link === 'Contact';
                   const getSolutionHref = (linkName: string) => {
                     switch (linkName) {
                       case '24/7 SOC Monitoring': return '/soc-monitoring';
@@ -74,11 +75,11 @@ export function Footer(): React.ReactElement {
                   return (
                     <li key={link}>
                       <a 
-                        href={isSolutionLink ? getSolutionHref(link) : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={isSolutionLink ? getSolutionHref(link) : isContactLink ? '/contact' : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
                         className="footer__link"
-                        onClick={isSolutionLink ? (e) => {
+                        onClick={(isSolutionLink || isContactLink) ? (e) => {
                           e.preventDefault();
-                          window.location.href = getSolutionHref(link);
+                          window.location.href = isSolutionLink ? getSolutionHref(link) : '/contact';
                         } : undefined}
                       >
                         {link}
