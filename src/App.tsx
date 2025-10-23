@@ -30,6 +30,7 @@ import { AzureSentinelGuide } from './knowledge/AzureSentinelGuide';
 import { CloudSecurityGuide } from './knowledge/CloudSecurityGuide';
 import { HealthcareCloudSecurityOverhaul } from './knowledge/HealthcareCloudSecurityOverhaul';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsOfService } from './pages/TermsOfService';
 import { CookiePolicy } from './pages/CookiePolicy';
 import { ContactPage } from './pages/ContactPage';
 
@@ -52,6 +53,7 @@ export function App(): React.ReactElement {
   const isCloudSecurityGuide = window.location.pathname === '/cloud-security-guide';
   const isHealthcareCloudSecurityOverhaul = window.location.pathname === '/healthcare-cloud-security-overhaul';
   const isPrivacyPolicy = window.location.pathname === '/privacy-policy';
+  const isTermsOfService = window.location.pathname === '/terms-of-service';
   const isCookiePolicy = window.location.pathname === '/cookie-policy';
   const isContactPage = window.location.pathname === '/contact';
   
@@ -121,6 +123,10 @@ export function App(): React.ReactElement {
   
   if (isPrivacyPolicy) {
     return <PrivacyPolicy />;
+  }
+  
+  if (isTermsOfService) {
+    return <TermsOfService />;
   }
   
   if (isCookiePolicy) {
