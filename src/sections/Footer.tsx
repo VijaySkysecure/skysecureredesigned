@@ -60,6 +60,7 @@ export function Footer(): React.ReactElement {
                   // Link the first 6 Solutions items to their respective pages
                   const isSolutionLink = title === 'Solutions' && index < 6;
                   const isContactLink = title === 'Company' && link === 'Contact';
+                  const isCareersLink = title === 'Company' && link === 'Careers';
                   const getSolutionHref = (linkName: string) => {
                     switch (linkName) {
                       case '24/7 SOC Monitoring': return '/soc-monitoring';
@@ -75,8 +76,15 @@ export function Footer(): React.ReactElement {
                   return (
                     <li key={link}>
                       <a 
-                        href={isSolutionLink ? getSolutionHref(link) : isContactLink ? '/contact' : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={
+                          isSolutionLink ? getSolutionHref(link) : 
+                          isContactLink ? '/contact' : 
+                          isCareersLink ? 'https://skysecure.zohorecruit.in/jobs/Careers' :
+                          `#${link.toLowerCase().replace(/\s+/g, '-')}`
+                        }
                         className="footer__link"
+                        target={isCareersLink ? '_blank' : undefined}
+                        rel={isCareersLink ? 'noopener noreferrer' : undefined}
                         onClick={(isSolutionLink || isContactLink) ? (e) => {
                           e.preventDefault();
                           window.location.href = isSolutionLink ? getSolutionHref(link) : '/contact';
