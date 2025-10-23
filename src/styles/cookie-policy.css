@@ -10,7 +10,7 @@
 }
 
 .cookie-policy-content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 40px;
   overflow-x: hidden;
@@ -175,6 +175,7 @@
 
 .cookie-contact-btn:hover {
   background-color: #0066cc;
+  color: #ffffff;
 }
 
 /* Company Info Styles */
