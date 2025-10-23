@@ -96,7 +96,10 @@ export function Footer(): React.ReactElement {
         <div className="footer__bottom">
           <span className="footer__copyright">© 2025 Skysecure. All rights reserved.</span>
           <div className="footer__legal">
-            <a href="#privacy-policy" className="footer__legal-link">Privacy Policy</a>
+            <a href="/privacy-policy" className="footer__legal-link" onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/privacy-policy';
+            }}>Privacy Policy</a>
             <a href="#terms-of-service" className="footer__legal-link">Terms of Service</a>
             <a href="#cookie-policy" className="footer__legal-link">Cookie Policy</a>
           </div>
