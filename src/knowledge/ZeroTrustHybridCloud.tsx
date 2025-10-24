@@ -165,10 +165,10 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
 
         {/* Hero Section */}
         <section className="blog-hero" style={{ padding: '80px 0', marginBottom: '0px', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
-          <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="container" style={{ maxWidth: '1300px', margin: '0 auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
               {/* Left Content */}
-              <div style={{ flex: 1, maxWidth: '600px' }}>
+              <div style={{ flex: 1, maxWidth: '720px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
                   <span style={{ backgroundColor: '#3B82F6', color: '#FFFFFF', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: '500' }}>White Paper</span>
                   <span style={{ color: '#6B7280', fontSize: '14px' }}>• July 2024 • Skysecure Research Team</span>
@@ -200,13 +200,13 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                 </div>
               </div>
               {/* Right Visual */}
-              <div style={{ flex: 1, textAlign: 'center', maxWidth: '500px' }}>
+              <div style={{ flex: 1, textAlign: 'center', maxWidth: '580px' }}>
                 <ImagePlaceholder
                   label="Zero Trust Hero Visual"
-                  imageName="knowledge/zero-trust-hero-visual.png"
-                  width={500}
-                  height={400}
-                  borderRadius={12}
+                  imageName="knowledge/zero-trust-visual.png"
+                  width={580}
+                  height={320}
+                  borderRadius={0}
                 />
               </div>
             </div>
@@ -531,7 +531,6 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                 <p style={{ 
                   fontSize: '18px', 
                   color: '#FFFFFF', 
-                  margin: '0 0 40px 0', 
                   lineHeight: '1.6',
                   opacity: 0.9,
                   maxWidth: '800px',
