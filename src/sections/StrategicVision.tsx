@@ -41,7 +41,7 @@ export function StrategicVision(): React.ReactElement {
       <div className="container">
         <SectionHeader
           title="Our Strategic Vision"
-          description="Three foundational pillars driving the future of cybersecurity through AI innovation"
+          description="To build the world’s most intelligent and secure managed services ecosystem, where AI, data, and automation work together to protect, govern, and scale every enterprise with trust and precision."
         />
         <div className="card-grid">
           {VISION_CARDS.map((card) => (

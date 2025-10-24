@@ -12,7 +12,7 @@ export function Hero(): React.ReactElement {
             <span style={{ color: 'rgba(75, 85, 99, 1)' }}>Business Excellence</span><br />
           </h1>
           <p className="hero__description">
-          Delivering end-to-end solutions that optimize business operations and drive sustained growth. Ensuring robust data governance and seamless compliance with India’s Digital Personal Data Protection (DPDP) Act, 2023.
+          Empowering enterprises with an intelligent, unified MSP framework that automates operations, strengthens cyber resilience, and ensures data-driven growth, all within a secure cloud ecosystem.
           </p>
           <div className="hero__cta">
             <button 
@@ -22,6 +22,9 @@ export function Hero(): React.ReactElement {
                 width: '163px', 
                 height: '52px', 
                 borderRadius: '8px' 
+              }}
+              onClick={() => {
+                window.location.href = '/dpdp-act-2023';
               }}
             >
               Learn More

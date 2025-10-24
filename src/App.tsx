@@ -29,6 +29,10 @@ import { ManufacturingSecurityGuide } from './knowledge/ManufacturingSecurityGui
 import { AzureSentinelGuide } from './knowledge/AzureSentinelGuide';
 import { CloudSecurityGuide } from './knowledge/CloudSecurityGuide';
 import { HealthcareCloudSecurityOverhaul } from './knowledge/HealthcareCloudSecurityOverhaul';
+import { SaaSSoftwareSupplyChain } from './knowledge/SaaSSoftwareSupplyChain';
+import { AIThreatDetectionReport } from './knowledge/AIThreatDetectionReport';
+import { ZeroTrustHybridCloud } from './knowledge/ZeroTrustHybridCloud';
+import { DPDPAct2023 } from './pages/DPDPAct2023';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
@@ -48,6 +52,10 @@ export function App(): React.ReactElement {
   const isAzureSentinelGuide = window.location.pathname === '/azure-sentinel-guide';
   const isCloudSecurityGuide = window.location.pathname === '/cloud-security-guide';
   const isHealthcareCloudSecurityOverhaul = window.location.pathname === '/healthcare-cloud-security-overhaul';
+  const isSaaSSoftwareSupplyChain = window.location.pathname === '/saas-software-supply-chain';
+  const isAIThreatDetectionReport = window.location.pathname === '/ai-threat-detection-report';
+  const isZeroTrustHybridCloud = window.location.pathname === '/zero-trust-hybrid-cloud';
+  const isDPDPAct2023 = window.location.pathname === '/dpdp-act-2023';
   
   if (isMarketplace) {
     return <Marketplace />;
@@ -111,6 +119,22 @@ export function App(): React.ReactElement {
   
   if (isHealthcareCloudSecurityOverhaul) {
     return <HealthcareCloudSecurityOverhaul />;
+  }
+  
+  if (isSaaSSoftwareSupplyChain) {
+    return <SaaSSoftwareSupplyChain />;
+  }
+  
+  if (isAIThreatDetectionReport) {
+    return <AIThreatDetectionReport />;
+  }
+  
+  if (isZeroTrustHybridCloud) {
+    return <ZeroTrustHybridCloud />;
+  }
+  
+  if (isDPDPAct2023) {
+    return <DPDPAct2023 />;
   }
   
   // Default homepage (original structure)

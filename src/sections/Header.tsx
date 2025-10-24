@@ -9,8 +9,15 @@ type NavLink = {
 };
 
 const NAV_ITEMS: NavLink[] = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '#about' },
+  {
+    label: 'Company',
+    href: '#company',
+    menu: [
+      { label: 'About', href: '#about' },
+      { label: 'Contact Us', href: '#contact' },
+      { label: 'India', href: '#india' },
+    ],
+  },
   {
     label: 'Services',
     href: '#services',
@@ -20,31 +27,18 @@ const NAV_ITEMS: NavLink[] = [
     ],
   },
   {
-    label: 'Resource',
-    href: '#insights',
+    label: 'Product',
+    href: '#product',
     menu: [
-      { label: 'Insights Hub', href: '#resource-insights' },
-      { label: 'Media Library', href: '#resource-media' },
+      { label: 'Marketplace', href: '/marketplace' },
+      { label: 'Realize', href: '#realize' },
     ],
-  },
-  { label: 'Product', href: '#product' },
-  { label: 'Contact Us', href: '#contact' },
-  {
-    label: 'India',
-    href: '#india',
-    menu: [
-      { label: 'Switch to Global', href: '#region-global' },
-      { label: 'Switch to APAC', href: '#region-apac' },
-    ],
-    flagImageName: 'header/flag-india.png',
   },
 ];
 
 export function Header(): React.ReactElement {
   const [openMenu, setOpenMenu] = React.useState<string | null>(null);
   
-  // Check if we're on the homepage
-  const isHomepage = window.location.pathname === '/' || window.location.pathname === '';
 
   const openMenuFor = (label: string): void => {
     setOpenMenu(label);
@@ -76,14 +70,20 @@ export function Header(): React.ReactElement {
   return (
     <header className="site-header">
       <div className="header__bar">
-        <ImagePlaceholder
-          label="Skysecure logo"
-          imageName="header/logo-header.png"
-          width={146}
-          height={43}
-          borderRadius={0}
-          className="header__logo image-placeholder--bare"
-        />
+        <a 
+          href="/" 
+          onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
+          style={{ textDecoration: 'none' }}
+        >
+          <ImagePlaceholder
+            label="Skysecure logo"
+            imageName="header/logo-header.png"
+            width={146}
+            height={43}
+            borderRadius={0}
+            className="header__logo image-placeholder--bare"
+          />
+        </a>
         <nav className="header__nav" aria-label="Primary navigation">
           <ul className="header__nav-list">
             {NAV_ITEMS.map((item) => {
@@ -137,7 +137,7 @@ export function Header(): React.ReactElement {
                     </>
                   ) : (
                     <a 
-                      className={`header__link${item.label === 'Home' && isHomepage ? ' header__link--active' : ''}`}
+                      className="header__link"
                       href={item.href}
                       onClick={(e) => {
                         if (item.href?.startsWith('/')) {

@@ -25,6 +25,16 @@ const RESOURCES = [
     isNew: true,
   },
   {
+    type: 'whitepaper',
+    category: 'WHITEPAPER',
+    title: 'Zero Trust in Hybrid Cloud Environments',
+    description: 'Comprehensive guide to implementing Zero Trust architecture across hybrid cloud environments for enhanced security and compliance.',
+    imageName: 'homepage/cover-zero-trust-hybrid.png',
+    action: 'Download PDF',
+    pages: '28 pages',
+    isNew: true,
+  },
+  {
     type: 'case-study',
     category: 'CASE STUDY',
     title: 'Healthcare Cloud Security Overhaul',
@@ -32,6 +42,15 @@ const RESOURCES = [
     imageName: 'homepage/cover-threat-hunting.png',
     action: 'Read Case Study→',
     readTime: '8 min read',
+  },
+  {
+    type: 'case-study',
+    category: 'CASE STUDY',
+    title: 'Securing the Software Supply Chain for a B2B SaaS',
+    description: 'Comprehensive software supply chain security implementation for B2B SaaS companies, protecting against vulnerabilities and ensuring compliance.',
+    imageName: 'homepage/cover-software-supply-chain.png',
+    action: 'Read Case Study→',
+    readTime: '6 min read',
   },
   {
     type: 'blog',
@@ -137,10 +156,20 @@ export function Resources(): React.ReactElement {
                 } else if (resource.title === 'The Future of Cloud Security') {
                   window.location.href = '/cloud-security-guide';
                 }
-              } : resource.type === 'case-study' && resource.title === 'Healthcare Cloud Security Overhaul' ? () => {
-                window.location.href = '/healthcare-cloud-security-overhaul';
+              } : resource.type === 'case-study' && (resource.title === 'Healthcare Cloud Security Overhaul' || resource.title === 'Securing the Software Supply Chain for a B2B SaaS') ? () => {
+                if (resource.title === 'Healthcare Cloud Security Overhaul') {
+                  window.location.href = '/healthcare-cloud-security-overhaul';
+                } else if (resource.title === 'Securing the Software Supply Chain for a B2B SaaS') {
+                  window.location.href = '/saas-software-supply-chain';
+                }
+              } : resource.type === 'whitepaper' && (resource.title === 'AI-Driven Threat Detection: 2024 Report' || resource.title === 'Zero Trust in Hybrid Cloud Environments') ? () => {
+                if (resource.title === 'AI-Driven Threat Detection: 2024 Report') {
+                  window.location.href = '/ai-threat-detection-report';
+                } else if (resource.title === 'Zero Trust in Hybrid Cloud Environments') {
+                  window.location.href = '/zero-trust-hybrid-cloud';
+                }
               } : undefined}
-              style={{ cursor: (resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security')) || (resource.type === 'case-study' && resource.title === 'Healthcare Cloud Security Overhaul') ? 'pointer' : 'default' }}
+              style={{ cursor: (resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security')) || (resource.type === 'case-study' && (resource.title === 'Healthcare Cloud Security Overhaul' || resource.title === 'Securing the Software Supply Chain for a B2B SaaS')) || (resource.type === 'whitepaper' && (resource.title === 'AI-Driven Threat Detection: 2024 Report' || resource.title === 'Zero Trust in Hybrid Cloud Environments')) ? 'pointer' : 'default' }}
             >
               <div className="resource-card__media">
                 <ImagePlaceholder
