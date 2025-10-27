@@ -188,7 +188,7 @@ export function App(): React.ReactElement {
         <WhoWeAre />
         <StrategicVision />
         <WhatWeDo />
-        <SecuritySolutions />
+        {/* <SecuritySolutions /> */}
         <GlobalImpact />
         <Resources />
         <Leadership />

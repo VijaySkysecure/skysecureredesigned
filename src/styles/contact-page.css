@@ -154,7 +154,7 @@
 /* Map Section */
 .contact-map-section {
   padding-top: 40px;
-  padding-left: 70px;
+  padding-left: 10px;
 }
 
 .contact-map-section .container {
@@ -226,6 +226,7 @@
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 .office-location {
