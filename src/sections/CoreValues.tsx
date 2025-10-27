@@ -5,17 +5,17 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 const VALUES = [
   {
     title: 'Innovation First',
-    text: 'We continuously push the boundaries of what\'s possible in cybersecurity through cutting-edge AI and machine learning technologies',
+    text: 'We revolutionize cybersecurity and cloud management with AI-driven automation, delivering predictive defense, zero-trust resilience, and compliance-ready ecosystems.',
     imageName: 'homepage/icon-client.png',
   },
   {
     title: 'Trust & Transparency',
-    text: 'Building lasting partnerships through honest communication, reliable service delivery, and unwavering commitment to our clients\' success.',
+    text: 'Our partnerships focus on accountability, clarity, and measurable outcomes. We manage every environment we build, ensuring customers are always informed about their security, data, and infrastructure.',
     imageName: 'homepage/icon-integrity.png',
   },
   {
     title: 'Global Impact',
-    text: 'Dedicated to making the digital world safer for everyone through scalable security solutions and knowledge sharing.',
+    text: 'Skysecure’s mission is to make the digital world safer and smarter for organizations of all sizes. With AI-powered services in 47+ countries, we help businesses automate securely, stay compliant, and grow confidently.',
     imageName: 'homepage/icon-innovation.png',
   },
 ];
@@ -31,7 +31,20 @@ export function CoreValues(): React.ReactElement {
           />
           <div className="values-grid">
             {VALUES.map((value) => (
-              <div key={value.title} className="value-card">
+              <div 
+                key={value.title} 
+                className="value-card"
+                style={{ 
+                  transform: 'none !important',
+                  transition: 'none !important'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'none';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'none';
+                }}
+              >
                 <ImagePlaceholder
                   className="card__icon"
                   label={`${value.title} icon`}

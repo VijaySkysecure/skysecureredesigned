@@ -13,8 +13,8 @@ const NAV_ITEMS: NavLink[] = [
     label: 'Company',
     href: '#company',
     menu: [
-      { label: 'About', href: '/about' },
-      { label: 'Contact Us', href: '#contact' },
+      { label: 'About Us', href: '/about' },
+      { label: 'Contact Us', href: '/contact' },
       { label: 'India', href: '#india' },
     ],
   },
@@ -22,8 +22,8 @@ const NAV_ITEMS: NavLink[] = [
     label: 'Services',
     href: '#services',
     menu: [
-      { label: 'Advisory Services', href: '#services-advisory' },
-      { label: 'Managed Programs', href: '#services-managed' },
+      { label: 'Professional Services', href: '/professional-services' },
+      { label: 'Managed Services', href: '/managed-services' },
     ],
   },
   {
@@ -200,7 +200,13 @@ export function Header(): React.ReactElement {
                             className="header__submenu-link"
                             href={option.href}
                             role="menuitem"
-                            onClick={closeMenu}
+                            onClick={(e) => {
+                              if (option.href.startsWith('/')) {
+                                e.preventDefault();
+                                window.location.href = option.href;
+                              }
+                              closeMenu();
+                            }}
                           >
                             {option.label}
                           </a>

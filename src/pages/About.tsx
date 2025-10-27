@@ -53,35 +53,35 @@ const JOURNEY_TIMELINE = [
   {
     year: '2021 (Dec)',
     title: 'Established with a clear mission',
-    description: 'In December 2021, SkySecure was established by cybersecurity experts focusing on specialist consulting for BFSI and infrastructure clients. Simultaneously, it completed incorporation and launched full-time operations in India, setting up compliance and local teams to drive growth.',
+    description: 'In December 2021, Skysecure was established by cybersecurity experts focusing on specialist consulting for BFSI and infrastructure clients. Simultaneously, it completed incorporation and launched full-time operations in India, setting up compliance and local teams to drive growth.',
     side: 'left',
     icon: 'about/icon-timeline-2021.png'
   },
   {
     year: '2022 (Jul-Nov)',
     title: 'Formal Incorporation & Enterprise Delivery',
-    description: 'SkySecure formally incorporated, delivering comprehensive cybersecurity programs for major Indian enterprises.we earned Microsoft Security Specialization and Gold Partner status, conducted the SMC Custom Security Assessment Workshop, and expanded operations to Singapore, marking significant growth and technical excellence.',
+    description: 'Skysecure formally incorporated, delivering comprehensive cybersecurity programs for major Indian enterprises.we earned Microsoft Security Specialization and Gold Partner status, conducted the SMC Custom Security Assessment Workshop, and expanded operations to Singapore, marking significant growth and technical excellence.',
     side: 'right',
     icon: 'about/icon-timeline-2022.png'
   },
   {
     year: '2023 (Jul)',
     title: 'Strategic Partnerships & Marketplace Expansion',
-    description: 'SkySecure earned Microsoft\'s Managed Partner designation and CSI (Cloud Solution Implementer) status, accelerating joint security sales. At the same time, we launched an AI-powered solution-matching engine and expanded our B2B marketplace, driving $14M in Microsoft security revenue across 19 CSI engagements.',
+    description: 'Skysecure earned Microsoft\'s Managed Partner designation and CSI (Cloud Solution Implementer) status, accelerating joint security sales. At the same time, we launched an AI-powered solution-matching engine and expanded our B2B marketplace, driving $14M in Microsoft security revenue across 19 CSI engagements.',
     side: 'left',
     icon: 'about/icon-timeline-2023.png'
   },
   {
     year: '2024 (Jan)',
     title: 'Scaling Across Cloud, AI, and Global Markets',
-    description: 'SkySecure achieved Fast Track Ready partner status, positioning us for accelerated growth. With this strong foundation, we are now aspiring to expand our footprint into the Middle East. This strategic move aims to broaden our market reach and deliver advanced cybersecurity solutions across the region.',
+    description: 'Skysecure achieved Fast Track Ready partner status, positioning us for accelerated growth. With this strong foundation, we are now aspiring to expand our footprint into the Middle East. This strategic move aims to broaden our market reach and deliver advanced cybersecurity solutions across the region.',
     side: 'right',
     icon: 'about/icon-timeline-2024.png'
   },
   {
     year: '2025 (Mar)',
-    title: 'SkySecure\'s Fast-Track Journey to $100M',
-    description: 'Now a Fast-Track Ready partner, SkySecure is expanding across Cloud, Infrastructure, AI, and Data verticals, with a focus on scaling Mid-Market and SMC accounts to achieve a billed revenue target of $100M. Our roadmap includes launching operations in the Middle East and broadening our global marketplace ecosystem with verified vendors.',
+    title: 'Skysecure\'s Fast-Track Journey to $100M',
+    description: 'Now a Fast-Track Ready partner, Skysecure is expanding across Cloud, Infrastructure, AI, and Data verticals, with a focus on scaling Mid-Market and SMC accounts to achieve a billed revenue target of $100M. Our roadmap includes launching operations in the Middle East and broadening our global marketplace ecosystem with verified vendors.',
     side: 'left',
     icon: 'about/icon-timeline-2025.png'
   }
@@ -206,7 +206,7 @@ export function About(): React.ReactElement {
                 color: '#64748B', 
                 margin: '0'
               }}>
-                Guiding principles that drive everything we do at SkySecure
+                Guiding principles that drive everything we do at Skysecure
               </p>
             </div>
             
@@ -553,23 +553,25 @@ export function About(): React.ReactElement {
                     </div>
                   </div>
                   
-                  {/* Timeline Dot */}
+                  {/* Timeline Dot - Always centered */}
                   <div style={{ 
-                    width: '40px', 
-                    height: '40px', 
+                    width: '48px', 
+                    height: '48px', 
                     borderRadius: '50%', 
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center',
                     flexShrink: 0,
                     zIndex: 1,
-                    position: 'relative'
+                    position: 'absolute',
+                    left: '50%',
+                    transform: 'translateX(-50%)'
                   }}>
                     <ImagePlaceholder
                       label={`Timeline Icon ${item.year}`}
                       imageName={item.icon}
-                      width={40}
-                      height={40}
+                      width={48}
+                      height={48}
                       borderRadius={0}
                     />
                   </div>
@@ -598,7 +600,7 @@ export function About(): React.ReactElement {
                 color: '#64748B', 
                 margin: '0'
               }}>
-                Meet the experienced professionals guiding SkySecure's mission
+                Meet the experienced professionals guiding Skysecure's mission
               </p>
             </div>
             
@@ -750,7 +752,7 @@ export function About(): React.ReactElement {
                   lineHeight: '1.6', 
                   margin: '0 0 32px 0'
                 }}>
-                  Global Cybersecurity Expertise SkySecure operates across Bangalore, Coimbatore, Singapore, and the UAE—each office specializing in regional needs, from innovation and industrial security to finance and government protection, ensuring 24/7 monitoring and rapid response. Tailored, Trusted Solutions: Combining local insight with global intelligence, we deliver customized cybersecurity backed by continuous training, strong partnerships, and a commitment to sustainability and client trust worldwide.
+                  Global Cybersecurity Expertise Skysecure operates across Bangalore, Coimbatore, Singapore, and the UAE—each office specializing in regional needs, from innovation and industrial security to finance and government protection, ensuring 24/7 monitoring and rapid response. Tailored, Trusted Solutions: Combining local insight with global intelligence, we deliver customized cybersecurity backed by continuous training, strong partnerships, and a commitment to sustainability and client trust worldwide.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   {GLOBAL_OFFICES.map((office, index) => (

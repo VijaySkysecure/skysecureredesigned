@@ -4,7 +4,7 @@ import { Hero } from './sections/Hero';
 import { WhoWeAre } from './sections/WhoWeAre';
 import { StrategicVision } from './sections/StrategicVision';
 import { WhatWeDo } from './sections/WhatWeDo';
-import { SecuritySolutions } from './sections/SecuritySolutions';
+// import { SecuritySolutions } from './sections/SecuritySolutions';
 import { GlobalImpact } from './sections/GlobalImpact';
 import { Resources } from './sections/Resources';
 import { Leadership } from './sections/Leadership';
@@ -40,6 +40,8 @@ import { CookiePolicy } from './pages/CookiePolicy';
 import { TermsOfService } from './pages/TermsOfService';
 import { WeeklyCyber } from './knowledge/WeeklyCyber';
 import { ContactPage } from './pages/ContactPage';
+import { ProfessionalServices } from './pages/ProfessionalServices';
+import { ManagedServices } from './pages/ManagedServices';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
@@ -70,6 +72,8 @@ export function App(): React.ReactElement {
   const isTermsOfService = window.location.pathname === '/terms-of-service';
   const isWeeklyCyber = window.location.pathname === '/weekly-cyber';
   const isContactPage = window.location.pathname === '/contact';
+  const isProfessionalServices = window.location.pathname === '/professional-services';
+  const isManagedServices = window.location.pathname === '/managed-services';
   
   if (isMarketplace) {
     return <Marketplace />;
@@ -179,6 +183,14 @@ export function App(): React.ReactElement {
     return <ContactPage />;
   }
   
+  if (isProfessionalServices) {
+    return <ProfessionalServices />;
+  }
+  
+  if (isManagedServices) {
+    return <ManagedServices />;
+  }
+  
   // Default homepage (original structure)
   return (
     <div className="main-page">
@@ -188,7 +200,7 @@ export function App(): React.ReactElement {
         <WhoWeAre />
         <StrategicVision />
         <WhatWeDo />
-        <SecuritySolutions />
+        {/* <SecuritySolutions /> */}
         <GlobalImpact />
         <Resources />
         <Leadership />

@@ -204,7 +204,7 @@ export function PrivacyPolicy(): React.ReactElement {
             <hr className="privacy-copyright-divider" />
             
             <div className="privacy-copyright">
-              <p>© 2025 SkySecure Technologies, Inc.</p>
+              <p>© 2025 Skysecure Technologies, Inc.</p>
               <p>All Rights Reserved</p>
             </div>
           </div>
