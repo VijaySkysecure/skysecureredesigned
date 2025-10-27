@@ -15,15 +15,14 @@ const NAV_ITEMS: NavLink[] = [
     menu: [
       { label: 'About Us', href: '/about' },
       { label: 'Contact Us', href: '/contact' },
-      { label: 'India', href: '#india' },
     ],
   },
   {
-    label: 'Services',
-    href: '#services',
+    label: 'Solutions',
+    href: '#solutions',
     menu: [
-      { label: 'Professional Services', href: '/professional-services' },
-      { label: 'Managed Services', href: '/managed-services' },
+      { label: 'Professional Services', href: '#services-advisory' },
+      { label: 'Managed Services', href: '#services-managed' },
     ],
   },
   {
