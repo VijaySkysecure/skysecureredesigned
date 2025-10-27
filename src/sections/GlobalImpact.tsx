@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionHeader } from '../components/SectionHeader';
-import { ImagePlaceholder } from '../components/ImagePlaceholder';
+// import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 
 export function GlobalImpact(): React.ReactElement {
