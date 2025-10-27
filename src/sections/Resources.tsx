@@ -139,8 +139,10 @@ export function Resources(): React.ReactElement {
                 }
               } : resource.type === 'case-study' && resource.title === 'Healthcare Cloud Security Overhaul' ? () => {
                 window.location.href = '/healthcare-cloud-security-overhaul';
+              } : resource.type === 'video' && resource.title === 'Weekly Cyber Intelligence Update' ? () => {
+                window.location.href = '/weekly-cyber';
               } : undefined}
-              style={{ cursor: (resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security')) || (resource.type === 'case-study' && resource.title === 'Healthcare Cloud Security Overhaul') ? 'pointer' : 'default' }}
+              style={{ cursor: (resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security')) || (resource.type === 'case-study' && resource.title === 'Healthcare Cloud Security Overhaul') || (resource.type === 'video' && resource.title === 'Weekly Cyber Intelligence Update') ? 'pointer' : 'default' }}
             >
               <div className="resource-card__media">
                 <ImagePlaceholder

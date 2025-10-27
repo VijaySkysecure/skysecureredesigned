@@ -29,6 +29,7 @@ import { ManufacturingSecurityGuide } from './knowledge/ManufacturingSecurityGui
 import { AzureSentinelGuide } from './knowledge/AzureSentinelGuide';
 import { CloudSecurityGuide } from './knowledge/CloudSecurityGuide';
 import { HealthcareCloudSecurityOverhaul } from './knowledge/HealthcareCloudSecurityOverhaul';
+import { WeeklyCyber } from './knowledge/WeeklyCyber';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
 import { CookiePolicy } from './pages/CookiePolicy';
@@ -52,6 +53,7 @@ export function App(): React.ReactElement {
   const isAzureSentinelGuide = window.location.pathname === '/azure-sentinel-guide';
   const isCloudSecurityGuide = window.location.pathname === '/cloud-security-guide';
   const isHealthcareCloudSecurityOverhaul = window.location.pathname === '/healthcare-cloud-security-overhaul';
+  const isWeeklyCyber = window.location.pathname === '/weekly-cyber';
   const isPrivacyPolicy = window.location.pathname === '/privacy-policy';
   const isTermsOfService = window.location.pathname === '/terms-of-service';
   const isCookiePolicy = window.location.pathname === '/cookie-policy';
@@ -119,6 +121,10 @@ export function App(): React.ReactElement {
   
   if (isHealthcareCloudSecurityOverhaul) {
     return <HealthcareCloudSecurityOverhaul />;
+  }
+  
+  if (isWeeklyCyber) {
+    return <WeeklyCyber />;
   }
   
   if (isPrivacyPolicy) {
