@@ -1,0 +1,397 @@
+/* Cookie Policy Page Styles */
+.cookie-policy-page {
+  overflow-x: hidden;
+}
+
+.cookie-policy-main {
+  padding: 40px 0;
+  background-color: #fafbfc;
+  min-height: 100vh;
+}
+
+.cookie-policy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  border: 0.1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+.cookie-policy-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #0b0b0c;
+  text-align: left;
+}
+
+.cookie-policy-updated {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.cookie-policy-divider {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.cookie-section {
+  margin-bottom: 3rem;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.cookie-section:first-of-type {
+  padding-top: 0;
+}
+
+.cookie-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: #0b0b0c;
+}
+
+.cookie-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: #0b0b0c;
+}
+
+.cookie-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.cookie-section ul {
+  margin-bottom: 1rem;
+  margin-top: 0.75rem;
+  padding-left: 2rem;
+}
+
+.cookie-section li {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.cookie-section li strong {
+  font-weight: 600;
+  color: #0b0b0c;
+}
+
+.cookie-link {
+  color: #00a7e1;
+  text-decoration: none;
+}
+
+.cookie-link:hover {
+  text-decoration: underline;
+}
+
+/* Cookie Table Styles */
+.cookie-table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+}
+
+.cookie-table thead {
+  background-color: #f5f5f5;
+}
+
+.cookie-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #0b0b0c;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.cookie-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.cookie-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cookie-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/* Contact Box Styles */
+.cookie-contact-box {
+  background-color: #e8f4f8;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.cookie-contact-box h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0b0b0c;
+}
+
+.cookie-contact-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.cookie-contact-btn {
+  display: inline-block;
+  background-color: #0088ff;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-contact-btn:hover {
+  background-color: #0066cc;
+}
+
+/* Company Info Styles */
+.cookie-company-info {
+  background-color: #f9f9f9;
+  padding: 20px 25px;
+  border-left: 3px solid #00a7e1;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.cookie-company-info p {
+  margin: 0.3rem 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.cookie-company-info p strong {
+  font-weight: 600;
+  color: #0b0b0c;
+}
+
+/* Copyright Styles */
+.cookie-copyright-divider {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 3rem 0 2rem 0;
+}
+
+.cookie-copyright {
+  text-align: right;
+  margin-bottom: 3rem;
+}
+
+.cookie-copyright p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Related Resources Section */
+.related-resources {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.related-resources h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #0b0b0c;
+}
+
+.resource-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.resource-card {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e8e8e8;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.privacy-icon {
+  background-color: #e3f2fd;
+  color: #2196f3;
+}
+
+.cookie-icon {
+  background-color: #e1f5fe;
+  color: #03a9f4;
+}
+
+.dispute-icon {
+  background-color: #e8eaf6;
+  color: #5c6bc0;
+}
+
+.resource-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0b0b0c;
+}
+
+.resource-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cookie-policy-content {
+    padding: 30px 25px;
+    max-width: 100%;
+    margin: 0 20px;
+  }
+  
+  .cookie-policy-title {
+    font-size: 1.75rem;
+  }
+  
+  .cookie-section h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cookie-section h3 {
+    font-size: 1.15rem;
+  }
+  
+  .cookie-section p,
+  .cookie-section li {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  
+  .cookie-policy-main {
+    padding: 20px 0;
+  }
+
+  .resource-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .cookie-table {
+    font-size: 0.9rem;
+  }
+  
+  .cookie-table th,
+  .cookie-table td {
+    padding: 10px 12px;
+  }
+  
+  .cookie-contact-box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-policy-content {
+    padding: 25px 20px;
+    margin: 0 15px;
+  }
+  
+  .cookie-policy-title {
+    font-size: 1.5rem;
+  }
+  
+  .cookie-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .cookie-section h2 {
+    font-size: 1.25rem;
+  }
+  
+  .cookie-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cookie-section p,
+  .cookie-section li {
+    font-size: 0.9rem;
+  }
+  
+  .related-resources h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cookie-table {
+    font-size: 0.85rem;
+  }
+  
+  .cookie-table th,
+  .cookie-table td {
+    padding: 8px 10px;
+  }
+  
+  .cookie-contact-box {
+    padding: 20px 15px;
+  }
+  
+  .cookie-contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+

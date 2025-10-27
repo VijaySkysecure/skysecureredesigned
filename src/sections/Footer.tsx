@@ -59,6 +59,7 @@ export function Footer(): React.ReactElement {
                 {links.map((link, index) => {
                   // Link the first 6 Solutions items to their respective pages
                   const isSolutionLink = title === 'Solutions' && index < 6;
+                  const isContactLink = title === 'Company' && link === 'Contact';
                   const getSolutionHref = (linkName: string) => {
                     switch (linkName) {
                       case '24/7 SOC Monitoring': return '/soc-monitoring';
@@ -74,11 +75,14 @@ export function Footer(): React.ReactElement {
                   return (
                     <li key={link}>
                       <a 
-                        href={isSolutionLink ? getSolutionHref(link) : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={isSolutionLink ? getSolutionHref(link) : isContactLink ? '/contact' : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
                         className="footer__link"
                         onClick={isSolutionLink ? (e) => {
                           e.preventDefault();
                           window.location.href = getSolutionHref(link);
+                        } : isContactLink ? (e) => {
+                          e.preventDefault();
+                          window.location.href = '/contact';
                         } : undefined}
                       >
                         {link}
@@ -96,9 +100,36 @@ export function Footer(): React.ReactElement {
         <div className="footer__bottom">
           <span className="footer__copyright">© 2025 Skysecure. All rights reserved.</span>
           <div className="footer__legal">
-            <a href="#privacy-policy" className="footer__legal-link">Privacy Policy</a>
-            <a href="#terms-of-service" className="footer__legal-link">Terms of Service</a>
-            <a href="#cookie-policy" className="footer__legal-link">Cookie Policy</a>
+            <a 
+              href="/privacy-policy" 
+              className="footer__legal-link"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/privacy-policy';
+              }}
+            >
+              Privacy Policy
+            </a>
+            <a 
+              href="/terms-of-service" 
+              className="footer__legal-link"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/terms-of-service';
+              }}
+            >
+              Terms of Service
+            </a>
+            <a 
+              href="/cookie-policy" 
+              className="footer__legal-link"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = '/cookie-policy';
+              }}
+            >
+              Cookie Policy
+            </a>
           </div>
         </div>
         

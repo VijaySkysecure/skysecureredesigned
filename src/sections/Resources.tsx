@@ -168,8 +168,12 @@ export function Resources(): React.ReactElement {
                 } else if (resource.title === 'Zero Trust in Hybrid Cloud Environments') {
                   window.location.href = '/zero-trust-hybrid-cloud';
                 }
+              } : resource.type === 'video' && resource.title === 'Daily Threat Brief: Ransomware Evolution' ? () => {
+                window.location.href = '/ransomware-evolution';
+              } : resource.type === 'video' && resource.title === 'Weekly Cyber Intelligence Update' ? () => {
+                window.location.href = '/weekly-cyber';
               } : undefined}
-              style={{ cursor: (resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security')) || (resource.type === 'case-study' && (resource.title === 'Healthcare Cloud Security Overhaul' || resource.title === 'Securing the Software Supply Chain for a B2B SaaS')) || (resource.type === 'whitepaper' && (resource.title === 'AI-Driven Threat Detection: 2024 Report' || resource.title === 'Zero Trust in Hybrid Cloud Environments')) ? 'pointer' : 'default' }}
+              style={{ cursor: (resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security')) || (resource.type === 'case-study' && (resource.title === 'Healthcare Cloud Security Overhaul' || resource.title === 'Securing the Software Supply Chain for a B2B SaaS')) || (resource.type === 'whitepaper' && (resource.title === 'AI-Driven Threat Detection: 2024 Report' || resource.title === 'Zero Trust in Hybrid Cloud Environments')) || (resource.type === 'video' && (resource.title === 'Daily Threat Brief: Ransomware Evolution' || resource.title === 'Weekly Cyber Intelligence Update')) ? 'pointer' : 'default' }}
             >
               <div className="resource-card__media">
                 <ImagePlaceholder

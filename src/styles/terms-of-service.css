@@ -1,0 +1,274 @@
+/* Terms of Service Page Styles */
+.terms-of-service-page {
+  overflow-x: hidden;
+}
+
+.terms-of-service-main {
+  padding: 40px 0;
+  background-color: #fafbfc;
+  min-height: 100vh;
+}
+
+.terms-of-service-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  border: 0.1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+.terms-of-service-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #0b0b0c;
+  text-align: left;
+}
+
+.terms-of-service-updated {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.terms-of-service-divider {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0 0 2rem 0;
+}
+
+.terms-intro {
+  margin-bottom: 0rem;
+  padding-top: 2rem;
+}
+
+.terms-intro p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.terms-section {
+  margin-bottom: 3rem;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.terms-section h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+  color: #0b0b0c;
+}
+
+.terms-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  color: #0b0b0c;
+}
+
+.terms-section h3:first-of-type {
+  margin-top: 0;
+}
+
+.terms-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.terms-section ul {
+  margin-bottom: 1rem;
+  margin-top: 0.75rem;
+  padding-left: 2rem;
+}
+
+.terms-section li {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.terms-section p:last-child,
+.terms-section ul:last-child,
+.terms-section li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.terms-section > *:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.terms-prohibited {
+  background-color: #fff5f5;
+  border-left: 4px solid #e53e3e;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.terms-prohibited h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: #742a2a;
+}
+
+.terms-prohibited p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  color: #742a2a;
+}
+
+.terms-prohibited p:last-child {
+  margin-bottom: 0;
+}
+
+.terms-link {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+.terms-contact {
+  background-color: #eff6ff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 3rem 0 2rem 0;
+}
+
+.terms-contact h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: #0b0b0c;
+}
+
+.terms-contact p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.terms-contact p:last-child {
+  margin-bottom: 0;
+}
+
+.terms-copyright-divider {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 4rem 0 2rem 0;
+}
+
+.terms-copyright {
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+.terms-copyright p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .terms-of-service-content {
+    padding: 30px 20px;
+    max-width: 100%;
+    margin: 0 20px;
+  }
+  
+  .terms-of-service-title {
+    font-size: 1.8rem;
+  }
+  
+  .terms-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .terms-section h3 {
+    font-size: 1.15rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .terms-section p,
+  .terms-section li {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  
+  .terms-of-service-main {
+    padding: 20px 0;
+  }
+  
+  .terms-prohibited {
+    padding: 1.25rem;
+  }
+  
+  .terms-contact {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-of-service-content {
+    padding: 25px 15px;
+    margin: 0 15px;
+  }
+  
+  .terms-of-service-title {
+    font-size: 1.6rem;
+  }
+  
+  .terms-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .terms-section h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+  
+  .terms-section h3 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .terms-section p,
+  .terms-section li {
+    font-size: 0.9rem;
+  }
+  
+  .terms-prohibited {
+    padding: 1rem;
+  }
+  
+  .terms-contact {
+    padding: 1.25rem;
+  }
+}
+

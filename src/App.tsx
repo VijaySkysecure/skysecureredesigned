@@ -34,6 +34,12 @@ import { AIThreatDetectionReport } from './knowledge/AIThreatDetectionReport';
 import { ZeroTrustHybridCloud } from './knowledge/ZeroTrustHybridCloud';
 import { DPDPAct2023 } from './pages/DPDPAct2023';
 import { About } from './pages/About';
+import { RansomwareEvolution } from './knowledge/RansomwareEvolution';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { CookiePolicy } from './pages/CookiePolicy';
+import { TermsOfService } from './pages/TermsOfService';
+import { WeeklyCyber } from './knowledge/WeeklyCyber';
+import { ContactPage } from './pages/ContactPage';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
@@ -58,6 +64,12 @@ export function App(): React.ReactElement {
   const isZeroTrustHybridCloud = window.location.pathname === '/zero-trust-hybrid-cloud';
   const isDPDPAct2023 = window.location.pathname === '/dpdp-act-2023';
   const isAbout = window.location.pathname === '/about';
+  const isRansomwareEvolution = window.location.pathname === '/ransomware-evolution';
+  const isPrivacyPolicy = window.location.pathname === '/privacy-policy';
+  const isCookiePolicy = window.location.pathname === '/cookie-policy';
+  const isTermsOfService = window.location.pathname === '/terms-of-service';
+  const isWeeklyCyber = window.location.pathname === '/weekly-cyber';
+  const isContactPage = window.location.pathname === '/contact';
   
   if (isMarketplace) {
     return <Marketplace />;
@@ -141,6 +153,30 @@ export function App(): React.ReactElement {
   
   if (isAbout) {
     return <About />;
+  }
+  
+  if (isRansomwareEvolution) {
+    return <RansomwareEvolution />;
+  }
+  
+  if (isPrivacyPolicy) {
+    return <PrivacyPolicy />;
+  }
+  
+  if (isCookiePolicy) {
+    return <CookiePolicy />;
+  }
+  
+  if (isTermsOfService) {
+    return <TermsOfService />;
+  }
+  
+  if (isWeeklyCyber) {
+    return <WeeklyCyber />;
+  }
+  
+  if (isContactPage) {
+    return <ContactPage />;
   }
   
   // Default homepage (original structure)

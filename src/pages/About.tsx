@@ -125,13 +125,16 @@ const TEAM_MEMBERS = [
 
 const GLOBAL_OFFICES = [
   {
-    location: 'Bangalore(HQ), India'
+    location: 'Bangalore(HQ), India',
+    color: '#3B82F6'
   },
   {
-    location: 'Deira, UAE'
+    location: 'Deira, UAE',
+    color: '#10B981'
   },
   {
-    location: 'Cecil Street, Singapore'
+    location: 'Cecil Street, Singapore',
+    color: '#EF4444'
   }
 ];
 
@@ -728,7 +731,7 @@ export function About(): React.ReactElement {
         </section>
 
         {/* Global Presence Section */}
-        <section style={{ padding: '80px 0', backgroundColor: '#F9FAFB' }}>
+        <section style={{ padding: '80px 0', backgroundColor: '#FFFFFF' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
               {/* Left Content */}
@@ -755,7 +758,7 @@ export function About(): React.ReactElement {
                       <div style={{ 
                         width: '12px', 
                         height: '12px', 
-                        backgroundColor: '#10B981', 
+                        backgroundColor: office.color, 
                         borderRadius: '50%',
                         flexShrink: 0
                       }}></div>
