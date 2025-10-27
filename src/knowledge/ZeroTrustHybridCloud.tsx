@@ -12,17 +12,17 @@ const CHALLENGES = [
 
 const CORE_PRINCIPLES = [
   {
-    icon: 'icon-person',
+    icon: 'icon-shield-person',
     title: 'Never Trust, Always Verify',
     description: 'Every user, device, and network connection must be authenticated and authorized before accessing resources.'
   },
   {
-    icon: 'icon-lock',
+    icon: 'icon-access-key',
     title: 'Least Privilege Access',
     description: 'Users and systems receive only the minimum access necessary to perform their functions.'
   },
   {
-    icon: 'icon-shield',
+    icon: 'icon-beetle',
     title: 'Assume Breach',
     description: 'Design security controls with the assumption that threats exist both inside and outside the network.'
   }
@@ -30,29 +30,29 @@ const CORE_PRINCIPLES = [
 
 const IMPLEMENTATION_COMPONENTS = [
   {
-    icon: 'icon-person',
+    icon: 'icon-person-check',
     title: 'Identity & Access Management (IAM)',
-    description: 'Centralized identity management with multi-factor authentication and role-based access controls.'
+    description: 'Unified authentication via Azure AD, Okta, or other federated systems.'
   },
   {
-    icon: 'icon-eye',
-    title: 'Continuous Monitoring',
-    description: 'Real-time visibility into user activities, device health, and network traffic patterns.'
-  },
-  {
-    icon: 'icon-gear',
-    title: 'Automation & AI Integration',
-    description: 'Intelligent threat detection and automated response capabilities for rapid incident containment.'
-  },
-  {
-    icon: 'icon-network',
+    icon: 'icon-network-modules',
     title: 'Network Segmentation',
-    description: 'Micro-segmentation of network resources to limit lateral movement and contain potential breaches.'
+    description: 'Enforce micro-segmentation to limit lateral movement.'
   },
   {
-    icon: 'icon-data-protection',
+    icon: 'icon-eye-monitor',
+    title: 'Continuous Monitoring',
+    description: 'Use SIEM and UEBA tools for behavioral analytics.'
+  },
+  {
+    icon: 'icon-padlock',
     title: 'Data Protection',
-    description: 'Encryption, data loss prevention, and secure data handling across all environments.'
+    description: 'Encrypt data in transit and at rest, apply adaptive DLP policies.'
+  },
+  {
+    icon: 'icon-gear-brain',
+    title: 'Automation & AI Integration',
+    description: 'Automate policy enforcement and anomaly detection with machine learning.'
   }
 ];
 
@@ -170,11 +170,11 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
               {/* Left Content */}
               <div style={{ flex: 1, maxWidth: '720px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-                  <span style={{ backgroundColor: '#3B82F6', color: '#FFFFFF', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: '500' }}>White Paper</span>
+                  <span style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: '500' }}>White Paper</span>
                   <span style={{ color: '#6B7280', fontSize: '14px' }}>• July 2024 • Skysecure Research Team</span>
                 </div>
                 <h1 style={{ fontSize: '48px', fontWeight: '700', color: '#1F2937', margin: '0 0 24px 0', lineHeight: '1.2' }}>
-                  Zero Trust in Hybrid Cloud Environments
+                  Zero Trust in Hybrid <span style={{ color: 'rgba(10, 78, 255, 1)' }}>Cloud Environments</span>
                 </h1>
                 <div style={{ display: 'flex', gap: '16px' }}>
                   <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
@@ -217,7 +217,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
         <section className="blog-content">
           <div className="container">
             <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-              <h2 className="blog-section-title">Executive Summary</h2>
+              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Executive Summary</h2>
               <p className="blog-section-text" style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto 40px auto' }}>
                 As organizations increasingly adopt hybrid cloud architectures, traditional perimeter-based security models prove insufficient. Zero Trust provides a unified, adaptive framework that safeguards identities, data, and diverse ecosystems across on-premises and cloud environments.
               </p>
@@ -233,48 +233,58 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                   Download Full White Paper (PDF)
                 </button>
                 <button style={{ backgroundColor: '#FFFFFF', color: 'rgba(10, 78, 255, 1)', padding: '12px 24px', borderRadius: '8px', border: '1px solid rgba(10, 78, 255, 1)', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
-                  <ImagePlaceholder
-                    label="Contact Icon"
-                    imageName="knowledge/icon-contact.png"
-                    width={16}
-                    height={16}
-                    borderRadius={0}
-                  />
                   Talk to a Zero Trust Expert
                 </button>
               </div>
             </section>
 
             {/* Understanding Hybrid Cloud Challenges */}
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-              <h2 className="blog-section-title" style={{ textAlign: 'left' }}>Understanding Hybrid Cloud Challenges</h2>
-              <p className="blog-section-text" style={{ textAlign: 'left', marginBottom: '32px' }}>
-                Hybrid cloud environments introduce unprecedented complexity, with disparate systems, inconsistent access controls, and compliance challenges creating security blind spots. Zero Trust eliminates implicit trust, requiring verification for every access request.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {CHALLENGES.map((challenge, index) => (
-                  <div key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                    <div style={{ 
-                      width: '12px', 
-                      height: '12px', 
-                      backgroundColor: '#EF4444', 
-                      borderRadius: '50%', 
-                      marginTop: '6px', 
-                      flexShrink: 0 
-                    }}></div>
-                    <p style={{ fontSize: '16px', color: '#64748B', lineHeight: '1.5', margin: 0 }}>{challenge}</p>
+            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+              <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
+                {/* Left Content */}
+                <div style={{ flex: 1 }}>
+                  <h2 className="blog-section-title" style={{ textAlign: 'left' }}>Understanding Hybrid Cloud Challenges</h2>
+                  <p className="blog-section-text" style={{ textAlign: 'left', marginBottom: '32px' }}>
+                    Hybrid cloud environments blend private and public cloud infrastructures, offering agility but also introducing complexity. Disparate systems, inconsistent access controls, and varied compliance standards create blind spots for security teams. A Zero Trust approach eliminates implicit trust,ensuring that every user, device, and workload is verified continuously.
+                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    {CHALLENGES.map((challenge, index) => (
+                      <div key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                        <div style={{ 
+                          width: '12px', 
+                          height: '12px', 
+                          backgroundColor: '#EF4444', 
+                          borderRadius: '50%', 
+                          marginTop: '6px', 
+                          flexShrink: 0 
+                        }}></div>
+                        <p style={{ fontSize: '16px', color: '#64748B', lineHeight: '1.5', margin: 0 }}>{challenge}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+                {/* Right Visual */}
+                <div style={{ flex: 1, textAlign: 'center' }}>
+                  <ImagePlaceholder
+                    label="Hybrid Cloud Challenges Visual"
+                    imageName="knowledge/hybrid-cloud-challenges.png"
+                    width={580}
+                    height={380}
+                    borderRadius={0}
+                  />
+                </div>
               </div>
+            </div>
             </section>
 
             {/* Core Principles of Zero Trust in Hybrid Cloud */}
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-              <h2 className="blog-section-title">Core Principles of Zero Trust in Hybrid Cloud</h2>
+            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', marginTop: '60px' }}>
+              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Core Principles of Zero Trust in Hybrid Cloud</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', marginTop: '40px' }}>
                 {CORE_PRINCIPLES.map((principle, index) => (
                   <div key={index} style={{ 
-                    backgroundColor: '#FFFFFF', 
+                    backgroundColor: 'rgba(230, 238, 255, 1)', 
                     padding: '24px', 
                     borderRadius: '12px', 
                     border: '1px solid #E2E8F0',
@@ -282,9 +292,8 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                     textAlign: 'center'
                   }}>
                     <div style={{ 
-                      width: '48px', 
-                      height: '48px', 
-                      backgroundColor: '#3B82F6', 
+                      width: '60px', 
+                      height: '60px', 
                       borderRadius: '50%', 
                       display: 'flex', 
                       alignItems: 'center', 
@@ -294,8 +303,8 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                       <ImagePlaceholder
                         label={principle.title}
                         imageName={`knowledge/${principle.icon}.png`}
-                        width={24}
-                        height={24}
+                        width={60}
+                        height={60}
                         borderRadius={0}
                       />
                     </div>
@@ -321,9 +330,10 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
             </section>
 
             {/* Key Components of Zero Trust Implementation */}
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-              <h2 className="blog-section-title">Key Components of Zero Trust Implementation</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px', marginTop: '40px' }}>
+            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+              <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Key Components of Zero Trust Implementation</h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 590px)', gap: '24px', marginTop: '40px', justifyContent: 'center' }}>
                 {IMPLEMENTATION_COMPONENTS.map((component, index) => (
                   <div key={index} style={{ 
                     backgroundColor: '#FFFFFF', 
@@ -331,14 +341,16 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                     borderRadius: '12px', 
                     border: '1px solid #E2E8F0',
                     boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)',
-                    textAlign: 'left'
+                    textAlign: 'left',
+                    width: index === 4 ? '1200px' : '590px',
+                    height: '130px',
+                    gridColumn: index === 4 ? '1 / -1' : 'auto',
+                    justifySelf: index === 4 ? 'center' : 'auto'
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '12px' }}>
                       <div style={{ 
-                        width: '40px', 
-                        height: '40px', 
-                        backgroundColor: '#3B82F6', 
-                        borderRadius: '50%', 
+                        width: '48px', 
+                        height: '48px', 
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
@@ -347,8 +359,8 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                         <ImagePlaceholder
                           label={component.title}
                           imageName={`knowledge/${component.icon}.png`}
-                          width={20}
-                          height={20}
+                          width={48}
+                          height={48}
                           borderRadius={0}
                         />
                       </div>
@@ -371,12 +383,13 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                     </p>
                   </div>
                 ))}
+                </div>
               </div>
             </section>
 
             {/* Zero Trust Adoption Roadmap */}
             <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-              <h2 className="blog-section-title">Zero Trust Adoption Roadmap</h2>
+              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Zero Trust Adoption Roadmap</h2>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', marginTop: '40px' }}>
                 {ROADMAP_STEPS.map((step, index) => (
                   <React.Fragment key={index}>
@@ -384,7 +397,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                       <div style={{ 
                         width: '60px', 
                         height: '60px', 
-                        backgroundColor: '#3B82F6', 
+                        backgroundColor: 'rgba(10, 78, 255, 1)', 
                         borderRadius: '50%', 
                         display: 'flex', 
                         alignItems: 'center', 
@@ -417,10 +430,20 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                     {index < ROADMAP_STEPS.length - 1 && (
                       <div style={{ 
                         width: '20px', 
-                        height: '2px', 
-                        backgroundColor: '#3B82F6',
+                        height: '20px', 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
                         margin: '0 10px'
-                      }}></div>
+                      }}>
+                        <div style={{
+                          width: 0,
+                          height: 0,
+                          borderLeft: '8px solid rgba(10, 78, 255, 1)',
+                          borderTop: '6px solid transparent',
+                          borderBottom: '6px solid transparent'
+                        }}></div>
+                      </div>
                     )}
                   </React.Fragment>
                 ))}
@@ -428,71 +451,76 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
             </section>
 
             {/* Benefits Observed in 2024 Deployments */}
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-              <h2 className="blog-section-title">Benefits Observed in 2024 Deployments</h2>
+            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+              <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Benefits Observed in 2024 Deployments</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', marginTop: '40px' }}>
                 {BENEFITS_METRICS.map((metric, index) => (
                   <div key={index} style={{ 
                     backgroundColor: '#FFFFFF', 
                     padding: '24px', 
                     borderRadius: '12px', 
-                    border: '1px solid #E2E8F0',
                     boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)',
                     textAlign: 'center'
                   }}>
                     <div style={{ 
                       fontSize: '32px', 
                       fontWeight: '700', 
-                      color: '#3B82F6', 
+                      color: 'rgba(10, 78, 255, 1)', 
                       margin: '0 0 8px 0' 
                     }}>
                       {metric.percentage}
                     </div>
                     <p style={{ 
                       fontSize: '14px', 
-                      color: '#64748B', 
+                      color: 'rgba(55, 65, 81, 1)', 
                       lineHeight: '1.4', 
-                      margin: 0 
+                      margin: 0, 
+                      fontWeight: '500'
                     }}>
                       {metric.description}
                     </p>
                   </div>
                 ))}
               </div>
-              <p className="blog-section-text" style={{ textAlign: 'center', marginTop: '32px', maxWidth: '800px', margin: '32px auto 0 auto' }}>
-                Organizations adopting Zero Trust report stronger security resilience, lower operational risks, and improved visibility across their hybrid cloud infrastructure.
-              </p>
+                <p className="blog-section-text" style={{ textAlign: 'center', marginTop: '32px', maxWidth: '800px', margin: '32px auto 0 auto' }}>
+                Organizations adopting Zero Trust in hybrid environments report stronger security resilience, lower operational risks, and improved visibility across cloud workloads.
+                </p>
+              </div>
             </section>
 
             {/* Case Example: Multi-Cloud Enterprise */}
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-              <h2 className="blog-section-title" style={{ textAlign: 'left' }}>Case Example: Multi-Cloud Enterprise</h2>
+            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Case Example: Multi-Cloud Enterprise</h2>
               <div style={{ 
-                backgroundColor: '#FFFFFF', 
+                backgroundColor: 'rgba(230, 238, 255, 1)', 
                 padding: '32px', 
                 borderRadius: '12px', 
-                border: '1px solid #E2E8F0',
                 boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)',
-                marginTop: '24px'
+                marginTop: '24px',
+                maxWidth: '800px',
+                margin: '24px auto 0 auto'
               }}>
                 <p className="blog-section-text" style={{ textAlign: 'left', marginBottom: '32px' }}>
-                  A multinational enterprise successfully integrated Zero Trust across Azure and AWS using Skysecure's framework, achieving unified IAM, automated compliance, and reduced MTTD.
+                  A multinational enterprise integrated Zero Trust across Azure and AWS environments using Skysecure's adaptive framework. The project unified IAM, automated compliance reporting, and reduced mean-time-to-detect (MTTD) by 60%. The result: a secure, scalable architecture supporting 24/7 operations with minimal disruption.
                 </p>
-                <div style={{ display: 'flex', gap: '40px', justifyContent: 'center' }}>
+                <div style={{ display: 'flex', gap: '100px', justifyContent: 'center' }}>
                   {CASE_STUDY_METRICS.map((metric, index) => (
                     <div key={index} style={{ textAlign: 'center' }}>
                       <div style={{ 
-                        fontSize: '24px', 
+                        fontSize: '32px', 
                         fontWeight: '700', 
-                        color: '#3B82F6', 
-                        margin: '0 0 4px 0' 
+                        color: 'rgba(10, 78, 255, 1)', 
+                        margin: '0 0 8px 0' 
                       }}>
                         {metric.percentage}
                       </div>
                       <p style={{ 
                         fontSize: '14px', 
-                        color: '#64748B', 
-                        margin: 0 
+                        color: 'rgba(55, 65, 81, 1)', 
+                        lineHeight: '1.4',
+                        margin: 0,
+                        fontWeight: '500'
                       }}>
                         {metric.description}
                       </p>
@@ -503,11 +531,13 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
             </section>
 
             {/* Future Outlook */}
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-              <h2 className="blog-section-title" style={{ textAlign: 'left' }}>Future Outlook</h2>
-              <p className="blog-section-text" style={{ textAlign: 'left' }}>
-                Zero Trust is evolving from an architecture to a foundational philosophy for digital transformation. As hybrid and edge computing expand, continuous verification and automation will become critical for maintaining security in distributed environments.
-              </p>
+            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+              <div style={{ maxWidth: '950px', margin: '0 auto' }}>
+                <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Future Outlook</h2>
+                <p className="blog-section-text" style={{ textAlign: 'center', marginLeft: '60px' }}>
+                  Zero Trust is evolving beyond architecture, it's becoming a foundational philosophy for secure digital transformation. As hybrid and edge computing expand, continuous verification and automation will define the next generation of enterprise security.
+                </p>
+              </div>
             </section>
 
             {/* Build a Secure Hybrid Cloud with Zero Trust (CTA) */}
@@ -553,13 +583,6 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                     alignItems: 'center',
                     gap: '8px'
                   }}>
-                    <ImagePlaceholder
-                      label="Download Icon"
-                      imageName="knowledge/icon-download.png"
-                      width={16}
-                      height={16}
-                      borderRadius={0}
-                    />
                     Download White Paper
                   </button>
                   <button style={{ 
@@ -567,7 +590,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                     color: '#FFFFFF', 
                     padding: '12px 24px', 
                     borderRadius: '8px', 
-                    border: '1px solid #FFFFFF', 
+                    border: '2px solid #FFFFFF', 
                     fontSize: '16px', 
                     fontWeight: '500', 
                     cursor: 'pointer',

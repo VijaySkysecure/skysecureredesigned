@@ -13,7 +13,7 @@ const NAV_ITEMS: NavLink[] = [
     label: 'Company',
     href: '#company',
     menu: [
-      { label: 'About', href: '#about' },
+      { label: 'About', href: '/about' },
       { label: 'Contact Us', href: '#contact' },
       { label: 'India', href: '#india' },
     ],
@@ -38,15 +38,81 @@ const NAV_ITEMS: NavLink[] = [
 
 export function Header(): React.ReactElement {
   const [openMenu, setOpenMenu] = React.useState<string | null>(null);
-  
+  const [hoverTimeout, setHoverTimeout] = React.useState<number | null>(null);
 
   const openMenuFor = (label: string): void => {
+    // Clear any existing timeout
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
     setOpenMenu(label);
   };
 
   const closeMenu = (): void => {
     setOpenMenu(null);
   };
+
+  const handleMouseEnter = (label: string): void => {
+    // Clear any existing timeout
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+    setOpenMenu(label);
+  };
+
+  const handleMouseLeave = (): void => {
+    // Add a small delay before closing to allow mouse movement between trigger and dropdown
+    const timeout = setTimeout(() => {
+      setOpenMenu(null);
+    }, 150);
+    setHoverTimeout(timeout);
+  };
+
+  const handleMouseEnterDropdown = (label: string): void => {
+    // Clear any existing timeout
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+    setOpenMenu(label);
+  };
+
+  // Cleanup timeout on unmount
+  React.useEffect(() => {
+    return () => {
+      if (hoverTimeout) {
+        clearTimeout(hoverTimeout);
+      }
+    };
+  }, [hoverTimeout]);
+
+  // Close dropdown when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (openMenu && !target.closest('.header__nav-item')) {
+        closeMenu();
+      }
+    };
+
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && openMenu) {
+        closeMenu();
+      }
+    };
+
+    if (openMenu) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscapeKey);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [openMenu]);
 
   const handleNavigation = (href: string): void => {
     if (href.startsWith('/')) {
@@ -94,8 +160,9 @@ export function Header(): React.ReactElement {
                 <li
                   key={item.label}
                   className={`header__nav-item${hasMenu ? ' header__nav-item--has-menu' : ''}${isOpen ? ' is-open' : ''}`}
-                  onMouseLeave={closeMenu}
                   onBlur={handleBlur}
+                  onMouseEnter={hasMenu ? () => handleMouseEnter(item.label) : undefined}
+                  onMouseLeave={hasMenu ? handleMouseLeave : undefined}
                 >
                   {hasMenu ? (
                     <>
@@ -106,7 +173,7 @@ export function Header(): React.ReactElement {
                         aria-expanded={isOpen}
                         onClick={() => openMenuFor(item.label)}
                         onFocus={() => openMenuFor(item.label)}
-                        onMouseEnter={() => openMenuFor(item.label)}
+                        onMouseEnter={() => handleMouseEnter(item.label)}
                       >
                         <span>{item.label}</span>
                         {item.flagImageName ? (
@@ -121,7 +188,12 @@ export function Header(): React.ReactElement {
                         ) : null}
                         <span className="header__caret" aria-hidden="true" />
                       </button>
-                      <div className="header__submenu" role="menu">
+                      <div 
+                        className="header__submenu" 
+                        role="menu"
+                        onMouseEnter={() => handleMouseEnterDropdown(item.label)}
+                        onMouseLeave={handleMouseLeave}
+                      >
                         {item.menu!.map((option) => (
                           <a
                             key={option.label}

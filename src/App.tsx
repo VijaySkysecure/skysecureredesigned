@@ -33,6 +33,7 @@ import { SaaSSoftwareSupplyChain } from './knowledge/SaaSSoftwareSupplyChain';
 import { AIThreatDetectionReport } from './knowledge/AIThreatDetectionReport';
 import { ZeroTrustHybridCloud } from './knowledge/ZeroTrustHybridCloud';
 import { DPDPAct2023 } from './pages/DPDPAct2023';
+import { About } from './pages/About';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
@@ -56,6 +57,7 @@ export function App(): React.ReactElement {
   const isAIThreatDetectionReport = window.location.pathname === '/ai-threat-detection-report';
   const isZeroTrustHybridCloud = window.location.pathname === '/zero-trust-hybrid-cloud';
   const isDPDPAct2023 = window.location.pathname === '/dpdp-act-2023';
+  const isAbout = window.location.pathname === '/about';
   
   if (isMarketplace) {
     return <Marketplace />;
@@ -135,6 +137,10 @@ export function App(): React.ReactElement {
   
   if (isDPDPAct2023) {
     return <DPDPAct2023 />;
+  }
+  
+  if (isAbout) {
+    return <About />;
   }
   
   // Default homepage (original structure)
