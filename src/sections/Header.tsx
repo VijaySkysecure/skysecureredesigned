@@ -199,7 +199,13 @@ export function Header(): React.ReactElement {
                             className="header__submenu-link"
                             href={option.href}
                             role="menuitem"
-                            onClick={closeMenu}
+                            onClick={(e) => {
+                              if (option.href.startsWith('/')) {
+                                e.preventDefault();
+                                window.location.href = option.href;
+                              }
+                              closeMenu();
+                            }}
                           >
                             {option.label}
                           </a>

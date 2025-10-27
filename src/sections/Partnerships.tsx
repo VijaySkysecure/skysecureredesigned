@@ -2,10 +2,10 @@ import React from 'react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 const MICROSOFT_INTEGRATIONS = [
-  'Azure Security Center Integration',
-  'Microsoft Sentinel SIEM/SOAR',
-  'Microsoft 365 Defender Suite',
-  'Azure AD Identity Protection'
+  'Azure Security Center and Sentinel SIEM/SOAR Integration',
+  'Microsoft 365 Defender and Identity Governance',
+  'Purview Info Protection & DPDP Compliance Frameworks',
+  'End-to-end Security & Cloud Operations Management'
 ];
 
 
@@ -25,7 +25,7 @@ export function Partnerships(): React.ReactElement {
             <div className="microsoft-partner-content">
               <h3 className="microsoft-partner-title">Microsoft Security Partner</h3>
               <p className="microsoft-partner-description">
-                As a Microsoft Gold Partner, we integrate seamlessly with Azure Security Center, Microsoft Sentinel, and Microsoft 365 Defender to provide unified security management across your entire digital estate.
+              As we integrate seamlessly with Azure Security Center, Microsoft Sentinel, and Microsoft 365 Defender to provide unified security management across your entire digital estate.
               </p>
               <ul className="microsoft-integrations">
                 {MICROSOFT_INTEGRATIONS.map((integration, index) => (

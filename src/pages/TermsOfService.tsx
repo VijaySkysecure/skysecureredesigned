@@ -285,7 +285,7 @@ export function TermsOfService(): React.ReactElement {
             <hr className="terms-copyright-divider" />
             
             <div className="terms-copyright">
-              <p>© 2025 SkySecure Technologies, Inc.</p>
+              <p>© 2025 Skysecure Technologies, Inc.</p>
               <p>All Rights Reserved</p>
             </div>
           </div>

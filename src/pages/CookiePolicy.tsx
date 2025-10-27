@@ -145,7 +145,7 @@ export function CookiePolicy(): React.ReactElement {
             <hr className="cookie-copyright-divider" />
             
             <div className="cookie-copyright">
-              <p>© 2025 SkySecure Technologies, Inc.</p>
+              <p>© 2025 Skysecure Technologies, Inc.</p>
               <p>All Rights Reserved</p>
             </div>
           </div>
@@ -188,7 +188,7 @@ export function CookiePolicy(): React.ReactElement {
                   </svg>
                 </div>
                 <h3>Dispute Resolution</h3>
-                <p>Review our processes for handling disputes between buyers and sellers on the SkySecure Platform.</p>
+                <p>Review our processes for handling disputes between buyers and sellers on the Skysecure Platform.</p>
               </div>
             </div>
           </section>

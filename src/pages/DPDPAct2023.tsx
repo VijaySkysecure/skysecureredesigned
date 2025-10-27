@@ -67,18 +67,85 @@ export function DPDPAct2023(): React.ReactElement {
     role: ''
   });
 
+  const [validationErrors, setValidationErrors] = useState({
+    fullName: '',
+    email: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = () => {
+    const errors = {
+      fullName: '',
+      email: ''
+    };
+
+    // Validate Full Name
+    if (!formData.fullName.trim()) {
+      errors.fullName = 'Full Name is required';
+    } else if (formData.fullName.trim().length < 2) {
+      errors.fullName = 'Full Name must be at least 2 characters';
+    }
+
+    // Validate Email
+    if (!formData.email.trim()) {
+      errors.email = 'Email Address is required';
+    } else {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email.trim())) {
+        errors.email = 'Please enter a valid email address';
+      }
+    }
+
+    setValidationErrors(errors);
+    return !errors.fullName && !errors.email;
+  };
+
+  const downloadPDF = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/Skysecure Microsoft DPDP eBook.pdf';
+    link.download = 'Skysecure Microsoft DPDP eBook.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+
+    // Clear validation error when user starts typing
+    if (validationErrors[name as keyof typeof validationErrors]) {
+      setValidationErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    if (validateForm()) {
+      setIsSubmitting(true);
+      
+      // Simulate a brief delay for better UX
+      setTimeout(() => {
+        downloadPDF();
+        setIsSubmitting(false);
+        
+        // Optional: Reset form after successful download
+        setFormData({
+          fullName: '',
+          email: '',
+          companyName: '',
+          role: ''
+        });
+      }, 500);
+    }
   };
 
   return (
@@ -113,29 +180,6 @@ export function DPDPAct2023(): React.ReactElement {
                 }}>
                   Understanding India's landmark data protection legislation and how your organisation can achieve compliance with confidence.
                 </p>
-                <button style={{ 
-                  backgroundColor: 'rgba(10, 78, 255, 1)', 
-                  color: '#FFFFFF', 
-                  padding: '12px 24px', 
-                  borderRadius: '8px', 
-                  border: 'none', 
-                  fontSize: '16px', 
-                  fontWeight: '500', 
-                  cursor: 'pointer', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: '8px',
-                  fontFamily: 'Inter'
-                }}>
-                  <ImagePlaceholder
-                    label="Download Icon"
-                    imageName="knowledge/icon-download.png"
-                    width={16}
-                    height={16}
-                    borderRadius={0}
-                  />
-                  Download e-Book
-                </button>
               </div>
               {/* Right Visual */}
               <div style={{ flex: 1, textAlign: 'center' }}>
@@ -261,7 +305,7 @@ export function DPDPAct2023(): React.ReactElement {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '20px', marginBottom: '20px' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
-                    Full Name
+                    Full Name <span style={{ color: '#EF4444' }}>*</span>
                   </label>
                   <input
                     type="text"
@@ -271,17 +315,22 @@ export function DPDPAct2023(): React.ReactElement {
                     style={{
                       width: '100%',
                       padding: '12px 16px',
-                      border: '1px solid #D1D5DB',
+                      border: validationErrors.fullName ? '1px solid #EF4444' : '1px solid #D1D5DB',
                       borderRadius: '8px',
                       fontSize: '16px',
                       fontFamily: 'Inter'
                     }}
                     required
                   />
+                  {validationErrors.fullName && (
+                    <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
+                      {validationErrors.fullName}
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
-                    Email Address
+                    Email Address <span style={{ color: '#EF4444' }}>*</span>
                   </label>
                   <input
                     type="email"
@@ -291,13 +340,18 @@ export function DPDPAct2023(): React.ReactElement {
                     style={{
                       width: '100%',
                       padding: '12px 16px',
-                      border: '1px solid #D1D5DB',
+                      border: validationErrors.email ? '1px solid #EF4444' : '1px solid #D1D5DB',
                       borderRadius: '8px',
                       fontSize: '16px',
                       fontFamily: 'Inter'
                     }}
                     required
                   />
+                  {validationErrors.email && (
+                    <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
+                      {validationErrors.email}
+                    </p>
+                  )}
                 </div>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '32px' }}>
@@ -318,7 +372,6 @@ export function DPDPAct2023(): React.ReactElement {
                       fontSize: '16px',
                       fontFamily: 'Inter'
                     }}
-                    required
                   />
                 </div>
                 <div>
@@ -338,7 +391,6 @@ export function DPDPAct2023(): React.ReactElement {
                       fontFamily: 'Inter',
                       backgroundColor: '#FFFFFF'
                     }}
-                    required
                   >
                     <option value="">Select Role</option>
                     <option value="CISO">CISO</option>
@@ -352,20 +404,22 @@ export function DPDPAct2023(): React.ReactElement {
               </div>
               <button
                 type="submit"
+                disabled={isSubmitting}
                 style={{
-                  backgroundColor: 'rgba(10, 78, 255, 1)',
+                  backgroundColor: isSubmitting ? '#9CA3AF' : 'rgba(10, 78, 255, 1)',
                   color: '#FFFFFF',
                   padding: '12px 24px',
                   borderRadius: '8px',
                   border: 'none',
                   fontSize: '16px',
                   fontWeight: '500',
-                  cursor: 'pointer',
+                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
                   fontFamily: 'Inter',
-                  margin: '0 auto'
+                  margin: '0 auto',
+                  opacity: isSubmitting ? 0.7 : 1
                 }}
               >
                 <ImagePlaceholder
@@ -375,7 +429,7 @@ export function DPDPAct2023(): React.ReactElement {
                   height={16}
                   borderRadius={0}
                 />
-                Download PDF
+                {isSubmitting ? 'Downloading...' : 'Download PDF'}
               </button>
             </form>
           </div>

@@ -58,13 +58,13 @@ export function Careers(): React.ReactElement {
 
         <div className="mission-cta-panel">
           <div className="mission-cta-content">
-            <h3 className="mission-cta-title">Ready to Make a Difference?</h3>
+            <h3 className="mission-cta-title">Ready to Create Real Impact?</h3>
             <p className="mission-cta-description">
-              Join a team that's protecting organizations worldwide and shaping the future of AI-driven cybersecurity.
+            Join Skysecure’s global team to design solutions that protect data, build trust, and transform businesses.
             </p>
             <div className="mission-cta-buttons">
-              <button className="mission-button mission-button--primary">View Open Positions</button>
-              <button className="mission-button mission-button--secondary">Take Skill Challenge</button>
+              <button className="mission-button mission-button--primary">Explore Career Opportunities</button>
+              <button className="mission-button mission-button--secondary">Build an AI Agent with Us</button>
             </div>
           </div>
           <div className="mission-metrics">

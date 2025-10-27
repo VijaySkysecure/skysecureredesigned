@@ -59,7 +59,9 @@ export function Footer(): React.ReactElement {
                 {links.map((link, index) => {
                   // Link the first 6 Solutions items to their respective pages
                   const isSolutionLink = title === 'Solutions' && index < 6;
+                  const isAboutLink = title === 'Company' && link === 'About Us';
                   const isContactLink = title === 'Company' && link === 'Contact';
+                  const isCareersLink = title === 'Company' && link === 'Careers';
                   const getSolutionHref = (linkName: string) => {
                     switch (linkName) {
                       case '24/7 SOC Monitoring': return '/soc-monitoring';
@@ -75,14 +77,20 @@ export function Footer(): React.ReactElement {
                   return (
                     <li key={link}>
                       <a 
-                        href={isSolutionLink ? getSolutionHref(link) : isContactLink ? '/contact' : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={isSolutionLink ? getSolutionHref(link) : isAboutLink ? '/about' : isContactLink ? '/contact' : isCareersLink ? '#careers' : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
                         className="footer__link"
                         onClick={isSolutionLink ? (e) => {
                           e.preventDefault();
                           window.location.href = getSolutionHref(link);
+                        } : isAboutLink ? (e) => {
+                          e.preventDefault();
+                          window.location.href = '/about';
                         } : isContactLink ? (e) => {
                           e.preventDefault();
                           window.location.href = '/contact';
+                        } : isCareersLink ? (e) => {
+                          e.preventDefault();
+                          window.location.href = '#careers';
                         } : undefined}
                       >
                         {link}
