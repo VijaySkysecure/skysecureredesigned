@@ -12,9 +12,7 @@ const FOOTER_LINKS = {
   ],
   Company: [
     'About Us',
-    'Leadership',
     'Careers',
-    'Partners',
     'Contact'
   ],
   Resources: [
