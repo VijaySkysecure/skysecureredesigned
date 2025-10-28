@@ -21,8 +21,8 @@ const NAV_ITEMS: NavLink[] = [
     label: 'Solutions',
     href: '#solutions',
     menu: [
-      { label: 'Professional Services', href: '#services-advisory' },
-      { label: 'Managed Services', href: '#services-managed' },
+      { label: 'Professional Services', href: '/professional-services' },
+      { label: 'Managed Services', href: '/managed-services' },
     ],
   },
   {
