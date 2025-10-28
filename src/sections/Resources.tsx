@@ -202,19 +202,11 @@ export function Resources(): React.ReactElement {
                   )}
                   
                   <div className="resource-action-group">
-                    {resource.action && (
-                      <a className="resource-action" href="#insights">
-                        {resource.action}
-                      </a>
-                    )}
                     {resource.pages && (
                       <div className="resource-pages">{resource.pages}</div>
                     )}
                     {resource.readTime && (
                       <div className="resource-read-time">{resource.readTime}</div>
-                    )}
-                    {resource.price && (
-                      <div className="resource-price">{resource.price}</div>
                     )}
                   </div>
                 </div>
