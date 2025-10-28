@@ -741,12 +741,15 @@ export function About(): React.ReactElement {
                   Global Presence
                 </h2>
                 <p style={{ 
-                  fontSize: '18px', 
+                  fontSize: '16px', 
                   color: '#64748B', 
                   lineHeight: '1.6', 
                   margin: '0 0 32px 0'
                 }}>
-                  Global Cybersecurity Expertise Skysecure operates across Bangalore, Coimbatore, Singapore, and the UAE—each office specializing in regional needs, from innovation and industrial security to finance and government protection, ensuring 24/7 monitoring and rapid response. Tailored, Trusted Solutions: Combining local insight with global intelligence, we deliver customized cybersecurity backed by continuous training, strong partnerships, and a commitment to sustainability and client trust worldwide.
+                  Global Cybersecurity Expertise Skysecure operates across Bangalore, Coimbatore, Singapore, and the UAE—each office specializing in regional needs, from innovation and industrial security to finance and government protection, ensuring 24/7 monitoring and rapid response.
+                  <br />
+                  <br />
+                  Tailored, Trusted Solutions: Combining local insight with global intelligence, we deliver customized cybersecurity backed by continuous training, strong partnerships, and a commitment to sustainability and client trust worldwide.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   {GLOBAL_OFFICES.map((office, index) => (
