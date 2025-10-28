@@ -45,10 +45,10 @@ export function Footer(): React.ReactElement {
               Leading the future of cybersecurity through AI innovation and global MSSP services.
             </p>
             <div className="footer__social">
-              <ImagePlaceholder label="LinkedIn" imageName="homepage/icon-linkedin.png" width={28} height={28} borderRadius={0} />
-              <ImagePlaceholder label="Twitter" imageName="homepage/icon-twitter.png" width={28} height={28} borderRadius={0} />
-              <ImagePlaceholder label="YouTube" imageName="homepage/icon-youtube.png" width={28} height={28} borderRadius={0} />
-              <ImagePlaceholder label="GitHub" imageName="homepage/icon-github.png" width={28} height={28} borderRadius={0} />
+              <ImagePlaceholder label="LinkedIn" imageName="homepage/icon-linkedin.png" width={32} height={32} borderRadius={0} />
+              <ImagePlaceholder label="Twitter" imageName="homepage/icon-twitter.png" width={32} height={32} borderRadius={0} />
+              <ImagePlaceholder label="YouTube" imageName="homepage/icon-youtube.png" width={32} height={32} borderRadius={0} />
+              <ImagePlaceholder label="GitHub" imageName="homepage/icon-github.png" width={32} height={32} borderRadius={0} />
             </div>
           </div>
           
@@ -106,7 +106,7 @@ export function Footer(): React.ReactElement {
         <div className="footer__divider"></div>
         
         <div className="footer__bottom">
-          <span className="footer__copyright">© 2025 Skysecure. All rights reserved.</span>
+          <span className="footer__copyright" style={{ marginLeft: '88px' }}>© 2025 Skysecure. All rights reserved.</span>
           <div className="footer__legal">
             <a 
               href="/privacy-policy" 
