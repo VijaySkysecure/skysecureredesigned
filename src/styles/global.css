@@ -3405,7 +3405,6 @@ footer section .container {
   /* Card grids - force single column */
   .card-grid,
   .what-we-do-grid,
-  .resource-grid,
   .values-grid,
   .profile-grid,
   .partnerships-grid,
@@ -3416,6 +3415,32 @@ footer section .container {
   .success-stories {
     grid-template-columns: 1fr !important;
     gap: 16px;
+  }
+  
+  /* Careers content - stack on mobile */
+  .careers-content {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  
+  /* Resource grid - horizontal scroll on mobile */
+  .resource-grid {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 0 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .resource-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+  }
+  
+  /* Microsoft Security Partner - reduce blue tick text size on mobile */
+  .integration-item span {
+    font-size: 10px !important;
   }
   
   /* Individual cards */
@@ -3549,6 +3574,33 @@ footer section .container {
     grid-template-columns: 1fr !important;
     gap: 24px;
     margin: 0 16px 24px 16px;
+  }
+  
+  .footer__brand {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer__column {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer__column:nth-child(4) {
+    order: 3;
+    margin-left: 70px;
+  }
+  
+  .footer__column:nth-child(2) {
+    order: 1;
+  }
+  
+  .footer__column:nth-child(3) {
+    order: 2;
+  }
+  
+  .footer__links {
+    align-items: center;
   }
   
   .footer__bottom {
