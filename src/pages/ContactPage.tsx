@@ -23,7 +23,7 @@ export function ContactPage(): React.ReactElement {
               <p className="contact-hero-subtitle">
                 We're here to help whether you need product information, support, or partnership opportunities.
               </p>
-              <button className="contact-hero-button">Send Us a Message</button>
+              {/* <button className="contact-hero-button">Send Us a Message</button> */}
             </div>
             <div className="contact-hero-right">
               <ImagePlaceholder
@@ -45,7 +45,13 @@ export function ContactPage(): React.ReactElement {
             {/* Call Us Card */}
             <div className="contact-card">
               <div className="contact-card-icon">
-                📞
+                <ImagePlaceholder
+                  label="Call Us"
+                  imageName="contact/call-us.png"
+                  width={48}
+                  height={48}
+                  borderRadius={0}
+                />
               </div>
               <h3 className="contact-card-title">Call Us</h3>
               <p className="contact-card-description">
@@ -57,7 +63,13 @@ export function ContactPage(): React.ReactElement {
             {/* Email Us Card */}
             <div className="contact-card">
               <div className="contact-card-icon">
-                ✉️
+                <ImagePlaceholder
+                  label="Email Us"
+                  imageName="contact/email-us.png"
+                  width={48}
+                  height={48}
+                  borderRadius={0}
+                />
               </div>
               <h3 className="contact-card-title">Email Us</h3>
               <p className="contact-card-description">
@@ -69,7 +81,13 @@ export function ContactPage(): React.ReactElement {
             {/* Visit Us Card */}
             <div className="contact-card">
               <div className="contact-card-icon">
-                📍
+                <ImagePlaceholder
+                  label="Visit Us"
+                  imageName="contact/visit-us.png"
+                  width={48}
+                  height={48}
+                  borderRadius={0}
+                />
               </div>
               <h3 className="contact-card-title">Visit Us</h3>
               <p className="contact-card-description">
@@ -83,7 +101,7 @@ export function ContactPage(): React.ReactElement {
 
       {/* Map Section */}
       <section className="contact-map-section" id="map">
-        <div className="container">
+        <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
           <ImagePlaceholder
             label="Map"
             imageName="contact/contact_map.png"
