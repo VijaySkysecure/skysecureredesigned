@@ -60,7 +60,7 @@ const Marketplace: React.FC = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="page-hero">
+      <section className="page-hero" style={{ background: 'linear-gradient(135deg, #007FFF1A 10%, #00000000 0%, #0066CC1A 10%)' }}>
         <div className="container">
           <div className="page-hero__content">
             <h1 className="page-hero__title">
