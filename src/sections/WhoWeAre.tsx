@@ -2,7 +2,7 @@ import React from 'react';
 
 export function WhoWeAre(): React.ReactElement {
   return (
-    <section className="section--light" id="about">
+    <section className="section--light" id="about" style={{ paddingTop: '16px', paddingBottom: '20px'}}>
       <div className="container">
         <div className="who-we-are__content">
           <h2 className="who-we-are__title">Who We Are</h2>
