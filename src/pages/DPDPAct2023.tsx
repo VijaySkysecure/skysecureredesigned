@@ -63,13 +63,16 @@ export function DPDPAct2023(): React.ReactElement {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
+    countryCode: '+91',
+    phoneNumber: '',
     companyName: '',
     role: ''
   });
 
   const [validationErrors, setValidationErrors] = useState({
     fullName: '',
-    email: ''
+    email: '',
+    phoneNumber: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -77,7 +80,8 @@ export function DPDPAct2023(): React.ReactElement {
   const validateForm = () => {
     const errors = {
       fullName: '',
-      email: ''
+      email: '',
+      phoneNumber: ''
     };
 
     // Validate Full Name
@@ -97,8 +101,18 @@ export function DPDPAct2023(): React.ReactElement {
       }
     }
 
+    // Validate Phone Number
+    if (!formData.phoneNumber.trim()) {
+      errors.phoneNumber = 'Phone Number is required';
+    } else {
+      const phoneRegex = /^[0-9]{10,15}$/;
+      if (!phoneRegex.test(formData.phoneNumber.trim())) {
+        errors.phoneNumber = 'Please enter a valid phone number (10-15 digits)';
+      }
+    }
+
     setValidationErrors(errors);
-    return !errors.fullName && !errors.email;
+    return !errors.fullName && !errors.email && !errors.phoneNumber;
   };
 
   const downloadPDF = () => {
@@ -141,6 +155,8 @@ export function DPDPAct2023(): React.ReactElement {
         setFormData({
           fullName: '',
           email: '',
+          countryCode: '+91',
+          phoneNumber: '',
           companyName: '',
           role: ''
         });
@@ -350,6 +366,68 @@ export function DPDPAct2023(): React.ReactElement {
                   {validationErrors.email && (
                     <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
                       {validationErrors.email}
+                    </p>
+                  )}
+                </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
+                    Phone Number <span style={{ color: '#EF4444' }}>*</span>
+                  </label>
+                  <div style={{ display: 'flex', gap: '8px' }}>
+                    <select
+                      name="countryCode"
+                      value={formData.countryCode}
+                      onChange={handleInputChange}
+                      style={{
+                        padding: '12px 8px',
+                        border: '1px solid #D1D5DB',
+                        borderRadius: '8px',
+                        fontSize: '16px',
+                        fontFamily: 'Inter',
+                        backgroundColor: '#FFFFFF',
+                        minWidth: '100px'
+                      }}
+                    >
+                      <option value="+91">🇮🇳 +91</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                      <option value="+49">🇩🇪 +49</option>
+                      <option value="+33">🇫🇷 +33</option>
+                      <option value="+81">🇯🇵 +81</option>
+                      <option value="+86">🇨🇳 +86</option>
+                      <option value="+61">🇦🇺 +61</option>
+                      <option value="+55">🇧🇷 +55</option>
+                      <option value="+7">🇷🇺 +7</option>
+                      <option value="+971">🇦🇪 +971</option>
+                      <option value="+65">🇸🇬 +65</option>
+                      <option value="+60">🇲🇾 +60</option>
+                      <option value="+66">🇹🇭 +66</option>
+                      <option value="+84">🇻🇳 +84</option>
+                      <option value="+63">🇵🇭 +63</option>
+                      <option value="+62">🇮🇩 +62</option>
+                      <option value="+82">🇰🇷 +82</option>
+                      <option value="+886">🇹🇼 +886</option>
+                      <option value="+852">🇭🇰 +852</option>
+                    </select>
+                    <input
+                      type="tel"
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleInputChange}
+                      style={{
+                        flex: 1,
+                        padding: '12px 16px',
+                        border: validationErrors.phoneNumber ? '1px solid #EF4444' : '1px solid #D1D5DB',
+                        borderRadius: '8px',
+                        fontSize: '16px',
+                        fontFamily: 'Inter'
+                      }}
+                      required
+                    />
+                  </div>
+                  {validationErrors.phoneNumber && (
+                    <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
+                      {validationErrors.phoneNumber}
                     </p>
                   )}
                 </div>
@@ -722,20 +800,6 @@ export function DPDPAct2023(): React.ReactElement {
                 </div>
               ))}
             </div>
-            <button style={{ 
-              backgroundColor: '#FFFFFF', 
-              color: 'rgba(10, 78, 255, 1)', 
-              padding: '12px 24px', 
-              borderRadius: '8px', 
-              border: 'none', 
-              fontSize: '16px', 
-              fontWeight: '500', 
-              cursor: 'pointer',
-              fontFamily: 'Inter',
-              marginTop: '40px'
-            }}>
-              Speak to our Compliance Experts
-            </button>
           </div>
         </section>
       </main>

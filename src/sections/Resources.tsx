@@ -8,8 +8,7 @@ const RESOURCES = [
     category: 'SKYSECURE DECODE',
     title: 'Daily Threat Brief: Ransomware Evolution',
     description: 'Latest analysis on emerging ransomware tactics and defensive strategies for enterprise environments.',
-    imageName: 'homepage/cover-adaptive-compliance.png',
-    duration: '3:42',
+    imageName: 'knowledge/ransomware-skull-hero.png',
     author: 'Security Team',
     date: 'Today',
     authorImage: 'homepage/secteam.png',
@@ -20,7 +19,6 @@ const RESOURCES = [
     title: 'AI-Driven Threat Detection: 2024 Report',
     description: 'Comprehensive analysis of machine learning applications in cybersecurity and their effectiveness against modern threats.',
     imageName: 'homepage/cover-zero-trust.png',
-    action: 'Download PDF',
     pages: '24 pages',
     isNew: true,
   },
@@ -29,8 +27,7 @@ const RESOURCES = [
     category: 'WHITEPAPER',
     title: 'Zero Trust in Hybrid Cloud Environments',
     description: 'Comprehensive guide to implementing Zero Trust architecture across hybrid cloud environments for enhanced security and compliance.',
-    imageName: 'homepage/cover-zero-trust-hybrid.png',
-    action: 'Download PDF',
+    imageName: 'knowledge/zero-trust-visual.png',
     pages: '28 pages',
     isNew: true,
   },
@@ -40,7 +37,6 @@ const RESOURCES = [
     title: 'Healthcare Cloud Security Overhaul',
     description: 'Transforming healthcare data protection through comprehensive cloud security modernization and Zero Trust implementation.',
     imageName: 'homepage/cover-threat-hunting.png',
-    action: 'Read Case Study→',
     readTime: '8 min read',
   },
   {
@@ -48,8 +44,7 @@ const RESOURCES = [
     category: 'CASE STUDY',
     title: 'Securing the Software Supply Chain for a B2B SaaS',
     description: 'Comprehensive software supply chain security implementation for B2B SaaS companies, protecting against vulnerabilities and ensuring compliance.',
-    imageName: 'homepage/cover-software-supply-chain.png',
-    action: 'Read Case Study→',
+    imageName: 'knowledge/software-supply-chain-network.png',
     readTime: '6 min read',
   },
   {
@@ -67,17 +62,17 @@ const RESOURCES = [
     category: 'BLOG POST',
     title: 'Threat Protection with Microsoft Azure Sentinel',
     description: 'With the rise of cybersecurity threats, organizations need reliable and scalable solutions to detect and respond to attacks.',
-    imageName: 'homepage/cover-azure-sentinel.png',
+    imageName: 'knowledge/azure-sentinel-hero.png',
     author: 'Nithin Ramegowda',
     date: 'July 08, 2023',
-    authorImage: 'homepage/nithin-ramegowda.png',
+    authorImage: 'homepage/portrait2.png',
   },
   {
     type: 'blog',
     category: 'BLOG POST',
     title: 'The Future of Cloud Security',
     description: 'As organizations continue to migrate their operations to the cloud, the security landscape is evolving rapidly.',
-    imageName: 'homepage/cover-cloud-security.png',
+    imageName: 'knowledge/cloud-security-hero.png',
     author: 'Suresh Kumar',
     date: 'July 26, 2024',
     authorImage: 'homepage/portrait1.png',
@@ -144,10 +139,10 @@ export function Resources(): React.ReactElement {
 
         {/* Resource Grid */}
         <div className="resource-grid">
-          {filteredResources.map((resource) => (
+          {filteredResources.map((resource, index) => (
             <article 
               key={resource.title} 
-              className="resource-card"
+              className={`resource-card ${index >= 3 ? 'resource-card--scrollable' : ''}`}
               onClick={resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security') ? () => { 
                 if (resource.title === 'A Guide to IT Security Transformation in Manufacturing') {
                   window.location.href = '/manufacturing-security-guide';
@@ -176,12 +171,14 @@ export function Resources(): React.ReactElement {
               style={{ cursor: (resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security')) || (resource.type === 'case-study' && (resource.title === 'Healthcare Cloud Security Overhaul' || resource.title === 'Securing the Software Supply Chain for a B2B SaaS')) || (resource.type === 'whitepaper' && (resource.title === 'AI-Driven Threat Detection: 2024 Report' || resource.title === 'Zero Trust in Hybrid Cloud Environments')) || (resource.type === 'video' && (resource.title === 'Daily Threat Brief: Ransomware Evolution' || resource.title === 'Weekly Cyber Intelligence Update')) ? 'pointer' : 'default' }}
             >
               <div className="resource-card__media">
-                <ImagePlaceholder
-                  label={`${resource.title} cover`}
-                  imageName={resource.imageName}
-                  height={200}
-                  borderRadius={0}
-                />
+                <div style={{ transform: 'scale(1.3)' }}>
+                  <ImagePlaceholder
+                    label={`${resource.title} cover`}
+                    imageName={resource.imageName}
+                    height={200}
+                    borderRadius={0}
+                  />
+                </div>
                 {resource.type === 'video' && (
                   <div className="video-overlay">
                     <div className="play-button">▶</div>
@@ -196,12 +193,6 @@ export function Resources(): React.ReactElement {
                 <div className={`resource-category ${resource.category === 'SKYSECURE DECODE' ? 'skysecure-decode' : ''}`}>{resource.category}</div>
                 <h3 className="resource-title">{resource.title}</h3>
                 <p className="resource-description">{resource.description}</p>
-                
-                {resource.action && (
-                  <a className="resource-action" href="#insights">
-                    {resource.action}
-                  </a>
-                )}
                 
                 <div className="resource-meta">
                   {resource.author && (
@@ -218,15 +209,23 @@ export function Resources(): React.ReactElement {
                       <span className="resource-date">{resource.date}</span>
                     </div>
                   )}
-                  {resource.pages && (
-                    <div className="resource-pages">{resource.pages}</div>
-                  )}
-                  {resource.readTime && (
-                    <div className="resource-read-time">{resource.readTime}</div>
-                  )}
-                  {resource.price && (
-                    <div className="resource-price">{resource.price}</div>
-                  )}
+                  
+                  <div className="resource-action-group">
+                    {resource.action && (
+                      <a className="resource-action" href="#insights">
+                        {resource.action}
+                      </a>
+                    )}
+                    {resource.pages && (
+                      <div className="resource-pages">{resource.pages}</div>
+                    )}
+                    {resource.readTime && (
+                      <div className="resource-read-time">{resource.readTime}</div>
+                    )}
+                    {resource.price && (
+                      <div className="resource-price">{resource.price}</div>
+                    )}
+                  </div>
                 </div>
               </div>
             </article>
