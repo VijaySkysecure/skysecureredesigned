@@ -63,8 +63,13 @@ export function Careers(): React.ReactElement {
             Join Skysecure’s global team to design solutions that protect data, build trust, and transform businesses.
             </p>
             <div className="mission-cta-buttons">
-              <button className="mission-button mission-button--primary">Explore Career Opportunities</button>
-              <button className="mission-button mission-button--secondary">Build an AI Agent with Us</button>
+              <button 
+                className="mission-button mission-button--primary"
+                onClick={() => window.open('https://desk.zoho.in/', '_blank')}
+              >
+                Explore Career Opportunities
+              </button>
+              {/* <button className="mission-button mission-button--secondary">Build an AI Agent with Us</button> */}
             </div>
           </div>
           <div className="mission-metrics">

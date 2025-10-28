@@ -90,7 +90,7 @@ export function Footer(): React.ReactElement {
                           window.location.href = '/contact';
                         } : isCareersLink ? (e) => {
                           e.preventDefault();
-                          window.location.href = '#careers';
+                          window.open('https://desk.zoho.in/', '_blank');
                         } : undefined}
                       >
                         {link}
