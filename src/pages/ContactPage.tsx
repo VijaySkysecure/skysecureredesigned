@@ -23,7 +23,7 @@ export function ContactPage(): React.ReactElement {
               <p className="contact-hero-subtitle">
                 We're here to help whether you need product information, support, or partnership opportunities.
               </p>
-              <button className="contact-hero-button">Send Us a Message</button>
+              {/* <button className="contact-hero-button">Send Us a Message</button> */}
             </div>
             <div className="contact-hero-right">
               <ImagePlaceholder
@@ -45,7 +45,13 @@ export function ContactPage(): React.ReactElement {
             {/* Call Us Card */}
             <div className="contact-card">
               <div className="contact-card-icon">
-                📞
+                <ImagePlaceholder
+                  label="Call Us"
+                  imageName="contact/call-us.png"
+                  width={48}
+                  height={48}
+                  borderRadius={0}
+                />
               </div>
               <h3 className="contact-card-title">Call Us</h3>
               <p className="contact-card-description">
@@ -57,7 +63,13 @@ export function ContactPage(): React.ReactElement {
             {/* Email Us Card */}
             <div className="contact-card">
               <div className="contact-card-icon">
-                ✉️
+                <ImagePlaceholder
+                  label="Email Us"
+                  imageName="contact/email-us.png"
+                  width={48}
+                  height={48}
+                  borderRadius={0}
+                />
               </div>
               <h3 className="contact-card-title">Email Us</h3>
               <p className="contact-card-description">
@@ -69,7 +81,13 @@ export function ContactPage(): React.ReactElement {
             {/* Visit Us Card */}
             <div className="contact-card">
               <div className="contact-card-icon">
-                📍
+                <ImagePlaceholder
+                  label="Visit Us"
+                  imageName="contact/visit-us.png"
+                  width={48}
+                  height={48}
+                  borderRadius={0}
+                />
               </div>
               <h3 className="contact-card-title">Visit Us</h3>
               <p className="contact-card-description">
@@ -83,7 +101,7 @@ export function ContactPage(): React.ReactElement {
 
       {/* Map Section */}
       <section className="contact-map-section" id="map">
-        <div className="container">
+        <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
           <ImagePlaceholder
             label="Map"
             imageName="contact/contact_map.png"
@@ -146,7 +164,7 @@ export function ContactPage(): React.ReactElement {
       </section>
 
       {/* Contact Form Section */}
-      <section className="contact-form-section">
+      <section className="contact-form-section" id="contact-form">
         <div className="container">
           <h2 className="contact-form-title">Send Us a Message</h2>
           <p className="contact-form-subtitle">
@@ -154,93 +172,103 @@ export function ContactPage(): React.ReactElement {
           </p>
 
           <form className="contact-form">
-            {/* Left Column - First Name */}
-            <div className="form-group">
-              <label htmlFor="firstName" className="form-label">First Name*</label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                className="form-input"
-                required
-              />
-            </div>
-
-            {/* Right Column - Message (spans 5 rows) */}
-            <div className="form-group form-group-message">
-              <label htmlFor="message" className="form-label">Message*</label>
-              <textarea
-                id="message"
-                name="message"
-                className="form-textarea"
-                placeholder="Write your message here (Minimum 10 characters required)"
-                required
-              ></textarea>
-            </div>
-
-            {/* Left Column - Last Name */}
-            <div className="form-group">
-              <label htmlFor="lastName" className="form-label">Last Name*</label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                className="form-input"
-                required
-              />
-            </div>
-
-            {/* Left Column - Email Address */}
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">Email Address*</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="form-input"
-                required
-              />
-            </div>
-
-            {/* Left Column - Phone Number */}
-            <div className="form-group">
-              <label htmlFor="phone" className="form-label">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                className="form-input"
-              />
-            </div>
-
-            {/* Left Column - Company Name */}
-            <div className="form-group">
-              <label htmlFor="company" className="form-label">Company Name*</label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                className="form-input"
-                required
-              />
-            </div>
-
-            {/* Right Column - Checkbox and Submit Button */}
-            <div className="form-group-submit">
-              <div className="form-checkbox">
+            {/* Left Column - All Input Fields */}
+            <div className="form-left-column">
+              {/* First Name */}
+              <div className="form-group">
+                <label htmlFor="firstName" className="form-label">First Name*</label>
                 <input
-                  type="checkbox"
-                  id="marketing"
-                  name="marketing"
-                  className="form-checkbox-input"
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  className="form-input"
+                  required
                 />
-                <label htmlFor="marketing" className="form-checkbox-label">
-                  I agree to receive marketing communications from Skysecure.
-                </label>
               </div>
-              <button type="submit" className="form-submit-button">
-                Submit Inquiry
-              </button>
+
+              {/* Last Name */}
+              <div className="form-group">
+                <label htmlFor="lastName" className="form-label">Last Name*</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  className="form-input"
+                  required
+                />
+              </div>
+
+              {/* Email Address */}
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">Email Address*</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="form-input"
+                  required
+                />
+              </div>
+
+              {/* Phone Number */}
+              <div className="form-group">
+                <label htmlFor="phone" className="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  className="form-input"
+                />
+              </div>
+
+              {/* Company Name */}
+              <div className="form-group">
+                <label htmlFor="company" className="form-label">Company Name*</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  className="form-input"
+                  required
+                />
+              </div>
+            </div>
+
+            {/* Right Column - Message, Checkbox, Submit */}
+            <div className="form-right-column">
+              {/* Message */}
+              <div className="form-group">
+                <label htmlFor="message" className="form-label">Message*</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="form-textarea"
+                  placeholder="Write your message here (Minimum 10 characters required)"
+                  required
+                ></textarea>
+              </div>
+
+              {/* Checkbox */}
+              <div className="form-group">
+                <div className="form-checkbox">
+                  <input
+                    type="checkbox"
+                    id="marketing"
+                    name="marketing"
+                    className="form-checkbox-input"
+                  />
+                  <label htmlFor="marketing" className="form-checkbox-label" style={{ fontSize: '14px' }}>
+                    I agree to receive marketing communications from Skysecure.
+                  </label>
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <div className="form-group">
+                <button type="submit" className="form-submit-button">
+                  Submit Inquiry
+                </button>
+              </div>
             </div>
           </form>
         </div>
@@ -258,8 +286,17 @@ export function ContactPage(): React.ReactElement {
               Skysecure is just a message away.
             </p>
             <div className="contact-cta-buttons">
-              <button className="cta-button cta-button-primary">Get in Touch</button>
-              <button className="cta-button cta-button-secondary">Book a Consultation</button>
+              <button 
+                className="cta-button cta-button-primary"
+                onClick={() => {
+                  const element = document.getElementById('contact-form');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Contact Us
+              </button>
             </div>
           </div>
         </div>

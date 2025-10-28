@@ -88,15 +88,6 @@ const RESOURCES = [
     date: '3 days ago',
     authorImage: 'homepage/intelteam.png',
   },
-  {
-    type: 'guide',
-    category: 'GUIDE',
-    title: 'SOC 2 Compliance Checklist',
-    description: 'Step-by-step guide to achieving SOC 2 compliance with practical implementation strategies and timelines.',
-    imageName: 'homepage/cover-soc2.png',
-    action: 'Download Guide',
-    price: 'Free',
-  },
 ];
 
 const FILTER_OPTIONS = [
@@ -211,19 +202,11 @@ export function Resources(): React.ReactElement {
                   )}
                   
                   <div className="resource-action-group">
-                    {resource.action && (
-                      <a className="resource-action" href="#insights">
-                        {resource.action}
-                      </a>
-                    )}
                     {resource.pages && (
                       <div className="resource-pages">{resource.pages}</div>
                     )}
                     {resource.readTime && (
                       <div className="resource-read-time">{resource.readTime}</div>
-                    )}
-                    {resource.price && (
-                      <div className="resource-price">{resource.price}</div>
                     )}
                   </div>
                 </div>

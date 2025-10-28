@@ -27,7 +27,7 @@ export function CoreValues(): React.ReactElement {
         <div className="core-values-card">
           <SectionHeader
             title="Our Core Values"
-            description="The principles that guide our mission to protect organizations worldwide"
+            description="Guided by purpose. Driven by innovation. Committed to protecting the digital future."
           />
           <div className="values-grid">
             {VALUES.map((value) => (

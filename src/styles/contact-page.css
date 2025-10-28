@@ -155,7 +155,6 @@
 /* Map Section */
 .contact-map-section {
   padding-top: 40px;
-  padding-left: 10px;
 }
 
 .contact-map-section .container {
@@ -281,14 +280,25 @@
 }
 
 .contact-form {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding: 48px;
   border-radius: 12px;
-  background: rgba(248, 249, 251, 1);
+}
+
+.form-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form-row {
@@ -324,7 +334,7 @@
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 14px 16px;
+  padding: 8px 12px;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   font-size: 15px;
@@ -332,6 +342,7 @@
   transition: all 0.3s ease;
   font-family: inherit;
   background: #fff;
+  height: 40px;
 }
 
 .form-input:focus,
@@ -348,15 +359,15 @@
 
 .form-textarea {
   resize: none;
-  min-height: 100%;
-  height: 100%;
+  min-height: 320px;
+  height: 320px;
 }
 
 .form-checkbox {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  margin-top: -140px;
+  margin-top: 40px;
 }
 
 .form-checkbox-input {
@@ -488,15 +499,6 @@
   .contact-form {
     grid-template-columns: 1fr;
     padding: 32px;
-  }
-
-  .form-group-message {
-    grid-row: auto;
-    grid-column: 1;
-  }
-
-  .form-group-submit {
-    grid-column: 1;
   }
   
   .form-textarea {

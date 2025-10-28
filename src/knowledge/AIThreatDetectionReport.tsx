@@ -230,7 +230,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                 Discover how artificial intelligence is revolutionizing cybersecurity with unprecedented threat detection capabilities and automated response systems.
                 </p>
                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'nowrap' }}>
-                  <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter', whiteSpace: 'nowrap' }}>
+                  {/* <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter', whiteSpace: 'nowrap' }}>
                     <ImagePlaceholder
                       label="Download Icon"
                       imageName="knowledge/icon-download.png"
@@ -242,7 +242,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                   </button>
                   <button style={{ backgroundColor: '#FFFFFF', color: '#3B82F6', padding: '12px 24px', borderRadius: '8px', border: '1px solid #3B82F6', fontSize: '16px', fontWeight: '500', cursor: 'pointer', fontFamily: 'Inter', whiteSpace: 'nowrap' }}>
                     Contact Research Team
-                  </button>
+                  </button> */}
                 </div>
               </div>
               {/* Right Visual */}
@@ -269,7 +269,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                 As cyber threats become faster, stealthier, and more complex, traditional defense models are struggling to keep up. The AI-Driven Threat Detection 2024 Report by Skysecure analyzes the latest advancements in machine learning and automation for real-time cyber defense. This white paper presents industry trends, adoption insights, and strategies that help organizations detect, respond to, and neutralize threats with unprecedented speed and accuracy.
                 </p>
                 <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                  <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
+                  {/* <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
                     <ImagePlaceholder
                       label="Download Icon"
                       imageName="knowledge/icon-download.png"
@@ -281,7 +281,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                   </button>
                   <button style={{ backgroundColor: '#FFFFFF', color: 'rgba(10, 78, 255, 1)', padding: '12px 24px', borderRadius: '8px', border: '1px solid rgba(10, 78, 255, 1)', fontSize: '16px', fontWeight: '500', cursor: 'pointer', fontFamily: 'Inter' }}>
                     Contact Skysecure Research Team
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </section>
@@ -633,7 +633,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                   <p className="blog-section-text" style={{ marginBottom: '32px', textAlign: 'left' }}>
                     AI-driven threat detection is no longer a future concept—it's a present necessity. As cyber threats evolve, AI enables faster, smarter, and more resilient defense mechanisms. Skysecure's 2024 Report provides a comprehensive blueprint for organizations looking to harness AI responsibly and strategically in their security operations.
                   </p>
-                  <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+                  {/* <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
                     <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
                       <ImagePlaceholder
                         label="Download Icon"
@@ -647,7 +647,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                     <button style={{ backgroundColor: '#FFFFFF', color: 'rgba(10, 78, 255, 1)', padding: '12px 24px', borderRadius: '8px', border: '1px solid rgba(10, 78, 255, 1)', fontSize: '16px', fontWeight: '500', cursor: 'pointer', fontFamily: 'Inter' }}>
                       Talk to an AI Security Expert
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </section>
