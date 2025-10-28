@@ -633,14 +633,14 @@ export function About(): React.ReactElement {
                   </h3>
                   <p style={{ 
                     fontSize: '16px', 
-                    color: '#64748B', 
+                    color: '#007FFF', 
                     margin: '0 0 4px 0'
                   }}>
                     {leader.title}
                   </p>
                   <p style={{ 
                     fontSize: '14px', 
-                    color: '#3B82F6', 
+                    color: '#007FFF', 
                     fontWeight: '500',
                     margin: '0'
                   }}>
@@ -707,14 +707,14 @@ export function About(): React.ReactElement {
                   </h3>
                   <p style={{ 
                     fontSize: '16px', 
-                    color: '#64748B', 
+                    color: '#007FFF', 
                     margin: '0 0 4px 0'
                   }}>
                     {member.title}
                   </p>
                   <p style={{ 
                     fontSize: '14px', 
-                    color: '#3B82F6', 
+                    color: '#007FFF', 
                     fontWeight: '500',
                     margin: '0'
                   }}>
