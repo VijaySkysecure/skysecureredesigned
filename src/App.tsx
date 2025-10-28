@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Header } from './sections/Header';
 import { Hero } from './sections/Hero';
 import { WhoWeAre } from './sections/WhoWeAre';
@@ -191,6 +191,20 @@ export function App(): React.ReactElement {
     return <ManagedServices />;
   }
   
+  // Handle hash navigation for homepage
+  useEffect(() => {
+    if (window.location.pathname === '/' && window.location.hash) {
+      const hash = window.location.hash.substring(1); // Remove the # symbol
+      const element = document.getElementById(hash);
+      if (element) {
+        // Small delay to ensure page is fully loaded
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, []);
+
   // Default homepage (original structure)
   return (
     <div className="main-page">

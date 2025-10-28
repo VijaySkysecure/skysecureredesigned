@@ -93,15 +93,16 @@
 .contact-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 44px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
 .contact-card {
-  background: #fff;
+  background: rgba(248, 249, 251, 1);
   border-radius: 12px;
+  border: 1px solid rgba(229, 231, 235, 1);
   padding: 28px 24px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -390,11 +391,12 @@
   border: none;
   padding: 16px 32px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
+  font-family: 'Inter';
 }
 
 .form-submit-button:hover {

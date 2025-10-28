@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
@@ -8,6 +8,63 @@ import FlagAE from 'country-flag-icons/react/3x2/AE';
 import '../styles/contact-page.css';
 
 export function ContactPage(): React.ReactElement {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: '',
+    marketing: false
+  });
+
+  const [phoneError, setPhoneError] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target;
+    
+    // Reset submitted state when user types in any field
+    if (isSubmitted) {
+      setIsSubmitted(false);
+    }
+    
+    if (name === 'phone') {
+      // Remove any non-numeric characters
+      const numericValue = value.replace(/\D/g, '');
+      
+      // Check if first digit is 0
+      if (numericValue.length > 0 && numericValue[0] === '0') {
+        setPhoneError('Phone number cannot start with 0');
+        return;
+      } else {
+        setPhoneError('');
+      }
+      
+      setFormData(prev => ({
+        ...prev,
+        [name]: numericValue
+      }));
+    } else if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData(prev => ({
+        ...prev,
+        [name]: checked
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+  };
   return (
     <div className="contact-page">
       <Header />
@@ -128,10 +185,9 @@ export function ContactPage(): React.ReactElement {
                 <h3 className="office-location">India, Bangalore(HQ)</h3>
               </div>
               <p className="office-addres">
-                AGR Plaza, 6/1, Bellandur,<br />
+              Sakti Statesman, #G/M-06 & 07, Outer Ring Rd, Green Glen Layout, Ibbaluru,<br />
                 Bengaluru, Karnataka-560103
               </p>
-              <a href="#directions" className="office-link">Get Directions →</a>
             </div>
 
             {/* Singapore Office */}
@@ -144,7 +200,6 @@ export function ContactPage(): React.ReactElement {
                 30 Cecil Street, #19-08,<br />
                 Prudential Tower, Singapore-049712
               </p>
-              <a href="#directions" className="office-link">Get Directions →</a>
             </div>
 
             {/* UAE Office */}
@@ -157,7 +212,6 @@ export function ContactPage(): React.ReactElement {
                 Office No. 110, Sheikh Rashid Rd<br />
                 Al Garhoud – Deira, Dubai
               </p>
-              <a href="#directions" className="office-link">Get Directions →</a>
             </div>
           </div>
         </div>
@@ -171,7 +225,7 @@ export function ContactPage(): React.ReactElement {
             Fill out the form below and our team will reach out to you shortly.
           </p>
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             {/* Left Column - All Input Fields */}
             <div className="form-left-column">
               {/* First Name */}
@@ -182,6 +236,8 @@ export function ContactPage(): React.ReactElement {
                   id="firstName"
                   name="firstName"
                   className="form-input"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
@@ -194,6 +250,8 @@ export function ContactPage(): React.ReactElement {
                   id="lastName"
                   name="lastName"
                   className="form-input"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
@@ -206,19 +264,28 @@ export function ContactPage(): React.ReactElement {
                   id="email"
                   name="email"
                   className="form-input"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
 
               {/* Phone Number */}
               <div className="form-group">
-                <label htmlFor="phone" className="form-label">Phone Number</label>
+                <label htmlFor="phone" className="form-label">Phone Number*</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   className="form-input"
+                  value={formData.phone}
+                  onChange={handleInputChange}
                 />
+                {phoneError && (
+                  <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
+                    {phoneError}
+                  </p>
+                )}
               </div>
 
               {/* Company Name */}
@@ -229,6 +296,8 @@ export function ContactPage(): React.ReactElement {
                   id="company"
                   name="company"
                   className="form-input"
+                  value={formData.company}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
@@ -243,7 +312,8 @@ export function ContactPage(): React.ReactElement {
                   id="message"
                   name="message"
                   className="form-textarea"
-                  placeholder="Write your message here (Minimum 10 characters required)"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   required
                 ></textarea>
               </div>
@@ -256,6 +326,8 @@ export function ContactPage(): React.ReactElement {
                     id="marketing"
                     name="marketing"
                     className="form-checkbox-input"
+                    checked={formData.marketing}
+                    onChange={handleInputChange}
                   />
                   <label htmlFor="marketing" className="form-checkbox-label" style={{ fontSize: '14px' }}>
                     I agree to receive marketing communications from Skysecure.
@@ -265,8 +337,16 @@ export function ContactPage(): React.ReactElement {
 
               {/* Submit Button */}
               <div className="form-group">
-                <button type="submit" className="form-submit-button">
-                  Submit Inquiry
+                <button 
+                  type="submit" 
+                  className="form-submit-button"
+                  disabled={!formData.marketing}
+                  style={{
+                    opacity: formData.marketing ? 1 : 0.6,
+                    cursor: formData.marketing ? 'pointer' : 'not-allowed'
+                  }}
+                >
+                  {isSubmitted ? 'Submitted' : 'Submit Inquiry'}
                 </button>
               </div>
             </div>

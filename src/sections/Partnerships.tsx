@@ -8,6 +8,18 @@ const MICROSOFT_INTEGRATIONS = [
   'End-to-end Security & Cloud Operations Management'
 ];
 
+const PALO_ALTO_INTEGRATIONS = [
+  'Cortex XDR & XSIAM integration for proactive detection',
+  'Automated incident response and orchestration',
+  'MDR lab deployments for SMB to enterprise scale'
+];
+
+const COMMVAULT_INTEGRATIONS = [
+  'Backup-as-a-Service and Disaster Recovery-as-a-Service',
+  'Cloud workload protection and air-gapped recovery',
+  'Policy-driven data lifecycle governance'
+];
+
 
 export function Partnerships(): React.ReactElement {
   return (
@@ -16,36 +28,93 @@ export function Partnerships(): React.ReactElement {
         <div className="partnerships-header">
           <h2 className="partnerships-title">Strategic Partnerships</h2>
           <p className="partnerships-description">
-            Collaborating with industry leaders to deliver comprehensive cybersecurity solutions
+          Empowering enterprises through trusted alliances with global technology leaders. 
           </p>
         </div>
 
         <div className="partnerships-content">
-          <div className="microsoft-partner-section">
-            <div className="microsoft-partner-content">
-              <h3 className="microsoft-partner-title">Microsoft Security Partner</h3>
-              <p className="microsoft-partner-description">
-              As we integrate seamlessly with Azure Security Center, Microsoft Sentinel, and Microsoft 365 Defender to provide unified security management across your entire digital estate.
-              </p>
-              <ul className="microsoft-integrations">
-                {MICROSOFT_INTEGRATIONS.map((integration, index) => (
-                  <li key={index} className="integration-item">
-                    <div className="integration-checkmark">✓</div>
-                    <span>{integration}</span>
-                  </li>
-                ))}
-              </ul>
+          <div className="partnerships-grid">
+            {/* Microsoft Partner Column */}
+            <div className="partner-column">
+              <div className="microsoft-partner-content">
+                <h3 className="microsoft-partner-title">Microsoft Security Partner</h3>
+                <p className="microsoft-partner-description">
+                As a certified Microsoft Solutions Partner, Skysecure delivers end-to-end managed services powered by Azure, Sentinel, Defender, and Purview.
+                </p>
+                <ul className="microsoft-integrations">
+                  {MICROSOFT_INTEGRATIONS.map((integration, index) => (
+                    <li key={index} className="integration-item">
+                      <div className="integration-checkmark">✓</div>
+                      <span>{integration}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="microsoft-partner-card">
-              <ImagePlaceholder
-                label="Microsoft logo"
-                imageName="homepage/logo-microsoft.png"
-                width={370}
-                height={90}
-                borderRadius={0}
-              />
-              <div className="partner-badge-text">Solutions Partner</div>
-              <div className="partner-specialization">Security Specialization</div>
+
+            {/* Palo Alto Networks Column */}
+            <div className="partner-column">
+              <div className="microsoft-partner-content">
+                <h3 className="microsoft-partner-title">Palo Alto Networks - xMDR</h3>
+                <p className="microsoft-partner-description">
+                Skysecure partners with Palo Alto Networks to deliver XDR and XSIAM-based multi-tenant SOC solutions that combine AI automation with 24×7 human expertise.
+                </p>
+                <ul className="microsoft-integrations">
+                  {PALO_ALTO_INTEGRATIONS.map((integration, index) => (
+                    <li key={index} className="integration-item">
+                      <div className="integration-checkmark">✓</div>
+                      <span>{integration}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Commvault Column */}
+            <div className="partner-column">
+              <div className="microsoft-partner-content">
+                <h3 className="microsoft-partner-title">Commvault - Data Protection and Resilience</h3>
+                <p className="microsoft-partner-description">
+                With Commvault's enterprise backup and disaster recovery solutions, Skysecure ensures complete data availability, retention, and compliance.
+                </p>
+                <ul className="microsoft-integrations">
+                  {COMMVAULT_INTEGRATIONS.map((integration, index) => (
+                    <li key={index} className="integration-item">
+                      <div className="integration-checkmark">✓</div>
+                      <span>{integration}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Broader Ecosystem Column */}
+            <div className="partner-column">
+              <div className="microsoft-partner-content">
+                <h3 className="microsoft-partner-title">Fortinet, CrowdStrike, IBM & Beyond</h3>
+                <p className="microsoft-partner-description">
+                Skysecure's broader ecosystem includes Fortinet (Network & Zero-Trust Security), CrowdStrike (Endpoint & Threat Intelligence), and IBM (AI Orchestration & Automation), unified under a single managed operations framework for maximum protection and efficiency.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Our Specializations Section */}
+          <div className="specializations-section">
+            <h3 className="specializations-title">Our Specializations</h3>
+            <div className="specializations-grid">
+              <div className="specialization-card">
+                <h4 className="specialization-card-title">AI-Driven Managed Security (SOC & XDR)</h4>
+              </div>
+              <div className="specialization-card">
+                <h4 className="specialization-card-title">Data Protection and Compliance Automation (DPDP, ISO 27001)</h4>
+              </div>
+              <div className="specialization-card">
+                <h4 className="specialization-card-title">Cloud Infrastructure Optimization and Resilience</h4>
+              </div>
+              <div className="specialization-card">
+                <h4 className="specialization-card-title">AI Agent Development & Managed Automation</h4>
+              </div>
             </div>
           </div>
 

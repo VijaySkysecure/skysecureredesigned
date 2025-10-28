@@ -63,7 +63,6 @@ export function DPDPAct2023(): React.ReactElement {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
-    countryCode: '+91',
     phoneNumber: '',
     companyName: '',
     role: ''
@@ -108,6 +107,8 @@ export function DPDPAct2023(): React.ReactElement {
       const phoneRegex = /^[0-9]{10,15}$/;
       if (!phoneRegex.test(formData.phoneNumber.trim())) {
         errors.phoneNumber = 'Please enter a valid phone number (10-15 digits)';
+      } else if (formData.phoneNumber.trim()[0] === '0') {
+        errors.phoneNumber = 'Phone number cannot start with 0';
       }
     }
 
@@ -126,17 +127,42 @@ export function DPDPAct2023(): React.ReactElement {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-
-    // Clear validation error when user starts typing
-    if (validationErrors[name as keyof typeof validationErrors]) {
-      setValidationErrors(prev => ({
+    
+    if (name === 'phoneNumber') {
+      // Remove any non-numeric characters
+      const numericValue = value.replace(/\D/g, '');
+      
+      // Check if first digit is 0
+      if (numericValue.length > 0 && numericValue[0] === '0') {
+        setValidationErrors(prev => ({
+          ...prev,
+          phoneNumber: 'Phone number cannot start with 0'
+        }));
+        return;
+      } else {
+        setValidationErrors(prev => ({
+          ...prev,
+          phoneNumber: ''
+        }));
+      }
+      
+      setFormData(prev => ({
         ...prev,
-        [name]: ''
+        [name]: numericValue
       }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+
+      // Clear validation error when user starts typing
+      if (validationErrors[name as keyof typeof validationErrors]) {
+        setValidationErrors(prev => ({
+          ...prev,
+          [name]: ''
+        }));
+      }
     }
   };
 
@@ -155,7 +181,6 @@ export function DPDPAct2023(): React.ReactElement {
         setFormData({
           fullName: '',
           email: '',
-          countryCode: '+91',
           phoneNumber: '',
           companyName: '',
           role: ''
@@ -373,58 +398,21 @@ export function DPDPAct2023(): React.ReactElement {
                   <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
                     Phone Number <span style={{ color: '#EF4444' }}>*</span>
                   </label>
-                  <div style={{ display: 'flex', gap: '8px' }}>
-                    <select
-                      name="countryCode"
-                      value={formData.countryCode}
-                      onChange={handleInputChange}
-                      style={{
-                        padding: '12px 8px',
-                        border: '1px solid #D1D5DB',
-                        borderRadius: '8px',
-                        fontSize: '16px',
-                        fontFamily: 'Inter',
-                        backgroundColor: '#FFFFFF',
-                        minWidth: '100px'
-                      }}
-                    >
-                      <option value="+91">🇮🇳 +91</option>
-                      <option value="+1">🇺🇸 +1</option>
-                      <option value="+44">🇬🇧 +44</option>
-                      <option value="+49">🇩🇪 +49</option>
-                      <option value="+33">🇫🇷 +33</option>
-                      <option value="+81">🇯🇵 +81</option>
-                      <option value="+86">🇨🇳 +86</option>
-                      <option value="+61">🇦🇺 +61</option>
-                      <option value="+55">🇧🇷 +55</option>
-                      <option value="+7">🇷🇺 +7</option>
-                      <option value="+971">🇦🇪 +971</option>
-                      <option value="+65">🇸🇬 +65</option>
-                      <option value="+60">🇲🇾 +60</option>
-                      <option value="+66">🇹🇭 +66</option>
-                      <option value="+84">🇻🇳 +84</option>
-                      <option value="+63">🇵🇭 +63</option>
-                      <option value="+62">🇮🇩 +62</option>
-                      <option value="+82">🇰🇷 +82</option>
-                      <option value="+886">🇹🇼 +886</option>
-                      <option value="+852">🇭🇰 +852</option>
-                    </select>
-                    <input
-                      type="tel"
-                      name="phoneNumber"
-                      value={formData.phoneNumber}
-                      onChange={handleInputChange}
-                      style={{
-                        flex: 1,
-                        padding: '12px 16px',
-                        border: validationErrors.phoneNumber ? '1px solid #EF4444' : '1px solid #D1D5DB',
-                        borderRadius: '8px',
-                        fontSize: '16px',
-                        fontFamily: 'Inter'
-                      }}
-                      required
-                    />
-                  </div>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleInputChange}
+                    style={{
+                      width: '100%',
+                      padding: '12px 16px',
+                      border: validationErrors.phoneNumber ? '1px solid #EF4444' : '1px solid #D1D5DB',
+                      borderRadius: '8px',
+                      fontSize: '16px',
+                      fontFamily: 'Inter'
+                    }}
+                    required
+                  />
                   {validationErrors.phoneNumber && (
                     <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
                       {validationErrors.phoneNumber}

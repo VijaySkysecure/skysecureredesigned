@@ -673,10 +673,9 @@ export function About(): React.ReactElement {
               </p>
             </div>
             
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '40px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '60px' }}>
               {TEAM_MEMBERS.map((member, index) => (
                 <div key={index} style={{ 
-                  backgroundColor: '#F9FAFB', 
                   padding: '32px', 
                   borderRadius: '12px', 
                   textAlign: 'center',

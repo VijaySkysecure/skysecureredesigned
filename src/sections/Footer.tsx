@@ -21,9 +21,7 @@ const FOOTER_LINKS = {
     'Blog',
     'Whitepapers',
     'Case Studies',
-    'Skysecure Decode',
-    'Documentation',
-    'Support'
+    'Skysecure Decode'
   ]
 };
 
@@ -62,6 +60,7 @@ export function Footer(): React.ReactElement {
                   const isAboutLink = title === 'Company' && link === 'About Us';
                   const isContactLink = title === 'Company' && link === 'Contact';
                   const isCareersLink = title === 'Company' && link === 'Careers';
+                  const isResourceLink = title === 'Resources';
                   const getSolutionHref = (linkName: string) => {
                     switch (linkName) {
                       case '24/7 SOC Monitoring': return '/soc-monitoring';
@@ -77,7 +76,7 @@ export function Footer(): React.ReactElement {
                   return (
                     <li key={link}>
                       <a 
-                        href={isSolutionLink ? getSolutionHref(link) : isAboutLink ? '/about' : isContactLink ? '/contact' : isCareersLink ? '#careers' : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={isSolutionLink ? getSolutionHref(link) : isAboutLink ? '/about' : isContactLink ? '/contact' : isCareersLink ? '#careers' : isResourceLink ? '#resources' : `#${link.toLowerCase().replace(/\s+/g, '-')}`}
                         className="footer__link"
                         onClick={isSolutionLink ? (e) => {
                           e.preventDefault();
@@ -91,6 +90,19 @@ export function Footer(): React.ReactElement {
                         } : isCareersLink ? (e) => {
                           e.preventDefault();
                           window.open('https://skysecure.zohorecruit.in/jobs/Careers', '_blank');
+                        } : isResourceLink ? (e) => {
+                          e.preventDefault();
+                          // Navigate to homepage and scroll to resources section
+                          if (window.location.pathname !== '/') {
+                            // Navigate to homepage with hash to trigger scroll after page load
+                            window.location.href = '/#insights';
+                          } else {
+                            // Already on homepage, scroll to section
+                            const resourcesSection = document.getElementById('insights');
+                            if (resourcesSection) {
+                              resourcesSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }
                         } : undefined}
                       >
                         {link}

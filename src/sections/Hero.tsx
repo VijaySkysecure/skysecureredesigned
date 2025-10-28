@@ -19,7 +19,7 @@ export function Hero(): React.ReactElement {
               type="button" 
               className="button"
               style={{ 
-                width: '163px', 
+                width: '250px', 
                 height: '52px', 
                 borderRadius: '8px' 
               }}
@@ -27,7 +27,7 @@ export function Hero(): React.ReactElement {
                 window.location.href = '/dpdp-act-2023';
               }}
             >
-              Learn More
+              Learn More About DPDP
             </button>
           </div>
         </div>
