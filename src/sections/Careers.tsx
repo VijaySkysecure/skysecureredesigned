@@ -65,7 +65,7 @@ export function Careers(): React.ReactElement {
             <div className="mission-cta-buttons">
               <button 
                 className="mission-button mission-button--primary"
-                onClick={() => window.open('https://desk.zoho.in/', '_blank')}
+                onClick={() => window.open('https://skysecure.zohorecruit.in/jobs/Careers', '_blank')}
               >
                 Explore Career Opportunities
               </button>
