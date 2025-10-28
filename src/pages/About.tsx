@@ -35,7 +35,7 @@ const STATS = [
   {
     number: '10,000+',
     title: 'Products',
-    description: 'technology solutions available across multiple categories'
+    description: 'Technology solutions available across multiple categories'
   },
   {
     number: '5,000+',

@@ -971,6 +971,45 @@ section {
   gap: 32px;
 }
 
+/* Horizontal scroll for All Resources tab - cards after the first 3 */
+.resource-grid:has(.resource-card--scrollable) {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 32px;
+  padding-bottom: 16px;
+}
+
+.resource-grid:has(.resource-card--scrollable) .resource-card:not(.resource-card--scrollable) {
+  flex: 0 0 calc(33.333% - 22px);
+  scroll-snap-align: start;
+}
+
+.resource-grid:has(.resource-card--scrollable) .resource-card--scrollable {
+  flex: 0 0 calc(33.333% - 22px);
+  scroll-snap-align: start;
+}
+
+/* Hide scrollbar but keep functionality */
+.resource-grid:has(.resource-card--scrollable)::-webkit-scrollbar {
+  height: 8px;
+}
+
+.resource-grid:has(.resource-card--scrollable)::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.resource-grid:has(.resource-card--scrollable)::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.resource-grid:has(.resource-card--scrollable)::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
 .resource-card {
   background: var(--color-white);
   border-radius: var(--radius-md);
@@ -990,7 +1029,7 @@ section {
 .resource-card__media {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 180px;
   border-radius: 0;
   overflow: hidden;
 }
@@ -1049,7 +1088,7 @@ section {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   flex: 1;
 }
 
@@ -1073,7 +1112,7 @@ section {
 .resource-description {
   font-size: 14px;
   color: var(--color-grey);
-  line-height: 1.5;
+  line-height: 1.0;
   margin: 0;
   flex: 1;
 }
@@ -1095,22 +1134,29 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 8px;
+  margin-top: 0px;
   font-size: 12px;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-wrap: nowrap;
+  margin-bottom: -30px;
 }
 
 .resource-author {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
+}
+
+.resource-author .author-name {
+  margin-right: 8px;
+  margin-top: 8px;
 }
 
 .author-avatar {
   width: 17px;
   height: 17px;
-  border-radius: 0;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .author-name {
@@ -1121,6 +1167,7 @@ section {
 
 .resource-date {
   color: var(--color-grey);
+  margin-left: 100px;
 }
 
 .resource-pages,
@@ -1128,6 +1175,23 @@ section {
 .resource-price {
   color: var(--color-grey);
   font-weight: 500;
+  flex-shrink: 0;
+  margin-left: 120px;
+}
+
+.resource-action-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.resource-action {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-blue);
+  text-decoration: none;
+  margin: 0;
 }
 
 

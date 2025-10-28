@@ -34,7 +34,7 @@
 }
 
 .text-primary {
-  color: #0066ff;
+  color: rgba(37, 99, 235, 1);
 }
 
 .contact-hero-subtitle {
@@ -54,6 +54,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: 'Inter'
 }
 
 .contact-hero-button:hover {
@@ -261,7 +262,6 @@
 /* Contact Form Section */
 .contact-form-section {
   padding: 80px 0;
-  background: #fff;
 }
 
 .contact-form-title {
@@ -314,6 +314,7 @@
 .form-group-message {
   grid-row: 1 / 6;
   grid-column: 2;
+  height: 70%;
 }
 
 .form-group-submit {
@@ -339,8 +340,8 @@
   font-size: 15px;
   color: #1a1a1a;
   transition: all 0.3s ease;
-  background: #fff;
   font-family: inherit;
+  background: #fff;
   height: 40px;
 }
 
