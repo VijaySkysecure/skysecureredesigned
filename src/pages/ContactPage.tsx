@@ -2,6 +2,9 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import Flag from 'country-flag-icons/react/3x2/IN';
+import FlagSG from 'country-flag-icons/react/3x2/SG';
+import FlagAE from 'country-flag-icons/react/3x2/AE';
 import '../styles/contact-page.css';
 
 export function ContactPage(): React.ReactElement {
@@ -84,8 +87,8 @@ export function ContactPage(): React.ReactElement {
           <ImagePlaceholder
             label="Map"
             imageName="contact/contact_map.png"
-            width={1185}
-            height={375}
+            width={990}
+            height={320}
             borderRadius={8}
           />
         </div>
@@ -103,7 +106,7 @@ export function ContactPage(): React.ReactElement {
             {/* India Office */}
             <div className="office-card">
               <div className="office-flag">
-                <span className="flag-icon">🇮🇳</span>
+                <Flag className="flag-icon" />
                 <h3 className="office-location">India, Bangalore(HQ)</h3>
               </div>
               <p className="office-addres">
@@ -116,7 +119,7 @@ export function ContactPage(): React.ReactElement {
             {/* Singapore Office */}
             <div className="office-card">
               <div className="office-flag">
-                <span className="flag-icon">🇸🇬</span>
+                <FlagSG className="flag-icon" />
                 <h3 className="office-location">Singapore, Cecil Street</h3>
               </div>
               <p className="office-addres">
@@ -129,7 +132,7 @@ export function ContactPage(): React.ReactElement {
             {/* UAE Office */}
             <div className="office-card">
               <div className="office-flag">
-                <span className="flag-icon">🇦🇪</span>
+                <FlagAE className="flag-icon" />
                 <h3 className="office-location">UAE, Deira</h3>
               </div>
               <p className="office-addres">

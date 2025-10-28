@@ -168,7 +168,12 @@ const Marketplace: React.FC = () => {
             <p className="page-cta__description">
               Discover, grow, and lead with confidence the future of your business is just a few clicks away.
             </p>
-            <button className="page-cta__button">Explore Marketplace</button>
+            <button 
+              className="page-cta__button"
+              onClick={() => window.open('https://shop.skysecure.ai/', '_blank')}
+            >
+              Explore Marketplace
+            </button>
           </div>
         </div>
       </section>

@@ -252,33 +252,30 @@ export function About(): React.ReactElement {
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                    <div style={{ 
-                      width: '14px', 
-                      height: '14px', 
-                      backgroundColor: '#10B981', 
-                      borderRadius: '50%',
+                    <span style={{ 
+                      color: '#10B981',
+                      fontSize: '16px',
+                      fontWeight: 'bold',
                       flexShrink: 0
-                    }}></div>
+                    }}>✓</span>
                     <span style={{ fontSize: '16px', color: '#64748B' }}>Simplify procurement for enterprises</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                    <div style={{ 
-                      width: '14px', 
-                      height: '14px', 
-                      backgroundColor: '#10B981', 
-                      borderRadius: '50%',
+                    <span style={{ 
+                      color: '#10B981',
+                      fontSize: '16px',
+                      fontWeight: 'bold',
                       flexShrink: 0
-                    }}></div>
+                    }}>✓</span>
                     <span style={{ fontSize: '16px', color: '#64748B' }}>Ensure product authenticity and quality</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ 
-                      width: '14px', 
-                      height: '14px', 
-                      backgroundColor: '#10B981', 
-                      borderRadius: '50%',
+                    <span style={{ 
+                      color: '#10B981',
+                      fontSize: '16px',
+                      fontWeight: 'bold',
                       flexShrink: 0
-                    }}></div>
+                    }}>✓</span>
                     <span style={{ fontSize: '16px', color: '#64748B' }}>Connect buyers with trusted technology vendors</span>
                   </li>
                 </ul>
@@ -325,33 +322,30 @@ export function About(): React.ReactElement {
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                    <div style={{ 
-                      width: '14px', 
-                      height: '14px', 
-                      backgroundColor: '#10B981', 
-                      borderRadius: '50%',
+                    <span style={{ 
+                      color: '#10B981',
+                      fontSize: '16px',
+                      fontWeight: 'bold',
                       flexShrink: 0
-                    }}></div>
+                    }}>✓</span>
                     <span style={{ fontSize: '16px', color: '#64748B' }}>Global leader in technology distribution</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                    <div style={{ 
-                      width: '14px', 
-                      height: '14px', 
-                      backgroundColor: '#10B981', 
-                      borderRadius: '50%',
+                    <span style={{ 
+                      color: '#10B981',
+                      fontSize: '16px',
+                      fontWeight: 'bold',
                       flexShrink: 0
-                    }}></div>
+                    }}>✓</span>
                     <span style={{ fontSize: '16px', color: '#64748B' }}>Democratize access to enterprise-grade solutions</span>
                   </li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ 
-                      width: '14px', 
-                      height: '14px', 
-                      backgroundColor: '#10B981', 
-                      borderRadius: '50%',
+                    <span style={{ 
+                      color: '#10B981',
+                      fontSize: '16px',
+                      fontWeight: 'bold',
                       flexShrink: 0
-                    }}></div>
+                    }}>✓</span>
                     <span style={{ fontSize: '16px', color: '#64748B' }}>Foster innovation in the technology industry</span>
                   </li>
                 </ul>
