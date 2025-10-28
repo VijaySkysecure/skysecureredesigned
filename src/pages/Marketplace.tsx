@@ -75,7 +75,7 @@ const Marketplace: React.FC = () => {
       </section>
 
       {/* Introductory Text Section */}
-      <section className="page-intro">
+      <section className="page-intro" style={{ paddingBottom: '16px' }}>
         <div className="container">
           <p className="page-intro__text">
             Step into our Commercial Marketplace and immerse yourself in a world brimming with endless possibilities. Designed with businesses in mind, our platform is a vibrant ecosystem where innovation meets necessity, offering a curated selection of cutting-edge solutions, diverse product offerings, and unparalleled services. This marketplace is your gateway to discovering tools and technologies that have the power to transform your operations, streamline your processes, and catapult your business into new realms of growth and efficiency.
@@ -84,7 +84,7 @@ const Marketplace: React.FC = () => {
       </section>
 
       {/* Our Core Values Section */}
-      <section className="page-values">
+      <section className="page-values" style={{ paddingBottom: '16px' }}>
         <div className="container">
           <div className="page-values__header">
             <h2 className="page-values__title">Our Core Values</h2>
@@ -111,7 +111,7 @@ const Marketplace: React.FC = () => {
       </section>
 
       {/* Innovation Meets Diversity Section */}
-      <section className="page-innovation">
+      <section className="page-innovation" style={{ paddingBottom: '16px' }}>
         <div className="container">
           <div className="page-innovation__content">
             <div className="page-innovation__text">
