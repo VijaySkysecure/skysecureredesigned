@@ -146,7 +146,7 @@ export function ContactPage(): React.ReactElement {
       </section>
 
       {/* Contact Form Section */}
-      <section className="contact-form-section">
+      <section className="contact-form-section" id="contact-form">
         <div className="container">
           <h2 className="contact-form-title">Send Us a Message</h2>
           <p className="contact-form-subtitle">
@@ -258,8 +258,17 @@ export function ContactPage(): React.ReactElement {
               Skysecure is just a message away.
             </p>
             <div className="contact-cta-buttons">
-              <button className="cta-button cta-button-primary">Get in Touch</button>
-              <button className="cta-button cta-button-secondary">Book a Consultation</button>
+              <button 
+                className="cta-button cta-button-primary"
+                onClick={() => {
+                  const element = document.getElementById('contact-form');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Contact Us
+              </button>
             </div>
           </div>
         </div>
