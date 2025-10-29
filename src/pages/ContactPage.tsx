@@ -225,7 +225,7 @@ export function ContactPage(): React.ReactElement {
             Fill out the form below and our team will reach out to you shortly.
           </p>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-formm" onSubmit={handleSubmit} style={{ backgroundColor: '#F8F9FB' }}>
             {/* Left Column - All Input Fields */}
             <div className="form-left-column">
               {/* First Name */}
