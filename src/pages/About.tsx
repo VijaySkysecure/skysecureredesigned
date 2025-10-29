@@ -105,21 +105,38 @@ const LEADERSHIP_TEAM = [
 const TEAM_MEMBERS = [
   {
     name: 'Agniputhran N M',
-    title: 'President & Chief Business Officer',
-    company: 'EX-MICROSOFT',
+    title: 'President & CBO',
     image: 'about/agniputhran-nm.png'
   },
   {
-    name: 'Suresh Kumar',
-    title: 'Co-Founder & Chief Executive Officer',
-    company: 'EX-MICROSOFT',
-    image: 'about/suresh-kumar.png'
+    name: 'Arvind Yadav',
+    title: 'Cloud Business Lead',
+    image: 'about/arvind.jpg'
   },
   {
-    name: 'Nithin Ramegowda',
-    title: 'Co-Founder & Chief of Business Strategy',
-    company: 'EX-MICROSOFT',
-    image: 'about/nithin-ramegowda.png'
+    name: 'Rajat Tiwari',
+    title: 'Head - Presales',
+    image: 'about/rajat.jpeg'
+  },
+  {
+    name: 'Vishal Thali',
+    title: 'Head of Sales',
+    image: 'about/vishal.jfif'
+  },
+  {
+    name: 'Mona Kumari',
+    title: 'Chief of Staff',
+    image: 'about/mona.jfif'
+  },
+  {
+    name: 'Swathi Manikandan',
+    title: 'Engineering Specialist - Lead',
+    image: 'about/swathi.jfif'
+  },
+  {
+    name: 'Meenu PS',
+    title: 'Business Analyst',
+    image: 'about/meenu.jfif'
   }
 ];
 
@@ -673,13 +690,21 @@ export function About(): React.ReactElement {
               </p>
             </div>
             
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '60px' }}>
-              {TEAM_MEMBERS.map((member, index) => (
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(4, 1fr)', 
+              gap: '40px',
+              maxWidth: '1200px',
+              margin: '0 auto'
+            }}>
+              {/* First row - 4 members */}
+              {TEAM_MEMBERS.slice(0, 4).map((member, index) => (
                 <div key={index} style={{ 
                   padding: '32px', 
                   borderRadius: '12px', 
                   textAlign: 'center',
-                  maxWidth: '300px'
+                  maxWidth: '350px',
+                  margin: '0 auto'
                 }}>
                   <div style={{ 
                     width: '128px', 
@@ -717,7 +742,63 @@ export function About(): React.ReactElement {
                     fontWeight: '500',
                     margin: '0'
                   }}>
-                    {member.company}
+                  </p>
+                </div>
+              ))}
+            </div>
+            
+            {/* Second row - 3 members centered */}
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'center', 
+              gap: '40px',
+              marginTop: '40px',
+              maxWidth: '900px',
+              margin: '40px auto 0 auto'
+            }}>
+              {TEAM_MEMBERS.slice(4, 7).map((member, index) => (
+                <div key={index + 4} style={{ 
+                  padding: '32px', 
+                  borderRadius: '12px', 
+                  textAlign: 'center',
+                  maxWidth: '350px'
+                }}>
+                  <div style={{ 
+                    width: '128px', 
+                    height: '128px', 
+                    borderRadius: '50%', 
+                    margin: '0 auto 24px auto',
+                    overflow: 'hidden'
+                  }}>
+                    <ImagePlaceholder
+                      label={member.name}
+                      imageName={member.image}
+                      width={128}
+                      height={128}
+                      borderRadius={0}
+                    />
+                  </div>
+                  <h3 style={{ 
+                    fontSize: '20px', 
+                    fontWeight: '600', 
+                    color: '#1F2937', 
+                    margin: '0 0 8px 0'
+                  }}>
+                    {member.name}
+                  </h3>
+                  <p style={{ 
+                    fontSize: '16px', 
+                    color: '#007FFF', 
+                    margin: '0 0 4px 0'
+                  }}>
+                    {member.title}
+                  </p>
+                  <p style={{ 
+                    fontSize: '14px', 
+                    color: '#007FFF', 
+                    fontWeight: '500',
+                    margin: '0'
+                  }}>
                   </p>
                 </div>
               ))}

@@ -1,27 +1,6 @@
 import React from 'react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
-const POSITIONS = [
-  {
-    title: 'Senior Security Engineer',
-    type: 'Remote • Full-time',
-    description: 'Lead the development of our next-generation security platform using cutting-edge AI and machine learning technologies.',
-    tags: ['Python', 'Machine Learning', 'Security']
-  },
-  {
-    title: 'SOC Analyst L2',
-    type: 'Hybrid • Full-time',
-    description: 'Monitor and analyze security events, investigate incidents, and coordinate response activities across global infrastructure.',
-    tags: ['SIEM', 'Incident Response', 'Threat Hunting']
-  },
-  {
-    title: 'AI Research Scientist',
-    type: 'Remote • Full-time',
-    description: 'Research and develop cutting-edge AI algorithms for autonomous threat detection and response systems.',
-    tags: ['Deep Learning', 'TensorFlow', 'Research']
-  }
-];
-
 const BENEFITS = [
   {
     title: 'Cutting-Edge Technology',
@@ -93,58 +72,26 @@ export function Careers(): React.ReactElement {
         </div>
 
         <div className="careers-content">
-          <div className="careers-left">
-            <h3 className="careers-section-title">Open Positions</h3>
-            <div className="positions-list">
-              {POSITIONS.map((position, index) => (
-                <div key={index} className="position-card">
-                  <h4 className="position-title">{position.title}</h4>
-                  <p className="position-type">{position.type}</p>
-                  <p className="position-description">{position.description}</p>
-                  <div className="position-tags">
-                    {position.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="position-tag">{tag}</span>
-                    ))}
-                  </div>
-                  <a href="#apply" className="position-apply">Apply Now →</a>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="careers-right">
-            <h3 className="careers-section-title">Why Join Skysecure.ai?</h3>
-            <div className="benefits-list">
+          <div className="why-join-section">
+            <h3 className="why-join-title">Why Join Skysecure.ai?</h3>
+            <div className="benefits-grid">
               {BENEFITS.map((benefit, index) => (
-                <div key={index} className="benefit-item">
-                  <ImagePlaceholder
-                    label={benefit.title}
-                    imageName={benefit.imageName}
-                    width={34}
-                    height={34}
-                    borderRadius={0}
-                    className="benefit-icon"
-                  />
-                  <div className="benefit-content">
-                    <h4 className="benefit-title">{benefit.title}</h4>
-                    <p className="benefit-description">{benefit.description}</p>
+                <div key={index} className="benefit-card">
+                  <div className="benefit-card-icon">
+                    <ImagePlaceholder
+                      label={benefit.title}
+                      imageName={benefit.imageName}
+                      width={48}
+                      height={48}
+                      borderRadius={0}
+                    />
+                  </div>
+                  <div className="benefit-card-content">
+                    <h4 className="benefit-card-title">{benefit.title}</h4>
+                    <p className="benefit-card-description">{benefit.description}</p>
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="skill-challenge-card">
-              <h4 className="challenge-title">Cyber Skill Challenge</h4>
-              <p className="challenge-description">
-                Test your cybersecurity knowledge with our interactive challenge. Top performers get fast-tracked interviews!
-              </p>
-              <div className="challenge-actions">
-                <button className="challenge-button">Start Challenge</button>
-                <div className="challenge-details">
-                  <span className="challenge-time">15 minutes</span>
-                  <span className="challenge-levels">3 difficulty levels</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
