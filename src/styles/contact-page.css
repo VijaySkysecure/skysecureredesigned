@@ -159,13 +159,26 @@
 }
 
 .contact-map-section .container {
-  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: calc(100% - 280px);
+  margin: 0 140px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact-map-section .image-placeholder {
+  width: 100%;
+  max-width: 1190px;
+  aspect-ratio: 990 / 320;
+  margin: 0 auto;
 }
 
 .contact-map-section .image-placeholder__img {
-  object-fit: contain !important;
-  width: 100% !important;
-  height: 100% !important;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 /* Global Presence Section */

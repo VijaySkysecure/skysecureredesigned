@@ -5,12 +5,12 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 const VALUES = [
   {
     title: 'Innovation First',
-    text: 'We redefine what’s possible in cybersecurity and cloud management through AI automation, data intelligence, and infrastructure innovation. Our engineers and AI agents deliver predictive defense, zero-trust resilience, and compliance-ready ecosystems for our customers.',
+    text: 'We continuously redefine what’s possible in cybersecurity and cloud management through AI-driven automation, data intelligence, and infrastructure innovation. Our engineers and AI agents work hand-in-hand to deliver predictive defense, zero-trust resilience, and compliance-ready ecosystems for our customers.',
     imageName: 'homepage/icon-client.png',
   },
   {
     title: 'Trust & Transparency',
-    text: 'Our partnerships are built on accountability, clarity, and measurable outcomes. We take full ownership of licensing, deploying, and managing every environment we build, ensuring customers always know how their security, data, and infrastructure are performing.',
+    text: 'Our partnerships are built on accountability, clarity, and measurable outcomes. We take full ownership — licensing, deploying, and managing every environment we build, ensuring customers always know how their security, data, and infrastructure are performing.',
     imageName: 'homepage/icon-integrity.png',
   },
   {
