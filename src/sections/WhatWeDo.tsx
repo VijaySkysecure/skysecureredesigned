@@ -4,70 +4,48 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 const CAPABILITIES = [
   {
-    title: 'Commercial Marketplace',
-    subtitle: 'STREAMLINED IT PROCUREMENT',
-    description: 'Discover a world of possibilities, where innovative solutions, diverse offerings, and exceptional services converge to empower businesses...',
-    bulletPoints: [
-      'Wide range of IT solutions',
-      'Simplified purchasing process',
-      'Tailored to organizational needs'
-    ],
-    imageName: 'homepage/icon-risk.png',
-  },
-  {
-    title: 'Solution Implementation',
-    subtitle: 'TAILORED SECURITY STRATEGIES',
-    description: 'Experience a seamless transition, guided by our expert team, as we collaborate closely with you to deliver a customized solution that maximizes efficiency...',
-    bulletPoints: [
-      'Customized security measures',
-      'Expert guidance during implementation',
-      'Maximized efficiency'
-    ],
-    imageName: 'homepage/icon-compliance.png',
-  },
-  {
-    title: 'Operational Excellence',
-    subtitle: 'OPTIMIZED BUSINESS OPERATIONS',
-    description: 'We are committed to ensuring operational excellence by helping you identifying gaps, deploying best practices & recommendation...',
-    bulletPoints: [
-      'Enhanced operational efficiency',
-      'Best practices for improvement',
-      'Adaptable strategies'
-    ],
-    imageName: 'homepage/icon-cloud.png',
-  },
-  {
-    title: 'Simplified Management',
-    subtitle: 'CENTRALIZED CONTROL DASHBOARD',
-    description: 'Streamlined management approach simplifies complex tasks, providing you with a centralized dashboard, automated workflows, and real-time...',
-    bulletPoints: [
-      'User-friendly interface',
-      'Real-time alerts',
-      'Efficient IT resource management'
-    ],
-    imageName: 'homepage/icon-intelligence.png',
-  },
-  {
-    title: 'Security & Compliance Metrics',
+    title: 'Security Operations',
     subtitle: 'PROACTIVE RISK MANAGEMENT',
-    description: 'Our solution platform offer a clear picture of your organization\'s security performance, enabling you to assess risk levels, identify areas for improvement...',
+    description: 'We manage your entire security lifecycle, from licensing to continuous protection. Our AI-powered SOC provides real-time detection...',
     bulletPoints: [
-      'Regular vulnerability assessments',
-      'Compliance with industry standards',
-      'Continuous monitoring'
+      'Fewer incidents',
+      'Faster containment',
+      'Assured governance 24/7'
     ],
     imageName: 'homepage/icon-operations.png',
   },
   {
-    title: 'Assessment',
-    subtitle: 'COMPREHENSIVE EVALUATION SERVICES',
-    description: 'Our comprehensive assessment services provide a thorough analysis of your systems, processes, and performance, enabling data-driven insights...',
+    title: 'AI Agents',
+    subtitle: 'TAILORED SOLUTIONS',
+    description: 'We design, license, and manage custom AI agents specifically crafted to address your unique business challenges. From automating...',
     bulletPoints: [
-      'In-depth analysis of organizational systems',
-      'Identification of areas for improvement',
-      'Clear, actionable recommendations for optimization'
+      'Lower operational costs',
+      'Faster execution',
+      'Improved productivity across teams'
     ],
-    imageName: 'homepage/icon-assess.png',
+    imageName: 'homepage/icon-compliance.png',
+  },
+  {
+    title: 'Data Operations',
+    subtitle: 'Unlock Business Intelligence',
+    description: 'We design and manage governed data ecosystems that unlock the full potential of your business intelligence while ensuring...',
+    bulletPoints: [
+      'Unified visibility',
+      'Automated compliance',
+      'Data you can trust'
+    ],
+    imageName: 'homepage/icon-cloud.png',
+  },
+  {
+    title: 'Infrastructure Operations',
+    subtitle: 'Scalable Cloud Infrastructure',
+    description: 'We architect, license, and manage cloud-ready infrastructure designed for reliability and scalability. From deployment to ongoing...',
+    bulletPoints: [
+      'Always-on resilience',
+      'Predictable costs',
+      'Simplified cloud management'
+    ],
+    imageName: 'homepage/icon-risk.png',
   },
 ];
 
@@ -79,7 +57,16 @@ export function WhatWeDo(): React.ReactElement {
           title="What We Do"
           description="We provide exclusive services for your business"
         />
-        <div className="what-we-do-grid">
+        <div 
+          className="what-we-do-grid"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '24px',
+            marginTop: '48px',
+            justifyItems: 'center'
+          }}
+        >
           {CAPABILITIES.map((item) => (
             <div key={item.title} className="what-we-do-card">
               <div className="what-we-do-card__header">
@@ -108,23 +95,23 @@ export function WhatWeDo(): React.ReactElement {
                 </ul>
                 <a 
                   className="what-we-do-card__link" 
-                  href={item.title === 'Commercial Marketplace' ? '/marketplace' : 
-                        item.title === 'Solution Implementation' ? '/solution-implementation' :
-                        item.title === 'Operational Excellence' ? '/operational-excellence' :
-                        item.title === 'Simplified Management' ? '/simplified-management' :
+                  href={item.title === 'Security Operations' ? '/marketplace' : 
+                        item.title === 'AI Agents' ? '/solution-implementation' :
+                        item.title === 'Data Operations' ? '/operational-excellence' :
+                        item.title === 'Infrastructure Operations' ? '/simplified-management' :
                         item.title === 'Security & Compliance Metrics' ? '/security-compliance-metrics' :
                         item.title === 'Assessment' ? '/assessment' : '#contact'}
                   onClick={(e) => {
-                    if (item.title === 'Commercial Marketplace') {
+                    if (item.title === 'Security Operations') {
                       e.preventDefault();
                       window.location.href = '/marketplace';
-                    } else if (item.title === 'Solution Implementation') {
+                    } else if (item.title === 'AI Agents') {
                       e.preventDefault();
                       window.location.href = '/solution-implementation';
-                    } else if (item.title === 'Operational Excellence') {
+                    } else if (item.title === 'Data Operations') {
                       e.preventDefault();
                       window.location.href = '/operational-excellence';
-                    } else if (item.title === 'Simplified Management') {
+                    } else if (item.title === 'Infrastructure Operations') {
                       e.preventDefault();
                       window.location.href = '/simplified-management';
                     } else if (item.title === 'Security & Compliance Metrics') {

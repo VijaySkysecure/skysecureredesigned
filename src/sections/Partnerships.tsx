@@ -20,6 +20,12 @@ const COMMVAULT_INTEGRATIONS = [
   'Policy-driven data lifecycle governance'
 ];
 
+  const IBM_INTEGRATIONS = [
+    'Network and Zero-Trust Security solutions',
+    'Endpoint Protection and Threat Intelligence',
+    'AI-driven orchestration and automation'
+];
+
 
 export function Partnerships(): React.ReactElement {
   return (
@@ -37,7 +43,7 @@ export function Partnerships(): React.ReactElement {
             {/* Microsoft Partner Column */}
             <div className="partner-column">
               <div className="microsoft-partner-content">
-                <h3 className="microsoft-partner-title">Microsoft Security Partner</h3>
+                <h3 className="microsoft-partner-title">Microsoft Solutions Partner</h3>
                 <p className="microsoft-partner-description">
                 As a certified Microsoft Solutions Partner, Skysecure delivers end-to-end managed services powered by Azure, Sentinel, Defender, and Purview.
                 </p>
@@ -55,7 +61,7 @@ export function Partnerships(): React.ReactElement {
             {/* Palo Alto Networks Column */}
             <div className="partner-column">
               <div className="microsoft-partner-content">
-                <h3 className="microsoft-partner-title">Palo Alto Networks - xMDR</h3>
+                <h3 className="microsoft-partner-title">Palo Alto Networks</h3>
                 <p className="microsoft-partner-description">
                 Skysecure partners with Palo Alto Networks to deliver XDR and XSIAM-based multi-tenant SOC solutions that combine AI automation with 24×7 human expertise.
                 </p>
@@ -73,7 +79,7 @@ export function Partnerships(): React.ReactElement {
             {/* Commvault Column */}
             <div className="partner-column">
               <div className="microsoft-partner-content">
-                <h3 className="microsoft-partner-title">Commvault - Data Protection and Resilience</h3>
+                <h3 className="microsoft-partner-title">Commvault</h3>
                 <p className="microsoft-partner-description">
                 With Commvault's enterprise backup and disaster recovery solutions, Skysecure ensures complete data availability, retention, and compliance.
                 </p>
@@ -93,8 +99,16 @@ export function Partnerships(): React.ReactElement {
               <div className="microsoft-partner-content">
                 <h3 className="microsoft-partner-title">Fortinet, CrowdStrike, IBM & Beyond</h3>
                 <p className="microsoft-partner-description">
-                Skysecure's broader ecosystem includes Fortinet (Network & Zero-Trust Security), CrowdStrike (Endpoint & Threat Intelligence), and IBM (AI Orchestration & Automation), unified under a single managed operations framework for maximum protection and efficiency.
+                Skysecure's broader ecosystem includes Fortinet, CrowdStrike and IBM unified under a single managed operations framework for maximum protection and efficiency.
                 </p>
+                <ul className="microsoft-integrations">
+                  {IBM_INTEGRATIONS.map((integration, index) => (
+                    <li key={index} className="integration-item">
+                      <div className="integration-checkmark">✓</div>
+                      <span>{integration}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

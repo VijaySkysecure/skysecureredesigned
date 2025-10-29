@@ -7,51 +7,41 @@ const OperationalExcellence: React.FC = () => {
   const CORE_VALUES = [
     {
       icon: 'icon-tailored',
-      title: 'Process Optimization',
-      description: 'Enhance efficiency through targeted strategies and tailored solutions.'
+      title: 'Data Protection',
+      description: 'Safeguard your data with advanced security measures and compliance standards.'
     },
     {
       icon: 'icon-growth',
-      title: 'Continuous Improvement',
-      description: 'Create a culture where ongoing refinement is embedded in every process.'
+      title: 'Data Lineage & Analytics',
+      description: 'Track data origins and ensure reliable insights.'
     },
     {
       icon: 'icon-best-practices',
-      title: 'Best Practices & Innovation',
-      description: 'Leverage industry-leading practices and cutting-edge technologies to maintain excellence.'
+      title: 'Data Discovery',
+      description: 'Easily find and organize your business-critical data.'
     }
   ];
 
   const FEATURE_HIGHLIGHTS = [
     {
       icon: 'icon-gap-analysis',
-      title: 'Gap Analysis & Process Mapping',
-      description: 'Identify inefficiencies and map current processes for optimization opportunities.'
+      title: 'Data Lineage & Provenance',
+      description: 'Full traceability of data from origin to utilization.'
     },
     {
       icon: 'icon-rocket',
-      title: 'Lean & Agile Methodologies',
-      description: 'Implement proven frameworks for streamlined and adaptive operations.'
+      title: 'End-to-End Compliance',
+      description: 'Automated compliance checks to meet industry and regulatory requirements.'
     },
     {
       icon: 'icon-analytics',
-      title: 'Quality Control & Performance Metrics',
-      description: 'Establish robust monitoring systems and KPIs for continuous tracking.'
-    },
-    {
-      icon: 'icon-automation',
-      title: 'Workflow Automation & Optimization',
-      description: 'Leverage technology to automate repetitive tasks and optimize workflows.'
+      title: 'Powerful Analytics',
+      description: 'Gain actionable insights with advanced data analytics capabilities.'
     },
     {
       icon: 'icon-support',
-      title: 'Employee Empowerment & Training',
-      description: 'Build capabilities and foster a culture of continuous improvement.'
-    },
-    {
-      icon: 'icon-industry-best-practices',
-      title: 'Industry-Specific Best Practices',
-      description: 'Apply tailored solutions based on industry standards and regulations.'
+      title: 'Comprehensive Data Protection',
+      description: 'Safeguard your data at rest and in transit with cutting-edge encryption.'
     }
   ];
 
@@ -64,11 +54,11 @@ const OperationalExcellence: React.FC = () => {
         <div className="container">
           <div className="page-hero__content">
             <h1 className="page-hero__title">
-              <span>Operational</span>{' '}
-              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Excellence</span>
+              <span>Data</span>{' '}
+              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Operations</span>
             </h1>
             <p className="page-hero__description">
-              We are committed to ensuring operational excellence by helping you identify gaps, deploying best practices & recommendations, optimizing processes, and fostering a culture of continuous improvement throughout your organization.
+            Unlocking Business Intelligence with Governance
             </p>
           </div>
         </div>
@@ -78,8 +68,7 @@ const OperationalExcellence: React.FC = () => {
       <section className="page-intro">
         <div className="container">
           <p className="page-intro__text">
-            In the quest for competitive advantage, operational excellence stands out as a critical pillar for any organization. It's about more than just streamlining processes and reducing costs; it's about creating a sustainable system of continuous improvement that drives long-term success. Our Operational Excellence service is designed to transform your operations, ensuring they are as efficient, effective, and adaptable as possible. We partner with you to identify operational gaps and implement solutions that foster long-term growth and innovation.
-          </p>
+          We design and manage governed data ecosystems that unlock the full potential of your business intelligence while ensuring compliance. Skysecure handles the entire data lifecycle from discovery and protection to lineage and analytics, ensuring that your data remains secure and valuable at every stage.          </p>
         </div>
       </section>
 
@@ -115,10 +104,9 @@ const OperationalExcellence: React.FC = () => {
         <div className="container">
           <div className="page-innovation__content">
             <div className="page-innovation__text">
-              <h2 className="page-innovation__title">Our Approach</h2>
+              <h2 className="page-innovation__title">Complete Data Ecosystem Management</h2>
               <p className="page-innovation__description">
-                Our approach to operational excellence begins with a comprehensive analysis of your current operations. We identify inefficiencies, bottlenecks, and improvement opportunities to develop solutions tailored to your needs. By adopting best practices and refining workflows, we enable you to stay ahead of market dynamics and drive long-term success through continuous Improvement.
-              </p>
+              Skysecure ensures a seamless and secure flow of data across your organization. We handle every aspect of data governance, ensuring compliance with regulations and delivering business intelligence at scale.              </p>
             </div>
             <div className="page-innovation__image">
               <ImagePlaceholder 
@@ -140,7 +128,14 @@ const OperationalExcellence: React.FC = () => {
             <h2 className="page-features__title">Feature Highlights</h2>
             <p className="page-features__subtitle">Comprehensive solutions for operational transformation</p>
           </div>
-          <div className="page-features__grid">
+          <div 
+            className="page-features__grid"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '24px'
+            }}
+          >
             {FEATURE_HIGHLIGHTS.map((feature, index) => (
               <div key={index} className="page-feature-card">
                 <div className="page-feature-card__icon">
@@ -164,11 +159,9 @@ const OperationalExcellence: React.FC = () => {
       <section className="page-cta">
         <div className="container">
           <div className="page-cta__content">
-            <h2 className="page-cta__title">Drive Excellence, Achieve Success</h2>
+            <h2 className="page-cta__title">Unlock Your Data’s Full Potential</h2>
             <p className="page-cta__description">
-              Transform your operations and foster a culture of continuous improvement that drives long-term growth.
-            </p>
-            <button className="page-cta__button">Learn More</button>
+            Our data operations integrate with all major platforms, offering a consistent, scalable, and secure<br></br>data management solution that grows with your business.            </p>
           </div>
         </div>
       </section>
