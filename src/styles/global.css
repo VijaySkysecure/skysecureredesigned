@@ -991,23 +991,59 @@ section {
   scroll-snap-align: start;
 }
 
-/* Hide scrollbar but keep functionality */
+/* Hide scrollbar completely */
 .resource-grid:has(.resource-card--scrollable)::-webkit-scrollbar {
-  height: 8px;
+  display: none;
 }
 
-.resource-grid:has(.resource-card--scrollable)::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
+.resource-grid:has(.resource-card--scrollable) {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.resource-grid:has(.resource-card--scrollable)::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
+/* Resource Grid Container with Navigation */
+.resource-grid-container {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.resource-grid:has(.resource-card--scrollable)::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+.resource-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  color: #374151;
+}
+
+.resource-nav-button:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  color: #111827;
+}
+
+.resource-nav-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.resource-nav-button--left {
+  left: -20px;
+}
+
+.resource-nav-button--right {
+  right: -20px;
 }
 
 .resource-card {
@@ -3010,6 +3046,19 @@ section {
   
   .related-articles__grid {
     grid-template-columns: 1fr;
+  }
+  
+  .resource-nav-button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .resource-nav-button--left {
+    left: -18px;
+  }
+  
+  .resource-nav-button--right {
+    right: -18px;
   }
 }
 

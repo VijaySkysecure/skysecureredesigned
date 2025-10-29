@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { SectionHeader } from '../components/SectionHeader';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
@@ -100,12 +100,52 @@ const FILTER_OPTIONS = [
 
 export function Resources(): React.ReactElement {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const filteredResources = RESOURCES.filter(resource => {
     if (activeFilter === 'all') return true;
     if (activeFilter === 'skysecure-decode') return resource.type === 'video';
     return resource.type === activeFilter;
   });
+
+  const updateScrollButtons = () => {
+    if (gridRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = gridRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  const scrollLeft = () => {
+    if (gridRef.current) {
+      const cardWidth = gridRef.current.scrollWidth / filteredResources.length;
+      gridRef.current.scrollBy({
+        left: -cardWidth,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (gridRef.current) {
+      const cardWidth = gridRef.current.scrollWidth / filteredResources.length;
+      gridRef.current.scrollBy({
+        left: cardWidth,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  useEffect(() => {
+    updateScrollButtons();
+    const grid = gridRef.current;
+    if (grid) {
+      grid.addEventListener('scroll', updateScrollButtons);
+      return () => grid.removeEventListener('scroll', updateScrollButtons);
+    }
+  }, [filteredResources]);
 
   return (
     <section className="section--light" id="insights">
@@ -128,8 +168,21 @@ export function Resources(): React.ReactElement {
           ))}
         </div>
 
-        {/* Resource Grid */}
-        <div className="resource-grid">
+        {/* Resource Grid with Navigation */}
+        <div className="resource-grid-container">
+          {canScrollLeft && (
+            <button 
+              className="resource-nav-button resource-nav-button--left"
+              onClick={scrollLeft}
+              aria-label="Scroll left"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          )}
+          
+          <div className="resource-grid" ref={gridRef}>
           {filteredResources.map((resource, index) => (
             <article 
               key={resource.title} 
@@ -213,6 +266,19 @@ export function Resources(): React.ReactElement {
               </div>
             </article>
           ))}
+          </div>
+          
+          {canScrollRight && (
+            <button 
+              className="resource-nav-button resource-nav-button--right"
+              onClick={scrollRight}
+              aria-label="Scroll right"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          )}
         </div>
       </div>
     </section>
