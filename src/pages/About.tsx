@@ -587,7 +587,7 @@ export function About(): React.ReactElement {
                 color: '#1F2937', 
                 margin: '0 0 16px 0'
               }}>
-                The Visionaries Behind Our Brand
+                The Visionaries Behind Skysecure
               </h2>
               <p style={{ 
                 fontSize: '20px', 
