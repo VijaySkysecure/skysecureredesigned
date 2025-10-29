@@ -150,15 +150,34 @@ export function Footer(): React.ReactElement {
                           window.open('https://skysecure.zohorecruit.in/jobs/Careers', '_blank');
                         } : isResourceLink ? (e) => {
                           e.preventDefault();
-                          // Navigate to homepage and scroll to resources section
+                          // Map resource names to their corresponding tab IDs
+                          const getResourceTabId = (resourceName: string) => {
+                            switch (resourceName) {
+                              case 'Blog': return 'blog';
+                              case 'Whitepapers': return 'whitepaper';
+                              case 'Case Studies': return 'case-study';
+                              case 'Skysecure Decode': return 'skysecure-decode';
+                              default: return 'all';
+                            }
+                          };
+                          
+                          const tabId = getResourceTabId(link);
+                          
                           if (window.location.pathname !== '/') {
-                            // Navigate to homepage with hash to trigger scroll after page load
-                            window.location.href = '/#insights';
+                            // Navigate to homepage with hash to trigger scroll and tab selection after page load
+                            window.location.href = `/#insights-${tabId}`;
                           } else {
-                            // Already on homepage, scroll to section
+                            // Already on homepage, scroll to section and activate specific tab
                             const resourcesSection = document.getElementById('insights');
                             if (resourcesSection) {
                               resourcesSection.scrollIntoView({ behavior: 'smooth' });
+                              // Wait for scroll to complete, then activate the specific tab
+                              setTimeout(() => {
+                                const tabButton = document.querySelector(`[data-tab="${tabId}"]`) as HTMLElement;
+                                if (tabButton) {
+                                  tabButton.click();
+                                }
+                              }, 500);
                             }
                           }
                         } : undefined}

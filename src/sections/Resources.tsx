@@ -147,6 +147,37 @@ export function Resources(): React.ReactElement {
     }
   }, [filteredResources]);
 
+  // Handle URL hash parameters for direct navigation to specific tabs
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#insights-')) {
+        const tabId = hash.replace('#insights-', '');
+        const validTabIds = FILTER_OPTIONS.map(option => option.id);
+        if (validTabIds.includes(tabId)) {
+          setActiveFilter(tabId);
+          // Scroll to the resources section
+          setTimeout(() => {
+            const resourcesSection = document.getElementById('insights');
+            if (resourcesSection) {
+              resourcesSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 100);
+        }
+      }
+    };
+
+    // Check hash on component mount
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   return (
     <section className="section--light" id="insights">
       <div className="container">
@@ -162,6 +193,7 @@ export function Resources(): React.ReactElement {
               key={filter.id}
               className={`resource-filter ${activeFilter === filter.id ? 'active' : ''}`}
               onClick={() => setActiveFilter(filter.id)}
+              data-tab={filter.id}
             >
               {filter.label}
             </button>
