@@ -20,7 +20,7 @@ export function Leadership(): React.ReactElement {
     <section className="section--muted" id="leadership">
       <div className="container">
         <SectionHeader
-          title="The Visionaries Behind Our Brand"
+          title="The Visionaries Behind Skysecure"
           description="World-class cybersecurity experts leading the charge in AI-driven security innovation"
         />
         <div className="profile-grid">

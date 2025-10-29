@@ -61,9 +61,30 @@ export function ContactPage(): React.ReactElement {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form before submission
+    if (!formData.marketing) {
+      return;
+    }
+    
     // Handle form submission here
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
+    
+    // Reset form after successful submission
+    setTimeout(() => {
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: '',
+        marketing: false
+      });
+      setPhoneError('');
+      setIsSubmitted(false);
+    }, 1000); // Show "Submitted" message for 1 second before clearing
   };
   return (
     <div className="contact-page">
