@@ -179,12 +179,12 @@ export function ContactPage(): React.ReactElement {
 
       {/* Map Section */}
       <section className="contact-map-section" id="map">
-        <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="container">
           <ImagePlaceholder
             label="Map"
             imageName="contact/contact_map.png"
-            width={990}
-            height={320}
+            width="100%"
+            height="auto"
             borderRadius={8}
           />
         </div>
