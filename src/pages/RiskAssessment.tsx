@@ -272,7 +272,7 @@ export function RiskAssessment(): React.ReactElement {
               <p className="page-cta__description">
                 Empower your organization with the clarity and confidence that comes from a comprehensive, data-driven risk assessment.
               </p>
-              <button className="page-cta__button">Request a Risk Assessment</button>
+              {/* <button className="page-cta__button">Request a Risk Assessment</button> */}
             </div>
           </div>
         </section>

@@ -201,7 +201,7 @@ export function ThreatHunting(): React.ReactElement {
               <p className="page-cta__description">
                 Uncover hidden threats, strengthen your defenses, and safeguard your business<br></br>from evolving cyber risks.
               </p>
-              <button className="page-cta__button">Start Threat Hunting</button>
+              {/* <button className="page-cta__button">Start Threat Hunting</button> */}
             </div>
           </div>
         </section>

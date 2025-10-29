@@ -203,7 +203,7 @@ export function ZeroTrustArchitecture(): React.ReactElement {
               <p className="page-cta__description">
                 Empower your organization with Zero Trust, where every access point is verified, every connection is secure, and every threat is contained.
               </p>
-              <button className="page-cta__button">Get a Consultation</button>
+              {/* <button className="page-cta__button">Get a Consultation</button> */}
             </div>
           </div>
         </section>
