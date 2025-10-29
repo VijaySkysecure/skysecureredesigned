@@ -1,5 +1,6 @@
 import React from 'react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import { FaLinkedin, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 
 const FOOTER_LINKS = {
   Solutions: [
@@ -41,10 +42,69 @@ export function Footer(): React.ReactElement {
               Leading the future of cybersecurity through AI innovation and global MSSP services.
             </p>
             <div className="footer__social">
-              <ImagePlaceholder label="LinkedIn" imageName="homepage/icon-linkedin.png" width={32} height={32} borderRadius={0} />
-              <ImagePlaceholder label="Twitter" imageName="homepage/icon-twitter.png" width={32} height={32} borderRadius={0} />
-              <ImagePlaceholder label="YouTube" imageName="homepage/icon-youtube.png" width={32} height={32} borderRadius={0} />
-              <ImagePlaceholder label="GitHub" imageName="homepage/icon-github.png" width={32} height={32} borderRadius={0} />
+              <a 
+                href="https://www.linkedin.com/company/skysecure-technologies/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+              >
+                <div 
+                  style={{
+                    width: '32px',
+                    height: '32px',
+                    backgroundColor: 'rgba(31, 41, 55, 1)',
+                    borderRadius: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white'
+                  }}
+                >
+                  <FaLinkedin size={18} />
+                </div>
+              </a>
+              <a 
+                href="https://x.com/SkysecureT?t=eIQh6SBZr52JEPj57ntPWw&s=09/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+              >
+                <div 
+                  style={{
+                    width: '32px',
+                    height: '32px',
+                    backgroundColor: 'rgba(31, 41, 55, 1)',
+                    borderRadius: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white'
+                  }}
+                >
+                  <FaXTwitter size={16} />
+                </div>
+              </a>
+              <a 
+                href="https://www.instagram.com/skysecuretech/?igsh=ZmgxdjIzZ2JjcGhw#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+              >
+                <div 
+                  style={{
+                    width: '32px',
+                    height: '32px',
+                    backgroundColor: 'rgba(31, 41, 55, 1)',
+                    borderRadius: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white'
+                  }}
+                >
+                  <FaInstagram size={18} />
+                </div>
+              </a>
             </div>
           </div>
           

@@ -64,6 +64,7 @@ export function DPDPAct2023(): React.ReactElement {
     fullName: '',
     email: '',
     phoneNumber: '',
+    country: '',
     companyName: '',
     role: ''
   });
@@ -182,6 +183,7 @@ export function DPDPAct2023(): React.ReactElement {
           fullName: '',
           email: '',
           phoneNumber: '',
+          country: '',
           companyName: '',
           role: ''
         });
@@ -343,7 +345,7 @@ export function DPDPAct2023(): React.ReactElement {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '20px', marginBottom: '20px' }}>
+              <div style={{ marginBottom: '20px' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
                     Full Name <span style={{ color: '#EF4444' }}>*</span>
@@ -369,10 +371,12 @@ export function DPDPAct2023(): React.ReactElement {
                     </p>
                   )}
                 </div>
-                <div>
-                  <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
-                    Email Address <span style={{ color: '#EF4444' }}>*</span>
-                  </label>
+              </div>
+              
+              <div style={{ marginBottom: '20px' }}>
+                <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
+                  Email Address <span style={{ color: '#EF4444' }}>*</span>
+                </label>
                   <input
                     type="email"
                     name="email"
@@ -393,7 +397,9 @@ export function DPDPAct2023(): React.ReactElement {
                       {validationErrors.email}
                     </p>
                   )}
-                </div>
+              </div>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '32px' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
                     Phone Number <span style={{ color: '#EF4444' }}>*</span>
@@ -418,6 +424,38 @@ export function DPDPAct2023(): React.ReactElement {
                       {validationErrors.phoneNumber}
                     </p>
                   )}
+                </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
+                    Country
+                  </label>
+                  <select
+                    name="country"
+                    value={formData.country}
+                    onChange={handleInputChange}
+                    style={{
+                      width: '100%',
+                      padding: '12px 16px',
+                      border: '1px solid #D1D5DB',
+                      borderRadius: '8px',
+                      fontSize: '16px',
+                      fontFamily: 'Inter',
+                      backgroundColor: '#FFFFFF'
+                    }}
+                  >
+                    <option value="">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '32px' }}>

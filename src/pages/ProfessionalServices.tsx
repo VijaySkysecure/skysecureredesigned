@@ -201,7 +201,6 @@ export function ProfessionalServices(): React.ReactElement {
               <p className="page-cta__description">
               Partner with us to fortify your business with the right balance of technology, expertise, and trust.<br></br>We deliver solutions tailored for organizations that take cybersecurity seriously.
               </p>
-              <button className="page-cta__button">Start Your Protection</button>
             </div>
           </div>
         </section>

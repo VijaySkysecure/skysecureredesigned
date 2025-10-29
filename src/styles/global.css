@@ -1761,7 +1761,69 @@ section {
   flex-direction: column;
 }
 
-/* Our Specializations Section */
+/* Why Join Skysecure.ai Section */
+.why-join-section {
+  margin-bottom: 60px;
+}
+
+.why-join-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 0 0 48px 0;
+  text-align: left;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 32px;
+  width: 100%;
+  margin: 0;
+}
+
+.benefit-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 600px;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.benefit-card-icon {
+  margin-bottom: 20px;
+}
+
+.benefit-card-content {
+  flex: 1;
+}
+
+.benefit-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.benefit-card-description {
+  font-size: 14px;
+  color: var(--color-grey);
+  line-height: 1.5;
+  margin: 0;
+}
 .specializations-section {
   margin: 80px 0;
   text-align: center;
@@ -3136,7 +3198,7 @@ section {
 
 .footer__social {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   margin-top: 8px;
 }
 
@@ -3735,6 +3797,27 @@ footer section .container {
   
   .specialization-card-title {
     font-size: 14px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  
+  .benefit-card {
+    padding: 24px 20px;
+  }
+  
+  .benefit-card-icon {
+    margin-bottom: 16px;
+  }
+  
+  .benefit-card-title {
+    font-size: 16px;
+  }
+  
+  .benefit-card-description {
+    font-size: 13px;
   }
   
   .tech-ecosystem-card {
