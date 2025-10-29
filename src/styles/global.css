@@ -1040,11 +1040,11 @@ section {
 }
 
 .resource-nav-button--left {
-  left: -20px;
+  left: -65px;
 }
 
 .resource-nav-button--right {
-  right: -20px;
+  right: -65px;
 }
 
 .resource-card {
@@ -3117,11 +3117,11 @@ section {
   }
   
   .resource-nav-button--left {
-    left: -18px;
+    left: -28px;
   }
   
   .resource-nav-button--right {
-    right: -18px;
+    right: -28px;
   }
 }
 
