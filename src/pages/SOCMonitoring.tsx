@@ -272,7 +272,7 @@ export function SOCMonitoring(): React.ReactElement {
               <p className="page-cta__description">
                 Gain continuous visibility, instant response, and expert oversight every second of every day.
               </p>
-              <button className="page-cta__button">Schedule a Free SOC Consultation</button>
+              {/* <button className="page-cta__button">Schedule a Free SOC Consultation</button> */}
             </div>
           </div>
         </section>

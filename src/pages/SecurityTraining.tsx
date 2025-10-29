@@ -201,7 +201,7 @@ export function SecurityTraining(): React.ReactElement {
               <p className="page-cta__description">
                 Transform your employees into your strongest defense line with engaging, data-driven cybersecurity training.
               </p>
-              <button className="page-cta__button">Start a Training Program</button>
+              {/* <button className="page-cta__button">Start a Training Program</button> */}
             </div>
           </div>
         </section>

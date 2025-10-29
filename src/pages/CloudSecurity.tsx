@@ -241,7 +241,7 @@ export function CloudSecurity(): React.ReactElement {
               <p className="page-cta__description">
                 Protect every workload and environment with Skysecure's unified, automated cloud security solution.
               </p>
-              <button className="page-cta__button">Schedule a Cloud Security Assessment</button>
+              {/* <button className="page-cta__button">Schedule a Cloud Security Assessment</button> */}
             </div>
           </div>
         </section>

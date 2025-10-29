@@ -139,7 +139,7 @@
 }
 
 .terms-link {
-  color: #0066cc;
+  color: #2563EB;
   text-decoration: none;
 }
 
@@ -154,10 +154,23 @@
   margin: 3rem 0 2rem 0;
 }
 
+.terms-contact-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.terms-contact-icon {
+  width: 24px;
+  height: 20px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
 .terms-contact h3 {
   font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-weight: bold;
+  margin-bottom: 0;
   margin-top: 0;
   color: #0b0b0c;
 }
@@ -166,7 +179,8 @@
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #2563EB;
+  margin-left: 36px;
 }
 
 .terms-contact p:last-child {
@@ -232,6 +246,20 @@
   .terms-contact {
     padding: 1.5rem;
   }
+  
+  .terms-contact-header {
+    margin-bottom: 0.75rem;
+  }
+  
+  .terms-contact-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .terms-contact p {
+    margin-left: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -269,6 +297,20 @@
   
   .terms-contact {
     padding: 1.25rem;
+  }
+  
+  .terms-contact-header {
+    margin-bottom: 0.5rem;
+  }
+  
+  .terms-contact-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+  
+  .terms-contact p {
+    margin-left: 26px;
   }
 }
 

@@ -272,13 +272,16 @@ export function TermsOfService(): React.ReactElement {
             </section>
 
             <div className="terms-contact">
-              <h3>Questions or Concerns?</h3>
+              <div className="terms-contact-header">
+                <img src="/assets/img/terms-service/email.png" alt="Email icon" className="terms-contact-icon" />
+                <h3>Questions or Concerns?</h3>
+              </div>
               <p>
                 If you have any questions about these Terms of Use or need clarification on any point, 
                 please don't hesitate to contact us.
               </p>
               <p>
-                <a href="mailto:support@skysecure.ai" className="terms-link">support@skysecure.ai</a>
+                <a href="mailto:contact@skysecure.ai" className="terms-link">contact@skysecure.ai</a>
               </p>
             </div>
 
