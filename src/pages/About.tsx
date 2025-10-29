@@ -136,7 +136,7 @@ const TEAM_MEMBERS = [
   {
     name: 'Meenu PS',
     title: 'Business Analyst',
-    image: 'about/meenu.jfif'
+    image: 'about/meenu.jpg'
   }
 ];
 

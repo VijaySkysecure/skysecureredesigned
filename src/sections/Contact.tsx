@@ -213,7 +213,7 @@ export function Contact(): React.ReactElement {
                 </div>
 
                 <div className="form-field">
-                  <label htmlFor="email">Business Email *</label>
+                  <label htmlFor="email">Email *</label>
                   <input 
                     id="email" 
                     type="email" 

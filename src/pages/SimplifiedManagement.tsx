@@ -7,51 +7,41 @@ const SimplifiedManagement: React.FC = () => {
   const CORE_VALUES = [
     {
       icon: 'icon-pie-chart',
-      title: 'Centralized Control',
-      description: 'Access all key data in one place through a unified, easy-to-use dashboard.'
+      title: 'Cost Control',
+      description: 'Stay within budget with intelligent, automated cost management strategies.'
     },
     {
       icon: 'icon-tailored',
-      title: 'Automated Workflows',
-      description: 'Reduce the burden of manual tasks with automated systems tailored to your needs.'
+      title: 'Performance Optimization',
+      description: 'Ensure consistent performance with continuous monitoring and adjustments.'
     },
     {
       icon: 'icon-question-mark',
-      title: 'Real-Time Insights',
-      description: 'Stay ahead with continuous monitoring and actionable insights to guide decision-making.'
+      title: 'Cloud-Ready Infrastructure',
+      description: 'Built to support and scale with your cloud-first strategies.'
     }
   ];
 
   const FEATURE_HIGHLIGHTS = [
     {
       icon: 'icon-dashboard',
-      title: 'Centralized IT & Security Dashboard',
-      description: 'Unified view of all systems and security metrics'
-    },
-    {
-      icon: 'icon-task-list',
-      title: 'Automated Task Management',
-      description: 'Streamline workflows with intelligent automation'
+      title: 'Scalable Architecture',
+      description: 'Build infrastructure that grows with your business.'
     },
     {
       icon: 'icon-eye',
-      title: 'Real-Time Operational Monitoring',
-      description: 'Continuous oversight of system performance'
-    },
-    {
-      icon: 'icon-bell',
-      title: 'Proactive Alerting & Issue Resolution',
-      description: 'Early detection and automated response systems'
+      title: 'Continuous Monitoring',
+      description: 'Proactive performance monitoring to prevent downtime and disruptions.'
     },
     {
       icon: 'icon-rocket',
-      title: 'Workflow Optimization',
-      description: 'Continuous improvement of operational processes'
+      title: 'Seamless Deployment',
+      description: 'Simplify your infrastructure deployment with robust, reliable solutions.'
     },
     {
       icon: 'icon-growth',
-      title: 'Data-Driven Decision Making',
-      description: 'Actionable insights from comprehensive analytics'
+      title: 'Cost Optimization',
+      description: 'Automated tools to track and reduce cloud costs.'
     }
   ];
 
@@ -64,11 +54,11 @@ const SimplifiedManagement: React.FC = () => {
         <div className="container">
           <div className="page-hero__content">
             <h1 className="page-hero__title">
-              <span>Simplified</span>{' '}
-              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Management</span>
+              <span>Infrastructure</span>{' '}
+              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Operations</span>
             </h1>
             <p className="page-hero__description">
-              Streamlined management approach simplifies complex tasks, providing you with a centralized dashboard, automated workflows, and real-time insights, enabling you to effortlessly steer your organization towards growth.
+            Building Reliable and Scalable Cloud Infrastructure
             </p>
           </div>
         </div>
@@ -78,7 +68,7 @@ const SimplifiedManagement: React.FC = () => {
       <section className="page-intro">
         <div className="container">
           <p className="page-intro__text">
-            In the fast-paced world of IT and security, managing an organization's technological infrastructure can quickly become a complex and daunting task. That's why we've developed our Simplified Management approach—designed to cut through the complexity and streamline your management processes. From a centralized dashboard to automated workflows and real-time insights, we empower your team with the tools needed to drive efficiency and growth.
+          We architect, license, and manage cloud-ready infrastructure designed for reliability and scalability. From deployment to ongoing optimization, Skysecure ensures seamless performance and cost control across all your environments.
           </p>
         </div>
       </section>
@@ -115,16 +105,9 @@ const SimplifiedManagement: React.FC = () => {
         <div className="container">
           <div className="page-innovation__content">
             <div className="page-innovation__text">
-              <h2 className="page-innovation__title">Centralized Dashboard Excellence</h2>
+              <h2 className="page-innovation__title">Complete Infrastructure Management</h2>
               <p className="page-innovation__description">
-                At the heart of our Simplified Management service is a centralized dashboard designed to provide you with a comprehensive view of your IT and security landscape. This intuitive dashboard gives you quick access to critical data, from system performance to security alerts. By consolidating everything in one place, you can eliminate the need to juggle multiple systems, saving time and reducing errors.
-              </p>
-              <ul className="page-innovation__bullet-points">
-                <li className="page-innovation__bullet-point">
-                  <span className="page-innovation__bullet-icon">✓</span>
-                  <span>Unified data visualization</span>
-                </li>
-              </ul>
+              Skysecure provides end-to-end management of your infrastructure, from initial setup to ongoing optimization. We ensure your systems remain agile, reliable, and secure, adapting to your business's changing needs.              </p>
             </div>
             <div className="page-innovation__image">
               <ImagePlaceholder 
@@ -146,7 +129,14 @@ const SimplifiedManagement: React.FC = () => {
             <h2 className="page-features__title">Feature Highlights</h2>
             <p className="page-features__subtitle">Comprehensive tools for streamlined management</p>
           </div>
-          <div className="page-features__grid">
+          <div 
+            className="page-features__grid"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '24px'
+            }}
+          >
             {FEATURE_HIGHLIGHTS.map((feature, index) => (
               <div key={index} className="page-feature-card">
                 <div className="page-feature-card__icon">
@@ -170,11 +160,9 @@ const SimplifiedManagement: React.FC = () => {
       <section className="page-cta">
         <div className="container">
           <div className="page-cta__content">
-            <h2 className="page-cta__title">Simplify Your Management, Accelerate Your Growth</h2>
+            <h2 className="page-cta__title">Simplify Your Cloud Management.</h2>
             <p className="page-cta__description">
-              Effortlessly navigate the complexities of IT management with a streamlined approach that empowers your organization to grow efficiently and securely.
-            </p>
-            <button className="page-cta__button">Get Started</button>
+            Our infrastructure solutions integrate smoothly with major cloud platforms, ensuring reliability, security, and cost-effectiveness across AWS, Azure, and Google Cloud environments.            </p>
           </div>
         </div>
       </section>

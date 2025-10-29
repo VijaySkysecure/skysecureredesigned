@@ -191,7 +191,6 @@ export function ManagedServices(): React.ReactElement {
               <p className="page-cta__description">
               Let us handle your IT so you can focus on growing your business. Our expert-managed services are designed to protect, optimize, and scale your IT infrastructure keeping you ahead of the competition.
               </p>
-              <button className="page-cta__button">Contact Us</button>
             </div>
           </div>
         </section>

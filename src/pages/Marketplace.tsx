@@ -7,51 +7,36 @@ const Marketplace: React.FC = () => {
   const CORE_VALUES = [
     {
       icon: 'icon-rocket',
-      title: 'Diverse Solutions',
-      description: 'Explore a curated collection of innovative technologies tailored to meet your business goals.'
+      title: 'Continuous Monitoring',
+      description: 'Real-time detection and response across your entire infrastructure.'
     },
     {
       icon: 'icon-growth',
-      title: 'Empowered Growth',
-      description: 'Access tools that enhance efficiency, productivity, and long-term scalability.'
+      title: 'Zero-Trust Enforcement',
+      description: 'Ensuring strict access control policies with AI-driven security.'
     },
     {
       icon: 'icon-support',
-      title: 'Expert Support',
-      description: 'Leverage guidance from leading IT and security professionals.'
+      title: 'Data Privacy Compliance',
+      description: 'Adhering to DPDP regulations to maintain data security and privacy.'
     }
   ];
 
   const FEATURE_HIGHLIGHTS = [
     {
-      icon: 'icon-shield',
-      title: 'Cybersecurity Solutions',
-      description: 'Advanced protection systems to safeguard your digital assets.'
-    },
-    {
-      icon: 'icon-analytics',
-      title: 'Data Analytics Platforms',
-      description: 'Transform raw data into actionable business insights.'
-    },
-    {
-      icon: 'icon-cloud',
-      title: 'Cloud & Infrastructure',
-      description: 'Scalable cloud solutions for modern business operations.'
-    },
-    {
       icon: 'icon-automation',
-      title: 'Automation & AI Tools',
-      description: 'Intelligent automation to streamline your workflows.'
+      title: 'AI-Powered Threat Detection',
+      description: 'Real-time alerts and automatic responses to security incidents.'
     },
     {
       icon: 'icon-compliance',
-      title: 'Compliance Management',
-      description: 'Ensure regulatory compliance with automated systems.'
+      title: 'Regulatory Compliance Reporting',
+      description: 'Always up-to-date with DPDP standards and industry regulations.'
     },
     {
       icon: 'icon-consulting',
-      title: 'IT Consulting & Integration',
-      description: 'Expert guidance for seamless technology integration.'
+      title: 'Zero-Trust Access Control',
+      description: 'Prevent unauthorized access to your sensitive data.'
     }
   ];
 
@@ -64,11 +49,11 @@ const Marketplace: React.FC = () => {
         <div className="container">
           <div className="page-hero__content">
             <h1 className="page-hero__title">
-              <span>Commercial</span>{' '}
-              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Marketplace</span>
+              <span>Security</span>{' '}
+              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Operations</span>
             </h1>
             <p className="page-hero__description">
-              Discover a world of possibilities, where innovative solutions, diverse offerings, and exceptional services converge to empower businesses and drive growth.
+            Comprehensive Protection, Powered by AI
             </p>
           </div>
         </div>
@@ -78,7 +63,7 @@ const Marketplace: React.FC = () => {
       <section className="page-intro" style={{ paddingBottom: '16px' }}>
         <div className="container">
           <p className="page-intro__text">
-            Step into our Commercial Marketplace and immerse yourself in a world brimming with endless possibilities. Designed with businesses in mind, our platform is a vibrant ecosystem where innovation meets necessity, offering a curated selection of cutting-edge solutions, diverse product offerings, and unparalleled services. This marketplace is your gateway to discovering tools and technologies that have the power to transform your operations, streamline your processes, and catapult your business into new realms of growth and efficiency.
+          We manage your entire security lifecycle, from licensing to continuous protection. Our AI-powered Security Operations Center (SOC) provides real-time detection, response, and governance to enforce zero-trust policies and ensure compliance with Data Protection and Privacy (DPDP) standards.
           </p>
         </div>
       </section>
@@ -115,9 +100,9 @@ const Marketplace: React.FC = () => {
         <div className="container">
           <div className="page-innovation__content">
             <div className="page-innovation__text">
-              <h2 className="page-innovation__title">Innovation Meets Diversity</h2>
+              <h2 className="page-innovation__title">Complete Cloud Protection</h2>
               <p className="page-innovation__description">
-                At the heart of our marketplace lies a commitment to diversity and innovation. We understand that each business is unique, with its own set of challenges and opportunities. That's why we've painstakingly gathered an expansive array of offerings—from software solutions that optimize your workflows to hardware that enhances your operational capabilities—all designed to address the specific needs of businesses across various industries.
+              Our AI-enabled SOC is equipped to manage and protect all your cloud-based assets. From detecting threats to providing continuous compliance reporting, we ensure that your cloud environments remain safe and compliant with global regulations.
               </p>
             </div>
             <div className="page-innovation__image">
@@ -164,16 +149,10 @@ const Marketplace: React.FC = () => {
       <section className="page-cta">
         <div className="container">
           <div className="page-cta__content">
-            <h2 className="page-cta__title">Explore. Compare. Transform.</h2>
+            <h2 className="page-cta__title">Seamless Integration Across Every Cloud</h2>
             <p className="page-cta__description">
-              Discover, grow, and lead with confidence the future of your business is just a few clicks away.
+            Integrates effortlessly with leading cloud providers, offering you a unified security<br></br>solution across AWS, Azure, and Google Cloud.
             </p>
-            <button 
-              className="page-cta__button"
-              onClick={() => window.open('https://shop.skysecure.ai/', '_blank')}
-            >
-              Explore Marketplace
-            </button>
           </div>
         </div>
       </section>
