@@ -142,7 +142,7 @@ export function ManagedServices(): React.ReactElement {
         <section className="page-features" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
           <div className="container">
             <div className="page-features__header">
-              <h2 className="page-features__title">Comprehensive Security Solutions</h2>
+              <h2 className="page-features__title">Comprehensive Managed IT Services</h2>
             </div>
             <div className="page-features__grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               {COMPREHENSIVE_SOLUTIONS.map((solution, index) => (
