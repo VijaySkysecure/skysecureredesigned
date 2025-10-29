@@ -56,7 +56,7 @@ export function GlobalImpact(): React.ReactElement {
               </h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <span style={{ 
-                  fontSize: '32px', 
+                  fontSize: '24px', 
                   fontWeight: '700', 
                   color: '#0A4EFF' 
                 }}>
@@ -141,8 +141,8 @@ export function GlobalImpact(): React.ReactElement {
               <div style={{
                 position: 'absolute',
                 top: '50%',
-                left: '0',
-                width: '100%',
+                left: '20%',
+                width: '60%',
                 height: '2px',
                 background: 'repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 8px, transparent 8px, transparent 16px)',
                 transform: 'translateY(-50%)'
@@ -152,9 +152,9 @@ export function GlobalImpact(): React.ReactElement {
               <div style={{
                 position: 'absolute',
                 left: '50%',
-                top: '0',
+                top: '27%',
                 width: '2px',
-                height: '100%',
+                height: '45%',
                 background: 'repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 8px, transparent 8px, transparent 16px)',
                 transform: 'translateX(-50%)'
               }}></div>

@@ -106,7 +106,7 @@ const TEAM_MEMBERS = [
   {
     name: 'Agniputhran N M',
     title: 'President & CBO',
-    image: 'about/agniputhran-nm.png'
+    image: 'about/agniputhran-nm.JPG'
   },
   {
     name: 'Arvind Yadav',
@@ -679,7 +679,7 @@ export function About(): React.ReactElement {
                 color: '#1F2937', 
                 margin: '0 0 16px 0'
               }}>
-                Our Team
+                Our Leadership Team
               </h2>
               <p style={{ 
                 fontSize: '20px', 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 const GLOBAL_OFFICES = [
@@ -16,14 +16,84 @@ const GLOBAL_OFFICES = [
   }
 ];
 
-const SERVICES_OF_INTEREST = [
-  '24/7 SOC Monitoring',
-  'Threat Hunting',
-  'Zero Trust Implementation',
-  'Security Assessment'
-];
-
 export function Contact(): React.ReactElement {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    jobTitle: '',
+    message: '',
+    consent: false
+  });
+
+  const [phoneError, setPhoneError] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target;
+    
+    if (name === 'phone') {
+      // Remove any non-numeric characters
+      const numericValue = value.replace(/\D/g, '');
+      
+      // Check if first digit is 0
+      if (numericValue.length > 0 && numericValue[0] === '0') {
+        setPhoneError('Phone number cannot start with 0');
+        return;
+      } else {
+        setPhoneError('');
+      }
+      
+      setFormData(prev => ({
+        ...prev,
+        [name]: numericValue
+      }));
+    } else if (type === 'checkbox') {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData(prev => ({
+        ...prev,
+        [name]: checked
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
+  };
+
+  const isFormValid = () => {
+    return (
+      formData.firstName.trim() !== '' &&
+      formData.lastName.trim() !== '' &&
+      formData.email.trim() !== '' &&
+      formData.phone.trim() !== '' &&
+      formData.jobTitle.trim() !== '' &&
+      formData.message.trim() !== '' &&
+      formData.consent === true &&
+      phoneError === ''
+    );
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (isFormValid()) {
+      // Handle form submission here
+      console.log('Form submitted:', formData);
+      // Reset form after successful submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        jobTitle: '',
+        message: '',
+        consent: false
+      });
+      setPhoneError('');
+    }
+  };
+
   return (
     <section className="section--light" id="contact">
       <div className="container">
@@ -114,98 +184,95 @@ export function Contact(): React.ReactElement {
           <div className="contact-right">
             <div className="consultation-form-card">
               <h3 className="form-title">Request a Consultation</h3>
-              <form className="consultation-form">
+              <form className="consultation-form" onSubmit={handleSubmit}>
                 <div className="form-row">
                   <div className="form-field">
-                    <label htmlFor="firstName">First Name</label>
+                    <label htmlFor="firstName">First Name *</label>
                     <input 
                       id="firstName" 
                       name="firstName" 
                       placeholder="Michael"
                       className="form-input"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
                     />
                   </div>
                   <div className="form-field">
-                    <label htmlFor="lastName">Last Name</label>
+                    <label htmlFor="lastName">Last Name *</label>
                     <input 
                       id="lastName" 
                       name="lastName" 
                       placeholder="Scott"
                       className="form-input"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
                     />
                   </div>
                 </div>
 
                 <div className="form-field">
-                  <label htmlFor="email">Business Email</label>
+                  <label htmlFor="email">Business Email *</label>
                   <input 
                     id="email" 
                     type="email" 
                     name="email" 
                     placeholder="scott@company.com"
                     className="form-input"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
                   />
                 </div>
 
                 <div className="form-row">
                   <div className="form-field">
-                    <label htmlFor="company">Company</label>
+                    <label htmlFor="phone">Phone *</label>
                     <input 
-                      id="company" 
-                      name="company" 
-                      placeholder="Company Inc."
+                      id="phone" 
+                      type="tel" 
+                      name="phone" 
+                      placeholder="1234567890"
                       className="form-input"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      required
                     />
+                    {phoneError && (
+                      <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
+                        {phoneError}
+                      </p>
+                    )}
                   </div>
                   <div className="form-field">
-                    <label htmlFor="jobTitle">Job Title</label>
+                    <label htmlFor="jobTitle">Company *</label>
                     <input 
                       id="jobTitle" 
                       name="jobTitle" 
-                      placeholder="CISO"
+                      placeholder="Company Inc."
                       className="form-input"
+                      value={formData.jobTitle}
+                      onChange={handleInputChange}
+                      required
                     />
                   </div>
                 </div>
 
                 <div className="form-field">
-                  <label htmlFor="companySize">Company Size</label>
-                  <select id="companySize" name="companySize" className="form-select">
-                    <option value="" disabled>Select company size</option>
-                    <option value="1-10">1-10 employees</option>
-                    <option value="11-50">11-50 employees</option>
-                    <option value="51-200">51-200 employees</option>
-                    <option value="201-500">201-500 employees</option>
-                    <option value="500+">500+ employees</option>
-                  </select>
-                </div>
-
-                <div className="form-field">
-                  <label className="services-label">Services of Interest</label>
-                  <div className="services-checkboxes">
-                    {SERVICES_OF_INTEREST.map((service, index) => (
-                      <label key={index} className="checkbox-label">
-                        <input 
-                          type="checkbox" 
-                          name="services" 
-                          value={service}
-                          className="checkbox-input"
-                        />
-                        <span className="checkbox-custom"></span>
-                        <span className="checkbox-text">{service}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="form-field">
-                  <label htmlFor="message">Message</label>
+                  <label htmlFor="message">Message *</label>
                   <textarea 
                     id="message" 
                     name="message" 
                     placeholder="Tell us about your cybersecurity needs..."
                     className="form-textarea"
-                    rows={4}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    style={{
+                      resize: 'none',
+                      height: '116px'
+                    }}
                   />
                 </div>
 
@@ -215,15 +282,25 @@ export function Contact(): React.ReactElement {
                       type="checkbox" 
                       name="consent"
                       className="checkbox-input"
+                      checked={formData.consent}
+                      onChange={handleInputChange}
                     />
                     <span className="checkbox-custom"></span>
                     <span className="consent-text">
-                      I agree to receive communications from Skysecure.ai and understand I can unsubscribe at any time.
+                      I agree to receive communications from Skysecure.ai and understand I can unsubscribe at any time. *
                     </span>
                   </label>
                 </div>
 
-                <button type="submit" className="submit-button">
+                <button 
+                  type="submit" 
+                  className="submit-button"
+                  disabled={!isFormValid()}
+                  style={{
+                    opacity: isFormValid() ? 1 : 0.6,
+                    cursor: isFormValid() ? 'pointer' : 'not-allowed'
+                  }}
+                >
                   Request Consultation
                 </button>
               </form>

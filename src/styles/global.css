@@ -35,6 +35,7 @@ body {
   color: var(--color-black);
   background-color: var(--color-white);
   line-height: 1.6;
+  padding-top: 80px;
 }
 
 a {
@@ -3379,9 +3380,12 @@ footer section .container {
 
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: var(--color-white);
 }
 
@@ -3389,7 +3393,7 @@ footer section .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1254px;
+  width: 100%;
   max-width: 1254px;
   height: 80px;
   margin-left: 112px;
@@ -3526,15 +3530,12 @@ footer section .container {
 
 @media (max-width: 1480px) {
   .header__bar {
-    width: calc(100% - 224px);
+    padding: 0 112px;
   }
 }
 
 @media (max-width: 1200px) {
   .header__bar {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
     padding: 0 48px;
   }
 

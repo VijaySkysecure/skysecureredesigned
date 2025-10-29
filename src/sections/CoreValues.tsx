@@ -5,17 +5,17 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 const VALUES = [
   {
     title: 'Innovation First',
-    text: 'We revolutionize cybersecurity and cloud management with AI-driven automation, delivering predictive defense, zero-trust resilience, and compliance-ready ecosystems.',
+    text: 'We redefine what’s possible in cybersecurity and cloud management through AI automation, data intelligence, and infrastructure innovation. Our engineers and AI agents deliver predictive defense, zero-trust resilience, and compliance-ready ecosystems for our customers.',
     imageName: 'homepage/icon-client.png',
   },
   {
     title: 'Trust & Transparency',
-    text: 'Our partnerships focus on accountability, clarity, and measurable outcomes. We manage every environment we build, ensuring customers are always informed about their security, data, and infrastructure.',
+    text: 'Our partnerships are built on accountability, clarity, and measurable outcomes. We take full ownership of licensing, deploying, and managing every environment we build, ensuring customers always know how their security, data, and infrastructure are performing.',
     imageName: 'homepage/icon-integrity.png',
   },
   {
     title: 'Global Impact',
-    text: 'Skysecure’s mission is to make the digital world safer and smarter for organizations of all sizes. With AI-powered services in 47+ countries, we help businesses automate securely, stay compliant, and grow confidently.',
+    text: 'Skysecure’s mission is to make the digital world safer and smarter for every organization, from startups to global enterprises. Through scalable AI-powered managed services across 47+ countries, we help businesses automate securely, stay compliant, and grow confidently.',
     imageName: 'homepage/icon-innovation.png',
   },
 ];

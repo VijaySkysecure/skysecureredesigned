@@ -460,13 +460,8 @@
 }
 
 .cta-button-primary {
-  background: #fff;
-  color: #0066ff;
-}
-
-.cta-button-primary:hover {
-  background: #f0f8ff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  color: #2563eb;
 }
 
 .cta-button-secondary {

@@ -198,8 +198,10 @@ export function DPDPAct2023(): React.ReactElement {
         {/* Hero Section */}
         <section style={{ 
           padding: '80px 0', 
-          backgroundColor: '#FFFFFF',
-          background: 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)'
+          backgroundImage: 'url(/assets/img/banner-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}>
           <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 20px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
