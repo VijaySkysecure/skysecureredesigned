@@ -5,6 +5,9 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import Flag from 'country-flag-icons/react/3x2/IN';
 import FlagSG from 'country-flag-icons/react/3x2/SG';
 import FlagAE from 'country-flag-icons/react/3x2/AE';
+// @ts-ignore
+import { contactApi } from '../services/api.js';
+import toast, { Toaster } from 'react-hot-toast';
 import '../styles/contact-page.css';
 
 export function ContactPage(): React.ReactElement {
@@ -19,15 +22,10 @@ export function ContactPage(): React.ReactElement {
   });
 
   const [phoneError, setPhoneError] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
-    
-    // Reset submitted state when user types in any field
-    if (isSubmitted) {
-      setIsSubmitted(false);
-    }
     
     if (name === 'phone') {
       // Remove any non-numeric characters
@@ -45,6 +43,14 @@ export function ContactPage(): React.ReactElement {
         ...prev,
         [name]: numericValue
       }));
+    } else if (name === 'firstName' || name === 'lastName') {
+      // Only allow letters, spaces, hyphens, and apostrophes for names
+      const nameValue = value.replace(/[^a-zA-Z\s\-']/g, '');
+      
+      setFormData(prev => ({
+        ...prev,
+        [name]: nameValue
+      }));
     } else if (type === 'checkbox') {
       const checked = (e.target as HTMLInputElement).checked;
       setFormData(prev => ({
@@ -59,7 +65,7 @@ export function ContactPage(): React.ReactElement {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate form before submission
@@ -67,24 +73,48 @@ export function ContactPage(): React.ReactElement {
       return;
     }
     
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    setIsLoading(true);
     
-    // Reset form after successful submission
-    setTimeout(() => {
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        marketing: false
-      });
-      setPhoneError('');
-      setIsSubmitted(false);
-    }, 1000); // Show "Submitted" message for 1 second before clearing
+    try {
+      // Prepare data for API call
+      const apiData = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phoneNumber: formData.phone,
+        companyName: formData.company,
+        message: formData.message,
+      };
+      
+      const response = await contactApi.submitContactForm(apiData);
+      
+      if (response.success) {
+        toast.success(response.message || 'Form submitted successfully!');
+        // Reset form instantly after successful submission
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+          marketing: false
+        });
+        setPhoneError('');
+      } else {
+        toast.error(response.message || 'Failed to submit form. Please try again.');
+      }
+    } catch (error) {
+      // Check if it's an API error with a message
+      if (error instanceof Error && error.message.includes('HTTP error')) {
+        toast.error('Server error. Please try again later.');
+      } else {
+        toast.error('An unexpected error occurred. Please try again.');
+      }
+      console.error('Form submission error:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <div className="contact-page">
@@ -180,13 +210,39 @@ export function ContactPage(): React.ReactElement {
       {/* Map Section */}
       <section className="contact-map-section" id="map">
         <div className="container">
-          <ImagePlaceholder
-            label="Map"
-            imageName="contact/contact_map.png"
-            width="100%"
-            height="auto"
-            borderRadius={8}
-          />
+          <div className="map-card">
+            <section className="map-area">
+              <div id="contact-map" className="contact-page-map">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15555.074318926514!2d77.6684169!3d12.9225901!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13c9ced19e87%3A0x9eb3e6bc94ecf51f!2sSkysecure%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1716799110896!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="500" 
+                  style={{border: 0}} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </section>
+            
+            <div className="map-info">
+              <p className="map-address">Our headquarters are located at Sakti Statesman, Unit # G/M-06 & 07, Marathahalli - Sarjapur Outer Ring Rd, 7th Cross, Green Glen Layout, Ibbaluru, Bengaluru, Karnataka 560103.</p>
+              <div className="directions-container">
+                <a
+                  href="https://maps.google.com/?q=Sakti+Statesman+Unit+G+M+06+07+Marathahalli+Sarjapur+Outer+Ring+Rd+7th+Cross+Green+Glen+Layout+Ibbaluru+Bengaluru+Karnataka+560103"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="directions-link"
+                >
+                  <svg className="location-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -361,13 +417,13 @@ export function ContactPage(): React.ReactElement {
                 <button 
                   type="submit" 
                   className="form-submit-button"
-                  disabled={!formData.marketing}
+                  disabled={!formData.marketing || isLoading}
                   style={{
-                    opacity: formData.marketing ? 1 : 0.6,
-                    cursor: formData.marketing ? 'pointer' : 'not-allowed'
+                    opacity: (formData.marketing && !isLoading) ? 1 : 0.6,
+                    cursor: (formData.marketing && !isLoading) ? 'pointer' : 'not-allowed'
                   }}
                 >
-                  {isSubmitted ? 'Submitted' : 'Submit Inquiry'}
+                  {isLoading ? 'Submitting...' : 'Submit Inquiry'}
                 </button>
               </div>
             </div>
@@ -404,6 +460,32 @@ export function ContactPage(): React.ReactElement {
       </section>
 
       <Footer />
+      
+      {/* Toast Notifications */}
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+          success: {
+            duration: 4000,
+            iconTheme: {
+              primary: '#10B981',
+              secondary: '#fff',
+            },
+          },
+          error: {
+            duration: 4000,
+            iconTheme: {
+              primary: '#EF4444',
+              secondary: '#fff',
+            },
+          },
+        }}
+      />
     </div>
   );
 }
