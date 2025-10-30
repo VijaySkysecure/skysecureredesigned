@@ -5,6 +5,9 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import Flag from 'country-flag-icons/react/3x2/IN';
 import FlagSG from 'country-flag-icons/react/3x2/SG';
 import FlagAE from 'country-flag-icons/react/3x2/AE';
+// @ts-ignore
+import { contactApi } from '../services/api.js';
+import toast, { Toaster } from 'react-hot-toast';
 import '../styles/contact-page.css';
 
 export function ContactPage(): React.ReactElement {
@@ -19,15 +22,10 @@ export function ContactPage(): React.ReactElement {
   });
 
   const [phoneError, setPhoneError] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
-    
-    // Reset submitted state when user types in any field
-    if (isSubmitted) {
-      setIsSubmitted(false);
-    }
     
     if (name === 'phone') {
       // Remove any non-numeric characters
@@ -45,6 +43,14 @@ export function ContactPage(): React.ReactElement {
         ...prev,
         [name]: numericValue
       }));
+    } else if (name === 'firstName' || name === 'lastName') {
+      // Only allow letters, spaces, hyphens, and apostrophes for names
+      const nameValue = value.replace(/[^a-zA-Z\s\-']/g, '');
+      
+      setFormData(prev => ({
+        ...prev,
+        [name]: nameValue
+      }));
     } else if (type === 'checkbox') {
       const checked = (e.target as HTMLInputElement).checked;
       setFormData(prev => ({
@@ -59,7 +65,7 @@ export function ContactPage(): React.ReactElement {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate form before submission
@@ -67,24 +73,48 @@ export function ContactPage(): React.ReactElement {
       return;
     }
     
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    setIsLoading(true);
     
-    // Reset form after successful submission
-    setTimeout(() => {
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        marketing: false
-      });
-      setPhoneError('');
-      setIsSubmitted(false);
-    }, 1000); // Show "Submitted" message for 1 second before clearing
+    try {
+      // Prepare data for API call
+      const apiData = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phoneNumber: formData.phone,
+        companyName: formData.company,
+        message: formData.message,
+      };
+      
+      const response = await contactApi.submitContactForm(apiData);
+      
+      if (response.success) {
+        toast.success(response.message || 'Form submitted successfully!');
+        // Reset form instantly after successful submission
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+          marketing: false
+        });
+        setPhoneError('');
+      } else {
+        toast.error(response.message || 'Failed to submit form. Please try again.');
+      }
+    } catch (error) {
+      // Check if it's an API error with a message
+      if (error instanceof Error && error.message.includes('HTTP error')) {
+        toast.error('Server error. Please try again later.');
+      } else {
+        toast.error('An unexpected error occurred. Please try again.');
+      }
+      console.error('Form submission error:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <div className="contact-page">
@@ -387,13 +417,13 @@ export function ContactPage(): React.ReactElement {
                 <button 
                   type="submit" 
                   className="form-submit-button"
-                  disabled={!formData.marketing}
+                  disabled={!formData.marketing || isLoading}
                   style={{
-                    opacity: formData.marketing ? 1 : 0.6,
-                    cursor: formData.marketing ? 'pointer' : 'not-allowed'
+                    opacity: (formData.marketing && !isLoading) ? 1 : 0.6,
+                    cursor: (formData.marketing && !isLoading) ? 'pointer' : 'not-allowed'
                   }}
                 >
-                  {isSubmitted ? 'Submitted' : 'Submit Inquiry'}
+                  {isLoading ? 'Submitting...' : 'Submit Inquiry'}
                 </button>
               </div>
             </div>
@@ -430,6 +460,32 @@ export function ContactPage(): React.ReactElement {
       </section>
 
       <Footer />
+      
+      {/* Toast Notifications */}
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+          success: {
+            duration: 4000,
+            iconTheme: {
+              primary: '#10B981',
+              secondary: '#fff',
+            },
+          },
+          error: {
+            duration: 4000,
+            iconTheme: {
+              primary: '#EF4444',
+              secondary: '#fff',
+            },
+          },
+        }}
+      />
     </div>
   );
 }

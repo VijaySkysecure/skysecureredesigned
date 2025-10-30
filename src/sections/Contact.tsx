@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+// @ts-ignore
+import { contactApi } from '../services/api.js';
+import toast, { Toaster } from 'react-hot-toast';
 
 const GLOBAL_OFFICES = [
   {
@@ -28,6 +31,7 @@ export function Contact(): React.ReactElement {
   });
 
   const [phoneError, setPhoneError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -47,6 +51,14 @@ export function Contact(): React.ReactElement {
       setFormData(prev => ({
         ...prev,
         [name]: numericValue
+      }));
+    } else if (name === 'firstName' || name === 'lastName') {
+      // Only allow letters, spaces, hyphens, and apostrophes for names
+      const nameValue = value.replace(/[^a-zA-Z\s\-']/g, '');
+      
+      setFormData(prev => ({
+        ...prev,
+        [name]: nameValue
       }));
     } else if (type === 'checkbox') {
       const checked = (e.target as HTMLInputElement).checked;
@@ -75,22 +87,54 @@ export function Contact(): React.ReactElement {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isFormValid()) {
-      // Handle form submission here
-      console.log('Form submitted:', formData);
-      // Reset form after successful submission
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        jobTitle: '',
-        message: '',
-        consent: false
-      });
-      setPhoneError('');
+    
+    if (!isFormValid()) {
+      return;
+    }
+    
+    setIsLoading(true);
+    
+    try {
+      // Prepare data for API call - mapping jobTitle to companyName
+      const apiData = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phoneNumber: formData.phone,
+        companyName: formData.jobTitle,
+        message: formData.message,
+      };
+      
+      const response = await contactApi.submitContactForm(apiData);
+      
+      if (response.success) {
+        toast.success(response.message || 'Consultation request submitted successfully!');
+        // Reset form instantly after successful submission
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          jobTitle: '',
+          message: '',
+          consent: false
+        });
+        setPhoneError('');
+      } else {
+        toast.error(response.message || 'Failed to submit consultation request. Please try again.');
+      }
+    } catch (error) {
+      // Check if it's an API error with a message
+      if (error instanceof Error && error.message.includes('HTTP error')) {
+        toast.error('Server error. Please try again later.');
+      } else {
+        toast.error('An unexpected error occurred. Please try again.');
+      }
+      console.error('Form submission error:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -295,19 +339,45 @@ export function Contact(): React.ReactElement {
                 <button 
                   type="submit" 
                   className="submit-button"
-                  disabled={!isFormValid()}
+                  disabled={!isFormValid() || isLoading}
                   style={{
-                    opacity: isFormValid() ? 1 : 0.6,
-                    cursor: isFormValid() ? 'pointer' : 'not-allowed'
+                    opacity: (isFormValid() && !isLoading) ? 1 : 0.6,
+                    cursor: (isFormValid() && !isLoading) ? 'pointer' : 'not-allowed'
                   }}
                 >
-                  Request Consultation
+                  {isLoading ? 'Submitting...' : 'Request Consultation'}
                 </button>
               </form>
             </div>
           </div>
         </div>
       </div>
+      
+      {/* Toast Notifications */}
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+          success: {
+            duration: 4000,
+            iconTheme: {
+              primary: '#10B981',
+              secondary: '#fff',
+            },
+          },
+          error: {
+            duration: 4000,
+            iconTheme: {
+              primary: '#EF4444',
+              secondary: '#fff',
+            },
+          },
+        }}
+      />
     </section>
   );
 }
