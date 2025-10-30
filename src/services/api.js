@@ -1,5 +1,5 @@
 // API service for contact form submission
-const API_BASE_URL = import.meta.env.API_BASE_URL || 'http://localhost:3030';
+const API_BASE_URL = process.env.VITE_API_BASE_URL;
 
 export const contactApi = {
   async submitContactForm(formData) {
