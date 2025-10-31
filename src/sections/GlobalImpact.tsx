@@ -1,9 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import { useCountUp } from '../hooks/useCountUp';
 
 export function GlobalImpact(): React.ReactElement {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const animatedCount312 = useCountUp(312, isVisible, 2000);
+  const animatedCount204 = useCountUp(204, isVisible, 2000);
+  const animatedCount176 = useCountUp(176, isVisible, 2000);
+  const animatedCount50 = useCountUp(50, isVisible, 2500);
+  
   return (
-    <section className="section--light" id="impact">
+    <section ref={sectionRef} className="section--light" id="impact">
       <div className="container">
         {/* Section Header */}
         <div style={{ textAlign: 'center', marginBottom: '64px' }}>
@@ -239,12 +273,16 @@ export function GlobalImpact(): React.ReactElement {
                   Security detection
                 </h4>
                 <div style={{ 
-                  fontSize: '32px', 
+                  fontSize: '24px', 
                   fontWeight: '700', 
-                  color: '#1F2937',
-                  marginBottom: '4px'
+                  color: '#FFFFFF',
+                  marginBottom: '4px',
+                  background: 'linear-gradient(45deg, rgb(102, 204, 255) 50%, rgb(77, 179, 255) 120.71%)',
+                  padding: '4px 12px',
+                  borderRadius: '15px',
+                  display: 'inline-block'
                 }}>
-                  312
+                  {Math.floor(animatedCount312)}
                 </div>
                 <p style={{ 
                   fontSize: '14px', 
@@ -283,9 +321,9 @@ export function GlobalImpact(): React.ReactElement {
                 <ImagePlaceholder
                   label="AI Agents Icon"
                   imageName="knowledge/icon-rocket-circle.png"
-                  width={48}
-                  height={48}
-                  borderRadius={0}
+                  width={58}
+                  height={58}
+                  borderRadius={100}
                 />
               </div>
               <div>
@@ -298,12 +336,16 @@ export function GlobalImpact(): React.ReactElement {
                   AI Agents Actions
                 </h4>
                 <div style={{ 
-                  fontSize: '32px', 
+                  fontSize: '24px', 
                   fontWeight: '700', 
-                  color: '#1F2937',
-                  marginBottom: '4px'
+                  color: '#FFFFFF',
+                  marginBottom: '4px',
+                  background: 'linear-gradient(45deg, rgb(102, 204, 255) 50%, rgb(77, 179, 255) 120.71%)',
+                  padding: '4px 12px',
+                  borderRadius: '15px',
+                  display: 'inline-block'
                 }}>
-                  204
+                  {Math.floor(animatedCount204)}
                 </div>
                 <p style={{ 
                   fontSize: '14px', 
@@ -342,9 +384,9 @@ export function GlobalImpact(): React.ReactElement {
                 <ImagePlaceholder
                   label="Data Governance Icon"
                   imageName="knowledge/icon-eye-purple.png"
-                  width={48}
-                  height={48}
-                  borderRadius={0}
+                  width={58}
+                  height={58}
+                  borderRadius={100}
                 />
               </div>
               <div>
@@ -357,12 +399,16 @@ export function GlobalImpact(): React.ReactElement {
                   Data Governance Job
                 </h4>
                 <div style={{ 
-                  fontSize: '32px', 
+                  fontSize: '24px', 
                   fontWeight: '700', 
-                  color: '#1F2937',
-                  marginBottom: '4px'
+                  color: '#FFFFFF',
+                  marginBottom: '4px',
+                  background: 'linear-gradient(45deg, rgb(102, 204, 255) 50%, rgb(77, 179, 255) 120.71%)',
+                  padding: '4px 12px',
+                  borderRadius: '15px',
+                  display: 'inline-block'
                 }}>
-                  176
+                  {Math.floor(animatedCount176)}
                 </div>
                 <p style={{ 
                   fontSize: '14px', 
@@ -414,12 +460,16 @@ export function GlobalImpact(): React.ReactElement {
                   Infraoptimization
                 </h4>
                 <div style={{ 
-                  fontSize: '32px', 
+                  fontSize: '24px', 
                   fontWeight: '700', 
-                  color: '#1F2937',
-                  marginBottom: '4px'
+                  color: '#FFFFFF',
+                  marginBottom: '4px',
+                  background: 'linear-gradient(45deg, rgb(102, 204, 255) 50%, rgb(77, 179, 255) 120.71%)',
+                  padding: '4px 12px',
+                  borderRadius: '15px',
+                  display: 'inline-block'
                 }}>
-                  50
+                  {Math.floor(animatedCount50)}
                 </div>
                 <p style={{ 
                   fontSize: '14px', 

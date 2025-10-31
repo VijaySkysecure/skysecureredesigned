@@ -235,13 +235,15 @@ export function Footer(): React.ReactElement {
         <div className="footer__certifications">
           {CERTIFICATIONS.map((cert, index) => (
             <div key={index} className="footer__cert">
-              <ImagePlaceholder 
-                label={cert.name} 
-                imageName={cert.imageName} 
-                width={42}
-                height={42}
-                borderRadius={0} 
-              />
+              <div style={{ filter: 'grayscale(100%)' }}>
+                <ImagePlaceholder 
+                  label={cert.name} 
+                  imageName={cert.imageName} 
+                  width={42}
+                  height={42}
+                  borderRadius={0} 
+                />
+              </div>
               <span className="footer__cert-label">{cert.name}</span>
             </div>
           ))}
