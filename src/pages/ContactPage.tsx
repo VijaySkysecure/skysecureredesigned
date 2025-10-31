@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
@@ -23,6 +23,7 @@ export function ContactPage(): React.ReactElement {
 
   const [phoneError, setPhoneError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const emailInputRef = useRef<HTMLInputElement>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -42,6 +43,11 @@ export function ContactPage(): React.ReactElement {
       setFormData(prev => ({
         ...prev,
         [name]: numericValue
+      }));
+    } else if (name === 'email') {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
       }));
     } else if (name === 'firstName' || name === 'lastName') {
       // Only allow letters, spaces, hyphens, and apostrophes for names
@@ -337,12 +343,27 @@ export function ContactPage(): React.ReactElement {
               <div className="form-group">
                 <label htmlFor="email" className="form-label">Email Address*</label>
                 <input
+                  ref={emailInputRef}
                   type="email"
                   id="email"
                   name="email"
                   className="form-input"
                   value={formData.email}
                   onChange={handleInputChange}
+                  onInvalid={(e) => {
+                    const target = e.target as HTMLInputElement;
+                    if (!target.validity.valid) {
+                      if (target.validity.valueMissing) {
+                        target.setCustomValidity('Email address is required');
+                      } else if (target.validity.typeMismatch) {
+                        target.setCustomValidity('Please enter a valid email address');
+                      }
+                    }
+                  }}
+                  onInput={(e) => {
+                    const target = e.target as HTMLInputElement;
+                    target.setCustomValidity('');
+                  }}
                   required
                 />
               </div>

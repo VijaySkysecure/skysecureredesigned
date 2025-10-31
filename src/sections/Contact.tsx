@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 // @ts-ignore
 import { contactApi } from '../services/api.js';
@@ -32,6 +32,7 @@ export function Contact(): React.ReactElement {
 
   const [phoneError, setPhoneError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const emailInputRef = useRef<HTMLInputElement>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -259,6 +260,7 @@ export function Contact(): React.ReactElement {
                 <div className="form-field">
                   <label htmlFor="email">Email *</label>
                   <input 
+                    ref={emailInputRef}
                     id="email" 
                     type="email" 
                     name="email" 
@@ -266,6 +268,20 @@ export function Contact(): React.ReactElement {
                     className="form-input"
                     value={formData.email}
                     onChange={handleInputChange}
+                    onInvalid={(e) => {
+                      const target = e.target as HTMLInputElement;
+                      if (!target.validity.valid) {
+                        if (target.validity.valueMissing) {
+                          target.setCustomValidity('Email address is required');
+                        } else if (target.validity.typeMismatch) {
+                          target.setCustomValidity('Please enter a valid email address');
+                        }
+                      }
+                    }}
+                    onInput={(e) => {
+                      const target = e.target as HTMLInputElement;
+                      target.setCustomValidity('');
+                    }}
                     required
                   />
                 </div>
