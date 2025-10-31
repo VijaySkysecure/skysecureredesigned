@@ -165,30 +165,6 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
                 <p style={{ fontSize: '18px', color: '#4B5563', marginBottom: '32px', lineHeight: '1.6' }}>
                   Transforming healthcare data protection through comprehensive cloud security modernization and Zero Trust implementation.
                 </p>
-                <div style={{ display: 'flex', gap: '16px' }}>
-                  <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
-                    <ImagePlaceholder
-                      label="Download Icon"
-                      imageName="knowledge/icon-download.png"
-                      width={16}
-                      height={16}
-                      borderRadius={0}
-                    />
-                    Download PDF
-                  </button>
-                  <button style={{ backgroundColor: '#FFFFFF', color: 'rgba(55, 65, 81, 1)', padding: '12px 24px', borderRadius: '8px', border: '1px solid rgba(209, 213, 219, 1)', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
-                    <div style={{ transform: 'scale(0.7)' }}>
-                      <ImagePlaceholder
-                        label="Share Icon"
-                        imageName="knowledge/icon-share.png"
-                        width={22}
-                        height={24}
-                        borderRadius={0}
-                      />
-                    </div>
-                    Share Case Study
-                  </button>
-                </div>
               </div>
               {/* Right Visual */}
               <div style={{ flex: 1, textAlign: 'center', maxWidth: '580px' }}>

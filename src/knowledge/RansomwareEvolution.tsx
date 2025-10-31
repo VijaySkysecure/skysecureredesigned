@@ -215,30 +215,6 @@ export function RansomwareEvolution(): React.ReactElement {
                   <span>👤</span>
                   <span>Skysecure Threat Intelligence Team</span>
                 </div>
-                <button style={{
-                  backgroundColor: '#FFFFFF',
-                  color: 'rgba(27, 27, 47, 1)',
-                  border: 'none',
-                  padding: '12px 24px',
-                  borderRadius: '8px',
-                  fontSize: '16px',
-                  fontWeight: '500',
-                  cursor: 'pointer',
-                  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  fontFamily: 'Inter'
-                }}>
-                  <ImagePlaceholder
-                    label="Download Icon"
-                    imageName="knowledge/icon-download-black.png"
-                    width={16}
-                    height={16}
-                    borderRadius={0}
-                  />
-                  <span>Download Report</span>
-                </button>
               </div>
               {/* Right Visual */}
               <div style={{ flex: 1, textAlign: 'center' }}>
