@@ -32,10 +32,6 @@ export function WeeklyCyber(): React.ReactElement {
                   <span className="hero-date">📅 July 15, 2024</span>
                   <span className="hero-author">👤 Skysecure Threat Intelligence Team</span>
                 </div>
-                <button className="hero-download-btn">
-                  <span className="download-icon">⬇</span>
-                  Download Report
-                </button>
               </div>
               <div className="hero-image">
                 <img src="/assets/img/knowledge/weekly_cyber_1.png" alt="Cyber Intelligence Dashboard" />

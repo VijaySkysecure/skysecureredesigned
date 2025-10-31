@@ -9,7 +9,7 @@ const RESOURCES = [
     title: 'Daily Threat Brief: Ransomware Evolution',
     description: 'Latest analysis on emerging ransomware tactics and defensive strategies for enterprise environments.',
     imageName: 'knowledge/ransomware-skull-hero.png',
-    author: 'Security Team',
+    author: '',
     date: 'Today',
     authorImage: 'homepage/secteam.png',
   },
@@ -84,7 +84,7 @@ const RESOURCES = [
     description: 'Comprehensive roundup of global cyber threats, vulnerabilities, and security recommendations.',
     imageName: 'homepage/cover-adaptive-compliance.png',
     duration: '2:15',
-    author: 'Intel Team',
+    author: '',
     date: '3 days ago',
     authorImage: 'homepage/intelteam.png',
   },
@@ -255,15 +255,6 @@ export function Resources(): React.ReactElement {
                     borderRadius={0}
                   />
                 </div>
-                {resource.type === 'video' && (
-                  <div className="video-overlay">
-                    <div className="play-button">▶</div>
-                    <div className="video-duration">{resource.duration}</div>
-                  </div>
-                )}
-                {resource.isNew && (
-                  <div className="new-badge">NEW</div>
-                )}
               </div>
               <div className="resource-card__content">
                 <div className={`resource-category ${resource.category === 'SKYSECURE DECODE' ? 'skysecure-decode' : ''}`}>{resource.category}</div>
