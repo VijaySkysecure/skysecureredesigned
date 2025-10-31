@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import { useCountUp } from '../hooks/useCountUp';
 
 const BENEFITS = [
   {
@@ -25,8 +26,41 @@ const BENEFITS = [
 ];
 
 export function Careers(): React.ReactElement {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const animated50 = useCountUp(50, isVisible, 2000);
+  const animated3 = useCountUp(3, isVisible, 2000);
+  const animated5 = useCountUp(5, isVisible, 2000);
+  const animated99 = useCountUp(99, isVisible, 2000);
+
   return (
-    <section className="section--light" id="careers">
+    <section ref={sectionRef} className="section--light" id="careers">
       <div className="container">
         <div className="join-mission-header">
           <h2 className="join-mission-title">Join Our Mission</h2>
@@ -53,19 +87,19 @@ export function Careers(): React.ReactElement {
           </div>
           <div className="mission-metrics">
             <div className="mission-metric">
-              <div className="mission-metric-value">50+</div>
+              <div className="mission-metric-value">{Math.floor(animated50)}+</div>
               <div className="mission-metric-label">Team Members</div>
             </div>
             <div className="mission-metric">
-              <div className="mission-metric-value">3</div>
+              <div className="mission-metric-value">{Math.floor(animated3)}</div>
               <div className="mission-metric-label">Countries</div>
             </div>
             <div className="mission-metric">
-              <div className="mission-metric-value">5+</div>
+              <div className="mission-metric-value">{Math.floor(animated5)}+</div>
               <div className="mission-metric-label">Industry experience</div>
             </div>
             <div className="mission-metric">
-              <div className="mission-metric-value">99%</div>
+              <div className="mission-metric-value">{Math.floor(animated99)}%</div>
               <div className="mission-metric-label">Customer Satisfaction</div>
             </div>
           </div>
