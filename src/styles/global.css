@@ -3793,19 +3793,54 @@ footer section .container {
     font-size: 15px;
   }
 
-  /* Strategic Vision cards - reduce spacing for mobile and tablet */
+  /* Strategic Vision section - tablet */
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+  }
+
+  .card-grid .card:first-child {
+    margin-right: 0;
+  }
+
+  .card-grid .card:last-child {
+    margin-left: 0;
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 400px;
+  }
+
   .card {
+    width: 100%;
+    max-width: 100%;
     gap: 16px;
     height: auto;
     min-height: 350px;
+    padding: 24px 20px;
+  }
+
+  .card__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card__title {
+    font-size: 18px;
   }
 
   .card__description {
+    font-size: 15px;
     margin-bottom: 8px;
   }
 
   .card__bullet-points {
     margin-top: -8px;
+    gap: 6px;
+  }
+
+  .bullet-point {
+    font-size: 14px;
   }
 
   /* What We Do cards - center align on tablet */
