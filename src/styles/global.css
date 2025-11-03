@@ -2195,6 +2195,25 @@ section {
   }
 }
 
+.realize-coming-soon {
+  animation: fadeInPulse 2s ease-in-out infinite;
+}
+
+@keyframes fadeInPulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}
+
 @keyframes blink {
   0% {
     opacity: 1;
