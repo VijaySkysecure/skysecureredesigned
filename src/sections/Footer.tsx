@@ -195,7 +195,7 @@ export function Footer(): React.ReactElement {
         <div className="footer__divider"></div>
         
         <div className="footer__bottom">
-          <span className="footer__copyright" style={{ marginLeft: '88px' }}>© 2025 Skysecure. All rights reserved.</span>
+          <span className="footer__copyright">© 2025 Skysecure. All rights reserved.</span>
           <div className="footer__legal">
             <a 
               href="/privacy-policy" 
