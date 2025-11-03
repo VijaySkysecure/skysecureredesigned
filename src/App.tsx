@@ -42,6 +42,7 @@ import { WeeklyCyber } from './knowledge/WeeklyCyber';
 import { ContactPage } from './pages/ContactPage';
 import { ProfessionalServices } from './pages/ProfessionalServices';
 import { ManagedServices } from './pages/ManagedServices';
+import { Realize } from './pages/Realize';
 
 export function App(): React.ReactElement {
   // Check if we're on the marketplace route
@@ -74,6 +75,7 @@ export function App(): React.ReactElement {
   const isContactPage = window.location.pathname === '/contact';
   const isProfessionalServices = window.location.pathname === '/professional-services';
   const isManagedServices = window.location.pathname === '/managed-services';
+  const isRealize = window.location.pathname === '/realize';
   
   if (isMarketplace) {
     return <Marketplace />;
@@ -189,6 +191,10 @@ export function App(): React.ReactElement {
   
   if (isManagedServices) {
     return <ManagedServices />;
+  }
+  
+  if (isRealize) {
+    return <Realize />;
   }
   
   // Handle hash navigation for homepage
