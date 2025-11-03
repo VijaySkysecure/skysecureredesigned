@@ -560,45 +560,122 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Design */
+/* Responsive Design - Tablet */
 @media (max-width: 1024px) {
+  .contact-hero {
+    padding: 60px 0;
+  }
+
   .contact-hero-content {
     gap: 40px;
   }
 
   .contact-hero-title {
-    font-size: 48px;
+    font-size: 42px;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 17px;
+  }
+
+  .contact-hero-right > div {
+    max-width: 400px;
   }
 
   .contact-cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .global-offices {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
 
-  .contact-form {
-    grid-template-columns: 1fr;
-    padding: 32px;
+  .contact-card {
+    padding: 24px 20px;
   }
-  
+
+  .contact-card-title {
+    font-size: 18px;
+  }
+
+  .contact-card-description {
+    font-size: 13px;
+  }
+
+  .contact-page-map {
+    height: 400px;
+  }
+
+  .global-presence-title {
+    font-size: 36px;
+  }
+
+  .global-presence-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .global-offices {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .office-card {
+    padding: 24px 20px;
+  }
+
+  .office-location {
+    font-size: 17px;
+  }
+
+  .office-addres {
+    font-size: 15px;
+  }
+
+  .contact-form-section {
+    padding: 60px 0;
+  }
+
+  .contact-form-title {
+    font-size: 36px;
+  }
+
+  .contact-form-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .contact-formm {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 40px;
+  }
+
   .form-textarea {
-    min-height: 200px;
-    height: auto;
+    min-height: 280px;
+    height: 280px;
+  }
+
+  .contact-cta-section {
+    padding: 60px 0;
+  }
+
+  .contact-cta-title {
+    font-size: 36px;
+  }
+
+  .contact-cta-subtitle {
+    font-size: 16px;
   }
 }
 
-@media (max-width: 768px) {
+/* Responsive Design - Mobile */
+@media (max-width: 968px) {
   .contact-hero {
-    padding: 60px 0 80px;
+    padding: 48px 0 60px;
   }
 
   .contact-hero-content {
     flex-direction: column;
     text-align: center;
+    gap: 32px;
   }
 
   .contact-hero-left,
@@ -608,25 +685,147 @@
   }
 
   .contact-hero-title {
-    font-size: 36px;
+    font-size: 32px;
+    margin-bottom: 16px;
   }
 
   .contact-hero-subtitle {
     font-size: 16px;
+    margin-bottom: 24px;
   }
 
   .contact-hero-right {
     justify-content: center;
   }
 
-  .contact-cards-section {
-    margin-top: -40px;
+  .contact-hero-right > div {
+    max-width: 100%;
   }
 
-  .global-presence-title,
-  .contact-form-title,
+  .contact-cards-section {
+    padding: 32px 0 0 0;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .contact-card {
+    padding: 24px 20px;
+  }
+
+  .contact-card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+  }
+
+  .contact-card-title {
+    font-size: 18px;
+  }
+
+  .contact-card-description {
+    font-size: 14px;
+  }
+
+  .contact-page-map {
+    height: 350px;
+  }
+
+  .map-info {
+    padding: 20px;
+  }
+
+  .map-address {
+    font-size: 14px;
+  }
+
+  .global-presence-section {
+    padding: 40px 0;
+  }
+
+  .global-presence-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .global-presence-subtitle {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .global-offices {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .office-card {
+    padding: 24px 20px;
+  }
+
+  .office-location {
+    font-size: 16px;
+  }
+
+  .office-addres {
+    font-size: 14px;
+  }
+
+  .contact-form-section {
+    padding: 48px 0;
+  }
+
+  .contact-form-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .contact-form-subtitle {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .contact-formm {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 32px 24px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .form-textarea {
+    min-height: 200px;
+    height: 200px;
+  }
+
+  .form-checkbox {
+    margin-top: 0;
+  }
+
+  .form-submit-button {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+
+  .contact-cta-section {
+    padding: 48px 0;
+  }
+
   .contact-cta-title {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .contact-cta-subtitle {
+    font-size: 15px;
+    margin-bottom: 32px;
   }
 
   .contact-cta-buttons {
@@ -636,31 +835,126 @@
 
   .cta-button {
     width: 100%;
-    max-width: 300px;
+    max-width: 160px;
+    padding: 16px 20px;
   }
 }
 
+/* Responsive Design - Small Mobile */
 @media (max-width: 480px) {
+  .contact-hero {
+    padding: 40px 0 48px;
+  }
+
   .contact-hero-title {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 14px;
+  }
+
+  .contact-cards {
+    padding: 0 16px;
+    gap: 16px;
   }
 
   .contact-card {
-    padding: 32px 24px;
+    padding: 20px 16px;
+  }
+
+  .contact-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-card-title {
+    font-size: 16px;
+  }
+
+  .contact-card-description {
+    font-size: 13px;
+  }
+
+  .contact-card-link {
+    font-size: 14px;
+  }
+
+  .contact-page-map {
+    height: 300px;
+  }
+
+  .map-info {
+    padding: 16px;
+  }
+
+  .map-address {
+    font-size: 13px;
+  }
+
+  .global-presence-title {
+    font-size: 24px;
+  }
+
+  .global-presence-subtitle {
+    font-size: 14px;
+  }
+
+  .global-offices {
+    padding: 0 16px;
+    gap: 16px;
   }
 
   .office-card {
-    padding: 32px 24px;
+    padding: 20px 16px;
   }
 
-  .global-presence-title,
-  .contact-form-title,
-  .contact-cta-title {
-    font-size: 28px;
+  .office-location {
+    font-size: 15px;
   }
-  
-  .contact-form {
-    padding: 24px;
+
+  .office-addres {
+    font-size: 13px;
+  }
+
+  .contact-form-section {
+    padding: 40px 0;
+  }
+
+  .contact-form-title {
+    font-size: 24px;
+  }
+
+  .contact-form-subtitle {
+    font-size: 14px;
+  }
+
+  .contact-formm {
+    padding: 24px 16px;
+    gap: 16px;
+  }
+
+  .form-textarea {
+    min-height: 180px;
+    height: 180px;
+  }
+
+  .contact-cta-section {
+    padding: 40px 0;
+  }
+
+  .contact-cta-title {
+    font-size: 24px;
+  }
+
+  .contact-cta-subtitle {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    max-width: 40%;
+    padding: 14px 16px;
+    font-size: 14px;
   }
 }
 
