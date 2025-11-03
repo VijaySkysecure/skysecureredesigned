@@ -3611,6 +3611,18 @@ footer section .container {
   .card__bullet-points {
     margin-top: -8px;
   }
+
+  /* What We Do cards - center align on tablet */
+  .what-we-do-card__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .what-we-do-card__title-section {
+    text-align: center;
+    align-items: center;
+  }
 }
 
 /* Mobile and tablet navigation */
@@ -3757,6 +3769,18 @@ footer section .container {
   .card__bullet-points {
     margin-top: -6px;
   }
+
+  /* What We Do cards - center align on mobile */
+  .what-we-do-card__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .what-we-do-card__title-section {
+    text-align: center;
+    align-items: center;
+  }
 }
 
 /* Mobile specific adjustments */
@@ -3792,6 +3816,16 @@ footer section .container {
 
   .card__bullet-points {
     margin-top: -8px;
+  }
+
+  /* What We Do cards - center align on small mobile */
+  .what-we-do-card__header {
+    align-items: center;
+  }
+
+  .what-we-do-card__title-section {
+    text-align: center;
+    align-items: center;
   }
 }
 
@@ -3941,13 +3975,18 @@ footer section .container {
   /* What We Do cards */
   .what-we-do-card__header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
   }
   
   .what-we-do-card__icon {
     width: 40px !important;
     height: 40px !important;
+  }
+
+  .what-we-do-card__title-section {
+    text-align: center;
+    align-items: center;
   }
   
   /* Resources section */

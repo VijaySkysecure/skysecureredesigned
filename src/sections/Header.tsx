@@ -29,7 +29,7 @@ const NAV_ITEMS: NavLink[] = [
     label: 'Product',
     href: '#product',
     menu: [
-      { label: 'Marketplace', href: '/marketplace' },
+      { label: 'Marketplace', href: 'https://shop.skysecure.ai/' },
       { label: 'Realize', href: '#realize' },
     ],
   },
@@ -266,6 +266,9 @@ export function Header(): React.ReactElement {
                             role="menuitem"
                             onClick={(e) => {
                               if (option.href.startsWith('/')) {
+                                e.preventDefault();
+                                window.location.href = option.href;
+                              } else if (option.href.startsWith('http://') || option.href.startsWith('https://')) {
                                 e.preventDefault();
                                 window.location.href = option.href;
                               }
