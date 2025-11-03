@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
+import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 export function Realize(): React.ReactElement {
   return (
@@ -20,15 +21,30 @@ export function Realize(): React.ReactElement {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              <h1 style={{ 
-                fontSize: '48px', 
-                fontWeight: '700', 
-                color: '#1F2937', 
-                marginBottom: '24px' 
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '16px',
+                marginBottom: '24px'
               }}>
-                Realize
-              </h1>
-              <p style={{ 
+                <ImagePlaceholder
+                  label="Realize logo"
+                  imageName="realize/logo.png"
+                  width={60}
+                  height={60}
+                  borderRadius={0}
+                />
+                <h1 style={{ 
+                  fontSize: '48px', 
+                  fontWeight: '700', 
+                  color: '#1F2937', 
+                  margin: 0
+                }}>
+                  Realize
+                </h1>
+              </div>
+              <p className="realize-coming-soon" style={{ 
                 fontSize: '24px', 
                 color: '#64748B',
                 margin: 0

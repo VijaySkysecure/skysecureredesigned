@@ -19,7 +19,7 @@ const RESOURCES = [
     title: 'AI-Driven Threat Detection: 2024 Report',
     description: 'Comprehensive analysis of machine learning applications in cybersecurity and their effectiveness against modern threats.',
     imageName: 'homepage/cover-zero-trust.png',
-    pages: '24 pages',
+    pages: '',
     isNew: true,
   },
   {
@@ -28,7 +28,7 @@ const RESOURCES = [
     title: 'Zero Trust in Hybrid Cloud Environments',
     description: 'Comprehensive guide to implementing Zero Trust architecture across hybrid cloud environments for enhanced security and compliance.',
     imageName: 'knowledge/zero-trust-visual.png',
-    pages: '28 pages',
+    pages: '',
     isNew: true,
   },
   {

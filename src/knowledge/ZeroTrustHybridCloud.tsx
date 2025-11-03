@@ -199,21 +199,6 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
               <p className="blog-section-text" style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto 40px auto' }}>
                 As organizations increasingly adopt hybrid cloud architectures, traditional perimeter-based security models prove insufficient. Zero Trust provides a unified, adaptive framework that safeguards identities, data, and diverse ecosystems across on-premises and cloud environments.
               </p>
-              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
-                  <ImagePlaceholder
-                    label="Download Icon"
-                    imageName="knowledge/icon-download.png"
-                    width={16}
-                    height={16}
-                    borderRadius={0}
-                  />
-                  Download Full White Paper (PDF)
-                </button>
-                <button style={{ backgroundColor: '#FFFFFF', color: 'rgba(10, 78, 255, 1)', padding: '12px 24px', borderRadius: '8px', border: '1px solid rgba(10, 78, 255, 1)', fontSize: '16px', fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
-                  Talk to a Zero Trust Expert
-                </button>
-              </div>
             </section>
 
             {/* Understanding Hybrid Cloud Challenges */}
@@ -547,33 +532,22 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                   Partner with Skysecure to design, deploy, and manage a Zero Trust architecture tailored to your business.
                 </p>
                 <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                  <button style={{ 
-                    backgroundColor: '#FFFFFF', 
-                    color: 'rgba(10, 78, 255, 1)', 
-                    padding: '12px 24px', 
-                    borderRadius: '8px', 
-                    border: '1px solid rgba(10, 78, 255, 1)', 
-                    fontSize: '16px', 
-                    fontWeight: '500', 
-                    cursor: 'pointer',
-                    fontFamily: 'Inter',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px'
-                  }}>
-                    Download White Paper
-                  </button>
-                  <button style={{ 
-                    backgroundColor: 'rgba(10, 78, 255, 1)', 
-                    color: '#FFFFFF', 
-                    padding: '12px 24px', 
-                    borderRadius: '8px', 
-                    border: '2px solid #FFFFFF', 
-                    fontSize: '16px', 
-                    fontWeight: '500', 
-                    cursor: 'pointer',
-                    fontFamily: 'Inter'
-                  }}>
+                  <button 
+                    onClick={() => {
+                      window.location.href = '/contact';
+                    }}
+                    style={{ 
+                      backgroundColor: 'rgba(10, 78, 255, 1)', 
+                      color: '#FFFFFF', 
+                      padding: '12px 24px', 
+                      borderRadius: '8px', 
+                      border: '2px solid #FFFFFF', 
+                      fontSize: '16px', 
+                      fontWeight: '500', 
+                      cursor: 'pointer',
+                      fontFamily: 'Inter'
+                    }}
+                  >
                     Contact Our Team
                   </button>
                 </div>

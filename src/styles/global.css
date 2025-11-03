@@ -2195,6 +2195,25 @@ section {
   }
 }
 
+.realize-coming-soon {
+  animation: fadeInPulse 2s ease-in-out infinite;
+}
+
+@keyframes fadeInPulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -4762,8 +4781,8 @@ footer section .container {
 
   .footer__certifications {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
     padding: 0 20px;
     align-items: center;
     justify-items: center;
@@ -4778,6 +4797,17 @@ footer section .container {
 
   .footer__cert-label {
     text-align: center;
+    font-size: 11px;
+  }
+
+  .footer__cert .image-placeholder {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .footer__cert .image-placeholder img {
+    width: 36px !important;
+    height: 36px !important;
   }
 }
 
@@ -5374,8 +5404,8 @@ footer section .container {
 
   .footer__certifications {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
     padding: 0 16px;
     align-items: center;
     justify-items: center;
@@ -5390,6 +5420,17 @@ footer section .container {
 
   .footer__cert-label {
     text-align: center;
+    font-size: 10px;
+  }
+
+  .footer__cert .image-placeholder {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .footer__cert .image-placeholder img {
+    width: 32px !important;
+    height: 32px !important;
   }
 }
 
@@ -5767,8 +5808,8 @@ footer section .container {
   
   .footer__certifications {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
     padding: 0 16px;
     align-items: center;
     justify-items: center;
@@ -5783,11 +5824,12 @@ footer section .container {
 
   .footer__cert-label {
     text-align: center;
+    font-size: 9px;
   }
   
   .footer__cert .image-placeholder {
-    width: 32px !important;
-    height: 32px !important;
+    width: 28px !important;
+    height: 28px !important;
   }
   
   /* Header */
