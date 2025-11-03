@@ -1,0 +1,1389 @@
+/* About Page Styles */
+
+/* Hero Section */
+.about-hero {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.about-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-hero-left {
+  flex: 1;
+  max-width: 720px;
+}
+
+.about-hero-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.about-hero-description {
+  font-size: 18px;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.about-hero-description-last {
+  font-size: 18px;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-hero-right {
+  flex: 1;
+  text-align: center;
+  max-width: 480px;
+}
+
+/* Mission & Vision Section */
+.about-mission-vision {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.about-mission-vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-mission-vision-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-mission-vision-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 16px 0;
+}
+
+.about-mission-vision-subtitle {
+  font-size: 20px;
+  color: #64748B;
+  margin: 0;
+}
+
+.about-mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.about-mission-vision-card {
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.about-mission-vision-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.about-mission-vision-card-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0 0 16px 0;
+}
+
+.about-mission-vision-card-description {
+  font-size: 16px;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.about-mission-vision-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-mission-vision-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.about-mission-vision-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-mission-vision-checkmark {
+  color: #10B981;
+  font-size: 16px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.about-mission-vision-list-text {
+  font-size: 16px;
+  color: #64748B;
+}
+
+/* Core Values Section */
+.about-core-values {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.about-core-values-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-core-values-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-core-values-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 16px 0;
+}
+
+.about-core-values-subtitle {
+  font-size: 20px;
+  color: #64748B;
+  margin: 0;
+}
+
+.about-core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.about-core-value-card {
+  background-color: #F9FAFB;
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.about-core-value-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px auto;
+}
+
+.about-core-value-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0 0 12px 0;
+}
+
+.about-core-value-description {
+  font-size: 14px;
+  color: #64748B;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Stats Section */
+.about-stats {
+  padding: 80px 0;
+  background-color: rgba(14, 81, 253, 1);
+}
+
+.about-stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-stats-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-stats-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 16px 0;
+}
+
+.about-stats-subtitle {
+  font-size: 20px;
+  color: #E5E7EB;
+  margin: 0;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.about-stat-item {
+  text-align: center;
+}
+
+.about-stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 8px 0;
+}
+
+.about-stat-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 8px 0;
+}
+
+.about-stat-description {
+  font-size: 14px;
+  color: #E5E7EB;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Journey Timeline Section */
+.about-journey {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.about-journey-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-journey-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-journey-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 16px 0;
+}
+
+.about-journey-subtitle {
+  font-size: 20px;
+  color: #64748B;
+  margin: 0;
+}
+
+.about-timeline-wrapper {
+  position: relative;
+}
+
+.about-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #E5E7EB;
+  transform: translateX(-50%);
+}
+
+.about-timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.about-timeline-item--left {
+  flex-direction: row;
+}
+
+.about-timeline-item--right {
+  flex-direction: row-reverse;
+}
+
+.about-timeline-content-wrapper {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-timeline-content-wrapper--left {
+  margin-right: 40px;
+  margin-left: 0;
+}
+
+.about-timeline-content-wrapper--right {
+  margin-right: 0;
+  margin-left: 40px;
+}
+
+.about-timeline-card {
+  background-color: rgba(239, 246, 255, 1);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(229, 231, 235, 1);
+}
+
+.about-timeline-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0 0 12px 0;
+}
+
+.about-timeline-card-description {
+  font-size: 16px;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-timeline-dot {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-timeline-spacer {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Leadership Section */
+.about-leadership {
+  padding: 80px 0;
+  background-color: #F9FAFB;
+}
+
+.about-leadership-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-leadership-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-leadership-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 16px 0;
+}
+
+.about-leadership-subtitle {
+  font-size: 20px;
+  color: #64748B;
+  margin: 0;
+}
+
+.about-leadership-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.about-leadership-card {
+  background-color: #FFFFFF;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+}
+
+.about-leadership-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  margin: 0 auto 24px auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-leadership-image .image-placeholder,
+.about-leadership-image .image-placeholder img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-leadership-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0 0 8px 0;
+}
+
+.about-leadership-title {
+  font-size: 16px;
+  color: #007FFF;
+  margin: 0 0 4px 0;
+}
+
+.about-leadership-company {
+  font-size: 14px;
+  color: #007FFF;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Team Section */
+.about-team {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.about-team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-team-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-team-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 16px 0;
+}
+
+.about-team-subtitle {
+  font-size: 20px;
+  color: #64748B;
+  margin: 0;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-team-card {
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.about-team-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  margin: 0 auto 24px auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-team-image .image-placeholder,
+.about-team-image .image-placeholder img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-team-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0 0 8px 0;
+}
+
+.about-team-title {
+  font-size: 16px;
+  color: #007FFF;
+  margin: 0 0 4px 0;
+}
+
+.about-team-company {
+  font-size: 14px;
+  color: #007FFF;
+  font-weight: 500;
+  margin: 0;
+}
+
+.about-team-row-second {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+}
+
+/* Global Presence Section */
+.about-global {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.about-global-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-global-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-global-left {
+  flex: 1;
+  max-width: 624px;
+}
+
+.about-global-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 24px 0;
+}
+
+.about-global-description {
+  font-size: 16px;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+.about-global-offices {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-global-office-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-global-office-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.about-global-office-location {
+  font-size: 16px;
+  color: #64748B;
+}
+
+.about-global-right {
+  flex: 1;
+  text-align: center;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+  /* Hero Section */
+  .about-hero {
+    padding: 64px 0;
+  }
+
+  .about-hero-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-hero-left {
+    max-width: 100%;
+  }
+
+  .about-hero-title {
+    font-size: 36px;
+  }
+
+  .about-hero-description,
+  .about-hero-description-last {
+    font-size: 17px;
+  }
+
+  .about-hero-right {
+    max-width: 100%;
+  }
+
+  .about-hero-right .image-placeholder,
+  .about-hero-right .image-placeholder img {
+    width: 400px !important;
+    height: 400px !important;
+  }
+
+  /* Mission & Vision Section */
+  .about-mission-vision {
+    padding: 64px 0;
+  }
+
+  .about-mission-vision-title {
+    font-size: 36px;
+  }
+
+  .about-mission-vision-subtitle {
+    font-size: 18px;
+  }
+
+  .about-mission-vision-grid {
+    gap: 32px;
+  }
+
+  .about-mission-vision-card {
+    padding: 32px 28px;
+  }
+
+  .about-mission-vision-card-title {
+    font-size: 22px;
+  }
+
+  /* Core Values Section */
+  .about-core-values {
+    padding: 64px 0;
+  }
+
+  .about-core-values-title {
+    font-size: 36px;
+  }
+
+  .about-core-values-subtitle {
+    font-size: 18px;
+  }
+
+  .about-core-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Stats Section */
+  .about-stats {
+    padding: 64px 0;
+  }
+
+  .about-stats-title {
+    font-size: 36px;
+  }
+
+  .about-stats-subtitle {
+    font-size: 18px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .about-stat-number {
+    font-size: 40px;
+  }
+
+  .about-stat-title {
+    font-size: 18px;
+  }
+
+  /* Journey Timeline Section */
+  .about-journey {
+    padding: 64px 0;
+  }
+
+  .about-journey-title {
+    font-size: 36px;
+  }
+
+  .about-journey-subtitle {
+    font-size: 18px;
+  }
+
+  .about-timeline-item {
+    flex-direction: column !important;
+    margin-bottom: 48px;
+  }
+
+  .about-timeline-content-wrapper {
+    max-width: 100%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 20px;
+  }
+
+  .about-timeline-dot {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .about-timeline-spacer {
+    display: none;
+  }
+
+  .about-timeline-line {
+    display: none;
+  }
+
+  .about-timeline-card {
+    padding: 24px;
+  }
+
+  .about-timeline-card-title {
+    font-size: 18px;
+  }
+
+  .about-timeline-card-description {
+    font-size: 15px;
+  }
+
+  /* Leadership Section */
+  .about-leadership {
+    padding: 64px 0;
+  }
+
+  .about-leadership-title {
+    font-size: 36px;
+  }
+
+  .about-leadership-subtitle {
+    font-size: 18px;
+  }
+
+  .about-leadership-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .about-leadership-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Team Section */
+  .about-team {
+    padding: 64px 0;
+  }
+
+  .about-team-title {
+    font-size: 36px;
+  }
+
+  .about-team-subtitle {
+    font-size: 18px;
+  }
+
+  .about-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .about-team-row-second {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  /* Global Presence Section */
+  .about-global {
+    padding: 64px 0;
+  }
+
+  .about-global-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-global-left {
+    max-width: 100%;
+  }
+
+  .about-global-title {
+    font-size: 36px;
+  }
+
+  .about-global-right .image-placeholder,
+  .about-global-right .image-placeholder img {
+    width: 100% !important;
+    max-width: 500px !important;
+    height: auto !important;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 968px) {
+  /* Hero Section */
+  .about-hero {
+    padding: 48px 0;
+  }
+
+  .about-hero-title {
+    font-size: 28px;
+  }
+
+  .about-hero-description,
+  .about-hero-description-last {
+    font-size: 16px;
+  }
+
+  .about-hero-right .image-placeholder,
+  .about-hero-right .image-placeholder img {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  /* Mission & Vision Section */
+  .about-mission-vision {
+    padding: 48px 0;
+  }
+
+  .about-mission-vision-header {
+    margin-bottom: 40px;
+  }
+
+  .about-mission-vision-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .about-mission-vision-subtitle {
+    font-size: 16px;
+  }
+
+  .about-mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-mission-vision-card {
+    padding: 24px 20px;
+  }
+
+  .about-mission-vision-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px auto;
+  }
+
+  .about-mission-vision-card-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .about-mission-vision-card-description {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .about-mission-vision-checkmark,
+  .about-mission-vision-list-text {
+    font-size: 15px;
+  }
+
+  /* Core Values Section */
+  .about-core-values {
+    padding: 48px 0;
+  }
+
+  .about-core-values-header {
+    margin-bottom: 40px;
+  }
+
+  .about-core-values-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .about-core-values-subtitle {
+    font-size: 16px;
+  }
+
+  .about-core-values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-core-value-card {
+    padding: 24px 20px;
+  }
+
+  .about-core-value-title {
+    font-size: 18px;
+  }
+
+  .about-core-value-description {
+    font-size: 14px;
+  }
+
+  /* Stats Section */
+  .about-stats {
+    padding: 48px 0;
+  }
+
+  .about-stats-header {
+    margin-bottom: 40px;
+  }
+
+  .about-stats-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .about-stats-subtitle {
+    font-size: 16px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-stat-number {
+    font-size: 36px;
+  }
+
+  .about-stat-title {
+    font-size: 18px;
+  }
+
+  .about-stat-description {
+    font-size: 14px;
+  }
+
+  /* Journey Timeline Section */
+  .about-journey {
+    padding: 48px 0;
+  }
+
+  .about-journey-header {
+    margin-bottom: 40px;
+  }
+
+  .about-journey-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .about-journey-subtitle {
+    font-size: 16px;
+  }
+
+  .about-timeline-item {
+    margin-bottom: 40px;
+  }
+
+  .about-timeline-content-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .about-timeline-dot {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-timeline-dot .image-placeholder,
+  .about-timeline-dot .image-placeholder img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .about-timeline-card {
+    padding: 20px;
+  }
+
+  .about-timeline-card-title {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .about-timeline-card-description {
+    font-size: 14px;
+  }
+
+  /* Leadership Section */
+  .about-leadership {
+    padding: 48px 0;
+  }
+
+  .about-leadership-header {
+    margin-bottom: 40px;
+  }
+
+  .about-leadership-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .about-leadership-subtitle {
+    font-size: 16px;
+  }
+
+  .about-leadership-card {
+    padding: 24px 20px;
+  }
+
+  .about-leadership-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .about-leadership-image .image-placeholder,
+  .about-leadership-image .image-placeholder img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .about-leadership-name {
+    font-size: 18px;
+  }
+
+  .about-leadership-title {
+    font-size: 15px;
+  }
+
+  .about-leadership-company {
+    font-size: 13px;
+  }
+
+  /* Team Section */
+  .about-team {
+    padding: 48px 0;
+  }
+
+  .about-team-header {
+    margin-bottom: 40px;
+  }
+
+  .about-team-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .about-team-subtitle {
+    font-size: 16px;
+  }
+
+  .about-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .about-team-card {
+    padding: 24px 20px;
+  }
+
+  .about-team-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .about-team-image .image-placeholder,
+  .about-team-image .image-placeholder img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .about-team-name {
+    font-size: 18px;
+  }
+
+  .about-team-title {
+    font-size: 15px;
+  }
+
+  .about-team-row-second {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  /* Global Presence Section */
+  .about-global {
+    padding: 48px 0;
+  }
+
+  .about-global-content {
+    gap: 32px;
+  }
+
+  .about-global-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .about-global-description {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .about-global-office-location {
+    font-size: 15px;
+  }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 480px) {
+  /* Hero Section */
+  .about-hero {
+    padding: 40px 0;
+  }
+
+  .about-hero-title {
+    font-size: 24px;
+  }
+
+  .about-hero-description,
+  .about-hero-description-last {
+    font-size: 14px;
+  }
+
+  .about-hero-right .image-placeholder,
+  .about-hero-right .image-placeholder img {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  /* Mission & Vision Section */
+  .about-mission-vision {
+    padding: 40px 0;
+  }
+
+  .about-mission-vision-title {
+    font-size: 24px;
+  }
+
+  .about-mission-vision-subtitle {
+    font-size: 14px;
+  }
+
+  .about-mission-vision-card {
+    padding: 20px 16px;
+  }
+
+  .about-mission-vision-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 20px auto;
+  }
+
+  .about-mission-vision-card-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .about-mission-vision-card-description {
+    font-size: 14px;
+  }
+
+  /* Core Values Section */
+  .about-core-values {
+    padding: 40px 0;
+  }
+
+  .about-core-values-title {
+    font-size: 24px;
+  }
+
+  .about-core-values-subtitle {
+    font-size: 14px;
+  }
+
+  .about-core-value-card {
+    padding: 20px 16px;
+  }
+
+  /* Stats Section */
+  .about-stats {
+    padding: 40px 0;
+  }
+
+  .about-stats-title {
+    font-size: 24px;
+  }
+
+  .about-stats-subtitle {
+    font-size: 14px;
+  }
+
+  .about-stat-number {
+    font-size: 32px;
+  }
+
+  .about-stat-title {
+    font-size: 16px;
+  }
+
+  .about-stat-description {
+    font-size: 13px;
+  }
+
+  /* Journey Timeline Section */
+  .about-journey {
+    padding: 40px 0;
+  }
+
+  .about-journey-title {
+    font-size: 24px;
+  }
+
+  .about-journey-subtitle {
+    font-size: 14px;
+  }
+
+  .about-timeline-dot {
+    width: 36px;
+    height: 36px;
+  }
+
+  .about-timeline-dot .image-placeholder,
+  .about-timeline-dot .image-placeholder img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .about-timeline-card {
+    padding: 16px;
+  }
+
+  .about-timeline-card-title {
+    font-size: 16px;
+  }
+
+  .about-timeline-card-description {
+    font-size: 13px;
+  }
+
+  /* Leadership Section */
+  .about-leadership {
+    padding: 40px 0;
+  }
+
+  .about-leadership-title {
+    font-size: 24px;
+  }
+
+  .about-leadership-subtitle {
+    font-size: 14px;
+  }
+
+  .about-leadership-card {
+    padding: 20px 16px;
+  }
+
+  .about-leadership-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .about-leadership-image .image-placeholder,
+  .about-leadership-image .image-placeholder img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  /* Team Section */
+  .about-team {
+    padding: 40px 0;
+  }
+
+  .about-team-title {
+    font-size: 24px;
+  }
+
+  .about-team-subtitle {
+    font-size: 14px;
+  }
+
+  .about-team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-team-card {
+    padding: 20px 16px;
+  }
+
+  .about-team-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .about-team-image .image-placeholder,
+  .about-team-image .image-placeholder img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  /* Global Presence Section */
+  .about-global {
+    padding: 40px 0;
+  }
+
+  .about-global-title {
+    font-size: 24px;
+  }
+
+  .about-global-description {
+    font-size: 14px;
+  }
+
+  .about-global-office-location {
+    font-size: 14px;
+  }
+}
+
