@@ -38,6 +38,7 @@ const NAV_ITEMS: NavLink[] = [
 export function Header(): React.ReactElement {
   const [openMenu, setOpenMenu] = React.useState<string | null>(null);
   const [hoverTimeout, setHoverTimeout] = React.useState<number | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState<boolean>(false);
 
   const openMenuFor = (label: string): void => {
     // Clear any existing timeout
@@ -45,7 +46,12 @@ export function Header(): React.ReactElement {
       clearTimeout(hoverTimeout);
       setHoverTimeout(null);
     }
-    setOpenMenu(label);
+    // Toggle: if already open, close it; otherwise open it
+    if (openMenu === label) {
+      setOpenMenu(null);
+    } else {
+      setOpenMenu(label);
+    }
   };
 
   const closeMenu = (): void => {
@@ -87,6 +93,19 @@ export function Header(): React.ReactElement {
     };
   }, [hoverTimeout]);
 
+  // Close mobile menu when window is resized to desktop size
+  React.useEffect(() => {
+    const handleResize = (): void => {
+      if (window.innerWidth > 968 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+        setOpenMenu(null);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMobileMenuOpen]);
+
   // Close dropdown when clicking outside
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -94,15 +113,23 @@ export function Header(): React.ReactElement {
       if (openMenu && !target.closest('.header__nav-item')) {
         closeMenu();
       }
-    };
-
-    const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && openMenu) {
-        closeMenu();
+      if (isMobileMenuOpen && !target.closest('.site-header')) {
+        closeMobileMenu();
       }
     };
 
-    if (openMenu) {
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        if (openMenu) {
+          closeMenu();
+        }
+        if (isMobileMenuOpen) {
+          closeMobileMenu();
+        }
+      }
+    };
+
+    if (openMenu || isMobileMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.addEventListener('keydown', handleEscapeKey);
     }
@@ -111,7 +138,7 @@ export function Header(): React.ReactElement {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleEscapeKey);
     };
-  }, [openMenu]);
+  }, [openMenu, isMobileMenuOpen]);
 
   const handleNavigation = (href: string): void => {
     if (href.startsWith('/')) {
@@ -132,24 +159,62 @@ export function Header(): React.ReactElement {
     }
   };
 
+  const toggleMobileMenu = (): void => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (isMobileMenuOpen) {
+      setOpenMenu(null);
+    }
+  };
+
+  const closeMobileMenu = (): void => {
+    setIsMobileMenuOpen(false);
+    setOpenMenu(null);
+  };
+
   return (
-    <header className="site-header">
-      <div className="header__bar">
-        <a 
-          href="/" 
-          onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
-          style={{ textDecoration: 'none' }}
+    <>
+      {isMobileMenuOpen && (
+        <div 
+          className="header__overlay" 
+          onClick={closeMobileMenu}
+          aria-hidden="true"
+        />
+      )}
+      <header className="site-header">
+        <div className="header__bar">
+        <div className="header__bar-top">
+          <a 
+            href="/" 
+            onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
+            style={{ textDecoration: 'none' }}
+          >
+            <ImagePlaceholder
+              label="Skysecure logo"
+              imageName="header/logo-header.png"
+              width={146}
+              height={43}
+              borderRadius={0}
+              className="header__logo image-placeholder--bare"
+            />
+          </a>
+          <button
+            type="button"
+            className="header__mobile-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMobileMenuOpen}
+            onClick={toggleMobileMenu}
+          >
+            <span className={`header__mobile-toggle-icon ${isMobileMenuOpen ? 'is-open' : ''}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+        <nav 
+          className={`header__nav ${isMobileMenuOpen ? 'is-open' : ''}`} 
+          aria-label="Primary navigation"
         >
-          <ImagePlaceholder
-            label="Skysecure logo"
-            imageName="header/logo-header.png"
-            width={146}
-            height={43}
-            borderRadius={0}
-            className="header__logo image-placeholder--bare"
-          />
-        </a>
-        <nav className="header__nav" aria-label="Primary navigation">
           <ul className="header__nav-list">
             {NAV_ITEMS.map((item) => {
               const hasMenu = Boolean(item.menu && item.menu.length > 0);
@@ -160,8 +225,8 @@ export function Header(): React.ReactElement {
                   key={item.label}
                   className={`header__nav-item${hasMenu ? ' header__nav-item--has-menu' : ''}${isOpen ? ' is-open' : ''}`}
                   onBlur={handleBlur}
-                  onMouseEnter={hasMenu ? () => handleMouseEnter(item.label) : undefined}
-                  onMouseLeave={hasMenu ? handleMouseLeave : undefined}
+                  onMouseEnter={hasMenu && !isMobileMenuOpen ? () => handleMouseEnter(item.label) : undefined}
+                  onMouseLeave={hasMenu && !isMobileMenuOpen ? handleMouseLeave : undefined}
                 >
                   {hasMenu ? (
                     <>
@@ -172,7 +237,7 @@ export function Header(): React.ReactElement {
                         aria-expanded={isOpen}
                         onClick={() => openMenuFor(item.label)}
                         onFocus={() => openMenuFor(item.label)}
-                        onMouseEnter={() => handleMouseEnter(item.label)}
+                        onMouseEnter={!isMobileMenuOpen ? () => handleMouseEnter(item.label) : undefined}
                       >
                         <span>{item.label}</span>
                         {item.flagImageName ? (
@@ -190,8 +255,8 @@ export function Header(): React.ReactElement {
                       <div 
                         className="header__submenu" 
                         role="menu"
-                        onMouseEnter={() => handleMouseEnterDropdown(item.label)}
-                        onMouseLeave={handleMouseLeave}
+                        onMouseEnter={!isMobileMenuOpen ? () => handleMouseEnterDropdown(item.label) : undefined}
+                        onMouseLeave={!isMobileMenuOpen ? handleMouseLeave : undefined}
                       >
                         {item.menu!.map((option) => (
                           <a
@@ -205,6 +270,7 @@ export function Header(): React.ReactElement {
                                 window.location.href = option.href;
                               }
                               closeMenu();
+                              closeMobileMenu();
                             }}
                           >
                             {option.label}
@@ -221,6 +287,7 @@ export function Header(): React.ReactElement {
                           e.preventDefault();
                           handleNavigation(item.href);
                         }
+                        closeMobileMenu();
                       }}
                     >
                       {item.label}
@@ -233,6 +300,7 @@ export function Header(): React.ReactElement {
         </nav>
       </div>
     </header>
+    </>
   );
 }
 
