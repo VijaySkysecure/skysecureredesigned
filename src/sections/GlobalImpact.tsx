@@ -40,80 +40,35 @@ export function GlobalImpact(): React.ReactElement {
     <section ref={sectionRef} className="section--light" id="impact">
       <div className="container">
         {/* Section Header */}
-        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <h2 style={{ 
-            fontSize: '48px', 
-            fontWeight: '700', 
-            color: '#1F2937', 
-            margin: '0 0 16px 0' 
-          }}>
+        <div className="global-impact-header">
+          <h2 className="global-impact-title">
             Global Security Impact
           </h2>
-          <p style={{ 
-            fontSize: '20px', 
-            color: '#64748B', 
-            margin: '0',
-            maxWidth: '800px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            lineHeight: '1.6'
-          }}>
+          <p className="global-impact-description">
             Real-time intelligence and performance metrics from Skysecure's AI-driven managed operations across Security, Data, and Infrastructure delivering measurable business resilience every day.
           </p>
         </div>
 
         {/* Dashboard Container */}
-        <div style={{ 
-          maxWidth: '1050px', 
-          margin: '0 auto',
-          backgroundColor: '#F8FAFC',
-          borderRadius: '16px',
-          padding: '48px',
-          position: 'relative'
-        }}>
+        <div className="global-impact-dashboard">
           {/* Top Row */}
-          <div style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            alignItems: 'flex-start',
-            marginBottom: '40px'
-          }}>
+          <div className="global-impact-top-row">
             {/* Live Operations Dashboard */}
-            <div>
-              <h3 style={{ 
-                fontSize: '24px', 
-                fontWeight: '700', 
-                color: '#1F2937', 
-                margin: '0 0 8px 0' 
-              }}>
+            <div className="global-impact-operations">
+              <h3 className="global-impact-operations-title">
                 Live Operations Dashboard
               </h3>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <span style={{ 
-                  fontSize: '24px', 
-                  fontWeight: '700', 
-                  color: '#0A4EFF' 
-                }}>
-                  742
-                </span>
-                <span style={{ 
-                  fontSize: '16px', 
-                  color: '#64748B' 
-                }}>
-                  Events Automated
-                </span>
+              <div className="global-impact-operations-value">
+                <span className="global-impact-operations-number">742</span>
+                <span className="global-impact-operations-label">Events Automated</span>
               </div>
-              <div style={{ 
-                fontSize: '14px', 
-                color: '#64748B',
-                marginTop: '4px'
-              }}>
+              <div className="global-impact-operations-time">
                 Last 24 Hours
               </div>
             </div>
 
             {/* Status Indicators */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div className="global-impact-status">
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <div style={{ 
                   width: '8px', 
@@ -153,13 +108,7 @@ export function GlobalImpact(): React.ReactElement {
 
 
           {/* Central Hub with Intersecting Lines */}
-          <div style={{ 
-            position: 'relative',
-            height: '800px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
+          <div className="global-impact-hub">
             {/* Intersecting Lines */}
             <div style={{ 
               position: 'absolute',
@@ -195,19 +144,7 @@ export function GlobalImpact(): React.ReactElement {
             </div>
 
             {/* Central Blue Circle */}
-            <div style={{ 
-              width: '200px', 
-              height: '200px', 
-              borderRadius: '50%', 
-              background: 'linear-gradient(45deg, #007FFF 50%, #0066CC 120.71%)',
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              position: 'relative',
-              boxShadow: '0 0 40px rgba(10, 78, 255, 0.3)',
-              zIndex: 2
-            }}>
+            <div className="global-impact-center-circle">
               <ImagePlaceholder
                 label="Shield Icon"
                 imageName="homepage/icon-automate.png"
@@ -215,36 +152,16 @@ export function GlobalImpact(): React.ReactElement {
                 height={64}
                 borderRadius={0}
               />
-              <div style={{ 
-                fontSize: '18px', 
-                fontWeight: '700', 
-                color: '#FFFFFF',
-                marginTop: '8px'
-              }}>
+              <div className="global-impact-center-title">
                 24/7 Operations
               </div>
-              <div style={{ 
-                fontSize: '14px', 
-                color: '#DBEAFE',
-                fontWeight: '400'
-              }}>
+              <div className="global-impact-center-subtitle">
                 Global Coverage
               </div>
             </div>
 
             {/* Security Operations - Left */}
-            <div style={{ 
-              position: 'absolute',
-              left: '0',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              display: 'flex', 
-              flexDirection: 'column',
-              alignItems: 'center', 
-              gap: '16px',
-              maxWidth: '200px',
-              textAlign: 'center'
-            }}>
+            <div className="global-impact-node global-impact-node-left">
               <div style={{ 
                 width: '60px', 
                 height: '60px', 
@@ -264,50 +181,20 @@ export function GlobalImpact(): React.ReactElement {
                 />
               </div>
               <div>
-                <h4 style={{ 
-                  fontSize: '16px', 
-                  fontWeight: '700', 
-                  color: '#1F2937', 
-                  margin: '0 0 4px 0' 
-                }}>
+                <h4 className="global-impact-node-title">
                   Security detection
                 </h4>
-                <div style={{ 
-                  fontSize: '24px', 
-                  fontWeight: '700', 
-                  color: '#FFFFFF',
-                  marginBottom: '4px',
-                  background: 'linear-gradient(45deg, rgb(102, 204, 255) 50%, rgb(77, 179, 255) 120.71%)',
-                  padding: '4px 12px',
-                  borderRadius: '15px',
-                  display: 'inline-block'
-                }}>
+                <div className="global-impact-node-value">
                   {Math.floor(animatedCount312)}
                 </div>
-                <p style={{ 
-                  fontSize: '14px', 
-                  color: '#64748B', 
-                  margin: 0,
-                  lineHeight: '1.4'
-                }}>
+                <p className="global-impact-node-description">
                   Incidents contained under 5 minutes
                 </p>
               </div>
             </div>
 
             {/* AI Agents - Right */}
-            <div style={{ 
-              position: 'absolute',
-              right: '0',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              display: 'flex', 
-              flexDirection: 'column',
-              alignItems: 'center', 
-              gap: '16px',
-              maxWidth: '200px',
-              textAlign: 'center'
-            }}>
+            <div className="global-impact-node global-impact-node-right">
               <div style={{ 
                 width: '60px', 
                 height: '60px', 
@@ -327,50 +214,20 @@ export function GlobalImpact(): React.ReactElement {
                 />
               </div>
               <div>
-                <h4 style={{ 
-                  fontSize: '16px', 
-                  fontWeight: '700', 
-                  color: '#1F2937', 
-                  margin: '0 0 4px 0' 
-                }}>
+                <h4 className="global-impact-node-title">
                   AI Agents Actions
                 </h4>
-                <div style={{ 
-                  fontSize: '24px', 
-                  fontWeight: '700', 
-                  color: '#FFFFFF',
-                  marginBottom: '4px',
-                  background: 'linear-gradient(45deg, rgb(102, 204, 255) 50%, rgb(77, 179, 255) 120.71%)',
-                  padding: '4px 12px',
-                  borderRadius: '15px',
-                  display: 'inline-block'
-                }}>
+                <div className="global-impact-node-value">
                   {Math.floor(animatedCount204)}
                 </div>
-                <p style={{ 
-                  fontSize: '14px', 
-                  color: '#64748B', 
-                  margin: 0,
-                  lineHeight: '1.4'
-                }}>
+                <p className="global-impact-node-description">
                   Tasks automated across customer environments
                 </p>
               </div>
             </div>
 
             {/* Data Governance - Top */}
-            <div style={{ 
-              position: 'absolute',
-              left: '50%',
-              top: '0',
-              transform: 'translateX(-50%)',
-              display: 'flex', 
-              flexDirection: 'column',
-              alignItems: 'center', 
-              gap: '16px',
-              maxWidth: '200px',
-              textAlign: 'center'
-            }}>
+            <div className="global-impact-node global-impact-node-top">
               <div style={{ 
                 width: '60px', 
                 height: '60px', 
@@ -390,50 +247,20 @@ export function GlobalImpact(): React.ReactElement {
                 />
               </div>
               <div>
-                <h4 style={{ 
-                  fontSize: '16px', 
-                  fontWeight: '700', 
-                  color: '#1F2937', 
-                  margin: '0 0 4px 0' 
-                }}>
+                <h4 className="global-impact-node-title">
                   Data Governance Job
                 </h4>
-                <div style={{ 
-                  fontSize: '24px', 
-                  fontWeight: '700', 
-                  color: '#FFFFFF',
-                  marginBottom: '4px',
-                  background: 'linear-gradient(45deg, rgb(102, 204, 255) 50%, rgb(77, 179, 255) 120.71%)',
-                  padding: '4px 12px',
-                  borderRadius: '15px',
-                  display: 'inline-block'
-                }}>
+                <div className="global-impact-node-value">
                   {Math.floor(animatedCount176)}
                 </div>
-                <p style={{ 
-                  fontSize: '14px', 
-                  color: '#64748B', 
-                  margin: 0,
-                  lineHeight: '1.4'
-                }}>
+                <p className="global-impact-node-description">
                   Compliance and classification tasks executed
                 </p>
               </div>
             </div>
 
             {/* Infrastructure - Bottom */}
-            <div style={{ 
-              position: 'absolute',
-              left: '50%',
-              bottom: '0',
-              transform: 'translateX(-50%)',
-              display: 'flex', 
-              flexDirection: 'column',
-              alignItems: 'center', 
-              gap: '16px',
-              maxWidth: '200px',
-              textAlign: 'center'
-            }}>
+            <div className="global-impact-node global-impact-node-bottom">
               <div style={{ 
                 width: '60px', 
                 height: '60px', 
@@ -451,32 +278,13 @@ export function GlobalImpact(): React.ReactElement {
                 />
               </div>
               <div>
-                <h4 style={{ 
-                  fontSize: '16px', 
-                  fontWeight: '700', 
-                  color: '#1F2937', 
-                  margin: '0 0 4px 0' 
-                }}>
+                <h4 className="global-impact-node-title">
                   Infraoptimization
                 </h4>
-                <div style={{ 
-                  fontSize: '24px', 
-                  fontWeight: '700', 
-                  color: '#FFFFFF',
-                  marginBottom: '4px',
-                  background: 'linear-gradient(45deg, rgb(102, 204, 255) 50%, rgb(77, 179, 255) 120.71%)',
-                  padding: '4px 12px',
-                  borderRadius: '15px',
-                  display: 'inline-block'
-                }}>
+                <div className="global-impact-node-value">
                   {Math.floor(animatedCount50)}
                 </div>
-                <p style={{ 
-                  fontSize: '14px', 
-                  color: '#64748B', 
-                  margin: 0,
-                  lineHeight: '1.4'
-                }}>
+                <p className="global-impact-node-description">
                   Resource scaling or recovery actions
                 </p>
               </div>
@@ -484,59 +292,18 @@ export function GlobalImpact(): React.ReactElement {
           </div>
           
           {/* Bottom Metrics */}
-          <div style={{ 
-            display: 'flex', 
-            justifyContent: 'center', 
-            alignItems: 'center',
-            gap: '48px',
-            marginTop: '40px',
-            paddingTop: '32px',
-            borderTop: '1px solid #E5E7EB'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ 
-                fontSize: '20px', 
-                fontWeight: '700', 
-                color: '#0A4EFF' 
-              }}>
-                2.4M+
-              </span>
-              <span style={{ 
-                fontSize: '16px', 
-                color: '#64748B' 
-              }}>
-                Events Processed
-              </span>
+          <div className="global-impact-bottom-metrics">
+            <div className="global-impact-metric">
+              <span className="global-impact-metric-value">2.4M+</span>
+              <span className="global-impact-metric-label">Events Processed</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ 
-                fontSize: '20px', 
-                fontWeight: '700', 
-                color: '#0A4EFF' 
-              }}>
-                150+
-              </span>
-              <span style={{ 
-                fontSize: '16px', 
-                color: '#64748B' 
-              }}>
-                Clients Protected
-              </span>
+            <div className="global-impact-metric">
+              <span className="global-impact-metric-value">150+</span>
+              <span className="global-impact-metric-label">Clients Protected</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ 
-                fontSize: '20px', 
-                fontWeight: '700', 
-                color: '#0A4EFF' 
-              }}>
-                45
-              </span>
-              <span style={{ 
-                fontSize: '16px', 
-                color: '#64748B' 
-              }}>
-                Countries
-              </span>
+            <div className="global-impact-metric">
+              <span className="global-impact-metric-value">45</span>
+              <span className="global-impact-metric-label">Countries</span>
             </div>
           </div>
         </div>
