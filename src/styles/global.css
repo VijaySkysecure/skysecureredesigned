@@ -3897,20 +3897,23 @@ footer section .container {
   }
 
   .footer__certifications {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     padding: 0 20px;
-    align-items: flex-start;
+    align-items: center;
+    justify-items: center;
   }
 
   .footer__cert {
     width: 100%;
-    max-width: 200px;
-    align-items: flex-start;
+    max-width: none;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer__cert-label {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -4072,7 +4075,23 @@ footer section .container {
   }
 
   .footer__certifications {
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 16px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .footer__cert {
+    width: 100%;
+    max-width: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__cert-label {
+    text-align: center;
   }
 }
 
@@ -4439,8 +4458,23 @@ footer section .container {
   }
   
   .footer__certifications {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    padding: 0 16px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .footer__cert {
+    width: 100%;
+    max-width: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__cert-label {
+    text-align: center;
   }
   
   .footer__cert .image-placeholder {
