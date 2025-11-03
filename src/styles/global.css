@@ -3518,6 +3518,40 @@ footer section .container {
   border-radius: 0;
 }
 
+.header__bar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.header__mobile-toggle-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 18px;
+  position: relative;
+}
+
+.header__mobile-toggle-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-grey);
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
 .image-placeholder--bare,
 .image-placeholder--bare.image-placeholder--loaded {
   border: none;
@@ -3531,13 +3565,15 @@ footer section .container {
 
 @media (max-width: 1480px) {
   .header__bar {
-    padding: 0 112px;
+    margin-left: 48px;
+    margin-right: 48px;
   }
 }
 
 @media (max-width: 1200px) {
   .header__bar {
-    padding: 0 48px;
+    margin-left: 48px;
+    margin-right: 48px;
   }
 
   .header__nav-list {
@@ -3545,19 +3581,251 @@ footer section .container {
   }
 }
 
-@media (max-width: 900px) {
+/* Tablet styles */
+@media (max-width: 1024px) {
   .header__bar {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: 24px 24px 32px;
-    gap: 24px;
+    margin-left: 32px;
+    margin-right: 32px;
+    gap: 48px;
   }
 
   .header__nav-list {
-    flex-wrap: wrap;
-    justify-content: flex-start;
     gap: 24px;
+  }
+
+  .header__link {
+    font-size: 15px;
+  }
+
+  /* Strategic Vision cards - reduce spacing for mobile and tablet */
+  .card {
+    gap: 16px;
+    height: auto;
+    min-height: 350px;
+  }
+
+  .card__description {
+    margin-bottom: 8px;
+  }
+
+  .card__bullet-points {
+    margin-top: -8px;
+  }
+
+  /* What We Do cards - center align on tablet */
+  .what-we-do-card__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .what-we-do-card__title-section {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* Mobile and tablet navigation */
+@media (max-width: 968px) {
+  .header__bar {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px 20px;
+    gap: 0;
+  }
+
+  .header__bar-top {
+    width: 100%;
+  }
+
+  .header__mobile-toggle {
+    display: block;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .header__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    max-width: 0;
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    transition: max-width 0.3s ease;
+    z-index: 999;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .header__nav.is-open {
+    max-width: 50%;
+    padding-top: 80px;
+    overflow-y: auto;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .header__nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .header__nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .header__link {
+    width: 100%;
+    padding: 16px 0;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  .header__link--trigger {
+    width: 100%;
+  }
+
+  .header__submenu {
+    position: static;
+    min-width: auto;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0;
+    margin-left: 16px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  .header__nav-item.is-open .header__submenu {
+    max-height: 500px;
+    padding: 8px 0;
+    margin-bottom: 8px;
+  }
+
+  .header__submenu-link {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  .header__caret {
+    transition: transform 0.3s ease;
+  }
+
+  .header__nav-item.is-open .header__caret {
+    transform: rotate(180deg);
+  }
+
+  /* Strategic Vision cards - reduce spacing for mobile */
+  .card {
+    gap: 14px;
+    height: auto;
+    min-height: 340px;
+  }
+
+  .card__description {
+    margin-bottom: 6px;
+  }
+
+  .card__bullet-points {
+    margin-top: -6px;
+  }
+
+  /* What We Do cards - center align on mobile */
+  .what-we-do-card__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .what-we-do-card__title-section {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 480px) {
+  .header__bar {
+    padding: 12px 16px;
+  }
+
+  .header__logo {
+    transform: scale(0.9);
+    transform-origin: left center;
+  }
+
+  .header__link {
+    font-size: 15px;
+    padding: 14px 0;
+  }
+
+  .header__submenu-link {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* Strategic Vision cards - further reduce spacing for small mobile */
+  .card {
+    gap: 12px;
+    min-height: 320px;
+  }
+
+  .card__description {
+    margin-bottom: 4px;
+  }
+
+  .card__bullet-points {
+    margin-top: -8px;
+  }
+
+  /* What We Do cards - center align on small mobile */
+  .what-we-do-card__header {
+    align-items: center;
+  }
+
+  .what-we-do-card__title-section {
+    text-align: center;
+    align-items: center;
   }
 }
 
@@ -3707,13 +3975,18 @@ footer section .container {
   /* What We Do cards */
   .what-we-do-card__header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
   }
   
   .what-we-do-card__icon {
     width: 40px !important;
     height: 40px !important;
+  }
+
+  .what-we-do-card__title-section {
+    text-align: center;
+    align-items: center;
   }
   
   /* Resources section */
