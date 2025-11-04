@@ -110,6 +110,11 @@ const TEAM_MEMBERS = [
     image: 'about/agniputhran-nm.JPG'
   },
   {
+    name: 'Sneha Manjunath',
+    title: 'Engineering Head',
+    image: 'about/sneha.png'
+  },
+  {
     name: 'Arvind Yadav',
     title: 'Cloud Business Lead',
     image: 'about/arvind.jpg'
@@ -130,14 +135,19 @@ const TEAM_MEMBERS = [
     image: 'about/mona.jfif'
   },
   {
-    name: 'Swathi Manikandan',
-    title: 'Engineering Specialist - Lead',
-    image: 'about/swathi.jfif'
+    name: 'Ajay Gangadhar',
+    title: 'Technical Architect',
+    image: 'about/ajay.jpg'
   },
   {
     name: 'Meenu PS',
     title: 'Business Analyst',
     image: 'about/meenu.jpg'
+  },
+  {
+    name: 'Swathi Manikandan',
+    title: 'Engineering Specialist - Lead',
+    image: 'about/swathi.jfif'
   }
 ];
 
@@ -390,7 +400,14 @@ export function About(): React.ReactElement {
         <section className="about-leadership">
           <div className="about-leadership-container">
             <div className="about-leadership-header">
-              <h2 className="about-leadership-title">
+              <h2 
+                className="about-leadership-title"
+                style={{ 
+                  color: '#1F2937', 
+                  fontSize: '36px',
+                  fontWeight: 700
+                }}
+              >
                 The Visionaries Behind Skysecure
               </h2>
               <p className="about-leadership-subtitle">
@@ -429,7 +446,13 @@ export function About(): React.ReactElement {
         <section className="about-team">
           <div className="about-team-container">
             <div className="about-team-header">
-              <h2 className="about-team-title">
+              <h2 className="about-team-title"
+              style={{ 
+                color: '#1F2937', 
+                fontSize: '36px',
+                fontWeight: 700
+              }}
+              >
                 Our Leadership Team
               </h2>
               <p className="about-team-subtitle">
@@ -438,8 +461,8 @@ export function About(): React.ReactElement {
             </div>
             
             <div className="about-team-grid">
-              {/* First row - 4 members */}
-              {TEAM_MEMBERS.slice(0, 4).map((member, index) => (
+              {/* All 5 members in a single row */}
+              {TEAM_MEMBERS.slice(0, 5).map((member, index) => (
                 <div key={index} className="about-team-card">
                   <div className="about-team-image">
                     <ImagePlaceholder
@@ -462,10 +485,10 @@ export function About(): React.ReactElement {
               ))}
             </div>
             
-            {/* Second row - 3 members centered */}
+            {/* Second row - 4 members centered */}
             <div className="about-team-row-second">
-              {TEAM_MEMBERS.slice(4, 7).map((member, index) => (
-                <div key={index + 4} className="about-team-card">
+              {TEAM_MEMBERS.slice(5, 9).map((member, index) => (
+                <div key={index + 5} className="about-team-card">
                   <div className="about-team-image">
                     <ImagePlaceholder
                       label={member.name}

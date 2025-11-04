@@ -1,0 +1,205 @@
+/* Managed Services Page - Responsive Styles */
+
+/* Tablet Styles (max-width: 900px) */
+@media (max-width: 900px) {
+  .page-hero__title {
+    width: 100% !important;
+    font-size: 36px !important;
+  }
+
+  .page-hero__description {
+    margin-left: 0 !important;
+    padding: 0 20px;
+  }
+
+  .page-intro__text p {
+    margin-left: 0 !important;
+    padding: 0 20px;
+  }
+
+  /* Innovation section - stack vertically */
+  .page-innovation__content-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+
+  .page-innovation__content-wrapper > div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-innovation__content-wrapper > div:last-child {
+    text-align: center;
+  }
+
+  .page-innovation__content-wrapper > div:last-child h2 {
+    font-size: 28px !important;
+    text-align: center !important;
+  }
+
+  .page-innovation__content-wrapper > div:last-child p {
+    text-align: center;
+  }
+
+  .page-intro__text h2 {
+    font-size: 28px !important;
+  }
+}
+
+/* Tablet - Medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .page-values__grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 0 20px;
+  }
+
+  .page-features__grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+  /* All headings same font size for mobile */
+  .page-hero__title,
+  .page-values__title,
+  .page-innovation__content-wrapper > div:last-child h2,
+  .page-features__title,
+  .page-intro__text h2,
+  .page-cta__title {
+    font-size: 24px !important;
+  }
+
+  .page-hero {
+    height: auto !important;
+    min-height: 300px !important;
+    padding: 40px 0 !important;
+  }
+
+  .page-hero__title {
+    width: 100% !important;
+    padding: 0 20px;
+    margin-bottom: 16px !important;
+  }
+
+  .page-hero__description {
+    margin-left: 0 !important;
+    padding: 0 20px;
+    font-size: 16px !important;
+  }
+
+  .page-intro {
+    padding: 40px 0 !important;
+  }
+
+  .page-intro__text p {
+    margin-left: 0 !important;
+    padding: 0 20px;
+    font-size: 14px !important;
+  }
+
+  .page-values {
+    padding: 40px 0 !important;
+  }
+
+  .page-values__grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .page-values__title {
+    padding: 0 20px;
+  }
+
+  .page-value-card {
+    padding: 24px 20px !important;
+    text-align: center !important;
+  }
+
+  .page-value-card__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .page-innovation {
+    padding: 40px 0 !important;
+  }
+
+  .page-innovation__content-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 20px;
+  }
+
+  .page-innovation__content-wrapper > div:first-child {
+    width: 100%;
+  }
+
+  .page-innovation__content-wrapper > div:first-child img,
+  .page-innovation__content-wrapper > div:first-child [class*="ImagePlaceholder"] {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  .page-innovation__content-wrapper > div:last-child {
+    width: 100%;
+  }
+
+  .page-innovation__content-wrapper > div:last-child p {
+    font-size: 14px !important;
+  }
+
+  .page-features {
+    padding: 40px 0 !important;
+  }
+
+  .page-features__grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 20px;
+  }
+
+  .page-features__title {
+    padding: 0 20px;
+  }
+
+  .page-feature-card {
+    padding: 24px 20px !important;
+    text-align: center !important;
+  }
+
+  .page-feature-card__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .page-intro__text h2 {
+    padding: 0 20px;
+  }
+
+  .page-intro__text p {
+    padding: 0 20px;
+    font-size: 14px !important;
+  }
+
+  .page-cta {
+    padding: 40px 0 !important;
+  }
+
+  .page-cta__content {
+    padding: 0 20px;
+  }
+
+  .page-cta__description {
+    font-size: 16px !important;
+  }
+}
+
