@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/dpdp-act-2023.css';
 
 const PROVISIONS = [
   {
@@ -196,38 +197,21 @@ export function DPDPAct2023(): React.ReactElement {
       <Header />
       <main>
         {/* Hero Section */}
-        <section style={{ 
-          padding: '80px 0', 
-          backgroundImage: 'url(/assets/img/banner-bg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}>
-          <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 20px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
+        <section className="dpdp-hero">
+          <div className="dpdp-hero__container">
+            <div className="dpdp-hero__content-wrapper">
               {/* Left Content */}
-              <div style={{ width: '800px' }}>
-                <h1 style={{ 
-                  fontSize: '48px', 
-                  fontWeight: '700', 
-                  color: '#1F2937', 
-                  margin: '0 0 24px 0', 
-                  lineHeight: '1.2' 
-                }}>
+              <div className="dpdp-hero__text">
+                <h1 className="dpdp-hero__title">
                   Digital Personal Data Protection<br />
-                  <span style={{ color: 'rgba(10, 78, 255, 1)' }}>(DPDP) Act 2023</span>
+                  <span className="dpdp-hero__title-span">(DPDP) Act 2023</span>
                 </h1>
-                <p style={{ 
-                  fontSize: '18px', 
-                  color: '#64748B', 
-                  margin: '0 0 32px 0', 
-                  lineHeight: '1.6' 
-                }}>
+                <p className="dpdp-hero__description">
                   Understanding India's landmark data protection legislation and how your organisation can achieve compliance with confidence.
                 </p>
               </div>
               {/* Right Visual */}
-              <div style={{ flex: 1, textAlign: 'center' }}>
+              <div className="dpdp-hero__visual">
                 <ImagePlaceholder
                   label="India Map with Security Locks"
                   imageName="dpdp-act/india-map-lock.png"
@@ -241,43 +225,22 @@ export function DPDPAct2023(): React.ReactElement {
         </section>
 
         {/* What is the DPDP Act? */}
-        <section style={{ padding: '80px 0', backgroundColor: '#FFFFFF', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', justifyContent: 'center' }}>
+        <section className="dpdp-about">
+          <div className="dpdp-about__container">
+            <div className="dpdp-about__content-wrapper">
               {/* Left Content */}
-              <div style={{ flex: 1, maxWidth: '500px' }}>
-                <h2 style={{ 
-                  fontSize: '36px', 
-                  fontWeight: '700', 
-                  color: '#1F2937', 
-                  margin: '0 0 24px 0' 
-                }}>
+              <div className="dpdp-about__text">
+                <h2 className="dpdp-about__title">
                   What is the DPDP Act?
                 </h2>
-                <p style={{ 
-                  fontSize: '16px', 
-                  color: '#64748B', 
-                  margin: '0 0 20px 0', 
-                  lineHeight: '1.6' 
-                }}>
+                <p className="dpdp-about__paragraph">
                   The Digital Personal Data Protection Act 2023 is India's comprehensive data protection law that establishes a framework for processing personal data while ensuring individual privacy rights. This landmark legislation aims to balance the need for data- driven innovation with robust protection of citizens' personal information.
                 </p>
-                <p style={{ 
-                  fontSize: '16px', 
-                  color: '#64748B', 
-                  margin: '0 0 24px 0', 
-                  lineHeight: '1.6' 
-                }}>
+                <p className="dpdp-about__paragraph">
                   The Act applies to all organizations processing personal data of individuals within India, regardless of where the processing occurs, making compliance essential for businesses operating in the Indian market.
                 </p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ 
-                    width: '44px', 
-                    height: '52px', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center' 
-                  }}>
+                <div className="dpdp-about__info">
+                  <div className="dpdp-about__info-icon">
                     <ImagePlaceholder
                       label="Gavel Icon"
                       imageName="dpdp-act/icon-gavel.png"
@@ -287,13 +250,13 @@ export function DPDPAct2023(): React.ReactElement {
                     />
                   </div>
                   <div>
-                    <div style={{ fontSize: '16px', color: '#1F2937', fontWeight: '600', marginBottom: '4px' }}>Enacted: August 2023</div>
-                    <div style={{ fontSize: '14px', color: '#64748B' }}>Applicable to all Indian businesses</div>
+                    <div className="dpdp-about__info-text">Enacted: August 2023</div>
+                    <div className="dpdp-about__info-subtext">Applicable to all Indian businesses</div>
                   </div>
                 </div>
               </div>
               {/* Right Visual */}
-              <div style={{ flex: 1, textAlign: 'center', maxWidth: '450px' }}>
+              <div className="dpdp-about__visual">
                 <ImagePlaceholder
                   label="E-Book Preview"
                   imageName="dpdp-act/ebook-preview.png"
@@ -307,13 +270,9 @@ export function DPDPAct2023(): React.ReactElement {
         </section>
 
         {/* Download E-Book Section */}
-        <section style={{ 
-          padding: '80px 0', 
-          backgroundColor: 'rgba(10, 78, 255, 1)',
-          textAlign: 'center'
-        }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 20px' }}>
-            <div style={{ margin: '0 auto 24px auto', display: 'flex', justifyContent: 'center' }}>
+        <section className="dpdp-download">
+          <div className="dpdp-download__container">
+            <div className="dpdp-download__icon-wrapper">
               <ImagePlaceholder
                 label="PDF Icon"
                 imageName="dpdp-act/pdf-icon.png"
@@ -322,128 +281,81 @@ export function DPDPAct2023(): React.ReactElement {
                 borderRadius={0}
               />
             </div>
-            <h2 style={{ 
-              fontSize: '32px', 
-              fontWeight: '700', 
-              color: '#FFFFFF', 
-              margin: '0 0 16px 0' 
-            }}>
+            <h2 className="dpdp-download__title">
               Download Our Free E-Book on the DPDP Act
             </h2>
-            <p style={{ 
-              fontSize: '18px', 
-              color: '#FFFFFF', 
-              margin: '0 0 40px 0', 
-              lineHeight: '1.6',
-              opacity: 0.9
-            }}>
+            <p className="dpdp-download__description">
               Get detailed guidance, checklists and implementation roadmap for Indian organisations navigating the DPDP Act compliance requirements.
             </p>
-            <form onSubmit={handleSubmit} style={{ 
-              backgroundColor: '#FFFFFF', 
-              padding: '40px', 
-              borderRadius: '12px',
-              textAlign: 'left',
-              maxWidth: '600px',
-              margin: '0 auto'
-            }}>
-              <div style={{ marginBottom: '20px' }}>
+            <form onSubmit={handleSubmit} className="dpdp-download__form">
+              <div className="dpdp-download__form-group">
                 <div>
-                  <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
-                    Full Name <span style={{ color: '#EF4444' }}>*</span>
+                  <label className="dpdp-download__form-label">
+                    Full Name <span className="dpdp-download__form-label-required">*</span>
                   </label>
                   <input
                     type="text"
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      border: validationErrors.fullName ? '1px solid #EF4444' : '1px solid #D1D5DB',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      fontFamily: 'Inter'
-                    }}
+                    className={`dpdp-download__form-input ${validationErrors.fullName ? 'dpdp-download__form-input--error' : ''}`}
                     required
                   />
                   {validationErrors.fullName && (
-                    <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
+                    <p className="dpdp-download__form-error">
                       {validationErrors.fullName}
                     </p>
                   )}
                 </div>
               </div>
               
-              <div style={{ marginBottom: '20px' }}>
-                <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
-                  Email Address <span style={{ color: '#EF4444' }}>*</span>
+              <div className="dpdp-download__form-group">
+                <label className="dpdp-download__form-label">
+                  Email Address <span className="dpdp-download__form-label-required">*</span>
                 </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      border: validationErrors.email ? '1px solid #EF4444' : '1px solid #D1D5DB',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      fontFamily: 'Inter'
-                    }}
-                    required
-                  />
-                  {validationErrors.email && (
-                    <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
-                      {validationErrors.email}
-                    </p>
-                  )}
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className={`dpdp-download__form-input ${validationErrors.email ? 'dpdp-download__form-input--error' : ''}`}
+                  required
+                />
+                {validationErrors.email && (
+                  <p className="dpdp-download__form-error">
+                    {validationErrors.email}
+                  </p>
+                )}
               </div>
               
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '32px' }}>
+              <div className="dpdp-download__form-grid">
                 <div>
-                  <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
-                    Phone Number <span style={{ color: '#EF4444' }}>*</span>
+                  <label className="dpdp-download__form-label">
+                    Phone Number <span className="dpdp-download__form-label-required">*</span>
                   </label>
                   <input
                     type="tel"
                     name="phoneNumber"
                     value={formData.phoneNumber}
                     onChange={handleInputChange}
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      border: validationErrors.phoneNumber ? '1px solid #EF4444' : '1px solid #D1D5DB',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      fontFamily: 'Inter'
-                    }}
+                    className={`dpdp-download__form-input ${validationErrors.phoneNumber ? 'dpdp-download__form-input--error' : ''}`}
                     required
                   />
                   {validationErrors.phoneNumber && (
-                    <p style={{ color: '#EF4444', fontSize: '12px', margin: '4px 0 0 0' }}>
+                    <p className="dpdp-download__form-error">
                       {validationErrors.phoneNumber}
                     </p>
                   )}
                 </div>
                 <div>
-                  <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
+                  <label className="dpdp-download__form-label">
                     Country
                   </label>
                   <select
                     name="country"
                     value={formData.country}
                     onChange={handleInputChange}
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      border: '1px solid #D1D5DB',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      fontFamily: 'Inter',
-                      backgroundColor: '#FFFFFF'
-                    }}
+                    className="dpdp-download__form-select"
                   >
                     <option value="">Select Country</option>
                     <option value="India">India</option>
@@ -460,9 +372,9 @@ export function DPDPAct2023(): React.ReactElement {
                   </select>
                 </div>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '32px' }}>
+              <div className="dpdp-download__form-grid">
                 <div>
-                  <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
+                  <label className="dpdp-download__form-label">
                     Company Name
                   </label>
                   <input
@@ -470,33 +382,18 @@ export function DPDPAct2023(): React.ReactElement {
                     name="companyName"
                     value={formData.companyName}
                     onChange={handleInputChange}
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      border: '1px solid #D1D5DB',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      fontFamily: 'Inter'
-                    }}
+                    className="dpdp-download__form-input"
                   />
                 </div>
                 <div>
-                  <label style={{ display: 'block', fontSize: '14px', fontWeight: '500', color: '#374151', marginBottom: '8px' }}>
+                  <label className="dpdp-download__form-label">
                     Select Your Role
                   </label>
                   <select
                     name="role"
                     value={formData.role}
                     onChange={handleInputChange}
-                    style={{
-                      width: '100%',
-                      padding: '12px 16px',
-                      border: '1px solid #D1D5DB',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      fontFamily: 'Inter',
-                      backgroundColor: '#FFFFFF'
-                    }}
+                    className="dpdp-download__form-select"
                   >
                     <option value="">Select Role</option>
                     <option value="CISO">CISO</option>
@@ -511,30 +408,17 @@ export function DPDPAct2023(): React.ReactElement {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                style={{
-                  backgroundColor: isSubmitting ? '#9CA3AF' : 'rgba(10, 78, 255, 1)',
-                  color: '#FFFFFF',
-                  padding: '12px 24px',
-                  borderRadius: '8px',
-                  border: 'none',
-                  fontSize: '16px',
-                  fontWeight: '500',
-                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  fontFamily: 'Inter',
-                  margin: '0 auto',
-                  opacity: isSubmitting ? 0.7 : 1
-                }}
+                className="dpdp-download__form-button"
               >
-                <ImagePlaceholder
-                  label="Download Icon"
-                  imageName="knowledge/icon-download.png"
-                  width={16}
-                  height={16}
-                  borderRadius={0}
-                />
+                <span className="dpdp-download__form-button-icon">
+                  <ImagePlaceholder
+                    label="Download Icon"
+                    imageName="knowledge/icon-download.png"
+                    width={16}
+                    height={16}
+                    borderRadius={0}
+                  />
+                </span>
                 {isSubmitting ? 'Downloading...' : 'Download PDF'}
               </button>
             </form>
@@ -542,59 +426,20 @@ export function DPDPAct2023(): React.ReactElement {
         </section>
 
         {/* Key Provisions & Obligations */}
-        <section style={{ padding: '80px 0', backgroundColor: '#FFFFFF', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-            <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-              <h2 style={{ 
-                fontSize: '36px', 
-                fontWeight: '700', 
-                color: '#1F2937', 
-                margin: '0 0 16px 0' 
-              }}>
+        <section className="dpdp-provisions">
+          <div className="dpdp-provisions__container">
+            <div className="dpdp-provisions__header">
+              <h2 className="dpdp-provisions__title">
                 Key Provisions & Obligations
               </h2>
-              <p style={{ 
-                fontSize: '18px', 
-                color: '#64748B', 
-                maxWidth: '800px', 
-                margin: '0 auto',
-                lineHeight: '1.6'
-              }}>
+              <p className="dpdp-provisions__description">
                 Understanding the core requirements and obligations under the DPDP Act for effective compliance
               </p>
             </div>
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(3, 1fr)', 
-              gap: '24px' 
-            }}>
+            <div className="dpdp-provisions__grid">
               {PROVISIONS.map((provision, index) => (
-                <div key={index} style={{ 
-                  backgroundColor: '#FFFFFF', 
-                  padding: '24px', 
-                  borderRadius: '12px', 
-                  border: '1px solid #E2E8F0',
-                  boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)',
-                  textAlign: 'left',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-4px)';
-                  e.currentTarget.style.boxShadow = '0px 8px 25px rgba(0, 0, 0, 0.15)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0px 1px 3px rgba(0, 0, 0, 0.1)';
-                }}>
-                  <div style={{ 
-                    width: '60px', 
-                    height: '60px', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    marginBottom: '16px' 
-                  }}>
+                <div key={index} className="dpdp-provisions__card">
+                  <div className="dpdp-provisions__card-icon">
                     <ImagePlaceholder
                       label={provision.title}
                       imageName={`dpdp-act/${provision.icon}.png`}
@@ -603,20 +448,10 @@ export function DPDPAct2023(): React.ReactElement {
                       borderRadius={0}
                     />
                   </div>
-                  <h3 style={{ 
-                    fontSize: '18px', 
-                    fontWeight: '600', 
-                    color: '#1F2937', 
-                    margin: '0 0 12px 0' 
-                  }}>
+                  <h3 className="dpdp-provisions__card-title">
                     {provision.title}
                   </h3>
-                  <p style={{ 
-                    fontSize: '14px', 
-                    color: '#64748B', 
-                    lineHeight: '1.5', 
-                    margin: 0 
-                  }}>
+                  <p className="dpdp-provisions__card-description">
                     {provision.description}
                   </p>
                 </div>
@@ -626,11 +461,11 @@ export function DPDPAct2023(): React.ReactElement {
         </section>
 
         {/* Why Your Organisation Should Care */}
-        <section style={{ padding: '80px 0', backgroundColor: '#FFFFFF', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '70px', justifyContent: 'center' }}>
+        <section className="dpdp-why-care">
+          <div className="dpdp-why-care__container">
+            <div className="dpdp-why-care__content-wrapper">
               {/* Left Visual */}
-              <div style={{ flex: 1, maxWidth: '530px' }}>
+              <div className="dpdp-why-care__visual">
                 <ImagePlaceholder
                   label="Compliance Benefits Visual"
                   imageName="dpdp-act/compliance-benefits-visual.png"
@@ -640,23 +475,13 @@ export function DPDPAct2023(): React.ReactElement {
                 />
               </div>
               {/* Right Content */}
-              <div style={{ flex: 1, maxWidth: '600px' }}>
-                <h2 style={{ 
-                  fontSize: '36px', 
-                  fontWeight: '700', 
-                  color: '#1F2937', 
-                  margin: '0 0 40px 0' 
-                }}>
+              <div className="dpdp-why-care__text">
+                <h2 className="dpdp-why-care__title">
                   Why Your Organisation Should Care
                 </h2>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                    <div style={{ 
-                      width: '40px', 
-                      height: '48px', 
-                      marginTop: '2px', 
-                      flexShrink: 0 
-                    }}>
+                <div className="dpdp-why-care__list">
+                  <div className="dpdp-why-care__item">
+                    <div className="dpdp-why-care__item-icon">
                       <ImagePlaceholder
                         label="Risk Icon"
                         imageName="dpdp-act/icon-red-dot.png"
@@ -665,32 +490,17 @@ export function DPDPAct2023(): React.ReactElement {
                         borderRadius={0}
                       />
                     </div>
-                    <div>
-                      <h3 style={{ 
-                        fontSize: '18px', 
-                        fontWeight: '600', 
-                        color: '#1F2937', 
-                        margin: '0 0 8px 0' 
-                      }}>
+                    <div className="dpdp-why-care__item-content">
+                      <h3 className="dpdp-why-care__item-title">
                         Risk of Non-Compliance
                       </h3>
-                      <p style={{ 
-                        fontSize: '14px', 
-                        color: '#64748B', 
-                        lineHeight: '1.5', 
-                        margin: 0 
-                      }}>
+                      <p className="dpdp-why-care__item-description">
                         Heavy monetary penalties, legal consequences, and severe reputational damage that can impact business operations and customer trust.
                       </p>
                     </div>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                    <div style={{ 
-                      width: '40px', 
-                      height: '48px', 
-                      marginTop: '2px', 
-                      flexShrink: 0 
-                    }}>
+                  <div className="dpdp-why-care__item">
+                    <div className="dpdp-why-care__item-icon">
                       <ImagePlaceholder
                         label="Cross-border Icon"
                         imageName="dpdp-act/icon-blue-dot.png"
@@ -699,32 +509,17 @@ export function DPDPAct2023(): React.ReactElement {
                         borderRadius={0}
                       />
                     </div>
-                    <div>
-                      <h3 style={{ 
-                        fontSize: '18px', 
-                        fontWeight: '600', 
-                        color: '#1F2937', 
-                        margin: '0 0 8px 0' 
-                      }}>
+                    <div className="dpdp-why-care__item-content">
+                      <h3 className="dpdp-why-care__item-title">
                         Cross-border Data Impact
                       </h3>
-                      <p style={{ 
-                        fontSize: '14px', 
-                        color: '#64748B', 
-                        lineHeight: '1.5', 
-                        margin: 0 
-                      }}>
+                      <p className="dpdp-why-care__item-description">
                         Restrictions on international data transfers affect global operations, partnerships, and technology implementations.
                       </p>
                     </div>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                    <div style={{ 
-                      width: '42px', 
-                      height: '48px', 
-                      marginTop: '2px', 
-                      flexShrink: 0 
-                    }}>
+                  <div className="dpdp-why-care__item">
+                    <div className="dpdp-why-care__item-icon dpdp-why-care__item-icon--large">
                       <ImagePlaceholder
                         label="Competitive Advantage Icon"
                         imageName="dpdp-act/icon-green-dot.png"
@@ -733,21 +528,11 @@ export function DPDPAct2023(): React.ReactElement {
                         borderRadius={0}
                       />
                     </div>
-                    <div>
-                      <h3 style={{ 
-                        fontSize: '18px', 
-                        fontWeight: '600', 
-                        color: '#1F2937', 
-                        margin: '0 0 8px 0' 
-                      }}>
+                    <div className="dpdp-why-care__item-content">
+                      <h3 className="dpdp-why-care__item-title">
                         Competitive Advantage
                       </h3>
-                      <p style={{ 
-                        fontSize: '14px', 
-                        color: '#64748B', 
-                        lineHeight: '1.5', 
-                        margin: 0 
-                      }}>
+                      <p className="dpdp-why-care__item-description">
                         Build customer trust, enhance brand reputation, and gain competitive edge through robust data governance and privacy practices.
                       </p>
                     </div>
@@ -759,70 +544,24 @@ export function DPDPAct2023(): React.ReactElement {
         </section>
 
         {/* How Skysecure Helps You Comply */}
-        <section style={{ 
-          padding: '80px 0', 
-          backgroundColor: 'rgba(10, 78, 255, 1)',
-          textAlign: 'center',
-          width: '100vw',
-          marginLeft: 'calc(-50vw + 50%)'
-        }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-            <h2 style={{ 
-              fontSize: '36px', 
-              fontWeight: '700', 
-              color: '#FFFFFF', 
-              margin: '0 0 16px 0' 
-            }}>
+        <section className="dpdp-help">
+          <div className="dpdp-help__container">
+            <h2 className="dpdp-help__title">
               How Skysecure Helps You Comply
             </h2>
-            <p style={{ 
-              fontSize: '18px', 
-              color: '#FFFFFF', 
-              margin: '0 auto 60px auto', 
-              lineHeight: '1.6',
-              opacity: 0.9,
-              maxWidth: '800px'
-            }}>
+            <p className="dpdp-help__description">
               Our comprehensive 4-step compliance framework ensures your organization meets all DPDP Act requirements
             </p>
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(4, 1fr)', 
-              gap: '50px',
-              marginBottom: '40px',
-            }}>
+            <div className="dpdp-help__grid">
               {COMPLIANCE_STEPS.map((step, index) => (
-                <div key={index} style={{ textAlign: 'center' }}>
-                  <div style={{ 
-                    width: '60px', 
-                    height: '60px', 
-                    backgroundColor: '#DBEAFE', 
-                    borderRadius: '50%', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    margin: '0 auto 20px auto',
-                    color: 'rgba(10, 78, 255, 1)',
-                    fontSize: '24px',
-                    fontWeight: '700'
-                  }}>
+                <div key={index} className="dpdp-help__step">
+                  <div className="dpdp-help__step-number">
                     {step.number}
                   </div>
-                  <h3 style={{ 
-                    fontSize: '20px', 
-                    fontWeight: '600', 
-                    color: '#FFFFFF', 
-                    margin: '0 0 12px 0' 
-                  }}>
+                  <h3 className="dpdp-help__step-title">
                     {step.title}
                   </h3>
-                  <p style={{ 
-                    fontSize: '16px', 
-                    color: '#FFFFFF', 
-                    lineHeight: '1.5', 
-                    margin: 0,
-                    opacity: 0.9
-                  }}>
+                  <p className="dpdp-help__step-description">
                     {step.description}
                   </p>
                 </div>
