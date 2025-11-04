@@ -4,12 +4,8 @@ import { FaLinkedin, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 
 const FOOTER_LINKS = {
   Solutions: [
-    '24/7 SOC Monitoring',
-    'Threat Hunting', 
-    'Zero Trust Architecture',
-    'Cloud Security',
-    'Security Training',
-    'Risk Assessment'
+    'Professional Services',
+    'Managed Services'
   ],
   Company: [
     'About Us',
@@ -112,21 +108,17 @@ export function Footer(): React.ReactElement {
             <div key={title} className="footer__column">
               <h3 className="footer__column-title">{title}</h3>
               <ul className="footer__links">
-                {links.map((link, index) => {
-                  // Link the first 6 Solutions items to their respective pages
-                  const isSolutionLink = title === 'Solutions' && index < 6;
+                {links.map((link) => {
+                  // Link Solutions items to their respective pages
+                  const isSolutionLink = title === 'Solutions';
                   const isAboutLink = title === 'Company' && link === 'About Us';
                   const isContactLink = title === 'Company' && link === 'Contact';
                   const isCareersLink = title === 'Company' && link === 'Careers';
                   const isResourceLink = title === 'Resources';
                   const getSolutionHref = (linkName: string) => {
                     switch (linkName) {
-                      case '24/7 SOC Monitoring': return '/soc-monitoring';
-                      case 'Threat Hunting': return '/threat-hunting';
-                      case 'Zero Trust Architecture': return '/zero-trust-architecture';
-                      case 'Cloud Security': return '/cloud-security';
-                      case 'Security Training': return '/security-training';
-                      case 'Risk Assessment': return '/risk-assessment';
+                      case 'Professional Services': return '/professional-services';
+                      case 'Managed Services': return '/managed-services';
                       default: return `#${linkName.toLowerCase().replace(/\s+/g, '-')}`;
                     }
                   };
