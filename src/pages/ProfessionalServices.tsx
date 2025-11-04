@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/professional-services.css';
 
 const STRATEGIC_APPROACH = [
   {
@@ -111,7 +112,7 @@ export function ProfessionalServices(): React.ReactElement {
         {/* Continuous Intelligence Section */}
         <section className="page-innovation">
           <div className="container">
-            <div style={{ 
+            <div className="page-innovation__content-wrapper" style={{ 
               display: 'flex', 
               alignItems: 'center', 
               gap: '80px',
