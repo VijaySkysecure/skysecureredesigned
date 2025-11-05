@@ -1,0 +1,433 @@
+/* Responsive Styles for Zero Trust Hybrid Cloud - Mobile and Tablet Only */
+
+/* Tablet Styles (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Hero Section */
+  .zt-hero-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+
+  .zt-hero-left {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .zt-hero-right {
+    max-width: 100% !important;
+  }
+
+  .zt-hero-right img,
+  .zt-hero-right > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Challenges Section */
+  .zt-challenges-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  /* Principles Grid */
+  .zt-principles-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* Components Grid */
+  .zt-components-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    justify-content: center !important;
+  }
+
+  .zt-components-grid > div {
+    width: 100% !important;
+    max-width: 590px !important;
+    margin: 0 auto !important;
+  }
+
+  .zt-components-grid > div[style*="width: 1200px"] {
+    width: 100% !important;
+    max-width: 590px !important;
+  }
+
+  /* Roadmap */
+  .zt-roadmap-wrapper {
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    justify-content: center !important;
+  }
+
+  /* Benefits Grid */
+  .zt-benefits-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* Case Study Metrics */
+  .zt-case-study-metrics {
+    flex-wrap: wrap !important;
+    gap: 40px !important;
+  }
+
+  /* Related Articles */
+  .related-articles__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Breadcrumbs */
+  .breadcrumbs {
+    flex-wrap: wrap !important;
+    font-size: 12px !important;
+  }
+
+  /* Hero Section */
+  .blog-hero {
+    padding: 40px 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .blog-hero .container {
+    padding: 0 16px !important;
+  }
+
+  .zt-hero-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 16px !important;
+  }
+
+  .zt-hero-left {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .zt-hero-meta {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  .zt-hero-meta > span {
+    font-size: 11px !important;
+  }
+
+  .zt-hero-meta > span[style*="backgroundColor: rgba(10, 78, 255, 1)"] {
+    padding: 3px 10px !important;
+    font-size: 10px !important;
+  }
+
+  .zt-hero-left > h1 {
+    font-size: 32px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+
+  .zt-hero-right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .zt-hero-right img,
+  .zt-hero-right > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Blog Content */
+  .blog-content .container {
+    padding: 0 16px !important;
+  }
+
+  /* Executive Summary */
+  .zt-executive-section {
+    padding: 0 16px !important;
+  }
+
+  .zt-executive-text {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  /* Challenges Section */
+  .zt-challenges-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .zt-challenges-container {
+    padding: 0 !important;
+  }
+
+  .zt-challenges-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 !important;
+  }
+
+  .zt-challenges-left > h2 {
+    font-size: 24px !important;
+    text-align: center !important;
+  }
+
+  .zt-challenges-left > p {
+    text-align: center !important;
+    font-size: 16px !important;
+  }
+
+  .zt-challenges-right {
+    width: 100% !important;
+  }
+
+  .zt-challenges-right img,
+  .zt-challenges-right > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Principles Section */
+  .zt-principles-section {
+    padding: 0 16px !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .zt-principles-section > h2 {
+    font-size: 24px !important;
+  }
+
+  .zt-principles-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin-top: 24px !important;
+  }
+
+  /* Components Section */
+  .zt-components-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .zt-components-container {
+    padding: 0 !important;
+  }
+
+  .zt-components-section > div > h2 {
+    font-size: 24px !important;
+  }
+
+  .zt-components-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-top: 24px !important;
+    justify-content: center !important;
+  }
+
+  .zt-components-grid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    grid-column: auto !important;
+    justify-self: auto !important;
+  }
+
+  /* Roadmap Section */
+  .zt-roadmap-section {
+    padding: 0 16px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .zt-roadmap-section > h2 {
+    font-size: 24px !important;
+  }
+
+  .zt-roadmap-wrapper {
+    flex-direction: column !important;
+    gap: 24px !important;
+    margin-top: 24px !important;
+  }
+
+  .zt-roadmap-arrow {
+    transform: rotate(90deg) !important;
+    margin: 8px 0 !important;
+  }
+
+  /* Benefits Section */
+  .zt-benefits-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .zt-benefits-container {
+    padding: 0 !important;
+  }
+
+  .zt-benefits-section > div > h2 {
+    font-size: 24px !important;
+  }
+
+  .zt-benefits-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin-top: 24px !important;
+  }
+
+  .zt-benefits-footer {
+    font-size: 16px !important;
+    text-align: center !important;
+    margin-top: 24px !important;
+  }
+
+  /* Case Study Section */
+  .zt-case-study-section {
+    padding: 0 16px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .zt-case-study-section > h2 {
+    font-size: 24px !important;
+  }
+
+  .zt-case-study-box {
+    padding: 24px 16px !important;
+    margin-top: 24px !important;
+  }
+
+  .zt-case-study-text {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  .zt-case-study-metrics {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  /* Future Section */
+  .zt-future-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .zt-future-container {
+    padding: 0 !important;
+  }
+
+  .zt-future-section > div > h2 {
+    font-size: 24px !important;
+  }
+
+  .zt-future-text {
+    font-size: 16px !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
+
+  /* CTA Section */
+  .zt-cta-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 60px 16px !important;
+    margin-top: 40px !important;
+    overflow-x: hidden !important;
+  }
+
+  .zt-cta-container {
+    padding: 0 16px !important;
+  }
+
+  .zt-cta-title {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+
+  .zt-cta-text {
+    font-size: 16px !important;
+  }
+
+  .zt-cta-buttons {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .zt-cta-button {
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  /* Related Articles */
+  .related-articles {
+    padding: 0 16px !important;
+  }
+
+  .related-articles__title {
+    font-size: 24px !important;
+  }
+
+  .related-articles__grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .related-article {
+    height: auto !important;
+    min-height: auto !important;
+  }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+  .zt-hero-left > h1 {
+    font-size: 28px !important;
+  }
+
+  .zt-hero-meta {
+    gap: 6px !important;
+  }
+
+  .zt-hero-meta > span {
+    font-size: 10px !important;
+  }
+
+  .zt-hero-meta > span[style*="backgroundColor: rgba(10, 78, 255, 1)"] {
+    padding: 3px 8px !important;
+    font-size: 9px !important;
+  }
+
+  .zt-challenges-left > h2,
+  .zt-principles-section > h2,
+  .zt-components-section > div > h2,
+  .zt-roadmap-section > h2,
+  .zt-benefits-section > div > h2,
+  .zt-case-study-section > h2,
+  .zt-future-section > div > h2,
+  .zt-cta-title,
+  .related-articles__title {
+    font-size: 20px !important;
+  }
+
+  .zt-cta-title {
+    font-size: 24px !important;
+  }
+}
+
