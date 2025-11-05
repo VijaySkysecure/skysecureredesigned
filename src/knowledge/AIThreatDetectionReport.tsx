@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/knowledge/ai-threat-detection-report.css';
 
 const THREAT_TYPES = [
   {
@@ -213,10 +214,10 @@ export function AIThreatDetectionReport(): React.ReactElement {
         {/* Hero Section */}
         <section className="blog-hero" style={{ padding: '80px 0', marginBottom: '0px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', background: 'linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 35.36%, #DBEAFE 70.71%)' }}>
           <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
+            <div className="ai-hero-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
               {/* Left Content */}
-              <div style={{ flex: 1, maxWidth: '500px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+              <div className="ai-hero-left" style={{ flex: 1, maxWidth: '500px' }}>
+                <div className="ai-hero-meta" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
                   <span style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: '500' }}>White Paper</span>
                   <span style={{ color: '#6B7280', fontSize: '14px' }}>•</span>
                   <span style={{ color: '#6B7280', fontSize: '14px' }}>June 2024</span>
@@ -246,7 +247,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                 </div>
               </div>
               {/* Right Visual */}
-              <div style={{ flex: 1, textAlign: 'center', maxWidth: '580px', position: 'relative' }}>
+              <div className="ai-hero-right" style={{ flex: 1, textAlign: 'center', maxWidth: '580px', position: 'relative' }}>
                 <ImagePlaceholder
                   label="AI Brain Visual"
                   imageName="knowledge/ai-brain-visual.png"
@@ -260,9 +261,9 @@ export function AIThreatDetectionReport(): React.ReactElement {
         </section>
 
         {/* Executive Summary */}
-        <section className="blog-content" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
+        <section className="blog-content" style={{ width: '100vw' }}>
           <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <section className="blog-section" style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <section className="blog-section" style={{ textAlign: 'center', marginBottom: '60px', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Executive Summary</h2>
               <div style={{ backgroundColor: 'rgba(248, 249, 251, 1)', borderRadius: '16px', padding: '40px', maxWidth: '900px', margin: '0 auto' }}>
                 <p className="blog-section-text" style={{ maxWidth: '850px', margin: '0 auto 32px auto' }}>
@@ -287,9 +288,9 @@ export function AIThreatDetectionReport(): React.ReactElement {
             </section>
 
             {/* The Evolving Threat Landscape */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', backgroundColor: 'rgba(248, 249, 251, 1)', padding: '60px 0', marginBottom: '80px' }}>
-              <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', gap: '60px', alignItems: 'flex-start' }}>
-                <div style={{ flex: 1 }}>
+            <section className="blog-section ai-threat-landscape-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', backgroundColor: 'rgba(248, 249, 251, 1)', padding: '60px 0', marginBottom: '80px' }}>
+              <div className="ai-threat-landscape-wrapper" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', gap: '60px', alignItems: 'flex-start' }}>
+                <div className="ai-threat-landscape-left" style={{ flex: 1 }}>
                   <h2 className="blog-section-title" style={{ marginBottom: '24px' }}>The Evolving Threat Landscape</h2>
                   <p className="blog-section-text" style={{ marginBottom: '32px' }}>
                     2024 has witnessed a surge in AI-assisted cyber attacks targeting critical industries such as finance, healthcare, and manufacturing. Threat actors now leverage automation, deep fakes, and AI-based malware to bypass traditional security defenses. As a result, security teams must embrace AI and machine learning not only as defensive tools but as strategic partners in threat mitigation.
@@ -303,7 +304,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                     <div style={{ fontSize: '16px', color: '#64748B' }}>of organizations plan to increase AI security investments in 2024</div>
                   </div>
                 </div>
-                <div style={{ flex: 1 }}>
+                <div className="ai-threat-landscape-right" style={{ flex: 1 }}>
                   <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#1F2937', marginBottom: '24px' }}>Emerging Threat Types</h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                     {THREAT_TYPES.map((threat, index) => (
@@ -338,12 +339,12 @@ export function AIThreatDetectionReport(): React.ReactElement {
             </section>
 
             {/* How AI Transforms Threat Detection */}
-            <section className="blog-section" style={{ textAlign: 'center', marginBottom: '80px', marginTop: '-60px', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
+            <section className="blog-section ai-transforms-section" style={{ textAlign: 'center', marginBottom: '80px', marginTop: '-60px', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>How AI Transforms Threat Detection</h2>
               <p className="blog-section-text" style={{ maxWidth: '800px', margin: '0 auto 40px auto', textAlign: 'center', marginTop: '-30px'   }}>
                 Artificial intelligence is a game-changing cybersecurity ally by providing intelligent, automated, and predictive capabilities that traditional security tools cannot match.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px', maxWidth: '1000px', margin: '0 auto' }}>
+              <div className="ai-capabilities-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px', maxWidth: '1000px', margin: '0 auto' }}>
                 {AI_CAPABILITIES.map((capability, index) => {
                   const gradients = [
                     'linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 70.71%)',
@@ -378,12 +379,12 @@ export function AIThreatDetectionReport(): React.ReactElement {
             </section>
 
             {/* Key Findings from the 2024 Study */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', backgroundColor: '#F8FAFC', padding: '60px 0', marginBottom: '80px', textAlign: 'center' }}>
+            <section className="blog-section ai-key-findings-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', backgroundColor: '#F8FAFC', padding: '60px 0', marginBottom: '80px', textAlign: 'center' }}>
               <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <h2 className="blog-section-title" style={{ textAlign: 'center', marginBottom: '60px' }}>Key Findings from the 2024 Study</h2>
               
               {/* Adoption Trends */}
-              <div style={{ marginBottom: '60px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)' }}>
+              <div className="ai-adoption-trends-box" style={{ marginBottom: '60px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)' }}>
                 <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1F2937', textAlign: 'center', marginBottom: '24px' }}>Adoption Trends</h3>
                 <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '40px', whiteSpace: 'nowrap', marginLeft: '100px' }}>
                   60% of enterprises have already integrated AI-driven tools into their SOC workflows, with another 25% in active evaluation.
@@ -391,7 +392,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                 <div style={{ textAlign: 'center', marginBottom: '40px' }}>
                   <h4 style={{ fontSize: '20px', fontWeight: '700', color: '#1F2937', marginBottom: '20px' }}>AI Security Tool Adoption Status</h4>
                   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}>
-                    <div style={{ position: 'relative', width: '200px', height: '200px' }}>
+                    <div className="ai-pie-chart-wrapper" style={{ position: 'relative', width: '200px', height: '200px' }}>
                       {/* Pie Chart using CSS */}
                       <div style={{
                         width: '200px',
@@ -401,7 +402,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                         position: 'relative'
                       }}>
                         {/* Center circle */}
-                        <div style={{
+                        <div className="ai-pie-chart-center" style={{
                           position: 'absolute',
                           top: '50%',
                           left: '50%',
@@ -420,7 +421,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                     </div>
                   </div>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+                <div className="ai-legend-wrapper" style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <div style={{ width: '12px', height: '12px', backgroundColor: '#3B82F6', borderRadius: '50%' }}></div>
                     <span style={{ fontSize: '14px', color: '#64748B' }}>Already Integrated (60.0%)</span>
@@ -443,7 +444,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
               {/* Operational Benefits */}
               <div style={{ marginBottom: '60px' }}>
                 <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1F2937', textAlign: 'center', marginBottom: '40px' }}>Operational Benefits</h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px', maxWidth: '1000px', margin: '0 auto' }}>
+                <div className="ai-operational-benefits-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px', maxWidth: '1000px', margin: '0 auto' }}>
                   {OPERATIONAL_BENEFITS.map((benefit, index) => (
                     <div key={index} style={{ 
                       backgroundColor: '#FFFFFF', 
@@ -475,7 +476,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
                 <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px auto' }}>
                   Key barriers include data bias, integration complexity, and a shortage of AI-skilled security professionals.
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', maxWidth: '800px', margin: '0 auto' }}>
+                <div className="ai-challenges-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', maxWidth: '800px', margin: '0 auto' }}>
                   {CHALLENGES.map((challenge, index) => (
                     <div key={index} style={{ 
                       backgroundColor: challenge.color === '#EF4444' ? '#FEF2F2' : challenge.color === '#F59E0B' ? '#FFFBEB' : '#FEFCE8', 
@@ -501,12 +502,12 @@ export function AIThreatDetectionReport(): React.ReactElement {
             </section>
 
             {/* Real-World Use Cases */}
-            <section className="blog-section" style={{ textAlign: 'center', marginBottom: '80px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0' }}>
+            <section className="blog-section ai-use-cases-section" style={{ textAlign: 'center', marginBottom: '80px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Real-World Use Cases</h2>
               <p className="blog-section-text" style={{ maxWidth: '800px', margin: '0 auto 40px auto' }}>
                 Learn how AI-driven threat detection is making a real impact across different industries and sectors.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
+              <div className="ai-use-cases-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
                 {USE_CASES.map((useCase, index) => {
                   const gradients = [
                     'linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 70.71%)',
@@ -541,8 +542,8 @@ export function AIThreatDetectionReport(): React.ReactElement {
             </section>
 
             {/* The Future Outlook */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', marginBottom: '80px', backgroundColor: '#F8FAFC' }}>
-              <div style={{ maxWidth: '1200px', margin: '0 120px 0 auto', display: 'flex', gap: '60px', alignItems: 'flex-start' }}>
+            <section className="blog-section ai-future-outlook-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', marginBottom: '80px', backgroundColor: '#F8FAFC' }}>
+              <div className="ai-future-outlook-wrapper" style={{ maxWidth: '1200px', margin: '0 120px 0 auto', display: 'flex', gap: '60px', alignItems: 'flex-start' }}>
                 <div style={{ flex: 1 }}>
                   <h2 className="blog-section-title" style={{ marginBottom: '24px' }}>The Future Outlook</h2>
                   <p className="blog-section-text" style={{ marginBottom: '32px' }}>
@@ -587,7 +588,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
             </section>
 
             {/* Skysecure Recommendations */}
-            <section className="blog-section" style={{ textAlign: 'center', marginBottom: '80px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0' }}>
+            <section className="blog-section ai-recommendations-section" style={{ textAlign: 'center', marginBottom: '80px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0' }}>
               <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                 <h2 className="blog-section-title" style={{ textAlign: 'center', marginBottom: '16px' }}>Skysecure Recommendations</h2>
                 <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '40px', color: '#64748B' }}>
@@ -619,7 +620,7 @@ export function AIThreatDetectionReport(): React.ReactElement {
             </section>
 
             {/* Conclusion */}
-            <section className="blog-section" style={{ textAlign: 'center', marginBottom: '80px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F8FAFC' }}>
+            <section className="blog-section ai-conclusion-section" style={{ textAlign: 'center', marginBottom: '80px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F8FAFC' }}>
               <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                 <h2 className="blog-section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>Conclusion</h2>
                 <div style={{ 

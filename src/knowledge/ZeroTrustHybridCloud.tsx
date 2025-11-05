@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/knowledge/zero-trust-hybrid-cloud.css';
 
 const CHALLENGES = [
   'Increased attack surfaces across multi-cloud platforms',
@@ -166,10 +167,10 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
         {/* Hero Section */}
         <section className="blog-hero" style={{ padding: '80px 0', marginBottom: '0px', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
           <div className="container" style={{ maxWidth: '1300px', margin: '0 auto' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
+            <div className="zt-hero-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
               {/* Left Content */}
-              <div style={{ flex: 1, maxWidth: '720px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+              <div className="zt-hero-left" style={{ flex: 1, maxWidth: '720px' }}>
+                <div className="zt-hero-meta" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
                   <span style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: '500' }}>White Paper</span>
                   <span style={{ color: '#6B7280', fontSize: '14px' }}>• July 2024 • Skysecure Research Team</span>
                 </div>
@@ -178,7 +179,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                 </h1>
               </div>
               {/* Right Visual */}
-              <div style={{ flex: 1, textAlign: 'center', maxWidth: '580px' }}>
+              <div className="zt-hero-right" style={{ flex: 1, textAlign: 'center', maxWidth: '580px' }}>
                 <ImagePlaceholder
                   label="Zero Trust Hero Visual"
                   imageName="knowledge/zero-trust-visual.png"
@@ -194,19 +195,19 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
         {/* Executive Summary */}
         <section className="blog-content">
           <div className="container">
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+            <section className="blog-section zt-executive-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Executive Summary</h2>
-              <p className="blog-section-text" style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto 40px auto' }}>
+              <p className="blog-section-text zt-executive-text" style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto 40px auto' }}>
                 As organizations increasingly adopt hybrid cloud architectures, traditional perimeter-based security models prove insufficient. Zero Trust provides a unified, adaptive framework that safeguards identities, data, and diverse ecosystems across on-premises and cloud environments.
               </p>
             </section>
 
             {/* Understanding Hybrid Cloud Challenges */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
-              <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
+            <section className="blog-section zt-challenges-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+              <div className="zt-challenges-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                <div className="zt-challenges-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
                 {/* Left Content */}
-                <div style={{ flex: 1 }}>
+                <div className="zt-challenges-left" style={{ flex: 1 }}>
                   <h2 className="blog-section-title" style={{ textAlign: 'left' }}>Understanding Hybrid Cloud Challenges</h2>
                   <p className="blog-section-text" style={{ textAlign: 'left', marginBottom: '32px' }}>
                     Hybrid cloud environments blend private and public cloud infrastructures, offering agility but also introducing complexity. Disparate systems, inconsistent access controls, and varied compliance standards create blind spots for security teams. A Zero Trust approach eliminates implicit trust,ensuring that every user, device, and workload is verified continuously.
@@ -228,7 +229,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                   </div>
                 </div>
                 {/* Right Visual */}
-                <div style={{ flex: 1, textAlign: 'center' }}>
+                <div className="zt-challenges-right" style={{ flex: 1, textAlign: 'center' }}>
                   <ImagePlaceholder
                     label="Hybrid Cloud Challenges Visual"
                     imageName="knowledge/hybrid-cloud-challenges.png"
@@ -242,9 +243,9 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
             </section>
 
             {/* Core Principles of Zero Trust in Hybrid Cloud */}
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', marginTop: '60px' }}>
+            <section className="blog-section zt-principles-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', marginTop: '60px' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Core Principles of Zero Trust in Hybrid Cloud</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', marginTop: '40px' }}>
+              <div className="zt-principles-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', marginTop: '40px' }}>
                 {CORE_PRINCIPLES.map((principle, index) => (
                   <div key={index} style={{ 
                     backgroundColor: 'rgba(230, 238, 255, 1)', 
@@ -293,10 +294,10 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
             </section>
 
             {/* Key Components of Zero Trust Implementation */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
-              <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <section className="blog-section zt-components-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+              <div className="zt-components-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Key Components of Zero Trust Implementation</h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 590px)', gap: '24px', marginTop: '40px', justifyContent: 'center' }}>
+                <div className="zt-components-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 590px)', gap: '24px', marginTop: '40px', justifyContent: 'center' }}>
                 {IMPLEMENTATION_COMPONENTS.map((component, index) => (
                   <div key={index} style={{ 
                     backgroundColor: '#FFFFFF', 
@@ -351,13 +352,13 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
             </section>
 
             {/* Zero Trust Adoption Roadmap */}
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+            <section className="blog-section zt-roadmap-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Zero Trust Adoption Roadmap</h2>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', marginTop: '40px' }}>
+              <div className="zt-roadmap-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', marginTop: '40px' }}>
                 {ROADMAP_STEPS.map((step, index) => (
                   <React.Fragment key={index}>
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{ 
+                    <div className="zt-roadmap-step" style={{ textAlign: 'center' }}>
+                      <div className="zt-roadmap-number" style={{ 
                         width: '60px', 
                         height: '60px', 
                         backgroundColor: 'rgba(10, 78, 255, 1)', 
@@ -372,7 +373,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                       }}>
                         {step.number}
                       </div>
-                      <h3 style={{ 
+                      <h3 className="zt-roadmap-step-title" style={{ 
                         fontSize: '16px', 
                         fontWeight: '600', 
                         color: '#1F2937', 
@@ -380,7 +381,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                       }}>
                         {step.title}
                       </h3>
-                      <p style={{ 
+                      <p className="zt-roadmap-step-description" style={{ 
                         fontSize: '14px', 
                         color: '#64748B', 
                         lineHeight: '1.4', 
@@ -391,7 +392,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                       </p>
                     </div>
                     {index < ROADMAP_STEPS.length - 1 && (
-                      <div style={{ 
+                      <div className="zt-roadmap-arrow" style={{ 
                         width: '20px', 
                         height: '20px', 
                         display: 'flex',
@@ -399,7 +400,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                         justifyContent: 'center',
                         margin: '0 10px'
                       }}>
-                        <div style={{
+                        <div className="zt-roadmap-arrow-shape" style={{
                           width: 0,
                           height: 0,
                           borderLeft: '8px solid rgba(10, 78, 255, 1)',
@@ -414,19 +415,19 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
             </section>
 
             {/* Benefits Observed in 2024 Deployments */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
-              <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <section className="blog-section zt-benefits-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+              <div className="zt-benefits-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Benefits Observed in 2024 Deployments</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', marginTop: '40px' }}>
+              <div className="zt-benefits-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', marginTop: '40px' }}>
                 {BENEFITS_METRICS.map((metric, index) => (
-                  <div key={index} style={{ 
-                    backgroundColor: '#FFFFFF', 
+                  <div key={index} className="zt-benefit-card" style={{ 
+                    backgroundColor: '#FFFFFF',   
                     padding: '24px', 
                     borderRadius: '12px', 
                     boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)',
                     textAlign: 'center'
                   }}>
-                    <div style={{ 
+                    <div className="zt-benefit-percentage" style={{ 
                       fontSize: '32px', 
                       fontWeight: '700', 
                       color: 'rgba(10, 78, 255, 1)', 
@@ -434,7 +435,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                     }}>
                       {metric.percentage}
                     </div>
-                    <p style={{ 
+                    <p className="zt-benefit-description" style={{ 
                       fontSize: '14px', 
                       color: 'rgba(55, 65, 81, 1)', 
                       lineHeight: '1.4', 
@@ -446,16 +447,16 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                   </div>
                 ))}
               </div>
-                <p className="blog-section-text" style={{ textAlign: 'center', marginTop: '32px', maxWidth: '800px', margin: '32px auto 0 auto' }}>
+                <p className="blog-section-text zt-benefits-footer" style={{ textAlign: 'center', marginTop: '32px', maxWidth: '800px', margin: '32px auto 0 auto' }}>
                 Organizations adopting Zero Trust in hybrid environments report stronger security resilience, lower operational risks, and improved visibility across cloud workloads.
                 </p>
               </div>
             </section>
 
             {/* Case Example: Multi-Cloud Enterprise */}
-            <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+            <section className="blog-section zt-case-study-section" style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Case Example: Multi-Cloud Enterprise</h2>
-              <div style={{ 
+              <div className="zt-case-study-box" style={{ 
                 backgroundColor: 'rgba(230, 238, 255, 1)', 
                 padding: '32px', 
                 borderRadius: '12px', 
@@ -464,13 +465,13 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                 maxWidth: '800px',
                 margin: '24px auto 0 auto'
               }}>
-                <p className="blog-section-text" style={{ textAlign: 'left', marginBottom: '32px' }}>
+                <p className="blog-section-text zt-case-study-text" style={{ textAlign: 'left', marginBottom: '32px' }}>
                   A multinational enterprise integrated Zero Trust across Azure and AWS environments using Skysecure's adaptive framework. The project unified IAM, automated compliance reporting, and reduced mean-time-to-detect (MTTD) by 60%. The result: a secure, scalable architecture supporting 24/7 operations with minimal disruption.
                 </p>
-                <div style={{ display: 'flex', gap: '100px', justifyContent: 'center' }}>
+                <div className="zt-case-study-metrics" style={{ display: 'flex', gap: '100px', justifyContent: 'center' }}>
                   {CASE_STUDY_METRICS.map((metric, index) => (
-                    <div key={index} style={{ textAlign: 'center' }}>
-                      <div style={{ 
+                    <div key={index} className="zt-case-study-metric" style={{ textAlign: 'center' }}>
+                      <div className="zt-case-study-percentage" style={{ 
                         fontSize: '32px', 
                         fontWeight: '700', 
                         color: 'rgba(10, 78, 255, 1)', 
@@ -478,7 +479,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                       }}>
                         {metric.percentage}
                       </div>
-                      <p style={{ 
+                      <p className="zt-case-study-metric-text" style={{ 
                         fontSize: '14px', 
                         color: 'rgba(55, 65, 81, 1)', 
                         lineHeight: '1.4',
@@ -494,17 +495,17 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
             </section>
 
             {/* Future Outlook */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
-              <div style={{ maxWidth: '950px', margin: '0 auto' }}>
+            <section className="blog-section zt-future-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+              <div className="zt-future-container" style={{ maxWidth: '950px', margin: '0 auto' }}>
                 <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Future Outlook</h2>
-                <p className="blog-section-text" style={{ textAlign: 'center', marginLeft: '60px' }}>
+                <p className="blog-section-text zt-future-text" style={{ textAlign: 'center', marginLeft: '60px' }}>
                   Zero Trust is evolving beyond architecture, it's becoming a foundational philosophy for secure digital transformation. As hybrid and edge computing expand, continuous verification and automation will define the next generation of enterprise security.
                 </p>
               </div>
             </section>
 
             {/* Build a Secure Hybrid Cloud with Zero Trust (CTA) */}
-            <section style={{ 
+            <section className="zt-cta-section" style={{ 
               padding: '80px 0', 
               backgroundColor: 'rgba(10, 78, 255, 1)',
               textAlign: 'center',
@@ -512,8 +513,8 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
               marginLeft: 'calc(-50vw + 50%)',
               marginTop: '60px'
             }}>
-              <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-                <h2 style={{ 
+              <div className="zt-cta-container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+                <h2 className="zt-cta-title" style={{ 
                   fontSize: '36px', 
                   fontWeight: '700', 
                   color: '#FFFFFF', 
@@ -521,7 +522,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                 }}>
                   Build a Secure Hybrid Cloud with Zero Trust
                 </h2>
-                <p style={{ 
+                <p className="zt-cta-text" style={{ 
                   fontSize: '18px', 
                   color: '#FFFFFF', 
                   lineHeight: '1.6',
@@ -531,11 +532,12 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                 }}>
                   Partner with Skysecure to design, deploy, and manage a Zero Trust architecture tailored to your business.
                 </p>
-                <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+                <div className="zt-cta-buttons" style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
                   <button 
                     onClick={() => {
                       window.location.href = '/contact';
                     }}
+                    className="zt-cta-button"
                     style={{ 
                       backgroundColor: 'rgba(10, 78, 255, 1)', 
                       color: '#FFFFFF', 
@@ -557,7 +559,7 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
             {/* Explore More Insights */}
             <section className="related-articles">
               <h2 className="related-articles__title">Explore More Insights</h2>
-              <p style={{ fontSize: '16px', color: '#64748B', textAlign: 'center', marginBottom: '40px' }}>Discover more insights and research from Skysecure</p>
+              <p className="zt-related-intro" style={{ fontSize: '16px', color: '#64748B', textAlign: 'center', marginBottom: '40px' }}>Discover more insights and research from Skysecure</p>
               <div className="related-articles__grid">
                 {RELATED_ARTICLES.map((article, index) => (
                   <div key={index} className="related-article">

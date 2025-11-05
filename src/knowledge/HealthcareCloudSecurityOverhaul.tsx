@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/knowledge/healthcare-cloud-security-overhaul.css';
 
 const CHALLENGES = [
   {
@@ -151,7 +152,7 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
         {/* Hero Section */}
         <section className="blog-hero" style={{ padding: '80px 0', marginBottom: '0px', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
           <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
+            <div className="hero-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
               {/* Left Content */}
               <div style={{ flex: 1, maxWidth: '500px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
@@ -186,14 +187,14 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
 
             {/* Executive Summary and Project Overview */}
             <section className="blog-section">
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '40px', marginBottom: '32px', maxWidth: '1200px', margin: '0 auto 32px auto' }}>
+              <div className="executive-wrapper" style={{ display: 'flex', alignItems: 'flex-start', gap: '40px', marginBottom: '32px', maxWidth: '1200px', margin: '0 auto 32px auto' }}>
                 {/* Executive Summary - Left Side */}
-                <div style={{ flex: 2, marginLeft: '40px' }}>
+                <div className="executive-left" style={{ flex: 2}}>
                   <h2 className="blog-section-title" style={{ marginBottom: '20px', marginTop: '0' }}>Executive Summary</h2>
                   <p className="blog-section-text" style={{ marginBottom: '32px' }}>
                   In today's digital-first healthcare landscape, safeguarding sensitive patient data and maintaining operational continuity are non-negotiable. Skysecure partnered with a leading healthcare organization to overhaul their cloud security architecture—strengthening compliance, optimizing infrastructure, and enabling secure scalability across multiple cloud environments.
                   </p>
-                  <div style={{ display: 'flex', gap: '24px' }}>
+                  <div className="summary-cards-wrapper" style={{ display: 'flex', gap: '24px' }}>
                     <div style={{ backgroundColor: '#EFF6FF', padding: '20px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '16px', flex: 1 }}>
                       <ImagePlaceholder
                         label="Security Enhancement"
@@ -224,7 +225,7 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
                 </div>
 
                 {/* Project Overview - Right Side */}
-                <div style={{ flex: 1, backgroundColor: '#F9FAFB', padding: '24px', borderRadius: '12px' }}>
+                <div className="project-overview-box" style={{ flex: 1, backgroundColor: '#F9FAFB', padding: '24px', borderRadius: '12px' }}>
                   <h2 className="blog-section-title" style={{ marginBottom: '20px', marginTop: '0', fontSize: '20px' }}>Project Overview</h2>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
@@ -285,10 +286,10 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
             </section>
 
             {/* The Challenge */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+            <section className="blog-section challenge-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>The Challenge</h2>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', marginBottom: '30px', maxWidth: '1100px', margin: '0 auto 32px auto' }}>
-                <div style={{ width: '600px' }}>
+              <div className="challenge-wrapper" style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', marginBottom: '30px', maxWidth: '1100px', margin: '0 auto 32px auto' }}>
+                <div className="challenge-text-box" style={{ width: '600px' }}>
                   <p className="blog-section-text">
                   The healthcare organization faced rising security challenges due to outdated systems, siloed data environments, and limited visibility across multiple cloud platforms. Frequent compliance audits and expanding telehealth operations exposed gaps in their security posture, making it difficult to protect patient data while adhering to HIPAA and local privacy regulations.
                   </p>
@@ -301,7 +302,7 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
                     ))}
                   </div>
                 </div>
-                <div style={{ flexShrink: 0 }}>
+                <div className="challenge-image-wrapper" style={{ flexShrink: 0 }}>
                   <ImagePlaceholder
                     label="Challenge Visual"
                     imageName="knowledge/challenge-visual.png"
@@ -314,12 +315,12 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
             </section>
 
             {/* The Approach */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0'}}>
+            <section className="blog-section approach-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0'}}>
               <h2 className="blog-section-title" style={{ textAlign: 'center', marginTop: '50px'}}>The Approach</h2>
               <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px auto', marginTop: '-20px' }}>
               Skysecure developed a holistic strategy to transform the client's cloud security ecosystem. The project combined Microsoft Azure Sentinel, automated compliance frameworks, and Zero Trust architecture to achieve unified visibility, faster incident response, and regulatory alignment.
               </p>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
+              <div className="approach-steps-wrapper" style={{ display: 'flex', justifyContent: 'center', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
                 {APPROACH_STEPS.map((step, index) => (
                   <div key={index} style={{ textAlign: 'center', position: 'relative' }}>
                     <div style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
@@ -343,9 +344,9 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
             </section>
 
             {/* The Solution */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginTop: '80px', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+            <section className="blog-section solution-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginTop: '80px', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>The Solution</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 280px)', gap: '24px', maxWidth: '1250px', margin: '0 auto', justifyContent: 'center' }}>
+              <div className="solution-grid-wrapper" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 280px)', gap: '24px', maxWidth: '1250px', margin: '0 auto', justifyContent: 'center' }}>
                 {SOLUTIONS.map((solution, index) => (
                   <div key={index} style={{ 
                     backgroundColor: '#FFFFFF', 
@@ -383,11 +384,11 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
             </section>
 
             {/* Measurable Security and Performance Gains */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', marginTop: '80px'}}>
+            <section className="blog-section metrics-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', marginTop: '80px'}}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Measurable Security and Performance Gains</h2>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', marginBottom: '32px', maxWidth: '1000px', margin: '0 auto 32px auto' }}>
-                <div style={{ width: '500px' }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px' }}>
+              <div className="metrics-wrapper" style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', marginBottom: '32px', maxWidth: '1000px', margin: '0 auto 32px auto' }}>
+                <div className="metrics-grid-container" style={{ width: '500px' }}>
+                  <div className="metrics-grid-box" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px' }}>
                     {METRICS.map((metric, index) => (
                       <div key={index} style={{ textAlign: 'center', padding: '20px' }}>
                         <div style={{ width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 12px auto' }}>
@@ -405,7 +406,7 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
                     ))}
                   </div>
                 </div>
-                <div style={{ width: '500px' }}>
+                <div className="metrics-text-container" style={{ width: '500px' }}>
                   <p className="blog-section-text" style={{ marginBottom: '24px' }}>
                   Post-implementation, the organization achieved enhanced visibility and real-time security orchestration across all cloud platforms. Automated alerting and AI-driven incident workflows reduced human dependency and improved accuracy, while the new Zero Trust framework ensured granular access control for every user and device.
                   </p>
@@ -425,7 +426,7 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
             </section>
 
             {/* The Outcome */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', marginTop: '-60px' }}>
+            <section className="blog-section outcome-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', marginTop: '-60px' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>The Outcome</h2>
               <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px auto' }}>
               The healthcare organization now operates with a comprehensive, automated security infrastructure that protects patient data, ensures regulatory compliance, and provides real-time threat visibility. This transformation positions them as a cybersecurity leader in the healthcare sector.
@@ -433,13 +434,13 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
             </section>
 
             {/* Ready to Modernize Your Cloud Security? */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0' }}>
-              <div style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '40px', textAlign: 'center', maxWidth: '100vw', margin: '0 auto' }}>
+            <section className="blog-section cta-section" style={{ width: '100%', padding: '60px 0', overflowX: 'hidden' }}>
+              <div className="cta-box" style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '40px', textAlign: 'center', maxWidth: '1200px', margin: '0 auto', width: '100%', boxSizing: 'border-box' }}>
                 <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', margin: '0 0 16px 0' }}>Ready to Modernize Your Cloud Security?</h3>
                 <p style={{ fontSize: '16px', color: '#FFFFFF', margin: '0 0 32px 0', opacity: 0.9 }}>
                 Partner with Skysecure to build a secure, compliant, and future-ready cloud ecosystem for your organization.
                 </p>
-                <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+                <div className="cta-buttons-wrapper" style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
                   <button style={{ backgroundColor: '#FFFFFF', color: '#3B82F6', padding: '12px 24px', borderRadius: '8px', border: '1px solid #3B82F6', fontSize: '16px', fontWeight: '600', cursor: 'pointer', fontFamily: 'Inter' }}>
                     Contact Us
                   </button>
