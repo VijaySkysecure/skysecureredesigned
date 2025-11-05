@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/operational-excellence.css';
 
 const OperationalExcellence: React.FC = () => {
   const CORE_VALUES = [
@@ -128,14 +129,7 @@ const OperationalExcellence: React.FC = () => {
             <h2 className="page-features__title">Feature Highlights</h2>
             <p className="page-features__subtitle">Comprehensive solutions for operational transformation</p>
           </div>
-          <div 
-            className="page-features__grid"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '24px'
-            }}
-          >
+          <div className="page-features__grid">
             {FEATURE_HIGHLIGHTS.map((feature, index) => (
               <div key={index} className="page-feature-card">
                 <div className="page-feature-card__icon">
