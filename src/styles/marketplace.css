@@ -1,0 +1,213 @@
+/* Marketplace Page - Responsive Styles */
+
+/* Tablet Styles (max-width: 900px) */
+@media (max-width: 900px) {
+  .page-hero__title {
+    font-size: 36px !important;
+  }
+
+  .page-hero__description {
+    font-size: 16px !important;
+  }
+
+  .page-intro__text {
+    font-size: 14px !important;
+    padding: 0 20px;
+  }
+
+  .page-innovation__content {
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+
+  .page-innovation__text {
+    text-align: center;
+  }
+
+  .page-innovation__title {
+    font-size: 28px !important;
+  }
+
+  .page-innovation__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-innovation__image img,
+  .page-innovation__image [class*="ImagePlaceholder"] {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+}
+
+/* Tablet - Medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .page-values__grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 0 20px;
+  }
+
+  .page-features__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+  /* All headings same font size for mobile */
+  .page-hero__title,
+  .page-values__title,
+  .page-innovation__title,
+  .page-features__title,
+  .page-cta__title {
+    font-size: 24px !important;
+  }
+
+  .page-hero {
+    height: auto !important;
+    min-height: 250px !important;
+    padding: 30px 0 !important;
+  }
+
+  .page-hero__title {
+    padding: 0 20px;
+    margin-bottom: 12px !important;
+  }
+
+  .page-hero__description {
+    font-size: 14px !important;
+    padding: 0 20px;
+  }
+
+  .page-intro {
+    padding: 40px 0 !important;
+  }
+
+  .page-intro__text {
+    font-size: 14px !important;
+    padding: 0 20px;
+  }
+
+  .page-values {
+    padding: 40px 0 !important;
+  }
+
+  .page-values__grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 20px;
+  }
+
+  .page-values__title {
+    padding: 0 20px;
+  }
+
+  .page-values__subtitle {
+    padding: 0 20px;
+    font-size: 14px !important;
+  }
+
+  .page-value-card {
+    padding: 24px 20px !important;
+    text-align: center !important;
+  }
+
+  .page-value-card__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .page-innovation {
+    padding: 40px 0 !important;
+  }
+
+  .page-innovation__content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  .page-innovation__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .page-innovation__title {
+    margin-bottom: 16px !important;
+    padding: 0 20px;
+  }
+
+  .page-innovation__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    margin-bottom: -80px;
+  }
+
+  .page-innovation__image img,
+  .page-innovation__image [class*="ImagePlaceholder"] {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .page-innovation__description {
+    font-size: 14px !important;
+    padding: 0 20px;
+  }
+
+  .page-features {
+    padding: 40px 0 !important;
+  }
+
+  .page-features__grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 20px;
+  }
+
+  .page-features__title {
+    padding: 0 20px;
+  }
+
+  .page-features__subtitle {
+    padding: 0 20px;
+    font-size: 14px !important;
+  }
+
+  .page-feature-card {
+    padding: 24px 20px !important;
+    text-align: center !important;
+  }
+
+  .page-feature-card__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .page-cta {
+    padding: 40px 0 !important;
+  }
+
+  .page-cta__content {
+    padding: 0 20px;
+  }
+
+  .page-cta__description {
+    font-size: 16px !important;
+  }
+}
+

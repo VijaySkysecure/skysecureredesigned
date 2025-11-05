@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/solution-implementation.css';
 
 const SolutionImplementation: React.FC = () => {
   const CORE_VALUES = [
