@@ -96,7 +96,7 @@ export function Header(): React.ReactElement {
   // Close mobile menu when window is resized to desktop size
   React.useEffect(() => {
     const handleResize = (): void => {
-      if (window.innerWidth > 968 && isMobileMenuOpen) {
+      if (window.innerWidth > 1024 && isMobileMenuOpen) {
         setIsMobileMenuOpen(false);
         setOpenMenu(null);
       }
