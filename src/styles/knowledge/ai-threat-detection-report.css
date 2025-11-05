@@ -1,0 +1,546 @@
+/* Responsive Styles for AI Threat Detection Report - Mobile and Tablet Only */
+
+/* iPad Pro Styles (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  /* Hero Section */
+  .blog-hero {
+    padding: 60px 0 !important;
+  }
+
+  .blog-hero .container {
+    padding: 0 24px !important;
+  }
+
+  .ai-hero-wrapper {
+    gap: 40px !important;
+  }
+
+  .ai-hero-left {
+    max-width: 480px !important;
+  }
+
+  .ai-hero-left > h1 {
+    font-size: 42px !important;
+  }
+
+  .ai-hero-right {
+    max-width: 520px !important;
+  }
+
+  /* Blog Content */
+  .blog-content .container {
+    padding: 0 24px !important;
+  }
+
+  /* Executive Summary */
+  .blog-section[style*="width: 100vw"] {
+    padding: 0 24px !important;
+  }
+
+  /* Evolving Threat Landscape */
+  .ai-threat-landscape-section {
+    padding: 50px 24px !important;
+    text-align: center !important;
+  }
+
+  .ai-threat-landscape-wrapper {
+    gap: 40px !important;
+    padding: 0 24px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .ai-threat-landscape-left {
+    text-align: center !important;
+  }
+
+  .ai-threat-landscape-left > h2 {
+    text-align: center !important;
+  }
+
+  .ai-threat-landscape-left > p {
+    text-align: center !important;
+  }
+
+  .ai-threat-landscape-right {
+    text-align: center !important;
+  }
+
+  .ai-threat-landscape-right > h3 {
+    text-align: center !important;
+  }
+
+  .ai-threat-landscape-right > div[style*="display: flex"][style*="flexDirection: column"] {
+    align-items: center !important;
+  }
+
+  .ai-threat-landscape-right > div[style*="display: flex"][style*="flexDirection: column"] > div {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .ai-threat-landscape-right > div[style*="display: flex"][style*="flexDirection: column"] > div > div {
+    text-align: center !important;
+  }
+
+  /* AI Capabilities Grid */
+  .ai-capabilities-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    max-width: 1000px !important;
+  }
+
+  /* Operational Benefits Grid */
+  .ai-operational-benefits-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    max-width: 1000px !important;
+  }
+
+  /* Challenges Grid */
+  .ai-challenges-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    max-width: 900px !important;
+  }
+
+  /* Use Cases Grid */
+  .ai-use-cases-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    max-width: 1200px !important;
+  }
+
+  /* How AI Transforms Section */
+  .ai-transforms-section {
+    padding: 50px 24px !important;
+  }
+
+  /* Use Cases Section */
+  .ai-use-cases-section {
+    padding: 50px 24px !important;
+  }
+
+  /* Future Outlook */
+  .ai-future-outlook-section {
+    padding: 50px 24px !important;
+  }
+
+  .ai-future-outlook-wrapper {
+    gap: 40px !important;
+    margin-right: 60px !important;
+  }
+
+  /* Key Findings Section */
+  .ai-key-findings-section {
+    padding: 50px 24px !important;
+  }
+
+  .ai-adoption-trends-box {
+    padding: 32px 24px !important;
+  }
+
+  /* Recommendations and Conclusion */
+  .ai-recommendations-section,
+  .ai-conclusion-section {
+    padding: 50px 24px !important;
+  }
+
+  /* Related Articles */
+  .related-articles__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+  }
+}
+
+/* Tablet Styles (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Hero Section */
+  .ai-hero-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+
+  .ai-hero-left {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .ai-hero-right {
+    max-width: 100% !important;
+  }
+
+  .ai-hero-right img,
+  .ai-hero-right > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Evolving Threat Landscape */
+  .ai-threat-landscape-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  /* AI Capabilities Grid */
+  .ai-capabilities-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  /* Operational Benefits Grid */
+  .ai-operational-benefits-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  /* Challenges Grid */
+  .ai-challenges-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* Use Cases Grid */
+  .ai-use-cases-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* Future Outlook */
+  .ai-future-outlook-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    margin-right: auto !important;
+  }
+
+  /* Related Articles */
+  .related-articles__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Breadcrumbs */
+  .breadcrumbs {
+    flex-wrap: wrap !important;
+    font-size: 12px !important;
+  }
+
+  /* Hero Section */
+  .blog-hero {
+    padding: 40px 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .blog-hero .container {
+    padding: 0 16px !important;
+  }
+
+  .ai-hero-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 16px !important;
+  }
+
+  .ai-hero-meta {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  .ai-hero-meta > span {
+    font-size: 11px !important;
+  }
+
+  .ai-hero-meta > span[style*="backgroundColor: rgba(10, 78, 255, 1)"] {
+    padding: 3px 10px !important;
+    font-size: 10px !important;
+  }
+
+  .ai-hero-left > h1 {
+    font-size: 32px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+
+  .ai-hero-left > p {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  .ai-hero-right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .ai-hero-right img,
+  .ai-hero-right > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Blog Content */
+  .blog-content {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .blog-content .container {
+    padding: 0 16px !important;
+  }
+
+  /* Executive Summary */
+  .blog-section[style*="width: 100vw"] {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 16px !important;
+  }
+
+  .blog-section[style*="width: 100vw"] > div[style*="backgroundColor: rgba(248, 249, 251, 1)"] {
+    padding: 24px 16px !important;
+  }
+
+  /* Evolving Threat Landscape */
+  .ai-threat-landscape-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+  }
+
+  .ai-threat-landscape-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 0 !important;
+  }
+
+  .ai-threat-landscape-left > h2 {
+    font-size: 24px !important;
+  }
+
+  .ai-threat-landscape-left > div[style*="backgroundColor: #FFFFFF"] {
+    padding: 20px !important;
+  }
+
+  .ai-threat-landscape-left > div[style*="backgroundColor: #FFFFFF"] > div[style*="fontSize: 48px"] {
+    font-size: 36px !important;
+  }
+
+  .ai-threat-landscape-right > h3 {
+    font-size: 18px !important;
+  }
+
+  /* How AI Transforms */
+  .ai-transforms-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+    margin-top: 0 !important;
+  }
+
+  .ai-transforms-section > h2 {
+    font-size: 24px !important;
+  }
+
+  .ai-capabilities-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+  }
+
+  /* Key Findings Section */
+  .ai-key-findings-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+  }
+
+  .ai-key-findings-section > div > h2 {
+    font-size: 24px !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* Adoption Trends */
+  .ai-adoption-trends-box {
+    padding: 24px 16px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .ai-adoption-trends-box > h3 {
+    font-size: 20px !important;
+  }
+
+  .ai-adoption-trends-box > p {
+    white-space: normal !important;
+    margin-left: 0 !important;
+    font-size: 14px !important;
+  }
+
+  .ai-adoption-trends-box > div[style*="textAlign: center"] > h4 {
+    font-size: 18px !important;
+  }
+
+  .ai-pie-chart-wrapper {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .ai-pie-chart-wrapper > div[style*="borderRadius: 50%"] {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .ai-pie-chart-center {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .ai-legend-wrapper {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: flex-start !important;
+    margin-top: 80px !important;
+  }
+
+  /* Operational Benefits */
+  .ai-operational-benefits-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+  }
+
+  .ai-operational-benefits-grid > div {
+    padding: 24px 16px !important;
+  }
+
+  /* Challenges */
+  .ai-challenges-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    max-width: 100% !important;
+  }
+
+  /* Use Cases */
+  .ai-use-cases-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+  }
+
+  .ai-use-cases-section > h2 {
+    font-size: 24px !important;
+  }
+
+  .ai-use-cases-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+  }
+
+  /* Future Outlook */
+  .ai-future-outlook-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+  }
+
+  .ai-future-outlook-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    margin-right: auto !important;
+  }
+
+  .ai-future-outlook-wrapper > div > h2 {
+    font-size: 24px !important;
+  }
+
+  /* Recommendations */
+  .ai-recommendations-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+  }
+
+  .ai-recommendations-section > div > h2 {
+    font-size: 24px !important;
+  }
+
+  .ai-recommendations-section > div > div[style*="display: flex"][style*="flexDirection: column"] {
+    gap: 16px !important;
+  }
+
+  /* Conclusion */
+  .ai-conclusion-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+  }
+
+  .ai-conclusion-section > div > h2 {
+    font-size: 24px !important;
+  }
+
+  .ai-conclusion-section > div > div[style*="backgroundColor: #FFFFFF"] {
+    padding: 24px 16px !important;
+  }
+
+  /* Related Articles */
+  .related-articles {
+    padding: 0 16px !important;
+  }
+
+  .related-articles__title {
+    font-size: 24px !important;
+  }
+
+  .related-articles__grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .related-article {
+    height: auto !important;
+    min-height: auto !important;
+  }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+  .ai-hero-left > h1 {
+    font-size: 28px !important;
+  }
+
+  .ai-hero-meta {
+    gap: 6px !important;
+  }
+
+  .ai-hero-meta > span {
+    font-size: 10px !important;
+  }
+
+  .ai-hero-meta > span[style*="backgroundColor: rgba(10, 78, 255, 1)"] {
+    padding: 3px 8px !important;
+    font-size: 9px !important;
+  }
+
+  .ai-threat-landscape-left > h2,
+  .ai-transforms-section > h2,
+  .ai-key-findings-section > div > h2,
+  .ai-use-cases-section > h2,
+  .ai-future-outlook-wrapper > div > h2,
+  .ai-recommendations-section > div > h2,
+  .ai-conclusion-section > div > h2,
+  .related-articles__title {
+    font-size: 20px !important;
+  }
+
+  .ai-threat-landscape-left > div[style*="backgroundColor: #FFFFFF"] > div[style*="fontSize: 48px"] {
+    font-size: 32px !important;
+  }
+}
+
