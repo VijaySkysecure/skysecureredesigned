@@ -145,12 +145,6 @@
   .ai-conclusion-section {
     padding: 50px 24px !important;
   }
-
-  /* Related Articles */
-  .related-articles__grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
-  }
 }
 
 /* Tablet Styles (max-width: 1024px) */
@@ -213,11 +207,6 @@
     flex-direction: column !important;
     gap: 40px !important;
     margin-right: auto !important;
-  }
-
-  /* Related Articles */
-  .related-articles__grid {
-    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
@@ -487,25 +476,6 @@
 
   .ai-conclusion-section > div > div[style*="backgroundColor: #FFFFFF"] {
     padding: 24px 16px !important;
-  }
-
-  /* Related Articles */
-  .related-articles {
-    padding: 0 16px !important;
-  }
-
-  .related-articles__title {
-    font-size: 24px !important;
-  }
-
-  .related-articles__grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-
-  .related-article {
-    height: auto !important;
-    min-height: auto !important;
   }
 }
 

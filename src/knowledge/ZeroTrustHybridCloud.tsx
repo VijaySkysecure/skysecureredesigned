@@ -114,35 +114,6 @@ const CASE_STUDY_METRICS = [
   }
 ];
 
-const RELATED_ARTICLES = [
-  {
-    image: 'ai-threat-detection-report.png',
-    tag: 'White Paper',
-    tagColor: '#3B82F6',
-    tagBgColor: '#EFF6FF',
-    title: 'AI-Driven Threat Detection: 2024 Report',
-    description: 'Comprehensive analysis of machine learning applications in cybersecurity and their effectiveness against modern threats.',
-    link: '/ai-threat-detection-report'
-  },
-  {
-    image: 'cloud-security-guide.png',
-    tag: 'White Paper',
-    tagColor: '#3B82F6',
-    tagBgColor: '#EFF6FF',
-    title: 'The Future of Cloud Security',
-    description: 'Exploring emerging technologies and strategies for securing cloud environments in the digital age.',
-    link: '/cloud-security-guide'
-  },
-  {
-    image: 'healthcare-cloud-security.png',
-    tag: 'Case Study',
-    tagColor: '#10B981',
-    tagBgColor: '#D1FAE5',
-    title: 'Healthcare Cloud Security Overhaul',
-    description: 'How a leading healthcare provider transformed their cloud security posture with Zero Trust architecture.',
-    link: '/healthcare-cloud-security-overhaul'
-  }
-];
 
 export function ZeroTrustHybridCloud(): React.ReactElement {
   return (
@@ -511,7 +482,8 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
               textAlign: 'center',
               width: '100vw',
               marginLeft: 'calc(-50vw + 50%)',
-              marginTop: '60px'
+              marginTop: '60px',
+              marginBottom: '-80px'
             }}>
               <div className="zt-cta-container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
                 <h2 className="zt-cta-title" style={{ 
@@ -553,39 +525,6 @@ export function ZeroTrustHybridCloud(): React.ReactElement {
                     Contact Our Team
                   </button>
                 </div>
-              </div>
-            </section>
-
-            {/* Explore More Insights */}
-            <section className="related-articles">
-              <h2 className="related-articles__title">Explore More Insights</h2>
-              <p className="zt-related-intro" style={{ fontSize: '16px', color: '#64748B', textAlign: 'center', marginBottom: '40px' }}>Discover more insights and research from Skysecure</p>
-              <div className="related-articles__grid">
-                {RELATED_ARTICLES.map((article, index) => (
-                  <div key={index} className="related-article">
-                    <div className="related-article__image">
-                      <ImagePlaceholder
-                        label={article.title}
-                        imageName={`knowledge/${article.image}`}
-                        width={400}
-                        height={200}
-                        borderRadius={8}
-                      />
-                    </div>
-                    <div className="related-article__content">
-                      <div style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
-                        <span style={{ backgroundColor: article.tagBgColor, color: article.tagColor, padding: '4px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: '500' }}>
-                          {article.tag}
-                        </span>
-                      </div>
-                      <h3 className="related-article__title">{article.title}</h3>
-                      <p className="related-article__description">{article.description}</p>
-                      <a href={article.link} style={{ color: '#3B82F6', textDecoration: 'none', fontSize: '14px', fontWeight: '500', display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '20px' }}>
-                        Read More →
-                      </a>
-                    </div>
-                  </div>
-                ))}
               </div>
             </section>
           </div>

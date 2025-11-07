@@ -652,47 +652,6 @@ export function AIThreatDetectionReport(): React.ReactElement {
                 </div>
               </div>
             </section>
-
-            {/* Explore More Insights */}
-            <section className="related-articles">
-              <h2 className="related-articles__title">Explore More Insights</h2>
-              <p style={{ fontSize: '16px', color: '#64748B', textAlign: 'center', marginBottom: '40px' }}>Discover additional resources and insights from our research team.</p>
-              <div className="related-articles__grid">
-                {RELATED_ARTICLES.map((article, index) => (
-                  <div key={index} className="related-article" style={{ height: '470px' }}>
-                    <div className="related-article__image">
-                      <ImagePlaceholder
-                        label={article.title}
-                        imageName={`knowledge/${article.image}.png`}
-                        width={400}
-                        height={200}
-                        borderRadius={8}
-                      />
-                    </div>
-                    <div className="related-article__content">
-                      <div style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
-                        <span style={{ 
-                          backgroundColor: article.type === 'White Paper' ? '#3B82F6' : article.type === 'Blog Post' ? '#10B981' : '#8B5CF6', 
-                          color: '#FFFFFF', 
-                          padding: '4px 8px', 
-                          borderRadius: '4px', 
-                          fontSize: '12px', 
-                          fontWeight: '500' 
-                        }}>
-                          {article.type}
-                        </span>
-                        <span style={{ color: '#6B7280', fontSize: '12px' }}>{article.date}</span>
-                      </div>
-                      <h3 className="related-article__title">{article.title}</h3>
-                      <p className="related-article__description">{article.description}</p>
-                      <a href={article.link} style={{ color: '#3B82F6', textDecoration: 'none', fontSize: '14px', fontWeight: '500', display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '20px' }}>
-                        Read More →
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
           </div>
         </section>
       </main>
