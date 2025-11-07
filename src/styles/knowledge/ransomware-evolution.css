@@ -1,0 +1,430 @@
+/* Responsive Styles for Ransomware Evolution - Mobile and Tablet Only */
+
+/* Tablet Styles (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Breadcrumb Navigation */
+  .ransomware-breadcrumb {
+    flex-wrap: wrap !important;
+    font-size: 12px !important;
+  }
+
+  /* Hero Section */
+  .ransomware-hero-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+
+  .ransomware-hero-left {
+    text-align: center !important;
+  }
+
+  .ransomware-hero-left h1 {
+    font-size: 36px !important;
+  }
+
+  .ransomware-hero-meta {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  .ransomware-hero-right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Executive Summary */
+  .ransomware-executive-summary {
+    margin-left: 0 !important;
+  }
+
+  .ransomware-executive-summary p {
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+
+  /* Evolving Landscape Section */
+  .ransomware-landscape-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-landscape-stats {
+    gap: 40px !important;
+    justify-content: center !important;
+  }
+
+  .ransomware-timeline-image {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-timeline-image > div,
+  .ransomware-timeline-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Ransomware Variants Grid */
+  .ransomware-variants-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* Attack Vectors Grid */
+  .ransomware-attack-vectors-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* AI Section */
+  .ransomware-ai-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-ai-image {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-ai-image > div,
+  .ransomware-ai-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Defense Strategies */
+  .ransomware-defense-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-shield-image {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-shield-image > div,
+  .ransomware-shield-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Global Impact Stats */
+  .ransomware-global-stats {
+    flex-wrap: wrap !important;
+    gap: 40px !important;
+    justify-content: center !important;
+  }
+
+  .ransomware-global-stats > div {
+    flex: 0 0 calc(50% - 20px) !important;
+  }
+
+  .ransomware-global-stats p {
+    margin-left: 0 !important;
+  }
+
+  /* Skysecure Perspective */
+  .ransomware-perspective-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-soc-image {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-soc-image > div,
+  .ransomware-soc-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Related Articles */
+  .ransomware-related-articles-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .ransomware-related-articles-section {
+    margin-left: 0 !important;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Breadcrumb Navigation */
+  .ransomware-breadcrumb {
+    font-size: 11px !important;
+    gap: 6px !important;
+  }
+
+  /* Hero Section */
+  .blog-hero {
+    padding: 60px 0 !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .blog-hero > div {
+    padding: 0 16px !important;
+  }
+
+  .ransomware-hero-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .ransomware-hero-left h1 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+
+  .ransomware-hero-meta {
+    font-size: 14px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .ransomware-hero-right {
+    width: 100% !important;
+  }
+
+  /* Executive Summary */
+  .blog-section {
+    padding: 40px 16px !important;
+  }
+
+  .ransomware-executive-summary {
+    margin-left: 0 !important;
+  }
+
+  .ransomware-executive-summary p {
+    margin-left: 0 !important;
+    text-align: center !important;
+    margin-bottom: 24px !important;
+  }
+
+  .blog-section-title {
+    font-size: 24px !important;
+  }
+
+  .blog-section-text {
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+
+  /* Evolving Landscape Section */
+  .ransomware-landscape-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-landscape-stats {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .ransomware-timeline-image {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-timeline-image > div,
+  .ransomware-timeline-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Ransomware Variants Grid */
+  .ransomware-variants-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+  }
+
+  /* Attack Vectors Section */
+  .blog-section[style*="width: 100vw"] {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 0 !important;
+  }
+
+  .blog-section[style*="width: 100vw"] > div {
+    padding: 0 16px !important;
+  }
+
+  .ransomware-attack-vectors-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+  }
+
+  /* AI Section */
+  .ransomware-ai-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-ai-image {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-ai-image > div,
+  .ransomware-ai-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Defense Strategies */
+  .ransomware-defense-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-shield-image {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-shield-image > div,
+  .ransomware-shield-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Global Impact Stats */
+  .ransomware-global-stats {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .ransomware-global-stats > div {
+    flex: 1 1 100% !important;
+  }
+
+  .ransomware-global-stats > div > div[style*="fontSize: 48px"] {
+    font-size: 36px !important;
+  }
+
+  /* Skysecure Perspective */
+  .blog-section[style*="backgroundColor: rgba(27, 27, 47, 1)"] {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 0 !important;
+  }
+
+  .blog-section[style*="backgroundColor: rgba(27, 27, 47, 1)"] > div {
+    padding: 0 16px !important;
+  }
+
+  .ransomware-perspective-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-perspective-wrapper .blog-section-title {
+    text-align: center !important;
+  }
+
+  .ransomware-perspective-wrapper button {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .ransomware-soc-image {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .ransomware-soc-image > div,
+  .ransomware-soc-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Related Articles */
+  .ransomware-related-articles-section {
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+  }
+
+  .ransomware-related-articles-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Hero Section */
+  .blog-hero {
+    padding: 40px 0 !important;
+  }
+
+  .ransomware-hero-left h1 {
+    font-size: 24px !important;
+  }
+
+  .ransomware-hero-meta {
+    font-size: 12px !important;
+  }
+
+  /* Section Titles */
+  .blog-section-title {
+    font-size: 20px !important;
+  }
+
+  /* Global Impact Stats */
+  .ransomware-global-stats > div > div[style*="fontSize: 48px"] {
+    font-size: 32px !important;
+  }
+
+  .ransomware-global-stats > div > div[style*="fontSize: 16px"] {
+    font-size: 14px !important;
+  }
+
+  .ransomware-global-stats > div > div[style*="fontSize: 14px"] {
+    font-size: 12px !important;
+  }
+}
+

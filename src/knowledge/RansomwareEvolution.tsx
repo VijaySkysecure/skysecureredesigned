@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/knowledge/ransomware-evolution.css';
 
 const RANSOMWARE_VARIANTS = [
   {
@@ -155,7 +156,7 @@ export function RansomwareEvolution(): React.ReactElement {
           borderBottom: '1px solid #E5E7EB'
         }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-            <nav style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', color: '#64748B' }}>
+            <nav className="ransomware-breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', color: '#64748B' }}>
               <a href="/" style={{ color: '#1F2937', textDecoration: 'none' }}>Home</a>
               <span>›</span>
               <a href="/#insights" style={{ color: '#1F2937', textDecoration: 'none' }}>Knowledge & Resources</a>
@@ -177,9 +178,9 @@ export function RansomwareEvolution(): React.ReactElement {
           marginLeft: 'calc(-50vw + 50%)'
         }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
+            <div className="ransomware-hero-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
               {/* Left Content */}
-              <div style={{ flex: 1, textAlign: 'left' }}>
+              <div className="ransomware-hero-left" style={{ flex: 1, textAlign: 'left' }}>
                 <div style={{ 
                   display: 'inline-block',
                   backgroundColor: 'rgba(10, 78, 255, 1)',
@@ -201,7 +202,7 @@ export function RansomwareEvolution(): React.ReactElement {
                 }}>
                   Daily Threat Brief:<br />Ransomware Evolution
                 </h1>
-                <div style={{ 
+                <div className="ransomware-hero-meta" style={{ 
                   fontSize: '16px', 
                   marginBottom: '32px',
                   opacity: 0.9,
@@ -217,7 +218,7 @@ export function RansomwareEvolution(): React.ReactElement {
                 </div>
               </div>
               {/* Right Visual */}
-              <div style={{ flex: 1, textAlign: 'center' }}>
+              <div className="ransomware-hero-right" style={{ flex: 1, textAlign: 'center' }}>
                 <ImagePlaceholder
                   label="Ransomware Skull Hero"
                   imageName="knowledge/ransomware-skull-hero.png"
@@ -232,7 +233,7 @@ export function RansomwareEvolution(): React.ReactElement {
 
         {/* Executive Summary Section */}
         <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 20px', marginLeft: 'auto', marginRight: 'auto' }}>
-          <div style={{ marginLeft: '0px' }}>
+          <div className="ransomware-executive-summary" style={{ marginLeft: '0px' }}>
             <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Executive Summary</h2>
             <p className="blog-section-text" style={{ textAlign: 'left', marginBottom: '42px', marginLeft: '130px' }}>
               Ransomware continues to evolve as one of the most significant cyber threats facing organizations worldwide. 
@@ -287,7 +288,7 @@ export function RansomwareEvolution(): React.ReactElement {
 
         {/* The Evolving Ransomware Landscape Section */}
         <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 20px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
+          <div className="ransomware-landscape-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
             {/* Left Content */}
             <div style={{ flex: 1 }}>
               <h2 className="blog-section-title" style={{ textAlign: 'left', marginBottom: '24px' }}>
@@ -296,7 +297,7 @@ export function RansomwareEvolution(): React.ReactElement {
               <p className="blog-section-text" style={{ textAlign: 'left', marginBottom: '32px' }}>
               The ransomware ecosystem has matured significantly over the past year. Attackers are shifting from broad, opportunistic campaigns to highly targeted strikes against critical infrastructure, healthcare, manufacturing, and financial sectors. Ransomware-as-a-Service (RaaS) has made sophisticated attack tools accessible to even low- skilled threat actors, expanding the reach and impact of these operations.
               </p>
-              <div style={{ display: 'flex', gap: '90px' }}>
+              <div className="ransomware-landscape-stats" style={{ display: 'flex', gap: '90px' }}>
                 <div style={{ textAlign: 'center' }}>
                   <div style={{ 
                     fontSize: '30px', 
@@ -326,7 +327,7 @@ export function RansomwareEvolution(): React.ReactElement {
               </div>
             </div>
             {/* Right Visual */}
-            <div style={{ flex: 1, textAlign: 'center' }}>
+            <div className="ransomware-timeline-image" style={{ flex: 1, textAlign: 'center' }}>
               <ImagePlaceholder
                 label="Ransomware Timeline"
                 imageName="knowledge/ransomware-timeline.png"
@@ -344,7 +345,7 @@ export function RansomwareEvolution(): React.ReactElement {
           <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '48px', marginLeft: '120px', marginTop: '-20px' }}>
             Our intelligence team has identified several prominent ransomware families that pose significant threats to organizations worldwide.
           </p>
-          <div style={{ 
+          <div className="ransomware-variants-grid" style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(3, 1fr)', 
             gap: '24px',
@@ -439,7 +440,7 @@ export function RansomwareEvolution(): React.ReactElement {
             <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '48px', marginLeft: '120px', marginTop: '-20px' }}>
               Modern ransomware campaigns increasingly exploit trusted channels and legitimate tools to evade detection. Attackers are combining social engineering, supply chain infiltration, and credential theft to gain access to systems undetected.
             </p>
-            <div style={{ 
+            <div className="ransomware-attack-vectors-grid" style={{ 
               display: 'grid', 
               gridTemplateColumns: 'repeat(3, 1fr)', 
               gap: '24px',
@@ -493,7 +494,7 @@ export function RansomwareEvolution(): React.ReactElement {
 
         {/* The Role of AI Section */}
         <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 20px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
+          <div className="ransomware-ai-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
             {/* Left Content */}
             <div style={{ flex: 1 }}>
               <h2 className="blog-section-title" style={{ textAlign: 'left', marginBottom: '24px' }}>
@@ -523,7 +524,7 @@ export function RansomwareEvolution(): React.ReactElement {
               </div>
             </div>
             {/* Right Visual */}
-            <div style={{ flex: 1, textAlign: 'center' }}>
+            <div className="ransomware-ai-image" style={{ flex: 1, textAlign: 'center' }}>
               <ImagePlaceholder
                 label="AI Figures Graphic"
                 imageName="knowledge/ai-figures-graphic.png"
@@ -541,7 +542,7 @@ export function RansomwareEvolution(): React.ReactElement {
           <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '48px', marginLeft: '120px', marginTop: '-20px' }}>
             Effective ransomware defense requires more than tools, it demands continuous visibility, rapid response automation, and an educated workforce aware of evolving tactics.
           </p>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
+          <div className="ransomware-defense-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
             {/* Left Content */}
             <div style={{ flex: 1 }}>
               <div style={{ 
@@ -600,7 +601,7 @@ export function RansomwareEvolution(): React.ReactElement {
               </div>
             </div>
             {/* Right Visual */}
-            <div style={{ flex: 1, textAlign: 'center' }}>
+            <div className="ransomware-shield-image" style={{ flex: 1, textAlign: 'center' }}>
               <ImagePlaceholder
                 label="Cybersecurity Shield"
                 imageName="knowledge/cybersecurity-shield.png"
@@ -615,7 +616,7 @@ export function RansomwareEvolution(): React.ReactElement {
         {/* Global Impact Section */}
         <section className="blog-section" style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 20px' }}>
           <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Global Impact and Forecast</h2>
-          <div style={{ 
+          <div className="ransomware-global-stats" style={{ 
             display: 'flex', 
             justifyContent: 'center', 
             gap: '180px',
@@ -686,7 +687,7 @@ export function RansomwareEvolution(): React.ReactElement {
           marginLeft: 'calc(-50vw + 50%)'
         }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
+            <div className="ransomware-perspective-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px' }}>
               {/* Left Content */}
               <div style={{ flex: 1 }}>
                 <h2 className="blog-section-title" style={{ 
@@ -719,7 +720,7 @@ export function RansomwareEvolution(): React.ReactElement {
                 </button>
               </div>
               {/* Right Visual */}
-              <div style={{ flex: 1, textAlign: 'center' }}>
+              <div className="ransomware-soc-image" style={{ flex: 1, textAlign: 'center' }}>
                 <ImagePlaceholder
                   label="SOC Operations"
                   imageName="knowledge/soc-operations.png"
@@ -733,7 +734,7 @@ export function RansomwareEvolution(): React.ReactElement {
         </section>
 
         {/* More from Skysecure Decode Section */}
-        <section className="blog-section" style={{ 
+        <section className="blog-section ransomware-related-articles-section" style={{ 
           maxWidth: '1200px', 
           margin: '0 auto', 
           padding: '80px 20px', 
@@ -755,7 +756,7 @@ export function RansomwareEvolution(): React.ReactElement {
           }}>
             Stay informed with our latest threat intelligence and security insights
           </p>
-          <div style={{ 
+          <div className="ransomware-related-articles-grid" style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(3, 1fr)', 
             gap: '44px',
