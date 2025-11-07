@@ -5202,11 +5202,15 @@ footer section .container {
   }
 
   .carousel-item .image-placeholder {
-    max-width: 300px !important;
+    max-width: 800px !important;
   }
 
   .carousel-item .image-placeholder img {
-    max-width: 300px !important;
+    max-width: 800px !important;
+  }
+
+  .tech-ecosystem-carousel {
+    margin-bottom: -10px !important;
   }
 
   /* Global Impact section - tablet */
@@ -5905,6 +5909,7 @@ footer section .container {
   
   .tech-ecosystem-title {
     font-size: 20px !important;
+    margin-bottom: 0px !important;
   }
   
   /* Contact section */
