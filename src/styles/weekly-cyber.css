@@ -945,6 +945,101 @@
 }
 
 /* Responsive Design */
+/* Tablet Styles (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container-narrow {
+    padding: 0 24px;
+  }
+
+  .breadcrumb {
+    padding: 2px 24px 0;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  .weekly-hero-content {
+    padding: 0 24px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .threat-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .threat-landscape-image {
+    padding: 24px;
+  }
+
+  .section-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .threat-actor-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .sector-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .advisory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advisory-item:nth-child(5) {
+    grid-column: 1;
+  }
+
+  .subscribe-box {
+    grid-column: 1;
+  }
+
+  .more-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .vuln-row {
+    grid-template-columns: 150px 1fr 120px 120px;
+    gap: 12px;
+    padding: 16px 20px;
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 1200px) {
   .hero-inner {
     grid-template-columns: 1fr;
@@ -977,87 +1072,417 @@
   }
 }
 
+/* Mobile Styles (max-width: 768px) */
 @media (max-width: 768px) {
   .container-narrow {
-    padding: 0 20px;
+    padding: 0 16px;
+  }
+
+  .breadcrumb {
+    padding: 2px 16px 0;
+    font-size: 12px;
+    gap: 6px;
+    flex-wrap: wrap;
   }
 
   .weekly-hero {
-    padding: 60px 0 40px;
+    padding: 40px 0 32px;
   }
 
   .weekly-hero-content {
-    padding: 0 20px;
+    padding: 0 16px;
+  }
+
+  .hero-inner {
+    gap: 32px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 6px 16px;
   }
 
   .hero-title {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    align-items: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    max-height: 250px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .weekly-intro {
+    padding: 32px 0;
+  }
+
+  .intro-text {
+    font-size: 16px;
+    text-align: left;
+    max-width: 100%;
   }
 
   .section-title {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .section-description {
+    font-size: 15px;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .threat-landscape {
+    padding: 32px 0 40px;
+  }
+
+  .threat-content {
+    margin-top: 32px;
+    gap: 24px;
+  }
+
+  .threat-landscape-image {
+    padding: 20px;
+  }
+
+  .heatmap-title {
+    font-size: 16px;
+  }
+
+  .section-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 16px;
+  }
+
+  .threat-insights {
+    gap: 16px;
+  }
+
+  .insight-card {
+    padding: 16px;
+  }
+
+  .threat-highlights {
+    padding: 40px 0;
   }
 
   .highlights-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .highlight-card {
+    padding: 24px 20px;
+  }
+
+  .highlight-title {
+    font-size: 18px;
+  }
+
+  .sector-analysis {
+    padding: 40px 0;
   }
 
   .sector-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 32px;
   }
 
-  .advisory-grid {
-    grid-template-columns: 1fr;
+  .sector-card {
+    padding: 20px;
   }
 
-  .more-grid {
-    grid-template-columns: 1fr;
+  .vulnerabilities {
+    padding: 40px 0;
+  }
+
+  .vuln-table {
+    margin-top: 32px;
+    overflow-x: auto;
   }
 
   .vuln-row {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 12px;
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .vuln-row:before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 12px;
+    margin-bottom: 4px;
+    display: block;
   }
 
   .vuln-header {
     display: none;
   }
 
+  .vuln-cell {
+    font-size: 13px;
+    padding: 4px 0;
+  }
+
+  .threat-actor {
+    padding: 40px 0;
+  }
+
+  .threat-actor-content {
+    margin-top: 32px;
+    gap: 24px;
+  }
+
+  .threat-actor-text p {
+    font-size: 15px;
+  }
+
+  .dark-web-card {
+    padding: 20px;
+  }
+
+  .advisory {
+    padding: 40px 0;
+  }
+
+  .advisory-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .advisory-item {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .advisory-icon {
+    margin: 0 auto;
+  }
+
+  .advisory-item:nth-child(5) {
+    grid-column: 1;
+  }
+
+  .subscribe-box {
+    grid-column: 1;
+    padding: 24px 20px;
+  }
+
+  .quote-section {
+    padding: 40px 0;
+  }
+
+  .quote-text {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+
+  .quote-icon {
+    font-size: 36px;
+  }
+
+  .weekly-summary {
+    padding: 40px 0;
+  }
+
+  .summary-text {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+
+  .contact-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .more-content {
+    padding: 40px 0;
+  }
+
+  .more-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .more-card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
   .heatmap-row {
     grid-template-columns: 100px repeat(6, 1fr);
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .heatmap-cell {
     padding: 8px 4px;
-    font-size: 11px;
-  }
-
-  .quote-text {
-    font-size: 18px;
+    font-size: 10px;
   }
 }
 
+/* Small Mobile Styles (max-width: 480px) */
 @media (max-width: 480px) {
+  .container-narrow {
+    padding: 0 12px;
+  }
+
+  .breadcrumb {
+    padding: 2px 12px 0;
+    font-size: 11px;
+  }
+
+  .weekly-hero {
+    padding: 32px 0 24px;
+  }
+
+  .weekly-hero-content {
+    padding: 0 12px;
+  }
+
   .hero-title {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    padding: 5px 12px;
   }
 
   .hero-meta {
-    flex-direction: column;
-    gap: 8px;
+    font-size: 12px;
   }
 
   .section-title {
-    font-size: 24px;
+    font-size: 20px;
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+
+  .intro-text {
+    font-size: 15px;
+  }
+
+  .threat-landscape-image {
+    padding: 16px;
+  }
+
+  .insight-card {
+    padding: 14px;
+  }
+
+  .insight-title {
+    font-size: 14px;
+  }
+
+  .insight-text {
+    font-size: 12px;
+  }
+
+  .highlight-card {
+    padding: 20px 16px;
+  }
+
+  .highlight-title {
+    font-size: 16px;
+  }
+
+  .highlight-description {
+    font-size: 13px;
+  }
+
+  .sector-card {
+    padding: 16px;
+  }
+
+  .sector-title {
+    font-size: 16px;
+  }
+
+  .sector-description {
+    font-size: 13px;
+  }
+
+  .vuln-cell {
+    font-size: 12px;
+  }
+
+  .advisory-item {
+    padding: 16px;
+  }
+
+  .advisory-title {
+    font-size: 16px;
+  }
+
+  .advisory-description {
+    font-size: 13px;
+  }
+
+  .subscribe-title {
+    font-size: 16px;
+  }
+
+  .subscribe-description {
+    font-size: 12px;
+  }
+
+  .quote-text {
+    font-size: 15px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+  }
+
+  .more-title {
+    font-size: 16px;
+  }
+
+  .more-description {
+    font-size: 13px;
   }
 
   .heatmap-row {
     grid-template-columns: 80px repeat(3, 1fr);
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .heatmap-row .heatmap-cell:nth-child(n+5) {
     display: none;
+  }
+
+  .heatmap-cell {
+    padding: 6px 3px;
+    font-size: 9px;
   }
 }
