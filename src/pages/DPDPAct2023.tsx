@@ -465,16 +465,6 @@ export function DPDPAct2023(): React.ReactElement {
           <div className="dpdp-why-care__container">
             <div className="dpdp-why-care__content-wrapper">
               {/* Left Visual */}
-              <div className="dpdp-why-care__visual">
-                <ImagePlaceholder
-                  label="Compliance Benefits Visual"
-                  imageName="dpdp-act/compliance-benefits-visual.png"
-                  width={530}
-                  height={550}
-                  borderRadius={0}
-                />
-              </div>
-              {/* Right Content */}
               <div className="dpdp-why-care__text">
                 <h2 className="dpdp-why-care__title">
                   Why Your Organisation Should Care
@@ -538,6 +528,16 @@ export function DPDPAct2023(): React.ReactElement {
                     </div>
                   </div>
                 </div>
+              </div>
+              {/* Right Visual */}
+              <div className="dpdp-why-care__visual">
+                <ImagePlaceholder
+                  label="Compliance Benefits Visual"
+                  imageName="dpdp-act/compliance-benefits-visual.png"
+                  width={530}
+                  height={550}
+                  borderRadius={0}
+                />
               </div>
             </div>
           </div>
