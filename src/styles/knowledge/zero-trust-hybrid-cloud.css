@@ -73,11 +73,6 @@
     flex-wrap: wrap !important;
     gap: 40px !important;
   }
-
-  /* Related Articles */
-  .related-articles__grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
 }
 
 /* Mobile Styles (max-width: 768px) */
@@ -373,25 +368,6 @@
   .zt-cta-button {
     width: 100% !important;
     max-width: 300px !important;
-  }
-
-  /* Related Articles */
-  .related-articles {
-    padding: 0 16px !important;
-  }
-
-  .related-articles__title {
-    font-size: 24px !important;
-  }
-
-  .related-articles__grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-
-  .related-article {
-    height: auto !important;
-    min-height: auto !important;
   }
 }
 

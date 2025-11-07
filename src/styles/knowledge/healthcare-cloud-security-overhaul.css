@@ -188,11 +188,6 @@
     width: 100% !important;
     box-sizing: border-box !important;
   }
-
-  /* Related Articles */
-  .related-articles {
-    padding: 0 24px;
-  }
 }
 
 /* Mobile Styles (max-width: 768px) */
@@ -461,27 +456,6 @@
     white-space: nowrap !important;
   }
 
-  /* Related Articles */
-  .related-articles {
-    padding: 0 16px !important;
-  }
-
-  .related-articles__title {
-    font-size: 24px !important;
-    padding: 0 !important;
-    margin-bottom: 24px !important;
-  }
-
-  .related-articles__grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-
-  .related-article {
-    height: auto !important;
-    min-height: auto !important;
-  }
-
   /* Blog Content Container */
   .blog-content .container {
     padding: 0 16px !important;
@@ -648,19 +622,6 @@
     padding: 10px 20px !important;
     width: 100% !important;
     box-sizing: border-box !important;
-  }
-
-  /* Related Articles */
-  .related-articles__title {
-    font-size: 20px !important;
-  }
-
-  .related-article__title {
-    font-size: 18px !important;
-  }
-
-  .related-article__description {
-    font-size: 14px !important;
   }
 }
 

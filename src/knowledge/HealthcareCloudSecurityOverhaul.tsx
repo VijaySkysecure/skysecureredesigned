@@ -450,33 +450,6 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
                 </div>
               </div>
             </section>
-
-            {/* Explore More Success Stories */}
-            <section className="related-articles">
-              <h2 className="related-articles__title">Explore More Success Stories</h2>
-              <div className="related-articles__grid">
-                {RELATED_CASE_STUDIES.map((caseStudy, index) => (
-                  <div key={index} className="related-article" style={{ height: '430px' }}>
-                    <div className="related-article__image">
-                      <ImagePlaceholder
-                        label={caseStudy.title}
-                        imageName={`knowledge/${caseStudy.image}.png`}
-                        width={400}
-                        height={200}
-                        borderRadius={8}
-                      />
-                    </div>
-                    <div className="related-article__content">
-                      <h3 className="related-article__title">{caseStudy.title}</h3>
-                      <p className="related-article__description">{caseStudy.description}</p>
-                      <a href={caseStudy.link} style={{ color: '#3B82F6', textDecoration: 'none', fontSize: '14px', fontWeight: '500', display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '20px' }}>
-                        Read Case Study →
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
           </div>
         </section>
       </main>
