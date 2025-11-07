@@ -1,0 +1,383 @@
+/* Responsive Styles for SaaS Software Supply Chain - Mobile and Tablet Only */
+
+/* Tablet Styles (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Breadcrumb Navigation */
+  .saas-breadcrumb {
+    flex-wrap: wrap !important;
+    font-size: 12px !important;
+  }
+
+  /* Hero Section */
+  .saas-hero-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+
+  .saas-hero-left {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .saas-hero-left h1 {
+    font-size: 36px !important;
+  }
+
+  .saas-hero-right {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .saas-hero-right img,
+  .saas-hero-right > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Executive Summary */
+  .saas-executive-summary {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Challenge Section */
+  .saas-challenge-section {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .saas-challenge-content {
+    margin-left: 0 !important;
+  }
+
+  .saas-challenges-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* Approach Section */
+  .saas-approach-section {
+    margin-left: 0 !important;
+  }
+
+  /* Solution Section */
+  .saas-solution-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .saas-solutions-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* Results Section */
+  .saas-results-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .saas-results-wrapper {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .saas-results-left,
+  .saas-results-right {
+    width: 100% !important;
+  }
+
+  /* Outcome Section */
+  .saas-outcome-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /* CTA Section */
+  .saas-cta-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .saas-cta-buttons {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .saas-cta-buttons button {
+    width: 100% !important;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Breadcrumb Navigation */
+  .saas-breadcrumb {
+    font-size: 11px !important;
+    gap: 6px !important;
+  }
+
+  /* Hero Section */
+  .blog-hero {
+    padding: 40px 0 !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .blog-hero .container {
+    padding: 0 16px !important;
+  }
+
+  .saas-hero-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .saas-hero-left {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .saas-hero-left h1 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+
+  .saas-hero-badges {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  .saas-hero-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .saas-hero-right img,
+  .saas-hero-right > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  /* Executive Summary */
+  .blog-section {
+    padding: 40px 16px !important;
+  }
+
+  .saas-executive-summary {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .saas-executive-summary .blog-section-title,
+  .saas-executive-summary .blog-section-text {
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+
+  .blog-section-title {
+    font-size: 24px !important;
+  }
+
+  .blog-section-text {
+    font-size: 15px !important;
+  }
+
+  /* Challenge Section */
+  .saas-challenge-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 0 !important;
+    margin-bottom: 5px !important;
+  }
+
+  .saas-challenge-section > div {
+    padding: 0 16px !important;
+  }
+
+  .saas-challenge-content {
+    margin-left: 0 !important;
+  }
+
+  .saas-challenge-section .blog-section-title {
+    text-align: center !important;
+  }
+
+  .saas-challenges-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+  }
+
+  /* Approach Section */
+  .saas-approach-section {
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+  }
+
+  .saas-approach-section .blog-section-title {
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+
+  .saas-approach-steps {
+    max-width: 100% !important;
+  }
+
+  /* Solution Section */
+  .saas-solution-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 0 !important;
+  }
+
+  .saas-solution-section .blog-section-title {
+    margin-bottom: 20px !important;
+  }
+
+  .saas-solution-section > p {
+    padding: 0 16px !important;
+  }
+
+  .saas-solutions-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+  }
+
+  /* Results Section */
+  .saas-results-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 0 !important;
+  }
+
+  .saas-results-section > div {
+    padding: 0 16px !important;
+    margin-top: 40px !important;
+  }
+
+  .saas-results-wrapper {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .saas-results-left,
+  .saas-results-right {
+    width: 100% !important;
+  }
+
+  .saas-results-subtitle {
+    font-size: 16px !important;
+  }
+
+  /* Outcome Section */
+  .saas-outcome-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 0 !important;
+    margin-bottom:30px !important;
+  }
+
+  .saas-outcome-section > div {
+    padding: 0 16px !important;
+  }
+
+  /* CTA Section */
+  .saas-cta-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 0 !important;
+    margin-bottom:30px !important;
+  }
+
+  .saas-cta-content {
+    padding: 40px 20px !important;
+  }
+
+  .saas-solution-icon-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .saas-solution-title{
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .saas-cta-content h3 {
+    font-size: 24px !important;
+  }
+
+  .saas-cta-content p {
+    font-size: 16px !important;
+  }
+
+  .saas-cta-buttons {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .saas-cta-buttons button {
+    width: 100% !important;
+  }
+
+  /* Related Articles */
+  .related-articles {
+    padding: 40px 16px !important;
+  }
+
+  .related-articles__grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .related-article {
+    height: auto !important;
+  }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Hero Section */
+  .blog-hero {
+    padding: 32px 0 !important;
+  }
+
+  .saas-hero-left h1 {
+    font-size: 24px !important;
+  }
+
+  .saas-hero-badges {
+    font-size: 11px !important;
+  }
+
+  /* Section Titles */
+  .blog-section-title {
+    font-size: 20px !important;
+  }
+
+  .saas-results-subtitle {
+    font-size: 14px !important;
+  }
+
+  /* CTA Section */
+  .saas-cta-content h3 {
+    font-size: 20px !important;
+  }
+
+  .saas-cta-content p {
+    font-size: 14px !important;
+  }
+}
+

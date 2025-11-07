@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/knowledge/saas-software-supply-chain.css';
 
 const CHALLENGES = [
   {
@@ -131,7 +132,7 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
         {/* Breadcrumbs */}
         <section className="blog-breadcrumbs">
           <div className="container">
-              <nav className="breadcrumbs">
+              <nav className="breadcrumbs saas-breadcrumb">
                 <a href="/" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>Home</a>
                 <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
                 <a href="/#knowledge-resources" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; setTimeout(() => { const element = document.getElementById('knowledge-resources'); if (element) element.scrollIntoView({ behavior: 'smooth' }); }, 100); }}>Knowledge & Resources</a>
@@ -146,10 +147,10 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
         {/* Hero Section */}
         <section className="blog-hero" style={{ padding: '80px 0', marginBottom: '0px', width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
           <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
+            <div className="saas-hero-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '60px', justifyContent: 'center' }}>
               {/* Left Content */}
-              <div style={{ flex: 1, maxWidth: '500px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+              <div className="saas-hero-left" style={{ flex: 1, maxWidth: '500px' }}>
+                <div className="saas-hero-badges" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
                   <span style={{ backgroundColor: '#3B82F6', color: '#FFFFFF', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: '500' }}>Case Study</span>
                   <span style={{ backgroundColor: '#D1FAE5', color: '#065F46', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: '500' }}>SaaS / Software Development</span>
                   <span style={{ color: '#6B7280', fontSize: '14px' }}>July 2023</span>
@@ -159,7 +160,7 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
                 </h1>
               </div>
               {/* Right Visual */}
-              <div style={{ flex: 1, textAlign: 'center', maxWidth: '580px' }}>
+              <div className="saas-hero-right" style={{ flex: 1, textAlign: 'center', maxWidth: '580px' }}>
                 <ImagePlaceholder
                   label="Software Supply Chain Network"
                   imageName="knowledge/software-supply-chain-network.png"
@@ -177,7 +178,7 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
           <div className="container">
 
             {/* Executive Summary */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: '150px', marginTop: '-60px' }}>
+            <section className="blog-section saas-executive-summary" style={{ width: '100vw', marginLeft: '150px', marginTop: '-60px' }}>
               <h2 className="blog-section-title">Executive Summary</h2>
               <p className="blog-section-text">
               In today's rapidly evolving software landscape, securing the entire development lifecycle has become critical for B2B SaaS companies. Skysecure partnered with a leading SaaS provider to implement comprehensive software supply chain security, protecting against vulnerabilities, ensuring compliance, and enabling secure innovation across distributed development teams.
@@ -185,13 +186,13 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
             </section>
 
             {/* The Challenge */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: 'rgba(247, 248, 250, 1)' }}>
-              <div style={{ maxWidth: '1200px', margin: '0 auto', marginLeft: '300px' }}>
+            <section className="blog-section saas-challenge-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: 'rgba(247, 248, 250, 1)' }}>
+              <div className="saas-challenge-content" style={{ maxWidth: '1200px', margin: '0 auto', marginLeft: '300px' }}>
                 <h2 className="blog-section-title" style={{ marginBottom: '30px' }}>1. The Challenge</h2>
                 <p className="blog-section-text" style={{ marginBottom: '40px' }}>
                 The client's distributed development model, while enabling rapid innovation, introduced significant security risks across their software supply chain. With multiple development teams, third-party integrations, and continuous deployment pipelines, maintaining security visibility and compliance became increasingly complex.
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px', maxWidth: '1000px' }}>
+                <div className="saas-challenges-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px', maxWidth: '1000px' }}>
                 {CHALLENGES.map((challenge, index) => (
                   <div key={index} style={{ 
                     backgroundColor: '#F8FAFC', 
@@ -220,12 +221,12 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
             </section>
 
             {/* The Approach */}
-            <section className="blog-section" style={{ marginLeft: '180px' }}>
+            <section className="blog-section saas-approach-section" style={{ marginLeft: '180px' }}>
               <h2 className="blog-section-title">2. The Approach</h2>
               <p className="blog-section-text" style={{ marginBottom: '40px' }}>
               Skysecure implemented a strategic, step-by-step approach to modernize the client's software supply chain security. The project began with a full pipeline audit, followed by automation of dependency scanning, risk scoring, and compliance mapping. Each improvement was designed to be developer- friendly, scalable, and fully integrated with their existing CI/CD stack.
               </p>
-              <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+              <div className="saas-approach-steps" style={{ maxWidth: '800px', margin: '0 auto' }}>
                 {APPROACH_STEPS.map((step, index) => (
                   <div key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '32px' }}>
                     <div style={{ width: '40px', height: '40px', backgroundColor: '#3B82F6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -241,12 +242,12 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
             </section>
 
             {/* The Solution */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+            <section className="blog-section saas-solution-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>3. The Solution</h2>
               <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '40px', marginTop: '-30px', maxWidth: '600px', margin: '0 auto 40px auto' }}>
               Comprehensive security integration across the entire development lifecycle
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
+              <div className="saas-solutions-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
                 {SOLUTIONS.map((solution, index) => (
                   <div key={index} style={{ 
                     backgroundColor: '#FFFFFF', 
@@ -256,7 +257,7 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
                     border: '1px solid #E2E8F0'
                   }}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', marginBottom: '12px' }}>
-                      <div style={{ width: '56px', height: '56px', backgroundColor: solution.color, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '12px' }}>
+                      <div className='saas-solution-icon-wrapper' style={{ width: '56px', height: '56px', backgroundColor: solution.color, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '12px' }}>
                         <ImagePlaceholder
                           label={solution.title}
                           imageName={`knowledge/${solution.icon}.png`}
@@ -265,7 +266,7 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
                           borderRadius={0}
                         />
                       </div>
-                      <h3 style={{ fontSize: '18px', fontWeight: '600', color: 'rgba(17, 24, 39, 1)', margin: 0 }}>{solution.title}</h3>
+                      <h3 className='saas-solution-title' style={{ fontSize: '18px', fontWeight: '600', color: 'rgba(17, 24, 39, 1)', margin: 0 }}>{solution.title}</h3>
                     </div>
                     <p style={{ fontSize: '14px', color: '#64748B', lineHeight: '1.5', margin: 0, textAlign: 'left' }}>{solution.description}</p>
                   </div>
@@ -274,12 +275,12 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
             </section>
 
             {/* The Results */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0' }}>
+            <section className="blog-section saas-results-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0' }}>
               <div style={{ maxWidth: '1200px', margin: '0 auto', marginTop: '80px' }}>
                 <h2 className="blog-section-title" style={{ textAlign: 'center' }}>4. The Results</h2>
-              <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#64748B', textAlign: 'center', marginBottom: '40px', marginTop: '-30px' }}>Quantifiable Security and Operational Gains</h3>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', marginBottom: '40px', maxWidth: '1000px', margin: '0 auto 40px auto' }}>
-                <div style={{ width: '500px' }}>
+              <h3 className="saas-results-subtitle" style={{ fontSize: '20px', fontWeight: '600', color: '#64748B', textAlign: 'center', marginBottom: '40px', marginTop: '-30px' }}>Quantifiable Security and Operational Gains</h3>
+              <div className="saas-results-wrapper" style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', marginBottom: '40px', maxWidth: '1000px', margin: '0 auto 40px auto' }}>
+                <div className="saas-results-left" style={{ width: '500px' }}>
                   {RESULTS.map((result, index) => (
                     <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
                       <div style={{ width: '40px', height: '40px', backgroundColor: '#3B82F6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -298,7 +299,7 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
                     </div>
                   ))}
                 </div>
-                <div style={{ width: '500px', marginTop: '40px' }}>
+                <div className="saas-results-right" style={{ width: '500px', marginTop: '40px' }}>
                   <div style={{ backgroundColor: 'rgba(247, 248, 250, 1)', padding: '24px', borderRadius: '12px', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)'}}>
                     <p style={{ fontSize: '16px', color: '#374151', lineHeight: '1.6', margin: 0 }}>
                     The client's engineering and security teams now have complete visibility across their CI/CD pipelines, ensuring secure code delivery. Automated controls minimized manual checks and accelerated development cycles, helping them meet enterprise security and compliance expectations with ease.
@@ -310,7 +311,7 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
             </section>
 
             {/* The Outcome */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
+            <section className="blog-section saas-outcome-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', backgroundColor: '#F9FAFB' }}>
               <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <h2 className="blog-section-title" style={{ textAlign: 'center' }}>5. The Outcome</h2>
                 <p className="blog-section-text" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
@@ -320,13 +321,13 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
             </section>
 
             {/* CTA Section */}
-            <section className="blog-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', marginTop: '-60px' }}>
-              <div style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '60px 40px', textAlign: 'center' }}>
+            <section className="saas-cta-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', marginTop: '-60px' }}>
+              <div className="saas-cta-content" style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '60px 40px', textAlign: 'center' }}>
                 <h3 style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', margin: '0 0 16px 0' }}>Strengthen Your Software Supply Chain with Confidence</h3>
                 <p style={{ fontSize: '18px', color: '#FFFFFF', margin: '0 auto 40px auto', opacity: 0.9, maxWidth: '600px' }}>
                 Partner with Skysecure to embed security across your entire development lifecycle, from code to cloud.
                 </p>
-                <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+                <div className="saas-cta-buttons" style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
                   <button style={{ backgroundColor: '#FFFFFF', color: '#3B82F6', padding: '12px 24px', borderRadius: '8px', border: '1px solid #3B82F6', fontSize: '16px', fontWeight: '600', cursor: 'pointer', fontFamily: 'Inter' }}>
                     Contact Us
                   </button>
