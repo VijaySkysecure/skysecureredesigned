@@ -164,33 +164,6 @@ const RECOMMENDATIONS = [
   }
 ];
 
-const RELATED_ARTICLES = [
-  {
-    image: 'cloud-security-future',
-    title: 'The Future of Cloud Security',
-    description: 'Comprehensive analysis of emerging cloud security trends and best practices for 2024.',
-    type: 'White Paper',
-    date: 'June 2023',
-    link: '/cloud-security-guide'
-  },
-  {
-    image: 'azure-sentinel-threat',
-    title: 'Threat Protection with Azure Sentinel',
-    description: 'Real-world implementation of Microsoft Azure Sentinel for enterprise threat detection.',
-    type: 'Blog Post',
-    date: 'May 2023',
-    link: '/azure-sentinel-guide'
-  },
-  {
-    image: 'healthcare-security-dashboard',
-    title: 'Healthcare Cloud Security Overhaul',
-    description: 'Strategic approach to modernizing healthcare cybersecurity infrastructure.',
-    type: 'Industry Report',
-    date: 'April 2023',
-    link: '/healthcare-cloud-security-overhaul'
-  }
-];
-
 export function AIThreatDetectionReport(): React.ReactElement {
   return (
     <>

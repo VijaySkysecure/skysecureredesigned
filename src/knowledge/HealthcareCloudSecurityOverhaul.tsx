@@ -107,27 +107,6 @@ const BENEFITS = [
   'Reduced security management overhead'
 ];
 
-const RELATED_CASE_STUDIES = [
-  {
-    image: 'fortune-500-case-study',
-    title: 'Fortune 500 Zero Trust Implementation',
-    description: 'Comprehensive Zero Trust architecture deployment for a global enterprise, achieving 70% reduction in security incidents.',
-    link: '#'
-  },
-  {
-    image: 'ai-threat-detection-case-study',
-    title: 'AI-Powered Threat Detection in Financial Services',
-    description: 'Machine learning-based threat detection system reducing false positives by 85% for a major financial institution.',
-    link: '#'
-  },
-  {
-    image: 'manufacturing-security-case-study',
-    title: 'Manufacturing Security Transformation',
-    description: 'Industrial IoT security overhaul protecting critical manufacturing operations from cyber threats and ensuring compliance.',
-    link: '#'
-  }
-];
-
 export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
   return (
     <>
