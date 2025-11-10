@@ -4305,6 +4305,20 @@ footer section .container {
   .benefit-card-description {
     font-size: 14px;
   }
+
+  /* Fix resource date positioning for iPad Pro - shift slightly left */
+  .resource-card__content {
+    padding-right: 28px !important; /* Increased from default to prevent date cutoff */
+  }
+
+  .resource-date {
+    margin-left: 0 !important;
+    margin-right: 4px; /* Small right margin to prevent cutoff */
+  }
+
+  .resource-meta {
+    padding-right: 4px; /* Extra padding to ensure date visibility */
+  }
 }
 
 /* Mobile and tablet navigation */
@@ -4713,6 +4727,7 @@ footer section .container {
 
   .resource-card__content {
     padding: 18px;
+    padding-right: 24px !important; /* Increased right padding to prevent date cutoff */
     gap: 8px;
   }
 
@@ -4730,10 +4745,12 @@ footer section .container {
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 0;
+    padding-right: 4px; /* Extra padding to ensure date visibility */
   }
 
   .resource-date {
-    margin-left: 0;
+    margin-left: 0 !important;
+    margin-right: 4px; /* Small right margin to prevent cutoff */
     font-size: 11px;
   }
 
@@ -5313,8 +5330,14 @@ footer section .container {
   }
 
   .global-impact-dashboard {
-    padding: 24px;
+    padding: 32px !important;
     border-radius: 12px;
+    margin: 0 16px;
+  }
+
+  /* Hide connection lines on Android/mobile */
+  .global-impact-connection-lines {
+    display: none !important;
   }
 
   .global-impact-top-row {
@@ -5409,6 +5432,41 @@ footer section .container {
     font-size: 14px;
   }
 
+  /* Reduce gaps between sections for Android/mobile */
+  section {
+    padding: 48px 0 !important;
+  }
+
+  /* Reduce gap 1: Between WhatWeDo (Learn More) and GlobalImpact */
+  #impact {
+    padding-top: 32px !important;
+    margin-top: -24px;
+  }
+
+  /* Reduce gap 2: Between GlobalImpact and Resources */
+  #insights {
+    padding-top: 32px !important;
+    margin-top: -24px;
+  }
+
+  /* Reduce gap 3: Between Leadership and CoreValues */
+  #values {
+    padding-top: 32px !important;
+    margin-top: -24px;
+  }
+
+  /* Reduce gap 4: Between GlobalImpact and Partnerships (if applicable) */
+  #partners {
+    padding-top: 32px !important;
+    margin-top: -24px;
+  }
+
+  /* Reduce gap 5: Between Resources and Leadership */
+  #leadership {
+    padding-top: 32px !important;
+    margin-top: -24px;
+  }
+
   /* Global Impact section - small mobile */
   .global-impact-title {
     font-size: 24px;
@@ -5419,7 +5477,13 @@ footer section .container {
   }
 
   .global-impact-dashboard {
-    padding: 20px;
+    padding: 28px !important;
+    margin: 0 12px;
+  }
+
+  /* Hide connection lines on small Android/mobile */
+  .global-impact-connection-lines {
+    display: none !important;
   }
 
   .global-impact-hub {
@@ -5634,7 +5698,17 @@ footer section .container {
   }
   
   section {
-    padding: 48px 0;
+    padding: 40px 0 !important;
+  }
+
+  /* Further reduce gaps for small Android devices */
+  #impact,
+  #insights,
+  #values,
+  #partners,
+  #leadership {
+    padding-top: 24px !important;
+    margin-top: -16px;
   }
   
   /* Typography adjustments for mobile */

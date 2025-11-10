@@ -20,8 +20,14 @@
   /* Innovation section - stack vertically */
   .page-innovation__content-wrapper {
     flex-direction: column !important;
-    gap: 40px !important;
+    gap: 24px !important; /* Reduced gap for Android */
     align-items: center !important;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .page-innovation {
+    padding: 24px 0 !important; /* Reduced and even spacing for Android */
   }
 
   .page-innovation__content-wrapper > div:first-child {
@@ -128,13 +134,15 @@
   }
 
   .page-innovation {
-    padding: 40px 0 !important;
+    padding: 24px 0 !important; /* Reduced and even spacing (top and bottom equal) */
   }
 
   .page-innovation__content-wrapper {
     flex-direction: column !important;
-    gap: 32px !important;
+    gap: 24px !important; /* Reduced gap between image and text */
     padding: 0 20px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .page-innovation__content-wrapper > div:first-child {

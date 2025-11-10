@@ -753,35 +753,86 @@
     font-size: 18px;
   }
 
+  /* Journey Timeline Section - Android Layout */
   .about-timeline-item {
     flex-direction: column !important;
-    margin-bottom: 48px;
+    margin-bottom: 0; /* Remove bottom margin */
+    position: relative;
+    width: 100%; /* Ensure full width for proper centering */
   }
 
   .about-timeline-content-wrapper {
     max-width: 100%;
     margin-right: 0 !important;
     margin-left: 0 !important;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Remove bottom margin */
+    position: relative;
   }
 
+  /* Add connecting line from card to icon */
+  .about-timeline-content-wrapper::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -24px; /* Half of icon size (48px) */
+    width: 2px;
+    height: 24px;
+    background-color: #0A4EFF;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  /* Position icon exactly in the middle between cards - centered on blue line */
   .about-timeline-dot {
-    position: relative;
-    left: auto;
-    transform: none;
-    margin: 0 auto;
+    position: absolute !important;
+    left: 50% !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important; /* Remove all margins */
+    z-index: 2;
+    background-color: #FFFFFF; /* White background for icon */
+    border: 2px solid #0A4EFF;
+    border-radius: 50%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+  
+  /* Position icon after the card, centered on blue line - outside the card */
+  /* The line from card extends 24px below, so icon should be at the end of that line */
+  .about-timeline-item .about-timeline-content-wrapper ~ .about-timeline-dot {
+    top: calc(100% + 24px) !important; /* Position at end of 24px line below content-wrapper */
+    margin-top: 0 !important;
+    transform: translateX(-50%) translateY(-50%) !important; /* Center horizontally and vertically on the line */
+  }
+
+  /* Add connecting line from icon to next card - extends to touch next card */
+  .about-timeline-dot::after {
+    display: none !important; /* Hide line from icon to next card for Android */
+  }
+
+  /* Hide line after the last icon */
+  .about-timeline-item:last-child .about-timeline-dot::after {
+    display: none;
   }
 
   .about-timeline-spacer {
     display: none;
   }
 
+  /* Show timeline line but make it invisible (we'll use pseudo-elements instead) */
   .about-timeline-line {
     display: none;
   }
 
   .about-timeline-card {
     padding: 24px;
+    margin-bottom: 0;
   }
 
   .about-timeline-card-title {
@@ -818,7 +869,7 @@
 
   /* Team Section */
   .about-team {
-    padding: 64px 0;
+    padding: 64px 0 32px 0; /* Reduced bottom padding to reduce gap before Global Presence */
   }
 
   .about-team-title {
@@ -841,7 +892,7 @@
 
   /* Global Presence Section */
   .about-global {
-    padding: 64px 0;
+    padding: 32px 0 64px 0; /* Reduced top padding to reduce gap after Team section */
   }
 
   .about-global-content {
@@ -1104,7 +1155,7 @@
 
   /* Team Section */
   .about-team {
-    padding: 48px 0;
+    padding: 48px 0 24px 0; /* Reduced bottom padding to reduce gap before Global Presence */
   }
 
   .about-team-header {
@@ -1157,7 +1208,7 @@
 
   /* Global Presence Section */
   .about-global {
-    padding: 48px 0;
+    padding: 24px 0 48px 0; /* Reduced top padding to reduce gap after Team section */
   }
 
   .about-global-content {
@@ -1167,6 +1218,7 @@
   .about-global-title {
     font-size: 28px;
     margin-bottom: 20px;
+    text-align: center !important; /* Center heading for Android */
   }
 
   .about-global-description {
@@ -1288,9 +1340,34 @@
     font-size: 14px;
   }
 
+  /* Further adjustments for small Android devices */
+  .about-timeline-content-wrapper::after {
+    bottom: -18px; /* Half of icon size (36px) */
+    height: 18px;
+  }
+
   .about-timeline-dot {
+    position: absolute !important;
+    left: 50% !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: translateX(-50%) !important;
     width: 36px;
     height: 36px;
+    margin: 0 !important; /* Remove all margins */
+    flex-shrink: 0;
+  }
+  
+  /* Position icon after the card, centered on blue line - small Android */
+  /* The line from card extends 18px below, so icon should be at the end of that line */
+  .about-timeline-item .about-timeline-content-wrapper ~ .about-timeline-dot {
+    top: calc(100% + 18px) !important; /* Position at end of 18px line below content-wrapper */
+    margin-top: 0 !important;
+    transform: translateX(-50%) translateY(-50%) !important; /* Center horizontally and vertically on the line */
+  }
+
+  .about-timeline-dot::after {
+    display: none !important; /* Hide line from icon to next card for Android */
   }
 
   .about-timeline-dot .image-placeholder,
@@ -1341,7 +1418,7 @@
 
   /* Team Section */
   .about-team {
-    padding: 40px 0;
+    padding: 40px 0 20px 0; /* Reduced bottom padding to reduce gap before Global Presence */
   }
 
   .about-team-title {
@@ -1374,11 +1451,12 @@
 
   /* Global Presence Section */
   .about-global {
-    padding: 40px 0;
+    padding: 20px 0 40px 0; /* Reduced top padding to reduce gap after Team section */
   }
 
   .about-global-title {
     font-size: 24px;
+    text-align: center !important; /* Center heading for Android */
   }
 
   .about-global-description {
