@@ -387,9 +387,9 @@ export function WeeklyCyber(): React.ReactElement {
               <div className="advisory-item">
                 <div className="advisory-icon advisory-icon-blue">👥</div>
                 <div className="advisory-content">
-                  <h3 className="advisory-title">Incident Response Training</h3>
+                  <h3 className="advisory-title">Network Monitoring</h3>
                   <p className="advisory-description">
-                    Conduct incident response tabletop exercises simulating supply chain compromise scenarios.
+                    Monitor network traffic for anomalous encryption patterns and outbound connections.
                   </p>
                 </div>
               </div>
@@ -397,9 +397,9 @@ export function WeeklyCyber(): React.ReactElement {
               <div className="advisory-item">
                 <div className="advisory-icon advisory-icon-blue">❄️</div>
                 <div className="advisory-content">
-                  <h3 className="advisory-title">Network Monitoring</h3>
+                  <h3 className="advisory-title">Incident Response Training</h3>
                   <p className="advisory-description">
-                    Monitor network traffic for anomalous encryption patterns and outbound connections.
+                    Conduct incident response tabletop exercises simulating supply chain compromise scenarios.
                   </p>
                 </div>
               </div>
