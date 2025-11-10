@@ -42,10 +42,10 @@ export function GlobalImpact(): React.ReactElement {
         {/* Section Header */}
         <div className="global-impact-header">
           <h2 className="global-impact-title">
-            Global Security Impact
+          Global Intelligence Dashboard
           </h2>
           <p className="global-impact-description">
-            Real-time intelligence and performance metrics from Skysecure's AI-driven managed operations across Security, Data, and Infrastructure delivering measurable business resilience every day.
+          Real-time intelligence and performance metrics from Skysecure’s AI-powered managed ecosystem across Cyber, Data, and Infrastructure, driving resilience, performance, and growth for everyday business operations.
           </p>
         </div>
 

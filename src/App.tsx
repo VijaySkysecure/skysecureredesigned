@@ -8,7 +8,7 @@ import { WhatWeDo } from './sections/WhatWeDo';
 import { GlobalImpact } from './sections/GlobalImpact';
 import { Resources } from './sections/Resources';
 import { Leadership } from './sections/Leadership';
-import { CoreValues } from './sections/CoreValues';
+// import { CoreValues } from './sections/CoreValues';
 import { Careers } from './sections/Careers';
 import { Partnerships } from './sections/Partnerships';
 import { Contact } from './sections/Contact';
@@ -218,13 +218,13 @@ export function App(): React.ReactElement {
       <main>
         <Hero />
         <WhoWeAre />
-        <StrategicVision />
         <WhatWeDo />
+        <StrategicVision />
         {/* <SecuritySolutions /> */}
         <GlobalImpact />
         <Resources />
         <Leadership />
-        <CoreValues />
+        {/* <CoreValues /> */}
         <Careers />
         <Partnerships />
         <Contact />

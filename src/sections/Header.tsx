@@ -6,17 +6,10 @@ type NavLink = {
   href?: string;
   menu?: Array<{ label: string; href: string }>;
   flagImageName?: string;
+  iconImageName?: string;
 };
 
 const NAV_ITEMS: NavLink[] = [
-  {
-    label: 'Company',
-    href: '#company',
-    menu: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Contact Us', href: '/contact' },
-    ],
-  },
   {
     label: 'Solutions',
     href: '#solutions',
@@ -26,12 +19,22 @@ const NAV_ITEMS: NavLink[] = [
     ],
   },
   {
-    label: 'Product',
-    href: '#product',
-    menu: [
-      { label: 'Marketplace', href: 'https://shop.skysecure.ai/' },
-      { label: 'Realize', href: '/realize' },
-    ],
+    label: 'Marketplace',
+    href: 'https://shop.skysecure.ai/',
+  },
+  {
+    label: 'About Us',
+    href: '/about',
+  },
+  {
+    label: 'Contact Us',
+    href: '/contact',
+    iconImageName: 'headers/contact.png',
+  },
+  {
+    label: 'Knowledge and Resources',
+    href: '/#insights',
+    iconImageName: 'headers/knowledge.png',
   },
 ];
 
@@ -283,7 +286,7 @@ export function Header(): React.ReactElement {
                     </>
                   ) : (
                     <a 
-                      className="header__link"
+                      className={`header__link${item.iconImageName ? ' header__link--icon' : ''}`}
                       href={item.href}
                       onClick={(e) => {
                         if (item.href?.startsWith('/')) {
@@ -292,8 +295,23 @@ export function Header(): React.ReactElement {
                         }
                         closeMobileMenu();
                       }}
+                      title={item.iconImageName ? item.label : undefined}
                     >
-                      {item.label}
+                      {item.iconImageName ? (
+                        <>
+                          <ImagePlaceholder
+                            label={item.label}
+                            imageName={item.iconImageName}
+                            width={24}
+                            height={24}
+                            borderRadius={0}
+                            className="header__icon image-placeholder--bare"
+                          />
+                          <span className="header__icon-text">{item.label}</span>
+                        </>
+                      ) : (
+                        item.label
+                      )}
                     </a>
                   )}
                 </li>

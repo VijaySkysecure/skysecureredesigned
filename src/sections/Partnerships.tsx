@@ -32,9 +32,9 @@ export function Partnerships(): React.ReactElement {
     <section className="section--muted" id="partners">
       <div className="container">
         <div className="partnerships-header">
-          <h2 className="partnerships-title">Strategic Partnerships</h2>
+          <h2 className="partnerships-title">Strategic Partnerships that Power Your Business Excellence</h2>
           <p className="partnerships-description">
-          Empowering enterprises through trusted alliances with global technology leaders. 
+          Skysecure partners with the world’s leading technology providers to deliver secure, intelligent, and scalable solutions. Through these strategic alliances, we bring together innovation and expertise that help businesses accelerate transformation and achieve operational excellence.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export function Partnerships(): React.ReactElement {
               <div className="microsoft-partner-content">
                 <h3 className="microsoft-partner-title">Microsoft Solutions Partner</h3>
                 <p className="microsoft-partner-description">
-                As a certified Microsoft Solutions Partner, Skysecure delivers end-to-end managed services powered by Azure, Sentinel, Defender, and Purview.
+                As a certified Microsoft Solutions Partner, Skysecure delivers end-to-end managed services built on the strength of Azure, Sentinel, Defender, and Purview. Our partnership enables enterprises to unify cloud operations, enhance security visibility, and achieve seamless compliance across their digital ecosystem.
                 </p>
                 <ul className="microsoft-integrations">
                   {MICROSOFT_INTEGRATIONS.map((integration, index) => (
@@ -63,8 +63,8 @@ export function Partnerships(): React.ReactElement {
               <div className="microsoft-partner-content">
                 <h3 className="microsoft-partner-title">Palo Alto Networks</h3>
                 <p className="microsoft-partner-description">
-                Skysecure partners with Palo Alto Networks to deliver XDR and XSIAM-based multi-tenant SOC solutions that combine AI automation with 24×7 human expertise.
-                </p>
+                Through our partnership with Palo Alto Networks to deliver XDR and XSIAM-based multi-tenant SOC solutions that combine AI automation with 24×7 expert oversight. Together, we help enterprises achieve faster detection, smarter response, and unified security visibility across every environment.               
+                 </p>
                 <ul className="microsoft-integrations">
                   {PALO_ALTO_INTEGRATIONS.map((integration, index) => (
                     <li key={index} className="integration-item">
@@ -81,7 +81,7 @@ export function Partnerships(): React.ReactElement {
               <div className="microsoft-partner-content">
                 <h3 className="microsoft-partner-title">Commvault</h3>
                 <p className="microsoft-partner-description">
-                With Commvault's enterprise backup and disaster recovery solutions, Skysecure ensures complete data availability, retention, and compliance.
+                Through our partnership with Commvault, Skysecure delivers enterprise-grade data protection and recovery solutions that ensure uninterrupted availability, compliance, and business continuity. From secure backups to policy-driven lifecycle governance, we help organizations safeguard critical workloads across cloud and hybrid environments.
                 </p>
                 <ul className="microsoft-integrations">
                   {COMMVAULT_INTEGRATIONS.map((integration, index) => (
@@ -99,7 +99,7 @@ export function Partnerships(): React.ReactElement {
               <div className="microsoft-partner-content">
                 <h3 className="microsoft-partner-title">Fortinet, CrowdStrike, IBM & Beyond</h3>
                 <p className="microsoft-partner-description">
-                Skysecure's broader ecosystem includes Fortinet, CrowdStrike and IBM unified under a single managed operations framework for maximum protection and efficiency.
+                Skysecure’s extended ecosystem unites global leaders like Fortinet, CrowdStrike, and IBM under a unified managed framework, delivering integrated protection, intelligence, and automation across every layer of enterprise security.
                 </p>
                 <ul className="microsoft-integrations">
                   {IBM_INTEGRATIONS.map((integration, index) => (

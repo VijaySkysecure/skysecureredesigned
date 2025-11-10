@@ -5,7 +5,7 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 const VISION_CARDS = [
   {
     title: 'Data Intelligence',
-    description: 'Harness the power of big data analytics and machine learning to identify patterns, predict threats, and optimize security operations.',
+    description: 'Because decisions are only as good as the data behind them. With Skysecure, businesses gain real-time visibility, predictive insight, and data they can trust, not just to react, but to act ahead of risk. Our intelligence layer turns every byte of information into foresight that drives confident, faster, and smarter business growth.',
     bulletPoints: [
       'Real-time threat intelligence',
       'Predictive analytics',
@@ -15,7 +15,7 @@ const VISION_CARDS = [
   },
   {
     title: 'Advanced Cybersecurity',
-    description: 'Next-generation security frameworks combining zero-trust architecture with AI-powered threat detection and response.',
+    description: 'Skysecure gives businesses the confidence to operate without disruption by detecting, learning, and responding before threats impact performance or reputation. Our zero-trust framework and AI-driven automation create continuous, adaptive protection that keeps you resilient in a world where risk never sleeps. Because true security isn’t about reacting — it’s about staying ahead.',
     bulletPoints: [
       'Zero-trust security model',
       'Automated incident response',
@@ -25,7 +25,7 @@ const VISION_CARDS = [
   },
   {
     title: 'AI Innovation',
-    description: 'Cutting-edge artificial intelligence and machine learning technologies that evolve and adapt to emerging cyber threats.',
+    description: 'Skysecure builds and manages autonomous AI Agents that think, learn, and act across your operations, reducing human effort while accelerating precision, speed, and impact. Each agent evolves with your business, creating a self-optimizing ecosystem that keeps you ahead of change.',
     bulletPoints: [
       'Machine learning algorithms',
       'Natural language processing',
@@ -40,8 +40,9 @@ export function StrategicVision(): React.ReactElement {
     <section className="section--muted" id="vision">
       <div className="container">
         <SectionHeader
-          title="Our Strategic Vision"
-          description="To build the world’s most intelligent and secure managed services ecosystem, where AI, data, and automation work together to protect, govern, and scale every enterprise with trust and precision."
+          title="Why Leading Businesses Choose Skysecure — and You Should Too"
+          description="For one reason: we deliver measurable, transformative impact.
+          By combining Cybersecurity, Data, Infrastructure, and AI, we help organizations reduce costs, predict risks, accelerate performance, and scale with confidence. It’s the smarter, more secure way to grow."
         />
         <div className="card-grid">
           {VISION_CARDS.map((card) => (

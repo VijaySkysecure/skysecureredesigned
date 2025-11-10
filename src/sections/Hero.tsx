@@ -46,22 +46,24 @@ export function Hero(): React.ReactElement {
             <span style={{ color: 'rgba(75, 85, 99, 1)' }}>Business Excellence</span><br />
           </h1>
           <p className="hero__description">
-          Empowering enterprises with an intelligent, unified MSP framework that automates operations, strengthens cyber resilience, and ensures data-driven growth, all within a secure cloud ecosystem.
+          Skysecure helps enterprises simplify complex IT environments through a intelligent unified Managed Services framework built on four intelligent pillars: Cyber, Data, Infrastructure, and AI.
+          <br />
+          We protect, scale, and automate your operations within a secure cloud ecosystem — so your business runs smarter, safer, and stronger every day.
           </p>
           <div className="hero__cta">
             <button 
               type="button" 
               className="button"
               style={{ 
-                width: '250px', 
+                width: '325px', 
                 height: '52px', 
                 borderRadius: '8px' 
               }}
               onClick={() => {
-                window.location.href = '/dpdp-act-2023';
+                window.location.href = '/managed-services';
               }}
             >
-              Learn More About DPDP
+              Explore Our Unified MSP Solutions
             </button>
           </div>
         </div>
@@ -90,6 +92,11 @@ export function Hero(): React.ReactElement {
               <div className="stat-value">{Math.floor(animated500)}+</div>
               <div className="stat-label">Enterprise Clients</div>
             </div>
+          </div>
+          <div className="hero__certifications-box">
+            <div className="cert-item">Microsoft Partner</div>
+            <div className="cert-item">ISO 27001 Certified</div>
+            <div className="cert-item">DPDP Compliant</div>
           </div>
         </div>
       </div>

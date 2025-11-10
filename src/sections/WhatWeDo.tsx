@@ -6,44 +6,44 @@ const CAPABILITIES = [
   {
     title: 'Security Operations',
     subtitle: 'PROACTIVE RISK MANAGEMENT',
-    description: 'We manage your entire security lifecycle, from licensing to continuous protection. Our AI-powered SOC provides real-time detection...',
+    description: 'Our AI-powered Security Operations Center (SOC) monitors, detects, and neutralizes threats before they can disrupt your business. From endpoint to cloud, we safeguard your entire security lifecycle.',
     bulletPoints: [
-      'Fewer incidents',
-      'Faster containment',
-      'Assured governance 24/7'
+      'Reduced Incidents',
+      'Rapid Containment',
+      'Assured 24X7 Governance'
     ],
     imageName: 'homepage/icon-operations.png',
   },
   {
     title: 'AI Agents',
-    subtitle: 'TAILORED SOLUTIONS',
-    description: 'We design, license, and manage custom AI agents specifically crafted to address your unique business challenges. From automating...',
+    subtitle: 'Intelligence That Works for You',
+    description: 'We design and manage custom AI agents that automate repetitive tasks, enhance decision-making, and elevate team productivity, giving your business the agility to move faster and perform better.',
     bulletPoints: [
-      'Lower operational costs',
-      'Faster execution',
-      'Improved productivity across teams'
+      'Cut operational costs and time',
+      'Accelerate execution with real-time intelligence',
+      'Empower teams with intelligent automation'
     ],
     imageName: 'homepage/icon-compliance.png',
   },
   {
     title: 'Data Operations',
-    subtitle: 'Unlock Business Intelligence',
+    subtitle: 'Turn Data into Decisions',
     description: 'We design and manage governed data ecosystems that unlock the full potential of your business intelligence while ensuring...',
     bulletPoints: [
-      'Unified visibility',
-      'Automated compliance',
-      'Data you can trust'
+      'Real-time visibility',
+      'End-to-end governance',
+      'Accurate insights for every decision'
     ],
     imageName: 'homepage/icon-cloud.png',
   },
   {
     title: 'Infrastructure Operations',
-    subtitle: 'Scalable Cloud Infrastructure',
-    description: 'We architect, license, and manage cloud-ready infrastructure designed for reliability and scalability. From deployment to ongoing...',
+    subtitle: 'Reliable, Scalable, and Cloud-Ready',
+    description: 'We build and manage cloud infrastructure that keeps your business running smoothly, securely, and at scale. From planning and deployment to continuous optimization, we deliver performance, reliability, and efficiency that evolves with your needs.',
     bulletPoints: [
-      'Always-on resilience',
-      'Predictable costs',
-      'Simplified cloud management'
+      'Always on and resilient',
+      'Predictable and transparent costs',
+      'Simple, secure, and scalable management'
     ],
     imageName: 'homepage/icon-risk.png',
   },
@@ -54,8 +54,8 @@ export function WhatWeDo(): React.ReactElement {
     <section className="section--light" id="services">
       <div className="container">
         <SectionHeader
-          title="What We Do"
-          description="We provide exclusive services for your business"
+          title="Your Entire IT, Managed Intelligently"
+          description="Skysecure helps you do more with less, fewer vendors, fewer tools, more outcomes. Our unified MSP model automates operations, reduces downtime, and delivers measurable efficiency across your entire IT ecosystem."
         />
         <div 
           className="what-we-do-grid"
