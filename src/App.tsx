@@ -9,7 +9,7 @@ import { GlobalImpact } from './sections/GlobalImpact';
 import { Resources } from './sections/Resources';
 import { Leadership } from './sections/Leadership';
 // import { CoreValues } from './sections/CoreValues';
-import { Careers } from './sections/Careers';
+// import { Careers } from './sections/Careers';
 import { Partnerships } from './sections/Partnerships';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
@@ -225,7 +225,7 @@ export function App(): React.ReactElement {
         <Resources />
         <Leadership />
         {/* <CoreValues /> */}
-        <Careers />
+        {/* <Careers /> */}
         <Partnerships />
         <Contact />
       </main>

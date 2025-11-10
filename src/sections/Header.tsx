@@ -29,7 +29,6 @@ const NAV_ITEMS: NavLink[] = [
   {
     label: 'Contact Us',
     href: '/contact',
-    iconImageName: 'headers/contact.png',
   },
   {
     label: 'Knowledge and Resources',
