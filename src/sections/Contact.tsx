@@ -143,89 +143,13 @@ export function Contact(): React.ReactElement {
     <section className="section--light" id="contact">
       <div className="container">
         <div className="contact-header">
-          <h2 className="contact-title">Get in Touch</h2>
+          <h2 className="contact-title">Ready to Secure, Scale, and Thrive? Let’s Talk</h2>
           <p className="contact-description">
-            Ready to transform your cybersecurity posture? Let's discuss how we can protect your organization.
+          Get in touch with us and the first step toward secure, intelligent growth. We’ll help you move forward with clarity and confidence. No pressure, just a genuine conversation about what’s next for your business.
           </p>
         </div>
 
         <div className="contact-content">
-          <div className="contact-left">
-            <div className="contact-info-section">
-              <h3 className="contact-section-title">Contact Information</h3>
-              <div className="contact-info-list">
-                <div className="contact-info-item">
-                  <div className="contact-icon">
-                    <ImagePlaceholder
-                      label="Phone icon"
-                      imageName="homepage/icon-phone.png"
-                      width={28}
-                      height={28}
-                      borderRadius={0}
-                    />
-                  </div>
-                  <div className="contact-info-content">
-                    <span className="contact-info-title">Phone</span>
-                    <span className="contact-text">+(91) 73533 55526</span>
-                  </div>
-                </div>
-                <div className="contact-info-item">
-                  <div className="contact-icon">
-                    <ImagePlaceholder
-                      label="Email icon"
-                      imageName="homepage/icon-email.png"
-                      width={28}
-                      height={28}
-                      borderRadius={0}
-                    />
-                  </div>
-                  <div className="contact-info-content">
-                    <span className="contact-info-title">Email</span>
-                    <span className="contact-text">sales@skysecure.ai</span>
-                  </div>
-                </div>
-                <div className="contact-info-item">
-                  <div className="contact-icon">
-                    <ImagePlaceholder
-                      label="Clock icon"
-                      imageName="homepage/icon-clock.png"
-                      width={28}
-                      height={28}
-                      borderRadius={0}
-                    />
-                  </div>
-                  <div className="contact-info-content">
-                    <span className="contact-info-title">Support Hours</span>
-                    <span className="contact-text">9:30 AM - 6:30 PM Business</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="global-offices-section">
-              <h3 className="contact-section-title">Global Offices</h3>
-              <div className="offices-list">
-                {GLOBAL_OFFICES.map((office, index) => (
-                  <div key={index} className="office-card">
-                    <div className="office-header">
-                      <div className="office-icon">
-                        <ImagePlaceholder
-                          label="Location icon"
-                          imageName="homepage/icon-location.png"
-                          width={10}
-                          height={17}
-                          borderRadius={0}
-                        />
-                      </div>
-                      <span className="office-city">{office.city}</span>
-                    </div>
-                    <p className="office-address">{office.address}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
           <div className="contact-right">
             <div className="consultation-form-card">
               <h3 className="form-title">Request a Consultation</h3>
@@ -364,6 +288,82 @@ export function Contact(): React.ReactElement {
                   {isLoading ? 'Submitting...' : 'Request Consultation'}
                 </button>
               </form>
+            </div>
+          </div>
+
+          <div className="contact-left">
+            <div className="contact-info-section">
+              <h3 className="contact-section-title">Contact Information</h3>
+              <div className="contact-info-list">
+                <div className="contact-info-item">
+                  <div className="contact-icon">
+                    <ImagePlaceholder
+                      label="Phone icon"
+                      imageName="homepage/icon-phone.png"
+                      width={28}
+                      height={28}
+                      borderRadius={0}
+                    />
+                  </div>
+                  <div className="contact-info-content">
+                    <span className="contact-info-title">Phone</span>
+                    <span className="contact-text">+(91) 73533 55526</span>
+                  </div>
+                </div>
+                <div className="contact-info-item">
+                  <div className="contact-icon">
+                    <ImagePlaceholder
+                      label="Email icon"
+                      imageName="homepage/icon-email.png"
+                      width={28}
+                      height={28}
+                      borderRadius={0}
+                    />
+                  </div>
+                  <div className="contact-info-content">
+                    <span className="contact-info-title">Email</span>
+                    <span className="contact-text">sales@skysecure.ai</span>
+                  </div>
+                </div>
+                <div className="contact-info-item">
+                  <div className="contact-icon">
+                    <ImagePlaceholder
+                      label="Clock icon"
+                      imageName="homepage/icon-clock.png"
+                      width={28}
+                      height={28}
+                      borderRadius={0}
+                    />
+                  </div>
+                  <div className="contact-info-content">
+                    <span className="contact-info-title">Business Support Hours</span>
+                    <span className="contact-text">9:30 AM - 6:30 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="global-offices-section">
+              <h3 className="contact-section-title">Global Offices</h3>
+              <div className="offices-list">
+                {GLOBAL_OFFICES.map((office, index) => (
+                  <div key={index} className="office-card">
+                    <div className="office-header">
+                      <div className="office-icon">
+                        <ImagePlaceholder
+                          label="Location icon"
+                          imageName="homepage/icon-location.png"
+                          width={10}
+                          height={17}
+                          borderRadius={0}
+                        />
+                      </div>
+                      <span className="office-city">{office.city}</span>
+                    </div>
+                    <p className="office-address">{office.address}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

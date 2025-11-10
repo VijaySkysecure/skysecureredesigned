@@ -31,6 +31,41 @@ export function Partnerships(): React.ReactElement {
   return (
     <section className="section--muted" id="partners">
       <div className="container">
+        <div className="tech-ecosystem-card" style={{ marginBottom: '80px' }}>
+          <h3 className="tech-ecosystem-title">Technology Ecosystem</h3>
+          <div className="tech-ecosystem-carousel">
+            <div className="carousel-track">
+              <div className="carousel-item">
+                <ImagePlaceholder
+                  label="Technology ecosystem logos"
+                  imageName="homepage/tech-eco.png"
+                  width={800}
+                  height={120}
+                  borderRadius={0}
+                />
+              </div>
+              <div className="carousel-item">
+                <ImagePlaceholder
+                  label="Technology ecosystem logos"
+                  imageName="homepage/tech-eco.png"
+                  width={800}
+                  height={120}
+                  borderRadius={0}
+                />
+              </div>
+              <div className="carousel-item">
+                <ImagePlaceholder
+                  label="Technology ecosystem logos"
+                  imageName="homepage/tech-eco.png"
+                  width={800}
+                  height={120}
+                  borderRadius={0}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="partnerships-header">
           <h2 className="partnerships-title">Strategic Partnerships that Power Your Business Excellence</h2>
           <p className="partnerships-description">
@@ -128,41 +163,6 @@ export function Partnerships(): React.ReactElement {
               </div>
               <div className="specialization-card">
                 <h4 className="specialization-card-title">AI Agent Development & Managed Automation</h4>
-              </div>
-            </div>
-          </div>
-
-          <div className="tech-ecosystem-card">
-            <h3 className="tech-ecosystem-title">Technology Ecosystem</h3>
-            <div className="tech-ecosystem-carousel">
-              <div className="carousel-track">
-                <div className="carousel-item">
-                  <ImagePlaceholder
-                    label="Technology ecosystem logos"
-                    imageName="homepage/tech-eco.png"
-                    width={800}
-                    height={120}
-                    borderRadius={0}
-                  />
-                </div>
-                <div className="carousel-item">
-                  <ImagePlaceholder
-                    label="Technology ecosystem logos"
-                    imageName="homepage/tech-eco.png"
-                    width={800}
-                    height={120}
-                    borderRadius={0}
-                  />
-                </div>
-                <div className="carousel-item">
-                  <ImagePlaceholder
-                    label="Technology ecosystem logos"
-                    imageName="homepage/tech-eco.png"
-                    width={800}
-                    height={120}
-                    borderRadius={0}
-                  />
-                </div>
               </div>
             </div>
           </div>
