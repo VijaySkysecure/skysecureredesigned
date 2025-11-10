@@ -149,7 +149,7 @@ export function Partnerships(): React.ReactElement {
           </div>
 
           {/* Our Specializations Section */}
-          <div className="specializations-section">
+          {/* <div className="specializations-section">
             <h3 className="specializations-title">Our Specializations</h3>
             <div className="specializations-grid">
               <div className="specialization-card">
@@ -165,7 +165,7 @@ export function Partnerships(): React.ReactElement {
                 <h4 className="specialization-card-title">AI Agent Development & Managed Automation</h4>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
