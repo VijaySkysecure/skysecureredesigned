@@ -182,8 +182,8 @@ export function Resources(): React.ReactElement {
     <section className="section--light" id="insights">
       <div className="container">
         <SectionHeader
-          title="Knowledge & Resources"
-          description="Stay informed with the latest cybersecurity insights, research, and industry analysis"
+          title="Skysecure’s Intelligence Hub"
+          description="Gain access to expert insights and practical strategies across Cybersecurity, Data, Infrastructure, and AI. By subscribing to our newsletter, you can get the latest insights delivered straight to your inbox. No noise, no commitments, unsubscribe anytime."
         />
         
         {/* Filter Toggle Bar */}
