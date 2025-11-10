@@ -444,51 +444,6 @@ export function WeeklyCyber(): React.ReactElement {
             <button className="contact-btn">Contact Skysecure Threat Intelligence Team</button>
           </div>
         </section>
-
-        {/* More from Skysecure Decode */}
-        <section className="more-content">
-          <div className="container-narrow">
-            <h2 className="section-title section-title-left">More from Skysecure Decode</h2>
-            
-            <div className="more-grid">
-              <div className="more-card">
-                <img src="/assets/img/knowledge/weekly_cyber_3.png" alt="Weekly Cyber 3" className="more-image" />
-                <div className="more-content-inner">
-                  <div className="more-badge">Daily Brief</div>
-                  <h3 className="more-title">Daily Threat Brief: Ransomware Evolution</h3>
-                  <p className="more-description">
-                    Comprehensive analysis of emerging ransomware tactics and defense strategies.
-                  </p>
-                  <a href="#" className="more-link">Read More →</a>
-                </div>
-              </div>
-
-              <div className="more-card">
-                <img src="/assets/img/knowledge/weekly_cyber_4.png" alt="Weekly Cyber 4" className="more-image" />
-                <div className="more-content-inner">
-                  <div className="more-badge">Annual Report</div>
-                  <h3 className="more-title">AI-Driven Threat Detection: 2024 Report</h3>
-                  <p className="more-description">
-                    How artificial intelligence is revolutionizing cybersecurity defense mechanisms.
-                  </p>
-                  <a href="#" className="more-link">Read More →</a>
-                </div>
-              </div>
-
-              <div className="more-card">
-                <img src="/assets/img/knowledge/weekly_cyber_5.png" alt="Weekly Cyber 5" className="more-image" />
-                <div className="more-content-inner">
-                  <div className="more-badge">Best Practices</div>
-                  <h3 className="more-title">Zero Trust in Hybrid Cloud Environments</h3>
-                  <p className="more-description">
-                    Implementation guide for zero trust architecture in modern cloud infrastructure.
-                  </p>
-                  <a href="#" className="more-link">Read More →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
