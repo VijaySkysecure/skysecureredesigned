@@ -4633,6 +4633,10 @@ footer section .container {
 
   .specialization-card {
     padding: 20px 16px;
+    min-height: 110px; /* Match Cloud Infrastructure Optimization card height on Android */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .specialization-card-title {
@@ -5204,6 +5208,10 @@ footer section .container {
 
   .specialization-card {
     padding: 16px 12px;
+    min-height: 100px; /* Match Cloud Infrastructure Optimization card height on small Android */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .specialization-card-title {

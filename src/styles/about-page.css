@@ -92,15 +92,28 @@
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: visible;
 }
 
 .about-mission-vision-icon {
-  width: 64px;
-  height: 64px;
+  width: 88px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+  box-sizing: border-box;
+  padding: 8px;
+  overflow: visible;
+}
+
+.about-mission-vision-icon .image-placeholder,
+.about-mission-vision-icon .image-placeholder__img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
 
 .about-mission-vision-card-title {
@@ -690,6 +703,7 @@
 
   .about-mission-vision-card {
     padding: 32px 28px;
+    overflow: visible;
   }
 
   .about-mission-vision-card-title {
@@ -963,12 +977,25 @@
 
   .about-mission-vision-card {
     padding: 24px 20px;
+    overflow: visible;
   }
 
   .about-mission-vision-icon {
-    width: 56px;
-    height: 56px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto 20px auto;
+    box-sizing: border-box;
+    padding: 6px;
+    overflow: visible;
+  }
+
+  .about-mission-vision-icon .image-placeholder,
+  .about-mission-vision-icon .image-placeholder__img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
   }
 
   .about-mission-vision-card-title {
@@ -1268,12 +1295,25 @@
 
   .about-mission-vision-card {
     padding: 20px 16px;
+    overflow: visible;
   }
 
   .about-mission-vision-icon {
-    width: 48px;
-    height: 48px;
+    width: 72px;
+    height: 72px;
     margin: 0 auto 20px auto;
+    box-sizing: border-box;
+    padding: 4px;
+    overflow: visible;
+  }
+
+  .about-mission-vision-icon .image-placeholder,
+  .about-mission-vision-icon .image-placeholder__img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
   }
 
   .about-mission-vision-card-title {

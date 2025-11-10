@@ -107,6 +107,7 @@
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  overflow: visible;
 }
 
 .contact-card:hover {
@@ -115,8 +116,8 @@
 }
 
 .contact-card-icon {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   margin: 0 auto 16px;
   background: #e8f4ff;
   border-radius: 50%;
@@ -124,6 +125,7 @@
   align-items: center;
   justify-content: center;
   color: #0066ff;
+  box-sizing: border-box;
 }
 
 .contact-card-title {
@@ -595,6 +597,7 @@
 
   .contact-card {
     padding: 24px 20px;
+    overflow: visible;
   }
 
   .contact-card-title {
@@ -720,12 +723,14 @@
 
   .contact-card {
     padding: 24px 20px;
+    overflow: visible;
   }
 
   .contact-card-icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     margin-bottom: 12px;
+    box-sizing: border-box;
   }
 
   .contact-card-title {
@@ -867,11 +872,13 @@
 
   .contact-card {
     padding: 20px 16px;
+    overflow: visible;
   }
 
   .contact-card-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
+    box-sizing: border-box;
   }
 
   .contact-card-title {
