@@ -393,24 +393,6 @@ export function WeeklyCyber(): React.ReactElement {
                   </p>
                 </div>
               </div>
-
-              <div className="advisory-item">
-                <div className="advisory-icon advisory-icon-blue">❄️</div>
-                <div className="advisory-content">
-                  <h3 className="advisory-title">Incident Response Training</h3>
-                  <p className="advisory-description">
-                    Conduct incident response tabletop exercises simulating supply chain compromise scenarios.
-                  </p>
-                </div>
-              </div>
-
-              <div className="subscribe-box">
-                <h3 className="subscribe-title">Subscribe for Weekly Updates</h3>
-                <p className="subscribe-description">
-                  Subscribe to weekly updates from Skysecure Decode and stay informed with actionable intelligence curated by our threat research experts.
-                </p>
-                <button className="subscribe-btn">Subscribe Now</button>
-              </div>
             </div>
           </div>
         </section>
