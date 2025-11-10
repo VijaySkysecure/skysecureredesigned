@@ -110,7 +110,7 @@ export function GlobalImpact(): React.ReactElement {
           {/* Central Hub with Intersecting Lines */}
           <div className="global-impact-hub">
             {/* Intersecting Lines */}
-            <div style={{ 
+            <div className="global-impact-connection-lines" style={{ 
               position: 'absolute',
               top: '50%',
               left: '50%',

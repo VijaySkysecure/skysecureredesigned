@@ -536,7 +536,7 @@
   justify-content: center;
 }
 
-.cta-button {
+.contact-cta-section .cta-button {
   padding: 16px 32px;
   font-size: 16px;
   font-weight: 600;
@@ -546,9 +546,15 @@
   border: 2px solid #fff;
 }
 
-.cta-button-primary {
-  background-color: #fff;
-  color: #2563eb;
+.contact-cta-section .cta-button-primary {
+  background-color: #fff !important;
+  color: #3366FF !important;
+  border: none !important;
+}
+
+.contact-cta-section .cta-button-primary:hover {
+  background-color: #f0f0f0 !important;
+  color: #3366FF !important;
 }
 
 .cta-button-secondary {
@@ -833,7 +839,7 @@
     align-items: center;
   }
 
-  .cta-button {
+  .contact-cta-section .cta-button {
     width: 100%;
     max-width: 160px;
     padding: 16px 20px;
@@ -956,7 +962,7 @@
     font-size: 14px;
   }
 
-  .cta-button {
+  .contact-cta-section .cta-button {
     max-width: 40%;
     padding: 14px 16px;
     font-size: 14px;
