@@ -870,12 +870,6 @@
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
-/* More Content Section */
-.more-content {
-  padding: 60px 0;
-  background-color: #f8fafc;
-}
-
 .more-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

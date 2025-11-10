@@ -195,6 +195,7 @@
   /* Hero Section */
   .blog-hero {
     padding: 40px 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .blog-hero .container {
@@ -246,6 +247,15 @@
 
   .executive-left > h2 {
     font-size: 24px !important;
+    text-align: center !important;
+  }
+
+  .executive-left .blog-section-title {
+    text-align: center !important;
+  }
+
+  .executive-left .blog-section-text {
+    text-align: center !important;
   }
 
   .summary-cards-wrapper {
@@ -255,11 +265,24 @@
 
   .project-overview-box {
     padding: 20px !important;
+    overflow: visible !important;
+  }
+
+  .project-overview-box .image-placeholder {
+    overflow: visible !important;
+    flex-shrink: 0 !important;
+  }
+
+  .project-overview-box .image-placeholder__img {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 
   /* Challenge Section */
   .challenge-section {
     padding: 40px 0 !important;
+    margin-bottom: 30px !important;
   }
 
   .challenge-section > h2 {
@@ -467,6 +490,7 @@
   /* Hero Section */
   .blog-hero {
     padding: 32px 0 !important;
+    margin-bottom: -100px !important;
   }
 
   .hero-wrapper > div:first-child h1 {
@@ -492,6 +516,15 @@
   /* Executive Summary */
   .executive-left > h2 {
     font-size: 20px !important;
+    text-align: center !important;
+  }
+
+  .executive-left .blog-section-title {
+    text-align: center !important;
+  }
+
+  .executive-left .blog-section-text {
+    text-align: center !important;
   }
 
   .blog-section-text {
@@ -516,6 +549,18 @@
 
   .project-overview-box {
     padding: 16px !important;
+    overflow: visible !important;
+  }
+
+  .project-overview-box .image-placeholder {
+    overflow: visible !important;
+    flex-shrink: 0 !important;
+  }
+
+  .project-overview-box .image-placeholder__img {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 
   .project-overview-box > h2 {
@@ -523,6 +568,10 @@
   }
 
   /* Challenge Section */
+  .challenge-section {
+    margin-bottom: 5px !important;
+  }
+
   .challenge-section > h2 {
     font-size: 20px !important;
   }
