@@ -7,6 +7,7 @@ type NavLink = {
   menu?: Array<{ label: string; href: string }>;
   flagImageName?: string;
   iconImageName?: string;
+  tooltip?: string;
 };
 
 const NAV_ITEMS: NavLink[] = [
@@ -34,6 +35,7 @@ const NAV_ITEMS: NavLink[] = [
     label: 'Knowledge and Resources',
     href: '/#insights',
     iconImageName: 'headers/knowledge.png',
+    tooltip: 'Intelligence hub',
   },
 ];
 
@@ -112,7 +114,10 @@ export function Header(): React.ReactElement {
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Element;
-      if (openMenu && !target.closest('.header__nav-item')) {
+      // In mobile view, don't close if clicking on trigger button or nav item
+      const isTriggerButton = isMobileMenuOpen && target.closest('.header__link--trigger');
+      const isNavItem = target.closest('.header__nav-item');
+      if (openMenu && !isNavItem && !isTriggerButton) {
         closeMenu();
       }
       if (isMobileMenuOpen && !target.closest('.site-header')) {
@@ -132,14 +137,31 @@ export function Header(): React.ReactElement {
     };
 
     if (openMenu || isMobileMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('keydown', handleEscapeKey);
-    }
+      // Use 'click' in mobile view to fire after onClick, 'mousedown' for desktop
+      const eventType = isMobileMenuOpen ? 'click' : 'mousedown';
+      
+      // In mobile view, delay listener registration to avoid catching the opening click
+      if (isMobileMenuOpen) {
+        const timeoutId = setTimeout(() => {
+          document.addEventListener(eventType, handleClickOutside);
+          document.addEventListener('keydown', handleEscapeKey);
+        }, 0);
 
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleEscapeKey);
-    };
+        return () => {
+          clearTimeout(timeoutId);
+          document.removeEventListener(eventType, handleClickOutside);
+          document.removeEventListener('keydown', handleEscapeKey);
+        };
+      } else {
+        document.addEventListener(eventType, handleClickOutside);
+        document.addEventListener('keydown', handleEscapeKey);
+
+        return () => {
+          document.removeEventListener(eventType, handleClickOutside);
+          document.removeEventListener('keydown', handleEscapeKey);
+        };
+      }
+    }
   }, [openMenu, isMobileMenuOpen]);
 
   const handleNavigation = (href: string): void => {
@@ -226,7 +248,7 @@ export function Header(): React.ReactElement {
                 <li
                   key={item.label}
                   className={`header__nav-item${hasMenu ? ' header__nav-item--has-menu' : ''}${isOpen ? ' is-open' : ''}`}
-                  onBlur={handleBlur}
+                  onBlur={!isMobileMenuOpen ? handleBlur : undefined}
                   onMouseEnter={hasMenu && !isMobileMenuOpen ? () => handleMouseEnter(item.label) : undefined}
                   onMouseLeave={hasMenu && !isMobileMenuOpen ? handleMouseLeave : undefined}
                 >
@@ -237,8 +259,13 @@ export function Header(): React.ReactElement {
                         className="header__link header__link--trigger"
                         aria-haspopup="true"
                         aria-expanded={isOpen}
-                        onClick={() => openMenuFor(item.label)}
-                        onFocus={() => openMenuFor(item.label)}
+                        onClick={(e) => {
+                          if (isMobileMenuOpen) {
+                            e.stopPropagation();
+                          }
+                          openMenuFor(item.label);
+                        }}
+                        onFocus={!isMobileMenuOpen ? () => openMenuFor(item.label) : undefined}
                         onMouseEnter={!isMobileMenuOpen ? () => handleMouseEnter(item.label) : undefined}
                       >
                         <span>{item.label}</span>
@@ -294,7 +321,7 @@ export function Header(): React.ReactElement {
                         }
                         closeMobileMenu();
                       }}
-                      title={item.iconImageName ? item.label : undefined}
+                      title={item.tooltip || (item.iconImageName ? item.label : undefined)}
                     >
                       {item.iconImageName ? (
                         <>
