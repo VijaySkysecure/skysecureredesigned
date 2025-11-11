@@ -7,18 +7,66 @@ import '../styles/professional-services.css';
 const STRATEGIC_APPROACH = [
   {
     icon: 'icon-shield',
-    title: 'Protect by Design',
-    description: 'We build security into your systems from the ground up, ensuring that your digital infrastructure is proactive, compliant, and resilient against modern cyber threats.'
+    title: 'Cybersecurity',
+    subtitle: 'Stay Ahead of Evolving Risks.',
+    description: 'Defend your entire infrastructure with enterprise-grade threat intelligence, managed detection, and continuous compliance.  ',
+    benefits: [
+      'Managed Detection & Response (MDR)',
+      'Endpoint & Network Security' ,
+      'Vulnerability Assessment & Penetration Testing (VAPT)'
+    ]
   },
   {
-    icon: 'icon-brain',
-    title: 'AI-Driven Defense',
-    description: 'Using intelligent analytics, automated detection, and behavior-based monitoring, we identify and neutralize threats before they disrupt your operations.'
+    icon: 'homepage/icon-assess.png',
+    title: 'Data',
+    subtitle: 'From Data to Revenue',
+    description: 'From Microsoft Fabric and Power BI to governed data lakes and ETL pipelines, we help businesses transform information into intelligent decisions that drive measurable results. ',
+    benefits: [
+      'Microsoft Fabric & Power BI Deployment',
+      'Data Lake Setup & Governance',
+      'ETL Pipeline Implementation',
+    ]
   },
   {
     icon: 'icon-person',
-    title: 'Expert Intelligence',
-    description: 'Our seasoned cybersecurity experts combine real-world experience and advanced tools to offer continuous, actionable intelligence.'
+    title: 'Infra ',
+    subtitle: 'Build for What’s Next',
+    description: 'From cloud migration and network design to Microsoft 365 and Azure workspace deployment, we help you scale operations securely, seamlessly, and without downtime. ',
+    benefits: [
+      'Cloud Migration & Virtualization ',
+      'Microsoft 365 & Azure Workspace Deployment',
+      ' Network Design & VPN Configuration'
+    ]
+  },
+  {
+    icon: 'knowledge/icon-aiagent.png',
+    title: 'AI Agents',
+    subtitle: 'Intelligence, Designed for You. ',
+    description: 'We design and deploy AI agents tailored to your business needs, from co-pilots that streamline daily operations. ',
+    benefits: [
+      'Custom AI Agent Development ',
+      'Workflow & Co-Pilot Automation', 
+      'Predictive and Generative AI ModelsPredictable costs'
+    ]
+  }
+];
+
+const TRUST_METRICS = [
+  {
+    number: '500 +',
+    description: 'successful deployments delivered worldwide'
+  },
+  {
+    number: '50 000 +',
+    description: 'licenses implemented and optimized'
+  },
+  {
+    number: '98 %',
+    description: 'client retention rate'
+  },
+  {
+    number: '10 +',
+    description: 'Trusted across industries including finance, manufacturing, healthcare & retail'
   }
 ];
 
@@ -64,10 +112,13 @@ export function ProfessionalServices(): React.ReactElement {
         <section className="page-hero">
           <div className="page-hero__content">
             <h1 className="page-hero__title" style={{ width: '850px' }}>
-              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Cybersecurity</span> & Licensing Services
+              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>
+                From Purchase to Performance,<br />
+                End-to-End Deployment - Done Right
+              </span>
             </h1>
             <p className="page-hero__description" style={{ marginLeft: '50px' }}>
-            Precision Security. Smarter Licensing. Complete Confidence.
+            Our expert team ensures your technology environment is seamlessly connected and optimized for performance. From licensing to configuration, we deliver smooth rollouts powered by certified expertise and ongoing support..
             </p>
           </div>
         </section>
@@ -76,8 +127,11 @@ export function ProfessionalServices(): React.ReactElement {
         <section className="page-intro">
           <div className="container">
             <div className="page-intro__text">
-              <p style={{ fontSize: '16px', marginLeft: '50px' }}>
-              Protect your business with end-to-end cybersecurity services and authorized software licensing solutions designed to keep your operations secure, compliant, and optimized. Our mission is to empower organizations with cutting-edge threat defense and reliable software asset management, ensuring digital safety, operational efficiency, and cost transparency.
+              <h2 className="page-values__title" style={{ textAlign: 'center' }}>
+                When technology meets expertise, transformation happens.
+              </h2>
+              <p style={{ fontSize: '16px', textAlign: 'center', color: 'var(--color-grey)', lineHeight: '1.6', marginTop: '24px', maxWidth: '900px', margin: '24px auto 0 auto' }}>
+                Deploying advanced tools is only half the journey. Making them work securely, efficiently, and at scale is where Skysecure's Professional Services make the difference. Our certified experts ensure every implementation drives faster adoption, lower risk, and higher ROI.
               </p>
             </div>
           </div>
@@ -87,64 +141,138 @@ export function ProfessionalServices(): React.ReactElement {
         <section className="page-values" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
           <div className="container">
             <div className="page-values__header">
-              <h2 className="page-values__title">Our Strategic Approach</h2>
+              <h2 className="page-values__title">Four Domains, One unified standard of precision, performance, and trust.</h2>
             </div>
             <div className="page-values__grid">
               {STRATEGIC_APPROACH.map((approach, index) => (
-                <div key={index} className="page-value-card">
-                  <div className="page-value-card__icon">
-                    <ImagePlaceholder
-                      label={approach.title}
-                      imageName={`securitysolutions/${approach.icon}.png`}
-                      width={50}
-                      height={50}
-                      borderRadius={0}
-                    />
+                <div key={index} className="page-value-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: '16px' }}>
+                    <div className="page-value-card__icon" style={{ marginBottom: 0, flexShrink: 0 }}>
+                      <ImagePlaceholder
+                        label={approach.title}
+                        imageName={approach.icon.includes('/') ? approach.icon : `securitysolutions/${approach.icon}.png`}
+                        width={50}
+                        height={50}
+                        borderRadius={0}
+                      />
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <h3 className="page-value-card__title" style={{ marginBottom: '4px' }}>{approach.title}</h3>
+                      <div style={{ fontSize: '12px', fontWeight: '600', color: 'rgba(37, 99, 235, 1)', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
+                        {approach.subtitle}
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="page-value-card__title">{approach.title}</h3>
-                  <p className="page-value-card__description">{approach.description}</p>
+                  <p className="page-value-card__description" style={{ marginBottom: '16px', flex: '1 1 auto', minHeight: '60px' }}>
+                    {approach.description}
+                  </p>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginTop: 'auto' }}>
+                    {approach.benefits.map((benefit, idx) => (
+                      <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', fontSize: '14px', color: 'var(--color-grey)' }}>
+                        <span style={{ color: 'rgba(37, 99, 235, 1)', fontWeight: 'bold' }}>✓</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Continuous Intelligence Section */}
-        <section className="page-innovation">
+        {/* Trusted by Businesses Section */}
+        <section className="page-innovation" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
           <div className="container">
-            <div className="page-innovation__content-wrapper" style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '80px',
-              maxWidth: '1200px',
-              margin: '0 auto'
+            <h2 className="page-values__title" style={{ textAlign: 'center', marginBottom: '48px' }}>
+              Trusted by Businesses That Demand Performance
+            </h2>
+            <div className="trust-metrics-grid" style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(2, 1fr)', 
+              gap: '24px', 
+              maxWidth: '1000px', 
+              margin: '0 auto' 
             }}>
-              <div style={{ flex: '1' }}>
-                <ImagePlaceholder
-                  label="Threat Hunting Network"
-                  imageName="securitysolutions/threat-hunting-network.png"
-                  width={560}
-                  height={360}
-                  borderRadius={0}
-                />
-              </div>
-              <div style={{ flex: '1' }}>
-                <h2 style={{ 
-                  fontSize: '32px', 
-                  fontWeight: '700', 
-                  color: 'var(--color-black)', 
-                  marginBottom: '24px',
-                  lineHeight: '1.2'
-                }}>Continuous Security & Compliance</h2>
-                <p style={{ 
-                  fontSize: '16px', 
-                  color: 'var(--color-grey)', 
-                  lineHeight: '1.6',
-                  margin: '0'
+              {TRUST_METRICS.map((metric, index) => (
+                <div key={index} style={{ 
+                  textAlign: 'center', 
+                  padding: '32px 24px',
+                  backgroundColor: 'var(--color-white)',
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 32px rgba(17, 24, 39, 0.12)'
                 }}>
-                  Our dedicated Security Operations Center (SOC) provides 24/7 monitoring, vulnerability assessments, and compliance audits. We ensure you remain aligned with ISO, GDPR, HIPAA, and industry standards while maintaining real-time visibility into your digital ecosystem. Stay ahead of attackers and compliance risks with continuous intelligence.
-                  </p>
+                  <div style={{ 
+                    fontSize: '36px', 
+                    fontWeight: '700', 
+                    color: 'rgba(37, 99, 235, 1)', 
+                    marginBottom: '8px',
+                    lineHeight: '1.2'
+                  }}>
+                    {metric.number}
+                  </div>
+                  <div style={{ 
+                    fontSize: '14px', 
+                    color: '#64748b', 
+                    lineHeight: '1.5' 
+                  }}>
+                    {metric.description}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Technology Ecosystem Section */}
+        <section className="page-innovation" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
+          <div className="container">
+            <div className="tech-ecosystem-card">
+              <h3 className="tech-ecosystem-title">Authorized and certified implementation partner for leading technology ecosystems:</h3>
+              <div className="tech-ecosystem-carousel">
+                <div className="carousel-track">
+                  <div className="carousel-item">
+                    <ImagePlaceholder
+                      label="Technology ecosystem logos"
+                      imageName="homepage/tech-eco.png"
+                      width={800}
+                      height={120}
+                      borderRadius={0}
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <ImagePlaceholder
+                      label="Technology ecosystem logos"
+                      imageName="homepage/tech-eco.png"
+                      width={800}
+                      height={120}
+                      borderRadius={0}
+                    />
+                  </div>
+                  <div className="carousel-item">
+                    <ImagePlaceholder
+                      label="Technology ecosystem logos"
+                      imageName="homepage/tech-eco.png"
+                      width={800}
+                      height={120}
+                      borderRadius={0}
+                    />
+                  </div>
+                </div>
               </div>
+            </div>
+            <div style={{ 
+              textAlign: 'center', 
+              marginTop: '48px', 
+              maxWidth: '900px', 
+              marginLeft: 'auto', 
+              marginRight: 'auto',
+              padding: '32px',
+              fontStyle: 'italic',
+              fontSize: '18px',
+              color: 'var(--color-grey)',
+              lineHeight: '1.6'
+            }}>
+              "Skysecure's deployment expertise gave us instant visibility and control — our rollout was smooth, secure, and on schedule." — Head of IT
             </div>
           </div>
         </section>
@@ -175,33 +303,24 @@ export function ProfessionalServices(): React.ReactElement {
           </div>
         </section>
 
-        {/* AI Precision Meets Human Expertise Section */}
-        <section className="page-intro">
-          <div className="container">
-            <div className="page-intro__text">
-              <h2 style={{ 
-                fontSize: '32px', 
-                fontWeight: '700', 
-                color: 'var(--color-black)', 
-                marginBottom: '24px',
-                textAlign: 'center',
-                lineHeight: '1.2'
-              }}>AI Precision Meets Human Expertise</h2>
-              <p style={{ fontSize: '16px', textAlign: 'center' }}>
-              Our blend of automation, AI analytics, and expert human insight ensures you get the most accurate and actionable security and licensing intelligence possible. From predictive threat detection to optimized license management, we secure every aspect of your digital journey.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="page-cta">
           <div className="container">
             <div className="page-cta__content">
-              <h2 className="page-cta__title">Don’t Wait for a Breach - Secure It Before It Happens</h2>
+              <h2 className="page-cta__title">Let's Build What's Next. </h2>
               <p className="page-cta__description">
-              Partner with us to fortify your business with the right balance of technology, expertise, and trust.<br></br>We deliver solutions tailored for organizations that take cybersecurity seriously.
+              From deployment to optimization, Skysecure is your trusted partner for scalable, secure technology infrastructures. 
               </p>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '32px' }}>
+                <button 
+                  className="mission-button mission-button--primary"
+                  onClick={() => {
+                    window.location.href = '/contact';
+                  }}
+                >
+                  Request a Consultation
+                </button>
+              </div>
             </div>
           </div>
         </section>
