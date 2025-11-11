@@ -273,7 +273,9 @@ export function Resources(): React.ReactElement {
                         className="author-avatar"
                       />
                       <span className="author-name">{resource.author}</span>
-                      <span className="resource-date">{resource.date}</span>
+                      {resource.type !== 'blog' && resource.date && (
+                        <span className="resource-date">{resource.date}</span>
+                      )}
                     </div>
                   )}
                   

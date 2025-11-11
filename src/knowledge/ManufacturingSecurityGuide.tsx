@@ -186,11 +186,11 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
               </div>
               <div className="blog-meta-item">
                 <ImagePlaceholder
-                  label="Author"
-                  imageName="knowledge/icon-person.png"
-                  width={14}
+                  label="Suresh Kumar"
+                  imageName="homepage/portrait1.png"
+                  width={24}
                   height={24}
-                  borderRadius={0}
+                  borderRadius={12}
                 />
                 <span>Suresh Kumar</span>
               </div>
