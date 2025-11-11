@@ -296,12 +296,14 @@
   .saas-cta-section {
     width: 100% !important;
     margin-left: 0 !important;
-    padding: 40px 0 !important;
-    margin-bottom:30px !important;
+    padding: 40px 0 0 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .saas-cta-content {
-    padding: 40px 20px !important;
+    padding: 40px 20px 0 20px !important;
+    padding-bottom: 0 !important;
   }
 
   .saas-solution-icon-wrapper {
@@ -321,6 +323,7 @@
 
   .saas-cta-content p {
     font-size: 16px !important;
+    margin-bottom: 0 !important;
   }
 
   .saas-cta-buttons {
@@ -372,12 +375,23 @@
   }
 
   /* CTA Section */
+  .saas-cta-section {
+    padding: 40px 0 0 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .saas-cta-content {
+    padding-bottom: 0 !important;
+  }
+
   .saas-cta-content h3 {
     font-size: 20px !important;
   }
 
   .saas-cta-content p {
     font-size: 14px !important;
+    margin-bottom: 0 !important;
   }
 }
 
