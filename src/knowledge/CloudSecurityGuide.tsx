@@ -451,42 +451,6 @@ export function CloudSecurityGuide(): React.ReactElement {
                 </div>
               </div>
             </section>
-
-            {/* You May Also Like */}
-            <section className="related-articles">
-              <h2 className="related-articles__title">You May Also Like</h2>
-              <p style={{ textAlign: 'center', fontSize: '16px', color: '#64748b', marginBottom: '40px' }}>
-              Explore more insights on cloud security and cybersecurity trends
-              </p>
-              <div className="related-articles__grid">
-                {RELATED_ARTICLES.map((article, index) => (
-                  <div key={index} className="related-article">
-                    <div className="related-article__image">
-                      <ImagePlaceholder
-                        label={article.title}
-                        imageName={`knowledge/${article.image}.png`}
-                        width={400}
-                        height={200}
-                        borderRadius={8}
-                      />
-                    </div>
-                    <div className="related-article__content">
-                      <span className="related-article__tag">{article.tag}</span>
-                      <h3 className="related-article__title">{article.title}</h3>
-                      <p className="related-article__description">{article.description}</p>
-                      <div className="related-article__meta">
-                        <span>{article.date}</span>
-                        <span>•</span>
-                        <span>{article.readTime}</span>
-                      </div>
-                      <a href="#" style={{ color: '#3B82F6', textDecoration: 'none', fontSize: '14px', fontWeight: '500', display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '12px' }}>
-                        Read More →
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
           </div>
         </section>
       </main>
