@@ -1,7 +1,6 @@
 import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
-import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import '../styles/weekly-cyber.css';
 
 export function WeeklyCyber(): React.ReactElement {
