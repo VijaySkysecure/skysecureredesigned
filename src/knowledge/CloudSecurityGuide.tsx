@@ -144,32 +144,6 @@ const AI_STATISTICS = [
   { percentage: '3x', label: 'Faster Response Time' }
 ];
 
-const RELATED_ARTICLES = [
-  {
-    image: 'ai-threat-detection-cover',
-    tag: 'Report',
-    title: 'AI-Driven Threat Detection: 2024 Report',
-    description: 'Comprehensive analysis of how AI is transforming cybersecurity threat detection and response capabilities.',
-    date: 'June 15, 2023',
-    readTime: '8 min read'
-  },
-  {
-    image: 'zero-trust-architecture-cover',
-    tag: 'Guide',
-    title: 'Zero Trust Architecture: The New Standard',
-    description: 'Essential guide to implementing Zero Trust security frameworks in modern cloud environments.',
-    date: 'May 22, 2023',
-    readTime: '6 min read'
-  },
-  {
-    image: 'azure-sentinel-cover',
-    tag: 'Blog',
-    title: 'Threat Protection with Azure Sentinel',
-    description: 'Step-by-step guide to implementing advanced threat protection using Microsoft Azure Sentinel.',
-    date: 'April 18, 2023',
-    readTime: '5 min read'
-  }
-];
 
 export function CloudSecurityGuide(): React.ReactElement {
   return (

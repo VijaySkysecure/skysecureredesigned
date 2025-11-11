@@ -46,9 +46,9 @@ export function Hero(): React.ReactElement {
             <span style={{ color: 'rgba(75, 85, 99, 1)' }}>Business Excellence</span><br />
           </h1>
           <p className="hero__description">
-          Skysecure helps enterprises simplify complex IT environments through a intelligent unified Managed Services framework built on four intelligent pillars: Cyber, Data, Infrastructure, and AI.
+          Simplify your IT and focus on growth. Skysecure unifies Cyber, Data, Infrastructure, and AI into one intelligent Managed Services framework that protects, automates, and scales your business with lasting resilience. 
           <br />
-          We protect, scale, and automate your operations within a secure cloud ecosystem — so your business runs smarter, safer, and stronger every day.
+         
           </p>
           <div className="hero__cta">
             <button 

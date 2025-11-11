@@ -122,32 +122,6 @@ const TRANSFORMATION_OUTCOMES = [
   }
 ];
 
-const RELATED_ARTICLES = [
-  {
-    image: 'cloud-security-cover',
-    tag: 'Blog',
-    title: 'The Future of Cloud Security',
-    description: 'Exploring emerging trends and technologies in cloud security',
-    date: 'June 15, 2023',
-    readTime: '5 min read'
-  },
-  {
-    image: 'circuit-board-cover',
-    tag: 'Report',
-    title: 'AI-Driven Threat Detection: 2024 Report',
-    description: 'Comprehensive analysis of AI-powered security solutions',
-    date: 'May 22, 2023',
-    readTime: '8 min read'
-  },
-  {
-    image: 'server-racks-cover',
-    tag: 'Guide',
-    title: 'Zero Trust in Industrial Environments',
-    description: 'Implementing zero trust architecture for industrial systems',
-    date: 'April 10, 2023',
-    readTime: '6 min read'
-  }
-];
 
 export function ManufacturingSecurityGuide(): React.ReactElement {
   return (

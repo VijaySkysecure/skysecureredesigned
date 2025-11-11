@@ -103,26 +103,6 @@ const RESULTS = [
   }
 ];
 
-const RELATED_CASE_STUDIES = [
-  {
-    image: 'healthcare-cloud-security-overhaul',
-    title: 'Healthcare Cloud Security Overhaul',
-    description: 'Transforming healthcare data protection through comprehensive cloud security modernization and Zero Trust implementation.',
-    link: '#'
-  },
-  {
-    image: 'fortune-500-zero-trust',
-    title: 'Fortune 500 Zero Trust Implementation',
-    description: 'Comprehensive Zero Trust architecture deployment for a global enterprise, achieving 70% reduction in security incidents.',
-    link: '#'
-  },
-  {
-    image: 'ai-threat-detection-financial',
-    title: 'AI-Powered Threat Detection in Financial Services',
-    description: 'Machine learning-based threat detection system reducing false positives by 85% for a major financial institution.',
-    link: '#'
-  }
-];
 
 export function SaaSSoftwareSupplyChain(): React.ReactElement {
   return (

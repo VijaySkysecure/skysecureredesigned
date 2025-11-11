@@ -5,7 +5,8 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 const VISION_CARDS = [
   {
     title: 'Data Intelligence',
-    description: 'Because decisions are only as good as the data behind them. With Skysecure, businesses gain real-time visibility, predictive insight, and data they can trust, not just to react, but to act ahead of risk. Our intelligence layer turns every byte of information into foresight that drives confident, faster, and smarter business growth.',
+    description: 'Make smarter moves with data you can trust.',
+    description2: 'Skysecure gives you real-time visibility and predictive intelligence so you can act faster, reduce risk, and grow with confidence.',
     bulletPoints: [
       'Real-time threat intelligence',
       'Predictive analytics',
@@ -15,7 +16,8 @@ const VISION_CARDS = [
   },
   {
     title: 'Advanced Cybersecurity',
-    description: 'Skysecure gives businesses the confidence to operate without disruption by detecting, learning, and responding before threats impact performance or reputation. Our zero-trust framework and AI-driven automation create continuous, adaptive protection that keeps you resilient in a world where risk never sleeps. Because true security isn’t about reacting — it’s about staying ahead.',
+    description: 'Protect your business before risks become reality.',
+    description2: "Skysecure's zero-trust architecture and AI automation ensure continuous defence, so you stay secure, compliant, and always in control.",
     bulletPoints: [
       'Zero-trust security model',
       'Automated incident response',
@@ -25,7 +27,8 @@ const VISION_CARDS = [
   },
   {
     title: 'AI Innovation',
-    description: 'Skysecure builds and manages autonomous AI Agents that think, learn, and act across your operations, reducing human effort while accelerating precision, speed, and impact. Each agent evolves with your business, creating a self-optimizing ecosystem that keeps you ahead of change.',
+    description: 'Work smarter, not harder.',
+    description2: "Skysecure's AI Agents automate what slows you down — learning, adapting, and acting across your operations to boost precision, speed, and performance.",
     bulletPoints: [
       'Machine learning algorithms',
       'Natural language processing',
@@ -56,7 +59,14 @@ export function StrategicVision(): React.ReactElement {
                 borderRadius={0}
               />
               <h3 className="card__title">{card.title}</h3>
-              <p className="card__description">{card.description}</p>
+              {card.description2 ? (
+                <>
+                  <p className="card__description">{card.description}</p>
+                  <p className="card__description" style={{ marginTop: '2px' }}>{card.description2}</p>
+                </>
+              ) : (
+                <p className="card__description">{card.description}</p>
+              )}
               <ul className="card__bullet-points">
                 {card.bulletPoints.map((point, index) => (
                   <li key={index} className="bullet-point">
