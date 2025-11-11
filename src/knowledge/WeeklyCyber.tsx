@@ -427,40 +427,11 @@ export function WeeklyCyber(): React.ReactElement {
                   </svg>
                 </div>
                 <div className="advisory-content">
-                  <h3 className="advisory-title">Incident Response Training</h3>
-                  <p className="advisory-description">
-                    Conduct incident response tabletop exercises simulating supply chain compromise scenarios.
-                  </p>
-                </div>
-              </div>
-
-              <div className="advisory-item">
-                <div className="advisory-icon advisory-icon-blue">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="advisory-icon-svg">
-                    <rect x="4" y="5" width="16" height="6" rx="0.5" stroke="currentColor" strokeWidth="2" fill="none"/>
-                    <rect x="4" y="13" width="16" height="6" rx="0.5" stroke="currentColor" strokeWidth="2" fill="none"/>
-                    <circle cx="7" cy="8" r="0.8" fill="currentColor"/>
-                    <circle cx="12" cy="8" r="0.8" fill="currentColor"/>
-                    <circle cx="17" cy="8" r="0.8" fill="currentColor"/>
-                    <circle cx="7" cy="16" r="0.8" fill="currentColor"/>
-                    <circle cx="12" cy="16" r="0.8" fill="currentColor"/>
-                    <circle cx="17" cy="16" r="0.8" fill="currentColor"/>
-                  </svg>
-                </div>
-                <div className="advisory-content">
                   <h3 className="advisory-title">Network Monitoring</h3>
                   <p className="advisory-description">
                     Monitor network traffic for anomalous encryption patterns and outbound connections.
                   </p>
                 </div>
-              </div>
-
-              <div className="subscribe-box">
-                <h3 className="subscribe-title">Subscribe for Weekly Updates</h3>
-                <p className="subscribe-description">
-                  Subscribe to weekly updates from Skysecure Decode and stay informed with actionable intelligence curated by our threat research experts.
-                </p>
-                <button className="subscribe-btn">Subscribe Now</button>
               </div>
             </div>
           </div>

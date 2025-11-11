@@ -1,5 +1,29 @@
 /* Professional Services Page - Responsive Styles */
 
+/* Override grid to 2 columns for Strategic Approach */
+.page-values__grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-value-card__icon {
+  margin-bottom: 0;
+}
+
+/* Make cards uniform height */
+.page-value-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-value-card__description {
+  flex: 1 1 auto;
+  min-height: 60px;
+}
+
 /* Tablet Styles (max-width: 900px) */
 @media (max-width: 900px) {
   .page-hero__title {
@@ -60,6 +84,33 @@
     grid-template-columns: 1fr !important;
     gap: 24px !important;
     padding: 0 20px;
+  }
+
+  .page-value-card {
+    height: auto !important;
+    text-align: left !important;
+  }
+
+  .page-value-card__description {
+    min-height: auto !important;
+  }
+
+  /* Benefits list alignment for iPad - match homepage pattern */
+  .page-value-card ul li {
+    align-items: flex-start !important;
+  }
+
+  .page-value-card ul li > span:first-child {
+    flex-shrink: 0 !important;
+    width: 16px !important;
+    display: inline-block !important;
+    margin-top: 2px !important;
+  }
+
+  .page-value-card ul li > span:last-child {
+    flex: 1 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
   }
 
   .page-features__grid {
@@ -124,13 +175,76 @@
 
   .page-value-card {
     padding: 24px 20px !important;
+    text-align: left !important;
+    height: auto !important;
+  }
+
+  /* Transform card layout to match homepage - mobile only */
+  .page-value-card > div:first-child {
+    flex-direction: column !important;
+    align-items: center !important;
     text-align: center !important;
+    gap: 12px !important;
+    margin-bottom: 16px !important;
   }
 
   .page-value-card__icon {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .page-value-card > div:first-child > div:last-child {
+    flex: none !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .page-value-card__title {
+    text-align: center !important;
+    margin-bottom: 4px !important;
+  }
+
+  .page-value-card > div:first-child > div:last-child > div {
+    text-align: center !important;
+    margin-bottom: 12px !important;
+  }
+
+  .page-value-card__description {
+    min-height: auto !important;
+    text-align: left !important;
+  }
+
+  /* Benefits list alignment for mobile - consistent spacing and left alignment */
+  .page-value-card ul {
+    text-align: left !important;
+    padding-left: 0 !important;
+  }
+
+  .page-value-card ul li {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+  }
+
+  .page-value-card ul li > span:first-child {
+    flex-shrink: 0 !important;
+    width: 16px !important;
+    display: inline-block !important;
+    margin-top: 2px !important;
+    text-align: left !important;
+  }
+
+  .page-value-card ul li > span:last-child {
+    flex: 1 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    text-align: left !important;
   }
 
   .page-innovation {
@@ -162,6 +276,13 @@
 
   .page-innovation__content-wrapper > div:last-child p {
     font-size: 14px !important;
+  }
+
+  /* Trusted by Businesses metrics grid - mobile */
+  .trust-metrics-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 20px;
   }
 
   .page-features {
