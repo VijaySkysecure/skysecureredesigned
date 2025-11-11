@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
+import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import '../styles/weekly-cyber.css';
 
 export function WeeklyCyber(): React.ReactElement {
@@ -29,8 +30,21 @@ export function WeeklyCyber(): React.ReactElement {
                 <div className="hero-badge">Skysecure Decode</div>
                 <h1 className="hero-title">Weekly Cyber Intelligence Update</h1>
                 <div className="hero-meta">
-                  <span className="hero-date">📅 July 15, 2024</span>
-                  <span className="hero-author">👤 Skysecure Threat Intelligence Team</span>
+                  <span className="hero-date">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="hero-icon">
+                      <rect x="2" y="4" width="12" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                      <rect x="4" y="1" width="2" height="3" rx="0.5" fill="currentColor"/>
+                      <rect x="10" y="1" width="2" height="3" rx="0.5" fill="currentColor"/>
+                    </svg>
+                    <span>July 15, 2024</span>
+                  </span>
+                  <span className="hero-author">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="hero-icon">
+                      <circle cx="8" cy="5" r="3" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                      <path d="M3 14C3 11 5.5 9 8 9C10.5 9 13 11 13 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                    <span>Skysecure Threat Intelligence Team</span>
+                  </span>
                 </div>
               </div>
               <div className="hero-image">
@@ -355,7 +369,12 @@ export function WeeklyCyber(): React.ReactElement {
             
             <div className="advisory-grid">
               <div className="advisory-item">
-                <div className="advisory-icon advisory-icon-blue">🛡️</div>
+                <div className="advisory-icon advisory-icon-blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="advisory-icon-svg">
+                    <path d="M12 2L4 6V11C4 16.55 7.16 21.74 12 23C16.84 21.74 20 16.55 20 11V6L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
                 <div className="advisory-content">
                   <h3 className="advisory-title">Immediate Patching Required</h3>
                   <p className="advisory-description">
@@ -365,7 +384,12 @@ export function WeeklyCyber(): React.ReactElement {
               </div>
 
               <div className="advisory-item">
-                <div className="advisory-icon advisory-icon-blue">📧</div>
+                <div className="advisory-icon advisory-icon-blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="advisory-icon-svg">
+                    <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
+                    <path d="M3 7L12 13L21 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
                 <div className="advisory-content">
                   <h3 className="advisory-title">Phishing Detection Update</h3>
                   <p className="advisory-description">
@@ -375,7 +399,14 @@ export function WeeklyCyber(): React.ReactElement {
               </div>
 
               <div className="advisory-item">
-                <div className="advisory-icon advisory-icon-blue">🔑</div>
+                <div className="advisory-icon advisory-icon-blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="advisory-icon-svg">
+                    <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="2" fill="none"/>
+                    <path d="M12 11V18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M9 18H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M10 18V20C10 20.5523 10.4477 21 11 21H13C13.5523 21 14 20.5523 14 20V18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  </svg>
+                </div>
                 <div className="advisory-content">
                   <h3 className="advisory-title">Access Control Review</h3>
                   <p className="advisory-description">
@@ -385,7 +416,16 @@ export function WeeklyCyber(): React.ReactElement {
               </div>
 
               <div className="advisory-item">
-                <div className="advisory-icon advisory-icon-blue">👥</div>
+                <div className="advisory-icon advisory-icon-blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="advisory-icon-svg">
+                    <circle cx="12" cy="5" r="2.5" fill="currentColor"/>
+                    <path d="M10 7.5C10 7.22386 10.2239 7 10.5 7H13.5C13.7761 7 14 7.22386 14 7.5V8.5C14 8.77614 13.7761 9 13.5 9H12.5C12.2239 9 12 9.22386 12 9.5V18C12 18.5523 11.5523 19 11 19C10.4477 19 10 18.5523 10 18V7.5Z" fill="currentColor"/>
+                    <circle cx="7.5" cy="6" r="2" fill="currentColor"/>
+                    <path d="M6 8C6 7.44772 6.44772 7 7 7H8C8.55228 7 9 7.44772 9 8V8.5C9 9.05228 8.55228 9.5 8 9.5H7.5C6.94772 9.5 6.5 9.94772 6.5 10.5V17C6.5 17.5523 6.05228 18 5.5 18C4.94772 18 4.5 17.5523 4.5 17V8Z" fill="currentColor"/>
+                    <circle cx="16.5" cy="6" r="2" fill="currentColor"/>
+                    <path d="M15 8C15 7.44772 15.4477 7 16 7H17C17.5523 7 18 7.44772 18 8V8.5C18 9.05228 17.5523 9.5 17 9.5H16.5C15.9477 9.5 15.5 9.94772 15.5 10.5V17C15.5 17.5523 15.0523 18 14.5 18C13.9477 18 13.5 17.5523 13.5 17V8Z" fill="currentColor"/>
+                  </svg>
+                </div>
                 <div className="advisory-content">
                   <h3 className="advisory-title">Network Monitoring</h3>
                   <p className="advisory-description">
