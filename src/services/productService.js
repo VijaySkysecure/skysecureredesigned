@@ -1,5 +1,5 @@
 // API service for customer images
-const ADMIN_CONTROL_BACKEND_URL = 'https://qa-backend.skysecure.ai/api/adminControl';
+const ADMIN_CONTROL_BACKEND_URL = import.meta.env.VITE_PRODUCT_URL;
 
 export async function getAllCustomerImages(page = 1, limit = 50) {
   try {
