@@ -6,6 +6,10 @@
   margin-bottom: -30px;
 }
 
+.testimonials-section .section-header__description {
+  text-align: center;
+}
+
 .testimonials-section .container {
   max-width: var(--container-width);
   margin: 0 auto;
