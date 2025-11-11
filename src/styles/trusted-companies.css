@@ -205,3 +205,14 @@
   animation-play-state: paused;
 }
 
+/* Android only - Reduce gap between TrustedCompanies and WhoWeAre sections */
+@media (max-width: 768px) {
+  .trusted-companies-section {
+    margin-bottom: 20px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .trusted-companies-section + .section--light {
+    padding-top: 8px !important;
+  }
+}

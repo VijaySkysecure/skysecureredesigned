@@ -148,6 +148,7 @@ section {
   margin-top: 16px;
   font-size: 20px;
   color: var(--color-grey);
+  text-align: justify;
 }
 
 .button {
@@ -428,7 +429,7 @@ section {
   font-size: 16px;
   color: var(--color-grey);
   flex: 1;
-  text-align: left;
+  text-align: justify;
   line-height: 1.6;
   margin: 0;
 }
@@ -3374,6 +3375,15 @@ section {
   .resource-nav-button--right {
     right: -28px;
   }
+
+  /* Android only - Reduce gap between Resources carousel and Leadership section */
+  .section--light#insights {
+    padding-bottom: 16px !important;
+  }
+
+  .section--muted#leadership {
+    padding-top: 16px !important;
+  }
 }
 
 .footer {
@@ -6303,6 +6313,7 @@ footer section .container {
   .section-header__description {
     font-size: 14px !important;
     line-height: 1.5 !important;
+    text-align: justify !important;
   }
   
   /* Who We Are section */
