@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { Header } from './sections/Header';
 import { Hero } from './sections/Hero';
+import { TrustedCompanies } from './sections/TrustedCompanies';
 import { WhoWeAre } from './sections/WhoWeAre';
 import { StrategicVision } from './sections/StrategicVision';
 import { WhatWeDo } from './sections/WhatWeDo';
 // import { SecuritySolutions } from './sections/SecuritySolutions';
 import { GlobalImpact } from './sections/GlobalImpact';
+import { Testimonials } from './sections/Testimonials';
 import { Resources } from './sections/Resources';
 import { Leadership } from './sections/Leadership';
 // import { CoreValues } from './sections/CoreValues';
@@ -217,11 +219,13 @@ export function App(): React.ReactElement {
       <Header />
       <main>
         <Hero />
+        <TrustedCompanies />
         <WhoWeAre />
         <WhatWeDo />
         <StrategicVision />
         {/* <SecuritySolutions /> */}
         <GlobalImpact />
+        <Testimonials />
         <Resources />
         <Leadership />
         {/* <CoreValues /> */}
