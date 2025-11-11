@@ -15,7 +15,7 @@ const TESTIMONIALS = [
     content: "Skysecure's security team has been a game-changer for our company. Their proactive approach and expertise have helped us safeguard critical assets while ensuring smooth operations. We trust them to keep our systems secure and compliant at all times.",
     image: "https://skysecurestorageaqa.blob.core.windows.net/testimonialimages/68806734cf442f4c9593ae5e-testimonials-1753245492342.webp",
     name: "KULDEEP KHANDAR",
-    company: "Bislerii",
+    company: "Bisleri",
   },
   {
     id: 3,
