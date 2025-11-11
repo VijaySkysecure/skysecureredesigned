@@ -3374,6 +3374,15 @@ section {
   .resource-nav-button--right {
     right: -28px;
   }
+
+  /* Android only - Reduce gap between Resources carousel and Leadership section */
+  .section--light#insights {
+    padding-bottom: 16px !important;
+  }
+
+  .section--muted#leadership {
+    padding-top: 16px !important;
+  }
 }
 
 .footer {
