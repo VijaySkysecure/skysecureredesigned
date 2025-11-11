@@ -1,5 +1,10 @@
 /* Responsive Styles for Ransomware Evolution - Mobile and Tablet Only */
 
+/* Hide "Contact Threat Intelligence Team" button in Skysecure's Perspective section on all platforms */
+.blog-section:has(.ransomware-perspective-wrapper) button {
+  display: none !important;
+}
+
 /* iPad Specific Styles */
 @media (min-width: 768px) and (max-width: 1024px) {
   .ransomware-hero-right {
@@ -40,11 +45,11 @@
 
   /* Reduce gap between timeline graphic and Notable Ransomware Variants section */
   .blog-section:has(.ransomware-landscape-wrapper) {
-    padding-bottom: 32px !important;
+    padding-bottom: 16px !important;
   }
 
   .blog-section:has(.ransomware-variants-grid) {
-    padding-top: 32px !important;
+    padding-top: 16px !important;
   }
 
   /* Fix Attack Vectors paragraph text alignment for iPad */
@@ -147,12 +152,6 @@
     text-align: center !important;
     max-width: 100% !important;
     padding: 0 20px !important;
-  }
-
-  /* Center "Contact Threat Intelligence Team" button for iPad */
-  .blog-section:has(.ransomware-perspective-wrapper) button {
-    display: block !important;
-    margin: 0 auto !important;
   }
 
   /* Reduce gap between Notable Ransomware Variants section and Attack Vectors section */
