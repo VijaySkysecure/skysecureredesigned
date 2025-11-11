@@ -111,12 +111,11 @@ export function WeeklyCyber(): React.ReactElement {
         {/* Key Threat Intelligence Highlights */}
         <section className="threat-highlights">
           <div className="container-narrow">
-            <h2 className="section-title">Key Threat Intelligence Highlights</h2>
+            <h2 className="section-title" style={{ textAlign: 'center' }}>Key Threat Intelligence Highlights</h2>
             
             <div className="highlights-grid">
               <div className="highlight-card highlight-red">
                 <div className="highlight-header">
-                  <div className="highlight-icon">⚠️</div>
                   <h3 className="highlight-title">Critical Vulnerabilities</h3>
                 </div>
                 <p className="highlight-description">
@@ -126,7 +125,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-orange">
                 <div className="highlight-header">
-                  <div className="highlight-icon">🦠</div>
                   <h3 className="highlight-title">New Malware Strains</h3>
                 </div>
                 <p className="highlight-description">
@@ -136,7 +134,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-blue">
                 <div className="highlight-header">
-                  <div className="highlight-icon">☁️</div>
                   <h3 className="highlight-title">Cloud Exploits</h3>
                 </div>
                 <p className="highlight-description">
@@ -146,7 +143,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-purple">
                 <div className="highlight-header">
-                  <div className="highlight-icon">👍</div>
                   <h3 className="highlight-title">Data Breaches</h3>
                 </div>
                 <p className="highlight-description">
@@ -156,7 +152,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-dark">
                 <div className="highlight-header">
-                  <div className="highlight-icon">☠️</div>
                   <h3 className="highlight-title">Emerging Ransomware</h3>
                 </div>
                 <p className="highlight-description">
@@ -166,7 +161,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-teal">
                 <div className="highlight-header">
-                  <div className="highlight-icon">💼</div>
                   <h3 className="highlight-title">AI-Powered Attacks</h3>
                 </div>
                 <p className="highlight-description">
