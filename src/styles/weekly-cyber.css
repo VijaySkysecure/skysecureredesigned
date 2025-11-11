@@ -740,8 +740,15 @@
 }
 
 .advisory-icon-blue {
-  background-color: #dbeafe;
-  color: #1e40af;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.advisory-icon-svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #ffffff;
 }
 
 .advisory-content {
@@ -980,12 +987,24 @@
   .hero-image {
     max-width: 100%;
     margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  .hero-image img {
+    margin: 0 auto;
+    display: block;
   }
 
   .hero-date .hero-icon,
   .hero-author .hero-icon {
     width: 15px;
     height: 15px;
+  }
+
+  .advisory-icon-svg {
+    width: 22px;
+    height: 22px;
   }
 
   .intro-text {
@@ -1080,6 +1099,45 @@
   }
 }
 
+/* iPad specific styles - Center hero image */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .weekly-hero-content {
+    padding: 0 24px !important;
+  }
+
+  .hero-inner {
+    justify-items: center !important;
+    align-items: center !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-image {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    justify-self: center !important;
+    align-self: center !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  .hero-image img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
 /* Mobile Styles (max-width: 768px) */
 @media (max-width: 768px) {
   .container-narrow {
@@ -1130,6 +1188,11 @@
   .hero-author .hero-icon {
     width: 14px;
     height: 14px;
+  }
+
+  .advisory-icon-svg {
+    width: 20px;
+    height: 20px;
   }
 
   .hero-image {
@@ -1398,6 +1461,11 @@
   .hero-author .hero-icon {
     width: 12px;
     height: 12px;
+  }
+
+  .advisory-icon-svg {
+    width: 18px;
+    height: 18px;
   }
 
   .section-title {
