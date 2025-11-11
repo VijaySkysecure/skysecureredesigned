@@ -107,7 +107,7 @@ const CLOUD_BEST_PRACTICES = [
     iconBgColor: 'rgba(34, 197, 94, 1)'
   },
   {
-    icon: 'icon-data-protection',
+    icon: 'icon-puttu',
     title: 'Data Encryption',
     description: 'Enable comprehensive data encryption in transit and at rest with advanced key management.',
     tag: 'Data Protection',
