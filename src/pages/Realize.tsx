@@ -1,56 +1,60 @@
 import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
-import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/realize-page.css';
 
 export function Realize(): React.ReactElement {
   return (
-    <div className="main-page">
+    <div className="realize-page">
       <Header />
-      <main>
-        <section className="section--light" style={{ 
-          minHeight: '60vh', 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center',
-          padding: '120px 0'
-        }}>
-          <div className="container">
-            <div style={{ 
-              textAlign: 'center',
-              maxWidth: '600px',
-              margin: '0 auto'
-            }}>
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '16px',
-                marginBottom: '24px'
-              }}>
-                <ImagePlaceholder
-                  label="Realize logo"
-                  imageName="realize/logo.png"
-                  width={60}
-                  height={60}
-                  borderRadius={0}
-                />
-                <h1 style={{ 
-                  fontSize: '48px', 
-                  fontWeight: '700', 
-                  color: '#1F2937', 
-                  margin: 0
-                }}>
-                  Realize
-                </h1>
+      <main className="realize-main">
+        {/* Animated Background Elements */}
+        <div className="realize-background">
+          <div className="realize-gradient-orb realize-orb-1"></div>
+          <div className="realize-gradient-orb realize-orb-2"></div>
+          <div className="realize-gradient-orb realize-orb-3"></div>
+          <div className="realize-grid-pattern"></div>
+        </div>
+
+        {/* Main Content */}
+        <section className="realize-hero">
+          <div className="realize-container">
+            <div className="realize-content">
+              {/* Question Section */}
+              <div className="realize-text-wrapper">
+                <div className="realize-standout-question">
+                  <p className="realize-question-text">
+                    Ever spent hours deploying licenses or setting up agents one by one?
+                  </p>
+                </div>
               </div>
-              <p className="realize-coming-soon" style={{ 
-                fontSize: '24px', 
-                color: '#64748B',
-                margin: 0
-              }}>
-                Coming Soon
-              </p>
+
+              {/* Response Section */}
+              <div className="realize-text-wrapper">
+                <div className="realize-standout-response">
+                  <p className="realize-response-text">
+                    Yeah… we hated that too.
+                  </p>
+                </div>
+              </div>
+
+              {/* Announcement Section */}
+              <div className="realize-text-wrapper">
+                <div className="realize-standout-announcement">
+                  <p className="realize-announcement-text">
+                    <span className="realize-stay-tuned">Stay tuned</span>
+                    <span className="realize-separator"> — </span>
+                    <span className="realize-changing">Realize is changing everything.</span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Floating Elements */}
+              <div className="realize-floating-elements">
+                <div className="realize-floating-circle realize-circle-1"></div>
+                <div className="realize-floating-circle realize-circle-2"></div>
+                <div className="realize-floating-circle realize-circle-3"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -59,4 +63,3 @@ export function Realize(): React.ReactElement {
     </div>
   );
 }
-

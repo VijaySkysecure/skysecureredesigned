@@ -6875,6 +6875,7 @@ footer section .container {
   font-size: 48px;
   font-weight: 700;
   color: var(--color-black);
+  margin-top: 0;
   margin-bottom: 24px;
 }
 

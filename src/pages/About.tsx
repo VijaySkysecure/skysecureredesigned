@@ -2,87 +2,95 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import { WhoWeAre } from '../sections/WhoWeAre';
+import { TrustedCompanies } from '../sections/TrustedCompanies';
 import '../styles/about-page.css';
 
 const CORE_VALUES = [
   {
     icon: 'icon-shield',
-    title: 'Trust & Security',
-    description: 'We prioritize trust in every interaction and ensure the highest standards of security in our marketplace.'
+    title: 'Trust at the Core',
+    description: 'Trust is our most valuable currency. We earn it by being transparent, accountable, and relentless in delivering on our promise in ensuring every system we manage is secure, compliant, and dependable.'
   },
   {
     icon: 'icon-integrity',
-    title: 'Integrity',
-    description: 'We operate with complete transparency and honesty in all our business practices and relationships.'
-  },
-  {
-    icon: 'icon-innovation',
-    title: 'Innovation',
-    description: 'We continuously seek new ways to improve our platform and the procurement experience.'
+    title: 'Partnership in Progress',
+    description: 'We see ourselves as an extension of every client we serve. Collaboration, empathy, and shared success drive how we operate, turning managed services into meaningful partnerships that last.'
   },
   {
     icon: 'icon-customer',
-    title: 'Customer Focus',
-    description: 'We put our customers at the center of everything we do, ensuring their needs drive our decisions.'
+    title: 'Customer First Approach',
+    description: 'Every decision we make starts with "Whom". We listen, adapt, and build solutions around their goals, not just their challenges. Our success is defined by the trust we earn and the impact we create together.'
+  },
+  {
+    icon: 'icon-innovation',
+    title: 'Excellence Through Integrity',
+    description: 'We believe excellence isn\'t just about results, it\'s about how those results are achieved. Integrity, discipline, and accountability guide our teams to uphold the highest standards in every vertical.'
   }
 ];
 
 const STATS = [
   {
     number: '500+',
-    title: 'Verified Vendors',
-    description: 'Thoroughly vetted solution providers on our platform'
+    title: 'Enterprises Secured',
+    description: 'Organizations that rely on Skysecure to protect, scale, and automate their operations.'
   },
   {
-    number: '10,000+',
-    title: 'Products',
-    description: 'Technology solutions available across multiple categories'
+    number: '2.4M+',
+    title: 'AI-Processed Security Events Daily',
+    description: 'Real-time monitoring and automation powering smarter, faster threat response.'
   },
   {
-    number: '5,000+',
-    title: 'Enterprise Clients',
-    description: 'Organizations that trust Skysecure for technology procurement'
+    number: '99.9%',
+    title: 'Uptime SLA',
+    description: 'Delivering continuous reliability across global cloud and infrastructure environments.'
+  },
+  {
+    number: '45+',
+    title: 'Countries Served',
+    description: 'Supporting businesses worldwide with 24/7 managed operations and compliance.'
   },
   {
     number: '98%',
-    title: 'Satisfaction Rate',
-    description: 'Customer satisfaction based on post- purchase surveys'
+    title: 'Client Satisfaction Rate',
+    description: 'Customer satisfaction based on post-purchase surveys and ongoing partnerships.'
   }
 ];
 
 const JOURNEY_TIMELINE = [
   {
     year: '2021 (Dec)',
-    title: 'Established with a clear mission',
-    description: 'In December 2021, Skysecure was established by cybersecurity experts focusing on specialist consulting for BFSI and infrastructure clients. Simultaneously, it completed incorporation and launched full-time operations in India, setting up compliance and local teams to drive growth.',
+    title: 'Built with a Clear Purpose',
+    description: 'Skysecure was born out of a shared vision among cybersecurity professionals to simplify security for complex industries like BFSI and infrastructure. By December 2021, we had completed incorporation, set up our India operations, and established the foundation for trust, compliance, and service excellence, the same principles that still drives our very core today.',
     side: 'left',
     icon: 'about/icon-timeline-2021.png'
   },
   {
-    year: '2022 (Jul-Nov)',
-    title: 'Formal Incorporation & Enterprise Delivery',
-    description: 'Skysecure formally incorporated, delivering comprehensive cybersecurity programs for major Indian enterprises.we earned Microsoft Security Specialization and Gold Partner status, conducted the SMC Custom Security Assessment Workshop, and expanded operations to Singapore, marking significant growth and technical excellence.',
+    year: '2022 (Jul–Nov)',
+    title: 'Formal Incorporation, Earning Trust',
+    description: 'As we grew, so did our ambitions.In 2022, Skysecure formally incorporated as a global entity and began delivering large-scale cybersecurity programs for major Indian enterprises. That year, we earned Microsoft Security Specialization and Gold Partner status, conducted SMC Custom Security Workshops, and expanded to Singapore, marking our first major step beyond borders.',
     side: 'right',
     icon: 'about/icon-timeline-2022.png'
   },
   {
     year: '2023 (Jul)',
-    title: 'Strategic Partnerships & Marketplace Expansion',
-    description: 'Skysecure earned Microsoft\'s Managed Partner designation and CSI (Cloud Solution Implementer) status, accelerating joint security sales. At the same time, we launched an AI-powered solution-matching engine and expanded our B2B marketplace, driving $14M in Microsoft security revenue across 19 CSI engagements.',
+    title: 'A Defining Leap Forward 2023 marked a turning point.',
+    description: 'Skysecure became a Microsoft Managed Partner and Cloud Solution Implementer (CSI), accelerating joint cloud and security programs. We launched an AI-powered solution-matching engine and expanded our B2B Marketplace, driving over $14M in Microsoft security revenue across 19 CSI engagements. It was the year our belief in intelligence and automation started shaping measurable business outcomes.',
     side: 'left',
     icon: 'about/icon-timeline-2023.png'
   },
   {
     year: '2024 (Jan)',
-    title: 'Scaling Across Cloud, AI, and Global Markets',
-    description: 'Skysecure achieved Fast Track Ready partner status, positioning us for accelerated growth. With this strong foundation, we are now aspiring to expand our footprint into the Middle East. This strategic move aims to broaden our market reach and deliver advanced cybersecurity solutions across the region.',
+    title: 'Scaling with Confidence Across Cloud, AI, and More',
+    description: 'With our Fast Track Ready Partner status, we entered an exciting new chapter, expanding into the Middle East with advanced cloud, AI, and cybersecurity services. It was more than growth; it was validation that our unified MSP model could scale globally, empowering enterprises to automate securely, perform smarter, and move forward with confidence.',
     side: 'right',
     icon: 'about/icon-timeline-2024.png'
   },
+
   {
     year: '2025 (Mar)',
-    title: 'Skysecure\'s Fast-Track Journey to $100M',
-    description: 'Now a Fast-Track Ready partner, Skysecure is expanding across Cloud, Infrastructure, AI, and Data verticals, with a focus on scaling Mid-Market and SMC accounts to achieve a billed revenue target of $100M. Our roadmap includes launching operations in the Middle East and broadening our global marketplace ecosystem with verified vendors.',
+    title: 'The Sprint to a 100$ Million',
+    description: 'Now a Fast Track Ready Partner, Skysecure is scaling faster than ever across Cloud, Infrastructure, AI, and Data. We’re expanding into new markets, strengthening our marketplace ecosystem, and moving confidently toward our $100M milestone. It’s a rocky road, but we will get there.',
     side: 'left',
     icon: 'about/icon-timeline-2025.png'
   }
@@ -181,10 +189,10 @@ export function About(): React.ReactElement {
                   About Skysecure
                 </h1>
                 <p className="about-hero-description">
-                  Founded in 2019 as a specialist cyber-security solutions partner, Skysecure has evolved into a full-stack technology powerhouse. Today we combine deep expertise across cyber, Cloud & Infrastructure, AI, and Data with a curated marketplace that connects enterprise buyers to rigorously vetted vendors.
+                What started in 2019 as a focused cybersecurity venture has evolved into one of India's most forward-thinking technology powerhouses. Today, Skysecure combines <strong>Cyber, Data, Infrastructure, and AI</strong> under one intelligent managed-services framework, simplifying how enterprises protect, scale, and automate their digital ecosystems.
                 </p>
                 <p className="about-hero-description-last">
-                  Our mission is simple: remove complexity from IT procurement and deployment. From risk assessments to AI-driven analytics and seamless infrastructure roll-outs, we give organizations a single, trusted platform to discover, compare, and acquire the right solutions, fast and with total confidence.
+                 As we look ahead, our vision is clear: to shape the world’s most intelligent and secure managed-services platform, where innovation, trust, and automation define how businesses thrive.
                 </p>
               </div>
               {/* Right Visual */}
@@ -201,6 +209,86 @@ export function About(): React.ReactElement {
           </div>
         </section>
 
+        {/* Stats Section */}
+        <section className="about-stats">
+          <div className="about-stats-container">
+            <div className="about-stats-header">
+              <h2 className="about-stats-title">
+                Skysecure by the Numbers
+              </h2>
+              <p className="about-stats-subtitle">
+                Our impact on the technology marketplace since our founding
+              </p>
+            </div>
+            
+            <div className="about-stats-grid">
+              {STATS.map((stat, index) => (
+                <div key={index} className="about-stat-item">
+                  <div className="about-stat-number">
+                    {stat.number}
+                  </div>
+                  <h3 className="about-stat-title">
+                    {stat.title}
+                  </h3>
+                  <p className="about-stat-description">
+                    {stat.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Who We Are Section */}
+        <WhoWeAre />
+
+        {/* Journey Timeline Section */}
+        <section className="about-journey">
+          <div className="about-journey-container">
+            <div className="about-journey-header">
+              <h2 className="about-journey-title">
+                Since 2021, We’ve Come a Long Way.
+              </h2>
+              <p className="about-journey-subtitle">
+               From Cybersecurity Specialists to Architects of Intelligent Managed Services.
+              </p>
+            </div>
+            
+            <div className="about-timeline-wrapper">
+              {/* Timeline Line */}
+              <div className="about-timeline-line"></div>
+              
+              {JOURNEY_TIMELINE.map((item, index) => (
+                <div key={index} className={`about-timeline-item about-timeline-item--${item.side}`}>
+                  <div className={`about-timeline-content-wrapper about-timeline-content-wrapper--${item.side}`}>
+                    <div className="about-timeline-card">
+                      <h3 className="about-timeline-card-title">
+                        {item.year} — {item.title}
+                      </h3>
+                      <p className="about-timeline-card-description">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Timeline Dot - Always centered */}
+                  <div className="about-timeline-dot">
+                    <ImagePlaceholder
+                      label={`Timeline Icon ${item.year}`}
+                      imageName={item.icon}
+                      width={48}
+                      height={48}
+                      borderRadius={0}
+                    />
+                  </div>
+                  
+                  <div className="about-timeline-spacer"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Mission & Vision Section */}
         <section className="about-mission-vision">
           <div className="about-mission-vision-container">
@@ -209,7 +297,7 @@ export function About(): React.ReactElement {
                 Our Mission & Vision
               </h2>
               <p className="about-mission-vision-subtitle">
-                Guiding principles that drive everything we do at Skysecure
+               The principles that guide our journey toward intelligent, secure, and scalable managed services.
               </p>
             </div>
             
@@ -229,7 +317,7 @@ export function About(): React.ReactElement {
                   Our Mission
                 </h3>
                 <p className="about-mission-vision-card-description">
-                  To create a secure and transparent marketplace that simplifies the procurement of technology solutions for businesses of all sizes. We aim to bridge the gap between technology vendors and enterprise buyers by providing a platform that offers verified products, competitive pricing, and expert guidance.
+                  Our Mission is to simplify and secure how enterprises manage technology: combining Cyber, Data, Infrastructure, and AI into one intelligent managed services framework that empowers organizations to operate smarter, scale faster, and grow with confidence.
                 </p>
                 <ul className="about-mission-vision-list">
                   <li className="about-mission-vision-list-item">
@@ -262,7 +350,7 @@ export function About(): React.ReactElement {
                   Our Vision
                 </h3>
                 <p className="about-mission-vision-card-description">
-                  To become the world's leading marketplace for technology solutions, where every business can find the perfect technology stack for business needs. We envision a future where technology procurement is streamlined, transparent, and accessible, enabling organizations to stay ahead of evolving threats.
+                 Our Vision is to build the world’s most intelligent and trusted managed services ecosystem, where AI, automation, and human expertise make technology simple, secure, and accessible, so every business can focus on growth, not complexity.
                 </p>
                 <ul className="about-mission-vision-list">
                   <li className="about-mission-vision-list-item">
@@ -319,83 +407,6 @@ export function About(): React.ReactElement {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="about-stats">
-          <div className="about-stats-container">
-            <div className="about-stats-header">
-              <h2 className="about-stats-title">
-                Skysecure by the Numbers
-              </h2>
-              <p className="about-stats-subtitle">
-                Our impact on the technology marketplace since our founding
-              </p>
-            </div>
-            
-            <div className="about-stats-grid">
-              {STATS.map((stat, index) => (
-                <div key={index} className="about-stat-item">
-                  <div className="about-stat-number">
-                    {stat.number}
-                  </div>
-                  <h3 className="about-stat-title">
-                    {stat.title}
-                  </h3>
-                  <p className="about-stat-description">
-                    {stat.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Journey Timeline Section */}
-        <section className="about-journey">
-          <div className="about-journey-container">
-            <div className="about-journey-header">
-              <h2 className="about-journey-title">
-                Our Journey
-              </h2>
-              <p className="about-journey-subtitle">
-                From Cybersecurity Founders to Full-Stack Technology Scale
-              </p>
-            </div>
-            
-            <div className="about-timeline-wrapper">
-              {/* Timeline Line */}
-              <div className="about-timeline-line"></div>
-              
-              {JOURNEY_TIMELINE.map((item, index) => (
-                <div key={index} className={`about-timeline-item about-timeline-item--${item.side}`}>
-                  <div className={`about-timeline-content-wrapper about-timeline-content-wrapper--${item.side}`}>
-                    <div className="about-timeline-card">
-                      <h3 className="about-timeline-card-title">
-                        {item.year} — {item.title}
-                      </h3>
-                      <p className="about-timeline-card-description">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* Timeline Dot - Always centered */}
-                  <div className="about-timeline-dot">
-                    <ImagePlaceholder
-                      label={`Timeline Icon ${item.year}`}
-                      imageName={item.icon}
-                      width={48}
-                      height={48}
-                      borderRadius={0}
-                    />
-                  </div>
-                  
-                  <div className="about-timeline-spacer"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Leadership Section */}
         <section className="about-leadership">
           <div className="about-leadership-container">
@@ -411,7 +422,7 @@ export function About(): React.ReactElement {
                 The Visionaries Behind Skysecure
               </h2>
               <p className="about-leadership-subtitle">
-                Meet the experienced professionals guiding Skysecure's mission
+              Experienced leaders shaping the future of intelligent managed services.
               </p>
             </div>
             
@@ -453,10 +464,10 @@ export function About(): React.ReactElement {
                 fontWeight: 700
               }}
               >
-                Our Leadership Team
+              Leadership That Inspires Intelligent Growth
               </h2>
               <p className="about-team-subtitle">
-                Dedicated professionals working together to secure your digital future.
+              From cybersecurity pioneers to technology visionaries, our leadership team drives Skysecure’s mission to simplify and secure the enterprise of tomorrow.
               </p>
             </div>
             
@@ -512,6 +523,34 @@ export function About(): React.ReactElement {
           </div>
         </section>
 
+        {/* Join our Mission Section */}
+        <section className="about-join-mission">
+          <div className="about-join-mission-container">
+            <div className="about-join-mission-content">
+              <h1 className="about-join-mission-h1">Build the Future with Us</h1>
+              <h2 className="about-join-mission-h2">
+                At Skysecure, we are creating technology that protects and empowers businesses, and it starts with people like you.
+              </h2>
+              <p className="about-join-mission-body">
+                We believe great ideas can come from anywhere, and when passionate people work together, innovation follows. If you're driven by purpose, curiosity, and the desire to make an impact, you belong here.
+              </p>
+              <div className="about-join-mission-cta">
+                <button 
+                  className="about-join-mission-button"
+                  onClick={() => {
+                    window.location.href = 'https://skysecure.zohorecruit.in/jobs/Careers';
+                  }}
+                >
+                  Find Your Next Role
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trusted Companies Section */}
+        <TrustedCompanies />
+
         {/* Global Presence Section */}
         <section className="about-global">
           <div className="about-global-container">
@@ -522,10 +561,10 @@ export function About(): React.ReactElement {
                   Global Presence
                 </h2>
                 <p className="about-global-description">
-                  Global Cybersecurity Expertise Skysecure operates across Bangalore, Coimbatore, Singapore, and the UAE—each office specializing in regional needs, from innovation and industrial security to finance and government protection, ensuring 24/7 monitoring and rapid response.
+                At Skysecure, our presence spans Bengaluru, Singapore, and the UAE, each location built around the specific needs of the regions and industries we serve. Our teams combine local expertise with global intelligence to manage, automate, and secure operations for enterprises around the clock.
                   <br />
                   <br />
-                  Tailored, Trusted Solutions: Combining local insight with global intelligence, we deliver customized cybersecurity backed by continuous training, strong partnerships, and a commitment to sustainability and client trust worldwide.
+                  We see managed services as a partnership, one built on trust, adaptability, and measurable outcomes. By uniting people, intelligence, and automation, we help businesses simplify complexity, achieve agility, and grow with confidence.
                 </p>
                 <div className="about-global-offices">
                   {GLOBAL_OFFICES.map((office, index) => (
@@ -548,6 +587,31 @@ export function About(): React.ReactElement {
                   height={400}
                   borderRadius={12}
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Us Section */}
+        <section className="about-contact-us">
+          <div className="about-contact-us-container">
+            <div className="about-contact-us-content">
+              <h1 className="about-contact-us-h1">Let's Build Something Intelligent Together</h1>
+              <h2 className="about-contact-us-h2">
+                Every transformation starts with a conversation.
+              </h2>
+              <p className="about-contact-us-body">
+                From cybersecurity to AI, data, and infrastructure, we help enterprises build smarter, more resilient ecosystems. Let's explore how our unified MSP framework can simplify your operations and accelerate growth.
+              </p>
+              <div className="about-contact-us-cta">
+                <button 
+                  className="about-contact-us-button"
+                  onClick={() => {
+                    window.location.href = '/contact';
+                  }}
+                >
+                  Request a Consultation
+                </button>
               </div>
             </div>
           </div>

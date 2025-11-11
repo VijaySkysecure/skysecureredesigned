@@ -2,23 +2,41 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import { TrustedCompanies } from '../sections/TrustedCompanies';
+import { Testimonials } from '../sections/Testimonials';
 import '../styles/managed-services.css';
 
 const STRATEGIC_APPROACH = [
   {
     icon: 'icon-shield',
-    title: 'Proactive Support',
-    description: 'Predictive solutions to prevent issues before they arise. We monitor, manage, and maintain your IT systems to avoid downtime and ensure your business stays operational.'
+    h2: 'Where Cyber, Data, Infrastructure, and AI work together, so your business runs smarter, safer, and faster.',
+    body: 'With Skysecure\'s Unified MSP Framework, you gain complete visibility, control, and confidence across your technology ecosystem. We streamline management, automate routine operations, and turn data into decisions, so your teams can focus what really matters.'
   },
   {
     icon: 'icon-brain',
-    title: 'Tailored Solutions',
-    description: 'Custom-designed solutions that meet your business’s unique IT needs. Our team works closely with yours to craft the perfect technology strategy.'
+    h2: 'The New Standard in Managed Services.',
+    body: 'We are redefining how businesses think about IT management. By combining automation, accountability, and AI-powered insights, Skysecure delivers measurable outcomes, not just maintenance. With us, managed services become a foundation for innovation, efficiency, and consistent growth.'
+  }
+];
+
+const CASE_STUDIES_TABLE = [
+  {
+    client: 'Fintech Enterprise',
+    challenge: 'Fragmented vendors, slow incident response',
+    solution: 'Unified MSP with AI-driven SOC and automated patching',
+    outcome: '60% faster detection, 35% lower costs'
   },
   {
-    icon: 'icon-person',
-    title: 'Expert Consultation',
-    description: 'Strategic advisory and technical support from certified experts who understand both technology and business to drive efficiency and growth.'
+    client: 'Manufacturing Firm',
+    challenge: 'Unreliable infrastructure & downtime',
+    solution: 'End-to-end Cloud & Infra management',
+    outcome: '99.9% uptime, smoother scalability'
+  },
+  {
+    client: 'Healthcare Network',
+    challenge: 'Data compliance and DPDP readiness',
+    solution: 'Data governance & protection under one platform',
+    outcome: '100% compliance, improved trust scores'
   }
 ];
 
@@ -45,6 +63,14 @@ const COMPREHENSIVE_SOLUTIONS = [
   }
 ];
 
+const STATS_DATA = [
+  { value: '500+', label: 'Businesses Managed' },
+  { value: '40%', label: 'Reduction in IT Overhead' },
+  { value: '10,000+', label: 'Cloud & Infrastructure Assets Managed' },
+  { value: '24/7/365', label: 'Managed Operations' },
+  { value: '99%', label: 'Customer Retention Rate' },
+];
+
 export function ManagedServices(): React.ReactElement {
   return (
     <>
@@ -54,20 +80,54 @@ export function ManagedServices(): React.ReactElement {
         <section className="page-hero">
           <div className="page-hero__content">
             <h1 className="page-hero__title">
-              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Managed</span> Services
+              <span style={{ color: 'rgba(37, 99, 235, 1)' }}>Too Many Vendors. Too Many Tools. Not Enough Time.</span>
             </h1>
             <p className="page-hero__description">
-            Empower Your Business with Proactive, Scalable, and Cost-Effective IT Solutions
+            We've Been Expecting You. 
+            </p>
+            <p style={{ fontSize: '16px', marginTop: '24px', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
+              Here at Skysecure, we simplify it all with a unified managed services framework built on Cyber, Data, Infrastructure, and AI. One partner to protect, automate, and scale your technology ecosystem intelligently. 
             </p>
           </div>
         </section>
-
-        {/* Introduction Section */}
-        <section className="page-intro">
+        <TrustedCompanies />
+        
+        {/* Stats Section */}
+        <section className="managed-services-stats-section">
           <div className="container">
-            <div className="page-intro__text">
-              <p style={{ fontSize: '16px', marginLeft: '50px' }}>
-              Our managed services are designed to ensure seamless IT operations, reduce operational costs, and enable your business to focus on its core activities while we handle the complexities of IT infrastructure. With 24/7 support, monitoring, and maintenance, we provide peace of mind knowing your systems are in safe hands.
+            <div className="managed-services-stats-box">
+              {STATS_DATA.map((stat, index) => (
+                <div 
+                  key={index} 
+                  className={`managed-services-stat-item ${index === STATS_DATA.length - 1 ? 'stat-item-last' : ''}`}
+                >
+                  <div className="managed-services-stat-value">
+                    {stat.value}
+                  </div>
+                  <div className="managed-services-stat-label">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Technology Complexity Section */}
+        <section className="managed-services-complexity-section">
+          <div className="container">
+            <div className="managed-services-complexity-content">
+              <h1 className="managed-services-complexity-title">
+                Technology Is Complex. Managing It Should Not Be.
+              </h1>
+              <h2 className="managed-services-complexity-subtitle">
+                The More Tools You Add, the Harder It Gets.
+              </h2>
+              <p className="managed-services-complexity-body">
+                You're not alone. Every growing business is juggling too many tools, vendors, and systems that were meant to simplify but only added complexity. Instead of driving innovation, your teams are stuck managing integrations, fixing issues, and firefighting downtime. If this feels familiar, it's time for a smarter, unified way to manage it all.
+              </p>
+              <p className="managed-services-complexity-body">
+                Many businesses struggle with too many tools and vendors that add complexity instead of clarity. Your teams spend more time managing systems than driving innovation. It's time to take back control with a unified, intelligent approach to your IT ecosystem.
               </p>
             </div>
           </div>
@@ -77,28 +137,57 @@ export function ManagedServices(): React.ReactElement {
         <section className="page-values" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
           <div className="container">
             <div className="page-values__header">
-              <h2 className="page-values__title">Our Strategic Approach</h2>
+              <h2 className="page-values__title">A Unified MSP Framework Built for the Modern Businesses</h2>
             </div>
             <div className="page-values__grid">
               {STRATEGIC_APPROACH.map((approach, index) => (
                 <div key={index} className="page-value-card">
-                  <div className="page-value-card__icon">
-                    <ImagePlaceholder
-                      label={approach.title}
-                      imageName={`securitysolutions/${approach.icon}.png`}
-                      width={50}
-                      height={50}
-                      borderRadius={0}
-                    />
-                  </div>
-                  <h3 className="page-value-card__title">{approach.title}</h3>
-                  <p className="page-value-card__description">{approach.description}</p>
+                  <h2 className="page-value-card__title">{approach.h2}</h2>
+                  <p className="page-value-card__description">{approach.body}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        <Testimonials />
+        
+        {/* Case Studies Table Section */}
+        <section className="managed-services-table-section">
+          <div className="container">
+            <div className="managed-services-table-wrapper">
+              <table className="managed-services-table">
+                <thead>
+                  <tr>
+                    <th className="managed-services-table-header">Client</th>
+                    <th className="managed-services-table-header">Challenge</th>
+                    <th className="managed-services-table-header">Skysecure Solution</th>
+                    <th className="managed-services-table-header">Outcome</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {CASE_STUDIES_TABLE.map((row, index) => (
+                    <tr key={index} className="managed-services-table-row">
+                      <td className="managed-services-table-cell managed-services-table-cell--client">
+                        {row.client}
+                      </td>
+                      <td className="managed-services-table-cell">
+                        {row.challenge}
+                      </td>
+                      <td className="managed-services-table-cell">
+                        {row.solution}
+                      </td>
+                      <td className="managed-services-table-cell managed-services-table-cell--outcome">
+                        {row.outcome}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        
         {/* Continuous Intelligence Section */}
         <section className="page-innovation">
           <div className="container">
@@ -164,34 +253,24 @@ export function ManagedServices(): React.ReactElement {
             </div>
           </div>
         </section>
-
-        {/* AI Precision Meets Human Expertise Section */}
-        <section className="page-intro">
-          <div className="container">
-            <div className="page-intro__text">
-              <h2 style={{ 
-                fontSize: '32px', 
-                fontWeight: '700', 
-                color: 'var(--color-black)', 
-                marginBottom: '24px',
-                textAlign: 'center',
-                lineHeight: '1.2'
-              }}>AI-Powered Insights with Human Expertise</h2>
-              <p style={{ fontSize: '16px', textAlign: 'center' }}>
-              Our managed services leverage cutting-edge AI tools to streamline workflows and provide actionable insights. Paired with the deep expertise of our professionals, we ensure that your IT environment is optimized for maximum performance, security, and cost-efficiency.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="page-cta">
           <div className="container">
             <div className="page-cta__content">
-              <h2 className="page-cta__title">Don’t Let IT Challenges Hold You Back</h2>
+              <h2 className="page-cta__title">Let's Redefine How Your Business Manages Technology</h2>
               <p className="page-cta__description">
-              Let us handle your IT so you can focus on growing your business. Our expert-managed services are designed to protect, optimize, and scale your IT infrastructure keeping you ahead of the competition.
+              Partner with Skysecure and experience the power of unified managed services that protect, automate, and scale your business.
               </p>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '32px' }}>
+                <button 
+                  className="mission-button mission-button--primary"
+                  onClick={() => {
+                    window.location.href = '/contact';
+                  }}
+                >
+                  Get Started with Skysecure
+                </button>
+              </div>
             </div>
           </div>
         </section>

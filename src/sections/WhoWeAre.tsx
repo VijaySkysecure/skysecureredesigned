@@ -2,10 +2,10 @@ import React from 'react';
 
 export function WhoWeAre(): React.ReactElement {
   return (
-    <section className="section--light" id="about" style={{ paddingTop: '16px', paddingBottom: '20px'}}>
+    <section className="section--light" id="about" style={{ paddingTop: '80px', paddingBottom: '80px'}}>
       <div className="container">
         <div className="who-we-are__content">
-          <h2 className="who-we-are__title">Built on Trust. Evolving with Intelligence.</h2>
+          <h2 className="who-we-are__title" style={{ marginTop: '0', marginBottom: '24px' }}>Built on Trust. Evolving with Intelligence.</h2>
           <p className="who-we-are__intro">
             <strong style={{ color: 'var(--color-blue)' }}>5+ years</strong> and counting, empowering enterprises worldwide to stay secure, scale faster, and thrive through our unified, AI-powered managed services.
           </p>

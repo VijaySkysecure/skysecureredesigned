@@ -23,6 +23,10 @@ const NAV_ITEMS: NavLink[] = [
     href: 'https://shop.skysecure.ai/',
   },
   {
+    label: 'Realise',
+    href: '/realize',
+  },
+  {
     label: 'About Us',
     href: '/about',
   },
