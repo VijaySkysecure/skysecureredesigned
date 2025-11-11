@@ -118,6 +118,15 @@ section {
   background-color: var(--color-bg-light);
 }
 
+/* Reduce gap between Leadership and Partnerships sections */
+.section--muted#leadership {
+  padding-bottom: 32px !important;
+}
+
+.section--muted#partners {
+  padding-top: 32px !important;
+}
+
 .section-header {
   margin-bottom: 64px;
 }
@@ -1210,6 +1219,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
+  align-items: stretch;
 }
 
 /* Horizontal scroll for All Resources tab - cards after the first 3 */
@@ -1220,16 +1230,21 @@ section {
   -webkit-overflow-scrolling: touch;
   gap: 32px;
   padding-bottom: 16px;
+  align-items: stretch;
 }
 
 .resource-grid:has(.resource-card--scrollable) .resource-card:not(.resource-card--scrollable) {
   flex: 0 0 calc(33.333% - 22px);
   scroll-snap-align: start;
+  height: 100%;
+  align-self: stretch;
 }
 
 .resource-grid:has(.resource-card--scrollable) .resource-card--scrollable {
   flex: 0 0 calc(33.333% - 22px);
   scroll-snap-align: start;
+  height: 100%;
+  align-self: stretch;
 }
 
 /* Hide scrollbar completely */
@@ -1296,6 +1311,7 @@ section {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .resource-card:hover {
@@ -1367,6 +1383,7 @@ section {
   flex-direction: column;
   gap: 10px;
   flex: 1;
+  min-height: 0;
 }
 
 .resource-category {
@@ -1389,9 +1406,10 @@ section {
 .resource-description {
   font-size: 14px;
   color: var(--color-grey);
-  line-height: 1.0;
+  line-height: 1.4;
   margin: 0;
   flex: 1;
+  min-height: 0;
 }
 
 .resource-action {
@@ -1411,10 +1429,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0px;
+  margin-top: auto;
   font-size: 12px;
   flex-wrap: nowrap;
-  margin-bottom: -30px;
+  margin-bottom: 0;
 }
 
 .resource-author {
@@ -1479,6 +1497,7 @@ section {
   gap: 50px;
   max-width: 800px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
 .profile-card {
@@ -1492,6 +1511,7 @@ section {
   gap: 24px;
   align-items: center;
   text-align: center;
+  height: 100%;
 }
 
 .profile-card__avatar {
@@ -3392,6 +3412,16 @@ section {
   .section--muted#leadership {
     padding-top: 16px !important;
   }
+
+  /* Android only - Reduce gap between Solutions menu and submenu items */
+  .header__nav-item.is-open .header__submenu {
+    padding: 4px 0 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .header__submenu-link {
+    padding: 8px 20px !important;
+  }
 }
 
 .footer {
@@ -3578,6 +3608,21 @@ footer section .container {
   .contact-grid,
   .careers {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .profile-card {
+    width: 100% !important;
+    max-width: 390px !important;
+    height: 100%;
+    align-self: stretch;
+  }
+
+  .profile-card > div:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .footer__top {
@@ -3902,6 +3947,44 @@ footer section .container {
   }
 }
 
+/* iPad Specific Styles (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Ensure resource cards have consistent height on iPad */
+  .resource-grid {
+    align-items: stretch !important;
+    justify-items: stretch !important;
+  }
+
+  .resource-card {
+    width: 100% !important;
+    height: 100% !important;
+    align-self: stretch !important;
+  }
+
+  .resource-card__content {
+    flex: 1 !important;
+  }
+
+  /* Ensure profile cards have consistent height on iPad */
+  .profile-grid {
+    align-items: stretch !important;
+  }
+
+  .profile-card {
+    width: 100% !important;
+    max-width: 390px !important;
+    height: 100% !important;
+    align-self: stretch !important;
+  }
+
+  .profile-card > div:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 /* Tablet styles - iPad Pro */
 @media (max-width: 1024px) {
   /* Show mobile toggle on iPad Pro */
@@ -4122,6 +4205,7 @@ footer section .container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
     margin: 0;
+    align-items: stretch;
   }
 
   .card-grid .card:first-child {
@@ -4132,16 +4216,18 @@ footer section .container {
     margin-left: 0;
     grid-column: 1 / -1;
     justify-self: center;
-    max-width: 400px;
+    max-width: calc((100% - 24px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 
   .card {
     width: 100%;
     max-width: 100%;
     gap: 16px;
-    height: auto;
-    min-height: 350px;
+    height: 100%;
+    min-height: 450px;
     padding: 24px 20px;
+    box-sizing: border-box;
   }
 
   .card__icon {
@@ -4335,7 +4421,8 @@ footer section .container {
   .resource-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
-    justify-items: center;
+    justify-items: stretch;
+    align-items: stretch;
   }
 
   .resource-grid:has(.resource-card--scrollable) .resource-card:not(.resource-card--scrollable),
@@ -4348,13 +4435,26 @@ footer section .container {
     justify-content: center;
   }
 
+  .resource-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+
   .resource-card__media {
     height: 160px;
+    flex-shrink: 0;
   }
 
   .resource-card__content {
     padding: 20px;
     gap: 8px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
 
   .resource-title {
@@ -4595,10 +4695,17 @@ footer section .container {
   }
 
   /* Strategic Vision cards - reduce spacing for mobile */
+  .card-grid {
+    align-items: stretch;
+  }
+
   .card {
     gap: 14px;
-    height: auto;
-    min-height: 340px;
+    height: 100%;
+    min-height: 420px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .card__description {
@@ -4874,7 +4981,8 @@ footer section .container {
     scrollbar-width: none;
     -ms-overflow-style: none;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch !important;
+    align-content: stretch !important;
     width: 100%;
     max-width: 100%;
   }
@@ -4893,16 +5001,26 @@ footer section .container {
     scroll-snap-align: center;
     width: 280px;
     max-width: 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    min-height: 100%;
   }
 
   .resource-card__media {
     height: 160px;
+    flex-shrink: 0;
   }
 
   .resource-card__content {
     padding: 18px;
     padding-right: 24px !important; /* Increased right padding to prevent date cutoff */
     gap: 8px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
 
   .resource-title {
@@ -5321,6 +5439,7 @@ footer section .container {
   .resource-grid {
     padding: 0 calc(50% - 130px) 16px calc(50% - 130px);
     justify-content: flex-start;
+    align-items: stretch !important;
   }
 
   .resource-card {
@@ -5328,15 +5447,25 @@ footer section .container {
     width: 260px;
     max-width: 260px;
     scroll-snap-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    min-height: 100%;
   }
 
   .resource-card__media {
     height: 140px;
+    flex-shrink: 0;
   }
 
   .resource-card__content {
     padding: 16px;
     gap: 6px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
 
   .resource-title {
@@ -6008,6 +6137,25 @@ footer section .container {
     grid-template-columns: 1fr !important;
     gap: 16px;
   }
+
+  /* Ensure profile cards have consistent height on Android */
+  .profile-grid {
+    align-items: stretch !important;
+  }
+
+  .profile-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    align-self: stretch !important;
+  }
+
+  .profile-card > div:last-child {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
   
   /* Careers content - stack on mobile */
   .careers-content {
@@ -6023,11 +6171,27 @@ footer section .container {
     padding: 0 16px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    align-items: stretch !important;
   }
   
   .resource-card {
     flex: 0 0 280px;
     scroll-snap-align: start;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    min-height: 100%;
+  }
+
+  .resource-card__media {
+    flex-shrink: 0;
+  }
+
+  .resource-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   /* Microsoft Security Partner - reduce blue tick text size on mobile */
@@ -6047,6 +6211,23 @@ footer section .container {
     max-width: 100% !important;
     margin: 0 !important;
     padding: 20px;
+  }
+
+  /* Ensure profile cards maintain consistent height on mobile */
+  .profile-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-self: stretch !important;
+  }
+
+  .profile-card > div:last-child {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
   }
   
   /* Strategic Vision cards */
@@ -6091,6 +6272,21 @@ footer section .container {
   /* Leadership section */
   .profile-grid {
     gap: 24px;
+    align-items: stretch !important;
+  }
+
+  .profile-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    align-self: stretch !important;
+  }
+
+  .profile-card > div:last-child {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
   }
   
   .profile-card__avatar {
@@ -6869,6 +7065,7 @@ footer section .container {
   line-height: 28px;
   color: rgba(75, 85, 99, 1);
   margin-bottom: 48px;
+  text-align: left;
 }
 
 .who-we-are__quote {

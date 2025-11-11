@@ -930,6 +930,81 @@
   }
 }
 
+/* iPad Specific Styles (768px - 1024px) - iPad Air, iPad Mini, iPad Pro */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Hide the main timeline line */
+  .about-timeline-wrapper .about-timeline-line {
+    display: none !important;
+  }
+  
+  /* Position blue line in the green gap - from bottom of text box to top of icon */
+  .about-timeline-content-wrapper::after {
+    content: '' !important;
+    position: absolute !important;
+    left: calc(50% + 16px) !important; /* Match icon position - moved to the right */
+    bottom: -72px !important; /* Match the margin-bottom of content-wrapper */
+    width: 2px !important;
+    height: 72px !important; /* Match the gap size */
+    background-color: #E5E7EB !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+  }
+
+  /* Journey Timeline Section - Position icons below text boxes */
+  .about-timeline-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 0 !important; /* Remove bottom margin from item */
+    position: relative;
+    width: 100%;
+  }
+
+  .about-timeline-content-wrapper {
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 72px !important; /* Final increase to move icon down further, text box stays in place */
+    width: 100%;
+    position: relative !important; /* Required for ::after positioning */
+  }
+
+  .about-timeline-content-wrapper--left,
+  .about-timeline-content-wrapper--right {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* Position icon below the card, centered in the gap between text boxes */
+  .about-timeline-dot {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0 0 24px 16px !important; /* Moved icon to the right by adding left margin */
+    z-index: 2;
+    background-color: #FFFFFF;
+    border: 2px solid #0A4EFF;
+    border-radius: 50%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .about-timeline-spacer {
+    display: none;
+  }
+
+  .about-timeline-card {
+    padding: 24px;
+    margin-bottom: 0;
+  }
+}
+
 /* Responsive Design - Mobile */
 @media (max-width: 968px) {
   /* Hero Section */
