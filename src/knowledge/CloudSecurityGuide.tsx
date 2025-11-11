@@ -416,17 +416,9 @@ export function CloudSecurityGuide(): React.ReactElement {
               </p>
               <div style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '40px', borderRadius: '16px', textAlign: 'center', maxWidth: '780px', margin: '0 auto' }}>
                 <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', margin: '0 0 16px 0' }}>Ready to Secure Your Cloud Future?</h3>
-                <p style={{ fontSize: '16px', color: '#FFFFFF', margin: '0 0 32px 0', opacity: 0.9 }}>
+                <p style={{ fontSize: '16px', color: '#FFFFFF', margin: '0 0 0 0', opacity: 0.9 }}>
                 At Skysecure, we help businesses navigate this transformation with scalable, intelligent cloud security solutions that protect your operations today and prepare you for tomorrow.
                 </p>
-                <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                  <button style={{ backgroundColor: '#FFFFFF', color: '#3B82F6', padding: '12px 24px', borderRadius: '8px', border: '1px solid #3B82F6', fontSize: '16px', fontWeight: '600', cursor: 'pointer', fontFamily: 'Inter' }}>
-                    Download Security Guide
-                  </button>
-                  <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: '2px solid #FFFFFF', fontSize: '16px', fontWeight: '600', cursor: 'pointer', fontFamily: 'Inter' }}>
-                    Talk to an Expert
-                  </button>
-                </div>
               </div>
             </section>
 
