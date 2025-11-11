@@ -371,11 +371,10 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                 <p style={{ marginBottom: '16px', fontSize: '16px', lineHeight: '1.6', color: '#374151' }}>
                   Skysecure has been at the forefront of cybersecurity innovation, helping manufacturing organizations strengthen their IT security frameworks. Our proven approach combines strategy, technology, and expertise to secure your digital assets and operations.
                 </p>
-                <p style={{ marginBottom: '24px', fontSize: '16px', lineHeight: '1.6', color: '#374151' }}>
+                <p style={{ marginBottom: '0px', fontSize: '16px', lineHeight: '1.6', color: '#374151' }}>
                   Partner with us to accelerate your IT security transformation journey and achieve sustainable growth.
                 </p>
                 <div style={{ textAlign: 'center' }}>
-                  <button className="cta-button" style={{ backgroundColor: '#0066CC', color: 'white', padding: '12px 24px', borderRadius: '6px', border: 'none', fontSize: '16px', fontWeight: '500', fontFamily: 'Inter', cursor: 'pointer' }}>Contact Skysecure Today</button>
                 </div>
               </div>
             </section>
@@ -397,36 +396,6 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                 <p className="author-description" style={{ fontSize: '14px', color: '#374151', lineHeight: '1.5', margin: 0 }}>
                 Expert in industrial cybersecurity with over 10 years of experience helping manufacturing organizations secure their digital transformation initiatives.
                 </p>
-              </div>
-            </section>
-
-            {/* You May Also Like */}
-            <section className="related-articles">
-              <h2 className="related-articles__title">You May Also Like</h2>
-              <div className="related-articles__grid">
-                {RELATED_ARTICLES.map((article, index) => (
-                  <div key={index} className="related-article">
-                    <div className="related-article__image">
-                      <ImagePlaceholder
-                        label={article.title}
-                        imageName={`knowledge/${article.image}.png`}
-                        width={400}
-                        height={200}
-                        borderRadius={8}
-                      />
-                    </div>
-                    <div className="related-article__content">
-                      <span className="related-article__tag">{article.tag}</span>
-                      <h3 className="related-article__title">{article.title}</h3>
-                      <p className="related-article__description">{article.description}</p>
-                      <div className="related-article__meta">
-                        <span>{article.date}</span>
-                        <span>•</span>
-                        <span>{article.readTime}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
               </div>
             </section>
           </div>
