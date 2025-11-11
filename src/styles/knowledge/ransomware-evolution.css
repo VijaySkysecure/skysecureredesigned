@@ -24,6 +24,145 @@
     display: block !important;
     margin: 0 auto !important;
   }
+
+  /* Reduce gap between Critical Alert box and The Evolving Ransomware Landscape section */
+  .blog-section .ransomware-executive-summary {
+    margin-bottom: 0 !important;
+  }
+
+  .blog-section:has(.ransomware-executive-summary) {
+    padding-bottom: 32px !important;
+  }
+
+  .blog-section:has(.ransomware-landscape-wrapper) {
+    padding-top: 32px !important;
+  }
+
+  /* Reduce gap between timeline graphic and Notable Ransomware Variants section */
+  .blog-section:has(.ransomware-landscape-wrapper) {
+    padding-bottom: 32px !important;
+  }
+
+  .blog-section:has(.ransomware-variants-grid) {
+    padding-top: 32px !important;
+  }
+
+  /* Fix Attack Vectors paragraph text alignment for iPad */
+  .blog-section:has(.ransomware-attack-vectors-grid) .blog-section-text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Reduce gap between AI section and Defense Strategies section */
+  .blog-section:has(.ransomware-ai-wrapper) {
+    padding-bottom: 16px !important;
+  }
+
+  .blog-section:has(.ransomware-defense-wrapper) {
+    padding-top: 16px !important;
+  }
+
+  /* Fix Defense Strategies paragraph text alignment for iPad */
+  .blog-section:has(.ransomware-defense-wrapper) .blog-section-text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Reduce gap between Defense Strategies section (shield graphic) and Global Impact section */
+  .blog-section:has(.ransomware-defense-wrapper) {
+    padding-bottom: 16px !important;
+  }
+
+  .blog-section:has(.ransomware-global-stats) {
+    padding-top: 16px !important;
+  }
+
+  /* Fix Global Impact paragraph text alignment for iPad */
+  .blog-section:has(.ransomware-global-stats) .blog-section-text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Center "The Role of AI in Ransomware Evolution" heading and fix paragraph for iPad */
+  .blog-section:has(.ransomware-ai-wrapper) .blog-section-title {
+    text-align: center !important;
+  }
+
+  .blog-section:has(.ransomware-ai-wrapper) .blog-section-text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Fix Notable Ransomware Variants paragraph text alignment for iPad */
+  .blog-section:has(.ransomware-variants-grid) .blog-section-text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Fix Executive Summary paragraph text alignment for iPad */
+  .blog-section:has(.ransomware-executive-summary) .blog-section-text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Center "The Evolving Ransomware Landscape" heading and fix paragraph for iPad */
+  .blog-section:has(.ransomware-landscape-wrapper) .blog-section-title {
+    text-align: center !important;
+  }
+
+  .blog-section:has(.ransomware-landscape-wrapper) .blog-section-text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Center "Skysecure's Perspective" heading and fix paragraph for iPad */
+  .blog-section:has(.ransomware-perspective-wrapper) .blog-section-title {
+    text-align: center !important;
+  }
+
+  .blog-section:has(.ransomware-perspective-wrapper) .blog-section-text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Center "Contact Threat Intelligence Team" button for iPad */
+  .blog-section:has(.ransomware-perspective-wrapper) button {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* Reduce gap between Notable Ransomware Variants section and Attack Vectors section */
+  .blog-section:has(.ransomware-variants-grid) {
+    padding-bottom: 32px !important;
+  }
+
+  .blog-section:has(.ransomware-attack-vectors-grid) {
+    padding-top: 32px !important;
+  }
 }
 
 /* Tablet Styles (max-width: 1024px) */
