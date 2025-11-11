@@ -439,7 +439,6 @@ export function WeeklyCyber(): React.ReactElement {
         {/* Quote Section */}
         <section className="quote-section">
           <div className="container-narrow">
-            <div className="quote-icon">💬</div>
             <blockquote className="quote-text">
               "The evolution of AI-driven phishing and multi-vector ransomware attacks 
               highlights a shift from opportunistic to precision-targeted campaigns. 
@@ -462,7 +461,6 @@ export function WeeklyCyber(): React.ReactElement {
               continuous monitoring. Skysecure's adaptive defense ecosystem enables businesses to predict, 
               prevent, and neutralize threats faster transforming data into decisive action.
             </p>
-            <button className="contact-btn">Contact Skysecure Threat Intelligence Team</button>
           </div>
         </section>
       </main>
