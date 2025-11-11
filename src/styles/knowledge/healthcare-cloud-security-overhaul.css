@@ -190,6 +190,30 @@
   }
 }
 
+/* iPad Specific Styles (768px - 1024px) - iPad Pro, iPad Air, iPad Mini - Must come after tablet styles to override */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Executive Summary - Copy iPad Mini exactly */
+  .executive-wrapper {
+    padding: 0 16px !important;
+    margin-bottom: 45px !important;
+    margin-left: -95px !important;
+    margin-right: auto !important;
+  }
+
+  .executive-left > h2,
+  .executive-left .blog-section-title {
+    text-align: center !important;
+  }
+
+  .executive-left .blog-section-text {
+    text-align: justify !important;
+    text-align-last: left !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
 /* Mobile Styles (max-width: 768px) */
 @media (max-width: 768px) {
   /* Hero Section */
@@ -482,6 +506,17 @@
   /* Blog Content Container */
   .blog-content .container {
     padding: 0 16px !important;
+  }
+}
+
+/* iPad Mini Specific Override (768px width) - Must come after mobile styles to override */
+@media (min-width: 768px) and (max-width: 768px) {
+  .executive-left .blog-section-text {
+    text-align: justify !important;
+    text-align-last: left !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
