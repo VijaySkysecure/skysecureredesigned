@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
+import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import '../styles/weekly-cyber.css';
 
 export function WeeklyCyber(): React.ReactElement {
@@ -29,8 +30,21 @@ export function WeeklyCyber(): React.ReactElement {
                 <div className="hero-badge">Skysecure Decode</div>
                 <h1 className="hero-title">Weekly Cyber Intelligence Update</h1>
                 <div className="hero-meta">
-                  <span className="hero-date">📅 July 15, 2024</span>
-                  <span className="hero-author">👤 Skysecure Threat Intelligence Team</span>
+                  <span className="hero-date">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="hero-icon">
+                      <rect x="2" y="4" width="12" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                      <rect x="4" y="1" width="2" height="3" rx="0.5" fill="currentColor"/>
+                      <rect x="10" y="1" width="2" height="3" rx="0.5" fill="currentColor"/>
+                    </svg>
+                    <span>July 15, 2024</span>
+                  </span>
+                  <span className="hero-author">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="hero-icon">
+                      <circle cx="8" cy="5" r="3" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                      <path d="M3 14C3 11 5.5 9 8 9C10.5 9 13 11 13 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                    <span>Skysecure Threat Intelligence Team</span>
+                  </span>
                 </div>
               </div>
               <div className="hero-image">

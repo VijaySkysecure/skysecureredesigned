@@ -116,6 +116,14 @@
   gap: 8px;
 }
 
+.hero-date .hero-icon,
+.hero-author .hero-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.9); /* Light blue/off-white to match second image */
+}
+
 .hero-download-btn {
   display: inline-flex;
   align-items: center;
@@ -974,6 +982,12 @@
     margin: 0 auto;
   }
 
+  .hero-date .hero-icon,
+  .hero-author .hero-icon {
+    width: 15px;
+    height: 15px;
+  }
+
   .intro-text {
     max-width: 100%;
     text-align: left;
@@ -1110,6 +1124,12 @@
     gap: 8px;
     font-size: 13px;
     align-items: center;
+  }
+
+  .hero-date .hero-icon,
+  .hero-author .hero-icon {
+    width: 14px;
+    height: 14px;
   }
 
   .hero-image {
@@ -1372,6 +1392,12 @@
 
   .hero-meta {
     font-size: 12px;
+  }
+
+  .hero-date .hero-icon,
+  .hero-author .hero-icon {
+    width: 12px;
+    height: 12px;
   }
 
   .section-title {
