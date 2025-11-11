@@ -6,6 +6,7 @@ import { WhoWeAre } from './sections/WhoWeAre';
 import { StrategicVision } from './sections/StrategicVision';
 import { WhatWeDo } from './sections/WhatWeDo';
 // import { SecuritySolutions } from './sections/SecuritySolutions';
+import { MarketplaceSection } from './sections/Marketplace';
 import { GlobalImpact } from './sections/GlobalImpact';
 import { Testimonials } from './sections/Testimonials';
 import { Resources } from './sections/Resources';
@@ -224,6 +225,7 @@ export function App(): React.ReactElement {
         <WhatWeDo />
         <StrategicVision />
         {/* <SecuritySolutions /> */}
+        <MarketplaceSection />
         <GlobalImpact />
         <Testimonials />
         <Resources />
