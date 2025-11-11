@@ -44,14 +44,15 @@
   /* Innovation section - stack vertically */
   .page-innovation__content-wrapper {
     flex-direction: column !important;
-    gap: 24px !important; /* Reduced gap for Android */
+    gap: 32px !important;
+    
     align-items: center !important;
     margin-top: 0;
     margin-bottom: 0;
   }
 
   .page-innovation {
-    padding: 24px 0 !important; /* Reduced and even spacing for Android */
+    padding: 40px 0 !important;
   }
 
   .page-innovation__content-wrapper > div:first-child {
@@ -166,11 +167,12 @@
 
   .page-values__grid {
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    gap: 24px !important;
   }
 
   .page-values__title {
     padding: 0 20px;
+    margin-bottom: 32px !important;
   }
 
   .page-value-card {
@@ -248,12 +250,12 @@
   }
 
   .page-innovation {
-    padding: 24px 0 !important; /* Reduced and even spacing (top and bottom equal) */
+    padding: 40px 0 !important;
   }
 
   .page-innovation__content-wrapper {
     flex-direction: column !important;
-    gap: 24px !important; /* Reduced gap between image and text */
+    gap: 32px !important;
     padding: 0 20px;
     margin-top: 0;
     margin-bottom: 0;
@@ -281,7 +283,7 @@
   /* Trusted by Businesses metrics grid - mobile */
   .trust-metrics-grid {
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    gap: 24px !important;
     padding: 0 20px;
   }
 
@@ -291,12 +293,13 @@
 
   .page-features__grid {
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    gap: 24px !important;
     padding: 0 20px;
   }
 
   .page-features__title {
     padding: 0 20px;
+    margin-bottom: 32px !important;
   }
 
   .page-feature-card {
@@ -321,14 +324,38 @@
 
   .page-cta {
     padding: 40px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .page-cta .container {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 100% !important;
   }
 
   .page-cta__content {
     padding: 0 20px;
+    text-align: center;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .page-cta__title {
+    margin-bottom: 16px !important;
+    margin-top: 0 !important;
   }
 
   .page-cta__description {
     font-size: 16px !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  /* Remove button div margin to maintain equal spacing */
+  .page-cta__content > div {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 }
 
