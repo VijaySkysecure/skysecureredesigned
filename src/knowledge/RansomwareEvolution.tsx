@@ -534,18 +534,20 @@ export function RansomwareEvolution(): React.ReactElement {
                     alignItems: 'flex-start',
                     gap: '16px'
                   }}>
-                    <div style={{ 
-                      width: '45px',
-                      height: '58px',
+                    <div className="ransomware-defense-icon-container" style={{ 
+                      width: '50px',
+                      height: '62px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      flexShrink: 0
+                      flexShrink: 0,
+                      overflow: 'visible',
+                      padding: '2px'
                     }}>
                       <ImagePlaceholder
                         label={strategy.title}
                         imageName={strategy.icon}
-                        width={45}
+                        width={46}
                         height={58}
                         borderRadius={0}
                       />

@@ -5,6 +5,25 @@
   display: none !important;
 }
 
+/* Fix icon clipping in Defense Strategies section - ensure complete icons are visible */
+.ransomware-defense-icon-container {
+  overflow: visible !important;
+}
+
+.ransomware-defense-icon-container .image-placeholder {
+  overflow: visible !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ransomware-defense-icon-container .image-placeholder__img {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
 /* iPad Specific Styles */
 @media (min-width: 768px) and (max-width: 1024px) {
   .ransomware-hero-right {
