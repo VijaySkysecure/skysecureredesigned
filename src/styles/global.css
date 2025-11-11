@@ -400,8 +400,8 @@ section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -414,15 +414,18 @@ section {
   width: 70px;
   height: 70px;
   border-radius: 0;
+  align-self: center;
 }
 
 .card__title {
   font-size: 20px;
   font-weight: 700;
   color: var(--color-black);
-  text-align: left;
+  text-align: center;
   margin: 0;
   flex-shrink: 0;
+  align-self: center;
+  width: 100%;
 }
 
 .card__description {
@@ -432,6 +435,11 @@ section {
   text-align: justify;
   line-height: 1.6;
   margin: 0;
+  margin-bottom: 12px;
+}
+
+.card__description:last-of-type {
+  margin-bottom: 12px;
 }
 
 .card__link {
@@ -4147,11 +4155,15 @@ footer section .container {
 
   .card__description {
     font-size: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+  }
+
+  .card__description:last-of-type {
+    margin-bottom: 10px;
   }
 
   .card__bullet-points {
-    margin-top: -8px;
+    margin-top: 0;
     gap: 6px;
   }
 
@@ -4590,11 +4602,15 @@ footer section .container {
   }
 
   .card__description {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+  }
+
+  .card__description:last-of-type {
+    margin-bottom: 8px;
   }
 
   .card__bullet-points {
-    margin-top: -6px;
+    margin-top: 0;
   }
 
   /* What We Do cards - center align on mobile */
@@ -5201,11 +5217,15 @@ footer section .container {
   }
 
   .card__description {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+  }
+
+  .card__description:last-of-type {
+    margin-bottom: 6px;
   }
 
   .card__bullet-points {
-    margin-top: -8px;
+    margin-top: 0;
   }
 
   /* What We Do cards - center align on small mobile */

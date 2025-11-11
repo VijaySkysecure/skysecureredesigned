@@ -103,26 +103,6 @@ const RESULTS = [
   }
 ];
 
-const RELATED_CASE_STUDIES = [
-  {
-    image: 'healthcare-cloud-security-overhaul',
-    title: 'Healthcare Cloud Security Overhaul',
-    description: 'Transforming healthcare data protection through comprehensive cloud security modernization and Zero Trust implementation.',
-    link: '#'
-  },
-  {
-    image: 'fortune-500-zero-trust',
-    title: 'Fortune 500 Zero Trust Implementation',
-    description: 'Comprehensive Zero Trust architecture deployment for a global enterprise, achieving 70% reduction in security incidents.',
-    link: '#'
-  },
-  {
-    image: 'ai-threat-detection-financial',
-    title: 'AI-Powered Threat Detection in Financial Services',
-    description: 'Machine learning-based threat detection system reducing false positives by 85% for a major financial institution.',
-    link: '#'
-  }
-];
 
 export function SaaSSoftwareSupplyChain(): React.ReactElement {
   return (
@@ -321,60 +301,12 @@ export function SaaSSoftwareSupplyChain(): React.ReactElement {
             </section>
 
             {/* CTA Section */}
-            <section className="saas-cta-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0', marginTop: '-60px' }}>
+            <section className="saas-cta-section" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '60px 0 0 0', marginTop: '-60px' }}>
               <div className="saas-cta-content" style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '60px 40px', textAlign: 'center' }}>
                 <h3 style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', margin: '0 0 16px 0' }}>Strengthen Your Software Supply Chain with Confidence</h3>
-                <p style={{ fontSize: '18px', color: '#FFFFFF', margin: '0 auto 40px auto', opacity: 0.9, maxWidth: '600px' }}>
+                <p style={{ fontSize: '18px', color: '#FFFFFF', margin: '0 auto 0px auto', opacity: 0.9, maxWidth: '600px' }}>
                 Partner with Skysecure to embed security across your entire development lifecycle, from code to cloud.
                 </p>
-                <div className="saas-cta-buttons" style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                  <button style={{ backgroundColor: '#FFFFFF', color: '#3B82F6', padding: '12px 24px', borderRadius: '8px', border: '1px solid #3B82F6', fontSize: '16px', fontWeight: '600', cursor: 'pointer', fontFamily: 'Inter' }}>
-                    Contact Us
-                  </button>
-                  <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: '1px solid #FFFFFF', fontSize: '16px', fontWeight: '600', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Inter' }}>
-                    <ImagePlaceholder
-                      label="Download Icon"
-                      imageName="knowledge/icon-download.png"
-                      width={16}
-                      height={16}
-                      borderRadius={0}
-                    />
-                    Download Full Case Study PDF
-                  </button>
-                </div>
-              </div>
-            </section>
-
-            {/* Explore More Success Stories */}
-            <section className="related-articles">
-              <h2 className="related-articles__title">Explore More Success Stories</h2>
-              <p style={{ fontSize: '16px', color: '#64748B', textAlign: 'center', marginBottom: '40px' }}>Discover how Skysecure has helped other organizations strengthen their security posture</p>
-              <div className="related-articles__grid">
-                {RELATED_CASE_STUDIES.map((caseStudy, index) => (
-                  <div key={index} className="related-article" style={{ height: '470px' }}>
-                    <div className="related-article__image">
-                      <ImagePlaceholder
-                        label={caseStudy.title}
-                        imageName={`knowledge/${caseStudy.image}.png`}
-                        width={400}
-                        height={200}
-                        borderRadius={8}
-                      />
-                    </div>
-                    <div className="related-article__content">
-                      <div style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
-                        <span style={{ backgroundColor: '#D1FAE5', color: '#065F46', padding: '4px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: '500' }}>
-                          {index === 0 ? 'Healthcare' : index === 1 ? 'Enterprise' : 'Financial Services'}
-                        </span>
-                      </div>
-                      <h3 className="related-article__title">{caseStudy.title}</h3>
-                      <p className="related-article__description">{caseStudy.description}</p>
-                      <a href={caseStudy.link} style={{ color: '#3B82F6', textDecoration: 'none', fontSize: '14px', fontWeight: '500', display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '20px' }}>
-                        Read Case Study →
-                      </a>
-                    </div>
-                  </div>
-                ))}
               </div>
             </section>
           </div>

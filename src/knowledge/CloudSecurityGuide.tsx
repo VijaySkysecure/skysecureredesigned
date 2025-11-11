@@ -107,7 +107,7 @@ const CLOUD_BEST_PRACTICES = [
     iconBgColor: 'rgba(34, 197, 94, 1)'
   },
   {
-    icon: 'icon-data-protection',
+    icon: 'icon-puttu',
     title: 'Data Encryption',
     description: 'Enable comprehensive data encryption in transit and at rest with advanced key management.',
     tag: 'Data Protection',
@@ -144,32 +144,6 @@ const AI_STATISTICS = [
   { percentage: '3x', label: 'Faster Response Time' }
 ];
 
-const RELATED_ARTICLES = [
-  {
-    image: 'ai-threat-detection-cover',
-    tag: 'Report',
-    title: 'AI-Driven Threat Detection: 2024 Report',
-    description: 'Comprehensive analysis of how AI is transforming cybersecurity threat detection and response capabilities.',
-    date: 'June 15, 2023',
-    readTime: '8 min read'
-  },
-  {
-    image: 'zero-trust-architecture-cover',
-    tag: 'Guide',
-    title: 'Zero Trust Architecture: The New Standard',
-    description: 'Essential guide to implementing Zero Trust security frameworks in modern cloud environments.',
-    date: 'May 22, 2023',
-    readTime: '6 min read'
-  },
-  {
-    image: 'azure-sentinel-cover',
-    tag: 'Blog',
-    title: 'Threat Protection with Azure Sentinel',
-    description: 'Step-by-step guide to implementing advanced threat protection using Microsoft Azure Sentinel.',
-    date: 'April 18, 2023',
-    readTime: '5 min read'
-  }
-];
 
 export function CloudSecurityGuide(): React.ReactElement {
   return (
@@ -211,11 +185,11 @@ export function CloudSecurityGuide(): React.ReactElement {
               </div>
               <div className="blog-meta-item">
                 <ImagePlaceholder
-                  label="Author"
-                  imageName="knowledge/icon-person.png"
-                  width={14}
+                  label="Suresh Kumar"
+                  imageName="homepage/portrait1.png"
+                  width={24}
                   height={24}
-                  borderRadius={0}
+                  borderRadius={12}
                 />
                 <span>Suresh Kumar</span>
               </div>
@@ -416,17 +390,9 @@ export function CloudSecurityGuide(): React.ReactElement {
               </p>
               <div style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '40px', borderRadius: '16px', textAlign: 'center', maxWidth: '780px', margin: '0 auto' }}>
                 <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', margin: '0 0 16px 0' }}>Ready to Secure Your Cloud Future?</h3>
-                <p style={{ fontSize: '16px', color: '#FFFFFF', margin: '0 0 32px 0', opacity: 0.9 }}>
+                <p style={{ fontSize: '16px', color: '#FFFFFF', margin: '0 0 0 0', opacity: 0.9 }}>
                 At Skysecure, we help businesses navigate this transformation with scalable, intelligent cloud security solutions that protect your operations today and prepare you for tomorrow.
                 </p>
-                <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                  <button style={{ backgroundColor: '#FFFFFF', color: '#3B82F6', padding: '12px 24px', borderRadius: '8px', border: '1px solid #3B82F6', fontSize: '16px', fontWeight: '600', cursor: 'pointer', fontFamily: 'Inter' }}>
-                    Download Security Guide
-                  </button>
-                  <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: '2px solid #FFFFFF', fontSize: '16px', fontWeight: '600', cursor: 'pointer', fontFamily: 'Inter' }}>
-                    Talk to an Expert
-                  </button>
-                </div>
               </div>
             </section>
 
@@ -449,42 +415,6 @@ export function CloudSecurityGuide(): React.ReactElement {
                   Expert in industrial cybersecurity with over 10 years of experience helping manufacturing organizations secure their digital transformation initiatives.
                   </p>
                 </div>
-              </div>
-            </section>
-
-            {/* You May Also Like */}
-            <section className="related-articles">
-              <h2 className="related-articles__title">You May Also Like</h2>
-              <p style={{ textAlign: 'center', fontSize: '16px', color: '#64748b', marginBottom: '40px' }}>
-              Explore more insights on cloud security and cybersecurity trends
-              </p>
-              <div className="related-articles__grid">
-                {RELATED_ARTICLES.map((article, index) => (
-                  <div key={index} className="related-article">
-                    <div className="related-article__image">
-                      <ImagePlaceholder
-                        label={article.title}
-                        imageName={`knowledge/${article.image}.png`}
-                        width={400}
-                        height={200}
-                        borderRadius={8}
-                      />
-                    </div>
-                    <div className="related-article__content">
-                      <span className="related-article__tag">{article.tag}</span>
-                      <h3 className="related-article__title">{article.title}</h3>
-                      <p className="related-article__description">{article.description}</p>
-                      <div className="related-article__meta">
-                        <span>{article.date}</span>
-                        <span>•</span>
-                        <span>{article.readTime}</span>
-                      </div>
-                      <a href="#" style={{ color: '#3B82F6', textDecoration: 'none', fontSize: '14px', fontWeight: '500', display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '12px' }}>
-                        Read More →
-                      </a>
-                    </div>
-                  </div>
-                ))}
               </div>
             </section>
           </div>

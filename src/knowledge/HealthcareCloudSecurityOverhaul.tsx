@@ -416,17 +416,9 @@ export function HealthcareCloudSecurityOverhaul(): React.ReactElement {
             <section className="blog-section cta-section" style={{ width: '100%', padding: '60px 0', overflowX: 'hidden' }}>
               <div className="cta-box" style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '40px', textAlign: 'center', maxWidth: '1200px', margin: '0 auto', width: '100%', boxSizing: 'border-box' }}>
                 <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', margin: '0 0 16px 0' }}>Ready to Modernize Your Cloud Security?</h3>
-                <p style={{ fontSize: '16px', color: '#FFFFFF', margin: '0 0 32px 0', opacity: 0.9 }}>
+                <p style={{ fontSize: '16px', color: '#FFFFFF', margin: '0 0 0 0', opacity: 0.9 }}>
                 Partner with Skysecure to build a secure, compliant, and future-ready cloud ecosystem for your organization.
                 </p>
-                <div className="cta-buttons-wrapper" style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                  <button style={{ backgroundColor: '#FFFFFF', color: '#3B82F6', padding: '12px 24px', borderRadius: '8px', border: '1px solid #3B82F6', fontSize: '16px', fontWeight: '600', cursor: 'pointer', fontFamily: 'Inter' }}>
-                    Contact Us
-                  </button>
-                  <button style={{ backgroundColor: 'rgba(10, 78, 255, 1)', color: '#FFFFFF', padding: '12px 24px', borderRadius: '8px', border: '1px solid #FFFFFF', fontSize: '16px', fontWeight: '600', cursor: 'pointer', fontFamily: 'Inter' }}>
-                    Download Case Study PDF
-                  </button>
-                </div>
               </div>
             </section>
           </div>

@@ -28,7 +28,7 @@ const CAPABILITIES = [
   {
     title: 'Data Operations',
     subtitle: 'Turn Data into Decisions',
-    description: 'We design and manage governed data ecosystems that unlock the full potential of your business intelligence while ensuring...',
+    description: 'We design and manage intelligent, secure data ecosystems that turn complex data into clear, real-time insights. Our unified data operations framework brings together visibility, compliance, and accuracy to help you make smarter decisions, move faster, and achieve measurable growth.',
     bulletPoints: [
       'Real-time visibility',
       'End-to-end governance',

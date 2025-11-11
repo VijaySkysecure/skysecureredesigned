@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Header } from './sections/Header';
 import { Hero } from './sections/Hero';
 import { TrustedCompanies } from './sections/TrustedCompanies';
-import { WhoWeAre } from './sections/WhoWeAre';
+// import { WhoWeAre } from './sections/WhoWeAre';
 import { StrategicVision } from './sections/StrategicVision';
 import { WhatWeDo } from './sections/WhatWeDo';
 // import { SecuritySolutions } from './sections/SecuritySolutions';
@@ -221,7 +221,7 @@ export function App(): React.ReactElement {
       <main>
         <Hero />
         <TrustedCompanies />
-        <WhoWeAre />
+        {/* <WhoWeAre /> */}
         <WhatWeDo />
         <StrategicVision />
         {/* <SecuritySolutions /> */}

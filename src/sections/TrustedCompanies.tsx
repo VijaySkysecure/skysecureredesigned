@@ -58,7 +58,7 @@ export function TrustedCompanies(): React.ReactElement {
   const displayCompanies = companiesLogo.length > 0 ? companiesLogo : fallbackCompanies;
 
   return (
-    <section className="trusted-companies-section" style={{ marginBottom: '50px' }}>
+    <section className="trusted-companies-section">
       <div className="container">
         <h2 className="trusted-companies-title">Trusted by Leading Enterprises</h2>
         

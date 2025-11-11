@@ -49,32 +49,6 @@ const BENEFITS = [
   }
 ];
 
-const RELATED_ARTICLES = [
-  {
-    image: 'cloud-security-cover',
-    tag: 'Blog',
-    title: 'The Future of Cloud Security',
-    description: 'Exploring emerging trends and technologies in cloud security',
-    date: 'June 15, 2023',
-    readTime: '5 min read'
-  },
-  {
-    image: 'circuit-board-cover',
-    tag: 'Report',
-    title: 'AI-Driven Threat Detection: 2024 Report',
-    description: 'Comprehensive analysis of AI-powered security solutions',
-    date: 'May 22, 2023',
-    readTime: '8 min read'
-  },
-  {
-    image: 'server-racks-cover',
-    tag: 'Guide',
-    title: 'Zero Trust in Industrial Environments',
-    description: 'Implementing zero trust architecture for industrial systems',
-    date: 'April 10, 2023',
-    readTime: '8 min read'
-  }
-];
 
 export function AzureSentinelGuide(): React.ReactElement {
   return (
@@ -113,11 +87,11 @@ export function AzureSentinelGuide(): React.ReactElement {
               </div>
               <div className="blog-meta-item">
                 <ImagePlaceholder
-                  label="Author"
-                  imageName="knowledge/icon-person.png"
-                  width={14}
+                  label="Nithin Ramegowda"
+                  imageName="homepage/portrait2.png"
+                  width={24}
                   height={24}
-                  borderRadius={0}
+                  borderRadius={12}
                 />
                 <span>Nithin Ramegowda</span>
               </div>
@@ -247,11 +221,10 @@ export function AzureSentinelGuide(): React.ReactElement {
               <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
                 <h2 className="blog-section-title" style={{ marginBottom: '24px' }}>Conclusion</h2>
                 <div style={{ backgroundColor: '#FFFFFF', padding: '32px', borderRadius: '12px', boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)' }}>
-                <p className="blog-section-text" style={{ marginBottom: '24px', textAlign: 'left' }}>
+                <p className="blog-section-text" style={{ marginBottom: '0px', textAlign: 'left' }}>
                 Microsoft Azure Sentinel is a next-generation SIEM solution that enables proactive, intelligent, and scalable threat protection. Its real-time analytics, deep integrations, and automation capabilities make it an ideal choice for organizations seeking to enhance their cybersecurity posture and mitigate risks effectively. With Skysecure's expertise in Azure deployment and monitoring, your security transformation can be seamless, cost-efficient, and future-ready.
                 </p>
                 <div style={{ textAlign: 'center' }}>
-                  <button className="cta-button" style={{ backgroundColor: '#0D6EFD', color: '#FFFFFF', padding: '12px 24px', borderRadius: '6px', border: 'none', fontSize: '16px', fontWeight: '500', fontFamily: 'Inter', cursor: 'pointer' }}>Download Whitepaper</button>
                 </div>
                 </div>
               </div>
@@ -274,36 +247,6 @@ export function AzureSentinelGuide(): React.ReactElement {
                 <p className="author-description" style={{ fontSize: '14px', color: '#374151', lineHeight: '1.5', margin: 0 }}>
                 Nithin specializes in Microsoft security solutions and helps enterprises design and implement scalable cloud-native protection frameworks.
                 </p>
-              </div>
-            </section>
-
-            {/* You May Also Like */}
-            <section className="related-articles">
-              <h2 className="related-articles__title">You May Also Like</h2>
-              <div className="related-articles__grid">
-                {RELATED_ARTICLES.map((article, index) => (
-                  <div key={index} className="related-article">
-                    <div className="related-article__image">
-                      <ImagePlaceholder
-                        label={article.title}
-                        imageName={`knowledge/${article.image}.png`}
-                        width={400}
-                        height={200}
-                        borderRadius={8}
-                      />
-                    </div>
-                    <div className="related-article__content">
-                      <span className="related-article__tag">{article.tag}</span>
-                      <h3 className="related-article__title">{article.title}</h3>
-                      <p className="related-article__description">{article.description}</p>
-                      <div className="related-article__meta">
-                        <span>{article.date}</span>
-                        <span>•</span>
-                        <span>{article.readTime}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
               </div>
             </section>
           </div>

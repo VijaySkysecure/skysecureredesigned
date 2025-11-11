@@ -111,12 +111,11 @@ export function WeeklyCyber(): React.ReactElement {
         {/* Key Threat Intelligence Highlights */}
         <section className="threat-highlights">
           <div className="container-narrow">
-            <h2 className="section-title">Key Threat Intelligence Highlights</h2>
+            <h2 className="section-title" style={{ textAlign: 'center' }}>Key Threat Intelligence Highlights</h2>
             
             <div className="highlights-grid">
               <div className="highlight-card highlight-red">
                 <div className="highlight-header">
-                  <div className="highlight-icon">⚠️</div>
                   <h3 className="highlight-title">Critical Vulnerabilities</h3>
                 </div>
                 <p className="highlight-description">
@@ -126,7 +125,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-orange">
                 <div className="highlight-header">
-                  <div className="highlight-icon">🦠</div>
                   <h3 className="highlight-title">New Malware Strains</h3>
                 </div>
                 <p className="highlight-description">
@@ -136,7 +134,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-blue">
                 <div className="highlight-header">
-                  <div className="highlight-icon">☁️</div>
                   <h3 className="highlight-title">Cloud Exploits</h3>
                 </div>
                 <p className="highlight-description">
@@ -146,7 +143,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-purple">
                 <div className="highlight-header">
-                  <div className="highlight-icon">👍</div>
                   <h3 className="highlight-title">Data Breaches</h3>
                 </div>
                 <p className="highlight-description">
@@ -156,7 +152,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-dark">
                 <div className="highlight-header">
-                  <div className="highlight-icon">☠️</div>
                   <h3 className="highlight-title">Emerging Ransomware</h3>
                 </div>
                 <p className="highlight-description">
@@ -166,7 +161,6 @@ export function WeeklyCyber(): React.ReactElement {
 
               <div className="highlight-card highlight-teal">
                 <div className="highlight-header">
-                  <div className="highlight-icon">💼</div>
                   <h3 className="highlight-title">AI-Powered Attacks</h3>
                 </div>
                 <p className="highlight-description">
@@ -439,7 +433,6 @@ export function WeeklyCyber(): React.ReactElement {
         {/* Quote Section */}
         <section className="quote-section">
           <div className="container-narrow">
-            <div className="quote-icon">💬</div>
             <blockquote className="quote-text">
               "The evolution of AI-driven phishing and multi-vector ransomware attacks 
               highlights a shift from opportunistic to precision-targeted campaigns. 
@@ -462,7 +455,6 @@ export function WeeklyCyber(): React.ReactElement {
               continuous monitoring. Skysecure's adaptive defense ecosystem enables businesses to predict, 
               prevent, and neutralize threats faster transforming data into decisive action.
             </p>
-            <button className="contact-btn">Contact Skysecure Threat Intelligence Team</button>
           </div>
         </section>
       </main>
