@@ -35,7 +35,7 @@ const CYBERSECURITY_CHALLENGES = [
 
 const CYBERSECURITY_MEASURES = [
   {
-    icon: 'icon-network',
+    icon: 'icon-networksecurity',
     title: 'Network Security',
     description: 'Firewalls, IDS/IPS, and network segmentation'
   },
