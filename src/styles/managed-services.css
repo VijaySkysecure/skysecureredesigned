@@ -4,6 +4,25 @@
 .page-values__grid {
   grid-template-columns: repeat(2, 1fr) !important;
   max-width: 1000px;
+  align-items: stretch;
+}
+
+/* Make cards equal height and align descriptions */
+.page-value-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-value-card__title {
+  min-height: 80px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.page-value-card__description {
+  margin-top: 0;
 }
 
 /* Stats Section Styles */
@@ -127,17 +146,17 @@
   box-shadow: 0 4px 16px rgba(17, 24, 39, 0.08);
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid var(--color-border);
+  border: 1px solid #000000;
 }
 
 .managed-services-table-header {
-  background-color: rgba(248, 250, 252, 0.5);
-  color: var(--color-black);
+  background-color: rgb(19, 55, 236);
+  color: var(--color-white);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 18px 24px;
   text-align: left;
-  border-right: 1px solid var(--color-border);
+  border-right: 1px solid #000000;
   white-space: nowrap;
   position: relative;
   letter-spacing: 0.3px;
@@ -159,16 +178,16 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: var(--color-border);
+  background-color: #000000;
 }
 
 .managed-services-table-row {
-  border-bottom: 1px solid var(--color-border) !important;
+  border-bottom: 1px solid #000000 !important;
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .managed-services-table-row:last-child {
-  border-bottom: 1px solid var(--color-border) !important;
+  border-bottom: 1px solid #000000 !important;
 }
 
 .managed-services-table-row:hover {
@@ -183,12 +202,17 @@
   color: var(--color-black);
   line-height: 1.6;
   vertical-align: top;
-  border-right: 1px solid var(--color-border);
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
   background-color: var(--color-white);
 }
 
 .managed-services-table-cell:last-child {
   border-right: none;
+}
+
+.managed-services-table-row:first-child .managed-services-table-cell {
+  border-top: none;
 }
 
 .managed-services-table-row:last-child .managed-services-table-cell:first-child {
@@ -201,7 +225,7 @@
 
 .managed-services-table-cell--client {
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-black);
   background-color: rgb(19, 55, 236);
 }
 
@@ -221,7 +245,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-color: #000000;
 }
 
 /* Large Tablet Styles (max-width: 1024px) */
@@ -802,20 +826,21 @@
   .managed-services-table-cell {
     padding: 12px !important;
     font-size: 11px !important;
-    border-right: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border) !important;
+    border-right: 1px solid #000000;
+    border-top: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
   }
 
   .managed-services-table-row {
-    border-bottom: 1px solid var(--color-border) !important;
+    border-bottom: 1px solid #000000 !important;
   }
 
   .managed-services-table-row:last-child {
-    border-bottom: 1px solid var(--color-border) !important;
+    border-bottom: 1px solid #000000 !important;
   }
 
   .managed-services-table-row:last-child .managed-services-table-cell {
-    border-bottom: 1px solid var(--color-border) !important;
+    border-bottom: 1px solid #000000 !important;
   }
 }
 
