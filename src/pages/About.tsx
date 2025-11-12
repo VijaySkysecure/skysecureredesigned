@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
@@ -175,6 +175,56 @@ const GLOBAL_OFFICES = [
 ];
 
 export function About(): React.ReactElement {
+  const timelineWrapperRef = useRef<HTMLDivElement>(null);
+  const timelineLineRef = useRef<HTMLDivElement>(null);
+  const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px',
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = parseInt(entry.target.getAttribute('data-index') || '0', 10);
+          setVisibleItems((prev) => {
+            const newSet = new Set(prev);
+            newSet.add(index);
+            return newSet;
+          });
+        }
+      });
+    }, observerOptions);
+
+    const timelineItems = timelineWrapperRef.current?.querySelectorAll('.about-timeline-item');
+    timelineItems?.forEach((item) => {
+      observer.observe(item);
+    });
+
+    // Observe timeline wrapper for line animation
+    if (timelineWrapperRef.current) {
+      const lineObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && timelineLineRef.current) {
+              timelineLineRef.current.classList.add('about-timeline-line--animated');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      lineObserver.observe(timelineWrapperRef.current);
+    }
+
+    return () => {
+      timelineItems?.forEach((item) => {
+        observer.unobserve(item);
+      });
+    };
+  }, []);
+
   return (
     <>
       <Header />
@@ -254,37 +304,44 @@ export function About(): React.ReactElement {
               </p>
             </div>
             
-            <div className="about-timeline-wrapper">
+            <div ref={timelineWrapperRef} className="about-timeline-wrapper">
               {/* Timeline Line */}
-              <div className="about-timeline-line"></div>
+              <div ref={timelineLineRef} className="about-timeline-line"></div>
               
-              {JOURNEY_TIMELINE.map((item, index) => (
-                <div key={index} className={`about-timeline-item about-timeline-item--${item.side}`}>
-                  <div className={`about-timeline-content-wrapper about-timeline-content-wrapper--${item.side}`}>
-                    <div className="about-timeline-card">
-                      <h3 className="about-timeline-card-title">
-                        {item.year} — {item.title}
-                      </h3>
-                      <p className="about-timeline-card-description">
-                        {item.description}
-                      </p>
+              {JOURNEY_TIMELINE.map((item, index) => {
+                const isVisible = visibleItems.has(index);
+                return (
+                  <div
+                    key={index}
+                    data-index={index}
+                    className={`about-timeline-item about-timeline-item--${item.side} ${isVisible ? 'about-timeline-item--visible' : ''}`}
+                  >
+                    <div className={`about-timeline-content-wrapper about-timeline-content-wrapper--${item.side}`}>
+                      <div className="about-timeline-card">
+                        <h3 className="about-timeline-card-title">
+                          {item.year} — {item.title}
+                        </h3>
+                        <p className="about-timeline-card-description">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
+                    
+                    {/* Timeline Dot - Always centered */}
+                    <div className={`about-timeline-dot ${isVisible ? 'about-timeline-dot--visible' : ''}`}>
+                      <ImagePlaceholder
+                        label={`Timeline Icon ${item.year}`}
+                        imageName={item.icon}
+                        width={48}
+                        height={48}
+                        borderRadius={0}
+                      />
+                    </div>
+                    
+                    <div className="about-timeline-spacer"></div>
                   </div>
-                  
-                  {/* Timeline Dot - Always centered */}
-                  <div className="about-timeline-dot">
-                    <ImagePlaceholder
-                      label={`Timeline Icon ${item.year}`}
-                      imageName={item.icon}
-                      width={48}
-                      height={48}
-                      borderRadius={0}
-                    />
-                  </div>
-                  
-                  <div className="about-timeline-spacer"></div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

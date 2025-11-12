@@ -1,5 +1,19 @@
 /* About Page Styles */
 
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .about-timeline-item,
+  .about-timeline-content-wrapper,
+  .about-timeline-card,
+  .about-timeline-dot,
+  .about-timeline-line::after {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* Hero Section */
 .about-hero {
   padding: 80px 0;
@@ -417,6 +431,22 @@
   width: 2px;
   background-color: #E5E7EB;
   transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.about-timeline-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to bottom, #0A4EFF 0%, #2563EB 100%);
+  transition: height 1.5s ease-out;
+}
+
+.about-timeline-line--animated::after {
+  height: 100%;
 }
 
 .about-timeline-item {
@@ -424,6 +454,38 @@
   align-items: center;
   margin-bottom: 60px;
   position: relative;
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.about-timeline-item--visible {
+  opacity: 1;
+}
+
+/* Staggered animation delays */
+.about-timeline-item[data-index="0"].about-timeline-item--visible .about-timeline-content-wrapper,
+.about-timeline-item[data-index="0"].about-timeline-item--visible .about-timeline-dot {
+  animation-delay: 0.1s;
+}
+
+.about-timeline-item[data-index="1"].about-timeline-item--visible .about-timeline-content-wrapper,
+.about-timeline-item[data-index="1"].about-timeline-item--visible .about-timeline-dot {
+  animation-delay: 0.3s;
+}
+
+.about-timeline-item[data-index="2"].about-timeline-item--visible .about-timeline-content-wrapper,
+.about-timeline-item[data-index="2"].about-timeline-item--visible .about-timeline-dot {
+  animation-delay: 0.5s;
+}
+
+.about-timeline-item[data-index="3"].about-timeline-item--visible .about-timeline-content-wrapper,
+.about-timeline-item[data-index="3"].about-timeline-item--visible .about-timeline-dot {
+  animation-delay: 0.7s;
+}
+
+.about-timeline-item[data-index="4"].about-timeline-item--visible .about-timeline-content-wrapper,
+.about-timeline-item[data-index="4"].about-timeline-item--visible .about-timeline-dot {
+  animation-delay: 0.9s;
 }
 
 .about-timeline-item--left {
@@ -437,6 +499,47 @@
 .about-timeline-content-wrapper {
   flex: 1;
   max-width: 500px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-timeline-item--visible .about-timeline-content-wrapper--left {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.about-timeline-item--visible .about-timeline-content-wrapper--right {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.about-timeline-item--visible .about-timeline-dot {
+  animation: iconBounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .about-timeline-content-wrapper--left {
@@ -455,6 +558,15 @@
   border-radius: 12px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(229, 231, 235, 1);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.about-timeline-item--visible .about-timeline-card {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.2s;
 }
 
 .about-timeline-card-title {
@@ -482,7 +594,54 @@
   z-index: 1;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.about-timeline-dot--visible {
+  animation: iconBounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes iconBounceIn {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.about-timeline-dot--visible::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border-radius: 50%;
+  border: 2px solid #0A4EFF;
+  transform: translate(-50%, -50%);
+  animation: iconPulse 2s ease-in-out infinite;
+  animation-delay: 0.6s;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.6;
+  }
 }
 
 .about-timeline-spacer {
@@ -986,6 +1145,23 @@
     margin-bottom: 0; /* Remove bottom margin */
     position: relative;
     width: 100%; /* Ensure full width for proper centering */
+  }
+
+  /* Mobile: Cards slide from bottom instead of left/right */
+  .about-timeline-item--visible .about-timeline-content-wrapper--left,
+  .about-timeline-item--visible .about-timeline-content-wrapper--right {
+    animation: slideInFromBottom 0.8s ease-out forwards;
+  }
+
+  @keyframes slideInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .about-timeline-content-wrapper {
