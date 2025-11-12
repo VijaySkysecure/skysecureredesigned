@@ -2748,6 +2748,37 @@ section {
   margin-left: 0px;
 }
 
+/* Desktop only - Justify text for uniform line endings */
+@media (min-width: 1025px) {
+  .azure-overview-paragraph {
+    text-align: justify !important;
+  }
+  
+  .azure-why-paragraph {
+    text-align: justify !important;
+  }
+  
+  .azure-benefits-title {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  
+  .azure-benefits-paragraph {
+    text-align: center !important;
+  }
+  
+  .azure-conclusion-title {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  
+  .azure-conclusion-paragraph {
+    text-align: center !important;
+  }
+}
+
 .manufacturing-cards {
   display: flex;
   justify-content: left;
