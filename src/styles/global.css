@@ -3955,6 +3955,18 @@ footer section .container {
     justify-items: stretch !important;
   }
 
+  /* Who We Are section - Uniform text alignment for iPad */
+  .who-we-are__intro,
+  .who-we-are__quote,
+  .who-we-are__philosophy {
+    text-align: justify !important;
+    text-align-last: left !important; /* Keep last line left-aligned for natural ending */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
   .resource-card {
     width: 100% !important;
     height: 100% !important;

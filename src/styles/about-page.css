@@ -1167,17 +1167,9 @@
     display: none !important;
   }
   
-  /* Position blue line in the green gap - from bottom of text box to top of icon */
+  /* Remove grey connecting line from card to icon for iPad */
   .about-timeline-content-wrapper::after {
-    content: '' !important;
-    position: absolute !important;
-    left: calc(50% + 16px) !important; /* Match icon position - moved to the right */
-    bottom: -72px !important; /* Match the margin-bottom of content-wrapper */
-    width: 2px !important;
-    height: 72px !important; /* Match the gap size */
-    background-color: #E5E7EB !important;
-    transform: translateX(-50%) !important;
-    z-index: 1 !important;
+    display: none !important; /* Remove grey line */
   }
 
   /* Journey Timeline Section - Position icons below text boxes */
@@ -1234,6 +1226,22 @@
     margin-bottom: 0;
   }
 
+  /* Center headings and align descriptions for iPad */
+  .about-timeline-card-title {
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .about-timeline-card-description {
+    text-align: justify !important;
+    text-align-last: left !important; /* Keep last line left-aligned for natural ending */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
   /* Team Section - Position Mona Kumari beside Vishal Thali (same row, to his right) for iPad */
   .about-team-container {
     position: relative !important;
@@ -1251,13 +1259,28 @@
   .about-team-row-second .about-team-card:nth-child(1) {
     position: absolute !important;
     top: -360px !important; /* Move up a lot more */
-    right: calc(50% - 600px + 220px) !important; /* Move left a bit more so "Chief of Staff" fits on one line */
+    right: calc(50% - 600px + 280px) !important; /* Move left more for iPad lineup */
     width: calc((100% - 160px) / 5) !important; /* Same width as "Head of Sales" card */
     max-width: 350px !important; /* Same max-width as other cards */
     visibility: visible !important;
     opacity: 1 !important;
     display: block !important;
     z-index: 10 !important;
+  }
+
+  /* Make "Chief of Staff" display on one line for iPad */
+  .about-team-row-second .about-team-card:nth-child(1) .about-team-title {
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-align: left !important;
+    margin-left: -50px !important;
+  }
+
+  /* Center the last stat item (98% Client Satisfaction Rate) on iPad */
+  .about-stats-grid .about-stat-item:last-child {
+    grid-column: 1 / -1 !important; /* Span both columns */
+    justify-self: center !important; /* Center horizontally */
+    max-width: 400px !important; /* Limit width for better appearance */
   }
 }
 
