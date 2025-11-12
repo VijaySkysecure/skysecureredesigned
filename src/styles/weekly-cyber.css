@@ -1571,3 +1571,25 @@
     font-size: 9px;
   }
 }
+
+/* Desktop Styles - Center align Global Threat Landscape Overview paragraph */
+@media (min-width: 1025px) {
+  .section-description {
+    text-align: center !important;
+  }
+
+  /* Justify Key Threat Intelligence Highlights card descriptions */
+  .highlight-description {
+    text-align: justify !important;
+  }
+
+  /* Justify Sector-Specific Analysis card descriptions */
+  .sector-description {
+    text-align: justify !important;
+  }
+
+  /* Justify Threat Actor Activity paragraph */
+  .threat-actor-text p {
+    text-align: justify !important;
+  }
+}
