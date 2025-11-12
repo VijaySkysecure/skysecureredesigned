@@ -204,6 +204,10 @@ export function App(): React.ReactElement {
   useEffect(() => {
     if (window.location.pathname === '/' && window.location.hash) {
       const hash = window.location.hash.substring(1); // Remove the # symbol
+      // Skip hash patterns that are handled by specific components (e.g., #insights-*)
+      if (hash.startsWith('insights-')) {
+        return;
+      }
       const element = document.getElementById(hash);
       if (element) {
         // Small delay to ensure page is fully loaded

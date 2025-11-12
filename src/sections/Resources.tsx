@@ -156,21 +156,63 @@ export function Resources(): React.ReactElement {
         const validTabIds = FILTER_OPTIONS.map(option => option.id);
         if (validTabIds.includes(tabId)) {
           setActiveFilter(tabId);
-          // Scroll to the resources section
           setTimeout(() => {
+            const tabButton = document.querySelector(`[data-tab="${tabId}"]`) as HTMLElement;
+            if (tabButton && !tabButton.classList.contains('active')) {
+              tabButton.click();
+            }
             const resourcesSection = document.getElementById('insights');
             if (resourcesSection) {
               resourcesSection.scrollIntoView({ behavior: 'smooth' });
             }
-          }, 100);
+          }, 300);
         }
       }
     };
 
-    // Check hash on component mount
-    handleHashChange();
+    // Check hash and sessionStorage on component mount
+    const checkInitialHash = () => {
+      // First check sessionStorage (set by breadcrumb navigation)
+      const activateTab = sessionStorage.getItem('activateTab');
+      if (activateTab) {
+        sessionStorage.removeItem('activateTab');
+        const validTabIds = FILTER_OPTIONS.map(option => option.id);
+        if (validTabIds.includes(activateTab)) {
+          setActiveFilter(activateTab);
+          setTimeout(() => {
+            const tabButton = document.querySelector(`[data-tab="${activateTab}"]`) as HTMLElement;
+            if (tabButton && !tabButton.classList.contains('active')) {
+              tabButton.click();
+            }
+            const resourcesSection = document.getElementById('insights');
+            if (resourcesSection) {
+              resourcesSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 300);
+          return true;
+        }
+      }
+      
+      // Then check hash
+      const hash = window.location.hash;
+      if (hash && hash.startsWith('#insights-')) {
+        handleHashChange();
+        return true;
+      }
+      return false;
+    };
+    
+    // Check immediately
+    if (!checkInitialHash()) {
+      // Also check after delays in case hash wasn't available immediately
+      setTimeout(() => {
+        if (!checkInitialHash()) {
+          setTimeout(checkInitialHash, 300);
+        }
+      }, 200);
+    }
 
-    // Listen for hash changes
+    // Listen for hash changes (for when hash changes without page reload)
     window.addEventListener('hashchange', handleHashChange);
     
     return () => {
