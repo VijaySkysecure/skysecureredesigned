@@ -173,7 +173,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
         </section>
 
         {/* Hero Visual */}
-        <section className="blog-hero">
+        <section className="blog-hero" style={{ paddingBottom: '20px' }}>
           <div className="container" style={{ textAlign: 'center' }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <ImagePlaceholder
@@ -190,16 +190,16 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
         {/* Introduction */}
         <section className="blog-content">
           <div className="container">
-            <div className="blog-intro">
-              <p>
+            <div className="blog-intro" style={{ marginTop: '-20px' }}>
+              <p style={{ textAlign: 'center' }}>
               The manufacturing industry in India is undergoing a massive transformation fueled by technology, government initiatives, and global investments. However, as the sector digitizes and integrates advanced systems, the risks of cyberattacks grow significantly. This guide explores how IT security transformation is essential for protecting operations, data, and innovation in the manufacturing sector.
               </p>
             </div>
 
             {/* The Rise of Manufacturing in India */}
             <section className="blog-section">
-              <h2 className="blog-section-title">The Rise of Manufacturing in India</h2>
-              <div className="manufacturing-cards">
+              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>The Rise of Manufacturing in India</h2>
+              <div className="manufacturing-cards" style={{ marginLeft: '100px' }}>
                 {MANUFACTURING_RISE.map((item, index) => (
                   <div key={index} className="manufacturing-card">
                     <div className="manufacturing-card__icon">
@@ -215,14 +215,14 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                   </div>
                 ))}
               </div>
-              <p className="blog-section-text">
+              <p className="blog-section-text" style={{ textAlign: 'center', marginLeft: '100px' }}>
               Growth driven by 'Make in India' initiative has accelerated the adoption of advanced technologies across manufacturing facilities. The integration of automation, robotics, AI, and IoT systems has brought unprecedented benefits including increased efficiency, job creation, and significant investment inflow.
               </p>
             </section>
 
             {/* The Cybersecurity Challenge */}
             <section className="blog-section">
-              <h2 className="blog-section-title">The Cybersecurity Challenge</h2>
+              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>The Cybersecurity Challenge</h2>
               <div className="cybersecurity-challenge-box" style={{ background: 'linear-gradient(90deg, #FEF2F2 0%, #FEFCE8 100%)', padding: '32px', borderRadius: '12px', maxWidth: '1000px', width: '100%' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
                   <div style={{ width: '30px', height: '30px', backgroundColor: '#FEF2F2', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '12px' }}>
@@ -248,8 +248,8 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             </section>
 
             {/* Essential Cybersecurity Measures */}
-            <section className="blog-section">
-              <h2 className="blog-section-title">Essential Cybersecurity Measures</h2>
+            <section className="blog-section" style={{ marginTop: '-30px' }}>
+              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Essential Cybersecurity Measures</h2>
               <div className="measures-grid">
                 {CYBERSECURITY_MEASURES.map((measure, index) => (
                   <div key={index} className="measure-card">
@@ -271,7 +271,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
 
             {/* Key Considerations for Cybersecurity Investment */}
             <section className="blog-section">
-              <h2 className="blog-section-title">Key Considerations for Cybersecurity Investment</h2>
+              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Key Considerations for Cybersecurity Investment</h2>
               <div className="consideration-grid">
                 {INVESTMENT_CONSIDERATIONS.map((consideration, index) => (
                   <div key={index} className="consideration-item">
@@ -299,7 +299,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
 
             {/* Key Outcomes of IT Security Transformation */}
             <section className="blog-section">
-              <h2 className="blog-section-title">Key Outcomes of IT Security Transformation</h2>
+              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Key Outcomes of IT Security Transformation</h2>
               <div className="outcomes-grid">
                 {TRANSFORMATION_OUTCOMES.map((outcome, index) => (
                   <div key={index} className="outcome-card">
