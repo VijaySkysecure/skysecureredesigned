@@ -1,5 +1,277 @@
 /* Managed Services Page - Responsive Styles */
 
+/* Strategic Approach Section - 2 columns */
+.page-values__grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  max-width: 1000px;
+}
+
+/* Stats Section Styles */
+.managed-services-stats-section {
+  padding: 48px 0;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.managed-services-stats-section .container {
+  padding: 0;
+}
+
+.managed-services-stats-box {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 32px 48px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.managed-services-stat-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid var(--color-border);
+  padding-right: 32px;
+  min-height: 100%;
+}
+
+.managed-services-stat-item.stat-item-last {
+  border-right: none;
+  padding-right: 0;
+}
+
+.managed-services-stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-blue);
+  margin-bottom: 8px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.managed-services-stat-label {
+  font-size: 13px;
+  color: var(--color-grey);
+  font-weight: 500;
+  line-height: 1.4;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+/* Technology Complexity Section Styles */
+.managed-services-complexity-section {
+  padding: 80px 0;
+  background-color: rgba(248, 250, 252, 1);
+}
+
+.managed-services-complexity-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.managed-services-complexity-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.managed-services-complexity-subtitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin: 0 0 32px 0;
+  line-height: 1.3;
+}
+
+.managed-services-complexity-body {
+  font-size: 16px;
+  color: var(--color-grey);
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.managed-services-complexity-body:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Case Studies Table Section Styles */
+.managed-services-table-section {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.managed-services-table-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.managed-services-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 16px rgba(17, 24, 39, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.managed-services-table-header {
+  background-color: rgba(248, 250, 252, 0.5);
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 24px;
+  text-align: left;
+  border-right: 1px solid var(--color-border);
+  white-space: nowrap;
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+.managed-services-table-header:first-child {
+  border-top-left-radius: 8px;
+}
+
+.managed-services-table-header:last-child {
+  border-right: none;
+  border-top-right-radius: 8px;
+}
+
+.managed-services-table-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-border);
+}
+
+.managed-services-table-row {
+  border-bottom: 1px solid var(--color-border) !important;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.managed-services-table-row:last-child {
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+.managed-services-table-row:hover {
+  background-color: rgba(248, 250, 252, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.04);
+}
+
+.managed-services-table-cell {
+  padding: 20px 24px;
+  font-size: 15px;
+  color: var(--color-black);
+  line-height: 1.6;
+  vertical-align: top;
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-white);
+}
+
+.managed-services-table-cell:last-child {
+  border-right: none;
+}
+
+.managed-services-table-row:last-child .managed-services-table-cell:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.managed-services-table-row:last-child .managed-services-table-cell:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.managed-services-table-cell--client {
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: rgb(19, 55, 236);
+}
+
+.managed-services-table-cell--outcome {
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.managed-services-table thead {
+  position: relative;
+}
+
+.managed-services-table thead::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+/* Large Tablet Styles (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .managed-services-stats-box {
+    padding: 28px 40px !important;
+    gap: 28px !important;
+  }
+
+  .managed-services-stat-item {
+    padding-right: 28px !important;
+  }
+
+  .managed-services-stat-value {
+    font-size: 26px !important;
+  }
+
+  .managed-services-stat-label {
+    font-size: 12.5px !important;
+  }
+
+  /* Complexity Section - Large Tablet */
+  .managed-services-complexity-section {
+    padding: 64px 0 !important;
+  }
+
+  .managed-services-complexity-title {
+    font-size: 36px !important;
+  }
+
+  .managed-services-complexity-subtitle {
+    font-size: 24px !important;
+  }
+
+  /* Table Section - Large Tablet */
+  .managed-services-table-section {
+    padding: 64px 0 !important;
+  }
+
+  .managed-services-table-header {
+    font-size: 15px !important;
+    padding: 14px 20px !important;
+  }
+
+  .managed-services-table-cell {
+    padding: 18px 20px !important;
+    font-size: 14px !important;
+  }
+}
+
 /* Tablet Styles (max-width: 900px) */
 @media (max-width: 900px) {
   .page-hero__title {
@@ -52,6 +324,109 @@
   .page-intro__text h2 {
     font-size: 28px !important;
   }
+
+  /* Stats Section - Tablet */
+  .managed-services-stats-section {
+    padding: 40px 0 !important;
+  }
+
+  .managed-services-stats-section .container {
+    padding: 0 20px !important;
+  }
+
+  .managed-services-stats-box {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    padding: 24px 32px !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .managed-services-stats-box {
+    align-items: stretch !important;
+  }
+
+  .managed-services-stat-item {
+    padding-right: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .managed-services-stat-item:nth-child(3) {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+
+  .managed-services-stat-item:nth-child(4),
+  .managed-services-stat-item:nth-child(5) {
+    border-top: 1px solid var(--color-border);
+    padding-top: 24px;
+    margin-top: 24px;
+    border-right: 1px solid var(--color-border);
+    padding-right: 24px !important;
+  }
+
+  .managed-services-stat-item:nth-child(4) {
+    border-right: 1px solid var(--color-border) !important;
+    padding-right: 24px !important;
+  }
+
+  .managed-services-stat-item:nth-child(5) {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+
+  .managed-services-stat-value {
+    font-size: 26px !important;
+  }
+
+  .managed-services-stat-label {
+    font-size: 12px !important;
+  }
+
+  /* Complexity Section - Tablet */
+  .managed-services-complexity-section {
+    padding: 56px 0 !important;
+  }
+
+  .managed-services-complexity-content {
+    padding: 0 24px !important;
+  }
+
+  .managed-services-complexity-title {
+    font-size: 32px !important;
+  }
+
+  .managed-services-complexity-subtitle {
+    font-size: 22px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .managed-services-complexity-body {
+    font-size: 15px !important;
+  }
+
+  /* Table Section - Tablet */
+  .managed-services-table-section {
+    padding: 56px 0 !important;
+  }
+
+  .managed-services-table-wrapper {
+    padding: 0 20px;
+  }
+
+  .managed-services-table-header {
+    font-size: 14px !important;
+    padding: 12px 16px !important;
+  }
+
+  .managed-services-table-cell {
+    padding: 16px !important;
+    font-size: 13px !important;
+  }
 }
 
 /* Tablet - Medium screens (max-width: 768px) */
@@ -66,6 +441,103 @@
     grid-template-columns: 1fr !important;
     gap: 24px !important;
     padding: 0 20px;
+  }
+
+  /* Stats Section - Medium Tablet */
+  .managed-services-stats-section {
+    padding: 36px 0 !important;
+  }
+
+  .managed-services-stats-section .container {
+    padding: 0 16px !important;
+  }
+
+  .managed-services-stats-box {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    padding: 20px 24px !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .managed-services-stats-box {
+    align-items: stretch !important;
+  }
+
+  .managed-services-stat-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-right: 1px solid var(--color-border) !important;
+    padding-right: 20px !important;
+  }
+
+  .managed-services-stat-item:nth-child(2n) {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+
+  .managed-services-stat-item:nth-child(n+3) {
+    border-top: 1px solid var(--color-border);
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  .managed-services-stat-value {
+    font-size: 24px !important;
+  }
+
+  .managed-services-stat-label {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Complexity Section - Medium Tablet */
+  .managed-services-complexity-section {
+    padding: 48px 0 !important;
+  }
+
+  .managed-services-complexity-content {
+    padding: 0 20px !important;
+  }
+
+  .managed-services-complexity-title {
+    font-size: 28px !important;
+  }
+
+  .managed-services-complexity-subtitle {
+    font-size: 20px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .managed-services-complexity-body {
+    font-size: 15px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Table Section - Medium Tablet */
+  .managed-services-table-section {
+    padding: 48px 0 !important;
+  }
+
+  .managed-services-table-wrapper {
+    padding: 0 16px;
+  }
+
+  .managed-services-table {
+    font-size: 13px;
+  }
+
+  .managed-services-table-header {
+    font-size: 13px !important;
+    padding: 12px 14px !important;
+  }
+
+  .managed-services-table-cell {
+    padding: 14px !important;
+    font-size: 12px !important;
   }
 }
 
@@ -208,6 +680,238 @@
 
   .page-cta__description {
     font-size: 16px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .page-cta__content > div {
+    margin-top: 24px !important;
+  }
+
+  /* Stats Section - Mobile */
+  .managed-services-stats-section {
+    padding: 32px 0 !important;
+  }
+
+  .managed-services-stats-section .container {
+    padding: 0 16px !important;
+  }
+
+  .managed-services-stats-box {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    padding: 20px 16px !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .managed-services-stats-box {
+    align-items: stretch !important;
+  }
+
+  .managed-services-stat-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-right: none !important;
+    border-top: 1px solid var(--color-border);
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .managed-services-stat-item:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .managed-services-stat-value {
+    font-size: 22px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .managed-services-stat-label {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    padding: 0 8px;
+  }
+
+  /* Complexity Section - Mobile */
+  .managed-services-complexity-section {
+    padding: 40px 0 !important;
+  }
+
+  .managed-services-complexity-content {
+    padding: 0 16px !important;
+  }
+
+  .managed-services-complexity-title {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .managed-services-complexity-subtitle {
+    font-size: 18px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .managed-services-complexity-body {
+    font-size: 14px !important;
+    margin-bottom: 18px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Table Section - Mobile */
+  .managed-services-table-section {
+    padding: 40px 0 !important;
+  }
+
+  .managed-services-table-wrapper {
+    padding: 0 12px;
+  }
+
+  .managed-services-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .managed-services-table thead {
+    display: block;
+  }
+
+  .managed-services-table tbody {
+    display: block;
+  }
+
+  .managed-services-table tr {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+  }
+
+  .managed-services-table-header {
+    font-size: 12px !important;
+    padding: 10px 12px !important;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .managed-services-table-cell {
+    padding: 12px !important;
+    font-size: 11px !important;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border) !important;
+  }
+
+  .managed-services-table-row {
+    border-bottom: 1px solid var(--color-border) !important;
+  }
+
+  .managed-services-table-row:last-child {
+    border-bottom: 1px solid var(--color-border) !important;
+  }
+
+  .managed-services-table-row:last-child .managed-services-table-cell {
+    border-bottom: 1px solid var(--color-border) !important;
+  }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+  .managed-services-stats-section {
+    padding: 24px 0 !important;
+  }
+
+  .managed-services-stats-section .container {
+    padding: 0 12px !important;
+  }
+
+  .managed-services-stats-box {
+    padding: 16px 12px !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .managed-services-stats-box {
+    align-items: stretch !important;
+  }
+
+  .managed-services-stat-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+
+  .managed-services-stat-value {
+    font-size: 20px !important;
+  }
+
+  .managed-services-stat-label {
+    font-size: 10px !important;
+    padding: 0 4px;
+  }
+
+  /* Complexity Section - Extra Small Mobile */
+  .managed-services-complexity-section {
+    padding: 32px 0 !important;
+  }
+
+  .managed-services-complexity-content {
+    padding: 0 12px !important;
+  }
+
+  .managed-services-complexity-title {
+    font-size: 22px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .managed-services-complexity-subtitle {
+    font-size: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .managed-services-complexity-body {
+    font-size: 13px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Table Section - Extra Small Mobile */
+  .managed-services-table-section {
+    padding: 32px 0 !important;
+  }
+
+  .managed-services-table-wrapper {
+    padding: 0 8px;
+  }
+
+  .managed-services-table-header {
+    font-size: 11px !important;
+    padding: 8px 10px !important;
+  }
+
+  .managed-services-table-cell {
+    padding: 10px !important;
+    font-size: 10px !important;
+  }
+
+  .managed-services-table tr {
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+  }
+
+  /* CTA Section - Extra Small Mobile */
+  .page-cta__description {
+    margin-bottom: 20px !important;
+  }
+
+  .page-cta__content > div {
+    margin-top: 20px !important;
   }
 }
 

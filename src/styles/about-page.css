@@ -191,15 +191,21 @@
 
 .about-core-values-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  align-items: start;
 }
 
 .about-core-value-card {
-  background-color: #F9FAFB;
+  background-color: #F1F5F9;
   padding: 32px;
   border-radius: 12px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .about-core-value-icon {
@@ -209,20 +215,94 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px auto;
+  flex-shrink: 0;
 }
 
 .about-core-value-title {
   font-size: 20px;
   font-weight: 600;
   color: #1F2937;
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+  min-height: 52px;
+  display: block;
 }
 
 .about-core-value-description {
   font-size: 14px;
   color: #64748B;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
+  flex: 1;
+}
+
+/* Join our Mission Section */
+.about-join-mission {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 70.71%);
+}
+
+.about-join-mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-join-mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-join-mission-h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.about-join-mission-h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 24px 0;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+.about-join-mission-body {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #E5E7EB;
+  margin: 0 0 40px 0;
+  opacity: 0.9;
+}
+
+.about-join-mission-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.about-join-mission-button {
+  background: #FFFFFF;
+  color: rgba(37, 99, 235, 1);
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-join-mission-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Stats Section */
@@ -257,33 +337,42 @@
 
 .about-stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 32px;
+  align-items: start;
 }
 
 .about-stat-item {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .about-stat-number {
   font-size: 48px;
   font-weight: 700;
   color: #FFFFFF;
-  margin: 0 0 8px 0;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
 }
 
 .about-stat-title {
   font-size: 20px;
   font-weight: 600;
   color: #FFFFFF;
-  margin: 0 0 8px 0;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+  min-height: 52px;
+  display: block;
 }
 
 .about-stat-description {
   font-size: 14px;
   color: #E5E7EB;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
+  flex: 1;
 }
 
 /* Journey Timeline Section */
@@ -648,6 +737,75 @@
   text-align: center;
 }
 
+/* Contact Us Section */
+.about-contact-us {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 70.71%);
+}
+
+.about-contact-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-contact-us-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-contact-us-h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.about-contact-us-h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 24px 0;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+.about-contact-us-body {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #E5E7EB;
+  margin: 0 0 40px 0;
+  opacity: 0.9;
+}
+
+.about-contact-us-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.about-contact-us-button {
+  background: #FFFFFF;
+  color: rgba(37, 99, 235, 1);
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-contact-us-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Responsive Design - Tablet */
 @media (max-width: 1024px) {
   /* Hero Section */
@@ -682,6 +840,11 @@
   .about-hero-right .image-placeholder img {
     width: 400px !important;
     height: 400px !important;
+  }
+
+  /* Who We Are Section */
+  .section--light#about {
+    padding: 64px 0 !important;
   }
 
   /* Mission & Vision Section */
@@ -725,7 +888,41 @@
 
   .about-core-values-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .about-core-value-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .about-core-value-title {
+    min-height: 52px;
+    margin: 0 0 16px 0;
+  }
+
+  .about-core-value-description {
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  /* Join our Mission Section */
+  .about-join-mission {
+    padding: 64px 0;
+  }
+
+  .about-join-mission-h1 {
+    font-size: 36px;
+  }
+
+  .about-join-mission-h2 {
+    font-size: 20px;
+  }
+
+  .about-join-mission-body {
+    font-size: 16px;
   }
 
   /* Stats Section */
@@ -744,14 +941,30 @@
   .about-stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+    align-items: start;
+  }
+
+  .about-stat-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   .about-stat-number {
     font-size: 40px;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
   }
 
   .about-stat-title {
     font-size: 18px;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+  }
+
+  .about-stat-description {
+    line-height: 1.6;
+    flex: 1;
   }
 
   /* Journey Timeline Section */
@@ -928,6 +1141,23 @@
     max-width: 500px !important;
     height: auto !important;
   }
+
+  /* Contact Us Section */
+  .about-contact-us {
+    padding: 64px 0;
+  }
+
+  .about-contact-us-h1 {
+    font-size: 36px;
+  }
+
+  .about-contact-us-h2 {
+    font-size: 20px;
+  }
+
+  .about-contact-us-body {
+    font-size: 16px;
+  }
 }
 
 /* iPad Specific Styles (768px - 1024px) - iPad Air, iPad Mini, iPad Pro */
@@ -1027,6 +1257,11 @@
     height: 300px !important;
   }
 
+  /* Who We Are Section */
+  .section--light#about {
+    padding: 48px 0 !important;
+  }
+
   /* Mission & Vision Section */
   .about-mission-vision {
     padding: 48px 0;
@@ -1109,18 +1344,49 @@
 
   .about-core-values-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
+    align-items: start;
   }
 
   .about-core-value-card {
     padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
   }
 
   .about-core-value-title {
     font-size: 18px;
+    min-height: 48px;
+    margin: 0 0 16px 0;
   }
 
   .about-core-value-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Join our Mission Section */
+  .about-join-mission {
+    padding: 48px 0;
+  }
+
+  .about-join-mission-h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .about-join-mission-h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .about-join-mission-body {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .about-join-mission-button {
+    padding: 14px 28px;
     font-size: 14px;
   }
 
@@ -1145,18 +1411,29 @@
   .about-stats-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+    align-items: start;
+  }
+
+  .about-stat-item {
+    display: flex;
+    flex-direction: column;
   }
 
   .about-stat-number {
     font-size: 36px;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
   }
 
   .about-stat-title {
     font-size: 18px;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
   }
 
   .about-stat-description {
     font-size: 14px;
+    line-height: 1.6;
   }
 
   /* Journey Timeline Section */
@@ -1331,6 +1608,31 @@
   .about-global-office-location {
     font-size: 15px;
   }
+
+  /* Contact Us Section */
+  .about-contact-us {
+    padding: 48px 0;
+  }
+
+  .about-contact-us-h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .about-contact-us-h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .about-contact-us-body {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .about-contact-us-button {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
 }
 
 /* Responsive Design - Small Mobile */
@@ -1353,6 +1655,11 @@
   .about-hero-right .image-placeholder img {
     width: 250px !important;
     height: 250px !important;
+  }
+
+  /* Who We Are Section */
+  .section--light#about {
+    padding: 40px 0 !important;
   }
 
   /* Mission & Vision Section */
@@ -1415,6 +1722,33 @@
 
   .about-core-value-card {
     padding: 20px 16px;
+  }
+
+  /* Join our Mission Section */
+  .about-join-mission {
+    padding: 40px 0;
+  }
+
+  .about-join-mission-h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .about-join-mission-h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .about-join-mission-body {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .about-join-mission-button {
+    padding: 12px 24px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 280px;
   }
 
   /* Stats Section */
@@ -1580,6 +1914,33 @@
 
   .about-global-office-location {
     font-size: 14px;
+  }
+
+  /* Contact Us Section */
+  .about-contact-us {
+    padding: 40px 0;
+  }
+
+  .about-contact-us-h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .about-contact-us-h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .about-contact-us-body {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .about-contact-us-button {
+    padding: 12px 24px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 280px;
   }
 }
 
