@@ -651,3 +651,30 @@
   }
 }
 
+/* Desktop Styles - Justify Executive Summary paragraph text */
+@media (min-width: 1025px) {
+  .ransomware-executive-summary .blog-section-text {
+    text-align: justify !important;
+  }
+
+  /* Justify The Evolving Ransomware Landscape paragraph text */
+  .ransomware-landscape-wrapper .blog-section-text {
+    text-align: justify !important;
+  }
+
+  /* Justify Attack Vectors card descriptions */
+  .ransomware-attack-vectors-grid > div > p {
+    text-align: justify !important;
+  }
+
+  /* Justify The Role of AI paragraph text */
+  .ransomware-ai-wrapper .blog-section-text {
+    text-align: justify !important;
+  }
+
+  /* Justify Skysecure's Perspective paragraph text */
+  .ransomware-perspective-wrapper .blog-section-text {
+    text-align: justify !important;
+  }
+}
+
