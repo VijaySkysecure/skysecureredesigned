@@ -229,6 +229,16 @@
     max-width: 100%;
     height: auto;
   }
+
+  /* Ensure mobile benefits section is hidden on desktop */
+  .azure-sentinel-mobile-benefits-section {
+    display: none !important;
+  }
+
+  /* Ensure desktop benefits section is visible on desktop */
+  .azure-sentinel-benefits-wrapper {
+    display: block !important;
+  }
 }
 
 .azure-sentinel-overview-image img,
@@ -241,6 +251,69 @@
 .azure-sentinel-why-image .image-placeholder {
   max-width: 100%;
   height: auto;
+}
+
+/* Mobile Benefits Cards Section - Hidden on Desktop */
+.azure-sentinel-mobile-benefits-section {
+  display: none;
+}
+
+.azure-sentinel-mobile-benefits-wrapper {
+  background-color: #F8FAFC;
+  padding: 40px 20px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.azure-sentinel-mobile-benefits-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 28px;
+}
+
+.azure-sentinel-mobile-benefits-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.azure-sentinel-mobile-benefit-card {
+  background-color: #FFFFFF;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.azure-sentinel-mobile-benefit-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.azure-sentinel-mobile-benefit-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+.azure-sentinel-mobile-benefit-description {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
 }
 
 /* Mobile Responsive Styles */
@@ -274,14 +347,14 @@
     min-width: 200px;
   }
 
-  .azure-sentinel-benefits-title {
-    margin-left: 0;
-    text-align: center;
+  /* Hide desktop benefits section on mobile */
+  .azure-sentinel-benefits-wrapper {
+    display: none;
   }
 
-  .azure-sentinel-benefits-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  /* Show mobile benefits cards on mobile */
+  .azure-sentinel-mobile-benefits-section {
+    display: block;
   }
 
   .azure-sentinel-why-wrapper {
@@ -339,42 +412,36 @@
     min-height: 200px;
   }
 
-  .azure-sentinel-benefits-wrapper {
-    padding: 24px 20px;
-    margin-top: -30px;
+  .azure-sentinel-mobile-benefits-wrapper {
+    padding: 32px 20px;
   }
 
-  .azure-sentinel-benefits-title {
-    margin-bottom: 24px;
+  .azure-sentinel-mobile-benefits-title {
+    margin-bottom: 28px;
     font-size: 24px;
   }
 
-  .azure-sentinel-benefits-grid {
-    gap: 24px;
+  .azure-sentinel-mobile-benefits-grid {
+    gap: 20px;
   }
 
-  .azure-sentinel-benefit-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
+  .azure-sentinel-mobile-benefit-card {
+    padding: 20px;
   }
 
-  .azure-sentinel-benefit-content {
-    text-align: center;
+  .azure-sentinel-mobile-benefit-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 14px;
   }
 
-  .azure-sentinel-benefit-title {
-    text-align: center;
+  .azure-sentinel-mobile-benefit-title {
+    font-size: 17px;
+    margin-bottom: 10px;
   }
 
-  .azure-sentinel-benefit-description {
-    text-align: center;
-  }
-
-  .azure-sentinel-benefits-note {
-    padding: 16px;
-    margin-top: 24px;
+  .azure-sentinel-mobile-benefit-description {
+    font-size: 14px;
   }
 
   .azure-sentinel-why-wrapper {
@@ -426,36 +493,36 @@
     min-height: 180px;
   }
 
-  .azure-sentinel-benefits-wrapper {
-    padding: 20px 16px;
-    margin-top: -20px;
+  .azure-sentinel-mobile-benefits-wrapper {
+    padding: 24px 16px;
   }
 
-  .azure-sentinel-benefits-title {
-    margin-bottom: 20px;
+  .azure-sentinel-mobile-benefits-title {
+    margin-bottom: 24px;
     font-size: 20px;
   }
 
-  .azure-sentinel-benefits-grid {
-    gap: 20px;
+  .azure-sentinel-mobile-benefits-grid {
+    gap: 16px;
   }
 
-  .azure-sentinel-benefit-icon {
-    width: 40px;
-    height: 40px;
+  .azure-sentinel-mobile-benefit-card {
+    padding: 18px;
   }
 
-  .azure-sentinel-benefit-title {
+  .azure-sentinel-mobile-benefit-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 12px;
+  }
+
+  .azure-sentinel-mobile-benefit-title {
     font-size: 16px;
+    margin-bottom: 8px;
   }
 
-  .azure-sentinel-benefit-description {
+  .azure-sentinel-mobile-benefit-description {
     font-size: 13px;
-  }
-
-  .azure-sentinel-benefits-note {
-    padding: 12px;
-    margin-top: 20px;
   }
 
   .azure-sentinel-conclusion-box {

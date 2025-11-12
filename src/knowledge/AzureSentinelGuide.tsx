@@ -196,6 +196,30 @@ export function AzureSentinelGuide(): React.ReactElement {
               </div>
             </section>
 
+            {/* Mobile Benefits Cards - Only visible on mobile */}
+            <section className="blog-section azure-sentinel-mobile-benefits-section">
+              <div className="azure-sentinel-mobile-benefits-wrapper">
+                <h2 className="blog-section-title azure-sentinel-mobile-benefits-title">Benefits</h2>
+                <div className="azure-sentinel-mobile-benefits-grid">
+                  {BENEFITS.map((benefit, index) => (
+                    <div key={index} className="azure-sentinel-mobile-benefit-card">
+                      <div className="azure-sentinel-mobile-benefit-icon">
+                        <ImagePlaceholder
+                          label={benefit.title}
+                          imageName={`knowledge/${benefit.icon}.png`}
+                          width={50}
+                          height={50}
+                          borderRadius={0}
+                        />
+                      </div>
+                      <h3 className="azure-sentinel-mobile-benefit-title">{benefit.title}</h3>
+                      <p className="azure-sentinel-mobile-benefit-description">{benefit.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
             {/* Why Azure Sentinel? */}
             <section className="blog-section">
               <div className="azure-sentinel-why-wrapper">
