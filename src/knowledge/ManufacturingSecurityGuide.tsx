@@ -134,7 +134,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
               <nav className="breadcrumbs">
                 <a href="/" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>Home</a>
                 <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
-                <a href="/#insights" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Knowledge & Resources</a>
+                <a href="/#insights" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Intelligence Hub</a>
                 <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
                 <a href="/#insights-blog" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); if (window.location.pathname !== '/') { sessionStorage.setItem('activateTab', 'blog'); window.location.href = '/'; } else { const resourcesSection = document.getElementById('insights'); if (resourcesSection) { resourcesSection.scrollIntoView({ behavior: 'smooth' }); setTimeout(() => { const tabButton = document.querySelector('[data-tab="blog"]') as HTMLElement; if (tabButton) { tabButton.click(); } }, 500); } } }}>Blog</a>
                 <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
@@ -175,13 +175,15 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
         {/* Hero Visual */}
         <section className="blog-hero">
           <div className="container" style={{ textAlign: 'center' }}>
-            <ImagePlaceholder
-              label="Manufacturing Security Hero Visual"
-              imageName="knowledge/manufacturing-hero-visual.png"
-              width={800}
-              height={330}
-              borderRadius={0}
-            />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <ImagePlaceholder
+                label="Manufacturing Security Hero Visual"
+                imageName="knowledge/manufacturing-hero-visual.png"
+                width={800}
+                height={330}
+                borderRadius={0}
+              />
+            </div>
           </div>
         </section>
 
@@ -221,7 +223,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             {/* The Cybersecurity Challenge */}
             <section className="blog-section">
               <h2 className="blog-section-title">The Cybersecurity Challenge</h2>
-              <div style={{ background: 'linear-gradient(90deg, #FEF2F2 0%, #FEFCE8 100%)', padding: '32px', borderRadius: '12px', width: '1000px' }}>
+              <div className="cybersecurity-challenge-box" style={{ background: 'linear-gradient(90deg, #FEF2F2 0%, #FEFCE8 100%)', padding: '32px', borderRadius: '12px', maxWidth: '1000px', width: '100%' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
                   <div style={{ width: '30px', height: '30px', backgroundColor: '#FEF2F2', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '12px' }}>
                     <ImagePlaceholder
@@ -270,50 +272,29 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             {/* Key Considerations for Cybersecurity Investment */}
             <section className="blog-section">
               <h2 className="blog-section-title">Key Considerations for Cybersecurity Investment</h2>
-              <ul className="consideration-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <div className="consideration-grid">
                 {INVESTMENT_CONSIDERATIONS.map((consideration, index) => (
-                  <li key={index} className="consideration-item" style={{ 
-                    backgroundColor: '#F3F4F6', 
-                    padding: '20px', 
-                    borderRadius: '8px', 
-                    marginBottom: '24px',
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '16px',
-                    width: '850px',
-                    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'
-                  }}>
-                    <div className="consideration-icon" style={{ flexShrink: 0, marginTop: '2px' }}>
+                  <div key={index} className="consideration-item">
+                    <div className="consideration-icon">
                       <ImagePlaceholder
                         label={consideration.title}
                         imageName={`knowledge/${consideration.icon}.png`}
-                        width={24}
-                        height={24}
+                        width={48}
+                        height={48}
                         borderRadius={0}
                       />
                     </div>
-                    <div className="consideration-content" style={{ flex: 1 }}>
-                      <h3 style={{ 
-                        margin: '0 0 8px 0', 
-                        fontSize: '16px', 
-                        fontWeight: 'bold', 
-                        color: '#000000',
-                        lineHeight: '1.2'
-                      }}>
+                    <div className="consideration-content">
+                      <h3 className="consideration-title">
                         {consideration.title}
                       </h3>
-                      <p style={{ 
-                        margin: 0, 
-                        fontSize: '14px', 
-                        color: '#374151',
-                        lineHeight: '1.4'
-                      }}>
+                      <p className="consideration-description">
                         {consideration.description}
                       </p>
                     </div>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </section>
 
             {/* Key Outcomes of IT Security Transformation */}
@@ -341,20 +322,18 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             {/* A Trusted Partner for IT Security Transformation */}
             <section className="blog-section" style={{ background: 'linear-gradient(90deg, #EFF6FF 0%, rgba(10, 78, 255, 0.05) 100%)', padding: '32px', borderRadius: '12px', textAlign: 'center' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center', marginBottom: '24px' }}>A Trusted Partner for IT Security Transformation</h2>
-              <div className="partner-content" style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto' }}>
+              <div className="partner-content" style={{ maxWidth: '800px', margin: '0 auto' }}>
                 <p style={{ marginBottom: '16px', fontSize: '16px', lineHeight: '1.6', color: '#374151' }}>
                   Skysecure has been at the forefront of cybersecurity innovation, helping manufacturing organizations strengthen their IT security frameworks. Our proven approach combines strategy, technology, and expertise to secure your digital assets and operations.
                 </p>
                 <p style={{ marginBottom: '0px', fontSize: '16px', lineHeight: '1.6', color: '#374151' }}>
                   Partner with us to accelerate your IT security transformation journey and achieve sustainable growth.
                 </p>
-                <div style={{ textAlign: 'center' }}>
-                </div>
               </div>
             </section>
 
             {/* Author Bio */}
-            <section className="author-bio" style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginTop: '100px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '50px 50px' }}>
+            <section className="author-bio" style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginTop: '100px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '50px 20px' }}>
               <div className="author-bio__image" style={{ flexShrink: 0 }}>
                 <ImagePlaceholder
                   label="Suresh Kumar"

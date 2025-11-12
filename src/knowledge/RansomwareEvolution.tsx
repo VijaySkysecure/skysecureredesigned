@@ -132,7 +132,7 @@ export function RansomwareEvolution(): React.ReactElement {
             <nav className="ransomware-breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', color: '#64748B' }}>
               <a href="/" style={{ color: '#1F2937', textDecoration: 'none' }}>Home</a>
               <span>›</span>
-              <a href="/#insights" style={{ color: '#1F2937', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Knowledge & Resources</a>
+              <a href="/#insights" style={{ color: '#1F2937', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Intelligence Hub</a>
               <span>›</span>
               <a href="/#insights-skysecure-decode" style={{ color: '#1F2937', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); if (window.location.pathname !== '/') { sessionStorage.setItem('activateTab', 'skysecure-decode'); window.location.href = '/'; } else { const resourcesSection = document.getElementById('insights'); if (resourcesSection) { resourcesSection.scrollIntoView({ behavior: 'smooth' }); setTimeout(() => { const tabButton = document.querySelector('[data-tab="skysecure-decode"]') as HTMLElement; if (tabButton) { tabButton.click(); } }, 500); } } }}>Skysecure Decode</a>
               <span>›</span>

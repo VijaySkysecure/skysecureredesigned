@@ -110,37 +110,45 @@ export function GlobalImpact(): React.ReactElement {
           {/* Central Hub with Intersecting Lines */}
           <div className="global-impact-hub">
             {/* Intersecting Lines */}
-            <div className="global-impact-connection-lines" style={{ 
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: '100%',
-              height: '100%',
-              pointerEvents: 'none',
-              zIndex: 1
-            }}>
-              {/* Horizontal Line */}
-              <div style={{
-                position: 'absolute',
-                top: '50%',
-                left: '20%',
-                width: '60%',
-                height: '2px',
-                background: 'repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 8px, transparent 8px, transparent 16px)',
-                transform: 'translateY(-50%)'
-              }}></div>
+            <div className="global-impact-connection-lines">
+              {/* Horizontal Line - Left to Center */}
+              <div className="global-impact-line global-impact-line-horizontal">
+                <div className="global-impact-line-path"></div>
+                <div className="global-impact-line-glow"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-1 global-impact-line-dot-left"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-2 global-impact-line-dot-left"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-3 global-impact-line-dot-left"></div>
+              </div>
               
-              {/* Vertical Line */}
-              <div style={{
-                position: 'absolute',
-                left: '50%',
-                top: '27%',
-                width: '2px',
-                height: '45%',
-                background: 'repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 8px, transparent 8px, transparent 16px)',
-                transform: 'translateX(-50%)'
-              }}></div>
+              {/* Horizontal Line - Right to Center */}
+              <div className="global-impact-line global-impact-line-horizontal global-impact-line-horizontal-reverse">
+                <div className="global-impact-line-path"></div>
+                <div className="global-impact-line-glow"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-1 global-impact-line-dot-right"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-2 global-impact-line-dot-right"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-3 global-impact-line-dot-right"></div>
+              </div>
+              
+              {/* Vertical Line - Top to Center */}
+              <div className="global-impact-line global-impact-line-vertical">
+                <div className="global-impact-line-path"></div>
+                <div className="global-impact-line-glow"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-1 global-impact-line-dot-top"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-2 global-impact-line-dot-top"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-3 global-impact-line-dot-top"></div>
+              </div>
+              
+              {/* Vertical Line - Bottom to Center */}
+              <div className="global-impact-line global-impact-line-vertical global-impact-line-vertical-reverse">
+                <div className="global-impact-line-path"></div>
+                <div className="global-impact-line-glow"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-1 global-impact-line-dot-bottom"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-2 global-impact-line-dot-bottom"></div>
+                <div className="global-impact-line-dot global-impact-line-dot-3 global-impact-line-dot-bottom"></div>
+              </div>
+              
+              {/* Center Connection Point */}
+              <div className="global-impact-line-center"></div>
             </div>
 
             {/* Central Blue Circle */}
