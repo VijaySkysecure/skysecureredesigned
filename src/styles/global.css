@@ -4136,14 +4136,13 @@ footer section .container {
   }
 
   .footer__top {
-    grid-template-columns: 1fr repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin: 0 32px 40px 32px;
+    justify-items: start;
   }
 
-  .footer__top .footer__column:nth-child(2),
-  .footer__top .footer__column:nth-child(3),
-  .footer__top .footer__column:nth-child(4) {
+  .footer__top .footer__column {
     justify-self: start;
   }
 
