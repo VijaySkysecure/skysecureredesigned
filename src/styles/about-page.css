@@ -1234,8 +1234,7 @@
   }
 
   .about-timeline-card-description {
-    text-align: justify !important;
-    text-align-last: left !important; /* Keep last line left-aligned for natural ending */
+    text-align: center !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
     max-width: 100% !important;
@@ -1276,11 +1275,38 @@
     margin-left: -50px !important;
   }
 
+  /* Center Global Presence heading and paragraphs for iPad */
+  .about-global-title {
+    text-align: center !important;
+  }
+
+  .about-global-description {
+    text-align: center !important;
+  }
+
+  /* Center the office location points for iPad with common starting point */
+  .about-global-offices {
+    align-items: flex-start !important;
+    width: fit-content !important;
+    margin: 0 auto !important;
+  }
+
+  .about-global-office-item {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
   /* Center the last stat item (98% Client Satisfaction Rate) on iPad */
   .about-stats-grid .about-stat-item:last-child {
     grid-column: 1 / -1 !important; /* Span both columns */
     justify-self: center !important; /* Center horizontally */
     max-width: 400px !important; /* Limit width for better appearance */
+  }
+
+  /* Justify Mission & Vision card description paragraphs for iPad - text end to end */
+  .about-mission-vision-card-description {
+    text-align: justify !important;
   }
 }
 
