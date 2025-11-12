@@ -1,5 +1,4 @@
 import React from 'react';
-import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 const MICROSOFT_INTEGRATIONS = [
   'Azure Security Center and Sentinel SIEM/SOAR Integration',
@@ -26,6 +25,7 @@ const COMMVAULT_INTEGRATIONS = [
     'AI-driven orchestration and automation'
 ];
 
+const TECHNOLOGY_LOGOS = ['microsoft', 'crowdstrike', 'ingram', 'google', 'fortnite'];
 
 export function Partnerships(): React.ReactElement {
   return (
@@ -33,35 +33,40 @@ export function Partnerships(): React.ReactElement {
       <div className="container">
         <div className="tech-ecosystem-card" style={{ marginBottom: '80px' }}>
           <h3 className="tech-ecosystem-title">Technology Ecosystem</h3>
-          <div className="tech-ecosystem-carousel">
-            <div className="carousel-track">
-              <div className="carousel-item">
-                <ImagePlaceholder
-                  label="Technology ecosystem logos"
-                  imageName="homepage/tech-eco.png"
-                  width={800}
-                  height={120}
-                  borderRadius={0}
-                />
-              </div>
-              <div className="carousel-item">
-                <ImagePlaceholder
-                  label="Technology ecosystem logos"
-                  imageName="homepage/tech-eco.png"
-                  width={800}
-                  height={120}
-                  borderRadius={0}
-                />
-              </div>
-              <div className="carousel-item">
-                <ImagePlaceholder
-                  label="Technology ecosystem logos"
-                  imageName="homepage/tech-eco.png"
-                  width={800}
-                  height={120}
-                  borderRadius={0}
-                />
-              </div>
+          <div className="tech-ecosystem-wrapper">
+            <div className="tech-ecosystem-marquee">
+              {TECHNOLOGY_LOGOS.map((tech, index) => (
+                <div key={`tech-${index}`} className="tech-ecosystem-logo">
+                  <img
+                    src={`/assets/img/technology/${tech}.png`}
+                    alt={tech.charAt(0).toUpperCase() + tech.slice(1)}
+                    className="tech-logo-img"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless looping */}
+              {TECHNOLOGY_LOGOS.map((tech, index) => (
+                <div key={`tech-dup-${index}`} className="tech-ecosystem-logo">
+                  <img
+                    src={`/assets/img/technology/${tech}.png`}
+                    alt={tech.charAt(0).toUpperCase() + tech.slice(1)}
+                    className="tech-logo-img"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless looping */}
+              {TECHNOLOGY_LOGOS.map((tech, index) => (
+                <div key={`tech-dup-${index}`} className="tech-ecosystem-logo">
+                  <img
+                    src={`/assets/img/technology/${tech}.png`}
+                    alt={tech.charAt(0).toUpperCase() + tech.slice(1)}
+                    className="tech-logo-img"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
