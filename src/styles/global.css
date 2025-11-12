@@ -3037,8 +3037,7 @@ section {
   gap: 24px;
   padding: 40px;
   background: rgba(249, 250, 251, 1);
-  border-radius: 12px;
-  margin-left: 100px;
+  border-radius: 12px;;
 }
 
 .author-bio__image {
