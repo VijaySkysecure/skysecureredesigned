@@ -6,19 +6,19 @@ import '../styles/knowledge/saas-software-supply-chain.css';
 
 const CHALLENGES = [
   {
-    icon: 'icon-warning-triangle',
+    icon: 'icon-unverifiedsharing',
     title: 'Unverified Dependencies',
     description: 'Unverified open-source libraries and dependencies creating security gaps',
     color: '#EF4444'
   },
   {
-    icon: 'icon-eye',
+    icon: 'icon-ltdnew',
     title: 'Limited Visibility',
     description: 'Lack of end-to-end visibility across development pipelines',
     color: '#F59E0B'
   },
   {
-    icon: 'icon-puzzle',
+    icon: 'icon-integrationrisk',
     title: 'Integration Risks',
     description: 'Limited controls around third-party integrations',
     color: '#EAB308'
@@ -27,7 +27,6 @@ const CHALLENGES = [
     icon: 'icon-shield-check',
     title: 'Compliance Gaps',
     description: 'Absence of automated compliance validation',
-    color: '#8B5CF6'
   }
 ];
 
@@ -73,7 +72,7 @@ const SOLUTIONS = [
     color: 'rgba(168, 85, 247, 1)'
   },
   {
-    icon: 'icon-brain',
+    icon: 'icon-brainnew',
     title: 'Threat Intelligence Automation',
     description: 'Leveraged AI to predict and block supply-chain attack vectors.',
     color: 'rgba(249, 115, 22, 1)'

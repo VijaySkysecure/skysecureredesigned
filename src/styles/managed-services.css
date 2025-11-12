@@ -225,7 +225,7 @@
 
 .managed-services-table-cell--client {
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--color-white);
   background-color: rgb(19, 55, 236);
 }
 
@@ -704,7 +704,7 @@
 
   .page-cta__description {
     font-size: 16px !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 0 !important;
   }
 
   .page-cta__content > div {
@@ -932,7 +932,7 @@
 
   /* CTA Section - Extra Small Mobile */
   .page-cta__description {
-    margin-bottom: 20px !important;
+    margin-bottom: 0 !important;
   }
 
   .page-cta__content > div {

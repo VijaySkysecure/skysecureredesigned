@@ -48,22 +48,19 @@ const APPROACH_STEPS = [
 
 const SOLUTIONS = [
   {
-    icon: 'icon-shield-lightning',
+    icon: 'icon-monitoringnew',
     title: 'Unified Cloud Security Monitoring',
     description: 'Integrated all environments under a single Azure Sentinel dashboard for real- time threat analytics and alerts.',
-    color: 'rgba(37, 99, 235, 1)'
   },
   {
     icon: 'icon-zero-trust',
     title: 'Zero Trust Implementation',
     description: 'Enforced identity-based access control across users, devices, and workloads with continuous verification.',
-    color: 'rgba(34, 197, 94, 1)'
   },
   {
     icon: 'icon-compliance',
     title: 'Automated Compliance Management',
     description: 'Deployed continuous compliance policies mapped to HIPAA, NIST, and ISO frameworks for seamless auditing.',
-    color: 'rgba(168, 85, 247, 1)'
   },
   {
     icon: 'icon-threat-response',
