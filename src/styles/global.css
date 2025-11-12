@@ -3955,6 +3955,18 @@ footer section .container {
     justify-items: stretch !important;
   }
 
+  /* Who We Are section - Uniform text alignment for iPad */
+  .who-we-are__intro,
+  .who-we-are__quote,
+  .who-we-are__philosophy {
+    text-align: justify !important;
+    text-align-last: left !important; /* Keep last line left-aligned for natural ending */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
   .resource-card {
     width: 100% !important;
     height: 100% !important;
@@ -5659,15 +5671,24 @@ footer section .container {
     margin-bottom: 12px;
   }
 
+  /* Override container margins for Global Impact section on Android - small margin from edges */
+  #impact .container {
+    margin: 0 12px !important; /* Small margin from screen edges */
+    max-width: calc(100% - 24px) !important;
+    padding: 0 !important;
+  }
+
   .global-impact-description {
     font-size: 16px;
     margin-bottom: 32px;
   }
 
   .global-impact-dashboard {
-    padding: 32px !important;
+    max-width: 100% !important; /* Use full width */
+    padding: 32px 16px !important; /* Keep padding for content */
     border-radius: 12px;
-    margin: 0 16px;
+    margin: 0 !important; /* Remove margins to extend to screen edges */
+    overflow: visible !important; /* Allow nodes to extend beyond container */
   }
 
   /* Hide connection lines on Android/mobile */
@@ -5693,59 +5714,114 @@ footer section .container {
   }
 
   .global-impact-hub {
-    height: 600px;
+    height: 650px !important; /* Adequate height for proper spacing */
   }
 
   .global-impact-center-circle {
-    width: 120px;
-    height: 120px;
+    width: 110px !important; /* Smaller center circle */
+    height: 110px !important;
     box-shadow: 0 0 25px rgba(10, 78, 255, 0.3);
+    padding-top: 12px !important; /* Move content up more */
+    padding-bottom: 0 !important;
   }
 
   .global-impact-center-circle .image-placeholder {
-    width: 40px !important;
-    height: 40px !important;
+    width: 36px !important; /* Smaller center icon */
+    height: 36px !important;
+    margin-top: -6px !important; /* Move icon up more */
   }
 
   .global-impact-center-circle .image-placeholder img {
-    width: 40px !important;
-    height: 40px !important;
+    width: 36px !important;
+    height: 36px !important;
   }
 
   .global-impact-center-title {
-    font-size: 14px;
-    margin-top: 4px;
+    font-size: 12px !important; /* Smaller text */
+    margin-top: 0px !important; /* Further reduced margin to move text up */
   }
 
   .global-impact-center-subtitle {
-    font-size: 11px;
+    font-size: 10px !important; /* Smaller text */
+    margin-top: -2px !important; /* Move subtitle up */
   }
 
   .global-impact-node {
-    max-width: 140px;
-    gap: 10px;
+    max-width: 130px !important; /* Smaller node width */
+    gap: 10px !important; /* Good spacing between icon and text */
+  }
+
+  .global-impact-node-top {
+    top: 25px !important; /* Proper spacing from top */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
   }
 
   .global-impact-node-left {
-    left: -20px;
+    left: -10px !important; /* Moved right to keep text inside container */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
   }
 
   .global-impact-node-right {
-    right: -20px;
+    right: -20px !important; /* Move much further right, away from center */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .global-impact-node-bottom {
+    bottom: 40px !important; /* Moved up from bottom */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    max-width: 140px !important; /* Slightly larger to match other nodes */
   }
 
   .global-impact-node-title {
-    font-size: 13px;
-    margin-bottom: 2px;
+    font-size: 11px !important; /* Smaller text */
+    margin-bottom: 3px !important;
   }
 
   .global-impact-node-value {
-    font-size: 18px;
-    padding: 2px 8px;
+    font-size: 16px !important; /* Smaller text */
+    padding: 3px 6px !important;
+    margin-bottom: 3px !important;
   }
 
   .global-impact-node-description {
-    font-size: 12px;
+    font-size: 10px !important; /* Smaller text */
+    line-height: 1.4 !important;
+  }
+
+  /* Scale down node icons for Android */
+  .global-impact-node > div:first-child {
+    width: 40px !important; /* Smaller icon container */
+    height: 40px !important;
+  }
+
+  .global-impact-node .image-placeholder {
+    width: 28px !important; /* Smaller icons */
+    height: 28px !important;
+  }
+
+  .global-impact-node .image-placeholder img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* Increase bottom node icon size on Android */
+  .global-impact-node-bottom > div:first-child {
+    width: 44px !important; /* Slightly larger icon container */
+    height: 44px !important;
+  }
+
+  .global-impact-node-bottom .image-placeholder {
+    width: 32px !important; /* Slightly larger icon */
+    height: 32px !important;
+  }
+
+  .global-impact-node-bottom .image-placeholder img {
+    width: 32px !important;
+    height: 32px !important;
   }
 
   .global-impact-bottom-metrics {
@@ -5807,13 +5883,23 @@ footer section .container {
     font-size: 24px;
   }
 
+  /* Override container margins for Global Impact section on small Android - small margin from edges */
+  #impact .container {
+    margin: 0 8px !important; /* Small margin from screen edges */
+    max-width: calc(100% - 16px) !important;
+    padding: 0 !important;
+  }
+
   .global-impact-description {
     font-size: 14px;
   }
 
   .global-impact-dashboard {
-    padding: 28px !important;
-    margin: 0 12px;
+    max-width: 100% !important; /* Use full width */
+    padding: 28px 12px !important; /* Keep padding for content */
+    border-radius: 12px;
+    margin: 0 !important; /* Remove margins to extend to screen edges */
+    overflow: visible !important; /* Allow nodes to extend beyond container */
   }
 
   /* Hide connection lines on small Android/mobile */
@@ -5822,18 +5908,21 @@ footer section .container {
   }
 
   .global-impact-hub {
-    height: 500px;
+    height: 600px !important; /* Adequate height for proper spacing */
   }
 
   .global-impact-center-circle {
-    width: 100px;
-    height: 100px;
+    width: 100px !important; /* Smaller center circle */
+    height: 100px !important;
     box-shadow: 0 0 20px rgba(10, 78, 255, 0.3);
+    padding-top: 10px !important; /* Move content up more */
+    padding-bottom: 0 !important;
   }
 
   .global-impact-center-circle .image-placeholder {
-    width: 32px !important;
+    width: 32px !important; /* Smaller center icon */
     height: 32px !important;
+    margin-top: -5px !important; /* Move icon up more */
   }
 
   .global-impact-center-circle .image-placeholder img {
@@ -5842,42 +5931,92 @@ footer section .container {
   }
 
   .global-impact-center-title {
-    font-size: 12px;
-    margin-top: 2px;
+    font-size: 11px !important; /* Smaller text */
+    margin-top: -1px !important; /* Further reduced margin to move text up */
   }
 
   .global-impact-center-subtitle {
-    font-size: 10px;
+    font-size: 9px !important; /* Smaller text */
+    margin-top: -2px !important; /* Move subtitle up */
   }
 
   .global-impact-node {
-    max-width: 120px;
+    max-width: 120px !important; /* Smaller node width */
+    gap: 8px !important; /* Good spacing between icon and text */
   }
 
   .global-impact-node-top {
-    top: -15px;
+    top: 20px !important; /* Proper spacing from top */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     margin-bottom: 0;
   }
 
   .global-impact-node-left {
-    left: -30px;
+    left: -5px !important; /* Moved right to keep text inside container */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
   }
 
   .global-impact-node-right {
-    right: -30px;
+    right: -15px !important; /* Move much further right, away from center */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .global-impact-node-bottom {
+    bottom: 35px !important; /* Moved up from bottom */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    max-width: 130px !important; /* Slightly larger to match other nodes */
   }
 
   .global-impact-node-title {
-    font-size: 12px;
+    font-size: 10px !important; /* Smaller text */
+    margin-bottom: 3px !important;
   }
 
   .global-impact-node-value {
-    font-size: 16px;
-    padding: 2px 6px;
+    font-size: 14px !important; /* Smaller text */
+    padding: 2px 5px !important;
+    margin-bottom: 3px !important;
   }
 
   .global-impact-node-description {
-    font-size: 11px;
+    font-size: 9px !important; /* Smaller text */
+    line-height: 1.4 !important;
+  }
+
+  /* Scale down node icons for small Android */
+  .global-impact-node > div:first-child {
+    width: 36px !important; /* Smaller icon container */
+    height: 36px !important;
+  }
+
+  .global-impact-node .image-placeholder {
+    width: 24px !important; /* Smaller icons */
+    height: 24px !important;
+  }
+
+  .global-impact-node .image-placeholder img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Increase bottom node icon size on small Android */
+  .global-impact-node-bottom > div:first-child {
+    width: 40px !important; /* Slightly larger icon container */
+    height: 40px !important;
+  }
+
+  .global-impact-node-bottom .image-placeholder {
+    width: 28px !important; /* Slightly larger icon */
+    height: 28px !important;
+  }
+
+  .global-impact-node-bottom .image-placeholder img {
+    width: 28px !important;
+    height: 28px !important;
   }
 
   /* Footer responsive for small mobile */
