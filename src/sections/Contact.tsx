@@ -14,7 +14,7 @@ const GLOBAL_OFFICES = [
     address: '30 Cecil Street, # 19-08, Prudential Tower, Singapore - 049712'
   },
   {
-    city: 'Deira, UAE',
+    city: 'Deira, Dubai',
     address: 'Office No. 110, Sheikh Rashid Rd - Al Garhoud, Deira, Dubai, United Arab Emirates'
   }
 ];

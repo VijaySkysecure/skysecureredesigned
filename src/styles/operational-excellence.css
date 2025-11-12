@@ -1,5 +1,29 @@
 /* Operational Excellence Page - Responsive Styles */
 
+/* Desktop - Ensure 3 columns for core values */
+.operational-excellence-page .page-values__grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 32px;
+}
+
+/* Remove margin-bottom from h3 title in core values cards */
+.operational-excellence-page .page-value-card__title {
+  margin-bottom: 0 !important;
+}
+
+/* Override global 1200px breakpoint that changes to 2 columns */
+@media (max-width: 1200px) {
+  .operational-excellence-page .page-values__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .operational-excellence-page .page-values__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
 /* Base style override for features grid to match original inline style */
 .operational-excellence-page .page-features__grid {
   grid-template-columns: repeat(2, 1fr);
@@ -82,6 +106,11 @@
     max-width: 570px !important;
     height: auto !important;
   }
+  
+  /* Keep 3 columns until 768px */
+  .operational-excellence-page .page-values__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 
   .page-features {
     padding: 60px 0 !important;
@@ -144,7 +173,7 @@
   }
 
   .page-values__grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr !important;
     gap: 20px !important;
     padding: 0 20px;
   }

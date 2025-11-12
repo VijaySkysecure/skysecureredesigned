@@ -1,5 +1,29 @@
 /* Marketplace Page - Responsive Styles */
 
+/* Desktop - Ensure 3 columns for core values */
+.marketplace-page .page-values__grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 32px;
+}
+
+/* Remove margin-bottom from h3 title in core values cards */
+.marketplace-page .page-value-card__title {
+  margin-bottom: 0 !important;
+}
+
+/* Override global 1200px breakpoint that changes to 2 columns */
+@media (max-width: 1200px) {
+  .marketplace-page .page-values__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .marketplace-page .page-values__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
 /* Tablet Styles (max-width: 900px) */
 @media (max-width: 900px) {
   .page-hero__title {
@@ -40,6 +64,11 @@
     width: 100% !important;
     height: auto !important;
     max-width: 100%;
+  }
+  
+  /* Keep 3 columns until 768px */
+  .marketplace-page .page-values__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
