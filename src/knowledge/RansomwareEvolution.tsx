@@ -130,7 +130,7 @@ export function RansomwareEvolution(): React.ReactElement {
         }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
             <nav className="ransomware-breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', color: '#64748B' }}>
-              <a href="/" style={{ color: '#1F2937', textDecoration: 'none' }}>Home</a>
+              <a href="/" style={{ color: '#1F2937', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); sessionStorage.removeItem('restoreScrollTo'); sessionStorage.removeItem('restoreFilter'); sessionStorage.removeItem('activateTab'); window.location.href = '/'; }}>Home</a>
               <span>›</span>
               <a href="/#insights" style={{ color: '#1F2937', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Intelligence Hub</a>
               <span>›</span>
