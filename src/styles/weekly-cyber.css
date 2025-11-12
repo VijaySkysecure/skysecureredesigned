@@ -1298,26 +1298,23 @@
   .vuln-table {
     margin-top: 32px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .vuln-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 140px 2fr 120px 100px;
     gap: 12px;
     padding: 16px;
     border-bottom: 1px solid #e2e8f0;
+    min-width: 600px;
   }
 
   .vuln-row:before {
-    content: attr(data-label);
-    font-weight: 700;
-    color: #0f172a;
-    font-size: 12px;
-    margin-bottom: 4px;
-    display: block;
+    display: none;
   }
 
   .vuln-header {
-    display: none;
+    display: grid;
   }
 
   .vuln-cell {
