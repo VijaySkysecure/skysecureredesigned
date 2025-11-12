@@ -147,6 +147,14 @@ export function Resources(): React.ReactElement {
     }
   }, [filteredResources]);
 
+  // Reset scroll position when filter changes
+  useEffect(() => {
+    if (gridRef.current) {
+      gridRef.current.scrollLeft = 0;
+      updateScrollButtons();
+    }
+  }, [activeFilter]);
+
   // Handle URL hash parameters for direct navigation to specific tabs
   useEffect(() => {
     const handleHashChange = () => {
