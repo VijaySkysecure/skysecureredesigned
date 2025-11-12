@@ -281,6 +281,12 @@
     margin-bottom: 16px;
   }
 
+  .page-value-card__icon .image-placeholder,
+  .page-value-card__icon img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
   .page-innovation {
     padding: 40px 0 !important;
   }

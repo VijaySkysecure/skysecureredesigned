@@ -165,7 +165,7 @@ const GLOBAL_OFFICES = [
     color: '#3B82F6'
   },
   {
-    location: 'Deira, UAE',
+    location: 'Deira, Dubai',
     color: '#10B981'
   },
   {
