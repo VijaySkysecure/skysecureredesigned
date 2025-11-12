@@ -11,7 +11,7 @@ export function WeeklyCyber(): React.ReactElement {
       <main className="weekly-cyber-main">
         {/* Breadcrumb */}
         <nav className="breadcrumb">
-          <a href="/">Home</a>
+          <a href="/" onClick={(e) => { e.preventDefault(); sessionStorage.removeItem('restoreScrollTo'); sessionStorage.removeItem('restoreFilter'); sessionStorage.removeItem('activateTab'); window.location.href = '/'; }}>Home</a>
           <span className="breadcrumb-separator">›</span>
           <a href="/#insights" onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Intelligence Hub</a>
           <span className="breadcrumb-separator">›</span>
