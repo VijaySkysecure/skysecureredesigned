@@ -1,0 +1,489 @@
+/* Azure Sentinel Guide - Mobile Responsive Styles */
+
+/* Overview Section */
+.azure-sentinel-overview-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 32px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.azure-sentinel-overview-content {
+  width: 500px;
+}
+
+.azure-sentinel-overview-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.azure-sentinel-overview-image {
+  flex-shrink: 0;
+}
+
+/* Key Features Section */
+.azure-sentinel-features-section {
+  margin-left: 0;
+  margin: 0 auto 30px auto;
+  max-width: 1000px;
+}
+
+.azure-sentinel-features-title {
+  text-align: center;
+}
+
+.azure-sentinel-features-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.azure-sentinel-feature-card {
+  width: 240px;
+  height: 270px;
+  flex-shrink: 0;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Benefits Section */
+.azure-sentinel-benefits-wrapper {
+  background-color: #F8FAFC;
+  padding: 40px;
+  margin-top: -50px;
+  width: 100vw;
+  margin-left: calc(-53vw + 50%);
+}
+
+.azure-sentinel-benefits-title {
+  margin-top: 0;
+  margin-bottom: 42px;
+  margin-left: 220px;
+}
+
+.azure-sentinel-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 62px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.azure-sentinel-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.azure-sentinel-benefit-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.azure-sentinel-benefit-content {
+  flex: 1;
+}
+
+.azure-sentinel-benefit-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.azure-sentinel-benefit-description {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
+
+.azure-sentinel-benefits-note {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 32px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Why Azure Sentinel Section */
+.azure-sentinel-why-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 32px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.azure-sentinel-why-content {
+  width: 500px;
+}
+
+.azure-sentinel-why-image {
+  flex-shrink: 0;
+}
+
+/* Conclusion Section */
+.azure-sentinel-conclusion-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.azure-sentinel-conclusion-box {
+  background-color: #FFFFFF;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Author Bio Section */
+.azure-sentinel-author-bio {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 50px 50px;
+}
+
+.azure-sentinel-author-image {
+  flex-shrink: 0;
+}
+
+.azure-sentinel-author-content {
+  flex: 1;
+}
+
+.azure-sentinel-author-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 4px 0;
+}
+
+.azure-sentinel-author-title {
+  font-size: 14px;
+  color: #0066CC;
+  margin: 0 0 8px 0;
+}
+
+.azure-sentinel-author-description {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Hero Section */
+.blog-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+}
+
+/* Hero Image */
+.azure-sentinel-hero-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.azure-sentinel-hero-container img,
+.azure-sentinel-hero-container .image-placeholder {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Desktop specific hero alignment */
+@media (min-width: 1025px) {
+  .azure-sentinel-hero-container {
+    padding: 40px 20px;
+  }
+
+  .azure-sentinel-hero-container img,
+  .azure-sentinel-hero-container .image-placeholder {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.azure-sentinel-overview-image img,
+.azure-sentinel-overview-image .image-placeholder {
+  max-width: 100%;
+  height: auto;
+}
+
+.azure-sentinel-why-image img,
+.azure-sentinel-why-image .image-placeholder {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
+  .azure-sentinel-hero-container img,
+  .azure-sentinel-hero-container .image-placeholder {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .azure-sentinel-overview-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .azure-sentinel-overview-content {
+    width: 100%;
+  }
+
+  .azure-sentinel-overview-image {
+    width: 100%;
+  }
+
+  .azure-sentinel-features-grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .azure-sentinel-feature-card {
+    width: calc(50% - 10px);
+    min-width: 200px;
+  }
+
+  .azure-sentinel-benefits-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .azure-sentinel-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .azure-sentinel-why-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .azure-sentinel-why-content {
+    width: 100%;
+  }
+
+  .azure-sentinel-why-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .azure-sentinel-hero-container img,
+  .azure-sentinel-hero-container .image-placeholder {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .azure-sentinel-overview-wrapper {
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .azure-sentinel-overview-image img,
+  .azure-sentinel-overview-image .image-placeholder {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .azure-sentinel-why-image img,
+  .azure-sentinel-why-image .image-placeholder {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .azure-sentinel-features-section {
+    margin-bottom: 24px;
+  }
+
+  .azure-sentinel-features-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .azure-sentinel-feature-card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .azure-sentinel-benefits-wrapper {
+    padding: 24px 20px;
+    margin-top: -30px;
+  }
+
+  .azure-sentinel-benefits-title {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+
+  .azure-sentinel-benefits-grid {
+    gap: 24px;
+  }
+
+  .azure-sentinel-benefit-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .azure-sentinel-benefit-content {
+    text-align: center;
+  }
+
+  .azure-sentinel-benefit-title {
+    text-align: center;
+  }
+
+  .azure-sentinel-benefit-description {
+    text-align: center;
+  }
+
+  .azure-sentinel-benefits-note {
+    padding: 16px;
+    margin-top: 24px;
+  }
+
+  .azure-sentinel-why-wrapper {
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .azure-sentinel-conclusion-box {
+    padding: 20px;
+  }
+
+  .azure-sentinel-author-bio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+  }
+
+  .azure-sentinel-author-content {
+    text-align: center;
+  }
+
+  .azure-sentinel-author-name {
+    text-align: center;
+  }
+
+  .azure-sentinel-author-title {
+    text-align: center;
+  }
+
+  .azure-sentinel-author-description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .azure-sentinel-overview-wrapper {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .azure-sentinel-features-grid {
+    gap: 12px;
+  }
+
+  .azure-sentinel-feature-card {
+    max-width: 100%;
+    min-height: 180px;
+  }
+
+  .azure-sentinel-benefits-wrapper {
+    padding: 20px 16px;
+    margin-top: -20px;
+  }
+
+  .azure-sentinel-benefits-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .azure-sentinel-benefits-grid {
+    gap: 20px;
+  }
+
+  .azure-sentinel-benefit-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .azure-sentinel-benefit-title {
+    font-size: 16px;
+  }
+
+  .azure-sentinel-benefit-description {
+    font-size: 13px;
+  }
+
+  .azure-sentinel-benefits-note {
+    padding: 12px;
+    margin-top: 20px;
+  }
+
+  .azure-sentinel-conclusion-box {
+    padding: 16px;
+  }
+
+  .azure-sentinel-author-bio {
+    padding: 24px 16px;
+    margin-top: 40px;
+    gap: 16px;
+  }
+
+  .azure-sentinel-author-image img,
+  .azure-sentinel-author-image .image-placeholder {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .azure-sentinel-author-name {
+    font-size: 16px;
+  }
+
+  .azure-sentinel-author-title {
+    font-size: 13px;
+  }
+
+  .azure-sentinel-author-description {
+    font-size: 13px;
+  }
+}
+
