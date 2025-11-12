@@ -156,9 +156,9 @@ export function CloudSecurityGuide(): React.ReactElement {
               <nav className="breadcrumbs">
                 <a href="/" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>Home</a>
                 <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
-                <a href="/#knowledge-resources" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; setTimeout(() => { const element = document.getElementById('knowledge-resources'); if (element) element.scrollIntoView({ behavior: 'smooth' }); }, 100); }}>Knowledge & Resources</a>
+                <a href="/#insights" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Knowledge & Resources</a>
                 <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
-                <a href="/#knowledge-resources" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; setTimeout(() => { const element = document.getElementById('knowledge-resources'); if (element) { element.scrollIntoView({ behavior: 'smooth' }); setTimeout(() => { const blogTab = element.querySelector('[data-tab="blog"]') as HTMLElement; if (blogTab) blogTab.click(); }, 500); } }, 100); }}>Blog</a>
+                <a href="/#insights-blog" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); if (window.location.pathname !== '/') { sessionStorage.setItem('activateTab', 'blog'); window.location.href = '/'; } else { const resourcesSection = document.getElementById('insights'); if (resourcesSection) { resourcesSection.scrollIntoView({ behavior: 'smooth' }); setTimeout(() => { const tabButton = document.querySelector('[data-tab="blog"]') as HTMLElement; if (tabButton) { tabButton.click(); } }, 500); } } }}>Blog</a>
                 <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
                 <span className="breadcrumb-current" style={{ color: '#000000' }}>The Future of Cloud Security</span>
               </nav>
