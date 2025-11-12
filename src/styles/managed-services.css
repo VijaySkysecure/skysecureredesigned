@@ -4,6 +4,25 @@
 .page-values__grid {
   grid-template-columns: repeat(2, 1fr) !important;
   max-width: 1000px;
+  align-items: stretch;
+}
+
+/* Make cards equal height and align descriptions */
+.page-value-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-value-card__title {
+  min-height: 80px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.page-value-card__description {
+  margin-top: 0;
 }
 
 /* Stats Section Styles */
