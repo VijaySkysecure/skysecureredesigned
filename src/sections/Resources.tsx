@@ -91,7 +91,6 @@ const RESOURCES = [
 ];
 
 const FILTER_OPTIONS = [
-  { id: 'all', label: 'All Resources' },
   { id: 'blog', label: 'Blog' },
   { id: 'whitepaper', label: 'Whitepapers' },
   { id: 'case-study', label: 'Case Studies' },
@@ -99,13 +98,12 @@ const FILTER_OPTIONS = [
 ];
 
 export function Resources(): React.ReactElement {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState('blog');
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const gridRef = useRef<HTMLDivElement>(null);
 
   const filteredResources = RESOURCES.filter(resource => {
-    if (activeFilter === 'all') return true;
     if (activeFilter === 'skysecure-decode') return resource.type === 'video';
     return resource.type === activeFilter;
   });
