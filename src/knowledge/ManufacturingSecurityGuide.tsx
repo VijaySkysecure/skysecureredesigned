@@ -175,13 +175,15 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
         {/* Hero Visual */}
         <section className="blog-hero">
           <div className="container" style={{ textAlign: 'center' }}>
-            <ImagePlaceholder
-              label="Manufacturing Security Hero Visual"
-              imageName="knowledge/manufacturing-hero-visual.png"
-              width={800}
-              height={330}
-              borderRadius={0}
-            />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <ImagePlaceholder
+                label="Manufacturing Security Hero Visual"
+                imageName="knowledge/manufacturing-hero-visual.png"
+                width={800}
+                height={330}
+                borderRadius={0}
+              />
+            </div>
           </div>
         </section>
 
