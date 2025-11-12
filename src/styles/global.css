@@ -2255,37 +2255,49 @@ section {
   margin: 0 0 32px 0;
 }
 
-.tech-ecosystem-carousel {
-  overflow: hidden;
-  width: 100%;
+.tech-ecosystem-wrapper {
   position: relative;
+  overflow: hidden;
+  padding: 24px 0;
+  width: 100%;
 }
 
-.carousel-track {
+.tech-ecosystem-marquee {
   display: flex;
-  gap: 12%;
-  animation: scroll 16s linear infinite;
-  width: calc(300% + 80px);
+  align-items: center;
+  gap: 16px;
+  animation: marquee-scroll 15s linear infinite;
+  will-change: transform;
 }
 
-.carousel-item {
+.tech-ecosystem-logo {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-  transform: scale(1.5);
-  transform-origin: center;
+  min-width: 100px;
+  max-width: 150px;
+  height: 60px;
+  position: relative;
+  padding: 0 8px;
+  cursor: pointer;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-33.333% - 26.667px));
-  }
+.tech-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.tech-ecosystem-logo:hover .tech-logo-img {
+  filter: grayscale(0%);
+}
+
+
+.tech-ecosystem-wrapper:hover .tech-ecosystem-marquee {
+  animation-play-state: paused;
 }
 
 .realize-coming-soon {
@@ -4545,7 +4557,12 @@ footer section .container {
 
   .card__description {
     font-size: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    text-align: justify !important;
+  }
+
+  .card__description[style*="marginTop"] {
+    margin-top: -4px !important;
   }
 
   .card__description:last-of-type {
@@ -4700,14 +4717,19 @@ footer section .container {
     margin-bottom: 24px;
   }
 
-  .carousel-item .image-placeholder {
-    width: 600px !important;
-    height: 90px !important;
+  .tech-ecosystem-wrapper {
+    padding: 32px 0;
   }
 
-  .carousel-item .image-placeholder img {
-    width: 600px !important;
-    height: 90px !important;
+  .tech-ecosystem-marquee {
+    gap: 24px;
+  }
+
+  .tech-ecosystem-logo {
+    min-width: 120px;
+    max-width: 180px;
+    height: 80px;
+    padding: 0 12px;
   }
 
   /* Resources section - tablet */
@@ -5039,6 +5061,7 @@ footer section .container {
 
   .card__description {
     margin-bottom: 8px;
+    text-align: center !important;
   }
 
   .card__description:last-of-type {
@@ -5260,20 +5283,19 @@ footer section .container {
     margin-bottom: 20px;
   }
 
-  .carousel-item {
-    transform: scale(1);
+  .tech-ecosystem-wrapper {
+    padding: 16px 0;
   }
 
-  .carousel-item .image-placeholder {
-    width: 100% !important;
-    max-width: 400px !important;
-    height: auto !important;
+  .tech-ecosystem-marquee {
+    gap: 12px;
   }
 
-  .carousel-item .image-placeholder img {
-    width: 100% !important;
-    max-width: 400px !important;
-    height: auto !important;
+  .tech-ecosystem-logo {
+    min-width: 80px;
+    max-width: 120px;
+    height: 50px;
+    padding: 0 4px;
   }
 
   /* Resources section - mobile */
@@ -5665,6 +5687,7 @@ footer section .container {
 
   .card__description {
     margin-bottom: 6px;
+    text-align: center !important;
   }
 
   .card__description:last-of-type {
@@ -5765,6 +5788,15 @@ footer section .container {
     min-width: calc(50% - 3px);
   }
 
+  .resource-grid-container {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+  }
+
+  .resource-nav-button--left {
+    left: -4px !important;
+  }
+
   .resource-grid {
     padding: 0 calc(50% - 130px) 16px calc(50% - 130px);
     justify-content: flex-start;
@@ -5781,6 +5813,10 @@ footer section .container {
     flex-direction: column;
     align-self: stretch;
     min-height: 100%;
+  }
+
+  .resource-card:nth-child(2) {
+    margin-left: 8px;
   }
 
   .resource-card__media {
@@ -5858,15 +5894,22 @@ footer section .container {
     font-size: 22px;
   }
 
-  .carousel-item .image-placeholder {
-    max-width: 800px !important;
+  .tech-ecosystem-wrapper {
+    padding: 16px 0;
   }
 
-  .carousel-item .image-placeholder img {
-    max-width: 800px !important;
+  .tech-ecosystem-marquee {
+    gap: 12px;
   }
 
-  .tech-ecosystem-carousel {
+  .tech-ecosystem-logo {
+    min-width: 80px;
+    max-width: 120px;
+    height: 50px;
+    padding: 0 4px;
+  }
+
+  .tech-ecosystem-wrapper {
     margin-bottom: -10px !important;
   }
 
@@ -5984,9 +6027,51 @@ footer section .container {
     overflow: visible !important; /* Allow nodes to extend beyond container */
   }
 
-  /* Hide connection lines on Android/mobile */
+  /* Show connection lines on Android/mobile with adjusted positioning */
   .global-impact-connection-lines {
-    display: none !important;
+    display: block !important;
+  }
+  
+  /* Left line - 2 dashes from center to left node */
+  .global-impact-connection-lines > div:first-child {
+    left: calc(50% + 10px) !important;
+    width: 20% !important;
+    background: repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
+    transform: translateX(-100%) translateY(-50%) !important;
+  }
+  
+  /* Right line - 2 dashes from center to right node */
+  .global-impact-connection-lines::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 20% !important;
+    height: 2px !important;
+    background: repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  /* Top line - 2 dashes from center to top node */
+  .global-impact-connection-lines::after {
+    content: '' !important;
+    position: absolute !important;
+    top: calc(50% + 10px) !important;
+    left: 50% !important;
+    width: 2px !important;
+    height: 15% !important; /* Reduced to show only 2 dashes */
+    background: repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
+    transform: translateX(-50%) translateY(-100%) !important;
+  }
+  
+  /* Bottom line - 2 dashes from center to bottom node */
+  .global-impact-connection-lines > div:last-child {
+    top: 50% !important;
+    left: 50% !important;
+    width: 2px !important;
+    height: 20% !important;
+    background: repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
+    transform: translateX(-50%) !important;
   }
 
   .global-impact-top-row {
@@ -6045,7 +6130,7 @@ footer section .container {
   }
 
   .global-impact-node-top {
-    top: 25px !important; /* Proper spacing from top */
+    top: 85px !important; /* Moved down a little */
     left: 50% !important;
     transform: translateX(-50%) !important;
   }
@@ -6057,13 +6142,13 @@ footer section .container {
   }
 
   .global-impact-node-right {
-    right: -20px !important; /* Move much further right, away from center */
+    right: -5px !important; /* Moved a little to the left */
     top: 50% !important;
     transform: translateY(-50%) !important;
   }
 
   .global-impact-node-bottom {
-    bottom: 40px !important; /* Moved up from bottom */
+    bottom: 100px !important; /* Moved up a little more */
     left: 50% !important;
     transform: translateX(-50%) !important;
     max-width: 140px !important; /* Slightly larger to match other nodes */
@@ -6120,7 +6205,7 @@ footer section .container {
   .global-impact-bottom-metrics {
     flex-direction: column;
     gap: 20px;
-    margin-top: 32px;
+    margin-top: 0px; /* Reduced gap further */
     padding-top: 24px;
   }
 
@@ -6151,6 +6236,7 @@ footer section .container {
   #insights {
     padding-top: 32px !important;
     margin-top: -24px;
+    padding-left: 20px !important;
   }
 
   /* Reduce gap 3: Between Leadership and CoreValues */
@@ -6195,9 +6281,51 @@ footer section .container {
     overflow: visible !important; /* Allow nodes to extend beyond container */
   }
 
-  /* Hide connection lines on small Android/mobile */
+  /* Show connection lines on small Android/mobile with adjusted positioning */
   .global-impact-connection-lines {
-    display: none !important;
+    display: block !important;
+  }
+  
+  /* Left line - 2 dashes from center to left node */
+  .global-impact-connection-lines > div:first-child {
+    left: calc(50% + 10px) !important;
+    width: 20% !important;
+    background: repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
+    transform: translateX(-100%) translateY(-50%) !important;
+  }
+  
+  /* Right line - 2 dashes from center to right node */
+  .global-impact-connection-lines::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 20% !important;
+    height: 2px !important;
+    background: repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  /* Top line - 2 dashes from center to top node */
+  .global-impact-connection-lines::after {
+    content: '' !important;
+    position: absolute !important;
+    top: calc(50% + 10px) !important;
+    left: 50% !important;
+    width: 2px !important;
+    height: 15% !important; /* Reduced to show only 2 dashes */
+    background: repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
+    transform: translateX(-50%) translateY(-100%) !important;
+  }
+  
+  /* Bottom line - 2 dashes from center to bottom node */
+  .global-impact-connection-lines > div:last-child {
+    top: 50% !important;
+    left: 50% !important;
+    width: 2px !important;
+    height: 20% !important;
+    background: repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
+    transform: translateX(-50%) !important;
   }
 
   .global-impact-hub {
@@ -6239,7 +6367,7 @@ footer section .container {
   }
 
   .global-impact-node-top {
-    top: 20px !important; /* Proper spacing from top */
+    top: 80px !important; /* Moved down a little */
     left: 50% !important;
     transform: translateX(-50%) !important;
     margin-bottom: 0;
@@ -6252,13 +6380,13 @@ footer section .container {
   }
 
   .global-impact-node-right {
-    right: -15px !important; /* Move much further right, away from center */
+    right: 0px !important; /* Moved a little to the left */
     top: 50% !important;
     transform: translateY(-50%) !important;
   }
 
   .global-impact-node-bottom {
-    bottom: 35px !important; /* Moved up from bottom */
+    bottom: 95px !important; /* Moved up a little more */
     left: 50% !important;
     transform: translateX(-50%) !important;
     max-width: 130px !important; /* Slightly larger to match other nodes */
@@ -6668,6 +6796,10 @@ footer section .container {
     padding-top: 24px !important;
     margin-top: -16px;
   }
+
+  #insights {
+    padding-left: 20px !important;
+  }
   
   /* Typography adjustments for mobile */
   h1 {
@@ -6811,6 +6943,19 @@ footer section .container {
   }
   
   /* Resource grid - horizontal scroll on mobile */
+  .resource-grid-container {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+    margin-left: 10px !important;
+  }
+
+  .resource-nav-button--left {
+    left: 0px !important;
+  }
+  .resource-nav-button--right {
+    right: 35px !important;
+  }
+
   .resource-grid {
     display: flex !important;
     overflow-x: auto;
@@ -6829,6 +6974,10 @@ footer section .container {
     flex-direction: column;
     align-self: stretch;
     min-height: 100%;
+  }
+
+  .resource-card:nth-child(2) {
+    margin-left: 8px;
   }
 
   .resource-card__media {
@@ -7827,8 +7976,10 @@ footer section .container {
   border-radius: 0 !important;
 }
 
-
-
-
-
+/* Desktop - Center align card descriptions (excludes iPad 768-1024px) */
+@media (min-width: 1025px) {
+  .card__description {
+    text-align: center !important;
+  }
+}
 

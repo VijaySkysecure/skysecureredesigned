@@ -48,7 +48,7 @@ export function StrategicVision(): React.ReactElement {
           By combining Cybersecurity, Data, Infrastructure, and AI, we help organizations reduce costs, predict risks, accelerate performance, and scale with confidence. It’s the smarter, more secure way to grow."
         />
         <div className="card-grid">
-          {VISION_CARDS.map((card, index) => (
+          {VISION_CARDS.map((card) => (
             <div key={card.title} className="card">
               <ImagePlaceholder
                 className="card__icon"
@@ -61,8 +61,8 @@ export function StrategicVision(): React.ReactElement {
               <h3 className="card__title">{card.title}</h3>
               {card.description2 ? (
                 <>
-                  <p className="card__description" style={{ marginBottom: '0px' }}>{card.description}</p>
-                  <p className="card__description" style={{ marginTop: index === 0 ? '-56px' : '-12px' }}>{card.description2}</p>
+                  <p className="card__description" >{card.description}</p>
+                  <p className="card__description" style={{ marginTop: '2px' }}>{card.description2}</p>
                 </>
               ) : (
                 <p className="card__description">{card.description}</p>

@@ -11,9 +11,9 @@ export function WeeklyCyber(): React.ReactElement {
       <main className="weekly-cyber-main">
         {/* Breadcrumb */}
         <nav className="breadcrumb">
-          <a href="/">Home</a>
+          <a href="/" onClick={(e) => { e.preventDefault(); sessionStorage.removeItem('restoreScrollTo'); sessionStorage.removeItem('restoreFilter'); sessionStorage.removeItem('activateTab'); window.location.href = '/'; }}>Home</a>
           <span className="breadcrumb-separator">›</span>
-          <a href="/#insights" onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Knowledge & Resources</a>
+          <a href="/#insights" onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Intelligence Hub</a>
           <span className="breadcrumb-separator">›</span>
           <a href="/#insights-skysecure-decode" onClick={(e) => { e.preventDefault(); if (window.location.pathname !== '/') { sessionStorage.setItem('activateTab', 'skysecure-decode'); window.location.href = '/'; } else { const resourcesSection = document.getElementById('insights'); if (resourcesSection) { resourcesSection.scrollIntoView({ behavior: 'smooth' }); setTimeout(() => { const tabButton = document.querySelector('[data-tab="skysecure-decode"]') as HTMLElement; if (tabButton) { tabButton.click(); } }, 500); } } }}>Skysecure Decode</a>
           <span className="breadcrumb-separator">›</span>
