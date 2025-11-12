@@ -147,6 +147,14 @@ export function Resources(): React.ReactElement {
     }
   }, [filteredResources]);
 
+  // Reset scroll position when filter changes
+  useEffect(() => {
+    if (gridRef.current) {
+      gridRef.current.scrollLeft = 0;
+      updateScrollButtons();
+    }
+  }, [activeFilter]);
+
   // Handle URL hash parameters for direct navigation to specific tabs
   useEffect(() => {
     const handleHashChange = () => {
@@ -172,7 +180,24 @@ export function Resources(): React.ReactElement {
 
     // Check hash and sessionStorage on component mount
     const checkInitialHash = () => {
-      // First check sessionStorage (set by breadcrumb navigation)
+      // First check sessionStorage for filter restoration (set by card navigation)
+      const restoreFilter = sessionStorage.getItem('restoreFilter');
+      if (restoreFilter) {
+        sessionStorage.removeItem('restoreFilter');
+        const validTabIds = FILTER_OPTIONS.map(option => option.id);
+        if (validTabIds.includes(restoreFilter)) {
+          setActiveFilter(restoreFilter);
+          setTimeout(() => {
+            const tabButton = document.querySelector(`[data-tab="${restoreFilter}"]`) as HTMLElement;
+            if (tabButton && !tabButton.classList.contains('active')) {
+              tabButton.click();
+            }
+          }, 100);
+          return true;
+        }
+      }
+      
+      // Then check sessionStorage (set by breadcrumb navigation)
       const activateTab = sessionStorage.getItem('activateTab');
       if (activateTab) {
         sessionStorage.removeItem('activateTab');
@@ -262,6 +287,10 @@ export function Resources(): React.ReactElement {
               key={resource.title} 
               className={`resource-card ${index >= 3 ? 'resource-card--scrollable' : ''}`}
               onClick={resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security') ? () => { 
+                // Save scroll position and active filter before navigation
+                sessionStorage.setItem('restoreScrollTo', 'insights');
+                sessionStorage.setItem('restoreFilter', activeFilter);
+                
                 if (resource.title === 'A Guide to IT Security Transformation in Manufacturing') {
                   window.location.href = '/manufacturing-security-guide';
                 } else if (resource.title === 'Threat Protection with Microsoft Azure Sentinel') {
@@ -270,20 +299,36 @@ export function Resources(): React.ReactElement {
                   window.location.href = '/cloud-security-guide';
                 }
               } : resource.type === 'case-study' && (resource.title === 'Healthcare Cloud Security Overhaul' || resource.title === 'Securing the Software Supply Chain for a B2B SaaS') ? () => {
+                // Save scroll position and active filter before navigation
+                sessionStorage.setItem('restoreScrollTo', 'insights');
+                sessionStorage.setItem('restoreFilter', activeFilter);
+                
                 if (resource.title === 'Healthcare Cloud Security Overhaul') {
                   window.location.href = '/healthcare-cloud-security-overhaul';
                 } else if (resource.title === 'Securing the Software Supply Chain for a B2B SaaS') {
                   window.location.href = '/saas-software-supply-chain';
                 }
               } : resource.type === 'whitepaper' && (resource.title === 'AI-Driven Threat Detection: 2024 Report' || resource.title === 'Zero Trust in Hybrid Cloud Environments') ? () => {
+                // Save scroll position and active filter before navigation
+                sessionStorage.setItem('restoreScrollTo', 'insights');
+                sessionStorage.setItem('restoreFilter', activeFilter);
+                
                 if (resource.title === 'AI-Driven Threat Detection: 2024 Report') {
                   window.location.href = '/ai-threat-detection-report';
                 } else if (resource.title === 'Zero Trust in Hybrid Cloud Environments') {
                   window.location.href = '/zero-trust-hybrid-cloud';
                 }
               } : resource.type === 'video' && resource.title === 'Daily Threat Brief: Ransomware Evolution' ? () => {
+                // Save scroll position and active filter before navigation
+                sessionStorage.setItem('restoreScrollTo', 'insights');
+                sessionStorage.setItem('restoreFilter', activeFilter);
+                
                 window.location.href = '/ransomware-evolution';
               } : resource.type === 'video' && resource.title === 'Weekly Cyber Intelligence Update' ? () => {
+                // Save scroll position and active filter before navigation
+                sessionStorage.setItem('restoreScrollTo', 'insights');
+                sessionStorage.setItem('restoreFilter', activeFilter);
+                
                 window.location.href = '/weekly-cyber';
               } : undefined}
               style={{ cursor: (resource.type === 'blog' && (resource.title === 'A Guide to IT Security Transformation in Manufacturing' || resource.title === 'Threat Protection with Microsoft Azure Sentinel' || resource.title === 'The Future of Cloud Security')) || (resource.type === 'case-study' && (resource.title === 'Healthcare Cloud Security Overhaul' || resource.title === 'Securing the Software Supply Chain for a B2B SaaS')) || (resource.type === 'whitepaper' && (resource.title === 'AI-Driven Threat Detection: 2024 Report' || resource.title === 'Zero Trust in Hybrid Cloud Environments')) || (resource.type === 'video' && (resource.title === 'Daily Threat Brief: Ransomware Evolution' || resource.title === 'Weekly Cyber Intelligence Update')) ? 'pointer' : 'default' }}

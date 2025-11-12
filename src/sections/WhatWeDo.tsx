@@ -102,6 +102,9 @@ export function WhatWeDo(): React.ReactElement {
                         item.title === 'Security & Compliance Metrics' ? '/security-compliance-metrics' :
                         item.title === 'Assessment' ? '/assessment' : '#contact'}
                   onClick={(e) => {
+                    // Save scroll position before navigation
+                    sessionStorage.setItem('restoreScrollTo', 'services');
+                    
                     if (item.title === 'Security Operations') {
                       e.preventDefault();
                       window.location.href = '/marketplace';

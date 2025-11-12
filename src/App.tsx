@@ -200,20 +200,47 @@ export function App(): React.ReactElement {
     return <Realize />;
   }
   
-  // Handle hash navigation for homepage
+  // Handle hash navigation for homepage and scroll restoration
   useEffect(() => {
-    if (window.location.pathname === '/' && window.location.hash) {
-      const hash = window.location.hash.substring(1); // Remove the # symbol
-      // Skip hash patterns that are handled by specific components (e.g., #insights-*)
-      if (hash.startsWith('insights-')) {
+    if (window.location.pathname === '/') {
+      // First check for scroll restoration from sessionStorage
+      const restoreScrollTo = sessionStorage.getItem('restoreScrollTo');
+      if (restoreScrollTo) {
+        sessionStorage.removeItem('restoreScrollTo');
+        const scrollToElement = () => {
+          const element = document.getElementById(restoreScrollTo);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            return true;
+          }
+          return false;
+        };
+        
+        // Try immediately, then with delays if element not found
+        if (!scrollToElement()) {
+          setTimeout(() => {
+            if (!scrollToElement()) {
+              setTimeout(scrollToElement, 200);
+            }
+          }, 100);
+        }
         return;
       }
-      const element = document.getElementById(hash);
-      if (element) {
-        // Small delay to ensure page is fully loaded
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+      
+      // Then check for hash navigation
+      if (window.location.hash) {
+        const hash = window.location.hash.substring(1); // Remove the # symbol
+        // Skip hash patterns that are handled by specific components (e.g., #insights-*)
+        if (hash.startsWith('insights-')) {
+          return;
+        }
+        const element = document.getElementById(hash);
+        if (element) {
+          // Small delay to ensure page is fully loaded
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
       }
     }
   }, []);
