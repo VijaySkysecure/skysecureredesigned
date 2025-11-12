@@ -4831,7 +4831,12 @@ footer section .container {
 
   .card__description {
     font-size: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    text-align: justify !important;
+  }
+
+  .card__description[style*="marginTop"] {
+    margin-top: -4px !important;
   }
 
   .card__description:last-of-type {
@@ -5325,6 +5330,7 @@ footer section .container {
 
   .card__description {
     margin-bottom: 8px;
+    text-align: center !important;
   }
 
   .card__description:last-of-type {
@@ -5951,6 +5957,7 @@ footer section .container {
 
   .card__description {
     margin-bottom: 6px;
+    text-align: center !important;
   }
 
   .card__description:last-of-type {
@@ -8232,7 +8239,10 @@ footer section .container {
   border-radius: 0 !important;
 }
 
-
-
-
+/* Desktop - Center align card descriptions (excludes iPad 768-1024px) */
+@media (min-width: 1025px) {
+  .card__description {
+    text-align: center !important;
+  }
+}
 
