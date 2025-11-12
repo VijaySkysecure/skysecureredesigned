@@ -289,7 +289,7 @@ export function ContactPage(): React.ReactElement {
             <div className="office-card">
               <div className="office-flag">
                 <FlagAE className="flag-icon" />
-                <h3 className="office-location">UAE, Deira</h3>
+                <h3 className="office-location">Dubai, Deira</h3>
               </div>
               <p className="office-addres">
                 Office No. 110, Sheikh Rashid Rd<br />
