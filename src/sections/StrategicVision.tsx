@@ -61,7 +61,7 @@ export function StrategicVision(): React.ReactElement {
               <h3 className="card__title">{card.title}</h3>
               {card.description2 ? (
                 <>
-                  <p className="card__description">{card.description}</p>
+                  <p className="card__description" >{card.description}</p>
                   <p className="card__description" style={{ marginTop: '2px' }}>{card.description2}</p>
                 </>
               ) : (
