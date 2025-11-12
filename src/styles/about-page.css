@@ -1003,6 +1003,32 @@
     padding: 24px;
     margin-bottom: 0;
   }
+
+  /* Team Section - Position Mona Kumari beside Vishal Thali (same row, to his right) for iPad */
+  .about-team-container {
+    position: relative !important;
+  }
+
+  .about-team-grid {
+    position: relative !important;
+  }
+
+  /* Position Mona (first card in second row) beside Vishal in the same row - right column */
+  .about-team-row-second {
+    position: relative !important;
+  }
+
+  .about-team-row-second .about-team-card:nth-child(1) {
+    position: absolute !important;
+    top: -360px !important; /* Move up a lot more */
+    right: calc(50% - 600px + 220px) !important; /* Move left a bit more so "Chief of Staff" fits on one line */
+    width: calc((100% - 160px) / 5) !important; /* Same width as "Head of Sales" card */
+    max-width: 350px !important; /* Same max-width as other cards */
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    z-index: 10 !important;
+  }
 }
 
 /* Responsive Design - Mobile */
