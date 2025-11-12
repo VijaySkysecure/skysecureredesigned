@@ -87,8 +87,8 @@ const CLOUD_BEST_PRACTICES = [
     title: 'Continuous Monitoring',
     description: 'Implement continuous monitoring and automated compliance checks across all cloud environments.',
     tag: 'Essential Practice',
-    tagColor: 'rgba(37, 99, 235, 1)',
-    iconBgColor: 'rgba(59, 130, 246, 1)'
+    tagColor: 'rgb(236, 19, 19)',
+    iconBgColor: 'rgba(236, 19, 19, 1)'
   },
   {
     icon: 'icon-zero-trust-policy',
@@ -123,12 +123,10 @@ const CLOUD_BEST_PRACTICES = [
     iconBgColor: 'rgba(20, 184, 166, 1)'
   },
   {
-    icon: 'icon-supply-chain',
+    icon: 'icon-msupply',
     title: 'Vendor Compliance',
     description: 'Ensure all vendor and third-party integrations meet strict security compliance standards.',
     tag: 'Supply Chain Security',
-    tagColor: 'rgba(79, 70, 229, 1)',
-    iconBgColor: 'rgba(99, 102, 241, 1)'
   }
 ];
 

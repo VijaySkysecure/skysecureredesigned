@@ -105,7 +105,7 @@ const USE_CASES = [
     color: '#10B981'
   },
   {
-    icon: 'icon-factory',
+    icon: 'icon-factorynew',
     title: 'Manufacturing',
     description: 'Securing operational technology (OT) environments, supply chain integrity, and intellectual property.',
     color: '#F59E0B'

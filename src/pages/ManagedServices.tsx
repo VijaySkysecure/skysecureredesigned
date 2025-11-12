@@ -261,16 +261,6 @@ export function ManagedServices(): React.ReactElement {
               <p className="page-cta__description">
               Partner with Skysecure and experience the power of unified managed services that protect, automate, and scale your business.
               </p>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '32px' }}>
-                <button 
-                  className="mission-button mission-button--primary"
-                  onClick={() => {
-                    window.location.href = '/contact';
-                  }}
-                >
-                  Get Started with Skysecure
-                </button>
-              </div>
             </div>
           </div>
         </section>
