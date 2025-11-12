@@ -5471,6 +5471,15 @@ footer section .container {
     min-width: calc(50% - 3px);
   }
 
+  .resource-grid-container {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+  }
+
+  .resource-nav-button--left {
+    left: -4px !important;
+  }
+
   .resource-grid {
     padding: 0 calc(50% - 130px) 16px calc(50% - 130px);
     justify-content: flex-start;
@@ -5487,6 +5496,10 @@ footer section .container {
     flex-direction: column;
     align-self: stretch;
     min-height: 100%;
+  }
+
+  .resource-card:nth-child(2) {
+    margin-left: 8px;
   }
 
   .resource-card__media {
@@ -5857,6 +5870,7 @@ footer section .container {
   #insights {
     padding-top: 32px !important;
     margin-top: -24px;
+    padding-left: 20px !important;
   }
 
   /* Reduce gap 3: Between Leadership and CoreValues */
@@ -6183,6 +6197,10 @@ footer section .container {
     padding-top: 24px !important;
     margin-top: -16px;
   }
+
+  #insights {
+    padding-left: 20px !important;
+  }
   
   /* Typography adjustments for mobile */
   h1 {
@@ -6326,6 +6344,19 @@ footer section .container {
   }
   
   /* Resource grid - horizontal scroll on mobile */
+  .resource-grid-container {
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+    margin-left: 10px !important;
+  }
+
+  .resource-nav-button--left {
+    left: 0px !important;
+  }
+  .resource-nav-button--right {
+    right: 35px !important;
+  }
+
   .resource-grid {
     display: flex !important;
     overflow-x: auto;
@@ -6344,6 +6375,10 @@ footer section .container {
     flex-direction: column;
     align-self: stretch;
     min-height: 100%;
+  }
+
+  .resource-card:nth-child(2) {
+    margin-left: 8px;
   }
 
   .resource-card__media {
@@ -7341,7 +7376,6 @@ footer section .container {
   border: none !important;
   border-radius: 0 !important;
 }
-
 
 
 
