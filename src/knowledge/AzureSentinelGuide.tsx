@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/knowledge/azure-sentinel-guide.css';
 
 const KEY_FEATURES = [
   {
@@ -59,7 +60,7 @@ export function AzureSentinelGuide(): React.ReactElement {
         <section className="blog-breadcrumbs">
           <div className="container">
               <nav className="breadcrumbs">
-                <a href="/" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}>Home</a>
+                <a href="/" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); sessionStorage.removeItem('restoreScrollTo'); sessionStorage.removeItem('restoreFilter'); sessionStorage.removeItem('activateTab'); window.location.href = '/'; }}>Home</a>
                 <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
                 <a href="/#insights" className="breadcrumb-link" style={{ color: '#000000' }} onClick={(e) => { e.preventDefault(); window.location.href = '/#insights'; }}>Intelligence Hub</a>
                 <span className="breadcrumb-separator" style={{ color: '#000000' }}>&gt;</span>
@@ -130,7 +131,7 @@ export function AzureSentinelGuide(): React.ReactElement {
                   Azure Sentinel is Microsoft's cloud-native Security Information and Event Management (SIEM) system, designed to provide end-to-end visibility and threat detection across your enterprise. By collecting data from servers, endpoints, applications, and cloud platforms, it delivers a centralized and intelligent view of your security posture, helping teams identify and respond to incidents faster.
                   </p>
                 </div>
-                <div style={{ flexShrink: 0 }}>
+                <div className="azure-sentinel-overview-image">
                   <ImagePlaceholder
                     label="Network Diagram"
                     imageName="knowledge/azure-network-diagram.png"
@@ -143,11 +144,11 @@ export function AzureSentinelGuide(): React.ReactElement {
             </section>
 
             {/* Key Features */}
-            <section className="blog-section" style={{ marginLeft: '0', margin: '0 auto 30px auto', maxWidth: '1000px' }}>
-              <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Key Features</h2>
-              <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'nowrap' }}>
+            <section className="blog-section azure-sentinel-features-section">
+              <h2 className="blog-section-title azure-sentinel-features-title">Key Features</h2>
+              <div className="azure-sentinel-features-grid">
                 {KEY_FEATURES.map((feature, index) => (
-                  <div key={index} className="measure-card" style={{ width: '240px', height: '270px', flexShrink: 0, alignItems: 'flex-start', textAlign: 'left' }}>
+                  <div key={index} className="measure-card azure-sentinel-feature-card">
                     <div className="measure-card__icon" style={{ alignSelf: 'flex-start' }}>
                       <ImagePlaceholder
                         label={feature.title}
@@ -170,8 +171,8 @@ export function AzureSentinelGuide(): React.ReactElement {
                 <h2 className="blog-section-title azure-benefits-title" style={{ marginTop: 0, marginBottom: '42px', marginLeft: '220px' }}>Benefits</h2>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '62px', maxWidth: '1000px', margin: '0 auto' }}>
                   {BENEFITS.map((benefit, index) => (
-                    <div key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                      <div style={{ flexShrink: 0, width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <div key={index} className="azure-sentinel-benefit-item">
+                      <div className="azure-sentinel-benefit-icon">
                         <ImagePlaceholder
                           label={benefit.title}
                           imageName={`knowledge/${benefit.icon}.png`}
@@ -180,9 +181,9 @@ export function AzureSentinelGuide(): React.ReactElement {
                           borderRadius={0}
                         />
                       </div>
-                      <div style={{ flex: 1 }}>
-                        <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1e293b', margin: '0 0 8px 0', textAlign: 'left' }}>{benefit.title}</h3>
-                        <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.5', margin: 0, textAlign: 'left' }}>{benefit.description}</p>
+                      <div className="azure-sentinel-benefit-content">
+                        <h3 className="azure-sentinel-benefit-title">{benefit.title}</h3>
+                        <p className="azure-sentinel-benefit-description">{benefit.description}</p>
                       </div>
                     </div>
                   ))}
@@ -204,7 +205,7 @@ export function AzureSentinelGuide(): React.ReactElement {
                   Azure Sentinel stands apart by combining automation, scalability, and intelligence within a single platform. It empowers organizations to protect hybrid and multi-cloud environments while reducing operational burden. Whether you're an SMB or a large enterprise, Sentinel scales with your needs and integrates seamlessly with your existing Microsoft ecosystem.
                   </p>
                 </div>
-                <div style={{ flexShrink: 0 }}>
+                <div className="azure-sentinel-why-image">
                   <ImagePlaceholder
                     label="Cloud Security"
                     imageName="knowledge/azure-cloud-security.png"
@@ -241,10 +242,10 @@ export function AzureSentinelGuide(): React.ReactElement {
                   borderRadius={40}
                 />
               </div>
-              <div className="author-bio__content" style={{ flex: 1 }}>
-                <h3 className="author-name" style={{ fontSize: '18px', fontWeight: 'bold', color: '#000000', margin: '0 0 4px 0' }}>Nithin Ramegowda</h3>
-                <p className="author-title" style={{ fontSize: '14px', color: '#0066CC', margin: '0 0 8px 0' }}>Co-Founder & Chief Of Business Strategy, Skysecure</p>
-                <p className="author-description" style={{ fontSize: '14px', color: '#374151', lineHeight: '1.5', margin: 0 }}>
+              <div className="author-bio__content azure-sentinel-author-content">
+                <h3 className="author-name azure-sentinel-author-name">Nithin Ramegowda</h3>
+                <p className="author-title azure-sentinel-author-title">Co-Founder & Chief Of Business Strategy, Skysecure</p>
+                <p className="author-description azure-sentinel-author-description">
                 Nithin specializes in Microsoft security solutions and helps enterprises design and implement scalable cloud-native protection frameworks.
                 </p>
               </div>

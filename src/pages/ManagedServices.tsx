@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import { TrustedCompanies } from '../sections/TrustedCompanies';
 import { Testimonials } from '../sections/Testimonials';
+import { useCountUp } from '../hooks/useCountUp';
 import '../styles/managed-services.css';
 
 const STRATEGIC_APPROACH = [
@@ -68,10 +69,82 @@ const STATS_DATA = [
   { value: '40%', label: 'Reduction in IT Overhead' },
   { value: '10,000+', label: 'Cloud & Infrastructure Assets Managed' },
   { value: '24/7/365', label: 'Managed Operations' },
-  { value: '99%', label: 'Customer Retention Rate' },
+  { value: '98%', label: 'Customer Retention Rate' },
 ];
 
 export function ManagedServices(): React.ReactElement {
+  const statsSectionRef = useRef<HTMLElement>(null);
+  const [isStatsVisible, setIsStatsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsStatsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    if (statsSectionRef.current) {
+      observer.observe(statsSectionRef.current);
+    }
+
+    return () => {
+      if (statsSectionRef.current) {
+        observer.unobserve(statsSectionRef.current);
+      }
+    };
+  }, []);
+
+  // Parse stat values for animation
+  const parseStatValue = (value: string): { number: number; suffix: string; isText: boolean } => {
+    // Check if it's text (like "24/7/365")
+    if (value.includes('/')) {
+      return { number: 0, suffix: value, isText: true };
+    }
+    
+    // Extract number and suffix
+    const match = value.match(/^([\d,]+)(.*)$/);
+    if (match) {
+      const numberStr = match[1].replace(/,/g, '');
+      const suffix = match[2] || '';
+      return { number: parseFloat(numberStr), suffix, isText: false };
+    }
+    
+    return { number: 0, suffix: value, isText: true };
+  };
+
+  // Format animated value
+  const formatAnimatedValue = (value: number, originalValue: string): string => {
+    const parsed = parseStatValue(originalValue);
+    if (parsed.isText) {
+      return parsed.suffix;
+    }
+    
+    if (parsed.suffix === '%') {
+      return `${Math.floor(value)}%`;
+    } else if (parsed.suffix === '+') {
+      // Format with commas if >= 1000
+      if (value >= 1000) {
+        return `${Math.floor(value).toLocaleString()}+`;
+      }
+      return `${Math.floor(value)}+`;
+    }
+    
+    return `${Math.floor(value)}${parsed.suffix}`;
+  };
+
+  // Animated values
+  const animated500 = useCountUp(500, isStatsVisible, 1500);
+  const animated40 = useCountUp(40, isStatsVisible, 1500);
+  const animated10000 = useCountUp(10000, isStatsVisible, 1500);
+  const animated98 = useCountUp(98, isStatsVisible, 1500);
+
   return (
     <>
       <Header />
@@ -93,22 +166,38 @@ export function ManagedServices(): React.ReactElement {
         <TrustedCompanies />
         
         {/* Stats Section */}
-        <section className="managed-services-stats-section">
+        <section ref={statsSectionRef} className="managed-services-stats-section">
           <div className="container">
             <div className="managed-services-stats-box">
-              {STATS_DATA.map((stat, index) => (
-                <div 
-                  key={index} 
-                  className={`managed-services-stat-item ${index === STATS_DATA.length - 1 ? 'stat-item-last' : ''}`}
-                >
-                  <div className="managed-services-stat-value">
-                    {stat.value}
+              {STATS_DATA.map((stat, index) => {
+                let animatedValue: string;
+                if (index === 0) {
+                  animatedValue = formatAnimatedValue(animated500, stat.value);
+                } else if (index === 1) {
+                  animatedValue = formatAnimatedValue(animated40, stat.value);
+                } else if (index === 2) {
+                  animatedValue = formatAnimatedValue(animated10000, stat.value);
+                } else if (index === 4) {
+                  animatedValue = formatAnimatedValue(animated98, stat.value);
+                } else {
+                  // For "24/7/365", keep as is
+                  animatedValue = stat.value;
+                }
+
+                return (
+                  <div 
+                    key={index} 
+                    className={`managed-services-stat-item ${index === STATS_DATA.length - 1 ? 'stat-item-last' : ''}`}
+                  >
+                    <div className="managed-services-stat-value">
+                      {animatedValue}
+                    </div>
+                    <div className="managed-services-stat-label">
+                      {stat.label}
+                    </div>
                   </div>
-                  <div className="managed-services-stat-label">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
