@@ -119,14 +119,14 @@ const CLOUD_BEST_PRACTICES = [
     title: 'Regular Audits',
     description: 'Conduct regular cloud configuration audits and comprehensive penetration testing.',
     tag: 'Risk Assessment',
-    tagColor: 'rgba(20, 184, 166, 1)',
-    iconBgColor: 'rgba(20, 184, 166, 1)'
+    tagColor: 'rgba(20,184,166,1)',
   },
   {
     icon: 'icon-msupply',
     title: 'Vendor Compliance',
     description: 'Ensure all vendor and third-party integrations meet strict security compliance standards.',
     tag: 'Supply Chain Security',
+    tagColor: 'rgba(19,55,236,1)',
   }
 ];
 
