@@ -2657,6 +2657,15 @@ section {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+}
+
+.contact-description p {
+  margin: 0 0 4px 0;
+}
+
+.contact-description p:last-child {
+  margin-bottom: 0;
 }
 
 .contact-content {
@@ -3033,7 +3042,6 @@ section {
 
 .blog-section {
   margin-bottom: -50px;
-  margin-left: 100px;
 }
 
 .blog-section-title {
@@ -3890,7 +3898,6 @@ section {
   .outcome-card {
     width: 100% !important;
     max-width: 100% !important;
-    margin-bottom: 16px !important;
   }
   
   .author-bio {
@@ -7544,6 +7551,10 @@ footer section .container {
   }
   
   /* Contact section */
+  .contact-header {
+    margin-bottom: 32px;
+  }
+  
   .contact-content {
     grid-template-columns: 1fr !important;
     gap: 32px;

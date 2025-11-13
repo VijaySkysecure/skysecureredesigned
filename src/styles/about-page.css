@@ -808,6 +808,18 @@
   margin: 0 0 8px 0;
 }
 
+.about-team-name-link {
+  color: #1F2937;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.about-team-name-link:hover {
+  color: #007FFF;
+  text-decoration: underline;
+}
+
 .about-team-title {
   font-size: 16px;
   color: #007FFF;

@@ -144,9 +144,10 @@ export function Contact(): React.ReactElement {
       <div className="container">
         <div className="contact-header">
           <h2 className="contact-title">Ready to Secure, Scale, and Thrive? Let’s Talk</h2>
-          <p className="contact-description">
-          Get in touch with us and the first step toward secure, intelligent growth. We’ll help you move forward with clarity and confidence. No pressure, just a genuine conversation about what’s next for your business.
-          </p>
+          <div className="contact-description">
+            <p>Get in touch with us. This is the first step toward secure, intelligent growth. We'll help you move forward with clarity and confidence.</p>
+            <p>No pressure, just a genuine conversation about what's next for your business.</p>
+          </div>
         </div>
 
         <div className="contact-content">
