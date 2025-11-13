@@ -207,11 +207,21 @@
   .page-value-card__title {
     text-align: center !important;
     margin-bottom: 4px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .page-value-card > div:first-child > div:last-child {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   .page-value-card > div:first-child > div:last-child > div {
     text-align: center !important;
     margin-bottom: 12px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .page-value-card__description {

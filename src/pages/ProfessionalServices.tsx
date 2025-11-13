@@ -198,7 +198,7 @@ export function ProfessionalServices(): React.ReactElement {
                       />
                     </div>
                     <div style={{ flex: 1 }}>
-                      <h3 className="page-value-card__title" style={{ marginBottom: '4px' }}>{approach.title}</h3>
+                      <h3 className="page-value-card__title" style={{ marginBottom: '4px', minHeight: '0px' }}>{approach.title}</h3>
                       <div style={{ fontSize: '12px', fontWeight: '600', color: 'rgba(37, 99, 235, 1)', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
                         {approach.subtitle}
                       </div>
