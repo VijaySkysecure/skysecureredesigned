@@ -146,6 +146,9 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
         {/* Article Header */}
         <section className="blog-header">
           <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <span style={{ backgroundColor: '#3B82F6', color: '#FFFFFF', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: '500' }}>Blog</span>
+            </div>
             <h1 className="blog-title">A Guide to IT Security Transformation in Manufacturing</h1>
             <div className="blog-meta">
               <div className="blog-meta-item">
@@ -199,7 +202,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             {/* The Rise of Manufacturing in India */}
             <section className="blog-section">
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>The Rise of Manufacturing in India</h2>
-              <div className="manufacturing-cards" style={{ marginLeft: '100px' }}>
+              <div className="manufacturing-cards">
                 {MANUFACTURING_RISE.map((item, index) => (
                   <div key={index} className="manufacturing-card">
                     <div className="manufacturing-card__icon">
@@ -248,7 +251,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             </section>
 
             {/* Essential Cybersecurity Measures */}
-            <section className="blog-section" style={{ marginTop: '-30px' }}>
+            <section className="blog-section">
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Essential Cybersecurity Measures</h2>
               <div className="measures-grid">
                 {CYBERSECURITY_MEASURES.map((measure, index) => (
