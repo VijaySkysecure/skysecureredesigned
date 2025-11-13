@@ -5,11 +5,18 @@ export default defineConfig({
   plugins: [react()],
   server: {
     cors: {
-      origin: ['https://skysecure.ai', 'http://skysecure.ai', 'https://www.skysecure.ai', 'http://www.skysecure.ai'],
+      origin: [
+        'https://skysecure.ai',
+        'http://skysecure.ai',
+        'https://www.skysecure.ai',
+        'http://www.skysecure.ai',
+      ],
       credentials: true,
     },
+    allowedHosts: [
+      'skysecure.ai',
+      'www.skysecure.ai'
+    ],
   },
 });
-
-
 
