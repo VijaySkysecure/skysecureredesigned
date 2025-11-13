@@ -5,64 +5,8 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 import { TrustedCompanies } from '../sections/TrustedCompanies';
 import { Testimonials } from '../sections/Testimonials';
 import { useCountUp } from '../hooks/useCountUp';
+import { MagneticCard3D } from '../components/MagneticCard3D';
 import '../styles/managed-services.css';
-
-const STRATEGIC_APPROACH = [
-  {
-    icon: 'icon-shield',
-    h2: 'Where Cyber, Data, Infrastructure, and AI work together, so your business runs smarter, safer, and faster.',
-    body: 'With Skysecure\'s Unified MSP Framework, you gain complete visibility, control, and confidence across your technology ecosystem. We streamline management, automate routine operations, and turn data into decisions, so your teams can focus what really matters.'
-  },
-  {
-    icon: 'icon-brain',
-    h2: 'The New Standard in Managed Services.',
-    body: 'We are redefining how businesses think about IT management. By combining automation, accountability, and AI-powered insights, Skysecure delivers measurable outcomes, not just maintenance. With us, managed services become a foundation for innovation, efficiency, and consistent growth.'
-  }
-];
-
-const CASE_STUDIES_TABLE = [
-  {
-    client: 'Fintech Enterprise',
-    challenge: 'Fragmented vendors, slow incident response',
-    solution: 'Unified MSP with AI-driven SOC and automated patching',
-    outcome: '60% faster detection, 35% lower costs'
-  },
-  {
-    client: 'Manufacturing Firm',
-    challenge: 'Unreliable infrastructure & downtime',
-    solution: 'End-to-end Cloud & Infra management',
-    outcome: '99.9% uptime, smoother scalability'
-  },
-  {
-    client: 'Healthcare Network',
-    challenge: 'Data compliance and DPDP readiness',
-    solution: 'Data governance & protection under one platform',
-    outcome: '100% compliance, improved trust scores'
-  }
-];
-
-const COMPREHENSIVE_SOLUTIONS = [
-  {
-    icon: 'icon-growth',
-    title: 'Network & Infrastructure Management',
-    description: 'Comprehensive oversight of your networks and IT infrastructure to ensure uptime, security, and scalability.'
-  },
-  {
-    icon: 'icon-waves',
-    title: 'Cloud Solutions',
-    description: 'Flexible, secure cloud services that scale with your business needs. From private to hybrid and public cloud, we provide a complete range of cloud management services.'
-  },
-  {
-    icon: 'icon-chainlink',
-    title: 'Data Security & Backup',
-    description: 'Advanced security measures to protect your data, combined with efficient backup solutions to ensure business continuity.'
-  },
-  {
-    icon: 'icon-refresh',
-    title: 'Remote & On-Site Support',
-    description: 'Providing efficient troubleshooting, maintenance, and repair services either remotely or on-site, ensuring minimal disruption to your operations.'
-  }
-];
 
 const STATS_DATA = [
   { value: '500+', label: 'Businesses Managed' },
@@ -72,9 +16,35 @@ const STATS_DATA = [
   { value: '98%', label: 'Customer Retention Rate' },
 ];
 
+const UNIFIED_FRAMEWORK_PILLARS = [
+  {
+    title: 'Cyber - Confidence Through Protection',
+    description: 'We secure your digital ecosystem end-to-end with proactive monitoring, incident response, and zero trust governance, keeping your business safe, compliant, and always operational.',
+    keyPoints: ['Fewer incidents', 'Stronger compliance', 'Always-on protection']
+  },
+  {
+    title: 'Data - Insights for Best Decisions',
+    description: 'From governance to analytics, we turn raw data into real-time intelligence you can trust. Skysecure ensures visibility, accuracy, and compliance, so every decision is informed, not assumed.',
+    keyPoints: ['Unified visibility', 'Smarter decisions', 'Automated compliance']
+  },
+  {
+    title: 'Infra Built to Scale',
+    description: 'We design, deploy, and manage cloud-ready infrastructure that grows with your business. Reliable, resilient, and predictable, giving you the power to innovate without worrying about uptime or performance.',
+    keyPoints: ['Predictable costs', 'Seamless scalability', 'Reliable performance']
+  },
+  {
+    title: 'AI Intelligence That Works for You',
+    description: 'Our custom AI agents automate routine tasks, streamline workflows, and boost team productivity. Each agent adapts to your business context, learning, improving, and freeing your teams to focus on what truly matters.',
+    keyPoints: ['Lower costs', 'Faster execution', 'Higher productivity']
+  }
+];
+
 export function ManagedServices(): React.ReactElement {
   const statsSectionRef = useRef<HTMLElement>(null);
   const [isStatsVisible, setIsStatsVisible] = useState(false);
+  const strategicApproachRef = useRef<HTMLElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -98,6 +68,87 @@ export function ManagedServices(): React.ReactElement {
       if (statsSectionRef.current) {
         observer.unobserve(statsSectionRef.current);
       }
+    };
+  }, []);
+
+  useEffect(() => {
+    let observer: IntersectionObserver | null = null;
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+    const checkVisibility = () => {
+      if (!strategicApproachRef.current) return;
+
+      const rect = strategicApproachRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Check if section is visible
+      if (rect.top < windowHeight + 200 && rect.bottom > -200) {
+        setIsSectionVisible(true);
+        return true;
+      }
+      return false;
+    };
+
+    // Initial check after a small delay to ensure DOM is rendered
+    timeoutId = setTimeout(() => {
+      if (checkVisibility()) {
+        return; // Already visible, no need for observer
+      }
+
+      // Use IntersectionObserver for visibility detection
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsSectionVisible(true);
+              if (observer) {
+                observer.disconnect();
+              }
+            }
+          });
+        },
+        {
+          threshold: 0.01,
+          rootMargin: '200px',
+        }
+      );
+
+      if (strategicApproachRef.current) {
+        observer.observe(strategicApproachRef.current);
+      }
+
+      // Fallback: make visible after 1 second if observer hasn't triggered
+      setTimeout(() => {
+        setIsSectionVisible(true);
+      }, 1000);
+    }, 100);
+
+    // Scroll handler for gradient animation
+    const handleScroll = () => {
+      if (!strategicApproachRef.current) return;
+
+      const rect = strategicApproachRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Calculate scroll progress (0 to 1)
+      const elementTop = rect.top;
+      const elementHeight = rect.height;
+      const progress = Math.max(0, Math.min(1, (windowHeight - elementTop) / (windowHeight + elementHeight)));
+      
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      if (observer) {
+        observer.disconnect();
+      }
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -213,69 +264,67 @@ export function ManagedServices(): React.ReactElement {
                 The More Tools You Add, the Harder It Gets.
               </h2>
               <p className="managed-services-complexity-body">
-                You're not alone. Every growing business is juggling too many tools, vendors, and systems that were meant to simplify but only added complexity. Instead of driving innovation, your teams are stuck managing integrations, fixing issues, and firefighting downtime. If this feels familiar, it's time for a smarter, unified way to manage it all.
+                You're not alone. Growing businesses often juggle too many tools, vendors, and systems that were meant to help but only added complexity. Teams end up managing integrations and fixing issues instead of driving innovation.
               </p>
               <p className="managed-services-complexity-body">
-                Many businesses struggle with too many tools and vendors that add complexity instead of clarity. Your teams spend more time managing systems than driving innovation. It's time to take back control with a unified, intelligent approach to your IT ecosystem.
+                It's time to take back control with a unified, intelligent way to manage your entire IT ecosystem.
               </p>
             </div>
           </div>
         </section>
 
         {/* Our Strategic Approach Section */}
-        <section className="page-values" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
+        <section 
+          ref={strategicApproachRef}
+          className={`page-values ${isSectionVisible ? 'page-values--visible' : ''}`}
+          style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}
+        >
           <div className="container">
             <div className="page-values__header">
-              <h2 className="page-values__title">A Unified MSP Framework Built for the Modern Businesses</h2>
+              <h2 
+                className="page-values__title page-values__title--gradient"
+                style={{
+                  '--scroll-progress': scrollProgress,
+                } as React.CSSProperties}
+              >
+                A Unified MSP Framework Built for the Modern Businesses
+              </h2>
+              <h3 className={`page-values__subheading ${isSectionVisible ? 'page-values__subheading--reveal' : ''}`}>
+                Where Cyber, Data, Infrastructure, and AI work together, so your business runs smarter, safer, and faster.
+              </h3>
+              <p className={`page-values__description ${isSectionVisible ? 'page-values__description--reveal' : ''}`}>
+                Skysecure streamlines management, automates the routine, and turns data into decisions, so your team can focus on what matters.
+              </p>
             </div>
-            <div className="page-values__grid">
-              {STRATEGIC_APPROACH.map((approach, index) => (
-                <div key={index} className="page-value-card">
-                  <h2 className="page-value-card__title">{approach.h2}</h2>
-                  <p className="page-value-card__description">{approach.body}</p>
-                </div>
-              ))}
+          </div>
+        </section>
+
+        {/* The New Standard in Managed Services Section */}
+        <section className="managed-services-unified-framework-section">
+          <div className="container">
+            <div className="managed-services-unified-framework-content">
+              <h1 className="managed-services-unified-framework-title">
+                The New Standard in Managed Services.
+              </h1>
+              <h2 className="managed-services-unified-framework-subtitle">
+                Here's how Skysecure brings your technology together under one unified managed framework, delivering performance, visibility, and resilience across every layer of your business.
+              </h2>
+              <div className="magnetic-cards-3d-container">
+                {UNIFIED_FRAMEWORK_PILLARS.map((pillar, index) => (
+                  <MagneticCard3D
+                    key={index}
+                    title={pillar.title}
+                    description={pillar.description}
+                    keyPoints={pillar.keyPoints}
+                    index={index}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         <Testimonials />
-        
-        {/* Case Studies Table Section */}
-        <section className="managed-services-table-section">
-          <div className="container">
-            <div className="managed-services-table-wrapper">
-              <table className="managed-services-table">
-                <thead>
-                  <tr>
-                    <th className="managed-services-table-header">Client</th>
-                    <th className="managed-services-table-header">Challenge</th>
-                    <th className="managed-services-table-header">Skysecure Solution</th>
-                    <th className="managed-services-table-header">Outcome</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {CASE_STUDIES_TABLE.map((row, index) => (
-                    <tr key={index} className="managed-services-table-row">
-                      <td className="managed-services-table-cell managed-services-table-cell--client">
-                        {row.client}
-                      </td>
-                      <td className="managed-services-table-cell">
-                        {row.challenge}
-                      </td>
-                      <td className="managed-services-table-cell">
-                        {row.solution}
-                      </td>
-                      <td className="managed-services-table-cell managed-services-table-cell--outcome">
-                        {row.outcome}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
         
         {/* Continuous Intelligence Section */}
         <section className="page-innovation">
@@ -313,32 +362,6 @@ export function ManagedServices(): React.ReactElement {
                   We offer 24/7 monitoring to ensure your IT infrastructure remains secure, optimized, and fully operational at all times. Our proactive alerts and real-time response capabilities keep potential issues in check before they disrupt your workflow.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Comprehensive Security Solutions Section */}
-        <section className="page-features" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
-          <div className="container">
-            <div className="page-features__header">
-              <h2 className="page-features__title">Comprehensive Managed Services</h2>
-            </div>
-            <div className="page-features__grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              {COMPREHENSIVE_SOLUTIONS.map((solution, index) => (
-                <div key={index} className="page-feature-card">
-                  <div className="page-feature-card__icon">
-                    <ImagePlaceholder
-                      label={solution.title}
-                      imageName={`securitysolutions/${solution.icon}.png`}
-                      width={50}
-                      height={50}
-                      borderRadius={0}
-                    />
-                  </div>
-                  <h3 className="page-feature-card__title">{solution.title}</h3>
-                  <p className="page-feature-card__description">{solution.description}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>

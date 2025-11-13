@@ -115,32 +115,38 @@ const TEAM_MEMBERS = [
   {
     name: 'Agniputhran N M',
     title: 'President & CBO',
-    image: 'about/agniputhran-nm.JPG'
+    image: 'about/agniputhran-nm.JPG',
+    linkedinUrl: 'https://www.linkedin.com/in/agniputhran?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   },
   {
     name: 'Sneha Manjunath',
     title: 'Engineering Head',
-    image: 'about/sneha.png'
+    image: 'about/sneha.png',
+    linkedinUrl: 'https://www.linkedin.com/in/sneha-manjunath-0069a08a?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   },
   {
     name: 'Arvind Yadav',
     title: 'Cloud Business Lead',
-    image: 'about/arvind.jpg'
+    image: 'about/arvind.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/arvind-yadav-37925874?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   },
   {
     name: 'Rajat Tiwari',
     title: 'Head - Presales',
-    image: 'about/rajat.jpeg'
+    image: 'about/rajat.jpeg',
+    linkedinUrl: 'https://www.linkedin.com/in/rajat-tiwari-6b6b8a136?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   },
   {
     name: 'Vishal Thali',
     title: 'Head of Sales',
-    image: 'about/vishal.jfif'
+    image: 'about/vishal.jfif',
+    linkedinUrl: 'https://www.linkedin.com/in/vishal-thali-3552b826?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   },
   {
     name: 'Mona Kumari',
     title: 'Chief of Staff',
-    image: 'about/mona.jfif'
+    image: 'about/mona.jfif',
+    linkedinUrl: 'https://www.linkedin.com/in/mona-kumari-011767266?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   },
   {
     name: 'Ajay Gangadhar',
@@ -150,12 +156,14 @@ const TEAM_MEMBERS = [
   {
     name: 'Meenu PS',
     title: 'Business Analyst',
-    image: 'about/meenu.jpg'
+    image: 'about/meenu.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/meenu-p-s-b0a611204?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   },
   {
     name: 'Swathi Manikandan',
     title: 'Engineering Specialist - Lead',
-    image: 'about/swathi.jfif'
+    image: 'about/swathi.jfif',
+    linkedinUrl: 'https://www.linkedin.com/in/swathi-manikandan-093092281?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   }
 ];
 
@@ -242,7 +250,7 @@ export function About(): React.ReactElement {
                 What started in 2019 as a focused cybersecurity venture has evolved into one of India's most forward-thinking technology powerhouses. Today, Skysecure combines <strong>Cyber, Data, Infrastructure, and AI</strong> under one intelligent managed-services framework, simplifying how enterprises protect, scale, and automate their digital ecosystems.
                 </p>
                 <p className="about-hero-description-last">
-                 As we look ahead, our vision is clear: to shape the world’s most intelligent and secure managed-services platform, where innovation, trust, and automation define how businesses thrive.
+                As we look ahead, our vision is clear: To shape the world’s most intelligent and secure managed services platform, where innovation, trust, and automation define how businesses thrive.
                 </p>
               </div>
               {/* Right Visual */}
@@ -542,7 +550,18 @@ export function About(): React.ReactElement {
                     />
                   </div>
                   <h3 className="about-team-name">
-                    {member.name}
+                    {member.linkedinUrl ? (
+                      <a 
+                        href={member.linkedinUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="about-team-name-link"
+                      >
+                        {member.name}
+                      </a>
+                    ) : (
+                      member.name
+                    )}
                   </h3>
                   <p className="about-team-title">
                     {member.title}
@@ -567,7 +586,18 @@ export function About(): React.ReactElement {
                     />
                   </div>
                   <h3 className="about-team-name">
-                    {member.name}
+                    {member.linkedinUrl ? (
+                      <a 
+                        href={member.linkedinUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="about-team-name-link"
+                      >
+                        {member.name}
+                      </a>
+                    ) : (
+                      member.name
+                    )}
                   </h3>
                   <p className="about-team-title">
                     {member.title}
