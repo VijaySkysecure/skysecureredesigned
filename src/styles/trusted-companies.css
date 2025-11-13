@@ -44,6 +44,7 @@
   height: 60px;
   position: relative;
   padding: 0 8px;
+  cursor: pointer;
 }
 
 .company-logo-img {
