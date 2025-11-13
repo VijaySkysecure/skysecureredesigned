@@ -21,7 +21,7 @@ export function Leadership(): React.ReactElement {
       <div className="container">
         <SectionHeader
           title="The Visionaries Behind Skysecure"
-          description="Driven by a shared vision to simplify the complex, Skysecure’s founders are empowering businesses to secure, scale, and thrive in the digital age. With deep expertise across Cybersecurity, Data, Infrastructure, and AI, they’re shaping a future where technology feels effortless."
+          description="Guided by a shared mission to simplify the complex, Skysecure’s founders are redefining how businesses secure, scale, and thrive. With deep expertise across Cybersecurity, Data, Infrastructure, and AI, they’re making technology feel effortless."
         />
         <div className="profile-grid">
           {LEADERS.map((leader) => (

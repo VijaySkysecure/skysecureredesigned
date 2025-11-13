@@ -811,6 +811,300 @@ section {
   line-height: 1.4;
 }
 
+/* Connection Lines Base Styles */
+.global-impact-connection-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.global-impact-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+}
+
+.global-impact-line-horizontal {
+  height: 3px;
+  background: transparent;
+  transform: translateY(-50%) scaleX(0);
+  overflow: visible;
+}
+
+.global-impact-line-horizontal-reverse {
+  height: 3px;
+  background: transparent;
+  transform: translateY(-50%) scaleX(0);
+  overflow: visible;
+}
+
+.global-impact-line-vertical {
+  width: 3px;
+  background: transparent;
+  transform: translateX(-50%) scaleY(0);
+  overflow: visible;
+}
+
+.global-impact-line-vertical-reverse {
+  width: 3px;
+  background: transparent;
+  transform: translateX(-50%) scaleY(0);
+  overflow: visible;
+}
+
+.global-impact-line-path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #0A4EFF 2.5px, transparent 2.5px);
+  background-size: 16px 3px;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  opacity: 1;
+}
+
+.global-impact-line-vertical .global-impact-line-path {
+  background-image: radial-gradient(circle, #0A4EFF 2.5px, transparent 2.5px);
+  background-size: 3px 16px;
+  background-position: 0 0;
+  background-repeat: repeat-y;
+}
+
+.global-impact-line-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(219, 234, 254, 0.5);
+  box-shadow: 0 0 8px rgba(219, 234, 254, 0.8);
+  opacity: 0;
+}
+
+.global-impact-line-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #DBEAFE;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.global-impact-line-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #DBEAFE;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  box-shadow: 0 0 12px rgba(219, 234, 254, 1);
+}
+
+/* Line Positioning - Desktop */
+.global-impact-line-horizontal {
+  left: calc(50% + 100px);
+  width: calc(25% - 50px);
+  transform-origin: left center;
+}
+
+.global-impact-line-horizontal-reverse {
+  right: calc(50% + 100px);
+  width: calc(25% - 50px);
+  left: auto;
+  transform-origin: right center;
+}
+
+.global-impact-line-vertical {
+  top: calc(50% + 100px);
+  height: calc(25% - 120px);
+  transform: translateX(-50%);
+  transform-origin: center top;
+  max-height: calc(25% - 120px);
+}
+
+.global-impact-line-vertical-reverse {
+  bottom: calc(50% + 100px);
+  top: auto;
+  height: calc(25% - 120px);
+  transform: translateX(-50%);
+  transform-origin: center bottom;
+  max-height: calc(25% - 120px);
+}
+
+/* Animation Keyframes */
+@keyframes drawLineLeft {
+  from {
+    transform: translateY(-50%) scaleX(0);
+  }
+  to {
+    transform: translateY(-50%) scaleX(1);
+  }
+}
+
+@keyframes drawLineRight {
+  from {
+    transform: translateY(-50%) scaleX(0);
+  }
+  to {
+    transform: translateY(-50%) scaleX(1);
+  }
+}
+
+@keyframes drawLineTop {
+  from {
+    transform: translateX(-50%) scaleY(0);
+  }
+  to {
+    transform: translateX(-50%) scaleY(1);
+  }
+}
+
+@keyframes drawLineBottom {
+  from {
+    transform: translateX(-50%) scaleY(0);
+  }
+  to {
+    transform: translateX(-50%) scaleY(1);
+  }
+}
+
+@keyframes fadeInPath {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInGlow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDot {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes animateDotsHorizontal {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 16px 0;
+  }
+}
+
+@keyframes animateDotsVertical {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 16px;
+  }
+}
+
+/* Animated State */
+.global-impact-connection-lines.animate .global-impact-line-horizontal {
+  animation: drawLineLeft 1.2s ease-out forwards;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-horizontal-reverse {
+  animation: drawLineRight 1.2s ease-out 0.2s forwards;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-vertical {
+  animation: drawLineTop 1.2s ease-out 0.4s forwards;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-vertical-reverse {
+  animation: drawLineBottom 1.2s ease-out 0.6s forwards;
+}
+
+/* Seamless dot animation on horizontal lines */
+.global-impact-connection-lines.animate .global-impact-line-horizontal .global-impact-line-path {
+  animation: animateDotsHorizontal 0.8s linear infinite;
+  animation-delay: 1.2s;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-horizontal-reverse .global-impact-line-path {
+  animation: animateDotsHorizontal 0.8s linear infinite;
+  animation-delay: 1.4s;
+}
+
+/* Seamless dot animation on vertical lines */
+.global-impact-connection-lines.animate .global-impact-line-vertical .global-impact-line-path {
+  animation: animateDotsVertical 0.8s linear infinite;
+  animation-delay: 1.6s;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-vertical-reverse .global-impact-line-path {
+  animation: animateDotsVertical 0.8s linear infinite;
+  animation-delay: 1.8s;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-glow {
+  animation: fadeInGlow 0.8s ease-out 0.4s forwards;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-center {
+  animation: fadeInDot 0.4s ease-out 0.2s forwards;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-dot-1 {
+  animation: fadeInDot 0.4s ease-out 0.5s forwards;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-dot-2 {
+  animation: fadeInDot 0.4s ease-out 0.7s forwards;
+}
+
+.global-impact-connection-lines.animate .global-impact-line-dot-3 {
+  animation: fadeInDot 0.4s ease-out 0.9s forwards;
+}
+
+/* Dot Positioning */
+.global-impact-line-dot-left {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.global-impact-line-dot-right {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.global-impact-line-dot-top {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.global-impact-line-dot-bottom {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .global-impact-bottom-metrics {
   display: flex;
   justify-content: center;
@@ -3757,7 +4051,8 @@ section {
   }
 
   .header__submenu-link {
-    padding: 8px 20px !important;
+    padding: 8px 2px !important;
+    text-align: left !important;
   }
 }
 
@@ -4441,7 +4736,7 @@ footer section .container {
     box-shadow: none;
     padding: 0;
     margin-top: 0;
-    margin-left: 16px;
+    margin-left: 0;
     opacity: 1;
     pointer-events: auto;
     transform: none;
@@ -4460,6 +4755,7 @@ footer section .container {
   .header__submenu-link {
     padding: 12px 20px;
     font-size: 15px;
+    text-align: left;
   }
 
   .header__caret {
@@ -5065,7 +5361,7 @@ footer section .container {
     box-shadow: none;
     padding: 0;
     margin-top: 0;
-    margin-left: 16px;
+    margin-left: 0;
     opacity: 1;
     pointer-events: auto;
     transform: none;
@@ -5084,6 +5380,7 @@ footer section .container {
   .header__submenu-link {
     padding: 12px 20px;
     font-size: 15px;
+    text-align: left;
   }
 
   .header__caret {
@@ -5727,6 +6024,7 @@ footer section .container {
   .header__submenu-link {
     padding: 10px 16px;
     font-size: 14px;
+    text-align: left;
   }
 
   /* Strategic Vision cards - further reduce spacing for small mobile */
@@ -6083,46 +6381,53 @@ footer section .container {
     display: block !important;
   }
   
-  /* Left line - 2 dashes from center to left node */
-  .global-impact-connection-lines > div:first-child {
+  /* Mobile line positioning - Left line */
+  .global-impact-connection-lines .global-impact-line-horizontal {
     left: calc(50% + 10px) !important;
-    width: 20% !important;
-    background: repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
-    transform: translateX(-100%) translateY(-50%) !important;
+    width: 10% !important;
+    transform-origin: left center !important;
   }
   
-  /* Right line - 2 dashes from center to right node */
-  .global-impact-connection-lines::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    width: 20% !important;
-    height: 2px !important;
-    background: repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
-    transform: translateY(-50%) !important;
+  /* Mobile line positioning - Right line */
+  .global-impact-connection-lines .global-impact-line-horizontal-reverse {
+    right: calc(50% + 10px) !important;
+    left: auto !important;
+    width: 10% !important;
+    transform-origin: right center !important;
   }
   
-  /* Top line - 2 dashes from center to top node */
-  .global-impact-connection-lines::after {
-    content: '' !important;
-    position: absolute !important;
+  /* Mobile line positioning - Top line */
+  .global-impact-connection-lines .global-impact-line-vertical {
     top: calc(50% + 10px) !important;
-    left: 50% !important;
-    width: 2px !important;
-    height: 15% !important; /* Reduced to show only 2 dashes */
-    background: repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
-    transform: translateX(-50%) translateY(-100%) !important;
+    height: 8% !important;
+    max-height: 8% !important;
+    transform-origin: center top !important;
   }
   
-  /* Bottom line - 2 dashes from center to bottom node */
-  .global-impact-connection-lines > div:last-child {
-    top: 50% !important;
-    left: 50% !important;
-    width: 2px !important;
-    height: 20% !important;
-    background: repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
-    transform: translateX(-50%) !important;
+  /* Mobile line positioning - Bottom line */
+  .global-impact-connection-lines .global-impact-line-vertical-reverse {
+    bottom: calc(50% + 10px) !important;
+    top: auto !important;
+    height: 8% !important;
+    max-height: 8% !important;
+    transform-origin: center bottom !important;
+  }
+  
+  /* Ensure animations work on mobile */
+  .global-impact-connection-lines.animate .global-impact-line-horizontal {
+    animation: drawLineLeft 1.2s ease-out forwards !important;
+  }
+  
+  .global-impact-connection-lines.animate .global-impact-line-horizontal-reverse {
+    animation: drawLineRight 1.2s ease-out 0.2s forwards !important;
+  }
+  
+  .global-impact-connection-lines.animate .global-impact-line-vertical {
+    animation: drawLineTop 1.2s ease-out 0.4s forwards !important;
+  }
+  
+  .global-impact-connection-lines.animate .global-impact-line-vertical-reverse {
+    animation: drawLineBottom 1.2s ease-out 0.6s forwards !important;
   }
 
   .global-impact-top-row {
@@ -6337,46 +6642,53 @@ footer section .container {
     display: block !important;
   }
   
-  /* Left line - 2 dashes from center to left node */
-  .global-impact-connection-lines > div:first-child {
+  /* Small mobile line positioning - Left line */
+  .global-impact-connection-lines .global-impact-line-horizontal {
     left: calc(50% + 10px) !important;
-    width: 20% !important;
-    background: repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
-    transform: translateX(-100%) translateY(-50%) !important;
+    width: 10% !important;
+    transform-origin: left center !important;
   }
   
-  /* Right line - 2 dashes from center to right node */
-  .global-impact-connection-lines::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    width: 20% !important;
-    height: 2px !important;
-    background: repeating-linear-gradient(to right, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
-    transform: translateY(-50%) !important;
+  /* Small mobile line positioning - Right line */
+  .global-impact-connection-lines .global-impact-line-horizontal-reverse {
+    right: calc(50% + 10px) !important;
+    left: auto !important;
+    width: 10% !important;
+    transform-origin: right center !important;
   }
   
-  /* Top line - 2 dashes from center to top node */
-  .global-impact-connection-lines::after {
-    content: '' !important;
-    position: absolute !important;
+  /* Small mobile line positioning - Top line */
+  .global-impact-connection-lines .global-impact-line-vertical {
     top: calc(50% + 10px) !important;
-    left: 50% !important;
-    width: 2px !important;
-    height: 15% !important; /* Reduced to show only 2 dashes */
-    background: repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
-    transform: translateX(-50%) translateY(-100%) !important;
+    height: 8% !important;
+    max-height: 8% !important;
+    transform-origin: center top !important;
   }
   
-  /* Bottom line - 2 dashes from center to bottom node */
-  .global-impact-connection-lines > div:last-child {
-    top: 50% !important;
-    left: 50% !important;
-    width: 2px !important;
-    height: 20% !important;
-    background: repeating-linear-gradient(to bottom, #DBEAFE 0px, #DBEAFE 12px, transparent 12px, transparent 24px) !important;
-    transform: translateX(-50%) !important;
+  /* Small mobile line positioning - Bottom line */
+  .global-impact-connection-lines .global-impact-line-vertical-reverse {
+    bottom: calc(50% + 10px) !important;
+    top: auto !important;
+    height: 8% !important;
+    max-height: 8% !important;
+    transform-origin: center bottom !important;
+  }
+  
+  /* Ensure animations work on small mobile */
+  .global-impact-connection-lines.animate .global-impact-line-horizontal {
+    animation: drawLineLeft 1.2s ease-out forwards !important;
+  }
+  
+  .global-impact-connection-lines.animate .global-impact-line-horizontal-reverse {
+    animation: drawLineRight 1.2s ease-out 0.2s forwards !important;
+  }
+  
+  .global-impact-connection-lines.animate .global-impact-line-vertical {
+    animation: drawLineTop 1.2s ease-out 0.4s forwards !important;
+  }
+  
+  .global-impact-connection-lines.animate .global-impact-line-vertical-reverse {
+    animation: drawLineBottom 1.2s ease-out 0.6s forwards !important;
   }
 
   .global-impact-hub {
