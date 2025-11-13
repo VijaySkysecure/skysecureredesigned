@@ -1,9 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useCountUp } from '../hooks/useCountUp';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
-import { useCountUp } from '../hooks/useCountUp';
+import { getAllCustomerImages } from '../services/productService';
 import '../styles/professional-services.css';
+import '../styles/trusted-companies.css';
+
+interface Company {
+  _id?: string;
+  id?: number;
+  name?: string;
+  clientLogo?: string;
+}
+
+const fallbackCompanies: Company[] = [
+  { id: 1, name: 'Indegene' },
+  { id: 2, name: 'MTR' },
+  { id: 3, name: 'N' },
+  { id: 4, name: 'Protiviti' },
+  { id: 5, name: 'TMF Group' },
+];
 
 const STRATEGIC_APPROACH = [
   {
@@ -173,6 +190,29 @@ export function ProfessionalServices(): React.ReactElement {
   const animated50000 = useCountUp(50000, isMetricsVisible, 1500);
   const animated98 = useCountUp(98, isMetricsVisible, 1500);
   const animated10 = useCountUp(10, isMetricsVisible, 1500);
+  const [companiesLogo, setCompaniesLogo] = useState<Company[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchAllCustomerImages();
+  }, []);
+
+  const fetchAllCustomerImages = async () => {
+    try {
+      const response = await getAllCustomerImages();
+      if (response.success && response.data?.docs) {
+        setCompaniesLogo(response.data.docs);
+      } else {
+        console.warn("Failed to fetch customer images:", response.message);
+      }
+    } catch (error) {
+      console.error("Error fetching all customer images", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const displayCompanies = companiesLogo.length > 0 ? companiesLogo : fallbackCompanies;
 
   return (
     <>
@@ -227,7 +267,7 @@ export function ProfessionalServices(): React.ReactElement {
                       />
                     </div>
                     <div style={{ flex: 1 }}>
-                      <h3 className="page-value-card__title" style={{ marginBottom: '4px' }}>{approach.title}</h3>
+                      <h3 className="page-value-card__title" style={{ marginBottom: '4px', minHeight: '0px' }}>{approach.title}</h3>
                       <div style={{ fontSize: '12px', fontWeight: '600', color: 'rgba(37, 99, 235, 1)', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
                         {approach.subtitle}
                       </div>
@@ -309,42 +349,48 @@ export function ProfessionalServices(): React.ReactElement {
         </section>
 
         {/* Technology Ecosystem Section */}
-        <section className="page-innovation" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
+        <section className="trusted-companies-section professional-services-marquee">
           <div className="container">
-            <div className="tech-ecosystem-card">
-              <h3 className="tech-ecosystem-title">Authorized and certified implementation partner for leading technology ecosystems:</h3>
-              <div className="tech-ecosystem-carousel">
-                <div className="carousel-track">
-                  <div className="carousel-item">
-                    <ImagePlaceholder
-                      label="Technology ecosystem logos"
-                      imageName="homepage/tech-eco.png"
-                      width={800}
-                      height={120}
-                      borderRadius={0}
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <ImagePlaceholder
-                      label="Technology ecosystem logos"
-                      imageName="homepage/tech-eco.png"
-                      width={800}
-                      height={120}
-                      borderRadius={0}
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <ImagePlaceholder
-                      label="Technology ecosystem logos"
-                      imageName="homepage/tech-eco.png"
-                      width={800}
-                      height={120}
-                      borderRadius={0}
-                    />
-                  </div>
+            <h2 className="trusted-companies-title">Authorized and certified implementation partner for leading technology ecosystems:</h2>
+            {loading ? (
+              <div className="trusted-companies-skeleton">
+                {[...Array(5)].map((_, index) => (
+                  <div key={index} className="skeleton-logo"></div>
+                ))}
+              </div>
+            ) : (
+              <div className="trusted-companies-wrapper">
+                <div className="trusted-companies-marquee">
+                  {displayCompanies.map((company, index) => (
+                    <div 
+                      key={company._id || company.id || `company-${index}`} 
+                      className="trusted-company-logo"
+                    >
+                      <img
+                        src={company.clientLogo || "/icons/skysecure-logo.png"}
+                        alt={company.name || `Company ${index + 1}`}
+                        className="company-logo-img"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                  {/* Duplicate set for seamless looping */}
+                  {displayCompanies.map((company, index) => (
+                    <div 
+                      key={`duplicate-${company._id || company.id || index}`} 
+                      className="trusted-company-logo"
+                    >
+                      <img
+                        src={company.clientLogo || "/icons/skysecure-logo.png"}
+                        alt={company.name || `Company ${index + 1}`}
+                        className="company-logo-img"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            )}
             <div style={{ 
               textAlign: 'center', 
               marginTop: '48px', 
