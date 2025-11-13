@@ -74,6 +74,9 @@ export function AzureSentinelGuide(): React.ReactElement {
         {/* Article Header */}
         <section className="blog-header">
           <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <span style={{ backgroundColor: '#3B82F6', color: '#FFFFFF', padding: '4px 12px', borderRadius: '12px', fontSize: '12px', fontWeight: '500' }}>Blog</span>
+            </div>
             <h1 className="blog-title">Threat Protection with Microsoft Azure Sentinel</h1>
             <div className="blog-meta">
               <div className="blog-meta-item">

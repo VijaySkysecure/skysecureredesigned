@@ -3090,6 +3090,7 @@ section {
   justify-content: left;
   gap: 60px;
   margin-bottom: 32px;
+  margin-left: 100px;
 }
 
 .manufacturing-card {
@@ -3840,10 +3841,6 @@ section {
     height: auto !important;
   }
   
-  .blog-content {
-    padding: 40px 16px 80px !important;
-  }
-  
   .blog-content .container {
     padding: 0 !important;
     max-width: 100% !important;
@@ -3881,6 +3878,7 @@ section {
   .manufacturing-cards {
     gap: 24px !important;
     margin-bottom: 24px !important;
+    margin-left: 0 !important;
   }
   
   .manufacturing-card {
@@ -6991,18 +6989,15 @@ footer section .container {
     padding: 0 12px 30px !important;
   }
   
-  .blog-content {
-    padding: 30px 12px 60px !important;
-  }
-  
   .blog-section {
     padding: 0 12px !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 40px !important;
   }
   
   .blog-section-title {
     font-size: 20px !important;
     margin-bottom: 20px !important;
+    margin-top: 20px !important;
   }
   
   .blog-section-text {
@@ -7012,7 +7007,7 @@ footer section .container {
   .blog-intro {
     margin-bottom: 30px !important;
   }
-  
+
   .blog-intro p {
     font-size: 14px !important;
   }
