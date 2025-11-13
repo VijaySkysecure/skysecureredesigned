@@ -45,7 +45,7 @@ export function GlobalImpact(): React.ReactElement {
           Global Intelligence Dashboard
           </h2>
           <p className="global-impact-description">
-          Real-time intelligence and performance metrics from Skysecure’s AI-powered managed ecosystem across Cyber, Data, and Infrastructure, driving resilience, performance, and growth for everyday business operations.
+          Gain access to expert insights and practical strategies across Cybersecurity, Data, Infrastructure, and AI. By subscribing to our newsletter, you can get the latest insights delivered straight to your inbox. No noise, no commitments, unsubscribe anytime.
           </p>
         </div>
 
