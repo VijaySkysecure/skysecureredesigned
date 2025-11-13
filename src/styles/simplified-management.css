@@ -112,6 +112,24 @@
     grid-template-columns: repeat(3, 1fr) !important;
   }
 
+  /* Core Values Section - Tablet adjustments */
+  .simplified-management-page .page-values {
+    padding: 60px 0 !important;
+  }
+
+  .simplified-management-page .page-values__header {
+    margin-bottom: 48px !important;
+    padding: 0 20px;
+  }
+
+  .simplified-management-page .page-values__title {
+    font-size: 32px !important;
+  }
+
+  .simplified-management-page .page-values__subtitle {
+    font-size: 16px !important;
+  }
+
   .page-features {
     padding: 60px 0 !important;
   }
@@ -168,28 +186,57 @@
     padding: 0 20px;
   }
 
-  .page-values {
-    padding: 48px 0 !important;
+  /* Core Values Section - Tablet mobile */
+  .simplified-management-page .page-values {
+    padding: 50px 0 !important;
   }
 
-  .page-values__grid {
+  .simplified-management-page .page-values__header {
+    margin-bottom: 40px !important;
+    padding: 0 20px;
+  }
+
+  .simplified-management-page .page-values__title {
+    font-size: 28px !important;
+    margin-bottom: 12px !important;
+    padding: 0;
+  }
+
+  .simplified-management-page .page-values__subtitle {
+    font-size: 15px !important;
+    line-height: 1.5;
+    padding: 0;
+  }
+
+  .simplified-management-page .page-values__grid {
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    gap: 24px !important;
     padding: 0 20px;
   }
 
-  .page-values__title {
-    font-size: 32px !important;
-    padding: 0 20px;
+  .simplified-management-page .page-value-card {
+    padding: 28px 20px !important;
   }
 
-  .page-values__subtitle {
-    font-size: 16px !important;
-    padding: 0 20px;
+  .simplified-management-page .page-value-card__icon {
+    margin-bottom: 16px !important;
   }
 
-  .page-value-card {
-    padding: 24px 20px !important;
+  .simplified-management-page .page-value-card__icon .image-placeholder,
+  .simplified-management-page .page-value-card__icon img {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .simplified-management-page .page-value-card__title {
+    font-size: 18px !important;
+    min-height: 40px;
+  }
+
+  .simplified-management-page .page-value-card__description {
+    font-size: 14px !important;
+    line-height: 1.6;
+    text-align: center;
   }
 
   .page-innovation {
@@ -275,45 +322,63 @@
     padding: 0 20px;
   }
 
-  .page-values {
+  /* Core Values Section - Mobile */
+  .simplified-management-page .page-values {
     padding: 40px 0 !important;
   }
 
-  .page-values__header {
+  .simplified-management-page .page-values__header {
+    margin-bottom: 32px !important;
     padding: 0 20px;
-    margin-bottom: 32px;
   }
 
-  .page-values__grid {
+  .simplified-management-page .page-values__title {
+    font-size: 24px !important;
+    margin-bottom: 10px !important;
+    padding: 0;
+  }
+
+  .simplified-management-page .page-values__subtitle {
+    font-size: 14px !important;
+    line-height: 1.5;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .simplified-management-page .page-values__grid {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
     padding: 0 20px;
   }
 
-  .page-values__title {
-    font-size: 24px !important;
-    margin-bottom: 12px;
-  }
-
-  .page-values__subtitle {
-    font-size: 14px !important;
-  }
-
-  .page-value-card {
+  .simplified-management-page .page-value-card {
     padding: 24px 20px !important;
     text-align: center !important;
+    box-shadow: 0 4px 16px rgba(17, 24, 39, 0.1) !important;
   }
 
-  .page-value-card__icon {
+  .simplified-management-page .page-value-card__icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
   }
 
-  .page-value-card__icon .image-placeholder,
-  .page-value-card__icon img {
+  .simplified-management-page .page-value-card__icon .image-placeholder,
+  .simplified-management-page .page-value-card__icon img {
     width: 50px !important;
     height: 50px !important;
+  }
+
+  .simplified-management-page .page-value-card__title {
+    font-size: 17px !important;
+    margin-bottom: 10px !important;
+    min-height: 40px;
+  }
+
+  .simplified-management-page .page-value-card__description {
+    font-size: 13px !important;
+    line-height: 1.6;
+    text-align: center !important;
   }
 
   .page-innovation {
@@ -412,6 +477,59 @@
 
   .page-cta__description br {
     display: none;
+  }
+}
+
+/* Extra Small Mobile Devices (max-width: 360px) */
+@media (max-width: 360px) {
+  /* Core Values Section - Extra Small Mobile */
+  .simplified-management-page .page-values {
+    padding: 32px 0 !important;
+  }
+
+  .simplified-management-page .page-values__header {
+    margin-bottom: 28px !important;
+    padding: 0 16px;
+  }
+
+  .simplified-management-page .page-values__title {
+    font-size: 22px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .simplified-management-page .page-values__subtitle {
+    font-size: 13px !important;
+  }
+
+  .simplified-management-page .page-values__grid {
+    gap: 16px !important;
+    padding: 0 16px;
+  }
+
+  .simplified-management-page .page-value-card {
+    padding: 20px 16px !important;
+  }
+
+  .simplified-management-page .page-value-card__icon {
+    margin-bottom: 12px !important;
+  }
+
+  .simplified-management-page .page-value-card__icon .image-placeholder,
+  .simplified-management-page .page-value-card__icon img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .simplified-management-page .page-value-card__title {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+    min-height: 40px;
+  }
+
+  .simplified-management-page .page-value-card__description {
+    font-size: 12px !important;
+    line-height: 1.5;
+    text-align: center !important;
   }
 }
 
