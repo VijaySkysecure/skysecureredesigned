@@ -207,11 +207,21 @@
   .page-value-card__title {
     text-align: center !important;
     margin-bottom: 4px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .page-value-card > div:first-child > div:last-child {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   .page-value-card > div:first-child > div:last-child > div {
     text-align: center !important;
     margin-bottom: 12px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .page-value-card__description {
@@ -356,6 +366,39 @@
   .page-cta__content > div {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+  }
+}
+
+/* Skeleton loader styles for tech ecosystem carousel */
+.trusted-companies-skeleton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 24px 0;
+}
+
+.skeleton-logo {
+  width: 120px;
+  height: 60px;
+  background: linear-gradient(
+    90deg,
+    rgba(229, 231, 235, 0.4) 25%,
+    rgba(229, 231, 235, 0.6) 50%,
+    rgba(229, 231, 235, 0.4) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
   }
 }
 

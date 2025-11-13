@@ -2265,7 +2265,7 @@ section {
 .tech-ecosystem-marquee {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 48px;
   animation: marquee-scroll 15s linear infinite;
   will-change: transform;
 }
@@ -2283,7 +2283,13 @@ section {
   cursor: pointer;
 }
 
-.tech-logo-img {
+.tech-ecosystem-logo .image-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.tech-logo-img,
+.tech-ecosystem-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -2291,7 +2297,8 @@ section {
   transition: filter 0.3s ease;
 }
 
-.tech-ecosystem-logo:hover .tech-logo-img {
+.tech-ecosystem-logo:hover .tech-logo-img,
+.tech-ecosystem-logo:hover img {
   filter: grayscale(0%);
 }
 
@@ -4753,7 +4760,7 @@ footer section .container {
   }
 
   .tech-ecosystem-marquee {
-    gap: 24px;
+    gap: 56px;
   }
 
   .tech-ecosystem-logo {
@@ -5325,7 +5332,8 @@ footer section .container {
   }
 
   .tech-ecosystem-marquee {
-    gap: 12px;
+    gap: 32px;
+    animation: marquee-scroll-mobile 15s linear infinite;
   }
 
   .tech-ecosystem-logo {
@@ -5936,7 +5944,8 @@ footer section .container {
   }
 
   .tech-ecosystem-marquee {
-    gap: 12px;
+    gap: 32px;
+    animation: marquee-scroll-mobile 15s linear infinite;
   }
 
   .tech-ecosystem-logo {
