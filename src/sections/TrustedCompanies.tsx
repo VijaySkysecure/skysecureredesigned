@@ -60,7 +60,7 @@ export function TrustedCompanies(): React.ReactElement {
   return (
     <section className="trusted-companies-section">
       <div className="container">
-        <h2 className="trusted-companies-title">Trusted by Leading Enterprises</h2>
+        <h2 className="trusted-companies-title">Businesses that Use Skysecure’s MSP</h2>
         
         <div className="trusted-companies-wrapper">
           <div className="trusted-companies-marquee">

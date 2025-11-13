@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useCountUp } from '../hooks/useCountUp';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
@@ -121,6 +122,74 @@ const COMPREHENSIVE_SOLUTIONS = [
 ];
 
 export function ProfessionalServices(): React.ReactElement {
+  const trustMetricsRef = useRef<HTMLElement>(null);
+  const [isMetricsVisible, setIsMetricsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsMetricsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    if (trustMetricsRef.current) {
+      observer.observe(trustMetricsRef.current);
+    }
+
+    return () => {
+      if (trustMetricsRef.current) {
+        observer.unobserve(trustMetricsRef.current);
+      }
+    };
+  }, []);
+
+  // Parse stat values for animation
+  const parseStatValue = (value: string): { number: number; suffix: string; isText: boolean } => {
+    // Remove spaces and extract number and suffix
+    const cleanedValue = value.replace(/\s/g, '');
+    const match = cleanedValue.match(/^([\d,]+)(.*)$/);
+    if (match) {
+      const numberStr = match[1].replace(/,/g, '');
+      const suffix = match[2] || '';
+      return { number: parseFloat(numberStr), suffix, isText: false };
+    }
+    
+    return { number: 0, suffix: value, isText: true };
+  };
+
+  // Format animated value
+  const formatAnimatedValue = (value: number, originalValue: string): string => {
+    const parsed = parseStatValue(originalValue);
+    if (parsed.isText) {
+      return parsed.suffix;
+    }
+    
+    if (parsed.suffix === '%') {
+      return `${Math.floor(value)}%`;
+    } else if (parsed.suffix === '+') {
+      // Format with spaces for thousands (like "50 000+")
+      if (value >= 1000) {
+        const formatted = Math.floor(value).toLocaleString('en-US').replace(/,/g, ' ');
+        return `${formatted}+`;
+      }
+      return `${Math.floor(value)}+`;
+    }
+    
+    return `${Math.floor(value)}${parsed.suffix}`;
+  };
+
+  // Animated values
+  const animated500 = useCountUp(500, isMetricsVisible, 1500);
+  const animated50000 = useCountUp(50000, isMetricsVisible, 1500);
+  const animated98 = useCountUp(98, isMetricsVisible, 1500);
+  const animated10 = useCountUp(10, isMetricsVisible, 1500);
   const [companiesLogo, setCompaniesLogo] = useState<Company[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -222,7 +291,7 @@ export function ProfessionalServices(): React.ReactElement {
         </section>
 
         {/* Trusted by Businesses Section */}
-        <section className="page-innovation" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
+        <section ref={trustMetricsRef} className="page-innovation" style={{ backgroundColor: 'rgba(248, 250, 252, 1)' }}>
           <div className="container">
             <h2 className="page-values__title" style={{ textAlign: 'center', marginBottom: '48px' }}>
               Trusted by Businesses That Demand Performance
@@ -234,32 +303,47 @@ export function ProfessionalServices(): React.ReactElement {
               maxWidth: '1000px', 
               margin: '0 auto' 
             }}>
-              {TRUST_METRICS.map((metric, index) => (
-                <div key={index} style={{ 
-                  textAlign: 'center', 
-                  padding: '32px 24px',
-                  backgroundColor: 'var(--color-white)',
-                  borderRadius: '12px',
-                  boxShadow: '0 8px 32px rgba(17, 24, 39, 0.12)'
-                }}>
-                  <div style={{ 
-                    fontSize: '36px', 
-                    fontWeight: '700', 
-                    color: 'rgba(37, 99, 235, 1)', 
-                    marginBottom: '8px',
-                    lineHeight: '1.2'
+              {TRUST_METRICS.map((metric, index) => {
+                let animatedValue: string;
+                if (index === 0) {
+                  animatedValue = formatAnimatedValue(animated500, metric.number);
+                } else if (index === 1) {
+                  animatedValue = formatAnimatedValue(animated50000, metric.number);
+                } else if (index === 2) {
+                  animatedValue = formatAnimatedValue(animated98, metric.number);
+                } else if (index === 3) {
+                  animatedValue = formatAnimatedValue(animated10, metric.number);
+                } else {
+                  animatedValue = metric.number;
+                }
+
+                return (
+                  <div key={index} style={{ 
+                    textAlign: 'center', 
+                    padding: '32px 24px',
+                    backgroundColor: 'var(--color-white)',
+                    borderRadius: '12px',
+                    boxShadow: '0 8px 32px rgba(17, 24, 39, 0.12)'
                   }}>
-                    {metric.number}
+                    <div style={{ 
+                      fontSize: '36px', 
+                      fontWeight: '700', 
+                      color: 'rgba(37, 99, 235, 1)', 
+                      marginBottom: '8px',
+                      lineHeight: '1.2'
+                    }}>
+                      {animatedValue}
+                    </div>
+                    <div style={{ 
+                      fontSize: '14px', 
+                      color: '#64748b', 
+                      lineHeight: '1.5' 
+                    }}>
+                      {metric.description}
+                    </div>
                   </div>
-                  <div style={{ 
-                    fontSize: '14px', 
-                    color: '#64748b', 
-                    lineHeight: '1.5' 
-                  }}>
-                    {metric.description}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

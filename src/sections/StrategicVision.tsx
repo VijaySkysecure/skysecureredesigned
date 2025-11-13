@@ -44,9 +44,11 @@ export function StrategicVision(): React.ReactElement {
       <div className="container">
         <SectionHeader
           title="Why Leading Businesses Choose Skysecure — and You Should Too"
-          description="For one reason: we deliver measurable, transformative impact.
-          By combining Cybersecurity, Data, Infrastructure, and AI, we help organizations reduce costs, predict risks, accelerate performance, and scale with confidence. It’s the smarter, more secure way to grow."
+          description="Because we deliver real, measurable impact. With Cybersecurity, Data, Infrastructure, and AI, under one roof, we help you cut costs, predict risks, and scale with confidence"
         />
+        <p className="section-header__description" style={{ marginTop: '1px', fontWeight: '700', textAlign: 'center', marginBottom: '16px' }}>
+          "It's the Smarter, More Secure Way to Grow"
+        </p>
         <div className="card-grid">
           {VISION_CARDS.map((card) => (
             <div key={card.title} className="card">

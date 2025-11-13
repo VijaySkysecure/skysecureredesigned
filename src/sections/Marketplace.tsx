@@ -16,7 +16,7 @@ export function MarketplaceSection(): React.ReactElement {
           <h2 className="marketplace-heading">Marketplace</h2>
           <h3 className="marketplace-subheading">Find the Right Solutions for Your Business.</h3>
           <p className="marketplace-description">
-            Discover a curated marketplace built for modern enterprises where you can find, compare, and procure trusted technology solutions, all in one place. From innovative software and high-performance hardware to scalable cloud services, every offering is curated, verified, and ready to help your business innovate faster and operate smarter.
+          Discover a curated marketplace built for modern enterprises where you can find, compare, and procure trusted technology solutions, all in one place. Every offering is curated, verified, and ready to help your business innovate faster and operate smarter.
           </p>
           
           <div className="marketplace-features">
