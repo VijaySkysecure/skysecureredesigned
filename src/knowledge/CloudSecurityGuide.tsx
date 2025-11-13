@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../sections/Header';
 import { Footer } from '../sections/Footer';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
+import '../styles/knowledge/cloud-security-guide.css';
 
 const CLOUD_CHALLENGES = [
   {
@@ -219,13 +220,13 @@ export function CloudSecurityGuide(): React.ReactElement {
 
             {/* The Rapid Growth of Cloud Adoption */}
             <section className="blog-section">
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '40px', marginBottom: '32px', maxWidth: '900px', margin: '0 auto 32px auto' }}>
-                <div style={{ width: '500px' }}>
+              <div className="cloud-security-growth-wrapper" style={{ display: 'flex', alignItems: 'flex-start', gap: '40px', marginBottom: '32px', maxWidth: '900px', margin: '0 auto 32px auto' }}>
+                <div className="cloud-security-growth-content" style={{ width: '500px' }}>
                   <h2 className="blog-section-title" style={{ marginBottom: '20px', marginTop: '-35px' }}>The Rapid Growth of Cloud Adoption</h2>
                   <p className="blog-section-text">
                   Cloud computing has transformed the way organizations operate, offering unprecedented scalability, flexibility, and cost-efficiency. However, this rapid adoption has also introduced new security challenges that traditional security models cannot adequately address. As businesses increasingly rely on multi-cloud environments, the need for comprehensive cloud security strategies has become more critical than ever.
                   </p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '24px' }}>
+                  <div className="cloud-security-growth-stat" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '24px' }}>
                     <ImagePlaceholder
                       label="Cloud Icon"
                       imageName="knowledge/icon-cloud.png"
@@ -236,7 +237,7 @@ export function CloudSecurityGuide(): React.ReactElement {
                     <span style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b' }}>85% of enterprises use multi-cloud</span>
                   </div>
                 </div>
-                <div style={{ flexShrink: 0 }}>
+                <div className="cloud-security-growth-image" style={{ flexShrink: 0 }}>
                   <ImagePlaceholder
                     label="Cloud Growth Chart"
                     imageName="knowledge/cloud-growth-chart.png"
@@ -254,9 +255,9 @@ export function CloudSecurityGuide(): React.ReactElement {
               <p style={{ textAlign: 'center', fontSize: '16px', color: '#64748b', marginBottom: '40px', maxWidth: '800px', margin: '-10px auto 40px auto' }}>
               Understanding the key security risks that organizations face in today's cloud-first world
               </p>
-               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
+               <div className="cloud-security-challenges-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
                  {CLOUD_CHALLENGES.map((challenge, index) => (
-                   <div key={index} style={{ backgroundColor: '#FFFFFF', padding: '24px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
+                   <div key={index} className="cloud-security-challenge-card" style={{ backgroundColor: '#FFFFFF', padding: '24px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
                        <div style={{ width: '31px', height: '39px', backgroundColor: '#F1F5F9', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                          <ImagePlaceholder
@@ -279,14 +280,14 @@ export function CloudSecurityGuide(): React.ReactElement {
             </section>
 
             {/* Technologies Redefining Cloud Security */}
-            <section className="blog-section" style={{ background: 'linear-gradient(135deg, #F9FAFB 0%, #EFF6FF 70.71%)', padding: '60px 0', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginBottom: '30px' }}>
+            <section className="blog-section cloud-security-technologies-section" style={{ background: 'linear-gradient(135deg, #F9FAFB 0%, #EFF6FF 70.71%)', padding: '60px 0', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginBottom: '30px' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Technologies Redefining Cloud Security</h2>
               <p style={{ textAlign: 'center', fontSize: '16px', color: '#64748b', marginBottom: '40px', maxWidth: '1000px', margin: '0 auto 40px auto' }}>
               The future of cloud security is shaped by automation, AI, and adaptive defense mechanisms. These technologies enable faster detection, intelligent response, and predictive protection, helping organizations stay ahead of sophisticated cyber threats.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '18px', maxWidth: '1100px', margin: '0 auto' }}>
+              <div className="cloud-security-technologies-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '18px', maxWidth: '1100px', margin: '0 auto' }}>
                 {CLOUD_TECHNOLOGIES.map((technology, index) => (
-                  <div key={index} className="technology-card" style={{ backgroundColor: '#FFFFFF', padding: '24px', borderRadius: '12px', boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', transition: 'all 0.3s ease', cursor: 'pointer' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0px 8px 24px rgba(0, 0, 0, 0.15)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0px 4px 12px rgba(0, 0, 0, 0.1)'; }}>
+                  <div key={index} className="technology-card cloud-security-technology-card" style={{ backgroundColor: '#FFFFFF', padding: '24px', borderRadius: '12px', boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', transition: 'all 0.3s ease', cursor: 'pointer' }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0px 8px 24px rgba(0, 0, 0, 0.15)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0px 4px 12px rgba(0, 0, 0, 0.1)'; }}>
                     <div style={{ width: '61px', height: '67px', backgroundColor: '#EFF6FF', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
                       <ImagePlaceholder
                         label={technology.title}
@@ -304,15 +305,15 @@ export function CloudSecurityGuide(): React.ReactElement {
             </section>
 
             {/* Cloud Security Best Practices for the Future */}
-            <section className="blog-section" style={{ marginLeft: '0', margin: '0 auto 30px auto', maxWidth: '1000px' }}>
+            <section className="blog-section cloud-security-practices-section" style={{ marginLeft: '0', margin: '0 auto 30px auto', maxWidth: '1000px' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Cloud Security Best Practices for the Future</h2>
               <p style={{ textAlign: 'center', fontSize: '16px', color: '#64748b', marginBottom: '40px', maxWidth: '1000px', margin: '0 auto 40px auto' }}>
               To build resilient and secure cloud ecosystems, organizations should adopt a proactive and integrated approach to security management.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
+              <div className="cloud-security-practices-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', maxWidth: '1200px', margin: '0 auto' }}>
                 {CLOUD_BEST_PRACTICES.map((practice, index) => (
-                  <div key={index} style={{ backgroundColor: '#FFFFFF', padding: '24px', borderRadius: '12px', boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', position: 'relative' }}>
-                    <div style={{ position: 'absolute', bottom: '12px', left: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div key={index} className="cloud-security-practice-card" style={{ backgroundColor: '#FFFFFF', padding: '24px', borderRadius: '12px', boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', position: 'relative' }}>
+                    <div className="cloud-security-practice-tag" style={{ position: 'absolute', bottom: '12px', left: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <div style={{ width: '20px', height: '20px', backgroundColor: practice.tagColor, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <span style={{ color: '#FFFFFF', fontSize: '12px', fontWeight: 'bold' }}>✓</span>
                       </div>
@@ -337,14 +338,14 @@ export function CloudSecurityGuide(): React.ReactElement {
             </section>
 
             {/* Implementation Success Rate Statistics */}
-            <section className="blog-section" style={{ marginLeft: '0', margin: '-150px auto 30px auto', maxWidth: '1000px' }}>
-              <div style={{ background: 'linear-gradient(90deg, #F9FAFB 0%, #EFF6FF 100%)', height: '200px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+            <section className="blog-section cloud-security-stats-section" style={{ marginLeft: '0', margin: '-150px auto 30px auto', maxWidth: '1000px' }}>
+              <div className="cloud-security-stats-wrapper" style={{ background: 'linear-gradient(90deg, #F9FAFB 0%, #EFF6FF 100%)', height: '200px', borderRadius: '12px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
                 <h2 className="blog-section-title" style={{ textAlign: 'center', marginBottom: '20px' }}>Implementation Success Rate</h2>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '140px' }}>
+                <div className="cloud-security-stats-grid" style={{ display: 'flex', justifyContent: 'center', gap: '140px' }}>
                   {SUCCESS_STATISTICS.map((stat, index) => (
-                    <div key={index} style={{ textAlign: 'center' }}>
-                      <div style={{ fontSize: '36px', fontWeight: '700', color: 'rgba(10, 78, 255, 1)', marginBottom: '8px' }}>{stat.percentage}</div>
-                      <div style={{ fontSize: '16px', color: '#64748b' }}>{stat.label}</div>
+                    <div key={index} className="cloud-security-stat-item" style={{ textAlign: 'center' }}>
+                      <div className="cloud-security-stat-percentage" style={{ fontSize: '36px', fontWeight: '700', color: 'rgba(10, 78, 255, 1)', marginBottom: '8px' }}>{stat.percentage}</div>
+                      <div className="cloud-security-stat-label" style={{ fontSize: '16px', color: '#64748b' }}>{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -352,9 +353,9 @@ export function CloudSecurityGuide(): React.ReactElement {
             </section>
 
             {/* The Role of AI in Cloud Security */}
-            <section className="blog-section" style={{ backgroundColor: '#F9FAFB', padding: '60px 0', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginBottom: '30px' }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', marginBottom: '32px', maxWidth: '1120px', margin: '0 auto 32px auto', justifyContent: 'center' }}>
-                <div style={{ flexShrink: 0 }}>
+            <section className="blog-section cloud-security-ai-section" style={{ backgroundColor: '#F9FAFB', padding: '60px 0', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginBottom: '30px' }}>
+              <div className="cloud-security-ai-wrapper" style={{ display: 'flex', alignItems: 'flex-start', gap: '60px', marginBottom: '32px', maxWidth: '1120px', margin: '0 auto 32px auto', justifyContent: 'center' }}>
+                <div className="cloud-security-ai-image" style={{ flexShrink: 0 }}>
                   <ImagePlaceholder
                     label="AI Dashboard"
                     imageName="knowledge/ai-dashboard.png"
@@ -363,16 +364,16 @@ export function CloudSecurityGuide(): React.ReactElement {
                     borderRadius={12}
                   />
                 </div>
-                <div style={{ width: '600px' }}>
+                <div className="cloud-security-ai-content" style={{ width: '600px' }}>
                   <h2 className="blog-section-title" style={{ marginBottom: '16px', marginTop: '0' }}>The Role of AI in Cloud Security</h2>
                   <p className="blog-section-text" style={{ marginBottom: '24px' }}>
                   AI and machine learning are redefining how security teams identify and mitigate threats. By leveraging predictive analytics and behavioral modeling, organizations can detect anomalies faster and prevent attacks before they occur. AI-powered security operations centers (SOCs) are becoming a cornerstone of the modern cloud security landscape.
                   </p>
-                  <div style={{ display: 'flex', gap: '90px', marginTop: '24px', marginLeft: '30px'}}>
+                  <div className="cloud-security-ai-stats" style={{ display: 'flex', gap: '90px', marginTop: '24px', marginLeft: '30px'}}>
                     {AI_STATISTICS.map((stat, index) => (
-                      <div key={index} style={{ textAlign: 'center' }}>
-                        <div style={{ fontSize: '40px', fontWeight: '700', color: 'rgba(10, 78, 255, 1)', marginBottom: '8px' }}>{stat.percentage}</div>
-                        <div style={{ fontSize: '16px', color: '#64748b' }}>{stat.label}</div>
+                      <div key={index} className="cloud-security-ai-stat-item" style={{ textAlign: 'center' }}>
+                        <div className="cloud-security-ai-stat-percentage" style={{ fontSize: '40px', fontWeight: '700', color: 'rgba(10, 78, 255, 1)', marginBottom: '8px' }}>{stat.percentage}</div>
+                        <div className="cloud-security-ai-stat-label" style={{ fontSize: '16px', color: '#64748b' }}>{stat.label}</div>
                       </div>
                     ))}
                   </div>
@@ -381,12 +382,12 @@ export function CloudSecurityGuide(): React.ReactElement {
             </section>
 
             {/* Looking Ahead */}
-            <section className="blog-section" style={{ marginLeft: '0', margin: '0 auto 30px auto', maxWidth: '1000px' }}>
+            <section className="blog-section cloud-security-cta-section" style={{ marginLeft: '0', margin: '0 auto 30px auto', maxWidth: '1000px' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Looking Ahead</h2>
               <p className="blog-section-text" style={{ textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px auto' }}>
               The cloud will continue to evolve as the foundation of enterprise IT. To secure the future, organizations must embrace intelligent automation, Zero Trust frameworks, and continuous innovation in cybersecurity. The next decade will define how effectively businesses can balance agility with security in a rapidly changing digital ecosystem.
               </p>
-              <div style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '40px', borderRadius: '16px', textAlign: 'center', maxWidth: '780px', margin: '0 auto' }}>
+              <div className="cloud-security-cta-wrapper" style={{ backgroundColor: 'rgba(10, 78, 255, 1)', padding: '40px', borderRadius: '16px', textAlign: 'center', maxWidth: '780px', margin: '0 auto' }}>
                 <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', margin: '0 0 16px 0' }}>Ready to Secure Your Cloud Future?</h3>
                 <p style={{ fontSize: '16px', color: '#FFFFFF', margin: '0 0 0 0', opacity: 0.9 }}>
                 At Skysecure, we help businesses navigate this transformation with scalable, intelligent cloud security solutions that protect your operations today and prepare you for tomorrow.
@@ -395,8 +396,8 @@ export function CloudSecurityGuide(): React.ReactElement {
             </section>
 
             {/* Author Bio */}
-            <section className="author-bio" style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginTop: '-50px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '50px 0', backgroundColor: '#F3F4F6' }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', maxWidth: '850px', margin: '0 auto', marginLeft: '250px',width: '100%' }}>
+            <section className="author-bio cloud-security-author-section" style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginTop: '-50px', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '50px 0', backgroundColor: '#F3F4F6' }}>
+              <div className="cloud-security-author-wrapper" style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', maxWidth: '850px', margin: '0 auto', marginLeft: '250px',width: '100%' }}>
               <div className="author-bio__image" style={{ flexShrink: 0 }}>
                 <ImagePlaceholder
                   label="Suresh Kumar"

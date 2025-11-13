@@ -1,0 +1,572 @@
+/* Cloud Security Guide - Mobile Responsive Styles */
+/* All styles in this file only apply on mobile devices and do not affect desktop */
+/* All class names are prefixed with 'cloud-security-' to ensure no conflicts with other pages */
+
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Rapid Growth Section - Flex to Column */
+  .cloud-security-growth-wrapper {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 0 16px !important;
+  }
+
+  .cloud-security-growth-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .cloud-security-growth-image {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .cloud-security-growth-image img,
+  .cloud-security-growth-image .image-placeholder {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Challenges Grid - 3 columns to 2 columns */
+  .cloud-security-challenges-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    padding: 0 16px !important;
+  }
+
+  /* Technologies Grid - 3 columns to 2 columns */
+  .cloud-security-technologies-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 0 16px !important;
+  }
+
+  /* Best Practices Grid - 3 columns to 2 columns */
+  .cloud-security-practices-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    padding: 0 16px !important;
+  }
+
+  /* Success Rate Statistics - Reduce gap */
+  .cloud-security-stats-grid {
+    gap: 60px !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* AI Role Section - Flex to Column */
+  .cloud-security-ai-wrapper {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 0 16px !important;
+  }
+
+  .cloud-security-ai-image {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .cloud-security-ai-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .cloud-security-ai-image img,
+  .cloud-security-ai-image .image-placeholder {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* AI Statistics - Reduce gap */
+  .cloud-security-ai-stats {
+    gap: 40px !important;
+    margin-left: 0 !important;
+    justify-content: center !important;
+  }
+
+  /* Author Bio - Adjust margin */
+  .cloud-security-author-wrapper {
+    margin-left: auto !important;
+    padding: 0 16px !important;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Breadcrumbs */
+  .blog-breadcrumbs .container {
+    padding: 0 16px !important;
+  }
+
+  .breadcrumbs {
+    font-size: 12px !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  /* Blog Header */
+  .blog-header {
+    padding: 30px 16px !important;
+  }
+
+  .blog-title {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    padding: 0 !important;
+  }
+
+  .blog-meta {
+    flex-direction: column !important;
+    gap: 12px !important;
+    font-size: 14px !important;
+  }
+
+  /* Hero Image */
+  .blog-hero .container {
+    padding: 0 16px !important;
+  }
+
+  .blog-hero img,
+  .blog-hero .image-placeholder {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Blog Content */
+  .blog-content {
+    padding: 40px 16px 60px !important;
+  }
+
+  .blog-content .container {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Blog Intro */
+  .blog-intro {
+    margin-bottom: 32px !important;
+  }
+
+  .blog-intro p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+  }
+
+  /* Blog Section */
+  .blog-section {
+    margin-left: 0 !important;
+    margin-bottom: 40px !important;
+    padding: 0 16px !important;
+  }
+
+  .blog-section-title {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+
+  .blog-section-text {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+  }
+
+  /* Rapid Growth Section */
+  .cloud-security-growth-wrapper {
+    margin: 0 auto 40px auto !important;
+    gap: 20px !important;
+  }
+
+  .cloud-security-growth-content > h2 {
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+    text-align: center !important;
+  }
+
+  .cloud-security-growth-stat {
+    justify-content: center !important;
+    margin-top: 16px !important;
+  }
+
+  .cloud-security-growth-stat span {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Challenges Grid - 2 columns to 1 column */
+  .cloud-security-challenges-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .cloud-security-challenge-card {
+    padding: 20px !important;
+  }
+
+  /* Technologies Section - Full width background adjustment */
+  .cloud-security-technologies-section {
+    padding: 40px 0 !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+  }
+
+  .cloud-security-technologies-section > h2 {
+    padding: 0 16px !important;
+  }
+
+  .cloud-security-technologies-section > p {
+    padding: 0 16px !important;
+  }
+
+  /* Technologies Grid - 2 columns to 1 column */
+  .cloud-security-technologies-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 0 16px !important;
+  }
+
+  .cloud-security-technology-card {
+    padding: 20px !important;
+  }
+
+  /* Best Practices Grid - 2 columns to 1 column */
+  .cloud-security-practices-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .cloud-security-practice-card {
+    padding: 20px !important;
+    min-height: auto !important;
+    padding-bottom: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .cloud-security-practice-card > div:first-child {
+    order: 4 !important;
+  }
+
+  .cloud-security-practice-card > div:nth-child(2) {
+    order: 1 !important;
+  }
+
+  .cloud-security-practice-card > h3 {
+    order: 2 !important;
+  }
+
+  .cloud-security-practice-card > p {
+    margin-bottom: 16px !important;
+    order: 3 !important;
+  }
+
+  .cloud-security-practice-tag {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    order: 4 !important;
+  }
+
+  /* Success Rate Statistics */
+  .cloud-security-stats-section {
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+  }
+
+  .cloud-security-stats-wrapper {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 30px 16px !important;
+    margin: 0 auto 40px auto !important;
+  }
+
+  .cloud-security-stats-wrapper > h2 {
+    font-size: 20px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .cloud-security-stats-grid {
+    gap: 20px !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .cloud-security-stat-item {
+    min-width: auto !important;
+    width: 100% !important;
+    max-width: 200px !important;
+  }
+
+  .cloud-security-stat-percentage {
+    font-size: 28px !important;
+  }
+
+  .cloud-security-stat-label {
+    font-size: 14px !important;
+  }
+
+  /* AI Role Section */
+  .cloud-security-ai-section {
+    padding: 40px 0 !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+  }
+
+  .cloud-security-ai-wrapper {
+    padding: 0 16px !important;
+    gap: 20px !important;
+  }
+
+  .cloud-security-ai-content > h2 {
+    text-align: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  .cloud-security-ai-content > p {
+    text-align: center !important;
+  }
+
+  .cloud-security-ai-stats {
+    gap: 30px !important;
+    margin-left: 0 !important;
+    margin-top: 20px !important;
+    justify-content: center !important;
+  }
+
+  .cloud-security-ai-stat-percentage {
+    font-size: 32px !important;
+  }
+
+  .cloud-security-ai-stat-label {
+    font-size: 14px !important;
+  }
+
+  /* Looking Ahead Section */
+  .cloud-security-cta-wrapper {
+    padding: 30px 20px !important;
+    margin: 0 auto 40px auto !important;
+  }
+
+  .cloud-security-cta-wrapper > h3 {
+    font-size: 20px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .cloud-security-cta-wrapper > p {
+    font-size: 14px !important;
+  }
+  
+
+  /* Author Bio */
+  .cloud-security-author-section {
+    padding: 40px 16px !important;
+    margin-top: 40px !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+  }
+
+  .cloud-security-author-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+  }
+
+  .author-bio__image {
+    margin-bottom: 0 !important;
+  }
+
+  .author-bio__content {
+    text-align: center !important;
+  }
+
+  .author-name {
+    text-align: center !important;
+  }
+
+  .author-title {
+    text-align: center !important;
+  }
+
+  .author-description {
+    text-align: center !important;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Override global.css rule for Technologies section */
+  .blog-section.cloud-security-technologies-section[style*="background"] {
+    padding: 20px 0 !important;
+    margin: 0 0 30px !important;
+  }
+
+  .cloud-security-technologies-section[style*="background"] {
+    padding: 20px 0 !important;
+    margin: 0 0 30px !important;
+  }
+
+  /* Blog Title */
+  .blog-title {
+    font-size: 24px !important;
+  }
+
+  /* Blog Meta */
+  .blog-meta {
+    font-size: 12px !important;
+  }
+
+  /* Blog Section Title */
+  .blog-section-title {
+    font-size: 20px !important;
+  }
+
+  /* Growth Stat Text */
+  .cloud-security-growth-stat span {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Challenges Grid Cards */
+  .cloud-security-challenge-card {
+    padding: 16px !important;
+  }
+
+  .cloud-security-challenge-card > h3 {
+    font-size: 16px !important;
+  }
+
+  .cloud-security-challenge-card > p {
+    font-size: 13px !important;
+  }
+
+  /* Technologies Grid Cards */
+  .cloud-security-technology-card {
+    padding: 16px !important;
+  }
+
+  .cloud-security-technology-card > h3 {
+    font-size: 16px !important;
+  }
+
+  .cloud-security-technology-card > p {
+    font-size: 13px !important;
+  }
+
+  /* Best Practices Grid Cards */
+  .cloud-security-practice-card {
+    padding: 16px !important;
+    padding-bottom: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .cloud-security-practice-card > div:first-child {
+    order: 4 !important;
+  }
+
+  .cloud-security-practice-card > div:nth-child(2) {
+    order: 1 !important;
+  }
+
+  .cloud-security-practice-card > h3 {
+    font-size: 16px !important;
+    order: 2 !important;
+  }
+
+  .cloud-security-practice-card > p {
+    font-size: 13px !important;
+    margin-bottom: 12px !important;
+    order: 3 !important;
+  }
+
+  .cloud-security-practice-tag {
+    margin-top: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    order: 4 !important;
+  }
+
+  /* Success Rate Statistics */
+  .cloud-security-stat-item {
+    min-width: auto !important;
+    width: 100% !important;
+    max-width: 200px !important;
+  }
+
+  .cloud-security-stat-percentage {
+    font-size: 24px !important;
+  }
+
+  .cloud-security-stat-label {
+    font-size: 12px !important;
+  }
+
+  /* AI Statistics */
+  .cloud-security-ai-stats {
+    gap: 20px !important;
+    flex-direction: column !important;
+  }
+
+  .cloud-security-ai-stat-percentage {
+    font-size: 28px !important;
+  }
+
+  /* Looking Ahead CTA */
+  .cloud-security-cta-wrapper {
+    padding: 24px 16px !important;
+  }
+
+  .cloud-security-cta-wrapper > h3 {
+    font-size: 18px !important;
+  }
+
+  .cloud-security-cta-wrapper > p {
+    font-size: 13px !important;
+  }
+
+  /* Author Bio */
+  .cloud-security-author-section {
+    padding: 30px 16px !important;
+  }
+
+  .author-bio__image img,
+  .author-bio__image .image-placeholder {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .author-name {
+    font-size: 16px !important;
+  }
+
+  .author-title {
+    font-size: 12px !important;
+  }
+
+  .author-description {
+    font-size: 13px !important;
+  }
+}
