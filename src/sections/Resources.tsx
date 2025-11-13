@@ -247,9 +247,12 @@ export function Resources(): React.ReactElement {
     <section className="section--light" id="insights">
       <div className="container">
         <SectionHeader
-          title="Skysecure’s Intelligence Hub"
-          description="Gain access to expert insights and practical strategies across Cybersecurity, Data, Infrastructure, and AI. By subscribing to our newsletter, you can get the latest insights delivered straight to your inbox. No noise, no commitments, unsubscribe anytime."
+          title="Skysecure's Intelligence Hub"
+          description="Gain access to expert insights and practical strategies across Cybersecurity, Data, Infrastructure, and AI."
         />
+        <p className="section-header__description" style={{ marginTop: '1px', textAlign: 'center' }}>
+          By subscribing to our newsletter, you can get the latest insights delivered straight to your inbox. No noise, no commitments, unsubscribe anytime.
+        </p>
         
         {/* Filter Toggle Bar */}
         <div className="resource-filters">

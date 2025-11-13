@@ -55,7 +55,7 @@ export function WhatWeDo(): React.ReactElement {
       <div className="container">
         <SectionHeader
           title="Your Entire IT, Managed Intelligently"
-          description="Skysecure helps you do more with less, fewer vendors, fewer tools, more outcomes. Our unified MSP model automates operations, reduces downtime, and delivers measurable efficiency across your entire IT ecosystem."
+          description="Do more with less! Fewer vendors, fewer tools, more outcomes. Our unified MSP model automates operations, reduces downtime, and delivers measurable efficiency across your entire IT ecosystem."
         />
         <div 
           className="what-we-do-grid"
