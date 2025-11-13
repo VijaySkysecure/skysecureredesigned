@@ -70,6 +70,24 @@
   .solution-implementation-page .page-values__grid {
     grid-template-columns: repeat(3, 1fr) !important;
   }
+
+  /* Core Values Section - Tablet adjustments */
+  .solution-implementation-page .page-values {
+    padding: 60px 0 !important;
+  }
+
+  .solution-implementation-page .page-values__header {
+    margin-bottom: 48px !important;
+    padding: 0 20px;
+  }
+
+  .solution-implementation-page .page-values__title {
+    font-size: 32px !important;
+  }
+
+  .solution-implementation-page .page-values__subtitle {
+    font-size: 16px !important;
+  }
 }
 
 /* Tablet - Medium screens (max-width: 768px) */
@@ -84,6 +102,57 @@
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 24px !important;
     padding: 0 20px;
+  }
+
+  /* Core Values Section - Tablet mobile */
+  .solution-implementation-page .page-values {
+    padding: 50px 0 !important;
+  }
+
+  .solution-implementation-page .page-values__header {
+    margin-bottom: 40px !important;
+    padding: 0 20px;
+  }
+
+  .solution-implementation-page .page-values__title {
+    font-size: 28px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .solution-implementation-page .page-values__subtitle {
+    font-size: 15px !important;
+    line-height: 1.5;
+  }
+
+  .solution-implementation-page .page-values__grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 0 20px;
+  }
+
+  .solution-implementation-page .page-value-card {
+    padding: 28px 20px !important;
+  }
+
+  .solution-implementation-page .page-value-card__icon {
+    margin-bottom: 16px !important;
+  }
+
+  .solution-implementation-page .page-value-card__icon .image-placeholder,
+  .solution-implementation-page .page-value-card__icon img {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .solution-implementation-page .page-value-card__title {
+    font-size: 18px !important;
+    min-height: 40px;
+  }
+
+  .solution-implementation-page .page-value-card__description {
+    font-size: 14px !important;
+    line-height: 1.6;
+    text-align: center;
   }
 }
 
@@ -123,40 +192,63 @@
     padding: 0 20px;
   }
 
-  .page-values {
+  /* Core Values Section - Mobile */
+  .solution-implementation-page .page-values {
     padding: 40px 0 !important;
   }
 
-  .page-values__grid {
+  .solution-implementation-page .page-values__header {
+    margin-bottom: 32px !important;
+    padding: 0 20px;
+  }
+
+  .solution-implementation-page .page-values__title {
+    font-size: 24px !important;
+    margin-bottom: 10px !important;
+    padding: 0;
+  }
+
+  .solution-implementation-page .page-values__subtitle {
+    font-size: 14px !important;
+    line-height: 1.5;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .solution-implementation-page .page-values__grid {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
     padding: 0 20px;
   }
 
-  .page-values__title {
-    padding: 0 20px;
-  }
-
-  .page-values__subtitle {
-    padding: 0 20px;
-    font-size: 14px !important;
-  }
-
-  .page-value-card {
+  .solution-implementation-page .page-value-card {
     padding: 24px 20px !important;
     text-align: center !important;
+    box-shadow: 0 4px 16px rgba(17, 24, 39, 0.1) !important;
   }
 
-  .page-value-card__icon {
+  .solution-implementation-page .page-value-card__icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
   }
 
-  .page-value-card__icon .image-placeholder,
-  .page-value-card__icon img {
+  .solution-implementation-page .page-value-card__icon .image-placeholder,
+  .solution-implementation-page .page-value-card__icon img {
     width: 50px !important;
     height: 50px !important;
+  }
+
+  .solution-implementation-page .page-value-card__title {
+    font-size: 17px !important;
+    margin-bottom: 10px !important;
+    min-height: 40px;
+  }
+
+  .solution-implementation-page .page-value-card__description {
+    font-size: 13px !important;
+    line-height: 1.6;
+    text-align: center !important;
   }
 
   .page-innovation {
@@ -241,6 +333,59 @@
 
   .page-cta__description {
     font-size: 16px !important;
+  }
+}
+
+/* Extra Small Mobile Devices (max-width: 360px) */
+@media (max-width: 360px) {
+  /* Core Values Section - Extra Small Mobile */
+  .solution-implementation-page .page-values {
+    padding: 32px 0 !important;
+  }
+
+  .solution-implementation-page .page-values__header {
+    margin-bottom: 28px !important;
+    padding: 0 16px;
+  }
+
+  .solution-implementation-page .page-values__title {
+    font-size: 22px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .solution-implementation-page .page-values__subtitle {
+    font-size: 13px !important;
+  }
+
+  .solution-implementation-page .page-values__grid {
+    gap: 16px !important;
+    padding: 0 16px;
+  }
+
+  .solution-implementation-page .page-value-card {
+    padding: 20px 16px !important;
+  }
+
+  .solution-implementation-page .page-value-card__icon {
+    margin-bottom: 12px !important;
+  }
+
+  .solution-implementation-page .page-value-card__icon .image-placeholder,
+  .solution-implementation-page .page-value-card__icon img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .solution-implementation-page .page-value-card__title {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+    min-height: 40px;
+  }
+
+  .solution-implementation-page .page-value-card__description {
+    font-size: 12px !important;
+    line-height: 1.5;
+    text-align: center !important;
   }
 }
 
