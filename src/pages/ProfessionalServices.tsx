@@ -265,7 +265,7 @@ export function ProfessionalServices(): React.ReactElement {
         </section>
 
         {/* Technology Ecosystem Section */}
-        <section className="trusted-companies-section">
+        <section className="trusted-companies-section professional-services-marquee">
           <div className="container">
             <h2 className="trusted-companies-title">Authorized and certified implementation partner for leading technology ecosystems:</h2>
             {loading ? (

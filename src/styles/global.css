@@ -2265,7 +2265,7 @@ section {
 .tech-ecosystem-marquee {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 48px;
   animation: marquee-scroll 15s linear infinite;
   will-change: transform;
 }
@@ -4760,7 +4760,7 @@ footer section .container {
   }
 
   .tech-ecosystem-marquee {
-    gap: 24px;
+    gap: 56px;
   }
 
   .tech-ecosystem-logo {
@@ -5332,7 +5332,8 @@ footer section .container {
   }
 
   .tech-ecosystem-marquee {
-    gap: 12px;
+    gap: 32px;
+    animation: marquee-scroll-mobile 15s linear infinite;
   }
 
   .tech-ecosystem-logo {
@@ -5943,7 +5944,8 @@ footer section .container {
   }
 
   .tech-ecosystem-marquee {
-    gap: 12px;
+    gap: 32px;
+    animation: marquee-scroll-mobile 15s linear infinite;
   }
 
   .tech-ecosystem-logo {
