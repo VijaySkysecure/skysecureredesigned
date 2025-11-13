@@ -4,7 +4,10 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    historyApiFallback: true,
+    cors: {
+      origin: ['https://skysecure.ai', 'http://skysecure.ai', 'https://www.skysecure.ai', 'http://www.skysecure.ai'],
+      credentials: true,
+    },
   },
 });
 
