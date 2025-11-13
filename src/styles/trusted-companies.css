@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  animation: marquee-scroll 60s linear infinite;
+  animation: marquee-scroll 30s linear infinite;
   will-change: transform;
 }
 
