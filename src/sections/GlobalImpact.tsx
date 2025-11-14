@@ -290,7 +290,7 @@ export function GlobalImpact(): React.ReactElement {
               </div>
               <div>
                 <h4 className="global-impact-node-title">
-                  Infraoptimization
+                  Infra-optimization
                 </h4>
                 <div className="global-impact-node-value">
                   {Math.floor(animatedCount50)}
