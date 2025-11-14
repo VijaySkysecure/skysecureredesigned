@@ -129,7 +129,7 @@ export function AzureSentinelGuide(): React.ReactElement {
             <section className="blog-section">
               <div className="azure-sentinel-overview-wrapper">
                 <div className="azure-sentinel-overview-content">
-                  <h2 className="blog-section-title azure-sentinel-overview-title">Overview</h2>
+                  <h2 className="blog-section-title azure-sentinel-overview-title" style={{ textAlign: 'center' }}>Overview</h2>
                   <p className="blog-section-text azure-overview-paragraph">
                   Azure Sentinel is Microsoft's cloud-native Security Information and Event Management (SIEM) system, designed to provide end-to-end visibility and threat detection across your enterprise. By collecting data from servers, endpoints, applications, and cloud platforms, it delivers a centralized and intelligent view of your security posture, helping teams identify and respond to incidents faster.
                   </p>
@@ -148,7 +148,7 @@ export function AzureSentinelGuide(): React.ReactElement {
 
             {/* Key Features */}
             <section className="blog-section azure-sentinel-features-section">
-              <h2 className="blog-section-title azure-sentinel-features-title">Key Features</h2>
+              <h2 className="blog-section-title azure-sentinel-features-title" style={{ textAlign: 'center' }}>Key Features</h2>
               <div className="azure-sentinel-features-grid">
                 {KEY_FEATURES.map((feature, index) => (
                   <div key={index} className="measure-card azure-sentinel-feature-card">
@@ -161,7 +161,7 @@ export function AzureSentinelGuide(): React.ReactElement {
                         borderRadius={0}
                       />
                     </div>
-                    <h3 className="measure-card__title" style={{ textAlign: 'left' }}>{feature.title}</h3>
+                    <h3 className="measure-card__title" style={{ textAlign: 'center' }}>{feature.title}</h3>
                     <p className="measure-card__description">{feature.description}</p>
                   </div>
                 ))}
@@ -171,7 +171,7 @@ export function AzureSentinelGuide(): React.ReactElement {
             {/* Benefits */}
             <section className="blog-section">
               <div className="azure-sentinel-benefits-wrapper">
-                <h2 className="blog-section-title azure-sentinel-benefits-title">Benefits</h2>
+                <h2 className="blog-section-title azure-sentinel-benefits-title" style={{ textAlign: 'center', marginLeft: '0px' }}>Benefits</h2>
                 <div className="azure-sentinel-benefits-grid">
                   {BENEFITS.map((benefit, index) => (
                     <div key={index} className="azure-sentinel-benefit-item">
@@ -227,7 +227,7 @@ export function AzureSentinelGuide(): React.ReactElement {
             <section className="blog-section">
               <div className="azure-sentinel-why-wrapper">
                 <div className="azure-sentinel-why-content">
-                  <h2 className="blog-section-title azure-sentinel-why-title">Why Azure Sentinel?</h2>
+                  <h2 className="blog-section-title azure-sentinel-why-title" style={{ textAlign: 'center', marginLeft: '0px' }}>Why Azure Sentinel?</h2>
                   <p className="blog-section-text azure-why-paragraph">
                   Azure Sentinel stands apart by combining automation, scalability, and intelligence within a single platform. It empowers organizations to protect hybrid and multi-cloud environments while reducing operational burden. Whether you're an SMB or a large enterprise, Sentinel scales with your needs and integrates seamlessly with your existing Microsoft ecosystem.
                   </p>
@@ -247,7 +247,7 @@ export function AzureSentinelGuide(): React.ReactElement {
             {/* Conclusion */}
             <section className="blog-section azure-sentinel-conclusion-section">
               <div className="azure-sentinel-conclusion-wrapper">
-                <h2 className="blog-section-title azure-sentinel-conclusion-title">Conclusion</h2>
+                <h2 className="blog-section-title azure-sentinel-conclusion-title" style={{ textAlign: 'center', marginLeft: '0px' }}>Conclusion</h2>
                 <div className="azure-sentinel-conclusion-box">
                 <p className="blog-section-text azure-conclusion-paragraph">
                 Microsoft Azure Sentinel is a next-generation SIEM solution that enables proactive, intelligent, and scalable threat protection. Its real-time analytics, deep integrations, and automation capabilities make it an ideal choice for organizations seeking to enhance their cybersecurity posture and mitigate risks effectively. With Skysecure's expertise in Azure deployment and monitoring, your security transformation can be seamless, cost-efficient, and future-ready.
