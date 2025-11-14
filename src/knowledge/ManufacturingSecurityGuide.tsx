@@ -310,7 +310,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                       <ImagePlaceholder
                         label={outcome.title}
                         imageName={`knowledge/${outcome.icon}.png`}
-                        width={['icon-lightbulb', 'icon-speech-bubble', 'icon-shield-question'].includes(outcome.icon) ? 36 : 50}
+                        width={['icon-lightbulb', 'icon-speech-bubble', 'icon-shield-question'].includes(outcome.icon) ? 40 : 50}
                         height={['icon-lightbulb', 'icon-speech-bubble', 'icon-shield-question'].includes(outcome.icon) ? 44 : 50}
                         borderRadius={0}
                       />
