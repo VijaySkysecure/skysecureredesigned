@@ -200,9 +200,9 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             </div>
 
             {/* The Rise of Manufacturing in India */}
-            <section className="blog-section">
+            <section className="blog-section" style={{ textAlign: 'center', paddingTop: '50px' }}>
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>The Rise of Manufacturing in India</h2>
-              <div className="manufacturing-cards">
+              <div className="manufacturing-cards" style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px' }}>
                 {MANUFACTURING_RISE.map((item, index) => (
                   <div key={index} className="manufacturing-card">
                     <div className="manufacturing-card__icon">
@@ -218,7 +218,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
                   </div>
                 ))}
               </div>
-              <p className="blog-section-text" style={{ textAlign: 'center', marginLeft: '100px' }}>
+              <p className="blog-section-text" style={{ textAlign: 'center', margin: '0 auto', maxWidth: '920px' }}>
               Growth driven by 'Make in India' initiative has accelerated the adoption of advanced technologies across manufacturing facilities. The integration of automation, robotics, AI, and IoT systems has brought unprecedented benefits including increased efficiency, job creation, and significant investment inflow.
               </p>
             </section>
@@ -226,7 +226,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             {/* The Cybersecurity Challenge */}
             <section className="blog-section">
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>The Cybersecurity Challenge</h2>
-              <div className="cybersecurity-challenge-box" style={{ background: 'linear-gradient(90deg, #FEF2F2 0%, #FEFCE8 100%)', padding: '32px', borderRadius: '12px', maxWidth: '1000px', width: '100%' }}>
+              <div className="cybersecurity-challenge-box" style={{ background: 'linear-gradient(90deg, #FEF2F2 0%, #FEFCE8 100%)', padding: '32px', borderRadius: '12px', maxWidth: '1000px', width: '100%', margin: '0 auto' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
                   <div style={{ width: '30px', height: '30px', backgroundColor: '#FEF2F2', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '12px' }}>
                     <ImagePlaceholder
@@ -253,7 +253,7 @@ export function ManufacturingSecurityGuide(): React.ReactElement {
             {/* Essential Cybersecurity Measures */}
             <section className="blog-section">
               <h2 className="blog-section-title" style={{ textAlign: 'center' }}>Essential Cybersecurity Measures</h2>
-              <div className="measures-grid">
+              <div className="measures-grid" style={{margin: '0 auto'}}>
                 {CYBERSECURITY_MEASURES.map((measure, index) => (
                   <div key={index} className="measure-card">
                     <div className="measure-card__icon">
